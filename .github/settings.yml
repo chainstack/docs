@@ -1,0 +1,72 @@
+repository:
+  # See https://developer.github.com/v3/repos/#edit for all available settings.
+
+  # The name of the repository. Changing this will rename the repository
+  name: docs
+
+  # A short description of the repository that will show up on GitHub
+  description: Platform documentation
+
+  # A URL with more information about the repository
+  homepage: https://docs.chainstack.com
+
+  # Either `true` to make the repository private, or `false` to make it public.
+  private: true
+
+  # Either `true` to enable issues for this repository, `false` to disable them.
+  has_issues: true
+
+  # Either `true` to enable the wiki for this repository, `false` to disable it.
+  has_wiki: true
+
+  # Either `true` to enable downloads for this repository, `false` to disable them.
+  has_downloads: false
+
+  # Updates the default branch for this repository.
+  default_branch: master
+
+  # Either `true` to allow squash-merging pull requests, or `false` to prevent
+  # squash-merging.
+  allow_squash_merge: true
+
+  # Either `true` to allow merging pull requests with a merge commit, or `false`
+  # to prevent merging pull requests with merge commits.
+  allow_merge_commit: true
+
+  # Either `true` to allow rebase-merging pull requests, or `false` to prevent
+  # rebase-merging.
+  allow_rebase_merge: true
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  # Type
+  - name: Epic
+    color: e091d5
+  - name: User Story
+    color: 9df934
+  - name: Feature
+    color: 84b6eb
+  - name: Bug
+    color: e11d21
+  # Priority
+  - name: High Priority
+    color: e11d21
+    oldname: Blocker
+  - name: Low Priority
+    color: ffd0cc
+    oldname: Minor
+  # Status
+  - name: WIP
+    color: fef2c0
+  # Theme
+  - name: Infrastructure
+    color: 005be5
+  - name: Good First Issue
+    color: 66f49f
+  # Repository-specific theme
+  - name: Design
+    color: e585a6
+  - name: Markup
+    color: 44e5ba
+  - name: Content
+    color: e5f71d
