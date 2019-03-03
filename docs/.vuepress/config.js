@@ -1,29 +1,29 @@
 module.exports = {
     title: 'Chainstack Docs',
     description: "Chainstack documentation",
-    themeConfig:{
+    themeConfig: {
         nav: [
-            { text: 'Try Free', link: 'https://console.chainstack.com' }
-        ],        
-        sidebar: [                                    
+            {text: 'Try Free', link: 'https://console.chainstack.com'}
+        ],
+        sidebar: [
             {
                 title: 'Guides',
                 collapsable: false,
-                children: [                    
+                children: [
                     '/guides/getting-started',
                     '/guides/application-development',
-                    '/guides/on-chain-governance',                    
+                    '/guides/on-chain-governance',
                 ]
             },
             {
                 title: 'Projects',
                 collapsable: true,
-                children: [                    
+                children: [
                     '/projects/',
                     '/projects/consortium',
                     '/projects/public-chain',
                 ]
-            },            
+            },
             {
                 title: 'Permissioned blockchains',
                 collapsable: true,
@@ -33,14 +33,14 @@ module.exports = {
                     '/permissioned-blockchains/quorum',
                     '/permissioned-blockchains/hyperledger-fabric',
                 ]
-            },            
+            },
             {
                 title: 'Public blockchains',
                 collapsable: true,
-                children: [                
+                children: [
                     '/public-blockchains/ethereum',
                 ]
-            },                        
+            },
             {
                 title: 'Reference',
                 collapsable: true,
@@ -48,7 +48,7 @@ module.exports = {
                     '/reference/glossary'
                 ]
             }
-        ],
-        lastUpdated: 'Last Updated',
-    }
+        ]
+    },
+    plugins: ['@vuepress/clean-urls']
 }
