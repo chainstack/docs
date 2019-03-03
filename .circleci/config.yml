@@ -1,0 +1,127 @@
+version: 2
+
+workflows:
+  version: 2
+  docs:
+    jobs:
+    
+      - test
+
+      - build_dev_image:
+          context: "dev.chainstack | GCP"
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
+
+      - build_prod_image:
+          context: "prod.chainstack | GCP"
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+               - prod
+
+      - dev_deploy:
+          context: "dev.chainstack | GCP"
+          requires:
+            - build_dev_image
+
+      - prod_deploy:
+          context: "prod.chainstack | GCP"
+          requires:
+            - build_prod_image
+
+_run:
+  gcloud_routine: &gcloud_routine
+    name: gcloud routine
+    command: |
+      set -x
+      echo $GCLOUD_SERVICE_KEY > /gcloud-service-key.json
+      gcloud auth activate-service-account --key-file=/gcloud-service-key.json
+      gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+      gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
+      gcloud auth configure-docker --quiet
+
+_job_deploy: &deploy
+  docker:
+      - image: chainstack/builder:latest
+  steps:
+
+    - checkout
+
+    - run: *gcloud_routine
+
+    - run:
+        name: gcloud clusters get-credentials
+        command: |
+            gcloud --quiet container clusters get-credentials ${GOOGLE_CLUSTER_NAME} --region ${GOOGLE_REGION} --project ${GOOGLE_PROJECT_ID}
+
+    - run:
+       name: Helming
+       command: |
+        set -x
+        helm init --service-account ci-helm --client-only
+        helm repo add cs gs://chainstack-helm-charts
+        helm repo update
+
+    - run:
+       name: Rolling out the service
+       command: |
+        set -x
+        helm upgrade docs cs/chainstack-docs \
+          --install --wait --timeout 180 \
+          --set image.tag=${CIRCLE_SHA1},ingress.host=${DOCS_HOSTNAME},project=${GOOGLE_PROJECT_ID}
+        sleep 10 # TODO: Implement k8s jobs for Post-deploy
+        helm status docs
+
+_job_build_image: &build_image
+  docker:
+    - image: chainstack/builder:latest
+  steps:
+    - setup_remote_docker:
+       version: stable
+
+    - checkout
+
+    - run: *gcloud_routine
+
+    - run:
+        name: Create service version
+        command: |
+          set -x
+          sed -i -e "s:{BUILD_NUM}:${CIRCLE_BUILD_NUM}.${CIRCLE_BRANCH}:g" ./VERSION
+
+    - run:
+       name: Build production image
+       command: |
+         set -x
+         docker build -t ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} .
+         docker tag ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+         docker tag ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:latest
+         docker push ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}
+
+jobs:
+  
+  test:
+    docker:
+      - image: circleci/node:11
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+
+  build_dev_image:
+    <<: *build_image
+
+  build_prod_image:
+    <<: *build_image
+
+  dev_deploy:
+    <<: *deploy
+
+  prod_deploy:
+    <<: *deploy

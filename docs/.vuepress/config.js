@@ -48,6 +48,7 @@ module.exports = {
                     '/reference/glossary'
                 ]
             }
-        ]
+        ],
+        lastUpdated: 'Last Updated',
     }
 }
