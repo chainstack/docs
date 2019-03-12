@@ -10,10 +10,9 @@
     "dev": "vuepress dev docs"
   },
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.44"
-  },
-  "dependencies": {
+    "vuepress": "^1.0.0-alpha.44",
     "@vuepress/plugin-clean-urls": "^1.0.0-alpha.44",
     "markdown-it-container": "^2.0.0"
-  }
+  },
+  "dependencies": {}
 }
