@@ -3,7 +3,7 @@ module.exports = {
     description: "Chainstack documentation",
     themeConfig: {
         nav: [
-            {text: 'Try Free', link: 'https://console.chainstack.com'}
+            { text: 'Try Free', link: 'https://console.chainstack.com' }
         ],
         sidebar: [
             {
@@ -25,27 +25,21 @@ module.exports = {
                 ]
             },
             {
-                title: 'Permissioned blockchains',
+                title: 'Blockchains',
                 collapsable: true,
                 children: [
-                    '/permissioned-blockchains/',
-                    '/permissioned-blockchains/multichain',
-                    '/permissioned-blockchains/quorum',
-                    '/permissioned-blockchains/hyperledger-fabric',
-                ]
-            },
-            {
-                title: 'Public blockchains',
-                collapsable: true,
-                children: [
-                    '/public-blockchains/ethereum',
+                    '/blockchains/',
+                    '/blockchains/multichain',
+                    '/blockchains/quorum',
+                    '/blockchains/hyperledger-fabric',
+                    '/blockchains/ethereum',
                 ]
             },
             {
                 title: 'Reference',
                 collapsable: true,
                 children: [
-                    '/reference/glossary'
+                    '/reference/glossary',
                 ]
             }
         ]
