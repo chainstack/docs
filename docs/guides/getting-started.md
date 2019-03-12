@@ -8,11 +8,8 @@ First things first, head to [Chainstack](https://console.chainstack.com/), and s
 
 ![Sign up](./getting-started/sign-up.png)
 
-Once done, you will be taken to the dashboard, which should display running networks if any, apart from meta-stats and an activity log.
-
-> screen shot required
-
 Since this is your first time, you won't see any project. So let's start creating a project, and, even before that, understand why you need one.
+
 ![Empty projects page](./getting-started/empty-projects-page.png)
 
 ## Create a project
@@ -79,4 +76,4 @@ This takes you back to the _Parts Tracking_ project page with all its networks. 
 
 Congratulations! You successfully created a Multichain network with a single node and, perhaps, already set the state for collaboration by inviting a member. Either way, all it took was a few minutes.
 
-As a next step, we recommend you go through our [Application Development](/guides/application-development) guide.
+As a next step, we recommend you go through our [application development guide](/guides/application-development).
