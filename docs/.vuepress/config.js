@@ -31,7 +31,7 @@ module.exports = {
                     '/blockchains/',
                     '/blockchains/multichain',
                     '/blockchains/quorum',
-                    '/blockchains/hyperledger-fabric',
+                    '/blockchains/fabric',
                     '/blockchains/ethereum',
                 ]
             },
