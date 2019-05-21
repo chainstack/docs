@@ -1,3 +1,7 @@
+---
+metaTitle: Chainstack Docs
+---
+
 # Chainstack documentation
 
 This collection contains an assortment of guides and reference material to familiarize you with various aspects of Chainstack.
