@@ -1,9 +1,12 @@
 module.exports = {
     title: 'Chainstack Docs',
     description: "Chainstack documentation",
+    head: [
+        ['link', { rel: 'icon', href: './favicon.ico' }]
+      ],
     themeConfig: {
         nav: [
-            { text: 'Try Free', link: 'https://console.chainstack.com' }
+            { text: 'Try free', link: 'https://chainstack.com/pricing' }
         ],
         sidebar: [
             {
@@ -44,5 +47,12 @@ module.exports = {
             }
         ]
     },
-    plugins: ['@vuepress/clean-urls']
+    plugins: {
+        'clean-urls': {
+            normalSuffix: ''            
+        },
+        'sitemap': {
+            hostname: 'https://docs.chainstack.com'
+        },
+    }
 }
