@@ -19,6 +19,14 @@ module.exports = {
                 ]
             },
             {
+                title: 'Tutorials',
+                collapsable: true,
+                children: [
+                    '/tutorials/',
+                    '/tutorials/certificates',
+                ]
+            },
+            {
                 title: 'Projects',
                 collapsable: true,
                 children: [
