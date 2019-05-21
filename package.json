@@ -10,9 +10,12 @@
     "dev": "vuepress dev docs"
   },
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.44",
-    "@vuepress/plugin-clean-urls": "^1.0.0-alpha.44",
-    "markdown-it-container": "^2.0.0"
+    "markdown-it-container": "^2.0.0",
+    "vuepress": "^1.0.0-alpha.47"
   },
-  "dependencies": {}
+  "dependencies": {
+    "esm": "^3.2.22",
+    "vuepress-plugin-clean-urls": "^1.0.3",
+    "vuepress-plugin-sitemap": "^2.1.2"
+  }
 }
