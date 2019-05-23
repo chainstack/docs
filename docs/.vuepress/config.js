@@ -57,6 +57,9 @@ module.exports = {
         ]
     },
     plugins: {
+        '@vuepress/google-analytics': {
+            'ga': 'UA-118674508-7'
+        },
         'clean-urls': {
             normalSuffix: ''            
         },
