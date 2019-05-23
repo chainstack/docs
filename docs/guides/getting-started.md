@@ -94,10 +94,10 @@ That's it. It will take a few minutes, but once the node _Status_ changes from _
 
 ![Network joined](./getting-started/public-chain/network-joined.png)
 
-Click the _Node name_ to view its details. This is where you will find the various endpoints that will come handy during your application development.
+Click the _Node name_ to view its details. This is where you will find the credentials required to interact with the node and build your first decentralized application.
 
 ![Node details](./getting-started/public-chain/node-details.png)
 
 ## Next steps
 
-As a next step, we recommend you go through our [application development guide](/guides/application-development).
+Now it's the most fun part! Start [interacting with the blockchain](/guides/interacting-with-the-blockchain) and [developing the applications](/guides/application-development) using the node credentials obtained.
