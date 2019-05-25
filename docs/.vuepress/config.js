@@ -6,7 +6,7 @@ module.exports = {
       ],
     themeConfig: {
         nav: [
-            { text: 'Try free', link: 'https://chainstack.com/pricing' }
+            { text: 'Try free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
             {
@@ -14,6 +14,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                     '/guides/getting-started',
+                    '/guides/interacting-with-the-blockchain',
                     '/guides/application-development',
                     '/guides/on-chain-governance',
                 ]
@@ -50,12 +51,15 @@ module.exports = {
                 title: 'Reference',
                 collapsable: true,
                 children: [
-                    '/reference/glossary',
+                    '/reference/glossary',                    
                 ]
             }
         ]
     },
     plugins: {
+        '@vuepress/google-analytics': {
+            'ga': 'UA-118674508-7'
+        },
         'clean-urls': {
             normalSuffix: ''            
         },
