@@ -20,6 +20,13 @@ module.exports = {
                 ]
             },
             {
+                title: 'Tutorials',
+                collapsable: true,
+                children: [                    
+                    '/tutorials/academic-certificates-on-ethereum',
+                ]
+            },
+            {
                 title: 'Projects',
                 collapsable: true,
                 children: [
