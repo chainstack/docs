@@ -25,16 +25,16 @@ let multichain = require("multinodejs")({
 
 ``` js
 multichain.getInfo((err, info) => {
-    if(err){
+    if (err) {
         throw err;
     }
     console.log(info);
-})
+});
 ```
 
 The example code above should output basic network information:
 
-``` json
+``` js
 { version: '2.0',
   nodeversion: 20000901,
   protocolversion: 20004,
@@ -69,7 +69,7 @@ print(info)
 
 The example code above should output basic network information:
 
-``` json
+``` python
 {'version': '2.0', 'nodeversion': 20000901, 'protocolversion': 20004, 'chainname': 'nw-123-456-7', ... }
 ```
 
@@ -97,7 +97,7 @@ module.exports = {
       port: 8545,
       network_id: "*",
       gasPrice: 0,
-      type: "quorum"
+      type: "quorum",
       gas: 4500000
     }
   }
@@ -120,7 +120,7 @@ Deploy an Ethereum node on Chainstack, and make a note of the connection details
 
 ``` js
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const mnemonic = 'pattern enroll upgrade ...'
+const mnemonic = 'pattern enroll upgrade ...';
 ...
 module.exports = {
  networks: {
@@ -151,7 +151,7 @@ chainstack: {
     ],
     host: "nd-123-456-789.p2pify.com",
     port: 8545,
-    protocol: "https"
+    protocol: "https",
     type: "rpc"
   }
 }
