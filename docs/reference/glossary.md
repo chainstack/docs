@@ -2,7 +2,7 @@
 
 ## Blockchain protocol
 
-The blockchain protocol such as Fabric, Corda, MultiChain, Quorum, and Ethereum among several others.
+The blockchain protocol such as Hyperledger Fabric, Corda, MultiChain, Quorum, and Ethereum among several others.
 
 ## Consortium
 
