@@ -8,7 +8,7 @@ Currently, Chainstack provides the following deployment options for consortium b
 
 ### Public cloud
 
-Launch or join a Fabric, MultiChain, or Quorum network on public cloud, namely, Amazon Web Services, Google Cloud Platform, or Microsoft Azure. When deployed via Chainstack on a public cloud, your infrastructure is managed by Chainstack.
+Launch or join a [MultiChain](blockchains/multichain) or [Quorum](blockchains/quorum) network on public cloud, namely, Amazon Web Services, Google Cloud Platform, or Microsoft Azure. When deployed via Chainstack on a public cloud, your infrastructure is managed by Chainstack.
 
 Apart from the various cloud options, Chainstack also offers various regional deployment options. If your IT infrastructure is already deployed on Google Cloud Platform in Singapore (e.g. asia-southeast1), then you might consider deploying your blockchain node in a similar region (if it’s already offered by Chainstack) or to a region and zone close to asia-southeast1.
 

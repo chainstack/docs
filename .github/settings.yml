@@ -11,7 +11,7 @@ repository:
   homepage: https://docs.chainstack.com
 
   # Either `true` to make the repository private, or `false` to make it public.
-  private: true
+  private: false
 
   # Either `true` to enable issues for this repository, `false` to disable them.
   has_issues: true
@@ -44,17 +44,13 @@ labels:
     color: e091d5
   - name: User Story
     color: 9df934
-  - name: Feature
-    color: 84b6eb
   - name: Bug
     color: e11d21
   # Priority
   - name: High Priority
     color: e11d21
-    oldname: Blocker
   - name: Low Priority
     color: ffd0cc
-    oldname: Minor
   # Status
   - name: WIP
     color: fef2c0

@@ -1,9 +1,12 @@
 module.exports = {
     title: 'Chainstack Docs',
     description: "Chainstack documentation",
+    head: [
+        ['link', { rel: 'icon', href: './favicon.ico' }]
+      ],
     themeConfig: {
         nav: [
-            { text: 'Try Free', link: 'https://console.chainstack.com' }
+            { text: 'Try free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
             {
@@ -11,8 +14,16 @@ module.exports = {
                 collapsable: false,
                 children: [
                     '/guides/getting-started',
+                    '/guides/interacting-with-the-blockchain',
                     '/guides/application-development',
                     '/guides/on-chain-governance',
+                ]
+            },
+            {
+                title: 'Tutorials',
+                collapsable: true,
+                children: [                    
+                    '/tutorials/academic-certificates-on-ethereum',
                 ]
             },
             {
@@ -39,10 +50,20 @@ module.exports = {
                 title: 'Reference',
                 collapsable: true,
                 children: [
-                    '/reference/glossary',
+                    '/reference/glossary',                    
                 ]
             }
         ]
     },
-    plugins: ['@vuepress/clean-urls']
+    plugins: {
+        '@vuepress/google-analytics': {
+            'ga': 'UA-118674508-7'
+        },
+        'clean-urls': {
+            normalSuffix: ''            
+        },
+        'sitemap': {
+            hostname: 'https://docs.chainstack.com'
+        },
+    }
 }
