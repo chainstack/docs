@@ -22,7 +22,7 @@ module.exports = {
             {
                 title: 'Tutorials',
                 collapsable: true,
-                children: [                    
+                children: [
                     '/tutorials/academic-certificates-on-ethereum',
                 ]
             },
@@ -50,17 +50,21 @@ module.exports = {
                 title: 'Reference',
                 collapsable: true,
                 children: [
-                    '/reference/glossary',                    
+                    '/reference/glossary',
                 ]
             }
-        ]
+        ],
+        algolia: {
+            apiKey: '1194997ecec7d141de5c746bc3463e9c',
+            indexName: 'chainstack'
+        }
     },
     plugins: {
         '@vuepress/google-analytics': {
             'ga': 'UA-118674508-7'
         },
         'clean-urls': {
-            normalSuffix: ''            
+            normalSuffix: ''
         },
         'sitemap': {
             hostname: 'https://docs.chainstack.com'
