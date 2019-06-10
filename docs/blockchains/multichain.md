@@ -7,7 +7,7 @@ In MultiChain’s own words,
 
 Another reason cited for its compatibility with Bitcoin Core is the ready availability of the rich ecosystem of tools.
 
-A node in Bitcoin Core, or any other protocol, is only one part of the big picture. Wallets, key management solutions, and libraries for decoding, signing, and encryption of messages play a very important part in working with the protocol. By leveraging Bitcoin Core’s rich set of freely available tools, MultiChain can extend them to its own user base on a permissioned network. Further MultiChain adds value by making the entire process of working with the protocol, which traditionally can be quite cryptic, simple and fast.
+A node in Bitcoin Core, or any other protocol, is only one part of the big picture. Wallets, key management solutions, and libraries for decoding, signing, and encryption of messages play a very important part in working with the protocol. By leveraging Bitcoin Core’s rich set of freely available tools, MultiChain can extend them to its own user base on a permissioned network. Further, MultiChain adds value by making the entire process of working with the protocol, which traditionally can be quite cryptic, simple and fast.
 
 ## Features
 
