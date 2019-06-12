@@ -1,4 +1,4 @@
-# Chainstack documentation 🤓
+# Chainstack documentation
 
 Static Markdown-powered website based on [VuePress](https://github.com/vuejs/vuepress).
 
@@ -26,3 +26,6 @@ $ npm run build
 
 The assets will be generated in `docs/.vuepress/dist`.
 
+# Contributing
+
+See [CONTRIBUTING](CONTRIBUTING.md).
