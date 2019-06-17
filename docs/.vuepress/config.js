@@ -10,47 +10,131 @@ module.exports = {
         ],
         sidebar: [
             {
-                title: 'Guides',
-                collapsable: false,
+                title: 'Quick Start',
+                collapsable: true,
                 children: [
-                    '/guides/getting-started',
-                    '/guides/interacting-with-the-blockchain',
-                    '/guides/application-development',
-                    '/guides/on-chain-governance',
+                    '/quick-start/qs-intro',
+                    '/quick-start/qs-create-account',
+                    '/quick-start/qs-create-project',
+                    '/quick-start/qs-deploy-network',
+                    '/quick-start/qs-explore-network',
+                    '/quick-start/qs-invite-member',
+                    '/quick-start/qs-access-node',
                 ]
             },
             {
-                title: 'Tutorials',
+                title: 'Deploy a Node or a Network',
                 collapsable: true,
                 children: [
-                    '/tutorials/academic-certificates-on-ethereum',
+                    '/deploy-network/deploy-intro',
+                    '/deploy-network/deploy-network',
+                    '/deploy-network/deploy-node',
+                    '/deploy-network/add-network',
+                    '/deploy-network/add-node',
+                    '/deploy-network/invite-member',
+                    '/deploy-network/view-access',
                 ]
             },
             {
-                title: 'Projects',
+                title: 'Access Your Node',
                 collapsable: true,
                 children: [
-                    '/projects/',
-                    '/projects/consortium',
-                    '/projects/public-chain',
+                    '/access-network/access-intro',
+                    '/access-network/access-multichain',
+                    '/access-network/access-quorum',
+                    '/access-network/access-ethereum',
                 ]
             },
             {
-                title: 'Blockchains',
+                title: 'Develop',
                 collapsable: true,
                 children: [
-                    '/blockchains/',
-                    '/blockchains/multichain',
-                    '/blockchains/quorum',
-                    '/blockchains/fabric',
-                    '/blockchains/ethereum',
+                    '/develop/develop-intro',
+                    '/develop/install-configure',
+                {
+                    title: 'MultiChain',
+                    collapsable: true,
+                    children: [
+                        '/develop/multichain/multichain-javascript',
+                        '/develop/multichain/multichain-python',
+                    ]
+                },
+                {
+                    title: 'Quorum',
+                    collapsable: true,
+                    children: [
+                       '/develop/quorum/quorum-truffle',
+                    ]
+                },
+                {
+                    title: 'Ethereum',
+                    collapsable: true,
+                    children: [
+                        '/develop/ethereum/ethereum-truffle',
+                        '/develop/ethereum/ethereum-embark',
+                    ]
+                },
+                {
+                    title: 'Sample DApps',
+                    collapsable: true,
+                    children: [
+                        '/develop/sample-dapp/ethereum-certificate',
+                    ]
+                },
+            ]
+            },
+            {
+                title: 'Blockchain Essentials',
+                collapsable: true,
+                children: [
+                    '/blockchain-essentials/blockchain-intro',
+                {                
+                title: 'Networks',
+                collapsable: true,
+                children: [
+                    '/blockchain-essentials/network/multichain',
+                    '/blockchain-essentials/network/quorum',
+                    '/blockchain-essentials/network/hyperledger',
+                    '/blockchain-essentials/network/ethereum',
+                    '/blockchain-essentials/network/corda',
+                ]
+                },
+            {
+                title: 'Consensus',
+                collapsable: true,
+                children: [
+
+                    '/blockchain-essentials/consensus/round-robin',
+                    '/blockchain-essentials/consensus/raft',
+                    '/blockchain-essentials/consensus/ibft',
+                    '/blockchain-essentials/consensus/solo',
+                    '/blockchain-essentials/consensus/kafka',
+                    '/blockchain-essentials/consensus/proof-of-authority',
+                    ]
+                },
+                    
                 ]
             },
             {
-                title: 'Reference',
+                title: 'Architecture Reference',
                 collapsable: true,
                 children: [
-                    '/reference/glossary',
+                    '/architecture-reference/architecture-intro',
+                    '/architecture-reference/architecture-reference',
+                ]
+            },
+              {
+                title: 'Feedback',
+                collapsable: true,
+                children: [
+                    '/feedback/feedback',
+                ]
+            },
+                          {
+                title: 'Glossary',
+                collapsable: true,
+                children: [
+                    '/glossary/glossary',
                 ]
             }
         ],
