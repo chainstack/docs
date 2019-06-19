@@ -14,6 +14,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                     '/guides/getting-started',
+                    '/guides/multichain-hybrid',
                     '/guides/interacting-with-the-blockchain',
                     '/guides/application-development',
                     '/guides/on-chain-governance',
