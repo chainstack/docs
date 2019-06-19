@@ -1,0 +1,264 @@
+# Deploying a hybrid MultiChain network
+
+This section will guide you through the [hybrid deployment](/reference/glossary#hybrid) of a MultiChain network.
+
+By the end of the section, you will have your MultiChain nodes from the same network running in cloud and [on-premises](/reference/glossary#on-prem).
+
+## Prerequisites
+
+* [Chainstack account](https://console.chainstack.com/)
+* A supported operating system for the MultiChain on-premises deployment:
+  * Linux 64-bit: Ubuntu 12.04+, CentOS 6.2+, Debian 7+, Fedora 15+, RHEL 6.2+
+  * Windows 64-bit: Windows 7, 8, 10, Server 2008 or later
+  * Mac 64-bit: supports OS X 10.11 or later
+* System requirements for the MultiChain on-premises deployment:
+  * 512MB of RAM
+  * 1GB of disk space
+
+## Overview
+
+To deploy a hybrid MultiChain network, do the following:
+
+1. With Chainstack, create a [Consortium](/projects/consortium) project.
+2. With Chainstack, deploy a MultiChain network in cloud.
+3. With Chainstack, get your cloud MultiChain node access information.
+4. On-premises, install MultiChain.
+5. On-premises, initialize your MultiChain node.
+6. From your cloud MultiChain node, grant permissions to your on-premises MultiChain node's wallet address.
+7. From your cloud MultiChain node, add your on-premises MultiChain node to the network.
+8. From your on-premises MultiChain node, connect to the MultiChain network.
+
+## Step-by-step
+
+### 1. Create a Consortium project
+
+1. Log in to your [Chainstack account](https://console.chainstack.com/).
+2. Click **Create project**.
+3. Click **Consortium**.
+3. Provide **Project name** and optionally **Description**.
+4. Click **Create**.
+
+This will create a project with Chainstack.
+
+### 2. Deploy a MultiChain network
+
+1. Select the created project and click **Get started**.
+2. Provide **Network name**.
+3. Under **Blockchain protocol**, select **MultiChain**. Click **Next**.
+4. Under **Cloud hosting provider**, select your preferred provider.
+5. Under **Region**, select the region for your deployment.
+
+  ::: warning
+  Currently only **Asia-Pacific** is available.
+  :::
+
+6. Review your changes and click **Create network**.
+
+The network status will change from **Pending** to **Running** once deployed.
+
+### 3. Get your cloud MultiChain node access information
+
+1. In your MultiChain deployment project, click your MultiChain network name.
+2. Under **Node name**, click your node.
+
+Under **Credentials**, you will see your MultiChain node access information.
+
+### 4. Install MultiChain on-premises
+
+On your on-premises machine, install MultiChain.
+
+See [MultiChain 2.0: Download and Install MultiChain](https://www.multichain.com/download-install/).
+
+### 5. Initialize your on-premises MultiChain node
+
+On your on-premises machine, attempt to connect to the cloud node to initialize your on-premises node.
+
+Run:
+
+```
+multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
+```
+
+where
+
+* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** —> **Chain name**.
+* HOSTNAME — your MultiChain cloud deployment hostname. Available under **Credentials** —> **Host**.
+* PORT — your MultiChain cloud deployment port. Available under **Credentials** —> **Port**.
+
+Command example:
+
+```
+multichaind nw-784-155-2@nd-339-567-264.rg-441-738.p2pify.com:7447 -daemon
+```
+
+As a result of running the command, you will have:
+
+* An initialized on-premises node.
+* Your on-premises node's wallet address.
+
+Output example:
+
+```
+MultiChain 2.0.2 Daemon (Community Edition, latest protocol 20010)
+
+Starting up node...
+
+Retrieving blockchain parameters from the seed node nd-339-567-264.rg-441-738.p2pify.com:7447 ...
+Blockchain successfully initialized.
+
+Please ask blockchain admin or user having activate permission to let you connect and/or transact:
+multichain-cli nw-784-155-2 grant 14SW7CidNbktZxkTSzi52iLvXviHyPebqCaW1q connect
+multichain-cli nw-784-155-2 grant 14SW7CidNbktZxkTSzi52iLvXviHyPebqCaW1q connect,send,receive
+```
+
+### 6. Grant permissions to your on-premises MultiChain node
+
+You can use tools like [curl](https://curl.haxx.se/) or [Postman](https://www.getpostman.com/) to invoke [MultiChain API methods](https://www.multichain.com/developers/json-rpc-api/).
+
+On your on-premises machine, grant your on-premises MultiChain node's wallet address with the `grant` method and the following permissions:
+
+* `conect`
+* `send`
+* `receive`
+
+Sending a curl request from terminal:
+
+```
+curl HOSTNAME -u "USERNAME:PASSWORD" -d {"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"],"chain_name":"CHAIN_NAME"}'
+```
+
+where
+
+* HOSTNAME — your MultiChain cloud deployment hostname. Available under **Credentials** —> **Host**.
+* USERNAME — your MultiChain cloud deployment username. Available under **Credentials** —> **User**.
+* PASSWORD — your MultiChain cloud deployment password. Available under **Credentials** —> **Password**.
+* WALLET_ADDRESS — your MultiChain on-premises node's wallet address. You received the wallet address at the end of [Step 5](multichain-hybrid#_5-initialize-your-on-premises-multichain-node).
+* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** —> **Chain name**.
+
+Command example:
+
+```
+curl https://nd-339-567-264.p2pify.com -u "modest_cori:ought vilify parcel urging dime sixth" -d '{"method":"grant","params":["14SW7CidNbktZxkTSzi52iLvXviHyPebqCaW1q","connect,send,receive"],"chain_name":"nw-784-155-2"}'
+```
+
+Output example:
+
+```
+{"result":"17859d3efdaa95bc9d1573e539a9b5177e17debb6afe37078ac6c4bd1bec9821","error":null,"id":null}
+```
+
+### 7. Add your on-premises MultiChain node to the network
+
+On your on-premises machine, add your on-premises MultiChain node to the network with the `addnode` method.
+
+Sending a curl request from terminal:
+
+```console
+curl HOSTNAME -u "USERNAME:PASSWORD" -d '{"method":"addnode","params":["ON_PREM_IP:PORT","add"],"chain_name":"CHAIN_NAME"}'
+```
+
+where
+
+* HOSTNAME — your MultiChain cloud deployment hostname. Available under **Credentials** —> **Host**.
+* USERNAME — your MultiChain cloud deployment username. Available under **Credentials** —> **User**.
+* PASSWORD — your MultiChain cloud deployment password. Available under **Credentials** —> **Password**.
+* ON_PREM_IP — your MultiChain on-premises machine's IP address.
+* PORT — your MultiChain on-premises machine's port.
+* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** —> **Chain name**.
+
+Command example:
+
+```console
+curl https://nd-339-567-264.p2pify.com -u "modest_cori:ought vilify parcel urging dime sixth" -d '{"method":"addnode","params":["178.62.100.80:7447","add"],"chain_name":"nw-784-155-2"}'
+```
+
+### 8. Connect to the MultiChain network
+
+On your on-premises machine, connect to the MultiChain network.
+
+Run:
+
+```
+multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
+```
+
+where
+
+* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** —> **Chain name**.
+* HOSTNAME — your MultiChain cloud deployment hostname. Available under **Credentials** —> **Host**.
+* PORT — your MultiChain cloud deployment port. Available under **Credentials** —> **Port**.
+
+Command example:
+
+```console
+multichaind nw-784-155-2@nd-339-567-264.rg-441-738.p2pify.com:7447 -daemon
+```
+
+## Interact from any node
+
+Now that the MultiChain network is running in a hybrid deployment, you can interact with it through `multichain-cli`.
+
+You can interact through your on-premises node or your cloud node.
+
+### Enter multichain-cli interactive mode through your on-premises node
+
+Enter interactive mode:
+
+```console
+multichain-cli CHAIN_NAME@IP_ADDRESS:PORT
+```
+
+where
+
+* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** —> **Chain name**.
+* IP_ADDRESS — your on-premises machine name's IP address.
+* PORT — your on-premises node's peer port.
+
+Example command:
+
+```
+multichain-cli nw-784-155-2@178.62.100.80:7447
+```
+
+### Enter multichain-cli interactive mode through your cloud node
+
+Enter interactive mode:
+
+```console
+multichain-cli CHAIN_NAME@HOSTNAME:PORT
+```
+
+where
+
+* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** —> **Chain name**.
+* HOSTNAME — your on-premises machine's IP address.
+* PORT — your on-premises node's peer port.
+
+Example command:
+
+```console
+multichain-cli nw-784-155-2@nd-339-567-264.rg-441-738.p2pify.com:7447
+```
+
+### Run commands in interactive mode
+
+Once in interactive mode, run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
+
+Examples:
+
+Get the node and blockchain information:
+
+```console
+getinfo
+```
+
+Get information about the other nodes to which this node is connected
+
+```console
+getpeerinfo
+```
+
+::: tip See also:
+* [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain)
+* [Application development](/guides/application-development)
+:::
