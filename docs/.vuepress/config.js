@@ -24,6 +24,7 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/tutorials/academic-certificates-on-ethereum',
+                    '/tutorials/loyalty-program-quorum',
                 ]
             },
             {
