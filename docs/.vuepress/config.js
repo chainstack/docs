@@ -128,7 +128,6 @@ module.exports = {
                     '/glossary/shared-node',
                     ]
             },
-
         '/release-notes',
         ],
         algolia: {
@@ -139,7 +138,6 @@ module.exports = {
         docsDir: 'docs',
         editLinks: true,
         editLinkText: 'Edit on GitHub'
-   
     },
     plugins: {
         '@vuepress/google-analytics': {
