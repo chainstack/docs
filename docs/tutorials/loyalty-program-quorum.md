@@ -212,9 +212,22 @@ The test run output should be **Passing**.
 
 ### 7. Deploy the contract to your Quorum network
 
-1. Edit `truffle-config.js` to add your Quorum network running with Chainstack:
+1. Install `HDWalletProvider`.
+
+[HDWalletProvider](https://www.npmjs.com/package/truffle-hdwallet-provider) is Truffle's separate npm package used to sign transactions.
+
+Run:
+
+```console
+$ npm install truffle-hdwallet-provider --save
+```
+
+2. Edit `truffle-config.js` to add `HDWalletProvider` and your Quorum network running with Chainstack:
 
 ```js
+const HDWalletProvider = require("truffle-hdwallet-provider");
+const mnemonic = 'word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15';
+
 module.exports = {
   networks: {
     development: {
@@ -223,9 +236,10 @@ module.exports = {
         network_id: "5777"
     },
     quorum: {
-        host: "HOSTNAME",
-        port: PORT,
-        network_id: "*",
+        provider: function() {
+        return new HDWalletProvider("mnemonic", "RPC_ENDPOINT");
+        },
+        network_id: "12345",
         gasPrice: 0,
         gas: 4500000,
         type: "quorum"
@@ -237,9 +251,10 @@ module.exports = {
 where
 
 * `quorum` — any network name that you will pass to the `truflle migrate --network` command.
-* HOSTNAME — your Quorum hostname available under **Credentials** > **RPC endpoint**.
-* PORT — your Quorum port available under **Credentials** > **RPC endpoint**.
-* `network_id` — your Quorum network ID available under **Credentials** > **Network ID**. You can set it to `*` for any.
+* `HDWalletProvider` — Truffle's custom provider to sign transactions.
+* `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/).
+* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
+* `network_id` — your Quorum network ID. Available under **Credentials** > **Network ID**. You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
 * `gas` — the setting must be the default `4500000` for the Quorum network.
 * `type` — the setting must be `quorum` to instruct Truffle for the Quorum network deployment.
@@ -247,6 +262,9 @@ where
 Example:
 
 ```js
+const HDWalletProvider = require("truffle-hdwallet-provider");
+const mnemonic = 'word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15';
+
 module.exports = {
   networks: {
     development: {
@@ -255,9 +273,10 @@ module.exports = {
         network_id: "5777"
     },
     quorum: {
-        host: "nd-123-456-789.rg-123-456.int.chainstack.com",
-        port: 8545,
-        network_id: "*",
+        provider: function() {
+        return new HDWalletProvider("mnemonic", "http://nd-123-456-789.rg-123-456.int.chainstack.com:8545");
+        },
+        network_id: "12345",
         gasPrice: 0,
         gas: 4500000,
         type: "quorum"
@@ -266,7 +285,7 @@ module.exports = {
 };
 ```
 
-2. Run:
+3. Run:
 
 ```
 truffle migrate --network quorum
@@ -274,9 +293,135 @@ truffle migrate --network quorum
 
 This will engage `2_deploy_contracts.js` and deploy the `loyaltyProgram.sol` contract to your Quorum network as specified in `truffle-config.js`.
 
+You can view the deployed contract in your Chainstack control panel by navigating to your Quorum project > **Explorer** > **Contracts**.
+
 ## Interact with the contract
 
 See [Interacting with Quorum node using Geth JavaScript Console](/guides/interacting-with-the-blockchain#quorum).
+
+The following contract interaction example will be done with Geth.
+
+### 1. Connect to a node in your Quorum network
+
+Run:
+
+```console
+geth attach RPC_ENDPOINT
+```
+
+where
+
+* * RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
+
+Example:
+
+```console
+geth attach http://nd-123-456-789.rg-123-456.int.chainstack.com:8545
+```
+
+### 2. Set the ABI variable for the contract
+
+Truffle creates the contract's ABI when you run `truffle compile` and saves it to your project's `/build/contracts` directory in `.json` format. Navigate to the directory and get the ABI.
+
+Run:
+
+```console
+var abi = CONTRACT_ABI
+```
+
+where
+
+* CONTRACT_ABI — your contract's ABI in one line.
+
+ABI for `loyaltyProgram.sol`:
+
+```console
+var abi = [{"constant":false,"inputs":[],"name":"join","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type": "constructor"},{"constant":true,"inputs":[],"name":"balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant": true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]
+```
+
+### 3. Set the contract address
+
+Set the address of the deployed contract.
+
+Run:
+
+```console
+var address = CONTRACT_ADDRESS
+```
+
+where
+
+* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating in your Chainstack control panel to your Quorum project > **Explorer** > **Contracts**.
+
+Example:
+
+```console
+var address = "0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5"
+```
+
+### 4. Set a variable to the contract at the address
+
+Run:
+
+```console
+var CONTRACT_NAME = eth.contract(abi).at(address)
+```
+
+where
+
+* CONTRACT_NAME is any name you want to call the contract.
+
+Example:
+
+```console
+var loyaltyProgram = eth.contract(abi).at(address)
+```
+
+### 5. Set the default Quorum address and unlock it
+
+Set the default Quorum address to interact with the contract.
+
+Run:
+
+```console
+eth.defaultAccount="QUORUM_ADDRESS"
+```
+
+where
+
+* QUORUM_ADDRESS — an address created with one of the node deployments. Available in your Chainstack control panel under **Credentials** > **Default wallet address**.
+
+Example:
+
+```console
+eth.defaultAccount="0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
+```
+
+Unlock the account:
+
+```console
+personal.unlockAccount(eth.defaultAccount)
+```
+
+### 6. Call the contract
+
+As the `loyaltyProgram.sol` contract has the `join` function to reward an address for joining, call `join`:
+
+```console
+loyaltyProgram.join()
+```
+
+Now check the balance:
+
+```console
+loyaltyProgram.balance()
+```
+
+This will display the 10 Ether balance in wei:
+
+```console
+10000000000000000000
+```
 
 ::: tip See also:
 * [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain)
