@@ -208,7 +208,7 @@ contract("loyaltyProgram", function(accounts) {
 truffle test
 ```
 
-The test run output should be **Passing**.
+The test run output should be `Passing`.
 
 ### 7. Deploy the contract to your Quorum network
 
@@ -219,10 +219,13 @@ The test run output should be **Passing**.
 Run:
 
 ```console
-$ npm install truffle-hdwallet-provider --save
+npm install truffle-hdwallet-provider --save
 ```
 
-2. Edit `truffle-config.js` to add `HDWalletProvider` and your Quorum network running with Chainstack:
+2. Edit `truffle-config.js` to add:
+
+* `HDWalletProvider`
+* Your Quorum network running with Chainstack
 
 ```js
 const HDWalletProvider = require("truffle-hdwallet-provider");
@@ -293,13 +296,13 @@ truffle migrate --network quorum
 
 This will engage `2_deploy_contracts.js` and deploy the `loyaltyProgram.sol` contract to your Quorum network as specified in `truffle-config.js`.
 
-You can view the deployed contract in your Chainstack control panel by navigating to your Quorum project > **Explorer** > **Contracts**.
+You can view the deployed contract and the contract address in your Chainstack control panel by navigating to your Quorum project > **Explorer** > **Contracts**.
 
 ## Interact with the contract
 
 See [Interacting with Quorum node using Geth JavaScript Console](/guides/interacting-with-the-blockchain#quorum).
 
-The following contract interaction example will be done with Geth.
+The following contract interaction example is done with Geth.
 
 ### 1. Connect to a node in your Quorum network
 
@@ -311,7 +314,7 @@ geth attach RPC_ENDPOINT
 
 where
 
-* * RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
 
 Example:
 
@@ -319,14 +322,16 @@ Example:
 geth attach http://nd-123-456-789.rg-123-456.int.chainstack.com:8545
 ```
 
+This will put you in the Geth console interactive mode.
+
 ### 2. Set the ABI variable for the contract
 
 Truffle creates the contract's ABI when you run `truffle compile` and saves it to your project's `/build/contracts` directory in `.json` format. Navigate to the directory and get the ABI.
 
 Run:
 
-```console
-var abi = CONTRACT_ABI
+```js
+> var abi = CONTRACT_ABI
 ```
 
 where
@@ -335,8 +340,8 @@ where
 
 ABI for `loyaltyProgram.sol`:
 
-```console
-var abi = [{"constant":false,"inputs":[],"name":"join","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type": "constructor"},{"constant":true,"inputs":[],"name":"balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant": true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]
+```js
+> var abi = [{"constant":false,"inputs":[],"name":"join","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type": "constructor"},{"constant":true,"inputs":[],"name":"balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant": true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]
 ```
 
 ### 3. Set the contract address
@@ -345,8 +350,8 @@ Set the address of the deployed contract.
 
 Run:
 
-```console
-var address = CONTRACT_ADDRESS
+```js
+> var address = CONTRACT_ADDRESS
 ```
 
 where
@@ -355,16 +360,16 @@ where
 
 Example:
 
-```console
-var address = "0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5"
+```js
+> var address = "0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5"
 ```
 
 ### 4. Set a variable to the contract at the address
 
 Run:
 
-```console
-var CONTRACT_NAME = eth.contract(abi).at(address)
+```js
+> var CONTRACT_NAME = eth.contract(abi).at(address)
 ```
 
 where
@@ -373,8 +378,8 @@ where
 
 Example:
 
-```console
-var loyaltyProgram = eth.contract(abi).at(address)
+```js
+> var loyaltyProgram = eth.contract(abi).at(address)
 ```
 
 ### 5. Set the default Quorum address and unlock it
@@ -383,8 +388,8 @@ Set the default Quorum address to interact with the contract.
 
 Run:
 
-```console
-eth.defaultAccount="QUORUM_ADDRESS"
+```js
+> eth.defaultAccount="QUORUM_ADDRESS"
 ```
 
 where
@@ -393,28 +398,30 @@ where
 
 Example:
 
-```console
-eth.defaultAccount="0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
+```js
+> eth.defaultAccount="0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
 ```
 
 Unlock the account:
 
-```console
-personal.unlockAccount(eth.defaultAccount)
+```js
+> personal.unlockAccount(eth.defaultAccount)
 ```
 
 ### 6. Call the contract
 
 As the `loyaltyProgram.sol` contract has the `join` function to reward an address for joining, call `join`:
 
-```console
-loyaltyProgram.join()
+```js
+> loyaltyProgram.join()
 ```
+
+This will create a transaction and give you the transaction ID.
 
 Now check the balance:
 
-```console
-loyaltyProgram.balance()
+```js
+> loyaltyProgram.balance()
 ```
 
 This will display the 10 Ether balance in wei:
