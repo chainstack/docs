@@ -74,7 +74,9 @@ Create a public chain project by clicking **Create project** and choosing the **
 
 But this is just a beginning. To join a public chain network, Ethereum, in this case, click the project listing to view the **Join network** modal window. 
 
-Select **Ethereum** from **Blockchain protocol**. Network options available under the specific blockchain protocol are visible under **Blockchain network**. Select **Mainnet**.
+Select **Ethereum** from **Blockchain protocol**. Network options available under the specific blockchain protocol are visible under **Blockchain network**. Select **Mainnet** for the Ethereum main chain or **Ropsten Testnet** for the Ethereum test chain.
+
+See also [Public chain](/projects/public-chain).
 
 ![Join network](./getting-started/public-chain/join-network.png)
 
