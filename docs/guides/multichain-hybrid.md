@@ -6,7 +6,7 @@ By the end of the section, you will have your MultiChain nodes from the same net
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/)
+* [Chainstack](https://console.chainstack.com/) account
 * A supported operating system for the MultiChain on-premises deployment:
   * Linux 64-bit: Ubuntu 12.04+, CentOS 6.2+, Debian 7+, Fedora 15+, RHEL 6.2+
   * Windows 64-bit: Windows 7, 8, 10, Server 2008 or later
@@ -32,7 +32,7 @@ To deploy a hybrid MultiChain network, do the following:
 
 ### 1. Create a Consortium project
 
-1. Log in to your [Chainstack account](https://console.chainstack.com/).
+1. Log in to your [Chainstack](https://console.chainstack.com/) account.
 2. Click **Create project**.
 3. Click **Consortium**.
 3. Provide **Project name** and optionally **Description**.
@@ -81,14 +81,14 @@ multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
 
 where
 
-* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** > **Chain name**.
-* HOSTNAME — your MultiChain cloud deployment hostname. Available under **Credentials** as part of **RPC endpoint**. The format is `nd-XXX-XXX-XXX`.
-* PORT — your MultiChain cloud deployment port. Always use the default value `7447`.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* HOSTNAME — your cloud MultiChain node hostname. Available under **Credentials** as part of **RPC endpoint**. The format is `nd-XXX-XXX-XXX.p2pify.com`.
+* PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
 Command example:
 
 ```
-multichaind nw-784-155-2@nd-339-567-264.int.chainstack.com:7447 -daemon
+multichaind nw-123-456-7@nd-123-456-789.p2pify.com:7447 -daemon
 ```
 
 As a result of running the command, you will have:
@@ -103,12 +103,12 @@ MultiChain 2.0.2 Daemon (Community Edition, latest protocol 20010)
 
 Starting up node...
 
-Retrieving blockchain parameters from the seed node nd-123-456-789.int.chainstack.com:7447 ...
+Retrieving blockchain parameters from the seed node nd-123-456-789.p2pify.com:7447 ...
 Blockchain successfully initialized.
 
 Please ask blockchain admin or user having activate permission to let you connect and/or transact:
-multichain-cli nw-784-155-2 grant 14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q connect
-multichain-cli nw-784-155-2 grant 14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q connect,send,receive
+multichain-cli nw-123-456-7 grant 14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q connect
+multichain-cli nw-123-456-7 grant 14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q connect,send,receive
 ```
 
 ### 6. Grant permissions to your on-premises MultiChain node
@@ -123,28 +123,28 @@ On your on-premises machine, grant your on-premises MultiChain node's wallet add
 
 Sending a curl request from terminal:
 
-```
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d {"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"],"chain_name":"CHAIN_NAME"}'
+``` sh
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d {"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"],"id":1,"chain_name":"CHAIN_NAME"}'
 ```
 
 where
 
-* RPC_ENDPOINT — your MultiChain cloud deployment RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* RPC_USER — your MultiChain cloud deployment username. Available under **Credentials** > **RPC user**.
-* RPC_PASSWORD — your MultiChain cloud deployment password. Available under **Credentials** > **RPC password**.
-* WALLET_ADDRESS — your MultiChain on-premises node's wallet address. You received the wallet address at the end of [Step 5](multichain-hybrid#_5-initialize-your-on-premises-multichain-node).
-* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** > **Chain name**.
+* RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
+* RPC_USER — your cloud MultiChain node RPC username. Available under **Credentials** > **RPC user**.
+* RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Credentials** > **RPC password**.
+* WALLET_ADDRESS — your on-premises MultiChain node's wallet address. You received the wallet address at the end of [Step 5](multichain-hybrid#_5-initialize-your-on-premises-multichain-node).
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
 
 Command example:
 
-```
-curl https://nd-123-456-789.int.chainstack.com -u "modest_cori:ought vilify parcel urging dime sixth" -d '{"method":"grant","params":["14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q","connect,send,receive"],"chain_name":"nw-123-456-7"}'
+``` sh
+curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth" -d '{"method":"grant","params":["14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q","connect,send,receive"],"id":1,"chain_name":"nw-123-456-7"}'
 ```
 
 Output example:
 
-```
-{"result":"17859d3efdaa95bc9d1573e539a9b5177e17debb6afe37078ac6c4bd1bec9821","error":null,"id":null}
+``` json
+{"result":"17859d3efdaa95bc9d1573e539a9b5177e17debb6afe37078ac6c4bd1bec9821","error":null,"id":1}
 ```
 
 ### 7. Add your on-premises MultiChain node to the network
@@ -153,23 +153,23 @@ On your on-premises machine, add your on-premises MultiChain node to the network
 
 Sending a curl request from terminal:
 
-```console
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"addnode","params":["ON_PREM_IP:PORT","add"],"chain_name":"CHAIN_NAME"}'
+``` sh
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"addnode","params":["ON_PREM_IP:PORT","add"],"id":2,"chain_name":"CHAIN_NAME"}'
 ```
 
 where
 
-* RPC_ENDPOINT — your MultiChain cloud deployment RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* RPC_USER — your MultiChain cloud deployment username. Available under **Credentials** > **RPC user**.
-* RPC_PASSWORD — your MultiChain cloud deployment password. Available under **Credentials** > **RPC password**.
-* ON_PREM_IP — your MultiChain on-premises machine's IP address.
-* PORT — your MultiChain on-premises machine's port.
-* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** > **Chain name**.
+* RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
+* RPC_USER — your cloud MultiChain node RPC username. Available under **Credentials** > **RPC user**.
+* RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Credentials** > **RPC password**.
+* ON_PREM_IP — your on-premises MultiChain node machine's IP address.
+* PORT — your on-premises MultiChain node machine's port.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
 
 Command example:
 
-```console
-curl https://nd-123-456-789.int.chainstack.com -u "modest_cori:ought vilify parcel urging dime sixth" -d '{"method":"addnode","params":["123.45.100.80:7447","add"],"chain_name":"nw-123-456-7"}'
+``` sh
+curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth" -d '{"method":"addnode","params":["123.45.100.80:7447","add"],"id":2,"chain_name":"nw-123-456-7"}'
 ```
 
 ### 8. Connect to the MultiChain network
@@ -178,25 +178,25 @@ On your on-premises machine, connect to the MultiChain network.
 
 Run:
 
-```
+``` sh
 multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
 ```
 
 where
 
-* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** > **Chain name**.
-* HOSTNAME — your MultiChain cloud deployment hostname. Available under **Credentials** as part of **RPC endpoint**. The format is `nd-XXX-XXX-XXX`.
-* PORT — your MultiChain cloud deployment port. Always use the default value `7447`.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* HOSTNAME — your cloud MultiChain node hostname. Available under **Credentials** as part of **RPC endpoint**. The format is `nd-XXX-XXX-XXX.p2pify.com`.
+* PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
 Command example:
 
-```console
-multichaind nw-123-456-7@nd-123-456-789.int.chainstack.com:7447 -daemon
+``` sh
+multichaind nw-123-456-7@nd-123-456-789.p2pify.com:7447 -daemon
 ```
 
 ## Interact from any node
 
-Now that the MultiChain network is running in a hybrid deployment, you can interact with it through `multichain-cli`.
+Now that the MultiChain network is running in a hybrid environment, you can interact with it through `multichain-cli`.
 
 You can interact through your on-premises node or your cloud node.
 
@@ -204,19 +204,19 @@ You can interact through your on-premises node or your cloud node.
 
 Enter interactive mode:
 
-```console
+``` sh
 multichain-cli CHAIN_NAME@IP_ADDRESS:PORT
 ```
 
 where
 
-* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** > **Chain name**.
-* IP_ADDRESS — your on-premises machine name's IP address.
-* PORT — your on-premises node's peer port.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* IP_ADDRESS — your on-premises MultiChain node machine's IP address.
+* PORT — your on-premises MultiChain node machine's port.
 
 Example command:
 
-```
+``` sh
 multichain-cli nw-123-456-7@123.45.100.80:7447
 ```
 
@@ -224,20 +224,20 @@ multichain-cli nw-123-456-7@123.45.100.80:7447
 
 Enter interactive mode:
 
-```console
+``` sh
 multichain-cli CHAIN_NAME@HOSTNAME:PORT
 ```
 
 where
 
-* CHAIN_NAME — your MultiChain cloud deployment chain name. Available under **Credentials** > **Chain name**.
-* HOSTNAME — your on-premises machine's IP address.
-* PORT — your on-premises node's peer port.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* HOSTNAME — your cloud MultiChain node hostname. Available under **Credentials** as part of **RPC endpoint**. The format is `nd-XXX-XXX-XXX.p2pify.com`.
+* PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
 Example command:
 
-```console
-multichain-cli nw-123-456-7@nd-123-456-789.int.chainstack.com:7447
+``` sh
+multichain-cli nw-123-456-7@nd-123-456-789.p2pify.com:7447
 ```
 
 ### Run commands in interactive mode
@@ -248,7 +248,7 @@ Examples:
 
 Get the node and blockchain information:
 
-```console
+``` sh
 nw-123-456-7: getinfo
 ```
 
@@ -291,7 +291,7 @@ Example output:
 
 Get information about the other nodes to which this node is connected
 
-```console
+``` sh
 nw-123-456-7: getpeerinfo
 ```
 
