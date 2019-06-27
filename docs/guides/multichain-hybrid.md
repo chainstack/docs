@@ -76,19 +76,26 @@ On your on-premises machine, attempt to connect to the cloud node to initialize 
 Run:
 
 ```
-multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
+multichaind CHAIN_NAME@HOSTNAME-ORG_ID:PORT -daemon
 ```
 
 where
 
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
-* HOSTNAME — your cloud MultiChain node hostname. Available under **Credentials** as part of **RPC endpoint**. The format is `nd-XXX-XXX-XXX.p2pify.com`.
+* HOSTNAME-ORG_ID — your cloud MultiChain node hostname and Organization ID.
+  * Get your hostname under **Credentials** as part of **RPC endpoint**.
+  * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page. <br />
+    The format is `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.    
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
-Command example:
+Command example for:
+
+* CHAIN_NAME: `nw-123-456-7`
+* HOSTNAME: `nd-123-456-789`
+* ORG_ID: `rg-123-456`
 
 ```
-multichaind nw-123-456-7@nd-123-456-789.p2pify.com:7447 -daemon
+multichaind nw-123-456-7@nd-123-456-789.rg-123-456.p2pify.com:7447 -daemon
 ```
 
 As a result of running the command, you will have:
@@ -196,7 +203,7 @@ multichaind nw-123-456-7@nd-123-456-789.p2pify.com:7447 -daemon
 
 ## Interact from any node
 
-Now that the MultiChain network is running in a hybrid environment, you can interact with it through `multichain-cli`.
+Now that the MultiChain network is running in a hybrid environment, you can interact with it.
 
 You can interact through your on-premises node or your cloud node.
 
@@ -214,43 +221,18 @@ where
 * IP_ADDRESS — your on-premises MultiChain node machine's IP address.
 * PORT — your on-premises MultiChain node machine's port.
 
-Example command:
+Example commands:
 
-``` sh
-multichain-cli nw-123-456-7@123.45.100.80:7447
-```
+* Connect:
+    ``` sh
+    multichain-cli nw-123-456-7@123.45.100.80:7447
+    ```
 
-### Enter multichain-cli interactive mode through your cloud node
+* Send `getinfo`:
 
-Enter interactive mode:
-
-``` sh
-multichain-cli CHAIN_NAME@HOSTNAME:PORT
-```
-
-where
-
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
-* HOSTNAME — your cloud MultiChain node hostname. Available under **Credentials** as part of **RPC endpoint**. The format is `nd-XXX-XXX-XXX.p2pify.com`.
-* PORT — your cloud MultiChain node port. Always use the default value `7447`.
-
-Example command:
-
-``` sh
-multichain-cli nw-123-456-7@nd-123-456-789.p2pify.com:7447
-```
-
-### Run commands in interactive mode
-
-Once in interactive mode, run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
-
-Examples:
-
-Get the node and blockchain information:
-
-``` sh
-nw-123-456-7: getinfo
-```
+    ``` sh
+    nw-123-456-7: getinfo
+    ```
 
 Example output:
 
@@ -289,69 +271,24 @@ Example output:
 }
 ```
 
-Get information about the other nodes to which this node is connected
+Run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
+
+### Send commands to your cloud node
+
+Send `getinfo` to get the node and blockchain information:
 
 ``` sh
-nw-123-456-7: getpeerinfo
+curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth"-d '{"method":"getinfo","params":[],"id":1,"chain_name":"nw-123-456-7"}'
 ```
 
 Example output:
 
 ```
-{"method":"getpeerinfo","params":[],"id":"18369030-1561354022","chain_name":"nw-123-456-7"}
-
-[
-    {
-        "id" : 1,
-        "addr" : "35.240.131.147:55052",
-        "addrlocal" : "123.45.100.80:7447",
-        "services" : "0000000000000001",
-        "lastsend" : 1561354022,
-        "lastrecv" : 1561354012,
-        "bytessent" : 1793,
-        "bytesrecv" : 1761,
-        "conntime" : 1561354001,
-        "pingtime" : 0.498706,
-        "pingwait" : 0.123433,
-        "version" : 70002,
-        "subver" : "/MultiChain:0.2.0.9/",
-        "handshakelocal" : "14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q",
-        "handshake" : "13849V95zfosL2RKKFCXcMrTBZdGU8XBiWNxum",
-        "inbound" : true,
-        "startingheight" : 70,
-        "banscore" : 0,
-        "synced_headers" : 70,
-        "synced_blocks" : 70,
-        "inflight" : [
-        ],
-        "whitelisted" : false
-    },
-    {
-        "id" : 2,
-        "addr" : "34.87.116.95:7447",
-        "addrlocal" : "10.148.0.55:49608",
-        "services" : "0000000000000001",
-        "lastsend" : 1561354013,
-        "lastrecv" : 1561354013,
-        "bytessent" : 937,
-        "bytesrecv" : 938,
-        "conntime" : 1561354012,
-        "pingtime" : 0.526633,
-        "version" : 70002,
-        "subver" : "/MultiChain:0.2.0.9/",
-        "handshakelocal" : "14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q",
-        "handshake" : "13849V95zfosL2RKKFCXcMrTBZdGU8XBiWNxum",
-        "inbound" : false,
-        "startingheight" : 70,
-        "banscore" : 0,
-        "synced_headers" : -1,
-        "synced_blocks" : -1,
-        "inflight" : [
-        ],
-        "whitelisted" : false
-    }
-]
+{"result":{"version":"2.0","nodeversion":20000901,"protocolversion":20004,"chainname":"nw-123-456-7","description":"My Network","protocol":"multichain","port":7447,"setupblocks":60,"nodeaddress":"nw-123-456-7@12.34.56.78:7447","burnaddress":"1XXXXXXX24XXXXXXoiXXXXXXegXXXXXXURq4HJ","incomingpaused":false,"miningpaused":false,"offchainpaused":false,"walletversion":60000,"balance":0,"walletdbversion":3,"reindex":false,"blocks":81,"timeoffset":0,"connections":3,"proxy":"","difficulty":5.96046447753906e-8,"testnet":false,"keypoololdest":1561618750,"keypoolsize":2,"paytxfee":0,"relayfee":0,"errors":""},"error":null,"id":1}
+"}'
 ```
+
+Send any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
 
 ::: tip See also:
 * [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain)
