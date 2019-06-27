@@ -58,8 +58,12 @@ The network status will change from **Pending** to **Running** once deployed.
 
 ### 3. Get your cloud MultiChain node access information
 
+::: tip Use your first node 
+You need to get the access information for your first MultiChain node as this node has the administrator address.
+:::
+
 1. In your MultiChain deployment project, click your MultiChain network name.
-2. Under **Node name**, click your node.
+2. Under **Node name**, click your first deployed node.
 
 Under **Credentials**, you will see your MultiChain node access information.
 
@@ -127,6 +131,10 @@ On your on-premises machine, grant your on-premises MultiChain node's wallet add
 * `conect`
 * `send`
 * `receive`
+
+::: tip Use your first node 
+You need to send the `grant` request through your first deployed node as specified in [Step 3](multichain-hybrid#_3-get-your-cloud-multichain-node-access-information).
+:::
 
 Sending a curl request from terminal:
 
@@ -293,4 +301,5 @@ Send any [MultiChain JSON-RPC command](https://www.multichain.com/developers/jso
 ::: tip See also:
 * [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain)
 * [Application development](/guides/application-development)
+* [MultiChain permissions management](https://www.multichain.com/developers/permissions-management/)
 :::
