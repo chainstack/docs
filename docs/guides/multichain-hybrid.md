@@ -20,50 +20,49 @@ By the end of the section, you will have your MultiChain nodes from the same net
 To deploy a hybrid MultiChain network, do the following:
 
 1. With Chainstack, create a [Consortium](/projects/consortium) project.
-2. With Chainstack, deploy a MultiChain network in cloud.
-3. With Chainstack, get your cloud MultiChain node access information.
-4. On-premises, install MultiChain.
-5. On-premises, initialize your MultiChain node.
-6. From your cloud MultiChain node, grant permissions to your on-premises MultiChain node's wallet address.
-7. From your cloud MultiChain node, add your on-premises MultiChain node to the network.
-8. From your on-premises MultiChain node, connect to the MultiChain network.
+1. With Chainstack, deploy a MultiChain network in cloud.
+1. With Chainstack, get your cloud MultiChain node access information.
+1. On-premises, install MultiChain.
+1. On-premises, initialize your MultiChain node.
+1. From your cloud MultiChain node, grant permissions to your on-premises MultiChain node's wallet address.
+1. From your cloud MultiChain node, add your on-premises MultiChain node to the network.
+1. From your on-premises MultiChain node, connect to the MultiChain network.
 
 ## Step-by-step
 
 ### 1. Create a Consortium project
 
 1. Log in to your [Chainstack](https://console.chainstack.com/) account.
-2. Click **Create project**.
-3. Click **Consortium**.
-3. Provide **Project name** and optionally **Description**.
-4. Click **Create**.
+1. Click **Create project**.
+1. Click **Consortium**.
+1. Provide **Project name** and optionally **Description**.
+1. Click **Create**.
 
 This will create a project with Chainstack.
 
 ### 2. Deploy a MultiChain network
 
 1. Select the created project and click **Get started**.
-2. Provide **Network name**.
-3. Under **Blockchain protocol**, select **MultiChain**. Click **Next**.
-4. Under **Cloud hosting provider**, select your preferred provider.
-5. Under **Region**, select the region for your deployment.
+1. Provide **Network name**.
+1. Under **Blockchain protocol**, select **MultiChain**. Click **Next**.
+1. Under **Cloud hosting provider**, select your preferred provider.
+1. Under **Region**, select the region for your deployment.
+1. Review your changes and click **Create network**.
 
-  ::: warning
-  Currently only **Asia-Pacific** is available.
-  :::
-
-6. Review your changes and click **Create network**.
+::: warning
+Currently only **Asia-Pacific** region is available for deployment.
+:::
 
 The network status will change from **Pending** to **Running** once deployed.
 
 ### 3. Get your cloud MultiChain node access information
 
-::: tip Use your first node 
-You need to get the access information for your first MultiChain node as this node has the administrator address.
+::: warning
+You need to get the access information for the first MultiChain node in your the network as this node has the administrator address.
 :::
 
 1. In your MultiChain deployment project, click your MultiChain network name.
-2. Under **Node name**, click your first deployed node.
+1. Under **Node name**, click your first deployed node.
 
 Under **Credentials**, you will see your MultiChain node access information.
 
@@ -79,26 +78,22 @@ On your on-premises machine, attempt to connect to the cloud node to initialize 
 
 Run:
 
-```
-multichaind CHAIN_NAME@HOSTNAME-ORG_ID:PORT -daemon
+``` sh
+multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
 ```
 
 where
 
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
-* HOSTNAME-ORG_ID — your cloud MultiChain node hostname and Organization ID.
-  * Get your hostname under **Credentials** as part of **RPC endpoint**.
-  * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page. <br />
-    The format is `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.    
+* HOSTNAME — your cloud MultiChain node hostname.
+  * Get your RPC hostname under **Credentials** as part of **RPC endpoint**.
+  * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
+  * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
-Command example for:
+Command example:
 
-* CHAIN_NAME: `nw-123-456-7`
-* HOSTNAME: `nd-123-456-789`
-* ORG_ID: `rg-123-456`
-
-```
+``` sh
 multichaind nw-123-456-7@nd-123-456-789.rg-123-456.p2pify.com:7447 -daemon
 ```
 
@@ -132,7 +127,7 @@ On your on-premises machine, grant your on-premises MultiChain node's wallet add
 * `send`
 * `receive`
 
-::: tip Use your first node 
+::: warning
 You need to send the `grant` request through your first deployed node as specified in [Step 3](multichain-hybrid#_3-get-your-cloud-multichain-node-access-information).
 :::
 
@@ -200,13 +195,16 @@ multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
 where
 
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
-* HOSTNAME — your cloud MultiChain node hostname. Available under **Credentials** as part of **RPC endpoint**. The format is `nd-XXX-XXX-XXX.p2pify.com`.
+* HOSTNAME — your cloud MultiChain node hostname.
+  * Get your RPC hostname under **Credentials** as part of **RPC endpoint**.
+  * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
+  * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
 Command example:
 
 ``` sh
-multichaind nw-123-456-7@nd-123-456-789.p2pify.com:7447 -daemon
+multichaind nw-123-456-7@nd-123-456-789.rg-123-456.p2pify.com:7447 -daemon
 ```
 
 ## Interact from any node
@@ -220,31 +218,28 @@ You can interact through your on-premises node or your cloud node.
 Enter interactive mode:
 
 ``` sh
-multichain-cli CHAIN_NAME@IP_ADDRESS:PORT
+multichain-cli CHAIN_NAME
 ```
 
 where
 
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
-* IP_ADDRESS — your on-premises MultiChain node machine's IP address.
-* PORT — your on-premises MultiChain node machine's port.
 
-Example commands:
+Command example:
 
-* Connect:
-    ``` sh
-    multichain-cli nw-123-456-7@123.45.100.80:7447
-    ```
+``` sh
+multichain-cli nw-123-456-7
+```
 
-* Send `getinfo`:
+After entering interactive mode, send any command. For example, `getinfo` to get the node and blockchain information:
 
-    ``` sh
-    nw-123-456-7: getinfo
-    ```
+```
+nw-123-456-7: getinfo
+```
 
 Example output:
 
-```
+``` json
 {"method":"getinfo","params":[],"id":"64739383-1561354299","chain_name":"nw-123-456-7"}
 
 {
@@ -286,19 +281,19 @@ Run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json
 Send `getinfo` to get the node and blockchain information:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth"-d '{"method":"getinfo","params":[],"id":1,"chain_name":"nw-123-456-7"}'
+curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth"-d '{"method":"getinfo","params":[],"id":3,"chain_name":"nw-123-456-7"}'
 ```
 
 Example output:
 
-```
-{"result":{"version":"2.0","nodeversion":20000901,"protocolversion":20004,"chainname":"nw-123-456-7","description":"My Network","protocol":"multichain","port":7447,"setupblocks":60,"nodeaddress":"nw-123-456-7@12.34.56.78:7447","burnaddress":"1XXXXXXX24XXXXXXoiXXXXXXegXXXXXXURq4HJ","incomingpaused":false,"miningpaused":false,"offchainpaused":false,"walletversion":60000,"balance":0,"walletdbversion":3,"reindex":false,"blocks":81,"timeoffset":0,"connections":3,"proxy":"","difficulty":5.96046447753906e-8,"testnet":false,"keypoololdest":1561618750,"keypoolsize":2,"paytxfee":0,"relayfee":0,"errors":""},"error":null,"id":1}
-"}'
+``` json
+{"result":{"version":"2.0","nodeversion":20000901,"protocolversion":20004,"chainname":"nw-123-456-7","description":"My Network","protocol":"multichain","port":7447,"setupblocks":60,"nodeaddress":"nw-123-456-7@12.34.56.78:7447","burnaddress":"1XXXXXXX24XXXXXXoiXXXXXXegXXXXXXURq4HJ","incomingpaused":false,"miningpaused":false,"offchainpaused":false,"walletversion":60000,"balance":0,"walletdbversion":3,"reindex":false,"blocks":81,"timeoffset":0,"connections":3,"proxy":"","difficulty":5.96046447753906e-8,"testnet":false,"keypoololdest":1561618750,"keypoolsize":2,"paytxfee":0,"relayfee":0,"errors":""},"error":null,"id":3}
 ```
 
 Send any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
 
 ::: tip See also:
+
 * [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain)
 * [Application development](/guides/application-development)
 * [MultiChain permissions management](https://www.multichain.com/developers/permissions-management/)
