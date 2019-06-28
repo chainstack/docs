@@ -9,18 +9,18 @@ The loyalty program does the following:
 
 This tutorial uses Truffle as [Truffle officially supports Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum).
 
-The contract and the Truffle configuration are in the [Chainstack GitHub repository](https://github.com/chainstack/quorum-loyalty-program-tutorial).
+The contract and the Truffle configuration are in the [GitHub repository](https://github.com/chainstack/quorum-loyalty-program-tutorial).
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy a Quorum network.
+* [Chainstack](https://console.chainstack.com/) account to deploy a Quorum network.
 * [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
 
 ## Overview
 
 To get from zero to a deployed Quorum network with the running contract, do the following:
 
-1. With Chainstck, create a [Consortium](/projects/consortium) project.
+1. With Chainstack, create a [Consortium](/projects/consortium) project.
 1. With Chainstack, deploy a Quorum network.
 1. With Chainstack, access your Quorum node credentials.
 1. With Truffle, create and compile the contract.
@@ -51,7 +51,7 @@ This will create a project with Chainstack.
 1. Review your changes and click **Create network**.
 
 ::: warning
-Currently only **Asia-Pacific** is available.
+Currently only **Asia-Pacific** region is available for deployment.
 :::
 
 The network status will change from **Pending** to **Running** once deployed.
@@ -59,7 +59,7 @@ The network status will change from **Pending** to **Running** once deployed.
 ### 3. Get your Quorum node access information
 
 1. In your Quorum project, click your Quorum network name.
-2. Under **Node name**, click your node.
+1. Under **Node name**, click your node.
 
 Under **Credentials**, you will see your Quorum node access information.
 
@@ -138,32 +138,13 @@ This will compile the contract and put it in your `build/contracts` directory in
 
 ### 5. Deploy the contract to your local development network
 
-1. Start the local development network.
+1. Start the development network on your machine:
 
-    1. Edit `truffle-config.js` to add your local development network:
+``` sh
+truffle develop
+```
 
-     ``` js
-     module.exports = {
-     networks: {
-     development: {
-         host: "127.0.0.1",
-         port: 9545,
-         network_id: "*"
-       }
-      }
-     };
-     ```
-
-    2. Run:
-
-     ``` sh
-     truffle develop
-     ```
-     This will run the development network on your machine.
-
-1. Without exiting the Truffle console, deploy the contract to the local development network.
-
-Run:
+2. Without exiting the Truffle console, deploy the contract to the local development network:
 
 ``` js
 truffle(develop)>  migrate
@@ -191,7 +172,9 @@ contract("loyaltyProgram", function(accounts) {
 ```
 
 ::: tip See also:
+
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
+
 :::
 
 3. Start the local development network:
@@ -227,7 +210,7 @@ npm install truffle-hdwallet-provider
 
 ``` js
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = 'word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15';
+const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15";
 
 module.exports = {
   networks: {
@@ -237,9 +220,7 @@ module.exports = {
         network_id: "*"
     },
     quorum: {
-        provider: function() {
-        return new HDWalletProvider(mnemonic, "RPC_ENDPOINT");
-        },
+        provider: () => new HDWalletProvider(mnemonic, "RPC_ENDPOINT"),
         network_id: "*",
         gasPrice: 0,
         gas: 4500000,
@@ -251,7 +232,7 @@ module.exports = {
 
 where
 
-* `quorum` — any network name that you will pass to the `truflle migrate --network` command.
+* `quorum` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
 * RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
@@ -390,7 +371,7 @@ Example:
 Run:
 
 ``` js
-> eth.defaultAccount="QUORUM_ADDRESS"
+> eth.defaultAccount = "QUORUM_ADDRESS"
 ```
 
 where
@@ -400,7 +381,7 @@ where
 Example:
 
 ``` js
-> eth.defaultAccount="0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
+> eth.defaultAccount = "0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
 ```
 
 ### 6. Call the contract
@@ -426,8 +407,10 @@ This will display the balance:
 ```
 
 ::: tip See also:
+
 * [Interacting with the blockchain](/guides/interacting-with-the-blockchain)
 * [Application development](/guides/application-development)
 * [Truffle: Working with Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum)
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
+
 :::
