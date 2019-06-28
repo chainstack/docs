@@ -16,6 +16,7 @@ module.exports = {
                     '/guides/getting-started',
                     '/guides/interacting-with-the-blockchain',
                     '/guides/application-development',
+                    '/guides/multichain-hybrid',
                     '/guides/on-chain-governance',
                 ]
             },
