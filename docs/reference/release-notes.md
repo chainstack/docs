@@ -1,5 +1,15 @@
 # Release Notes
 
+## Chainstack 1.2.1
+
+*July 1, 2019*
+
+### What’s New
+* **Documentation**. New guide: [Deploying a hybrid MultiChain network](../guides/multichain-hybrid). New tutorial: [Loyalty program on Quorum](../tutorials/loyalty-program-on-quorum)
+
+### Bug Fixes
+* Improved Ropsten nodes syncing
+
 ## Chainstack 1.2
 
 *June 21, 2019*
