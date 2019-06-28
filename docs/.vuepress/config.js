@@ -16,6 +16,7 @@ module.exports = {
                     '/guides/getting-started',
                     '/guides/interacting-with-the-blockchain',
                     '/guides/application-development',
+                    '/guides/multichain-hybrid',
                     '/guides/on-chain-governance',
                 ]
             },
@@ -24,7 +25,7 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/tutorials/academic-certificates-on-ethereum',
-                    '/tutorials/loyalty-program-quorum',
+                    '/tutorials/loyalty-program-on-quorum',
                 ]
             },
             {
