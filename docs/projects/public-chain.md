@@ -6,7 +6,9 @@ Users can join a public blockchain network by deploying a new node or getting ac
 
 A public chain network comes in various flavors. There’s the mainnet, where the actual network lives and where users transact data and cryptocurrency. Not unlike a typical staging environment, there are also various testnets, which are ideal for smart contract development and testing.
 
-Chainstack currently supports joining Ethereum mainnet. Support for joining testnets such as Ropsten and Kovan will follow.
+Chainstack currently supports joining Ethereum mainnet and Ropsten testnet.
+
+To fund your address to interact with Ropsten, use [Ropsten Ethereum Faucet](https://faucet.ropsten.be/).
 
 ## Node types
 
