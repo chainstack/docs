@@ -87,13 +87,13 @@ contract DocStamp is Ownable {
   event CertificateIssued(bytes32 indexed record, uint256 timestamp, bool returnValue);
 
   function issueCertificate(string calldata name, string calldata details) external onlyOwner {
-    bytes32 certificate = keccak256(abi.encodePacked(name, details));    
+    bytes32 certificate = keccak256(abi.encodePacked(name, details));
     require(certificate != keccak256(abi.encodePacked("")));
     records[certificate] = msg.sender;
     emit CertificateIssued(certificate, block.timestamp, true);
   }
 
-  function owningAuthority() external view returns (address) {   
+  function owningAuthority() external view returns (address) {
     return owner;
   }
 
@@ -104,7 +104,7 @@ contract DocStamp is Ownable {
       // does the certificate exist on the blockchain?
       if (records[certificate] == owner) {
         return true;
-      } 
+      }
     }
     return false;
   }
@@ -201,7 +201,7 @@ You can see methods defined in **Ownable** on instance since **DocStamp** inheri
 > let owner = await instance.owningAuthority()
 // issue a certificate
 > let result = await instance.issueCertificate("rahul", "developer", {from: owner})
-// will fail if called by someone else 
+// will fail if called by someone else
 > let result = await instance.issueCertificate("peter", "copywriter", {from: accounts[1]})
 // verify certificate
 > let verified = await instance.verifyCertificate("rahul", "developer", "0x3893c7e8b4091794fa54e4b22cc506042f2b00e07d965aa3927aff7f12163955", {from: owner})
@@ -242,13 +242,13 @@ contract('DocStamp', function(accounts) {
     try {
       const instance = await DocStamp.deployed()
       const verified = await instance.verifyCertificate("rahul", "developer", "0x3893c7e8b4091794fa54e4b22cc506042f2b00e07d965aa3927aff7f12163955")
-      
+
       assert.equal(verified, true)
     } catch(error) {
       assert.equal(error, undefined)
     }
   })
-}) 
+})
 ```
 
 To execute the tests, type `test` in Truffle Develop or simply run `truffle test` from the console.
