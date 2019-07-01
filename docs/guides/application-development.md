@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-Deploy an MultiChain node on Chainstack, and make a note of the connection details for the node.
+Deploy a MultiChain node on Chainstack, and make a note of the connection details for the node.
 
 ### Working with MultiChain from your JavaScript application
 
@@ -77,7 +77,7 @@ The example code above should output basic network information:
 
 ### Prerequisites
 
-Deploy an Quorum node on Chainstack, and make a note of the connection details for the node.
+Deploy a Quorum node on Chainstack, and make a note of the connection details for the node.
 
 ### Configuring Truffle to work with Quorum node running on Chainstack
 

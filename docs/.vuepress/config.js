@@ -53,6 +53,7 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/reference/glossary',
+                    '/reference/release-notes',                    
                 ]
             }
         ],

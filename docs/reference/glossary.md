@@ -20,7 +20,7 @@ Deployment of a node on the company’s own infrastructure.
 
 ### Hybrid
 
-Depending on the blockchain protocol, a hybrid deployment could mean that some nodes of an organization are on-prem while others are on the public cloud.
+Depending on the blockchain protocol, a hybrid deployment could mean that some nodes of an organization are on-prem while others are on the public cloud. See also [Deploying a hybrid MultiChain network](/guides/multichain-hybrid).
 
 ## Member
 
