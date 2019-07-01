@@ -16,6 +16,7 @@ module.exports = {
                     '/guides/getting-started',
                     '/guides/interacting-with-the-blockchain',
                     '/guides/application-development',
+                    '/guides/multichain-hybrid',
                     '/guides/on-chain-governance',
                 ]
             },
@@ -24,6 +25,7 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/tutorials/academic-certificates-on-ethereum',
+                    '/tutorials/loyalty-program-on-quorum',
                 ]
             },
             {
@@ -51,13 +53,19 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/reference/glossary',
+                    '/reference/release-notes',                    
                 ]
             }
         ],
         algolia: {
             apiKey: '1194997ecec7d141de5c746bc3463e9c',
             indexName: 'chainstack'
-        }
+        },
+        docsRepo: 'chainstack/docs',
+        docsDir: 'docs',
+        editLinks: true,
+        editLinkText: 'Edit on GitHub'
+   
     },
     plugins: {
         '@vuepress/google-analytics': {
