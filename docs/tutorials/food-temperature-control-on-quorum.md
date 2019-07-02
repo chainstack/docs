@@ -105,17 +105,17 @@ In your project folder, create an `.env` file:
 
 ``` js
 RPC1='RPC_ENDPOINT'
-PK1='PUBLIC_KEY'
+PK1='CONSTELLATION_PUBLIC_KEY'
 RPC2='RPC_ENDPOINT'
-PK2='PUBLIC_KEY'
+PK2='CONSTELLATION_PUBLIC_KEY'
 RPC3='RPC_ENDPOINT'
-PK3='PUBLIC_KEY'
+PK3='CONSTELLATION_PUBLIC_KEY'
 ```
 
 where
 
 * RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* PUBLIC_KEY — your Quorum node public key. Available under **Credentials** > **Default wallet public key**.
+* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Credentials** > **Constellation public key**.
 
 ## Create the contract
 
@@ -275,7 +275,7 @@ Retrieved contract Temperature 3
 ### 1. Create a private.js file that will:
 
 1. Format and deploy the contract as private through Node 1.
-2. Set the temperature to `3` through Node 2.
+2. Set the temperature to `12` through Node 2.
 3. Retrieve the temperature through Node 2.
 4. Attempt to set the temperature through Node 3 and fail.
 5. Attempt to retrieve the temperature through Node 3 and fail.
@@ -394,7 +394,7 @@ where
 * `setTemperature` is the function to write the temperature value.
 * `getTemperature` is the function to fetch the temperature value.
 * `process.env` loads your nodes access variables from the `.env` file.
-* `privateFor` is the Quorum specific parameter that sets the transaction private for the account idenitified by `[publicKey]`.
+* `privateFor` is the Quorum specific parameter that sets the transaction private for the account idenitified by `publicKey`.
 
 ### 2. Run the transaction
 
@@ -402,11 +402,21 @@ where
 $ node private.js
 ```
 
-This will deploy the contract, set the temperature value through the `[publicKey]` account, read the temperature value through the `[publicKey]` account, and fail to set and read the temperature through other accounts.
+This will deploy the contract, set the temperature value through the `publicKey` account, read the temperature value through the `publicKey` account, and fail to set and read the temperature through other accounts.
+
+Example output:
+
+``` sh
+Contract address after deployment: 0x60b695429838abA534273396ab90e25346F571B8
+[Node3] temp retrieved after updating contract from external nodes: null
+[Node2] temp retrieved after updating contract from internal nodes: 12
+[Node3] temp retrieved from external nodes after update null
+```
 
 ::: tip See also:
 
 * [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain)
 * [Application development](/guides/application-development)
+* [Quorum: Constellation](https://docs.goquorum.com/en/latest/Privacy/Constellation/Constellation/)
 
 :::
