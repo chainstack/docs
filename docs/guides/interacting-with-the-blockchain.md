@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-Deploy an MultiChain node on Chainstack, and make a note of the connection details for the node.
+Deploy a MultiChain node on Chainstack, and make a note of the connection details for the node.
 
 ### Interacting with MultiChain node using JSON-RPC API
 
@@ -25,7 +25,7 @@ $ curl -H "Content-Type: application/json" \
 
 ### Prerequisites
 
-Deploy an Quorum node on Chainstack, and make a note of the connection details for the node.
+Deploy a Quorum node on Chainstack, and make a note of the connection details for the node.
 
 ### Interacting with Quorum node using Geth JavaScript Console
 
