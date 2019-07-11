@@ -62,7 +62,7 @@ The network status will change from **Pending** to **Running** once deployed.
 1. Create a new Embark project:
 
     ``` sh
-    $ embark new asset
+    embark new asset
     ```
 
     This will create an Embark directory called `asset`.
@@ -83,10 +83,11 @@ The network status will change from **Pending** to **Running** once deployed.
         supply = 1000;                    // There are a total of 1000 tokens for this asset
         pricePerEth = 100000000000000000; // One token costs 0.1 ether
       }
-      
+
       function check() public view returns(uint) {
         return balance[msg.sender];
       }
+
       function () external payable {
         balance[msg.sender] += msg.value/pricePerEth; // adds asset tokens to how much Ether is sent by the investor
         supply -= msg.value/pricePerEth;              //subtracts the remaining asset tokens from the total supply
@@ -101,13 +102,13 @@ You will use this account to deploy the contract.
 1. Create the account:
 
     ``` sh
-    $ geth account new
+    geth account new
     ```
 
 1. Check the path to the keystore file created for the new account:
 
     ``` sh
-    $ geth account list
+    geth account list
     ```
 
 ### 5. Import the account in Metamask and fund the account
@@ -124,25 +125,23 @@ You will use this account to deploy the contract.
     ``` js
     chainstack: {
         deployment:{
-        accounts: [
-            {
-            privateKeyFile:"PATH_TO_KEYSTORE",
-            password:"PASSWORD"
-            }
-        ],
-        host:"RPC_ENDPOINT",
-        port:false,
-        protocol:"https",
-        type:"rpc"
-    
+          accounts: [
+              {
+                privateKeyFile:"PATH_TO_KEYSTORE",
+                password:"PASSWORD"
+              }
+          ],
+          host:"RPC_ENDPOINT",
+          port:false,
+          protocol:"https",
+          type:"rpc"
         },
         dappConnection: [
-        "$WEB3",  // uses pre existing web3 object if available (e.g in Mist)
-        "ws://localhost:8546",
-        "http://localhost:8545"
+          "$WEB3",  // uses pre existing web3 object if available (e.g in Mist)
+          "ws://localhost:8546",
+          "http://localhost:8545"
         ],
         gas: "auto",
-
       }
     ```
 
@@ -155,7 +154,7 @@ You will use this account to deploy the contract.
 1. Deploy the contract with Embark:
 
     ``` sh
-    $ embark run chainstack
+    embark run chainstack
     ```
 
     where
@@ -187,7 +186,7 @@ Test the contract by calling:
 ### 8. Interact with the contract
 
 1. In Metamask, send an amount of Ropsten Ether to the contract address.
-1. In Cockpit, call the contract functions `supply()` and `check()`after a few seconds to see a change in values returned.
+1. In Cockpit, call the contract functions `supply()` and `check()` after a few seconds to see a change in values returned.
 
 ::: tip See also:
 
