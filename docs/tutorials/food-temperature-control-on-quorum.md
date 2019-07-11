@@ -83,7 +83,7 @@ $ npm install web3
 
 ### 3. Install Solidity JavaScript Compiler
 
-The Solidity JavaScript compiler will compile the contract the ABI and bytecode formats that you will deploy on your Quorum network.
+The Solidity JavaScript compiler will compile the contract, the ABI, and bytecode formats that you will deploy on your Quorum network.
 
 ::: warning
 This tutorial uses Solidity Compiler 0.4.25 for web3 compatibility.
