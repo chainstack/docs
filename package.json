@@ -1,6 +1,6 @@
 {
   "name": "chainstack-docs",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Chainstack documentation",
   "license": "UNLICENSED",
   "private": true,
@@ -11,11 +11,11 @@
   },
   "devDependencies": {
     "markdown-it-container": "^2.0.0",
-    "vuepress": "^1.0.0-alpha.48"
+    "vuepress": "^1.0.2"
   },
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.48",
-    "esm": "^3.2.22",
+    "@vuepress/plugin-google-analytics": "^1.0.2",
+    "esm": "^3.2.25",
     "vuepress-plugin-clean-urls": "^1.0.3",
     "vuepress-plugin-sitemap": "^2.1.2"
   }
