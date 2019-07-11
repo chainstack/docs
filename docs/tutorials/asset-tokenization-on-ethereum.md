@@ -187,7 +187,7 @@ Test the contract by calling:
 ### 8. Interact with the contract
 
 1. In Metamask, send an amount of Ropsten Ether to the contract address.
-1. In Cockpit, call the contract with `supply()` and `check()` to see change in numbers.
+1. In Cockpit, call the contract functions `supply()` and `check()`after a few seconds to see a change in values returned.
 
 ::: tip See also:
 
