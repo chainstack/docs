@@ -1,4 +1,4 @@
-# Food Supply Temperature Control on Quorum
+# Food supply temperature control on Quorum
 
 In this tutorial you will:
 
@@ -78,7 +78,7 @@ Under **Credentials**, you will see your Quorum node access information.
 [Ethereum JavaScript API](https://github.com/ethereum/web3.js) is a collection of libraries to interact with your nodes.
 
 ``` sh
-$ npm install web3
+npm install web3
 ```
 
 ### 3. Install Solidity JavaScript Compiler
@@ -90,7 +90,7 @@ This tutorial uses Solidity Compiler 0.4.25 for web3 compatibility.
 :::
 
 ``` sh
-$ npm install solc@0.4.25
+npm install solc@0.4.25
 ```
 
 ### 4. Install and configure dotenv
@@ -98,7 +98,7 @@ $ npm install solc@0.4.25
 You will use dotenv to pass your Quorum nodes access information to deploy the contracts and run transactions.
 
 ``` sh
-$ npm install dotenv
+npm install dotenv
 ```
 
 In your project folder, create an `.env` file:
@@ -257,7 +257,7 @@ where
 ### 2. Run the transaction
 
 ``` sh
-$ node public.js
+node public.js
 ```
 
 This will deploy the contract, set the temperature value and read the temperature value.
@@ -399,7 +399,7 @@ where
 ### 2. Run the transaction
 
 ``` sh
-$ node private.js
+node private.js
 ```
 
 This will deploy the contract, set the temperature value through the `publicKey` account, read the temperature value through the `publicKey` account, and fail to set and read the temperature through other accounts.
