@@ -1,6 +1,6 @@
 # Food supply temperature control on Quorum
 
-In this tutorial, you will:
+In this tutorial you will:
 
 * Create a contract for public transactions, deploy it on your [Quorum](/blockchains/quorum) network, and run a public transaction.
 * Create a contract for private transactions, deploy it on your Quorum network, and run a private transaction.
@@ -17,7 +17,7 @@ Sample code for this tutorial is in the [GitHub repository](https://github.com/c
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy a Quorum network.
+* [Chainstack](https://console.chainstack.com/) account to deploy a Quorum network.
 
 ## Overview
 
@@ -36,23 +36,44 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 ## Prepare
 
-### Deploy a Quorum network
+### 1. Deploy a Quorum network
 
-#### Create a Consortium project
+#### 1. Create a Consortium project
 
-See [Create a project](/platform/create-a-project).
+1. Log in to your [Chainstack](https://console.chainstack.com/) account.
+1. Click **Create project**.
+1. Click **Consortium**.
+1. Provide **Project name** and optionally **Description**.
+1. Click **Create**.
 
-#### Deploy a Quorum network
+This will create a project with Chainstack.
 
-See [Deploy a consortium network](/platform/deploy-a-consortium-network).
+#### 2. Deploy a Quorum network
+
+1. Select the created project and click **Get started**.
+1. Provide **Network name**.
+1. Under **Blockchain protocol**, select **Quorum**.
+1. Under **Consensus mechanism**, select [Raft or IBFT](/blockchains/quorum#consensus). Click **Next**.
+1. Under **Cloud hosting provider**, select your preferred provider.
+1. Under **Region**, select the region for your deployment.
+1. Review your changes and click **Create network**.
+
+::: warning
+Currently only Asia-Pacific region is available for deployment.
+:::
+
+The network status will change from **Pending** to **Running** once deployed.
 
 Deploy three nodes for this tutorial.
 
-#### Get your Quorum node access and credentials
+#### 3. Get your Quorum node access information
 
-See [View node access and credentials](/platform/view-node-access-and-credentials).
+1. In your Quorum deployment project, click your Quorum network name.
+1. Under **Node name**, click your node.
 
-### Install Ethereum JavaScript API
+Under **Credentials**, you will see your Quorum node access information.
+
+### 2. Install Ethereum JavaScript API
 
 [Ethereum JavaScript API](https://github.com/ethereum/web3.js) is a collection of libraries to interact with your nodes.
 
@@ -60,7 +81,7 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 npm install web3
 ```
 
-### Install Solidity JavaScript Compiler
+### 3. Install Solidity JavaScript Compiler
 
 The Solidity JavaScript compiler will compile the contract, the ABI, and bytecode formats that you will deploy on your Quorum network.
 
@@ -72,7 +93,7 @@ This tutorial uses Solidity Compiler 0.4.25 for web3 compatibility.
 npm install solc@0.4.25
 ```
 
-### Install and configure dotenv
+### 4. Install and configure dotenv
 
 You will use dotenv to pass your Quorum nodes access information to deploy the contracts and run transactions.
 
@@ -121,7 +142,7 @@ where
 
 ## Deploy the contract as public and run a public transaction
 
-### Create a public.js file that will:
+### 1. Create a public.js file that will:
 
 1. Format and deploy the contract through Node 1.
 2. Set the temperature to `3` through Node 2.
@@ -233,13 +254,13 @@ where
 * `getTemperature` is the function to fetch the temperature value.
 * `process.env` loads your nodes access variables from the `.env` file.
 
-### Run the transaction
+### 2. Run the transaction
 
 ``` sh
 node public.js
 ```
 
-This will deploy the contract, set the temperature value, and read the temperature value.
+This will deploy the contract, set the temperature value and read the temperature value.
 
 Example output:
 
@@ -251,9 +272,7 @@ Retrieved contract Temperature 3
 
 ## Deploy the contract as private and run a private transaction
 
-### Create a private.js file
-
-The `private.js` file will:
+### 1. Create a private.js file that will:
 
 1. Format and deploy the contract as private through Node 1.
 2. Set the temperature to `12` through Node 2.
@@ -375,9 +394,9 @@ where
 * `setTemperature` is the function to write the temperature value.
 * `getTemperature` is the function to fetch the temperature value.
 * `process.env` loads your nodes access variables from the `.env` file.
-* `privateFor` is the Quorum specific parameter that sets the transaction private for the account identified by `publicKey`.
+* `privateFor` is the Quorum specific parameter that sets the transaction private for the account idenitified by `publicKey`.
 
-### Run the transaction
+### 2. Run the transaction
 
 ``` sh
 node private.js
@@ -394,6 +413,10 @@ Contract address after deployment: 0x60b695429838abA534273396ab90e25346F571B8
 [Node3] temp retrieved from external nodes after update null
 ```
 
-::: tip See also
-* [Operations: Ethereum](/operations/ethereum/introduction)
+::: tip See also:
+
+* [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain)
+* [Application development](/guides/application-development)
+* [Quorum: Constellation](https://docs.goquorum.com/en/latest/Privacy/Constellation/Constellation/)
+
 :::
