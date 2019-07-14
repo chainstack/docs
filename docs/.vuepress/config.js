@@ -27,6 +27,7 @@ module.exports = {
                     '/tutorials/academic-certificates-on-ethereum',
                     '/tutorials/loyalty-program-on-quorum',
                     '/tutorials/food-supply-temperature-control-on-quorum',
+                    '/tutorials/decentralized-reputation-on-multichain',
                 ]
             },
             {
