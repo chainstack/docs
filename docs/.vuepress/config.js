@@ -26,6 +26,7 @@ module.exports = {
                 children: [
                     '/tutorials/academic-certificates-on-ethereum',
                     '/tutorials/loyalty-program-on-quorum',
+                    '/tutorials/food-supply-temperature-control-on-quorum',
                 ]
             },
             {
