@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Chainstack Docs',
+    title: 'Chainstack documentation',
     description: "Chainstack documentation",
     head: [
         ['link', { rel: 'icon', href: './favicon.ico' }]
@@ -10,133 +10,134 @@ module.exports = {
         ],
         sidebar: [
             {
-                title: 'Quick Start',
+                title: 'Quickstart',
                 collapsable: true,
                 children: [
-                    '/quick-start/qs-intro',
-                    '/quick-start/qs-create-account',
-                    '/quick-start/qs-create-project',
-                    '/quick-start/qs-deploy-network',
-                    '/quick-start/qs-explore-network',
-                    '/quick-start/qs-invite-member',
-                    '/quick-start/qs-access-node',
+                    '/quickstart/introduction',
+                    '/quickstart/create-account',
+                    '/quickstart/create-project',
+                    '/quickstart/deploy-network',
+                    '/quickstart/invite-member',
+                    '/quickstart/view-node-access',
+                    '/quickstart/explore-network',
                 ]
             },
             {
-                title: 'Deploy a Node or a Network',
+                title: 'Control panel',
                 collapsable: true,
                 children: [
-                    '/deploy-network/deploy-intro',
-                    '/deploy-network/deploy-network',
-                    '/deploy-network/deploy-node',
-                    '/deploy-network/add-network',
-                    '/deploy-network/add-node',
-                    '/deploy-network/invite-member',
-                    '/deploy-network/view-access',
+                    '/control-panel/introduction',
+                    '/control-panel/supported-protocols',
+                    '/control-panel/supported-cloud-hosting',
+                    '/control-panel/create-project',
+                    '/control-panel/deploy-consortium-network',
+                    '/control-panel/join-public-chain',
+                    '/control-panel/invite-member',
+                    '/control-panel/add-network',
+                    '/control-panel/add-node',
+                    '/control-panel/view-node-access',
+                    '/control-panel/explore-network',
+                    '/control-panel/delete-node',
+                    '/control-panel/delete-network',
+                    '/control-panel/delete-project',
+                    '/control-panel/view-user-settings',
                 ]
             },
             {
-                title: 'Access Your Node',
+                title: 'Key concepts',
                 collapsable: true,
                 children: [
-                    '/access-network/access-intro',
-                    '/access-network/access-multichain',
-                    '/access-network/access-quorum',
-                    '/access-network/access-ethereum',
+                    {
+                        title: 'Projects',
+                        collapsable: true,
+                        children: [
+                         '/key-concepts/project',
+                         '/key-concepts/consortium-project',
+                         '/key-concepts/public-chain-project',
+                         ]
+                     },
+                     '/key-concepts/public-node-types',
+                     '/key-concepts/bolt',
+                     '/key-concepts/multichain-considerations',
+                     '/key-concepts/quorum-considerations',
+                     '/key-concepts/ethereum-considerations',                    
                 ]
             },
             {
-                title: 'Develop',
+                title: 'Developer materials',
                 collapsable: true,
                 children: [
-                    '/develop/develop-intro',
-                    '/develop/install-configure',
                 {
-                    title: 'MultiChain',
+                    title: 'Interaction methods',
                     collapsable: true,
                     children: [
-                        '/develop/multichain/multichain-javascript',
-                        '/develop/multichain/multichain-python',
+                        '/developer-materials/interaction-methods/ethereum-geth',
+                        '/developer-materials/interaction-methods/multichain-json-rpc',
+                        '/developer-materials/interaction-methods/quorum-geth',
+                        '/developer-materials/interaction-methods/quorum-json-rpc',
+
                     ]
                 },
                 {
-                    title: 'Quorum',
+                    title: 'Development tools',
                     collapsable: true,
                     children: [
-                       '/develop/quorum/quorum-truffle',
+                        '/developer-materials/development-tools/ethereum-truffle',
+                        '/developer-materials/development-tools/ethereum-embark',
+                        '/developer-materials/development-tools/multichain-javascript',
+                        '/developer-materials/development-tools/multichain-python',
+                        '/developer-materials/development-tools/quorum-truffle',
+
                     ]
                 },
                 {
-                    title: 'Ethereum',
+                    title: 'Tutorials',
                     collapsable: true,
                     children: [
-                        '/develop/ethereum/ethereum-truffle',
-                        '/develop/ethereum/ethereum-embark',
-                    ]
-                },
-                {
-                    title: 'Sample DApps',
-                    collapsable: true,
-                    children: [
-                        '/develop/sample-dapp/ethereum-certificate',
+                        '/developer-materials/tutorials/academic-certificates-on-ethereum',
+                        '/developer-materials/tutorials/asset-tokenization-on-ethereum',
+                        '/developer-materials/tutorials/food-supply-temperature-control-on-quorum',
+                        '/developer-materials/tutorials/loyalty-program-on-quorum',
                     ]
                 },
             ]
             },
             {
-                title: 'Blockchain Essentials',
+                title: 'Blockchain essentials',
                 collapsable: true,
                 children: [
-                    '/blockchain-essentials/blockchain-intro',
+                    '/blockchain-essentials/introduction',
                 {                
-                title: 'Networks',
+                title: 'Protocols',
                 collapsable: true,
                 children: [
-                    '/blockchain-essentials/network/multichain',
-                    '/blockchain-essentials/network/quorum',
-                    '/blockchain-essentials/network/hyperledger',
-                    '/blockchain-essentials/network/ethereum',
-                    '/blockchain-essentials/network/corda',
+                    '/blockchain-essentials/protocols/ethereum',
+                    '/blockchain-essentials/protocols/multichain',
+                    '/blockchain-essentials/protocols/quorum',
                 ]
                 },
             {
-                title: 'Consensus',
+                title: 'Consensus algorithms',
                 collapsable: true,
                 children: [
-
-                    '/blockchain-essentials/consensus/round-robin',
-                    '/blockchain-essentials/consensus/raft',
-                    '/blockchain-essentials/consensus/ibft',
-                    '/blockchain-essentials/consensus/solo',
-                    '/blockchain-essentials/consensus/kafka',
-                    '/blockchain-essentials/consensus/proof-of-authority',
+                    '/blockchain-essentials/consensus-algorithms/round-robin',
+                    '/blockchain-essentials/consensus-algorithms/raft',
+                    '/blockchain-essentials/consensus-algorithms/ibft',
                     ]
-                },
-                    
+                },        
                 ]
-            },
+            }, 
             {
-                title: 'Architecture Reference',
+                title: 'Operations',
                 collapsable: true,
                 children: [
-                    '/architecture-reference/architecture-intro',
-                    '/architecture-reference/architecture-reference',
+                    '/operations/multichain-hybrid',
                 ]
             },
-              {
-                title: 'Feedback',
-                collapsable: true,
-                children: [
-                    '/feedback/feedback',
-                ]
-            },
-                          {
-                title: 'Glossary',
-                collapsable: true,
-                children: [
-                    '/glossary/glossary',
-                ]
-            }
+   
+        '/feedback',
+        '/glossary',
+        '/release-notes',
         ],
         algolia: {
             apiKey: '1194997ecec7d141de5c746bc3463e9c',
