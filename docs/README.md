@@ -4,7 +4,7 @@ metaTitle: Chainstack documentation
 
 # Chainstack documentation
 
-Chainstack is *the* control panel for the blockchain.
+Chainstack is *the* blockchain platform.
 
 Follow us:
 
@@ -13,4 +13,7 @@ Follow us:
 * [Reddit](https://www.reddit.com/r/chainstack/)
 * [GitHub](https://github.com/chainstack)
 
-[Contact support](https://support.chainstack.com).
+Contact us:
+
+* [Support](https://support.chainstack.com)
+* [Other enquiries](https://chainstack.com/contact/)
