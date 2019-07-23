@@ -14,92 +14,69 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/quickstart/introduction',
-                    '/quickstart/create-account',
-                    '/quickstart/create-project',
-                    '/quickstart/deploy-network',
-                    '/quickstart/invite-member',
-                    '/quickstart/view-node-access',
-                    '/quickstart/explore-network',
+                    '/quickstart/create-an-account',
+                    '/quickstart/create-a-project',
+                    '/quickstart/deploy-a-network-or-a-node',
+                    '/quickstart/invite-a-member-to-the-project',
+                    '/quickstart/view-node-access-and-credentials',
+                    '/quickstart/explore-the-network',
                 ]
             },
             {
-                title: 'Control panel',
+                title: 'Platform',
                 collapsable: true,
                 children: [
-                    '/control-panel/introduction',
-                    '/control-panel/supported-protocols',
-                    '/control-panel/supported-cloud-hosting',
-                    '/control-panel/create-project',
-                    '/control-panel/deploy-consortium-network',
-                    '/control-panel/join-public-chain',
-                    '/control-panel/invite-member',
-                    '/control-panel/add-network',
-                    '/control-panel/add-node',
-                    '/control-panel/view-node-access',
-                    '/control-panel/explore-network',
-                    '/control-panel/delete-node',
-                    '/control-panel/delete-network',
-                    '/control-panel/delete-project',
-                    '/control-panel/view-user-settings',
+                    '/platform/introduction',
+                    '/platform/supported-protocols',
+                    '/platform/supported-cloud-hosting-providers',
+                    '/platform/create-a-project',
+                    '/platform/deploy-a-consortium-network',
+                    '/platform/join-a-public-network',
+                    '/platform/invite-a-member-to-the-project',
+                    '/platform/add-a-network-to-a-project',
+                    '/platform/add-a-node-to-a-network',
+                    '/platform/view-node-access-and-credentials',
+                    '/platform/explore-a-network',
+                    '/platform/delete-a-node',
+                    '/platform/delete-a-network',
+                    '/platform/delete-a-project',
+                    '/platform/view-your-user-settings',
+                ]
+            },
+            {
+                title: 'Operations',
+                collapsable: true,
+                children: [
+                    '/operations/deploying-a-hybrid-multichain-network',
+                    '/operations/multichain-overview',
+                    '/operations/quorum-overview',
+                    '/operations/ethereum-overview',
                 ]
             },
             {
                 title: 'Key concepts',
                 collapsable: true,
                 children: [
-                    {
-                        title: 'Projects',
-                        collapsable: true,
-                        children: [
-                         '/key-concepts/project',
-                         '/key-concepts/consortium-project',
-                         '/key-concepts/public-chain-project',
-                         ]
-                     },
-                     '/key-concepts/public-node-types',
-                     '/key-concepts/bolt',
-                     '/key-concepts/multichain-considerations',
-                     '/key-concepts/quorum-considerations',
-                     '/key-concepts/ethereum-considerations',                    
+                     '/key-concepts/project',
+                     '/key-concepts/consortium-project',
+                     '/key-concepts/public-chain-project',
+                     '/key-concepts/public-network-node-types',
+                     '/key-concepts/bolt',                   
                 ]
             },
             {
                 title: 'Developer materials',
                 collapsable: true,
                 children: [
-                {
-                    title: 'Interaction methods',
-                    collapsable: true,
-                    children: [
-                        '/developer-materials/interaction-methods/ethereum-geth',
-                        '/developer-materials/interaction-methods/multichain-json-rpc',
-                        '/developer-materials/interaction-methods/quorum-geth',
-                        '/developer-materials/interaction-methods/quorum-json-rpc',
-
-                    ]
-                },
-                {
-                    title: 'Development tools',
-                    collapsable: true,
-                    children: [
-                        '/developer-materials/development-tools/ethereum-truffle',
-                        '/developer-materials/development-tools/ethereum-embark',
-                        '/developer-materials/development-tools/multichain-javascript',
-                        '/developer-materials/development-tools/multichain-python',
-                        '/developer-materials/development-tools/quorum-truffle',
-
-                    ]
-                },
-                {
-                    title: 'Tutorials',
-                    collapsable: true,
-                    children: [
-                        '/developer-materials/tutorials/academic-certificates-on-ethereum',
-                        '/developer-materials/tutorials/asset-tokenization-on-ethereum',
-                        '/developer-materials/tutorials/food-supply-temperature-control-on-quorum',
-                        '/developer-materials/tutorials/loyalty-program-on-quorum',
-                    ]
-                },
+                     '/developer-materials/introduction',
+                     '/developer-materials/multichain',
+                     '/developer-materials/quorum',
+                     '/developer-materials/ethereum',
+                     '/developer-materials/decentralized-reputation-on-multichain',
+                     '/developer-materials/food-supply-temperature-control-on-quorum',
+                     '/developer-materials/loyalty-program-on-quorum',
+                     '/developer-materials/academic-certificates-on-ethereum',
+                     '/developer-materials/asset-tokenization-on-ethereum',
             ]
             },
             {
@@ -107,34 +84,12 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/blockchain-essentials/introduction',
-                {                
-                title: 'Protocols',
-                collapsable: true,
-                children: [
-                    '/blockchain-essentials/protocols/ethereum',
-                    '/blockchain-essentials/protocols/multichain',
-                    '/blockchain-essentials/protocols/quorum',
-                ]
-                },
-            {
-                title: 'Consensus algorithms',
-                collapsable: true,
-                children: [
-                    '/blockchain-essentials/consensus-algorithms/round-robin',
-                    '/blockchain-essentials/consensus-algorithms/raft',
-                    '/blockchain-essentials/consensus-algorithms/ibft',
+                    '/blockchain-essentials/ethereum',
+                    '/blockchain-essentials/multichain',
+                    '/blockchain-essentials/quorum',
+                    '/blockchain-essentials/hyperledger-fabric',
                     ]
-                },        
-                ]
-            }, 
-            {
-                title: 'Operations',
-                collapsable: true,
-                children: [
-                    '/operations/multichain-hybrid',
-                ]
             },
-   
         '/feedback',
         '/glossary',
         '/release-notes',
