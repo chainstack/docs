@@ -1,6 +1,6 @@
-# Public chain node types
+# Public network node types
 
-When deploying a Public chain node, you can choose between a dedicated and a shared node.
+When deploying a node to the public network, you can choose between a dedicated and a shared node.
 
 * Dedicated — deployed exclusively for the user.
 * Shared — access to the node can be shared with other users.
@@ -9,6 +9,5 @@ As a rule of thumb, dedicated nodes are for production, while shared nodes are f
 
 ::: tip See also
 * [Public chain project](/key-concepts/public-chain-project)
-* [Ethereum](/blockchain-essentials/protocols/ethereum)
-* [Ethereum node administration considerations](/key-concepts/ethereum-considerations)
+* [Ethereum overview](/operations/ethereum-overview)
 :::

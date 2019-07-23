@@ -1,6 +1,8 @@
 # Create a project
 
-You must create a [project](/glossary/project) to be able to deploy a node or a network, or to join a network.
+In Chainstack, a project has a clearly defined business case and can contain one or more blockchain networks.
+
+You must create a project to be able to deploy a node or a network, or to join a network.
 
 To create a project:
 

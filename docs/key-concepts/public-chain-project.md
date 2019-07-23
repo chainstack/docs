@@ -1,11 +1,10 @@
 # Public chain project
 
-A project to join a public chain network.
+A project to join a public network.
 
-See [Supported protocols](/control-panel/supported-protocols).
+See [Supported protocols](/platform/supported-protocols).
 
 ::: tip See also
-* [Public chain node types](/key-concepts/public-node-types)
-* [Ethereum](/blockchain-essentials/protocols/ethereum)
-* [Ethereum node administration considerations](/key-concepts/ethereum-considerations)
+* [Public network node types](/key-concepts/public-network-node-types)
+* [Ethereum overview](/operations/ethereum-overview)
 :::

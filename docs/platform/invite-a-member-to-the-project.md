@@ -1,6 +1,6 @@
 # Invite a member to the project
 
-In a [Consortium project](/glossary/consortium-project), you can always invite a member who will:
+In a [consortium](/key-concepts/consortium-project) project, you can always invite a member who will:
 
 * Deploy nodes and networks as part of your project.
 * Access the project's nodes and networks details.

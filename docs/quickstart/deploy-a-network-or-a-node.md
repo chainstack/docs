@@ -1,6 +1,6 @@
 # Deploy a network or a node
 
-You can deploy one or more networks or nodes in one [project](/glossary/project).
+You can deploy one or more networks or nodes in one project.
 
 To deploy a network or a node:
 

@@ -1,6 +1,6 @@
 # Loyalty program on Quorum
 
-This tutorial will guide you through creating a simple loyalty program contract and deploying it on your [Quorum](/blockchains/quorum) network.
+This tutorial will guide you through creating a simple loyalty program contract and deploying it on your [Quorum](/blockchain-essentials/quorum) network.
 
 The loyalty program does the following:
 
@@ -20,7 +20,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 To get from zero to a deployed Quorum network with the running contract, do the following:
 
-1. With Chainstack, create a [Consortium](/projects/consortium) project.
+1. With Chainstack, create a [consortium](/key-concepts/consortium-project) project.
 1. With Chainstack, deploy a Quorum network.
 1. With Chainstack, access your Quorum node credentials.
 1. With Truffle, create and compile the contract.
@@ -30,17 +30,17 @@ To get from zero to a deployed Quorum network with the running contract, do the 
 
 ## Step-by-step
 
-### Create a Consortium project
+### Create a consortium project
 
-See [Create a project](/control-panel/create-project).
+See [Create a project](/platform/create-a-project).
 
 ### Deploy a Quorum network
 
-See [Deploy a Consortium network](/control-panel/deploy-consortium-network).
+See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
 ### Get your Quorum node access information
 
-See [View node access information](/control-panel/view-node-access).
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 ### Create and compile the contract
 
@@ -256,7 +256,7 @@ This will engage `2_deploy_contracts.js` and deploy the `loyaltyProgram.sol` con
 You will see an `exited with an error (status 0) after consuming all gas` message on contract deployment. The message will still give you the transaction ID and deploy successfully.
 :::
 
-You can view the deployed contract and the contract address in your Chainstack control panel by navigating to your Quorum project > **Explorer** > **Contracts**.
+You can view the deployed contract and the contract address on the Chainstack platform by navigating to your Quorum project > **Explorer** > **Contracts**.
 
 ## Interact with the contract
 
@@ -316,7 +316,7 @@ Run:
 
 where
 
-* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating in your Chainstack control panel to your Quorum project > **Explorer** > **Contracts**.
+* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating on the Chainstack platform to your Quorum project > **Explorer** > **Contracts**.
 
 Example:
 
@@ -335,7 +335,7 @@ Run:
 where
 
 * CONTRACT_NAME is any name you want to call the contract.
-* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating in your Chainstack control panel to your Quorum project > **Explorer** > **Contracts**.
+* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating on the Chainstack platform to your Quorum project > **Explorer** > **Contracts**.
 
 Example:
 
@@ -353,7 +353,7 @@ Run:
 
 where
 
-* QUORUM_ADDRESS — an address created with one of the node deployments. Available in your Chainstack control panel under **Credentials** > **Default wallet address**.
+* QUORUM_ADDRESS — an address created with one of the node deployments. Available on the Chainstack platform under **Credentials** > **Default wallet address**.
 
 Example:
 
@@ -384,8 +384,7 @@ This will display the balance:
 ```
 
 ::: tip See also
-* [Quorum Geth](/developer-materials/interaction-methods/quorum-geth)
-* [Quorum Truffle](/developer-materials/development-tools/quorum-truffle)
+* [Developer materials: Quorum](/developer-materials/quorum)
 * [Truffle: Working with Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum)
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
 :::

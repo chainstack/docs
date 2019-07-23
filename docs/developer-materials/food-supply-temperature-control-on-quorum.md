@@ -2,7 +2,7 @@
 
 In this tutorial, you will:
 
-* Create a contract for public transactions, deploy it on your [Quorum](/blockchains/quorum) network, and run a public transaction.
+* Create a contract for public transactions, deploy it on your [Quorum](/blockchain-essentials/quorum) network, and run a public transaction.
 * Create a contract for private transactions, deploy it on your Quorum network, and run a private transaction.
 
 The premise of the Quorum network in this tutorial is the following:
@@ -38,19 +38,19 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 ### Deploy a Quorum network
 
-#### Create a Consortium project
+#### Create a consortium project
 
-See [Create a project](/control-panel/create-project).
+See [Create a project](/platform/create-a-project).
 
 #### Deploy a Quorum network
 
-See [Deploy a Consortium network](/control-panel/deploy-consortium-network).
+See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
 Deploy three nodes for this tutorial.
 
-#### Get your Quorum node access information
+#### Get your Quorum node access and credentials
 
-See [View node access information](/control-panel/view-node-access).
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 ### Install Ethereum JavaScript API
 
@@ -394,6 +394,6 @@ Contract address after deployment: 0x60b695429838abA534273396ab90e25346F571B8
 [Node3] temp retrieved from external nodes after update null
 ```
 
-::: tip See also:
-* [Quorum Truffle](/developer-materials/development-tools/quorum-truffle)
+::: tip See also
+* [Developer materials: Ethereum](/developer-materials/ethereum)
 :::

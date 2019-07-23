@@ -9,5 +9,5 @@ To view the explorer:
 1. Click **Explorer**.
 
 ::: tip See next
-* [Operations](/operations/introduction)
+* [Developer materials](/developer-materials/introduction)
 :::

@@ -21,7 +21,7 @@ This tutorial uses [Embark](https://embark.status.im/) to test and deploy the co
 
 To get from zero to an asset tokenization contract running on Ropsten, do the following:
 
-1. With Chainstack, create a [Public chain](/projects/public-chain) project.
+1. With Chainstack, create a [public chain](/key-concepts/public-chain-project) project.
 1. With Chainstack, deploy a Ropsten testnet node.
 1. With Embark, create a project and the contract.
 1. With Geth, create a new account.
@@ -32,13 +32,13 @@ To get from zero to an asset tokenization contract running on Ropsten, do the fo
 
 ## Step-by-step
 
-### Create a Public chain project
+### Create a public chain project
 
-See [Create a project](/control-panel/create-project).
+See [Create a project](/platform/create-a-project).
 
 ### Deploy a Ropsten node
 
-See [Join a Public chain](/control-panel/join-public-chain).
+See [Join a public network](/platfrom/join-a-public-network).
 
 ### Create an Embark project and the contract
 
@@ -77,7 +77,6 @@ See [Join a Public chain](/control-panel/join-public-chain).
       }
     }
     ```
-See also [Ethereum Embark](/developer-materials/development-tools/ethereum-embark).
 
 ### Create an Ethereum account
 
@@ -173,5 +172,5 @@ Test the contract by calling:
 1. In Cockpit, call the contract functions `supply()` and `check()` after a few seconds to see a change in values returned.
 
 ::: tip See also
-* [Ethereum Embark](/developer-materials/development-tools/ethereum-embark)
+* [Developer materials: Ethereum](/developer-materials/ethereum)
 :::

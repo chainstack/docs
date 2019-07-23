@@ -1,4 +1,4 @@
-# MultiChain governance, administration, and operation considerations
+# MultiChain overview
 
 This section outlines the fundamentals that you need to consider when running a MultiChain network.
 
@@ -35,7 +35,7 @@ Round-robin example with 10 `mine` nodes deployed with Chainstack:
 
 ### Addresses
 
-You can view the default wallet addresses of each of your MultiChain node. See [View node access information](/control-panel/view-node-access).
+You can view the default wallet addresses of each of your MultiChain node. See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Adding a node to the network in MultiChain does not create an event that is broadcast to the blockchain. This means that address balances can only be queried by node owners.
 
@@ -65,7 +65,7 @@ Each subsequent node that you add to your MultiChain network starts with the low
 
 ## Key management
 
-By default, you can view your MultiChain wallet addresses and keys specific to the node that you deployed, provided that you are logged in as the same user with Chainstack. See [View node access information](/control-panel/view-node-access).
+By default, you can view your MultiChain wallet addresses and keys specific to the node that you deployed, provided that you are logged in as the same user with Chainstack. See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 You can use the default wallet addresses and key pairs for development and testing purposes.
 
@@ -80,11 +80,11 @@ Your options are:
 
 Having a hybrid MultiChain network with nodes running both on-premises and in the cloud assumes that you can isolate one of your on-premises node, encrypt the node's wallet location and securely manage the keys.
 
-For detailed hybrid installation instructions, see [Deploying a hybrid MultiChain network](/operations/multichain-hybrid).
+For detailed hybrid installation instructions, see [Deploying a hybrid MultiChain network](/operations/deploying-a-hybrid-multichain-network).
 
 ### External key management
 
-You can combine external key management with [MultiChain hybrid node key management](/key-concepts/multichain-considerations#multichain-hybrid-node-key-management).
+You can combine external key management with [MultiChain hybrid node key management](/operations/multichain-overview#multichain-hybrid-node-key-management).
 
 External key management assumes that you do not store the keys in a MultiChain wallet. Instead, you have the keys stowed away in a location that meets your security requirements.
 
@@ -94,7 +94,7 @@ You will call the MultiChain nodes running in the cloud. You can, however, do th
 
 1. Get your node access information
 
-See [View node access information](/control-panel/view-node-access).
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 2. Create a key pair
 
@@ -104,9 +104,9 @@ curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"createkeypairs","par
 
 where
 
-* RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. See [View node access information](/control-panel/view-node-access).
-* RPC_USER — your cloud MultiChain node RPC username. [View node access information](/control-panel/view-node-access).
-* RPC_PASSWORD — your cloud MultiChain node RPC password. [View node access information](/control-panel/view-node-access).
+* RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* RPC_USER — your cloud MultiChain node RPC username. [View node access and credentials](/platform/view-node-access-and-credentials).
+* RPC_PASSWORD — your cloud MultiChain node RPC password. [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 

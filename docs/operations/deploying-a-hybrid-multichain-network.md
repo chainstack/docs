@@ -19,7 +19,7 @@ By the end of the section, you will have your MultiChain nodes from the same net
 
 To deploy a hybrid MultiChain network, do the following:
 
-1. With Chainstack, create a [Consortium](/projects/consortium) project.
+1. With Chainstack, create a [consortium](/key-concepts/consortium-project) project.
 1. With Chainstack, deploy a MultiChain network in cloud.
 1. With Chainstack, get your cloud MultiChain node access information.
 1. On-premises, install MultiChain.
@@ -30,25 +30,25 @@ To deploy a hybrid MultiChain network, do the following:
 
 ## Step-by-step
 
-### Create a Consortium project
+### Create a consortium project
 
-See [Create a project](/control-panel/create-project).
+See [Create a project](/platform/create-a-project).
 
-### 2. Deploy a MultiChain network
+### Deploy a MultiChain network
 
-See [Deploy a Consortium network](/control-panel/deploy-consortium-network).
+See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
-### 3. Get your cloud MultiChain node access information
+### Get your cloud MultiChain node access information
 
-See [View node access information](/control-panel/view-node-access).
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-### 4. Install MultiChain on-premises
+### Install MultiChain on-premises
 
 On your on-premises machine, install MultiChain.
 
 See [MultiChain 2.0: Download and Install MultiChain](https://www.multichain.com/download-install/).
 
-### 5. Initialize your on-premises MultiChain node
+### Initialize your on-premises MultiChain node
 
 On your on-premises machine, attempt to connect to the cloud node to initialize your on-premises node.
 
@@ -93,9 +93,9 @@ multichain-cli nw-123-456-7 grant 14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q connect
 multichain-cli nw-123-456-7 grant 14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q connect,send,receive
 ```
 
-### 6. Grant permissions to your on-premises MultiChain node
+### Grant permissions to your on-premises MultiChain node
 
-For information on how to connect to and interact with a MultiChain node, see [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain).
+For information on how to connect to and interact with a MultiChain node, see [Developer materials: MultiChain](/developer-materials/multichain).
 
 On your on-premises machine, grant your on-premises MultiChain node's wallet address with the `grant` method and the following permissions:
 
@@ -104,7 +104,7 @@ On your on-premises machine, grant your on-premises MultiChain node's wallet add
 * `receive`
 
 ::: warning
-You need to send the `grant` request through your first deployed node as specified in [Step 3](multichain-hybrid#_3-get-your-cloud-multichain-node-access-information).
+You need to send the `grant` request through your first deployed node.
 :::
 
 Sending a curl request from terminal:
@@ -118,7 +118,7 @@ where
 * RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
 * RPC_USER — your cloud MultiChain node RPC username. Available under **Credentials** > **RPC user**.
 * RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Credentials** > **RPC password**.
-* WALLET_ADDRESS — your on-premises MultiChain node's wallet address. You received the wallet address at the end of [Step 5](multichain-hybrid#_5-initialize-your-on-premises-multichain-node).
+* WALLET_ADDRESS — your on-premises MultiChain node's wallet address. You received the wallet address [when you initialized your on-premises node](/operations/deploying-a-hybrid-multichain-network#initialize-your-on-premises-multichain-node).
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
 
 Command example:
@@ -133,7 +133,7 @@ Output example:
 {"result":"17859d3efdaa95bc9d1573e539a9b5177e17debb6afe37078ac6c4bd1bec9821","error":null,"id":1}
 ```
 
-### 7. Add your on-premises MultiChain node to the network
+### Add your on-premises MultiChain node to the network
 
 On your on-premises machine, add your on-premises MultiChain node to the network with the `addnode` method.
 
@@ -158,7 +158,7 @@ Command example:
 curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth" -d '{"method":"addnode","params":["123.45.100.80:7447","add"],"id":2,"chain_name":"nw-123-456-7"}'
 ```
 
-### 8. Connect to the MultiChain network
+### Connect to the MultiChain network
 
 On your on-premises machine, connect to the MultiChain network.
 
@@ -268,7 +268,6 @@ Example output:
 
 Send any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
 
-::: tip See also:
-* [MultiChain](/blockchain-essentials/protocols/multichain)
-* [MultiChain governance, administration, and operation considerations](/key-concepts/multichain-considerations)
+::: tip See also
+* [MultiChain overview](/operations/multichain-overview)
 :::

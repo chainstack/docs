@@ -1,4 +1,4 @@
-# Quorum governance, administration, and operation considerations
+# Quorum overview
 
 This section outlines the fundamentals that you need to consider when running a Quorum network.
 
@@ -153,7 +153,7 @@ istanbul.propose("DEFAULT_WALLET_ADDRESS", true)
 
 where
 
-* DEFAULT_WALLET_ADDRESS is the node's address. See [View node access information](/control-panel/view-node-access).
+* DEFAULT_WALLET_ADDRESS is the node's address. See [View node access and credentials](/platform/view-node-access-and-credentials).
 * `true` is the parameter to add the node to the validator group.
 
 To remove a validator node:
@@ -164,7 +164,7 @@ istanbul.propose("DEFAULT_WALLET_ADDRESS", false)
 
 where
 
-* DEFAULT_WALLET_ADDRESS is the node's address. See [View node access information](/control-panel/view-node-access).
+* DEFAULT_WALLET_ADDRESS is the node's address. See [View node access and credentials](/platform/view-node-access-and-credentials).
 * `false` is the parameter to remove the node from the validator group.
 
 ## Addresses
@@ -175,7 +175,7 @@ All subsequent nodes are deployed with the addresses with the balance `0`.
 
 ## Key management
 
-By default, you can view your Quorum wallet addresses and keys specific to the node that you deployed, provided that you are logged in as the same user with Chainstack. See [View node access information](/control-panel/view-node-access).
+By default, you can view your Quorum wallet addresses and keys specific to the node that you deployed, provided that you are logged in as the same user with Chainstack. See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 You can use the default wallet addresses and key pairs for development and testing purposes.
 
