@@ -1,6 +1,6 @@
 # Introduction
 
-This section covers the blockchain essentials for the protocols supported by Chainstack.
+This section is a compendium of development materials for the protocols supported by Chainstack.
 
 ::: tip See also
 * [MultiChain overview](/operations/multichain-overview)
