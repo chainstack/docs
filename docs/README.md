@@ -4,7 +4,7 @@ metaTitle: Chainstack documentation
 
 # Chainstack documentation
 
-Chainstack is *the* blockchain platform.
+Chainstack is a multi-cloud and multi-protocol Platform as a Service that empowers businesses to rapidly build, deploy, and manage decentralized networks and services. 
 
 Follow us:
 

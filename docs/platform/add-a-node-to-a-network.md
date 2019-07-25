@@ -11,5 +11,5 @@ To add a node:
 The status will change from **Pending** to **Running** once deployed.
 
 ::: tip See also
-* [Deploying a hybrid MultiChain network](/operations/deploying-a-hybrid-multichain-network)
+* [View node access and credentials](/platform/view-node-access-and-credentials)
 :::

@@ -2,20 +2,16 @@
 
 Consortium:
 
-* MultiChain
-* Quorum
+* [MultiChain](/blockchains/multichain)
+* [Quorum](/blockchains/quorum)
 
-Public chain:
+Public network:
 
-* Ethereum Mainnet
-* Ethereum Ropsten
+* [Ethereum](/blockchains/ethereum) Mainnet
+* [Ethereum](/blockchains/ethereum) Ropsten
 
+::: tip
 Chainstack is always working on introducing support for other protocols.
 
 Want to request protocol support? [Contact us](https://chainstack.com/contact/).
-
-::: tip See also
-* [Deploy a consortium network](/platform/deploy-a-consortium-network)
-* [Join a public network](/platform/join-a-public-network)
-* [Supported cloud hosting providers](/platform/supported-cloud-hosting-providers)
 :::
