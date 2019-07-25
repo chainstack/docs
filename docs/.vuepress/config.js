@@ -6,6 +6,8 @@ module.exports = {
       ],
     themeConfig: {
         nav: [
+            { text: 'Support', link: 'https://support.chainstack.com/' },
+            { text: 'Contact us', link: 'https://chainstack.com/contact/' },
             { text: 'Try free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
@@ -47,51 +49,86 @@ module.exports = {
                 title: 'Operations',
                 collapsable: true,
                 children: [
-                    '/operations/deploying-a-hybrid-multichain-network',
-                    '/operations/multichain-overview',
-                    '/operations/quorum-overview',
-                    '/operations/ethereum-overview',
+                    '/operations/introduction',
+                    {
+                        title: 'Ethereum',
+                        collapsable: true,
+                        children: [
+                            '/operations/ethereum/introduction',
+                            '/operations/ethereum/networks',
+                            '/operations/ethereum/tools',
+                          ]
+                     },
+                     {
+                        title: 'MultiChain',
+                        collapsable: true,
+                        children: [
+                            '/operations/multichain/introduction',
+                            '/operations/multichain/default-addresses',
+                            '/operations/multichain/node-permissions',
+                            '/operations/multichain/external-key-management',
+                            '/operations/multichain/deploying-a-hybrid-network',
+                            '/operations/multichain/tools',
+                          ]
+                     },
+                     {
+                        title: 'Quorum',
+                        collapsable: true,
+                        children: [
+                           '/operations/quorum/introduction',
+                           '/operations/quorum/configuring-consensus',
+                           '/operations/quorum/default-addresses',
+                           '/operations/quorum/key-management',
+                           '/operations/quorum/tools',
+                          ]
+                     },
                 ]
             },
             {
-                title: 'Key concepts',
+                title: 'Tutorials',
                 collapsable: true,
                 children: [
-                     '/key-concepts/project',
-                     '/key-concepts/consortium-project',
-                     '/key-concepts/public-chain-project',
-                     '/key-concepts/public-network-node-types',
-                     '/key-concepts/bolt',                   
-                ]
-            },
+                    '/tutorials/introduction',
+                    '/tutorials/academic-certificates-on-ethereum',
+                    '/tutorials/asset-tokenization-on-ethereum',
+                    '/tutorials/decentralized-reputation-on-multichain',
+                    '/tutorials/food-supply-temperature-control-on-quorum',
+                    '/tutorials/loyalty-program-on-quorum',
+                    ]
+             },
             {
-                title: 'Developer materials',
+                title: 'Blockchains',
                 collapsable: true,
                 children: [
-                     '/developer-materials/introduction',
-                     '/developer-materials/multichain',
-                     '/developer-materials/quorum',
-                     '/developer-materials/ethereum',
-                     '/developer-materials/decentralized-reputation-on-multichain',
-                     '/developer-materials/food-supply-temperature-control-on-quorum',
-                     '/developer-materials/loyalty-program-on-quorum',
-                     '/developer-materials/academic-certificates-on-ethereum',
-                     '/developer-materials/asset-tokenization-on-ethereum',
-            ]
-            },
-            {
-                title: 'Blockchain essentials',
-                collapsable: true,
-                children: [
-                    '/blockchain-essentials/introduction',
-                    '/blockchain-essentials/ethereum',
-                    '/blockchain-essentials/multichain',
-                    '/blockchain-essentials/quorum',
-                    '/blockchain-essentials/hyperledger-fabric',
+                    '/blockchains/introduction',
+                    '/blockchains/ethereum',
+                    '/blockchains/multichain',
+                    '/blockchains/quorum',
                     ]
             },
-        '/feedback',
-        '/glossary',
+            {
+                title: 'Glossary',
+                collapsable: true,
+                children: [
+                    '/glossary/bft',
+                    '/glossary/blockchain-protocol',
+                    '/glossary/bolt',
+                    '/glossary/cft',
+                    '/glossary/cloud',
+                    '/glossary/consortium-project',
+                    '/glossary/consortium',
+                    '/glossary/dedicated-node',
+                    '/glossary/hybrid',
+                    '/glossary/member',
+                    '/glossary/network',
+                    '/glossary/node',
+                    '/glossary/on-premises',
+                    '/glossary/project',
+                    '/glossary/public-chain-project',
+                    '/glossary/shared-node',
+                    ]
+            },
+
         '/release-notes',
         ],
         algolia: {

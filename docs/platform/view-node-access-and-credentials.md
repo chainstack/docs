@@ -8,11 +8,11 @@ To view the access information:
 
 This will give you the access and credentials to your nodes.
 
-If you are an invited member of a consortium project, you will be able to see the basic access information of other nodes in the project.
+If you are an invited member of a [Consortium project](/glossary/consortium-project), you will be able to see the basic access information of other nodes in the project.
 
 ::: tip See also
-* [Key concepts: Project](/key-concepts/project)
-* [MultiChain overview](/operations/multichain-overview)
-* [Quorum overview](/operations/quorum-overview)
-* [Ethereum overview](/operations/ethereum-overview)
+* [Project](/glossary/project)
+* [Operations: Ethereum](/operations/ethereum/introduction)
+* [Operations: MultiChain](/operations/multichain/introduction)
+* [Operations: Quorum](/operations/quorum/introduction)
 :::
