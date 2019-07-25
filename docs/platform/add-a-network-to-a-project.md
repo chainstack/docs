@@ -1,6 +1,6 @@
 # Add a network to a project
 
-A [project](/key-concepts/project) can have more than one network.
+A [project](/glossary/project) can have more than one network.
 
 To add a network to a project, see:
 
