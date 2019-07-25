@@ -281,5 +281,5 @@ The full code for the DApp used in this tutorial can be found [here](https://git
 :::
 
 ::: tip See also
-* [Developer materials: Ethereum](/developer-materials/ethereum)
+* [Operations: Ethereum](/operations/ethereum/introduction)
 :::

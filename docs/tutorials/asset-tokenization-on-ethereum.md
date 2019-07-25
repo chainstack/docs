@@ -132,7 +132,7 @@ You will use this account to deploy the contract.
 
     * PATH_TO_KEYSTORE — the location of the keystore file.
     * PASSWORD — the password you provided when creating the Ethereum account with Geth.
-    * RPC_ENDPOINT — your Ropsten node RPC endpoint. Available under **Credentials** > **RPC endpoint**.  
+    * RPC_ENDPOINT — your Ropsten node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
 
 1. Deploy the contract with Embark:
 
