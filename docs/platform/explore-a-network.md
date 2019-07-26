@@ -9,5 +9,7 @@ To view the explorer:
 1. Click **Explorer**.
 
 ::: tip See also
+
 * [View node access and credentials](/platform/view-node-access-and-credentials)
+
 :::

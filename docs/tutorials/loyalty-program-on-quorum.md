@@ -384,7 +384,9 @@ This will display the balance:
 ```
 
 ::: tip See also
-* [Operations: Quorum](/operations/quorum/introduction)
+
+* [Operations: Quorum](/operations/quorum/)
 * [Truffle: Working with Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum)
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
+
 :::

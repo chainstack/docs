@@ -142,5 +142,5 @@ Tokens remaining in the wallet of the admin node can be used as part of any bonu
 There are many opportunities to explore and fit within your organization's framework.
 
 ::: tip See also
-* [Operations: MultiChain](/operations/multichain/introduction)
+* [Operations: MultiChain](/operations/multichain/)
 :::

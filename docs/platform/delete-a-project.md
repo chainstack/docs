@@ -10,6 +10,8 @@ To delete a project:
 This will delete the project.
 
 ::: tip See also
+
 * [Delete a node](/platform/delete-a-node)
 * [Delete a network](/platform/delete-a-network)
+
 :::

@@ -2,7 +2,7 @@
 
 For the Quorum consensus details, see [Quorum](/blockchains/quorum).
 
-## Configuring Raft
+## Raft
 
 You can always remove the existing verifier nodes or a minter node from the network. You can also always add new verifier nodes to the network.
 
@@ -39,7 +39,7 @@ To remove a node:
 raft.removePeer(RAFT_ID)
 ```
 
-## Configuring IBFT
+## IBFT
 
 The group of validator nodes can always be changed on the network to ensure that only valid nodes are present and the faulty nodes can be removed.
 
@@ -72,5 +72,7 @@ where
 * `false` is the parameter to remove the node from the validator group.
 
 ::: tip See also
+
 * [Istanbul RPC API](https://docs.goquorum.com/en/latest/Consensus/istanbul-rpc-api/)
+
 :::

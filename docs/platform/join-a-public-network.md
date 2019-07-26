@@ -13,6 +13,8 @@ You can currently join the Ethereum mainnet or the Ethereum Ropsten testnet.
 The node status will change from **Pending** to **Running** once deployed.
 
 ::: tip See also
+
 * [Supported cloud hosting providers](/platform/supported-cloud-hosting-providers)
-* [Operations: Ethereum](/operations/ethereum/introduction)
+* [Operations: Ethereum](/operations/ethereum/)
+
 :::

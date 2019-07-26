@@ -14,5 +14,7 @@ To deploy a network or a node:
 This will deploy or join a network.
 
 ::: tip See next
+
 * [Invite a member to the project](/quickstart/invite-a-member-to-the-project)
+
 :::

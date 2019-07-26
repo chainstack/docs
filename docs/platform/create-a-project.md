@@ -15,5 +15,7 @@ To create a [Public chain project](/glossary/public-chain-project):
 1. Click **Create**.
 
 ::: tip See also
+
 * [Project](/glossary/project)
+
 :::

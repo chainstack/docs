@@ -13,5 +13,7 @@ To invite a member:
 This will send an email invitation to join the project.
 
 ::: tip See also
+
 * [View node access and credentials](/platform/view-node-access-and-credentials)
+
 :::
