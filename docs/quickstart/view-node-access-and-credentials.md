@@ -11,5 +11,7 @@ To view the node access and credentials:
 This will give you the full access and credentials of your nodes.
 
 ::: tip See next
+
 * [Explore the network](/quickstart/explore-the-network)
+
 :::

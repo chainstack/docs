@@ -2,7 +2,7 @@
 
 ## Interaction tools
 
-### Quorum Geth
+### Geth
 
 Interact with your Quorum network using [Quorum Geth](https://github.com/jpmorganchase/quorum/releases/).
 
@@ -12,7 +12,7 @@ Interact with your Quorum network using [Quorum Geth](https://github.com/jpmorga
 
 ``` sh
 $ geth attach http://nd-123-456-789.p2pify.com:8545
-                                                                                 
+
 Welcome to the Geth JavaScript console!
 
 instance: Geth/v1.8.12-stable-c6f0ae4e/linux-amd64/go1.9.7
@@ -33,7 +33,7 @@ Example below demonstrates how to get the current block number:
 518973
 ```
 
-### Quorum JSON-RPC API
+### JSON-RPC API
 
 Interact with your Quorum network using [Geth JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) and [Quorum API](https://docs.goquorum.com/en/latest/Getting%20Started/api/).
 
@@ -79,6 +79,8 @@ module.exports = {
 3. Run `truffle migrate --network chainstack` and Truffle will deploy using Chainstack.
 
 ::: tip See also
+
 * [Food supply temperature control on Quorum](/tutorials/food-supply-temperature-control-on-quorum)
 * [Loyalty program on Quorum](/tutorials/loyalty-program-on-quorum)
+
 :::

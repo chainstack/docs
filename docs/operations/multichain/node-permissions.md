@@ -23,6 +23,8 @@ When you deploy a MultiChain network with Chainstack, the first node starts with
 Each subsequent node that you add to your MultiChain network starts with the low risk `connect`, `send`, `receive` permissions.
 
 ::: tip See also
+
 * [Default addresses](/operations/multichain/default-addresses)
 * [MultiChain permissions management](https://www.multichain.com/developers/permissions-management/)
+
 :::

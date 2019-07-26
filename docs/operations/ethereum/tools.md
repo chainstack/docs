@@ -10,7 +10,7 @@ Interact with your Ethereum node using [Geth](https://github.com/ethereum/go-eth
 
 ``` sh
 $ geth attach https://nd-123-456-789.p2pify.com:8545
-                                                                                 
+
 Welcome to the Geth JavaScript console!
 
 instance: Geth/v1.8.22-stable-7fa3509e/linux-amd64/go1.11.5
@@ -30,7 +30,7 @@ Example below demonstrates how to get the balance of an address in wei value and
 
 ## Development tools
 
-### Ethereum Truffle
+### Truffle
 
 Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Ethereum nodes.
 
@@ -55,7 +55,7 @@ module.exports = {
 
 3. Run `truffle migrate --network chainstack` and Truffle will deploy using Chainstack.
 
-### Ethereum Embark
+### Embark
 
 Configure [Embark](https://embark.status.im) to deploy contracts to your Ethereum nodes.
 
@@ -82,6 +82,8 @@ chainstack: {
 3. Run `embark run chainstack` and Embark will deploy using Chainstack.
 
 ::: tip See also
+
 * [Asset tokenization on Ethereum](/tutorials/academic-certificates-on-ethereum)
 * [Academic certificates on Ethereum](/tutorials/asset-tokenization-on-ethereum)
+
 :::

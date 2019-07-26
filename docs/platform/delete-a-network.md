@@ -11,6 +11,8 @@ To delete a network:
 This will delete the network.
 
 ::: tip See also
+
 * [Delete a node](/platform/delete-a-node)
 * [Delete a project](/platform/delete-a-project)
+
 :::

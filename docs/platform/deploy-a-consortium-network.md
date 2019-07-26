@@ -25,7 +25,9 @@ To deploy a [MultiChain](/blockchains/multichain) network:
 The network status will change from **Pending** to **Running** once deployed.
 
 ::: tip See also
+
 * [Supported cloud hosting providers](/platform/supported-cloud-hosting-providers)
-* [Operations: MultiChain](/operations/multichain/introduction)
-* [Operations: Quorum](/operations/quorum/introduction)
+* [Operations: MultiChain](/operations/multichain/)
+* [Operations: Quorum](/operations/quorum/)
+
 :::

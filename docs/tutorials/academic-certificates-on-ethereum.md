@@ -7,9 +7,9 @@ In this tutorial, you will:
 
 ## Prerequisites
 
-- Git
-- [Truffle](https://truffleframework.com)
-- [Chainstack](https://console.chainstack.com/) account
+* Git
+* [Truffle](https://truffleframework.com)
+* [Chainstack](https://console.chainstack.com/) account
 
 ## Deploying a node
 
@@ -113,13 +113,13 @@ contract DocStamp is Ownable {
 
 This is our main contract. It will handle the generation and verification of certificates.
 
-- `issueCertificate()` generates a certificate by calculating a hash of student name and details.
-  - Can be called only by the owner.
-  - Emits a certificate generation event with a timestamp.
-  - Issuer put the certificate on the blockchain by storing it in the global variable `records` by passing `records[certificate] = msg.sender`.
-- `owningAuthority()` returns the address of issuer/authority.
-- `verifyCertificate()` calculates a hash of student name and details and checks if it is on the blockchain.
-  - Can be called by anyone.
+* `issueCertificate()` generates a certificate by calculating a hash of student name and details.
+  * Can be called only by the owner.
+  * Emits a certificate generation event with a timestamp.
+  * Issuer put the certificate on the blockchain by storing it in the global variable `records` by passing `records[certificate] = msg.sender`.
+* `owningAuthority()` returns the address of issuer/authority.
+* `verifyCertificate()` calculates a hash of student name and details and checks if it is on the blockchain.
+  * Can be called by anyone.
 
 After writing our contracts, create `2_deploy_contracts.js` in the `migrations` folder:
 
@@ -165,6 +165,7 @@ module.exports = {
    }
 };
 ```
+
 For development and testing purposes, we will deploy our DApp to the local network first.
 
 Run `truffle dev` to get inside Truffle Develop running a local development blockchain. Deploy the DApp using the `migrate` command. You will see the contract address and gas used, the account from which they were deployed, and other details.
@@ -187,8 +188,8 @@ Before interacting with the contract, ensure you have Truffle Develop console wi
 > let instance = await DocStamp.deployed()
 ```
 
-- You are creating an `instance` object of your deployed contract
-- Enter `instance` to see your contract object ABI, bytecode, methods and so on
+* You are creating an `instance` object of your deployed contract
+* Enter `instance` to see your contract object ABI, bytecode, methods and so on
 
 ::: tip
 You can see methods defined in **Ownable** on instance since **DocStamp** inherits from it.
@@ -207,12 +208,12 @@ You can see methods defined in **Ownable** on instance since **DocStamp** inheri
 > let verified = await instance.verifyCertificate("rahul", "developer", "0x3893c7e8b4091794fa54e4b22cc506042f2b00e07d965aa3927aff7f12163955", {from: owner})
 ```
 
-- `owner` is the owning authority
-  - The contract is deployed using `accounts[0]` by default which makes it the authority. See the constructor of **Ownable** and you will understand why!
-- `result` is a transaction object since we change the state on the blockchain through a transaction.
-  - `issueCertificate()` generates a certificate and emits an event showing that.
-  - If you try to issue a certificate from a non-authority account like `accounts[1]`, the transaction will be reverted.
-- `verified` returns *true* or *false* depending on the details you entered.
+* `owner` is the owning authority
+  * The contract is deployed using `accounts[0]` by default which makes it the authority. See the constructor of **Ownable** and you will understand why!
+* `result` is a transaction object since we change the state on the blockchain through a transaction.
+  * `issueCertificate()` generates a certificate and emits an event showing that.
+  * If you try to issue a certificate from a non-authority account like `accounts[1]`, the transaction will be reverted.
+* `verified` returns *true* or *false* depending on the details you entered.
 
 ### Truffle tests
 
@@ -242,13 +243,13 @@ contract('DocStamp', function(accounts) {
     try {
       const instance = await DocStamp.deployed()
       const verified = await instance.verifyCertificate("rahul", "developer", "0x3893c7e8b4091794fa54e4b22cc506042f2b00e07d965aa3927aff7f12163955")
-      
+
       assert.equal(verified, true)
     } catch(error) {
       assert.equal(error, undefined)
     }
   })
-}) 
+})
 ```
 
 To execute the tests, type `test` in Truffle Develop or simply run `truffle test` from the console.
@@ -281,5 +282,7 @@ The full code for the DApp used in this tutorial can be found [here](https://git
 :::
 
 ::: tip See also
-* [Operations: Ethereum](/operations/ethereum/introduction)
+
+* [Operations: Ethereum](/operations/ethereum/)
+
 :::

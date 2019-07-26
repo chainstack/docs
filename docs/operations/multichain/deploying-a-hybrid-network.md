@@ -269,5 +269,7 @@ Example output:
 Send any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
 
 ::: tip See also
-* [Operations: MultiChain](/operations/multichain/introduction)
+
+* [Operations: MultiChain](/operations/multichain/)
+
 :::

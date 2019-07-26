@@ -19,7 +19,7 @@ $ curl -H "Content-Type: application/json" \
 
 ## Development tools
 
-### MultiChain JavaScript
+### JavaScript
 
 Work with MultiChain from your JavaScript application.
 
@@ -57,7 +57,7 @@ The example code above should output basic network information:
   ... }
 ```
 
-### MultiChain Python
+### Python
 
 Work with MultiChain from your Python application.
 
@@ -91,5 +91,7 @@ The example code above should output basic network information:
 ```
 
 ::: tip See also
+
 * [Decentralized reputation on MultiChain](/tutorials/decentralized-reputation-on-multichain)
+
 :::

@@ -13,5 +13,7 @@ To create a project:
 This will create a project.
 
 ::: tip See next
+
 * [Deploy a network or a node](/quickstart/deploy-a-network-or-a-node)
+
 :::

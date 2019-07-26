@@ -5,6 +5,8 @@ When you deploy a Quorum network with Chainstack, the very first address that co
 All subsequent nodes are deployed with the addresses with the balance `0`.
 
 ::: tip See also
+
 * [View node access and credentials](/platform/view-node-access-and-credentials)
 * [Key management](/operations/quorum/key-management)
+
 :::

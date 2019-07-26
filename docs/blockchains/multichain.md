@@ -32,5 +32,7 @@ Round-robin example with 10 `mine` nodes deployed with Chainstack:
 * each `mine` node in the network can validate every third block and cannot validate two blocks in a row.
 
 ::: tip See also
+
 * [MultiChain for Developers](https://www.multichain.com/developers/)
+
 :::

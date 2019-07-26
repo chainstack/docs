@@ -147,6 +147,8 @@ curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-wo
 You created and signed the transaction with your external private key.
 
 ::: tip See also
+
 * [Default addresses](/operations/multichain/default-addresses)
 * [Node permissions](/operations/multichain/node-permissions)
+
 :::

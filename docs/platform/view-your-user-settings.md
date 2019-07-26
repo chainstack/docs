@@ -5,5 +5,7 @@
 * [Billing](https://console.chainstack.com/user/settings/billing)
 
 ::: tip See also
+
 * [Create a project](/platform/create-a-project)
+
 :::
