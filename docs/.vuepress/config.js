@@ -7,7 +7,7 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com/' },
-            { text: 'Contact us', link: 'https://chainstack.com/contact/' },
+            { text: 'Log in', link: 'https://console.chainstack.com' },
             { text: 'Try free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
@@ -15,7 +15,7 @@ module.exports = {
                 title: 'Quickstart',
                 collapsable: true,
                 children: [
-                    '/quickstart/introduction',
+                    '/quickstart/',
                     '/quickstart/create-an-account',
                     '/quickstart/create-a-project',
                     '/quickstart/deploy-a-network-or-a-node',
@@ -28,7 +28,7 @@ module.exports = {
                 title: 'Platform',
                 collapsable: true,
                 children: [
-                    '/platform/introduction',
+                    '/platform/',
                     '/platform/supported-protocols',
                     '/platform/supported-cloud-hosting-providers',
                     '/platform/create-a-project',
@@ -49,12 +49,12 @@ module.exports = {
                 title: 'Operations',
                 collapsable: true,
                 children: [
-                    '/operations/introduction',
+                    '/operations/',
                     {
                         title: 'Ethereum',
                         collapsable: true,
                         children: [
-                            '/operations/ethereum/introduction',
+                            '/operations/ethereum/',
                             '/operations/ethereum/networks',
                             '/operations/ethereum/tools',
                           ]
@@ -63,7 +63,7 @@ module.exports = {
                         title: 'MultiChain',
                         collapsable: true,
                         children: [
-                            '/operations/multichain/introduction',
+                            '/operations/multichain/',
                             '/operations/multichain/default-addresses',
                             '/operations/multichain/node-permissions',
                             '/operations/multichain/external-key-management',
@@ -75,7 +75,7 @@ module.exports = {
                         title: 'Quorum',
                         collapsable: true,
                         children: [
-                           '/operations/quorum/introduction',
+                           '/operations/quorum/',
                            '/operations/quorum/configuring-consensus',
                            '/operations/quorum/default-addresses',
                            '/operations/quorum/key-management',
@@ -88,7 +88,7 @@ module.exports = {
                 title: 'Tutorials',
                 collapsable: true,
                 children: [
-                    '/tutorials/introduction',
+                    '/tutorials/',
                     '/tutorials/academic-certificates-on-ethereum',
                     '/tutorials/asset-tokenization-on-ethereum',
                     '/tutorials/decentralized-reputation-on-multichain',
@@ -100,7 +100,7 @@ module.exports = {
                 title: 'Blockchains',
                 collapsable: true,
                 children: [
-                    '/blockchains/introduction',
+                    '/blockchains/',
                     '/blockchains/ethereum',
                     '/blockchains/multichain',
                     '/blockchains/quorum',
@@ -142,11 +142,11 @@ module.exports = {
    
     },
     plugins: {
-        '@vuepress/google-analytics': {
-            'ga': 'UA-118674508-7'
-        },
         'clean-urls': {
             normalSuffix: ''
+        },    
+        'google-tag-manager': {
+            'gtm': 'GTM-PXSGW6M'
         },
         'sitemap': {
             hostname: 'https://docs.chainstack.com'
