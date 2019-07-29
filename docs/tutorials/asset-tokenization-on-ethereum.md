@@ -172,5 +172,7 @@ Test the contract by calling:
 1. In Cockpit, call the contract functions `supply()` and `check()` after a few seconds to see a change in values returned.
 
 ::: tip See also
+
 * [Operations: Ethereum](/operations/ethereum/)
+
 :::
