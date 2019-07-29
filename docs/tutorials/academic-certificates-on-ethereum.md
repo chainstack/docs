@@ -1,23 +1,21 @@
 # Academic certificates on Ethereum
 
-In this tutorial you will:
+In this tutorial, you will:
 
 * Create a DApp that generates an academic certificate.
 * Deploy the DApp on a public Ethereum node using Chainstack.
 
 ## Prerequisites
 
-- Git
-- [Truffle](https://truffleframework.com)
-- [Chainstack](https://console.chainstack.com/) account
+* Git
+* [Truffle](https://truffleframework.com)
+* [Chainstack](https://console.chainstack.com/) account
 
 ## Deploying a node
 
 To begin, you will need a Chainstack account, which you can create for free [here](https://console.chainstack.com/user/account/create).
 
-After creating an account, move to [the console](https://console.chainstack.com), click *Create project*, and fill out your project details:
-
-![Creating a project](./academic-certificates-on-ethereum/create-project.png)
+After creating an account, move to [the console](https://console.chainstack.com), click *Create project*, and fill out your project details.
 
 You can see the created project on your dashboard. Now, deploy the Ethereum node:
 1. Choose your project and click on **Get started** to join the network.
@@ -25,9 +23,7 @@ You can see the created project on your dashboard. Now, deploy the Ethereum node
 3. Choose any cloud hosting provider.
 4. Join network.
 
-Great! You have deployed a node on Ethereum mainnet. Click on it to see node details:
-
-![Node details](./academic-certificates-on-ethereum/node-details.png)
+Great! You have deployed a node on Ethereum mainnet. Click on it to see node details.
 
 You can see the **RPC endpoint**. We will need it later to connect to our node.
 
@@ -38,9 +34,9 @@ First you need a boilerplate application. Go to any empty directory and run `tru
 ```
 .
 ├── contracts
-│   └── Migrations.sol
+│   └── Migrations.sol
 ├── migrations
-│   └── 1_initial_migration.js
+│   └── 1_initial_migration.js
 ├── test
 └── truffle-config.js
 ```
@@ -117,13 +113,13 @@ contract DocStamp is Ownable {
 
 This is our main contract. It will handle the generation and verification of certificates.
 
-- `issueCertificate()` generates a certificate by calculating a hash of student name and details.
-  - Can be called only by the owner.
-  - Emits a certificate generation event with a timestamp.
-  - Issuer put the certificate on the blockchain by storing it in the global variable `records` by passing `records[certificate] = msg.sender`.
-- `owningAuthority()` returns the address of issuer/authority.
-- `verifyCertificate()` calculates a hash of student name and details and checks if it is on the blockchain.
-  - Can be called by anyone.
+* `issueCertificate()` generates a certificate by calculating a hash of student name and details.
+  * Can be called only by the owner.
+  * Emits a certificate generation event with a timestamp.
+  * Issuer put the certificate on the blockchain by storing it in the global variable `records` by passing `records[certificate] = msg.sender`.
+* `owningAuthority()` returns the address of issuer/authority.
+* `verifyCertificate()` calculates a hash of student name and details and checks if it is on the blockchain.
+  * Can be called by anyone.
 
 After writing our contracts, create `2_deploy_contracts.js` in the `migrations` folder:
 
@@ -145,7 +141,7 @@ The contracts have been successfully compiled. Now we will deploy them to the bl
 
 ## Deploying the DApp
 
-First run `npm i truffle-hdwallet-provider` to install *hdwallet-provider* which will help you connecting to the Ethereum node.
+First run `npm i truffle-hdwallet-provider` to install *hdwallet-provider* which will help you connect to the Ethereum node.
 
 Edit `truffle-config.js` to specify the mnemonic phrase and connection details to the mainnet node deployed on Chainstack:
 
@@ -169,6 +165,7 @@ module.exports = {
    }
 };
 ```
+
 For development and testing purposes, we will deploy our DApp to the local network first.
 
 Run `truffle dev` to get inside Truffle Develop running a local development blockchain. Deploy the DApp using the `migrate` command. You will see the contract address and gas used, the account from which they were deployed, and other details.
@@ -191,8 +188,8 @@ Before interacting with the contract, ensure you have Truffle Develop console wi
 > let instance = await DocStamp.deployed()
 ```
 
-- You are creating an `instance` object of your deployed contract
-- Enter `instance` to see your contract object ABI, bytecode, methods and so on
+* You are creating an `instance` object of your deployed contract
+* Enter `instance` to see your contract object ABI, bytecode, methods and so on
 
 ::: tip
 You can see methods defined in **Ownable** on instance since **DocStamp** inherits from it.
@@ -211,12 +208,12 @@ You can see methods defined in **Ownable** on instance since **DocStamp** inheri
 > let verified = await instance.verifyCertificate("rahul", "developer", "0x3893c7e8b4091794fa54e4b22cc506042f2b00e07d965aa3927aff7f12163955", {from: owner})
 ```
 
-- `owner` is the owning authority
-  - The contract is deployed using `accounts[0]` by default which makes it the authority. See the constructor of **Ownable** and you will understand why!
-- `result` is a transaction object since we change the state on the blockchain through a transaction.
-  - `issueCertificate()` generates a certificate and emits an event showing that.
-  - If you try to issue a certificate from an non-authority account like `accounts[1]`, the transaction will be reverted.
-- `verified` returns *true* or *false* depending on the details you entered.
+* `owner` is the owning authority
+  * The contract is deployed using `accounts[0]` by default which makes it the authority. See the constructor of **Ownable** and you will understand why!
+* `result` is a transaction object since we change the state on the blockchain through a transaction.
+  * `issueCertificate()` generates a certificate and emits an event showing that.
+  * If you try to issue a certificate from a non-authority account like `accounts[1]`, the transaction will be reverted.
+* `verified` returns *true* or *false* depending on the details you entered.
 
 ### Truffle tests
 
@@ -246,13 +243,13 @@ contract('DocStamp', function(accounts) {
     try {
       const instance = await DocStamp.deployed()
       const verified = await instance.verifyCertificate("rahul", "developer", "0x3893c7e8b4091794fa54e4b22cc506042f2b00e07d965aa3927aff7f12163955")
-      
+
       assert.equal(verified, true)
     } catch(error) {
       assert.equal(error, undefined)
     }
   })
-}) 
+})
 ```
 
 To execute the tests, type `test` in Truffle Develop or simply run `truffle test` from the console.
@@ -267,7 +264,7 @@ Tests in Truffle follow a general template which can be found [here](https://tru
 You should deploy your contracts to mainnet using Chainstack node before.
 :::
 
-To interact with the contracts deployed using Chainstack node, you need to create the a web3 provider with **RPC endpoint** of the node:
+To interact with the contracts deployed using Chainstack node, you need to create a web3 provider with **RPC endpoint** of the node:
 
 ``` js
 const Web3 = require('web3')
@@ -281,5 +278,11 @@ After creating your `web3` object, you can call different web3 methods to intera
 In this tutorial, we learned how to create a simple DApp for Ethereum, test it locally, and deploy to the mainnet using a node running on Chainstack.
 
 ::: tip
-Full code for the DApp used in this tutorial can be found [here](https://github.com/chainstack/ethereum-certificates-tutorial).
+The full code for the DApp used in this tutorial can be found [here](https://github.com/chainstack/ethereum-certificates-tutorial).
+:::
+
+::: tip See also
+
+* [Operations: Ethereum](/operations/ethereum/)
+
 :::

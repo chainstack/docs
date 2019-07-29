@@ -1,6 +1,4 @@
-# Ethereum
-
-Ethereum is a public permissionless blockchain protocol.
+# Networks
 
 Chainstack currently supports joining the following Ethereum networks:
 
@@ -8,9 +6,3 @@ Chainstack currently supports joining the following Ethereum networks:
 * Ropsten Testnet — public Ethereum testnet.
 
 For development purposes on the Ropsten testnet, fund your accounts with Ropsten ETH at the [Ropsten faucet](https://faucet.ropsten.be/).
-
-::: tip See also
-
-* [Operations: Ethereum](/operations/ethereum/)
-
-:::

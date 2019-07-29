@@ -1,9 +1,21 @@
 ---
-metaTitle: Chainstack Docs
+metaTitle: Chainstack documentation
 ---
 
 # Chainstack documentation
 
-This collection contains an assortment of guides and reference material to familiarize you with various aspects of Chainstack.
+Chainstack is a multi-cloud and multi-protocol Platform as a Service that empowers businesses to rapidly build, deploy, and manage decentralized networks and services.
 
-If you have any suggestions or feedback, do not hesitate to [contact support](mailto:support@chainstack.com).
+Follow us:
+
+* [GitHub](https://github.com/chainstack)
+* [Twitter](https://twitter.com/ChainstackHQ)
+* [Facebook](https://www.facebook.com/chainstack/)
+* [Medium](https://medium.com/chainstack)
+* [Reddit](https://www.reddit.com/r/chainstack/)
+
+Contact us:
+
+* [Gitter](https://gitter.im/chainstack/Lobby)
+* [Support](https://support.chainstack.com)
+* [Other enquiries](https://chainstack.com/contact/)
