@@ -2,10 +2,10 @@
 
 A [project](/glossary/project) to join a public networks.
 
+Chainstack supports the deployment of [dedicated](/glossary/dedicated-node) and [shared](/glossary/shared-node) nodes.
+
 ::: tip See also
 
 * [Supported protocols](/platform/supported-protocols)
-* [Dedicated node](/glossary/dedicated-node)
-* [Shared node](/glossary/shared-node)
 
 :::

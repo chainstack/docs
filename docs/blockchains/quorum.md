@@ -4,7 +4,7 @@ Quorum is a fork of Go Ethereum.
 
 Quorum is a permissioned consortium blockchain protocol.
 
-## Consensus algorithms
+## Consensus
 
 Quorum supports the following two consensus algorithms:
 
