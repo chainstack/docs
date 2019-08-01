@@ -157,7 +157,7 @@ module.exports = {
         network_id: "5777"
     },
     mainnet: {
-        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com"),
+        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
         network_id: 1,
         gas: 4500000,
         gasPrice: 10000000000
@@ -268,7 +268,7 @@ To interact with the contracts deployed using Chainstack node, you need to creat
 
 ``` js
 const Web3 = require('web3')
-const web3 = new Web3('https://nd-123-456-789.p2pify.com')
+const web3 = new Web3('https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com')
 ```
 
 After creating your `web3` object, you can call different web3 methods to interact with the deployed contracts. Check [this tutorial](http://www.dappuniversity.com/articles/web3-js-intro) to know more and also read [web3 docs](https://web3js.readthedocs.io/en/1.0/web3-eth.html). 

@@ -6,17 +6,39 @@ Interact with your Ethereum node using [Geth](https://github.com/ethereum/go-eth
 
 1. Install [Geth](https://github.com/ethereum/go-ethereum).
 
-2. Use `geth attach` command with the node RPC endpoint:
+2. Use `geth attach` command with the node's endpoint.
+
+RPC:
 
 ``` sh
-$ geth attach https://nd-123-456-789.p2pify.com:8545
+geth attach https://USERNAME:PASSWORD@RPC_ENDPOINT
+```
 
-Welcome to the Geth JavaScript console!
+WSS:
 
-instance: Geth/v1.8.22-stable-7fa3509e/linux-amd64/go1.11.5
- modules: eth:1.0 net:1.0 rpc:1.0 web3:1.0
+``` sh
+geth attach wss://USERNAME:PASSWORD@WSS_ENDPOINT
+```
 
->
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* RPC_ENDPOINT — your Ethereum node RPC endpoint.
+* WSS_ENDPOINT — your Ethereum node WSS endpoint.
+
+See [View node access and credentials](/platform/view-node-access-and-credentials).
+
+RPC example:
+
+``` sh
+geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+```
+
+WSS example:
+
+``` sh
+geth attach wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com
 ```
 
 3. Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
@@ -45,7 +67,7 @@ const mnemonic = 'pattern enroll upgrade ...';
 module.exports = {
  networks: {
     chainstack: {
-        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com:8545"),
+        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
         network_id: 1
     },
    }
@@ -71,8 +93,8 @@ chainstack: {
         mnemonic: 'pattern enroll upgrade ...'
       }
     ],
-    host: "nd-123-456-789.p2pify.com",
-    port: 8545,
+    host: "user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com",
+    port: false,
     protocol: "https",
     type: "rpc"
   }
@@ -83,7 +105,7 @@ chainstack: {
 
 ::: tip See also
 
-* [Asset tokenization on Ethereum](/tutorials/academic-certificates-on-ethereum)
-* [Academic certificates on Ethereum](/tutorials/asset-tokenization-on-ethereum)
+* [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
+* [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
 
 :::
