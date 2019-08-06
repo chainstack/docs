@@ -80,7 +80,6 @@ module.exports = {
                            '/operations/quorum/default-addresses',
                            '/operations/quorum/key-management',
                            '/operations/quorum/tools',
-                           '/operations/quorum/building-quorum-geth-from-source-on-ubuntu',
 
                           ]
                      },
