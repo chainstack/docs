@@ -4,27 +4,59 @@
 
 ### Geth
 
-Interact with your Quorum network using [Quorum Geth](https://github.com/jpmorganchase/quorum/releases/).
+To interact with your Quorum network, you must install a [Quorum Geth client](https://github.com/jpmorganchase/quorum/releases/).
 
-1. Install [Quorum Geth](https://github.com/jpmorganchase/quorum/releases/).
+Quorum Geth is a fork of [Geth](https://github.com/ethereum/go-ethereum/).
 
-2. Use `geth attach` command with the node RPC endpoint:
+This section guides you through downloading the latest release of Quorum Geth and building it on Ubuntu.
+
+1. Install Go
+
+To be able to build Quorum Geth, you must install [Go](https://golang.org/).
+
+Install Go from the `longsleep/golang-backports` PPA:
 
 ``` sh
-$ geth attach http://nd-123-456-789.p2pify.com:8545
-
-Welcome to the Geth JavaScript console!
-
-instance: Geth/v1.8.12-stable-c6f0ae4e/linux-amd64/go1.9.7
-coinbase: 0x0e7ed4494fe7744f5eeeb5425acd4218df3163f0
-at block: 0 (Thu, 01 Jan 1970 07:30:00 +0730)
- datadir: /run-quorum/blockchain/qdata/dd
- modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 raft:1.0 rpc:1.0 txpool:1.0 web3:1.0
-
->
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt-get update
+sudo apt-get install golang-go
 ```
 
-3. Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+2. Build Quorum Geth
+
+Download the latest [Quorum Geth release](https://github.com/jpmorganchase/quorum/releases/):
+
+``` sh
+wget https://github.com/jpmorganchase/quorum/archive/v2.2.4.tar.gz
+```
+
+Unpack the downloaded archive:
+
+``` sh
+tar -xvzf v2.2.4.tar.gz
+```
+
+Change to the Quorum Geth directory:
+
+``` sh
+cd quorum-2.2.4
+```
+
+Run `make` to build Quorum Geth:
+
+``` sh
+make geth
+```
+
+Copy the executable `geth` file to `/usr/local/bin` to make it easily accessible from the command-line:
+
+``` sh
+sudo cp /root/quorum-2.2.4/build/bin/geth /usr/local/bin
+```
+
+You can now connect to the Quorum nodes with the `geth attach` command.
+
+Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API)
 
 Example below demonstrates how to get the current block number:
 
