@@ -48,13 +48,23 @@ Run `make` to build Quorum Geth:
 make geth
 ```
 
-Copy the executable `geth` file to `/usr/local/bin` to make it easily accessible from the command-line:
+This will create a standalone `geth` executable in `/quorum-2.2.4/build/bin/`. You can run it from the folder or move anywhere you want.
+
+You can now connect to the Quorum nodes with the `geth attach` command:
 
 ``` sh
-sudo cp /root/quorum-2.2.4/build/bin/geth /usr/local/bin
-```
+$ ./geth attach http://nd-123-456-789.rg-123-456.p2pify.com:8545
 
-You can now connect to the Quorum nodes with the `geth attach` command.
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.8.12-stable-c6f0ae4e/linux-amd64/go1.9.7
+coinbase: 0xd3c0093b308f4de81d5dc636996b62adee8f66ca
+at block: 0 (Thu, 01 Jan 1970 00:00:00 UTC)
+ datadir: /run-quorum/blockchain/qdata/dd
+ modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 raft:1.0 rpc:1.0 txpool:1.0 web3:1.0
+
+>
+```
 
 Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API)
 
