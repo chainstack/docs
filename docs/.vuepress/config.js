@@ -104,6 +104,7 @@ module.exports = {
                     '/blockchains/ethereum',
                     '/blockchains/multichain',
                     '/blockchains/quorum',
+                    '/blockchains/corda',
                     ]
             },
             {
