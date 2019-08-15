@@ -158,6 +158,7 @@ You will use this account to deploy the contract.
         gas: "auto",
       }
     ```
+
 1. Deploy the contract with Embark:
 
     ``` sh

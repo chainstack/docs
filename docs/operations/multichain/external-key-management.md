@@ -12,7 +12,7 @@ This section will guide you through creating a key pair, issuing an asset and si
 
 You will call the MultiChain nodes running in the cloud. You can, however, do the transactions through a local node if you run a hybrid MultiChain network.
 
-1. Get your node access information
+1. Get your node access and credentials
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -88,7 +88,6 @@ This will issue 100 units of the asset `token`.
 
 Create a raw unsigned transaction that will send units of the issued asset from your address to a different address.
 
-
 ``` sh
 curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"createrawsendfrom","params":["IMPORT_ADDRESS",{"ADDRESS":{"ASSET_NAME":50}}],"id":1}'
 ```
@@ -124,7 +123,7 @@ Example
 curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"signrawtransaction","params":["0100000001745a346f8a3382b4245d13f7f2a698b761fca1376e60c5b560f35e77b1b565f40000000000ffffffff0200000000000000003776a91405315992cd4a3512c0444e4e2a748d4003f4999088ac1c73706b7161fca1376e60c5b560f35e77b1b565f480841e00000000007500000000000000003776a91408b22c67231a4fba1cbf6cc49062b16d1da4397388ac1c73706b7161fca1376e60c5b560f35e77b1b565f4006cdc02000000007500000000",[],["ABCDZZucTF76uTMxVV21GvWS94jiKTsj5HNJUPZKjYVq6sA3a1ZP5do3"]],"id":1}'
 ```
 
-As a result, you will receive a new 
+As a result, you will receive a new
 
 8. Send the signed transaction hexadecimal value.
 
