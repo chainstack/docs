@@ -18,7 +18,7 @@ To get from zero to a running decentralized reputation system, do the following:
 
 1. With Chainstack, create a [Consortium project](/glossary/consortium-project).
 1. With Chainstack, deploy a MultiChain network.
-1. With Chainstack, get your MultiChain node access information.
+1. With Chainstack, get your MultiChain node access and credentials.
 1. With Chainstack, invite members to your project.
 1. Ensure each member runs a node.
 1. With MultiChain, issue a reputation token.
@@ -35,7 +35,7 @@ See [Create a project](/platform/create-a-project).
 
 See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
-### Get your MultiChain node access information
+### Get your MultiChain node access and credentials
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -64,7 +64,9 @@ Since you are setting up this reputation system, you need to issue the reputatio
 The first node deployed in a MultiChain network is the admin node.
 
 ::: tip See also
+
 * [MultiChain node permissions](/operations/multichain/node-permissions)
+
 :::
 
 Issue a reputation token through your node:
@@ -104,6 +106,7 @@ Send the reputation tokens to all addresses:
 ``` sh
 curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"createrawsendfrom","params":["WALLET_ADDRESS",{"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY},"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY},"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY}},[],"send"],"chain_name":"CHAIN_NAME"}'
 ```
+
 where
 
 * RPC_ENDPOINT — your MultiChain node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
