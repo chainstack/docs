@@ -235,7 +235,7 @@ module.exports = {
     },
     quorum: {
         provider: function() {
-        return new HDWalletProvider(mnemonic, "https://nd-123-456-789.rg-123-456.p2pify.com:8545");
+        return new HDWalletProvider(mnemonic, "http://nd-123-456-789.rg-123-456.p2pify.com:8545");
         },
         network_id: "*",
         gasPrice: 0,
