@@ -38,7 +38,7 @@ See [Create a project](/platform/create-a-project).
 
 See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
-### Get your Quorum node access information
+### Get your Quorum node access and credentials
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -52,7 +52,7 @@ truffle init
 
 This will generate the Truffle boilerplate structure:
 
-```
+``` sh
 .
 ├── contracts
 │   └── Migrations.sol
@@ -60,7 +60,7 @@ This will generate the Truffle boilerplate structure:
 │   └── 1_initial_migration.js
 ├── test
 └── truffle-config.js
-``` 
+```
 
 2. Go to the `contracts` directory. Create a `loyaltyProgram.sol` file in the directory.
 
@@ -75,7 +75,7 @@ contract loyaltyProgram {
         /* Set the owner to the creator of this contract */
         owner = msg.sender;
     }
-    
+
     /// Join a customer with the loyalty program
     function join() public returns (uint){
         address user = msg.sender;
@@ -151,7 +151,9 @@ contract("loyaltyProgram", function(accounts) {
 ```
 
 ::: tip See also
+
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
+
 :::
 
 3. Start the local development network:
@@ -212,7 +214,7 @@ where
 * `quorum` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. See [View node access and credentials](/platform/view-node-access-and-credentials).
 * `network_id` — your Quorum network ID. Available under **Credentials** > **Network ID**. You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
 * `gas` — the setting must be the default `4500000` for the Quorum network.
