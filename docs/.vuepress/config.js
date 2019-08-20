@@ -67,6 +67,7 @@ module.exports = {
                             '/operations/multichain/default-addresses',
                             '/operations/multichain/node-permissions',
                             '/operations/multichain/external-key-management',
+                            '/operations/multichain/cold-node-key-management',
                             '/operations/multichain/deploying-a-hybrid-network',
                             '/operations/multichain/tools',
                           ]
