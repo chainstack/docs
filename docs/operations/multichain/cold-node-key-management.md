@@ -6,25 +6,25 @@ You can use the default wallet addresses and key pairs for development and testi
 
 If you are moving your MultiChain network to production, you are strongly recommended to use secure key management.
 
-Cold node key management assumes that you do not store the keys in a hot MultiChain wallet. Instead, you have the keys stowed away in a Multichain wallet on a cold node.
+Cold node key management assumes that you do not store the keys in a hot MultiChain wallet. Instead, you have the keys stowed away in a MultiChain wallet on a cold node.
 
-This section will guide you through setting up a Multichain cold node, creating a key pair, issuing an asset, and signing the transaction on the cold node without exposing the private key to the Multichain network.
+This section will guide you through setting up a MultiChain cold node, creating a key pair, issuing an asset, and signing the transaction on the cold node without exposing the private key to the MultiChain network.
 
-For an overview of what a Multichain cold node is, see [Cold nodes and wallets](https://www.multichain.com/developers/cold-nodes-wallets/).
+For an overview of what a MultiChain cold node is, see [Cold nodes and wallets](https://www.multichain.com/developers/cold-nodes-wallets/).
 
-1. On a server that meets your security requirements, install Multichain
+1. On a server that meets your security requirements, install MultiChain
 
 See [Download and Install MultiChain](https://www.multichain.com/download-install/).
 
-2. Set up a Multichain cold node on the server
+2. Set up a MultiChain cold node on the server
 
    1. Create a `~/.multichain-cold` directory on the server
 
-   1. In the `~/.multichain-cold` directory, create a subdirectory with the chain name. See [View node access and credentials](/platform/view-node-access-and-credentials) to get the chain name of your Multichain network running with Chainstack.
+   1. In the `~/.multichain-cold` directory, create a subdirectory with the chain name. See [View node access and credentials](/platform/view-node-access-and-credentials) to get the chain name of your MultiChain network running with Chainstack.
 
       Example: `~/.multichain-cold/nw-123-456-7`.
 
-   1. In the directory, create an empty `params.dat file`
+   1. In the directory, create an empty `params.dat` file
 
       Example: `~/.multichain-cold/nw-123-456-7/params.dat`.
 
@@ -52,7 +52,7 @@ See [Download and Install MultiChain](https://www.multichain.com/download-instal
 
       Example output:
 
-      ``` sh
+      ``` json
       {"result":{"chain-protocol":"multichain","chain-description":"My Network","root-stream-name":"root","root-stream-open":true,"chain-is-testnet":false,"target-block-time":15,"maximum-block-size":8388608,"maximum-chunk-size":1048576,"maximum-chunk-count":1024,"default-network-port":7447,"default-rpc-port":8000,"anyone-can-connect":false,"anyone-can-send":false,"anyone-can-receive":false,"anyone-can-receive-empty":true,"anyone-can-create":false,"anyone-can-issue":false,"anyone-can-mine":false,"anyone-can-activate":false,"anyone-can-admin":false,"support-miner-precheck":true,"allow-arbitrary-outputs":false,"allow-p2sh-outputs":true,"allow-multisig-outputs":true,"setup-first-blocks":60,"mining-diversity":0.3,"admin-consensus-upgrade":0.5,"admin-consensus-txfilter":0.5,"admin-consensus-admin":0.5,"admin-consensus-activate":0.5,"admin-consensus-mine":0.5,"admin-consensus-create":0,"admin-consensus-issue":0,"lock-admin-mine-rounds":10,"mining-requires-peers":true,"mine-empty-rounds":10,"mining-turnover":0.5,"first-block-reward":-1,"initial-block-reward":0,"reward-halving-interval":52560000,"reward-spendable-delay":1,"minimum-per-output":0,"maximum-per-output":100000000000000,"minimum-offchain-fee":0,"minimum-relay-fee":0,"native-currency-multiple":100000000,"skip-pow-check":false,"pow-minimum-bits":8,"target-adjust-freq":-1,"allow-min-difficulty-blocks":false,"only-accept-std-txs":true,"max-std-tx-size":4194304,"max-std-op-returns-count":32,"max-std-op-return-size":2097152,"max-std-op-drops-count":5,"max-std-element-size":40000,"chain-name":"nw-614-517-1","protocol-version":20004,"network-message-start":"f8d8cdf4","address-pubkeyhash-version":"007ee2f6","address-scripthash-version":"05d9757c","private-key-version":"80c92c0c","address-checksum-value":"08f94387","genesis-pubkey":"039b7ee52bffe13196037d5f4b1c8fd4f4fefbc1e9766d821bd40b6bc36fc74b2c","genesis-version":1,"genesis-timestamp":1564720379,"genesis-nbits":536936447,"genesis-nonce":936,"genesis-pubkey-hash":"06a9dbecfd60a7018c2c3916cdb9d99158906730","genesis-hash":"00d52e3c198c586eeca891bf44634fa244f3b3b59f456990c1ccbb2981d5c856","chain-params-hash":"0fed5218dd7fd4952d76e51c5fbe7c6fb46c2ebcdd4ca9b8aee19f1aca610bdd"},"error":null,"id":1}
       ```
 
@@ -253,7 +253,7 @@ This will create a raw unsigned transaction to send 50 units of the asset `token
 
 Example output:
 
-``` sh
+``` json
 {"result":"010000000177acc507ee0b802f3b0dde19f3acb389a40498f388822fb3d48efa871135f1f60000000000ffffffff0200000000000000003776a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000000000003776a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000","error":null,"id":1}
 ```
 
@@ -275,7 +275,7 @@ curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-wo
 
 Example output:
 
-``` sh
+``` json
 {"result":{"txid":"5192ee142d70a124672d18f760b748c4373ee2c27331521bb5c825e0bf95b04e","version":1,"locktime":0,"vin":[{"txid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","vout":0,"scriptSig":{"asm":"","hex":""},"sequence":4294967295}],"vout":[{"value":0,"n":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 aab5af995a8d50eb35ca7044880b4ccc463b7e8c OP_EQUALVERIFY OP_CHECKSIG 73706b71a40498f388822fb3d48efa871135f1f650c3000000000000 OP_DROP","hex":"76a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c300000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["1Q5Bymiw44zwbMUKmX3uonwSdcxSXG2V35MLoq"]},"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":50,"raw":50000,"type":"transfer"}]},{"value":0,"n":1,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 21722e2f3414baa7c29cc31e833cfb01bef2eece OP_EQUALVERIFY OP_CHECKSIG 73706b71a40498f388822fb3d48efa871135f1f650c3000000000000 OP_DROP","hex":"76a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c300000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["15XBaziuezg8EDHx2GkPke8VS3oiKACMch4Vng"]},"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":50,"raw":50000,"type":"transfer"}]}]},"error":null,"id":1}
 ```
 
@@ -303,7 +303,7 @@ curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-wo
 
 Example output:
 
-``` sh
+``` json
 {"result":{"bestblock":"008b50f38e2884f7470cbe173ad16fc642e7159aec2007496fac47f13aad36b7","confirmations":11,"value":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 21722e2f3414baa7c29cc31e833cfb01bef2eece OP_EQUALVERIFY OP_CHECKSIG 73706b67a086010000000000 OP_DROP","hex":"76a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac0c73706b67a08601000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["15XBaziuezg8EDHx2GkPke8VS3oiKACMch4Vng"]},"version":1,"coinbase":false,"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":100,"raw":100000,"issue":true}]},"error":null,"id":1}
 ```
 
@@ -359,7 +359,7 @@ Move the saved values to the cold node in a manner that meets your security requ
 
        Example output:
 
-       ``` js
+       ``` json
        {"hex" : "010000000177acc507ee0b802f3b0dde19f3acb389a40498f388822fb3d48efa871135f1f6000000006b483045022100f905286e0f8a648b71625244eb623c641eb6e8caebbec30806e45c3b264342ad02200ef576fec5633326564e296e9d1698f7faa50536c919a0307abf5b08cd49264f012102251eece743174e0433086e1d978374de6a0d60e48c39282697b757ad968d3e1affffffff0200000000000000003776a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000000000003776a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000",
        "complete" : true}
        ```
