@@ -20,7 +20,6 @@ The Corda network has the following major components:
 * Node
 * CorDapp
 * Network map service
-* Identity service
 
 The Corda network has the following major concepts:
 
@@ -29,6 +28,7 @@ The Corda network has the following major concepts:
 * Transactions
 * Contracts
 * Flows
+* Compatibility zones
 * Certificates
 * Notary services
 
@@ -40,7 +40,7 @@ A node is a JVM instance.
 
 Each node has a unique identity on the network in the form of:
 
-* A certificate issued to the node by the [identity service](/blockchains/corda#identity-service).
+* A [certificate](#certificates) issued to the node.
 * The node's IP address.
 
 Each node has two communication interfaces:
@@ -53,8 +53,8 @@ Each node keeps historic (consumed) and current (unconsumed) states of on-ledger
 Each node can be configured to be:
 
 * A regular node — a node with a certificate, two communication interfaces, and a ledger.
-* A node with CorDapp — a distributed application running a [contract](/blockchains/corda#contracts) and a [flow](/blockchains/corda#flows).
-* A node with a [notary service](/blockchains/corda#notary-services) — a notary node.
+* A node with CorDapp — a distributed application running a [contract](#contracts) and a [flow](/blockchains/corda#flows).
+* A node with a [notary service](#notary-services) — a notary node.
 
 #### CorDapp
 
@@ -64,20 +64,14 @@ A CorDapp is an application running on a node that defines the logic of updating
 
 Each CorDapp has the two following major components:
 
-* Contract — a set of rules for a transaction to be considered valid and accepted. See [Contracts](/blockchains/corda#contracts).
-* Flow — an automated set of actions for the node to run on receiving an RPC request from the node owner. See [Flows](/blockchains/corda#flows).
+* Contract — a set of rules for a transaction to be considered valid and accepted. See [Contracts](#contracts).
+* Flow — an automated set of actions for the node to run on receiving an RPC request from the node owner. See [Flows](#flows).
 
 #### Network map service
 
-The network map service is the catalog of all nodes on the Corda network with the information on the node identities, node certificates, and node IP addresses.
+The network map service is the catalog of all nodes on a [compatibility zone](#compatibility-zones) with the information on the node identities, node certificates, and node IP addresses.
 
-Each node on the Corda network keeps a copy of the network map.
-
-Each node entry in the network map is signed by the node it represents; this makes each entry tamper-proof.
-
-#### Identity service
-
-A [Corda Network Foundation](https://corda.network/governance/index.html) service that signs the [root network certificates](/blockchains/corda#certificates) and admits the nodes to the Corda network.
+Chainstack deploys a separate network map server for every Corda network instance.
 
 ### Concepts
 
@@ -112,8 +106,8 @@ A transaction is a message between at least two nodes that acts as a proposal to
 
 A transaction is considered valid and updates the ledger if:
 
-* The transaction does not have a double-spend as verified by the [notary service](/blockchains/corda#notary-services).
-* The transaction meets the [contract](/blockchains/corda#contracts) rules as part of a CorDapp running on all nodes that are a part of the transaction.
+* The transaction does not have a double-spend as verified by the [notary service](#notary-services).
+* The transaction meets the [contract](#contracts) rules as part of a CorDapp running on all nodes that are a part of the transaction.
 * The transaction is signed by all nodes participating in the transaction.
 
 #### Contracts
@@ -128,13 +122,21 @@ A flow is an automated set of actions that a node runs on receiving an RPC reque
 
 A flow is basically an automated business process split into a sequence of specific actions that the node owner does not have to manually initiate each time.
 
+#### Compatibility zones
+
+A compatibility zone is a deployed network instance. 
+
+There are three major types of compatibility zones:
+
+* [Corda Network](https://corda.network/) — Corda's main compatibility zone.
+* [Corda Testnet](https://testnet.corda.network/) — Corda's compatibility zone for testing.
+* Dynamic compatibility zones — a private compatibility zone. This is basically a privately deployed network that relies on a custom [network map server](#network-map-service) to allow nodes to join.
+
+Chainstack deploys every Corda network in dynamic compatibility zone. Every dynamic compatibility zone deployed with Chainstack comes with a network map server.
+
 #### Certificates
 
-The Corda network has three types of certificates:
-
-* The root network certificate. This is the certificate signed by [Corda Network Foundation](https://corda.network/governance/index.html) and acts as admission to the Corda network.
-* The doorman certificate. This is the certificate signed by the entities with the root network certificate.
-* Node-signed certificates. This is the certificate that can be signed by any node admitted to the Corda network.
+Chainstack uses self-signed certificates for the dynamic compatibility zones it deploys.
 
 #### Notary services
 
@@ -142,13 +144,7 @@ A notary service is a part of a node on the Corda network that turns a regular n
 
 The objective of a notary node is to check transactions for double-spending. If the transaction is unique and is not a double-spend attempt, the notary node signs the transaction. If the transaction is a double-spend attempt, the notary node rejects the transaction.
 
-Notary nodes can run in a cluster. Each notary node cluster has a consensus algorithm. Notary node clusters on the Corda network can have different consensus algorithms.
-
-Corda currently comes with the following consensus implementations:
-
-* Single-node — the default single-node notary verification. Recommended for production.
-* Raft — an experimental [CFT](/glossary/cft) implementation. Not recommended for production.
-* BFT-Smart — an experimental [BFT](/glossary/bft) implementation. Not recommended for production.
+Chainstack deploys one notary node with each instance of the Corda network.
 
 ::: tip See also
 
