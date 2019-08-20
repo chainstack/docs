@@ -257,7 +257,7 @@ Run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json
 Send `getinfo` to get the node and blockchain information:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth"-d '{"method":"getinfo","params":[],"id":3,"chain_name":"nw-123-456-7"}'
+curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth" -d '{"method":"getinfo","params":[],"id":3,"chain_name":"nw-123-456-7"}'
 ```
 
 Example output:
