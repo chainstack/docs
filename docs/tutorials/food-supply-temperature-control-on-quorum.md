@@ -28,7 +28,7 @@ To get from zero to a deployed Quorum network with a public contract and a priva
   1. Deploy a Quorum network with Chainstack.
   1. Install Ethereum JavaScript API to interact with the Quorum network.
   1. Install Solidity JavaScript Compiler to format the contract for the Quorum network deployment.
-  1. Install dotenv and create an `.env` file with your Quorum nodes access information.
+  1. Install dotenv and create an `.env` file with your Quorum nodes access and credentials.
 
 * Create the contract.
 * Deploy the contract as public and run a public transaction.
@@ -74,7 +74,7 @@ npm install solc@0.4.25
 
 ### Install and configure dotenv
 
-You will use dotenv to pass your Quorum nodes access information to deploy the contracts and run transactions.
+You will use dotenv to pass your Quorum nodes access and credentials to deploy the contracts and run transactions.
 
 ``` sh
 npm install dotenv
@@ -121,7 +121,9 @@ where
 
 ## Deploy the contract as public and run a public transaction
 
-### Create a public.js file that will:
+### Create a public.js file
+
+Create a `public.js` file that will:
 
 1. Format and deploy the contract through Node 1.
 2. Set the temperature to `3` through Node 2.

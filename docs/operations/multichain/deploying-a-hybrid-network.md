@@ -21,7 +21,7 @@ To deploy a hybrid MultiChain network, do the following:
 
 1. With Chainstack, create a [Consortium project](/glossary/consortium-project) project.
 1. With Chainstack, deploy a MultiChain network in cloud.
-1. With Chainstack, get your cloud MultiChain node access information.
+1. With Chainstack, get your cloud MultiChain node access and credentials.
 1. On-premises, install MultiChain.
 1. On-premises, initialize your MultiChain node.
 1. From your cloud MultiChain node, grant permissions to your on-premises MultiChain node's wallet address.
@@ -38,7 +38,7 @@ See [Create a project](/platform/create-a-project).
 
 See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
-### Get your cloud MultiChain node access information
+### Get your cloud MultiChain node access and credentials
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -80,7 +80,7 @@ As a result of running the command, you will have:
 
 Output example:
 
-```
+``` sh
 MultiChain 2.0.2 Daemon (Community Edition, latest protocol 20010)
 
 Starting up node...
@@ -110,7 +110,7 @@ You need to send the `grant` request through your first deployed node.
 Sending a curl request from terminal:
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d {"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"],"id":1,"chain_name":"CHAIN_NAME"}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"],"id":1,"chain_name":"CHAIN_NAME"}'
 ```
 
 where
@@ -209,7 +209,7 @@ multichain-cli nw-123-456-7
 
 After entering interactive mode, send any command. For example, `getinfo` to get the node and blockchain information:
 
-```
+``` json
 nw-123-456-7: getinfo
 ```
 
@@ -257,7 +257,7 @@ Run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json
 Send `getinfo` to get the node and blockchain information:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth"-d '{"method":"getinfo","params":[],"id":3,"chain_name":"nw-123-456-7"}'
+curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth" -d '{"method":"getinfo","params":[],"id":3,"chain_name":"nw-123-456-7"}'
 ```
 
 Example output:

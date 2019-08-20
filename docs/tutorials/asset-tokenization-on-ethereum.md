@@ -132,7 +132,32 @@ You will use this account to deploy the contract.
 
     * PATH_TO_KEYSTORE — the location of the keystore file.
     * PASSWORD — the password you provided when creating the Ethereum account with Geth.
-    * RPC_ENDPOINT — your Ropsten node RPC endpoint. Available under **Credentials** > **RPC endpoint**.  
+    * RPC_ENDPOINT — your Ropsten node RPC endpoint with username and password. The format is `user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+
+    Contract example:
+
+    ``` js
+    chainstack: {
+        deployment:{
+          accounts: [
+              {
+                privateKeyFile:"//root/.ethereum/keystore/UTC--2019-08-01T07-24-17.754471456Z--73236c8d8aaee5263e8a32c71171030dd7a3e8e6",
+                password:"123456"
+              }
+          ],
+          host: "user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com",
+          port:false,
+          protocol:"https",
+          type:"rpc"
+        },
+        dappConnection: [
+          "$WEB3",  // uses pre existing web3 object if available (e.g in Mist)
+          "ws://localhost:8546",
+          "http://localhost:8545"
+        ],
+        gas: "auto",
+      }
+    ```
 
 1. Deploy the contract with Embark:
 
