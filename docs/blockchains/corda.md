@@ -70,7 +70,7 @@ Each CorDapp has the two following major components:
 
 The network map service is the catalog of all nodes on a [compatibility zone](#compatibility-zones) with the information on the node identities, node certificates, and node IP addresses.
 
-Chainstack deploys a separate network map server for every Corda network instance.
+Chainstack deploys a separate network map service for every Corda network instance.
 
 ### Concepts
 
@@ -123,18 +123,18 @@ A flow is basically an automated business process split into a sequence of speci
 
 #### Compatibility zones
 
-A compatibility zone is a deployed network instance. 
+A compatibility zone is a deployed network instance that is managed by a network operator.
 
-There are publicly available compatibility zones:
+There are compatibility zones managed by [Corda Network Foundation](https://corda.network/governance/index.html):
 
 * [Corda Network](https://corda.network/) — Corda's main compatibility zone.
 * [Corda Testnet](https://testnet.corda.network/) — Corda's compatibility zone for testing.
 
-There are also private compatibility zones. These are basically privately deployed networks that rely on custom [network map servers](#network-map-service) to allow nodes to join.
+There are also non-Corda Network Foundation managed compatibility zones. These are basically networks that rely on custom network map and doorman services to discover the nodes and control network permissions. These zones are managed by organizations deploying the zones and acting as network operators for the zones.
 
-Chainstack deploys every Corda network in dynamic compatibility zone. Every dynamic compatibility zone deployed with Chainstack comes with a network map server.
+Chainstack deploys every Corda network in a compatibility zone and acts as the network operator for each zone. Every compatibility zone deployed with Chainstack comes with the network map and doorman services.
 
-In the future, Chainstack will also support joining publicly available compatibility zones like [Corda Network](https://corda.network/).
+In the future, Chainstack will also support joining the non-Chainstack managed compatibility zones like [Corda Network](https://corda.network/).
 
 #### Certificates
 
