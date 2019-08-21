@@ -24,7 +24,7 @@ To add a verifier node:
 raft.addPeer('enode://ENODE@NODE_IP:P2P_PORT?discport=0&raftport=RAFT_PORT')
 ```
 
-where 
+where
 
 * ENODE is the hexadecimal node ID.
 * NODE_IP is the IP address of the node.
