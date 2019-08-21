@@ -53,7 +53,9 @@ Since Raft Quorum is designed to run a crash tolerant system only, the blocks ar
 
 When there is a new transaction propagated through the network, a new block creation is triggered and the minter node creates a new block.
 
-### Istanbul Byzantine Fault Tolerance
+### IBFT
+
+Stands for Istanbul Byzantine Fault Tolerance.
 
 Byzantine fault tolerance assumes that there can be adversary nodes on the network. The network can still operate and reach consensus in the presence of the adversary nodes.
 
