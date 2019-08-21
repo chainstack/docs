@@ -52,8 +52,7 @@ Each node keeps historic (consumed) and current (unconsumed) states of on-ledger
 
 Each node can be configured to be:
 
-* A regular node — a node with a certificate, two communication interfaces, and a ledger.
-* A node with CorDapp — a distributed application running a [contract](#contracts) and a [flow](/blockchains/corda#flows).
+* A regular node — a node with a certificate, two communication interfaces, a ledger, and a CorDapp.
 * A node with a [notary service](#notary-services) — a notary node.
 
 #### CorDapp
@@ -126,13 +125,15 @@ A flow is basically an automated business process split into a sequence of speci
 
 A compatibility zone is a deployed network instance. 
 
-There are three major types of compatibility zones:
+There are different compatibility zones:
 
 * [Corda Network](https://corda.network/) — Corda's main compatibility zone.
 * [Corda Testnet](https://testnet.corda.network/) — Corda's compatibility zone for testing.
 * Dynamic compatibility zones — a private compatibility zone. This is basically a privately deployed network that relies on a custom [network map server](#network-map-service) to allow nodes to join.
 
 Chainstack deploys every Corda network in dynamic compatibility zone. Every dynamic compatibility zone deployed with Chainstack comes with a network map server.
+
+In the future, Chainstack will also support joining publicly available compatibility zones like [Corda Network](https://corda.network/).
 
 #### Certificates
 
