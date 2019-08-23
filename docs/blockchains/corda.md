@@ -13,7 +13,7 @@ Corda is different from *permissioned* consortium blockchain protocols in that i
 * The ability for a diverse user-base with vastly different business-logic and flow requirements to co-exist and interoperate on the same network.
 * The ability for the nodes to have direct peer-to-peer communication over TLS for transaction privacy.
 
-## Corda network structure
+## Network structure
 
 The Corda network has the following major components:
 
