@@ -196,7 +196,7 @@ module.exports = {
     development: {
         host: "127.0.0.1",
         port: 9545,
-        network_id: "*"
+        network_id: "5777"
     },
     quorum: {
         provider: () => new HDWalletProvider(mnemonic, "RPC_ENDPOINT"),
@@ -214,7 +214,7 @@ where
 * `quorum` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
-* RPC_ENDPOINT — your Quorum node RPC endpoint. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
 * `network_id` — your Quorum network ID. Available under **Access and credentials** > **Network ID**. You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
 * `gas` — the setting must be the default `4500000` for the Quorum network.
@@ -224,19 +224,17 @@ Example:
 
 ``` js
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = 'word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15';
+const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15";
 
 module.exports = {
   networks: {
     development: {
         host: "127.0.0.1",
         port: 9545,
-        network_id: "*"
+        network_id: "5777"
     },
     quorum: {
-        provider: function() {
-        return new HDWalletProvider(mnemonic, "http://nd-123-456-789.rg-123-456.p2pify.com:8545");
-        },
+        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
         network_id: "*",
         gasPrice: 0,
         gas: 4500000,
@@ -254,17 +252,11 @@ truffle migrate --network quorum
 
 This will engage `2_deploy_contracts.js` and deploy the `loyaltyProgram.sol` contract to your Quorum network as specified in `truffle-config.js`.
 
-::: warning Exit error after consuming all gas
-You will see an `exited with an error (status 0) after consuming all gas` message on contract deployment. The message will still give you the transaction ID and deploy successfully.
-:::
-
 You can view the deployed contract and the contract address on the Chainstack platform by navigating to your Quorum project > **Explorer** > **Contracts**.
 
 ## Interact with the contract
 
-The following contract interaction example is done with Geth.
-
-Download and install the latest [Quorum Geth release](https://github.com/jpmorganchase/quorum/releases/).
+The following contract interaction example is done with Quorum Geth. For Quorum Geth installation instructions, see [Tools](/operations/quorum/tools).
 
 ### Connect to a node in your Quorum network
 
@@ -276,12 +268,12 @@ Run:
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint with the RPC username and RPC password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`.
 
 Example:
 
 ``` sh
-./geth attach http://nd-123-456-789.rg-123-456.p2pify.com:8545
+./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 ```
 
 This will put you in the Geth console interactive mode.
