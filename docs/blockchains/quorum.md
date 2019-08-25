@@ -78,7 +78,7 @@ All nodes in a Quorum network deployed with Chainstack have the following two ro
 
 The process of sealing and including a block in the chain is the following:
 
-* Block proposal — Proposer submits a block for validation to the group of validator nodes. The proposer also adds the *ProposerSeal* to the proposed block.
+* Block proposal — a proposer submits a block for validation to the group of validator nodes. The proposer also adds the *ProposerSeal* to the proposed block.
 * Block preparing — the validator nodes reach the **3f+1** consensus on the proposed block.
 * Block ready — the validating nodes add their *CommittingSeals* to the block and add the block to the chain.
 
