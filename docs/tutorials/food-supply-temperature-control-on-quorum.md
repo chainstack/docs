@@ -93,8 +93,8 @@ PK3='CONSTELLATION_PUBLIC_KEY'
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Credentials** > **Constellation public key**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
+* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Access and credentials** > **Constellation public key**.
 
 ## Create the contract
 

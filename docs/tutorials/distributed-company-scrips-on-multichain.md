@@ -85,14 +85,14 @@ curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"issue","params":["WA
 
 where
 
-* RPC_ENDPOINT — your MultiChain node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* RPC_USER — your MultiChain node RPC username. Available under **Credentials** > **RPC user**.
-* RPC_PASSWORD — your MultiChain node RPC password. Available under **Credentials** > **RPC password**.
-* WALLET_ADDRESS — your MultiChain node's wallet address. Available under **Credentials** > **Default wallet address**.
+* RPC_ENDPOINT — your MultiChain node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
+* RPC_USER — your MultiChain node RPC username. Available under **Access and credentials** > **RPC user**.
+* RPC_PASSWORD — your MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
+* WALLET_ADDRESS — your MultiChain node's wallet address. Available under **Access and credentials** > **Default wallet address**.
 * TOKEN_NAME — the token name. Provide a descriptive name.
 * QUANTITY — the total supply of the tokens. Depending on your scenario, you may want to issue a good amount so that your system can scale to more members than there are currently or to introducing additional rewards.
 * UNITS — the number of units the token will have. Setting this to `1` will make the token indivisible.
-* CHAIN_NAME — your MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* CHAIN_NAME — your MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -118,14 +118,14 @@ curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"createrawsendfrom","
 
 where
 
-* RPC_ENDPOINT — your MultiChain node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* RPC_USER — your MultiChain node RPC username. Available under **Credentials** > **RPC user**.
-* RPC_PASSWORD — your MultiChain node RPC password. Available under **Credentials** > **RPC password**.
-* WALLET_ADDRESS — your MultiChain node's wallet address. Available under **Credentials** > **Default wallet address**. This is the address that at this point in the tutorial holds the entire supply of the tokens.
-* WALLET_ADDRESS_USER_n — member's address as part of this system. You and anyone can view any member's address under **Credentials** > **Default wallet address**.
+* RPC_ENDPOINT — your MultiChain node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
+* RPC_USER — your MultiChain node RPC username. Available under **Access and credentials** > **RPC user**.
+* RPC_PASSWORD — your MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
+* WALLET_ADDRESS — your MultiChain node's wallet address. Available under **Access and credentials** > **Default wallet address**. This is the address that at this point in the tutorial holds the entire supply of the tokens.
+* WALLET_ADDRESS_USER_n — member's address as part of this system. You and anyone can view any member's address under **Access and credentials** > **Default wallet address**.
 * TOKEN_NAME — the token name that you set up at [the previous step](distributed-company-scrips-on-multichain#issue-a-company-token).
 * QUANTITY — the amount of tokens to transfer.
-* CHAIN_NAME — your MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* CHAIN_NAME — your MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 
 Example command:
 
