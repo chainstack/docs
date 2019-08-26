@@ -28,7 +28,7 @@ at block: 0 (Thu, 01 Jan 1970 00:00:00 UTC)
 >
 ```
 
-Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
 
 Example below demonstrates how to get the current block number:
 
