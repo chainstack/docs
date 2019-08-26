@@ -23,7 +23,7 @@ $ curl -H "Content-Type: application/json" \
 
 Work with MultiChain from your JavaScript application.
 
-1. Install [multinodejs](https://github.com/sdec-brasil/multinodejs)
+1. Install [multinodejs](https://github.com/sdec-brasil/multinodejs).
 
 2. Configure the client to use `host` of the node RPC endpoint and the corresponding RPC `user` and `pass`:
 
@@ -36,7 +36,7 @@ let multichain = require("multinodejs")({
 });
 ```
 
-3. Invoke any methods from the [MultiChain API specification](http://www.multichain.com/developers/json-rpc-api/)
+3. Invoke any methods from the [MultiChain API specification](http://www.multichain.com/developers/json-rpc-api/):
 
 ``` js
 multichain.getInfo((err, info) => {
@@ -77,7 +77,7 @@ chainname = "nw-123-456-7"
 multichain = Multichain(username, password, host, port, chainname)
 ```
 
-3. Invoke any methods from the [MultiChain API specification](http://www.multichain.com/developers/json-rpc-api/)
+3. Invoke any methods from the [MultiChain API specification](http://www.multichain.com/developers/json-rpc-api/):
 
 ``` python
 info = multichain.getinfo()
