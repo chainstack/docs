@@ -7,7 +7,8 @@ module.exports = {
     themeConfig: {
         logo: '/img/docs-logo.svg',
         nav: [
-            { text: 'Console', link: 'https://console.chainstack.com' },
+            { text: 'Support', link: 'https://support.chainstack.com/' },
+            { text: 'Log in', link: 'https://console.chainstack.com/user/login' },
             { text: 'Try free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
@@ -144,7 +145,7 @@ module.exports = {
     plugins: {
         'clean-urls': {
             normalSuffix: ''
-        },    
+        },
         'google-tag-manager': {
             'gtm': 'GTM-PXSGW6M'
         },
