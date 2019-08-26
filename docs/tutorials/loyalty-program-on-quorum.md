@@ -336,7 +336,7 @@ Run:
 
 where
 
-* CONTRACT_NAME is any name you want to call the contract.
+* CONTRACT_NAME — any name you want to call the contract.
 * CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating on the Chainstack platform to your Quorum project > **Explorer** > **Contracts**.
 
 Example:
