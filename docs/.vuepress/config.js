@@ -3,11 +3,11 @@ module.exports = {
     description: "Chainstack documentation",
     head: [
         ['link', { rel: 'icon', href: './favicon.ico' }]
-      ],
+    ],
     themeConfig: {
+        logo: '/img/docs-logo.svg',
         nav: [
-            { text: 'Support', link: 'https://support.chainstack.com/' },
-            { text: 'Log in', link: 'https://console.chainstack.com' },
+            { text: 'Console', link: 'https://console.chainstack.com' },
             { text: 'Try free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
