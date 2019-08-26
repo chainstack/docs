@@ -93,8 +93,8 @@ PK3='CONSTELLATION_PUBLIC_KEY'
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Credentials** > **Constellation public key**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
+* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Access and credentials** > **Constellation public key**.
 
 ## Create the contract
 
@@ -115,9 +115,9 @@ function get() view public returns (int8) {
 
 where
 
-* `temperature` is the public variable.
-* `set` is the function to write the temperature.
-* `get` is the function to fetch the temperature.
+* `temperature` — the public variable.
+* `set` — the function to write the temperature.
+* `get` — the function to fetch the temperature.
 
 ## Deploy the contract as public and run a public transaction
 
@@ -229,11 +229,11 @@ main()
 
 where
 
-* `formatContract` is the function to format the contract in ABI and bytecode for deployment.
-* `deployContract` is the function to deploy the contract with Ethereum JavaScript API libraries.
-* `setTemperature` is the function to write the temperature value.
-* `getTemperature` is the function to fetch the temperature value.
-* `process.env` loads your nodes access variables from the `.env` file.
+* `formatContract` — the function to format the contract in ABI and bytecode for deployment.
+* `deployContract` — the function to deploy the contract with Ethereum JavaScript API libraries.
+* `setTemperature` — the function to write the temperature value.
+* `getTemperature` — the function to fetch the temperature value.
+* `process.env` — loads your nodes access variables from the `.env` file.
 
 ### Run the transaction
 
@@ -372,12 +372,12 @@ main()
 
 where
 
-* `formatContract` is the function to format the contract in ABI and bytecode for deployment.
-* `deployContract` is the function to deploy the contract with Ethereum JavaScript API libraries.
-* `setTemperature` is the function to write the temperature value.
-* `getTemperature` is the function to fetch the temperature value.
-* `process.env` loads your nodes access variables from the `.env` file.
-* `privateFor` is the Quorum specific parameter that sets the transaction private for the account identified by `publicKey`.
+* `formatContract` — the function to format the contract in ABI and bytecode for deployment.
+* `deployContract` — the function to deploy the contract with Ethereum JavaScript API libraries.
+* `setTemperature` — the function to write the temperature value.
+* `getTemperature` — the function to fetch the temperature value.
+* `process.env` — loads your nodes access variables from the `.env` file.
+* `privateFor` — the Quorum specific parameter that sets the transaction private for the account identified by `publicKey`.
 
 ### Run the transaction
 

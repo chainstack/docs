@@ -60,9 +60,9 @@ multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
 
 where
 
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 * HOSTNAME — your cloud MultiChain node hostname.
-  * Get your RPC hostname under **Credentials** as part of **RPC endpoint**.
+  * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
   * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
   * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
@@ -115,11 +115,11 @@ curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["WA
 
 where
 
-* RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* RPC_USER — your cloud MultiChain node RPC username. Available under **Credentials** > **RPC user**.
-* RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Credentials** > **RPC password**.
+* RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
+* RPC_USER — your cloud MultiChain node RPC username. Available under **Access and credentials** > **RPC user**.
+* RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
 * WALLET_ADDRESS — your on-premises MultiChain node's wallet address. You received the wallet address [when you initialized your on-premises node](/operations/multichain/deploying-a-hybrid-network#initialize-your-on-premises-multichain-node).
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 
 Command example:
 
@@ -145,12 +145,12 @@ curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"addnode","params":["
 
 where
 
-* RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* RPC_USER — your cloud MultiChain node RPC username. Available under **Credentials** > **RPC user**.
-* RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Credentials** > **RPC password**.
+* RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
+* RPC_USER — your cloud MultiChain node RPC username. Available under **Access and credentials** > **RPC user**.
+* RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
 * ON_PREM_IP — your on-premises MultiChain node machine's IP address.
 * PORT — your on-premises MultiChain node machine's port.
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 
 Command example:
 
@@ -170,9 +170,9 @@ multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
 
 where
 
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 * HOSTNAME — your cloud MultiChain node hostname.
-  * Get your RPC hostname under **Credentials** as part of **RPC endpoint**.
+  * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
   * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
   * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
@@ -199,7 +199,7 @@ multichain-cli CHAIN_NAME
 
 where
 
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Credentials** > **Chain name**.
+* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 
 Command example:
 
