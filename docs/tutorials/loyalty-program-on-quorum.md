@@ -215,7 +215,7 @@ where
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
 * RPC_ENDPOINT — your Quorum node RPC endpoint. See [View node access and credentials](/platform/view-node-access-and-credentials).
-* `network_id` — your Quorum network ID. Available under **Credentials** > **Network ID**. You can set it to `*` for any.
+* `network_id` — your Quorum network ID. Available under **Access and credentials** > **Network ID**. You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
 * `gas` — the setting must be the default `4500000` for the Quorum network.
 * `type` — the setting must be `quorum` to instruct Truffle for the Quorum network deployment.
@@ -276,7 +276,7 @@ Run:
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
 
 Example:
 
@@ -336,7 +336,7 @@ Run:
 
 where
 
-* CONTRACT_NAME is any name you want to call the contract.
+* CONTRACT_NAME — any name you want to call the contract.
 * CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating on the Chainstack platform to your Quorum project > **Explorer** > **Contracts**.
 
 Example:
@@ -355,7 +355,7 @@ Run:
 
 where
 
-* QUORUM_ADDRESS — an address created with one of the node deployments. Available on the Chainstack platform under **Credentials** > **Default wallet address**.
+* QUORUM_ADDRESS — an address created with one of the node deployments. Available on the Chainstack platform under **Access and credentials** > **Default wallet address**.
 
 Example:
 

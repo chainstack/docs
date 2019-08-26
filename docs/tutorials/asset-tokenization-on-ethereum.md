@@ -187,9 +187,9 @@ This will also display the contract address in the `Deployed at` line.
 
 Test the contract by calling:
 
-* `supply()` to check the remaining supply of tokens on the contract.
-* `check()` to check the amount of tokens owned by the Ethereum address you are using to call the contract.
-* `pricePerEth()` to check the token price in wei.
+* `supply()` — to check the remaining supply of tokens on the contract.
+* `check()` — to check the amount of tokens owned by the Ethereum address you are using to call the contract.
+* `pricePerEth()` — to check the token price in wei.
 
 ### Interact with the contract
 
