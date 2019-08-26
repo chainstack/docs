@@ -6,7 +6,7 @@ A famous example of a teal organization leveraging internal currency for employe
 
 Non-teal companies like Amazon, however, also experiment with boosting productivity with internal currency known as *swag bucks*.
 
-Issuing a company scrip on blockchain gives users complete ownership of the currency and can be an experiment in employee self-management or gamification. Not only that, but blockchain-based company currency allows it to transcend the company borders and be easily implemented across partner organizations — something that would be fraught with difficulties if the currency were centralized.
+Issuing a company scrip on blockchain gives users complete ownership of the currency and can be an experiment in employee self-management or gamification. Not only that, but blockchain-based company currency allows it to transcend the company borders and be easily implemented across partner organizations—something that would be fraught with difficulties if the currency were centralized.
 
 This tutorial guides you through issuing and distributing a basic scrip system on MultiChain that you can implement in an organization or across organizations.
 
