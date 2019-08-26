@@ -57,9 +57,9 @@ module.exports = {
                             '/operations/ethereum/',
                             '/operations/ethereum/networks',
                             '/operations/ethereum/tools',
-                          ]
-                     },
-                     {
+                        ]
+                    },
+                    {
                         title: 'MultiChain',
                         collapsable: true,
                         children: [
@@ -70,19 +70,19 @@ module.exports = {
                             '/operations/multichain/cold-node-key-management',
                             '/operations/multichain/deploying-a-hybrid-network',
                             '/operations/multichain/tools',
-                          ]
-                     },
-                     {
+                        ]
+                    },
+                    {
                         title: 'Quorum',
                         collapsable: true,
                         children: [
-                           '/operations/quorum/',
-                           '/operations/quorum/configuring-consensus',
-                           '/operations/quorum/default-addresses',
-                           '/operations/quorum/key-management',
-                           '/operations/quorum/tools',
-                          ]
-                     },
+                            '/operations/quorum/',
+                            '/operations/quorum/configuring-consensus',
+                            '/operations/quorum/default-addresses',
+                            '/operations/quorum/key-management',
+                            '/operations/quorum/tools',
+                        ]
+                    },
                 ]
             },
             {
@@ -96,7 +96,7 @@ module.exports = {
                     '/tutorials/food-supply-temperature-control-on-quorum',
                     '/tutorials/loyalty-program-on-quorum',
                     ]
-             },
+            },
             {
                 title: 'Blockchains',
                 collapsable: true,
