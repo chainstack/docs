@@ -145,7 +145,7 @@ module.exports = {
     },
     plugins: {
         'clean-urls': {
-            normalSuffix: ''
+            normalSuffix: '/'
         },
         'google-tag-manager': {
             'gtm': 'GTM-PXSGW6M'
