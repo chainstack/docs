@@ -1,0 +1,30 @@
+// Side bar
+.theme-container .sidebar
+    top $headerHeight
+    padding-top 0.5rem
+    background-color $sidebarBgColor
+    border-right 0
+
+.sidebar-group
+    &.collapsable > .sidebar-heading .arrow
+        display inline-block
+        width 0.625em
+        height 0.625em
+        position relative
+        top 0
+        border 0
+        background-repeat no-repeat
+        background-position center
+        background-size auto
+        background-image url('/img/arrow-right.svg')
+        transition transform ease 100ms
+
+        &.down
+            transform rotate(90deg)
+
+    &.is-sub-group > .sidebar-heading
+        color $textColor
+        font-weight bold
+
+        &:not(.clickable)
+            opacity 0.9
