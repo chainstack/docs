@@ -60,7 +60,7 @@ See [Download and Install MultiChain](https://www.multichain.com/download-instal
 
       Example of the output converted to the `params.dat` format:
 
-      ``` config
+      ```
       chain-protocol = multichain
       chain-description = My Network
       root-stream-name = root
