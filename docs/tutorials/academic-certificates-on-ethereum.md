@@ -131,12 +131,12 @@ contract DocStamp is Ownable {
 
 This is the main contract. The contract handles the generation and verification of certificates.
 
-* `issueCertificate()` generates a certificate by calculating a hash of the student name and details.
+* `issueCertificate()` — generates a certificate by calculating a hash of the student name and details.
   * Can be called only by the owner.
   * Emits a certificate generation event with the timestamp.
   * The issuer puts the certificate on the blockchain by storing it in the global variable `records` by passing `records[certificate] = msg.sender`.
-* `owningAuthority()` returns the address of issuer/authority.
-* `verifyCertificate()` calculates a hash of the student name and details, and checks if the contract is on the blockchain.
+* `owningAuthority()` — returns the address of issuer/authority.
+* `verifyCertificate()` — calculates a hash of the student name and details, and checks if the contract is on the blockchain.
   * Can be called by anyone.
 
 3. Create `2_deploy_contracts.js` in the `migrations` directory.

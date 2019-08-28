@@ -15,7 +15,17 @@ Having installed Go, install Quorum Geth as described in [Quorum: Installing](ht
 With Quorum Geth installed, you can connect to the Quorum nodes with the `geth attach` command:
 
 ``` sh
-$ ./geth attach http://nd-123-456-789.rg-123-456.p2pify.com:8545
+./geth attach RPC_ENDPOINT
+```
+
+where
+
+* RPC_ENDPOINT — your Quorum node RPC endpoint with the RPC username and RPC password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
+
+Example:
+
+``` sh
+$ ./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 
 Welcome to the Geth JavaScript console!
 
@@ -28,7 +38,7 @@ at block: 0 (Thu, 01 Jan 1970 00:00:00 UTC)
 >
 ```
 
-Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
 
 Example below demonstrates how to get the current block number:
 
@@ -48,7 +58,7 @@ Example below demonstrates how to get basic network information:
 ``` sh
 $ curl -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":2}' \
-  http://nd-123-456-789.p2pify.com:8545
+  https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 
 {"jsonrpc":"2.0","id":2,"result":"0x4"}
 ```
@@ -63,20 +73,64 @@ Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to y
 Use Truffle >= 5.0.14 which has complete Quorum support with privacy features.
 :::
 
-2. Create a new environment in `truffle-config.js`, specify `host` and `port` of the node RPC endpoint and include the parameter `type` set to `quorum`:
+2. Install `HDWalletProvider`.
+
+[HDWalletProvider](https://www.npmjs.com/package/truffle-hdwallet-provider) is Truffle's separate npm package used to sign transactions.
+
+Run:
+
+``` sh
+npm install truffle-hdwallet-provider
+```
+
+3. Create a new environment in `truffle-config.js` with:
+
+* `HDWalletProvider`
+* Your Quorum network running with Chainstack
 
 ``` js
+const HDWalletProvider = require("truffle-hdwallet-provider");
+const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15";
+
+module.exports = {
+    chainstack: {
+        provider: () => new HDWalletProvider(mnemonic, "RPC_ENDPOINT"),
+        network_id: "*",
+        gasPrice: 0,
+        gas: 4500000,
+        type: "quorum"
+    }
+   }
+};
+```
+
+where
+
+* `chainstack` — any network name that you will pass to the `truffle migrate --network` command.
+* `HDWalletProvider` — Truffle's custom provider to sign transactions.
+* `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* `network_id` — your Quorum network ID. Available under **Access and credentials** > **Network ID**. You can set it to `*` for any.
+* `gasPrice` — the setting must be `0` for the Quorum network.
+* `gas` — the setting must be the default `4500000` for the Quorum network.
+* `type` — the setting must be `quorum` to instruct Truffle for the Quorum network deployment.
+
+Example:
+
+``` js
+const HDWalletProvider = require("truffle-hdwallet-provider");
+const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15";
+
 module.exports = {
   networks: {
     chainstack: {
-      host: "nd-123-456-789.p2pify.com",
-      port: 8545,
-      network_id: "*",
-      gasPrice: 0,
-      type: "quorum",
-      gas: 4500000
+        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
+        network_id: "*",
+        gasPrice: 0,
+        gas: 4500000,
+        type: "quorum"
     }
-  }
+   }
 };
 ```
 

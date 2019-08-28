@@ -1,5 +1,7 @@
 # Deploy a consortium network
 
+Chainstack supports [cloud](/glossary/cloud) and [hybrid](/glossary/hybrid) deployment of consortium blockchain networks.
+
 To deploy a [Quorum](/blockchains/quorum) network:
 
 1. Select a project and click **Get started** or **Create network**.
