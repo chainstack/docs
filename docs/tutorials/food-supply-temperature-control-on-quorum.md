@@ -201,7 +201,7 @@ async function deployContract(web3) {
   const encodedABI = contract.deploy({
     data:temperatureMonitor.bytecode
   }).encodeABI()
-  
+
   //create txPayload
   let txPayload = {
     from:address,
@@ -211,7 +211,7 @@ async function deployContract(web3) {
   //sign txPayload & get the rawTransaction data
   let result = await web3.eth.accounts.signTransaction(txPayload,privKey)
   let rawTx = result.rawTransaction
-  
+
   //send it to the Quorum node
   return web3.eth.sendSignedTransaction(rawTx).then((result) => {
     return result.contractAddress
@@ -244,8 +244,6 @@ async function setTemperature(web3, contractAddress, temp) {
 
 async function getTemperature(web3, contractAddress) {
   const myContract = await getContract(web3, contractAddress);
-  const address = await getAddress(web3);
-  const privKey = process.env.PRIV3
 
   return myContract.methods.get().call().then(result => result);
 }
