@@ -245,8 +245,6 @@ async function setTemperature(web3, contractAddress, temp) {
 async function getTemperature(web3, contractAddress) {
   const myContract = await getContract(web3, contractAddress);
   const address = await getAddress(web3);
-  const privKey = process.env.PRIV3
-
   return myContract.methods.get().call().then(result => result);
 }
 
