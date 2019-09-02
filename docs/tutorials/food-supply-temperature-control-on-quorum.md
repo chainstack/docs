@@ -370,6 +370,7 @@ async function setTemperature(web3, contractAddress, publicKey, temp) {
 
 async function getTemperature(web3, contractAddress) {
   const myContract = await getContract(web3, contractAddress);
+  const address = await getAddress(web3);
   await web3.eth.personal.unlockAccount(address,'',1000)
   return myContract.methods.get().call()
   .then(result => result)
