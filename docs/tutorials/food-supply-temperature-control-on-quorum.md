@@ -165,7 +165,6 @@ const main = async () => {
   };
 
   console.log('Formatted Contract:', temperatureMonitor);
-
   const contractAddress = await deployContract(raft1Node);
   console.log(`Contract address after deployment: ${contractAddress}`);
 
@@ -179,7 +178,7 @@ const main = async () => {
 async function getContract(web3, contractAddress) {
   const address = await getAddress(web3);
 
-  return web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
+  return new web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
     defaultAccount: address,
   });
 }
@@ -195,8 +194,8 @@ function formatContract() {
 
 async function deployContract(web3) {
   const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   const contract = new web3.eth.Contract(temperatureMonitor.interface);
-
   return contract.deploy({
     data: temperatureMonitor.bytecode,
   })
@@ -204,6 +203,7 @@ async function deployContract(web3) {
       from: address,
       gas: '0x2CD29C0',
   })
+  .on('transactionHash',console.log)
   .on('error', console.error)
   .then((newContractInstance) => {
     return newContractInstance.options.address;
@@ -212,19 +212,24 @@ async function deployContract(web3) {
 
 async function setTemperature(web3, contractAddress, temp) {
   const myContract = await getContract(web3, contractAddress);
-
-  return myContract.methods.set(temp).send({}).then((receipt) => {
+  const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
+  return myContract.methods.set(temp).send({
+    from: address
+  }).then((receipt) => {
     return receipt.status;
   });
 }
 
 async function getTemperature(web3, contractAddress) {
   const myContract = await getContract(web3, contractAddress);
-
+  const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   return myContract.methods.get().call().then(result => result);
 }
 
 main()
+
 ```
 
 where
@@ -326,7 +331,7 @@ function formatContract() {
 
 async function getContract(web3, contractAddress) {
   const address = await getAddress(web3);
-
+  await web3.eth.personal.unlockAccount(address,'',1000)
   return new web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
     defaultAccount: address,
   });
@@ -334,6 +339,7 @@ async function getContract(web3, contractAddress) {
 
 async function deployContract(web3, publicKey) {
   const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   const contract = new web3.eth.Contract(temperatureMonitor.interface);
 
   return contract.deploy({
@@ -351,6 +357,7 @@ async function deployContract(web3, publicKey) {
 
 async function setTemperature(web3, contractAddress, publicKey, temp) {
   const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   const myContract = await getContract(web3, contractAddress);
 
   return myContract.methods.set(temp).send({
@@ -363,8 +370,11 @@ async function setTemperature(web3, contractAddress, publicKey, temp) {
 
 async function getTemperature(web3, contractAddress) {
   const myContract = await getContract(web3, contractAddress);
-
-  return myContract.methods.get().call().then(result => result);
+  const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
+  return myContract.methods.get().call()
+  .then(result => result)
+  .catch(error => null)
 }
 
 main()
