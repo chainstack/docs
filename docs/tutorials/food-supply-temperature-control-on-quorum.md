@@ -85,13 +85,10 @@ In your project folder, create an `.env` file:
 ``` js
 RPC1='RPC_ENDPOINT'
 PK1='CONSTELLATION_PUBLIC_KEY'
-PRIV1= 'YOUR_WALLET1_PRIVATE_KEY'
 RPC2='RPC_ENDPOINT'
-PRIV2= 'YOUR_WALLET2_PRIVATE_KEY'
 PK2='CONSTELLATION_PUBLIC_KEY'
 RPC3='RPC_ENDPOINT'
 PK3='CONSTELLATION_PUBLIC_KEY'
-PRIV3='YOUR_WALLET3_PRIVATE_KEY'
 ```
 
 where
@@ -171,7 +168,7 @@ const main = async () => {
   const contractAddress = await deployContract(raft1Node);
   console.log(`Contract address after deployment: ${contractAddress}`);
 
-  const status = await setTemperature(raft2Node, contractAddress, 10);
+  const status = await setTemperature(raft2Node, contractAddress, 3);
   console.log(`Transaction status: ${status}`);
 
   const temp = await getTemperature(raft3Node, contractAddress);
@@ -191,58 +188,37 @@ function getAddress(web3) {
 }
 
 function formatContract() {
-  const source = fs.readFileSync('./temperatureMonitor.sol', 'UTF8');
+  const source = fs.readFileSync('./contracts/temperatureMonitor.sol', 'UTF8');
   return solc.compile(source, 1).contracts[':TemperatureMonitor'];
 }
 
 async function deployContract(web3) {
   const address = await getAddress(web3);
-  const privKey = process.env.PRIV1
+  await web3.eth.personal.unlockAccount(address,'',1000)
   const contract = new web3.eth.Contract(temperatureMonitor.interface);
-
-  //get encodedABI of contract
-  const encodedABI = contract.deploy({
-    data:temperatureMonitor.bytecode
-  }).encodeABI()
-
-  //create txPayload
-  let txPayload = {
-    from:address,
-    data:encodedABI,
-    gas:0x2CD29C0,
-  }
-  //sign txPayload & get the rawTransaction data
-  let result = await web3.eth.accounts.signTransaction(txPayload,privKey)
-  let rawTx = result.rawTransaction
-
-  //send it to the Quorum node
-  return web3.eth.sendSignedTransaction(rawTx).then((result) => {
-    return result.contractAddress
+  return contract.deploy({
+    data: temperatureMonitor.bytecode,
   })
+  .send({
+      from: address,
+      gas: '0x2CD29C0',
+  })
+  .on('transactionHash',console.log)
+  .on('error', console.error)
+  .then((newContractInstance) => {
+    return newContractInstance.options.address;
+  });
 }
 
 async function setTemperature(web3, contractAddress, temp) {
   const myContract = await getContract(web3, contractAddress);
   const address = await getAddress(web3);
-  const privKey = process.env.PRIV2
-  //create the encodedABI of function call
-  const encodedABI = myContract.methods.set(temp).encodeABI()
-
-  //create txPayload
-  let txPayload = {
-    from:address,
-    to:contractAddress,
-    gas:0x2CD29C0,
-    data:encodedABI
-  }
-  //sign txPayload & get the rawTransaction data
-  let result = await web3.eth.accounts.signTransaction(txPayload,privKey)
-  let rawTx = result.rawTransaction
-
-  //send it to the Quorum node
-  return web3.eth.sendSignedTransaction(rawTx).then((result) => {
-    return result.status
-  })
+  await web3.eth.personal.unlockAccount(address,'',1000)
+  return myContract.methods.set(temp).send({
+    from: address
+  }).then((receipt) => {
+    return receipt.status;
+  });
 }
 
 async function getTemperature(web3, contractAddress) {
@@ -252,6 +228,7 @@ async function getTemperature(web3, contractAddress) {
 }
 
 main()
+
 ```
 
 where
@@ -353,7 +330,7 @@ function formatContract() {
 
 async function getContract(web3, contractAddress) {
   const address = await getAddress(web3);
-
+  await web3.eth.personal.unlockAccount(address,'',1000)
   return new web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
     defaultAccount: address,
   });
@@ -361,8 +338,9 @@ async function getContract(web3, contractAddress) {
 
 async function deployContract(web3, publicKey) {
   const address = await getAddress(web3);
-  const contract = new web3.eth.Contract(temperatureMonitor.interface);
   await web3.eth.personal.unlockAccount(address,'',1000)
+  const contract = new web3.eth.Contract(temperatureMonitor.interface);
+
   return contract.deploy({
     data: temperatureMonitor.bytecode,
   })
@@ -378,6 +356,7 @@ async function deployContract(web3, publicKey) {
 
 async function setTemperature(web3, contractAddress, publicKey, temp) {
   const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   const myContract = await getContract(web3, contractAddress);
 
   return myContract.methods.set(temp).send({
@@ -390,8 +369,10 @@ async function setTemperature(web3, contractAddress, publicKey, temp) {
 
 async function getTemperature(web3, contractAddress) {
   const myContract = await getContract(web3, contractAddress);
-
-  return myContract.methods.get().call().then(result => result);
+  await web3.eth.personal.unlockAccount(address,'',1000)
+  return myContract.methods.get().call()
+  .then(result => result)
+  .catch(error => null)
 }
 
 main()
