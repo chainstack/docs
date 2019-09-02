@@ -111,7 +111,7 @@ A transaction is a message between at least two nodes that acts as a proposal to
 
 A transaction is considered valid and updates the ledger if:
 
-* The transaction does not have a double-spend as verified by the [notary service](#notary-services).
+* The transaction does not have a double-spend as verified by the [notary service](#notary-service).
 * The transaction meets the [contract](#contracts) rules as part of a CorDapp running on all nodes that are a part of the transaction.
 * The transaction is signed by all nodes participating in the transaction.
 
