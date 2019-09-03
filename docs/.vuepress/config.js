@@ -163,5 +163,6 @@ module.exports = {
         'sitemap': {
             hostname: 'https://docs.chainstack.com'
         },
+        '@dovyp/vuepress-plugin-clipboard-copy': true,
     }
 }
