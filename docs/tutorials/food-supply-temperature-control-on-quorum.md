@@ -1,6 +1,6 @@
 # Food supply temperature control on Quorum
 
-In this tutorial you will:
+In this tutorial, you will:
 
 * Create a contract for public transactions, deploy it on your [Quorum](/blockchains/quorum) network, and run a public transaction.
 * Create a contract for private transactions, deploy it on your Quorum network, and run a private transaction.
@@ -17,7 +17,7 @@ Sample code for this tutorial is in the [GitHub repository](https://github.com/c
 
 ## Prerequisites
 
-* [Chainstack](https://console.chainstack.com/) account to deploy a Quorum network.
+* [Chainstack account](https://console.chainstack.com/) to deploy a Quorum network.
 
 ## Overview
 
@@ -28,7 +28,7 @@ To get from zero to a deployed Quorum network with a public contract and a priva
   1. Deploy a Quorum network with Chainstack.
   1. Install Ethereum JavaScript API to interact with the Quorum network.
   1. Install Solidity JavaScript Compiler to format the contract for the Quorum network deployment.
-  1. Install dotenv and create an `.env` file with your Quorum nodes access information.
+  1. Install dotenv and create an `.env` file with your Quorum nodes access and credentials.
 
 * Create the contract.
 * Deploy the contract as public and run a public transaction.
@@ -36,44 +36,23 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 ## Prepare
 
-### 1. Deploy a Quorum network
+### Deploy a Quorum network
 
-#### 1. Create a Consortium project
+#### Create a Consortium project
 
-1. Log in to your [Chainstack](https://console.chainstack.com/) account.
-1. Click **Create project**.
-1. Click **Consortium**.
-1. Provide **Project name** and optionally **Description**.
-1. Click **Create**.
+See [Create a project](/platform/create-a-project).
 
-This will create a project with Chainstack.
+#### Deploy a Quorum network
 
-#### 2. Deploy a Quorum network
-
-1. Select the created project and click **Get started**.
-1. Provide **Network name**.
-1. Under **Blockchain protocol**, select **Quorum**.
-1. Under **Consensus mechanism**, select [Raft or IBFT](/blockchains/quorum#consensus). Click **Next**.
-1. Under **Cloud hosting provider**, select your preferred provider.
-1. Under **Region**, select the region for your deployment.
-1. Review your changes and click **Create network**.
-
-::: warning
-Currently only Asia-Pacific region is available for deployment.
-:::
-
-The network status will change from **Pending** to **Running** once deployed.
+See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
 Deploy three nodes for this tutorial.
 
-#### 3. Get your Quorum node access information
+#### Get your Quorum node access and credentials
 
-1. In your Quorum deployment project, click your Quorum network name.
-1. Under **Node name**, click your node.
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-Under **Credentials**, you will see your Quorum node access information.
-
-### 2. Install Ethereum JavaScript API
+### Install Ethereum JavaScript API
 
 [Ethereum JavaScript API](https://github.com/ethereum/web3.js) is a collection of libraries to interact with your nodes.
 
@@ -81,7 +60,7 @@ Under **Credentials**, you will see your Quorum node access information.
 npm install web3
 ```
 
-### 3. Install Solidity JavaScript Compiler
+### Install Solidity JavaScript Compiler
 
 The Solidity JavaScript compiler will compile the contract, the ABI, and bytecode formats that you will deploy on your Quorum network.
 
@@ -93,9 +72,9 @@ This tutorial uses Solidity Compiler 0.4.25 for web3 compatibility.
 npm install solc@0.4.25
 ```
 
-### 4. Install and configure dotenv
+### Install and configure dotenv
 
-You will use dotenv to pass your Quorum nodes access information to deploy the contracts and run transactions.
+You will use dotenv to pass your Quorum nodes access and credentials to deploy the contracts and run transactions.
 
 ``` sh
 npm install dotenv
@@ -114,8 +93,8 @@ PK3='CONSTELLATION_PUBLIC_KEY'
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Credentials** > **Constellation public key**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
+* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Access and credentials** > **Constellation public key**.
 
 ## Create the contract
 
@@ -136,13 +115,15 @@ function get() view public returns (int8) {
 
 where
 
-* `temperature` is the public variable.
-* `set` is the function to write the temperature.
-* `get` is the function to fetch the temperature.
+* `temperature` — the public variable.
+* `set` — the function to write the temperature.
+* `get` — the function to fetch the temperature.
 
 ## Deploy the contract as public and run a public transaction
 
-### 1. Create a public.js file that will:
+### Create a public.js file
+
+Create a `public.js` file that will:
 
 1. Format and deploy the contract through Node 1.
 2. Set the temperature to `3` through Node 2.
@@ -184,7 +165,6 @@ const main = async () => {
   };
 
   console.log('Formatted Contract:', temperatureMonitor);
-
   const contractAddress = await deployContract(raft1Node);
   console.log(`Contract address after deployment: ${contractAddress}`);
 
@@ -198,7 +178,7 @@ const main = async () => {
 async function getContract(web3, contractAddress) {
   const address = await getAddress(web3);
 
-  return web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
+  return new web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
     defaultAccount: address,
   });
 }
@@ -214,8 +194,8 @@ function formatContract() {
 
 async function deployContract(web3) {
   const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   const contract = new web3.eth.Contract(temperatureMonitor.interface);
-
   return contract.deploy({
     data: temperatureMonitor.bytecode,
   })
@@ -223,6 +203,7 @@ async function deployContract(web3) {
       from: address,
       gas: '0x2CD29C0',
   })
+  .on('transactionHash',console.log)
   .on('error', console.error)
   .then((newContractInstance) => {
     return newContractInstance.options.address;
@@ -231,36 +212,41 @@ async function deployContract(web3) {
 
 async function setTemperature(web3, contractAddress, temp) {
   const myContract = await getContract(web3, contractAddress);
-
-  return myContract.methods.set(temp).send({}).then((receipt) => {
+  const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
+  return myContract.methods.set(temp).send({
+    from: address
+  }).then((receipt) => {
     return receipt.status;
   });
 }
 
 async function getTemperature(web3, contractAddress) {
   const myContract = await getContract(web3, contractAddress);
-
+  const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   return myContract.methods.get().call().then(result => result);
 }
 
 main()
+
 ```
 
 where
 
-* `formatContract` is the function to format the contract in ABI and bytecode for deployment.
-* `deployContract` is the function to deploy the contract with Ethereum JavaScript API libraries.
-* `setTemperature` is the function to write the temperature value.
-* `getTemperature` is the function to fetch the temperature value.
-* `process.env` loads your nodes access variables from the `.env` file.
+* `formatContract` — the function to format the contract in ABI and bytecode for deployment.
+* `deployContract` — the function to deploy the contract with Ethereum JavaScript API libraries.
+* `setTemperature` — the function to write the temperature value.
+* `getTemperature` — the function to fetch the temperature value.
+* `process.env` — loads your nodes access variables from the `.env` file.
 
-### 2. Run the transaction
+### Run the transaction
 
 ``` sh
 node public.js
 ```
 
-This will deploy the contract, set the temperature value and read the temperature value.
+This will deploy the contract, set the temperature value, and read the temperature value.
 
 Example output:
 
@@ -272,7 +258,9 @@ Retrieved contract Temperature 3
 
 ## Deploy the contract as private and run a private transaction
 
-### 1. Create a private.js file that will:
+### Create a private.js file
+
+The `private.js` file will:
 
 1. Format and deploy the contract as private through Node 1.
 2. Set the temperature to `12` through Node 2.
@@ -343,7 +331,7 @@ function formatContract() {
 
 async function getContract(web3, contractAddress) {
   const address = await getAddress(web3);
-
+  await web3.eth.personal.unlockAccount(address,'',1000)
   return new web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
     defaultAccount: address,
   });
@@ -351,6 +339,7 @@ async function getContract(web3, contractAddress) {
 
 async function deployContract(web3, publicKey) {
   const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   const contract = new web3.eth.Contract(temperatureMonitor.interface);
 
   return contract.deploy({
@@ -368,6 +357,7 @@ async function deployContract(web3, publicKey) {
 
 async function setTemperature(web3, contractAddress, publicKey, temp) {
   const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
   const myContract = await getContract(web3, contractAddress);
 
   return myContract.methods.set(temp).send({
@@ -380,8 +370,11 @@ async function setTemperature(web3, contractAddress, publicKey, temp) {
 
 async function getTemperature(web3, contractAddress) {
   const myContract = await getContract(web3, contractAddress);
-
-  return myContract.methods.get().call().then(result => result);
+  const address = await getAddress(web3);
+  await web3.eth.personal.unlockAccount(address,'',1000)
+  return myContract.methods.get().call()
+  .then(result => result)
+  .catch(error => null)
 }
 
 main()
@@ -389,14 +382,14 @@ main()
 
 where
 
-* `formatContract` is the function to format the contract in ABI and bytecode for deployment.
-* `deployContract` is the function to deploy the contract with Ethereum JavaScript API libraries.
-* `setTemperature` is the function to write the temperature value.
-* `getTemperature` is the function to fetch the temperature value.
-* `process.env` loads your nodes access variables from the `.env` file.
-* `privateFor` is the Quorum specific parameter that sets the transaction private for the account idenitified by `publicKey`.
+* `formatContract` — the function to format the contract in ABI and bytecode for deployment.
+* `deployContract` — the function to deploy the contract with Ethereum JavaScript API libraries.
+* `setTemperature` — the function to write the temperature value.
+* `getTemperature` — the function to fetch the temperature value.
+* `process.env` — loads your nodes access variables from the `.env` file.
+* `privateFor` — the Quorum specific parameter that sets the transaction private for the account identified by `publicKey`.
 
-### 2. Run the transaction
+### Run the transaction
 
 ``` sh
 node private.js
@@ -413,10 +406,8 @@ Contract address after deployment: 0x60b695429838abA534273396ab90e25346F571B8
 [Node3] temp retrieved from external nodes after update null
 ```
 
-::: tip See also:
+::: tip See also
 
-* [Interacting with the blockchain](/guides/interacting-with-the-blockchain#multichain)
-* [Application development](/guides/application-development)
-* [Quorum: Constellation](https://docs.goquorum.com/en/latest/Privacy/Constellation/Constellation/)
+* [Operations: Ethereum](/operations/ethereum/)
 
 :::

@@ -20,7 +20,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 To get from zero to a deployed Quorum network with the running contract, do the following:
 
-1. With Chainstack, create a [Consortium](/projects/consortium) project.
+1. With Chainstack, create a [Consortium project](/glossary/consortium-project).
 1. With Chainstack, deploy a Quorum network.
 1. With Chainstack, access your Quorum node credentials.
 1. With Truffle, create and compile the contract.
@@ -30,40 +30,19 @@ To get from zero to a deployed Quorum network with the running contract, do the 
 
 ## Step-by-step
 
-### 1. Create a Consortium project
+### Create a Consortium project
 
-1. Log in to your [Chainstack](https://console.chainstack.com/) account.
-1. Click **Create project**.
-1. Click **Consortium**.
-1. Provide **Project name** and optionally **Description**.
-1. Click **Create**.
+See [Create a project](/platform/create-a-project).
 
-This will create a project with Chainstack.
+### Deploy a Quorum network
 
-### 2. Deploy a Quorum network
+See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
-1. Select the created project and click **Get started**.
-1. Provide **Network name**.
-1. Under **Blockchain protocol**, select **Quorum**.
-1. Under **Consensus mechanism**, select [Raft or IBFT](/blockchains/quorum#consensus). Click **Next**.
-1. Under **Cloud hosting provider**, select your preferred provider.
-1. Under **Region**, select the region for your deployment.
-1. Review your changes and click **Create network**.
+### Get your Quorum node access and credentials
 
-::: warning
-Currently only **Asia-Pacific** region is available for deployment.
-:::
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-The network status will change from **Pending** to **Running** once deployed.
-
-### 3. Get your Quorum node access information
-
-1. In your Quorum project, click your Quorum network name.
-1. Under **Node name**, click your node.
-
-Under **Credentials**, you will see your Quorum node access information.
-
-### 4. Create and compile the contract
+### Create and compile the contract
 
 1. On your machine, create a directory for the contract. Initialize Truffle in the directory:
 
@@ -73,15 +52,15 @@ truffle init
 
 This will generate the Truffle boilerplate structure:
 
-```
+``` sh
 .
 ├── contracts
-│   └── Migrations.sol
+│   └── Migrations.sol
 ├── migrations
-│   └── 1_initial_migration.js
+│   └── 1_initial_migration.js
 ├── test
 └── truffle-config.js
-``` 
+```
 
 2. Go to the `contracts` directory. Create a `loyaltyProgram.sol` file in the directory.
 
@@ -96,7 +75,7 @@ contract loyaltyProgram {
         /* Set the owner to the creator of this contract */
         owner = msg.sender;
     }
-    
+
     /// Join a customer with the loyalty program
     function join() public returns (uint){
         address user = msg.sender;
@@ -136,7 +115,7 @@ truffle compile
 
 This will compile the contract and put it in your `build/contracts` directory in the `.json` format.
 
-### 5. Deploy the contract to your local development network
+### Deploy the contract to your local development network
 
 1. Start the development network on your machine:
 
@@ -152,7 +131,7 @@ truffle(develop)>  migrate
 
 This will deploy the contract to the development network as specified in `truffle-config.js`.
 
-### 6. Test the contract
+### Test the contract
 
 1. Navigate to the `test` directory.
 2. Create a `loyaltyProgramTest.js` file:
@@ -171,7 +150,7 @@ contract("loyaltyProgram", function(accounts) {
 });
 ```
 
-::: tip See also:
+::: tip See also
 
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
 
@@ -191,7 +170,7 @@ truffle(develop)> test
 
 The test run output should be `Passing`.
 
-### 7. Deploy the contract to your Quorum network
+### Deploy the contract to your Quorum network
 
 1. Install `HDWalletProvider`.
 
@@ -217,7 +196,7 @@ module.exports = {
     development: {
         host: "127.0.0.1",
         port: 9545,
-        network_id: "*"
+        network_id: "5777"
     },
     quorum: {
         provider: () => new HDWalletProvider(mnemonic, "RPC_ENDPOINT"),
@@ -235,8 +214,8 @@ where
 * `quorum` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
-* `network_id` — your Quorum network ID. Available under **Credentials** > **Network ID**. You can set it to `*` for any.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* `network_id` — your Quorum network ID. Available under **Access and credentials** > **Network ID**. You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
 * `gas` — the setting must be the default `4500000` for the Quorum network.
 * `type` — the setting must be `quorum` to instruct Truffle for the Quorum network deployment.
@@ -245,19 +224,17 @@ Example:
 
 ``` js
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = 'word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15';
+const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15";
 
 module.exports = {
   networks: {
     development: {
         host: "127.0.0.1",
         port: 9545,
-        network_id: "*"
+        network_id: "5777"
     },
     quorum: {
-        provider: function() {
-        return new HDWalletProvider(mnemonic, "http://nd-123-456-789.rg-123-456.p2pify.com:8545");
-        },
+        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
         network_id: "*",
         gasPrice: 0,
         gas: 4500000,
@@ -275,19 +252,13 @@ truffle migrate --network quorum
 
 This will engage `2_deploy_contracts.js` and deploy the `loyaltyProgram.sol` contract to your Quorum network as specified in `truffle-config.js`.
 
-::: warning Exit error after consuming all gas
-You will see an `exited with an error (status 0) after consuming all gas` message on contract deployment. The message will still give you the transaction ID and deploy successfully.
-:::
-
-You can view the deployed contract and the contract address in your Chainstack control panel by navigating to your Quorum project > **Explorer** > **Contracts**.
+You can view the deployed contract and the contract address on the Chainstack platform by navigating to your Quorum project > **Explorer** > **Contracts**.
 
 ## Interact with the contract
 
-The following contract interaction example is done with Geth.
+The following contract interaction example is done with Quorum Geth. For Quorum Geth installation instructions, see [Tools](/operations/quorum/tools).
 
-Download and install the latest [Quorum Geth release](https://github.com/jpmorganchase/quorum/releases/).
-
-### 1. Connect to a node in your Quorum network
+### Connect to a node in your Quorum network
 
 Run:
 
@@ -297,17 +268,17 @@ Run:
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Credentials** > **RPC endpoint**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint with the RPC username and RPC password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`.
 
 Example:
 
 ``` sh
-./geth attach http://nd-123-456-789.rg-123-456.p2pify.com:8545
+./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 ```
 
 This will put you in the Geth console interactive mode.
 
-### 2. Set the ABI variable for the contract
+### Set the ABI variable for the contract
 
 Truffle creates the contract's ABI when you run `truffle compile` and saves it to your project's `/build/contracts` directory in `.json` format. Navigate to the directory and get the ABI.
 
@@ -327,7 +298,7 @@ ABI for `loyaltyProgram.sol`:
 > var abi = JSON.parse('[{"constant":true,"inputs":[],"name": "owner","outputs":[{"name":"","type":"address"}],"payable": false,"stateMutability":"view","type":"function"},{"inputs":[],"payable": true,"stateMutability": "payable","type": "constructor"},{"constant":false,"inputs":[],"name": "join","outputs":[{"name":"","type": "uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs": [],"name":"balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]')'
 ```
 
-### 3. Set the contract address
+### Set the contract address
 
 Set the address of the deployed contract.
 
@@ -339,7 +310,7 @@ Run:
 
 where
 
-* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating in your Chainstack control panel to your Quorum project > **Explorer** > **Contracts**.
+* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating on the Chainstack platform to your Quorum project > **Explorer** > **Contracts**.
 
 Example:
 
@@ -347,7 +318,7 @@ Example:
 > eth.contract(abi).at('0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5')
 ```
 
-### 4. Set a variable to the contract at the address
+### Set a variable to the contract at the address
 
 Run:
 
@@ -357,8 +328,8 @@ Run:
 
 where
 
-* CONTRACT_NAME is any name you want to call the contract.
-* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating in your Chainstack control panel to your Quorum project > **Explorer** > **Contracts**.
+* CONTRACT_NAME — any name you want to call the contract.
+* CONTRACT_ADDRESS — the address of the deployed contract. Get the address by navigating on the Chainstack platform to your Quorum project > **Explorer** > **Contracts**.
 
 Example:
 
@@ -366,7 +337,7 @@ Example:
 > var loyaltyProgram = eth.contract(abi).at('0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5')
 ```
 
-### 5. Set the default Quorum address to interact with the contract
+### Set the default Quorum address to interact with the contract
 
 Run:
 
@@ -376,7 +347,7 @@ Run:
 
 where
 
-* QUORUM_ADDRESS — an address created with one of the node deployments. Available in your Chainstack control panel under **Credentials** > **Default wallet address**.
+* QUORUM_ADDRESS — an address created with one of the node deployments. Available on the Chainstack platform under **Access and credentials** > **Default wallet address**.
 
 Example:
 
@@ -384,7 +355,7 @@ Example:
 > eth.defaultAccount = "0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
 ```
 
-### 6. Call the contract
+### Call the contract
 
 As the `loyaltyProgram.sol` contract has the `join` function, call `join`:
 
@@ -406,10 +377,9 @@ This will display the balance:
 > 0
 ```
 
-::: tip See also:
+::: tip See also
 
-* [Interacting with the blockchain](/guides/interacting-with-the-blockchain)
-* [Application development](/guides/application-development)
+* [Operations: Quorum](/operations/quorum/)
 * [Truffle: Working with Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum)
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
 

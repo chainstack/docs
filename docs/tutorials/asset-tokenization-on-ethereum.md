@@ -12,7 +12,7 @@ This tutorial uses [Embark](https://embark.status.im/) to test and deploy the co
 
 ## Prerequisites
 
-* [Chainstack](https://console.chainstack.com/) account to deploy a Ropsten testnet node.
+* [Chainstack account](https://console.chainstack.com/) to deploy a Ropsten testnet node.
 * [Embark](https://embark.status.im/) to test and deploy the contract.
 * [Geth](https://geth.ethereum.org/) to create an Ethereum account that will deploy the contract.
 * [Metamask](https://metamask.io/) to interact with the contract.
@@ -21,7 +21,7 @@ This tutorial uses [Embark](https://embark.status.im/) to test and deploy the co
 
 To get from zero to an asset tokenization contract running on Ropsten, do the following:
 
-1. With Chainstack, create a [Public chain](/projects/public-chain) project.
+1. With Chainstack, create a [Public chain project](/glossary/public-chain-project).
 1. With Chainstack, deploy a Ropsten testnet node.
 1. With Embark, create a project and the contract.
 1. With Geth, create a new account.
@@ -30,34 +30,17 @@ To get from zero to an asset tokenization contract running on Ropsten, do the fo
 1. With Embark, check the contract with Cockpit.
 1. Interact with the contract through Metamask.
 
-### 1. Create a Public chain project
+## Step-by-step
 
-1. Log in to your [Chainstack](https://console.chainstack.com/) account.
-1. Click **Create project**.
-1. Click **Public chain**.
-1. Provide **Project name** and optionally **Description**.
-1. Click **Create**.
+### Create a public chain project
 
-This will create a project with Chainstack.
+See [Create a project](/platform/create-a-project).
 
-### 2. Deploy a Ropsten node
+### Deploy a Ropsten node
 
-1. Select the created project and click **Get started**.
-1. Provide **Network name**.
-1. Under **Blockchain protocol**, select **Ethereum**.
-1. Under **Blockchain network**, select **Ropsten Testnet**. Click **Next**.
-1. Select [Node type](/projects/public-chain#node-types).
-1. Under **Cloud hosting provider**, select your preferred provider.
-1. Under **Region**, select the region for your deployment.
-1. Review your changes and click **Create network**.
+See [Join a public network](/platform/join-a-public-network).
 
-::: warning
-Currently only **Asia-Pacific** region is available for deployment.
-:::
-
-The network status will change from **Pending** to **Running** once deployed.
-
-### 3. Create an Embark project and the contract
+### Create an Embark project and the contract
 
 1. Create a new Embark project:
 
@@ -95,7 +78,7 @@ The network status will change from **Pending** to **Running** once deployed.
     }
     ```
 
-### 4. Create an Ethereum account
+### Create an Ethereum account
 
 You will use this account to deploy the contract.
 
@@ -111,13 +94,13 @@ You will use this account to deploy the contract.
     geth account list
     ```
 
-### 5. Import the account in Metamask and fund the account
+### Import the account in Metamask and fund the account
 
 1. In Metamask, click **Import Account** > **JSON FIle**.
 1. Select the keystore file that you created earlier.
 1. Fund the account with Ropsten Ether at [Ropsten Ethereum Faucet](https://faucet.ropsten.be/).
 
-### 6. Deploy the contract
+### Deploy the contract
 
 1. In your Embark project directory, change to `config`.
 1. Append `contracts.js` with the following configuration:
@@ -149,7 +132,32 @@ You will use this account to deploy the contract.
 
     * PATH_TO_KEYSTORE — the location of the keystore file.
     * PASSWORD — the password you provided when creating the Ethereum account with Geth.
-    * RPC_ENDPOINT — your Ropsten node RPC endpoint. Available under **Credentials** > **RPC endpoint**.  
+    * RPC_ENDPOINT — your Ropsten node RPC endpoint with username and password. The format is `user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+
+    Contract example:
+
+    ``` js
+    chainstack: {
+        deployment:{
+          accounts: [
+              {
+                privateKeyFile:"//root/.ethereum/keystore/UTC--2019-08-01T07-24-17.754471456Z--73236c8d8aaee5263e8a32c71171030dd7a3e8e6",
+                password:"123456"
+              }
+          ],
+          host: "user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com",
+          port:false,
+          protocol:"https",
+          type:"rpc"
+        },
+        dappConnection: [
+          "$WEB3",  // uses pre existing web3 object if available (e.g in Mist)
+          "ws://localhost:8546",
+          "http://localhost:8545"
+        ],
+        gas: "auto",
+      }
+    ```
 
 1. Deploy the contract with Embark:
 
@@ -163,7 +171,7 @@ You will use this account to deploy the contract.
 
 This will deploy the contract on Ropsten.
 
-### 7. Check the contract with Cockpit
+### Check the contract with Cockpit
 
 On contract deployment, Embark runs Cockpit which is a front-end application to test the contract.
 
@@ -179,18 +187,17 @@ This will also display the contract address in the `Deployed at` line.
 
 Test the contract by calling:
 
-* `supply()` to check the remaining supply of tokens on the contract.
-* `check()` to check the amount of tokens owned by the Ethereum address you are using to call the contract.
-* `pricePerEth()` to check the token price in wei.
+* `supply()` — to check the remaining supply of tokens on the contract.
+* `check()` — to check the amount of tokens owned by the Ethereum address you are using to call the contract.
+* `pricePerEth()` — to check the token price in wei.
 
-### 8. Interact with the contract
+### Interact with the contract
 
 1. In Metamask, send an amount of Ropsten Ether to the contract address.
 1. In Cockpit, call the contract functions `supply()` and `check()` after a few seconds to see a change in values returned.
 
-::: tip See also:
+::: tip See also
 
-* [Interacting with the blockchain](/guides/interacting-with-the-blockchain)
-* [Application development](/guides/application-development)
+* [Operations: Ethereum](/operations/ethereum/)
 
 :::

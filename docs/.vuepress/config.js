@@ -1,63 +1,138 @@
 module.exports = {
-    title: 'Chainstack Docs',
+    title: 'Chainstack documentation',
     description: "Chainstack documentation",
     head: [
         ['link', { rel: 'icon', href: './favicon.ico' }]
-      ],
+    ],
     themeConfig: {
+        logo: '/img/docs-logo.svg',
         nav: [
+            { text: 'Support', link: 'https://support.chainstack.com/' },
+            { text: 'Log in', link: 'https://console.chainstack.com/user/login' },
             { text: 'Try free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
             {
-                title: 'Guides',
-                collapsable: false,
+                title: 'Quickstart',
+                collapsable: true,
                 children: [
-                    '/guides/getting-started',
-                    '/guides/interacting-with-the-blockchain',
-                    '/guides/application-development',
-                    '/guides/multichain-hybrid',
-                    '/guides/on-chain-governance',
+                    '/quickstart/',
+                    '/quickstart/create-an-account',
+                    '/quickstart/create-a-project',
+                    '/quickstart/deploy-a-network-or-a-node',
+                    '/quickstart/invite-a-member-to-the-project',
+                    '/quickstart/view-node-access-and-credentials',
+                    '/quickstart/explore-the-network',
+                ]
+            },
+            {
+                title: 'Platform',
+                collapsable: true,
+                children: [
+                    '/platform/',
+                    '/platform/supported-protocols',
+                    '/platform/supported-cloud-hosting-providers',
+                    '/platform/create-a-project',
+                    '/platform/deploy-a-consortium-network',
+                    '/platform/join-a-public-network',
+                    '/platform/invite-a-member-to-the-project',
+                    '/platform/add-a-network-to-a-project',
+                    '/platform/add-a-node-to-a-network',
+                    '/platform/view-node-access-and-credentials',
+                    '/platform/explore-a-network',
+                    '/platform/delete-a-node',
+                    '/platform/delete-a-network',
+                    '/platform/delete-a-project',
+                    '/platform/view-your-user-settings',
+                ]
+            },
+            {
+                title: 'Operations',
+                collapsable: true,
+                children: [
+                    '/operations/',
+                    {
+                        title: 'Ethereum',
+                        collapsable: true,
+                        children: [
+                            '/operations/ethereum/',
+                            '/operations/ethereum/networks',
+                            '/operations/ethereum/tools',
+                        ]
+                    },
+                    {
+                        title: 'MultiChain',
+                        collapsable: true,
+                        children: [
+                            '/operations/multichain/',
+                            '/operations/multichain/default-addresses',
+                            '/operations/multichain/node-permissions',
+                            '/operations/multichain/external-key-management',
+                            '/operations/multichain/cold-node-key-management',
+                            '/operations/multichain/deploying-a-hybrid-network',
+                            '/operations/multichain/tools',
+                        ]
+                    },
+                    {
+                        title: 'Quorum',
+                        collapsable: true,
+                        children: [
+                            '/operations/quorum/',
+                            '/operations/quorum/configuring-consensus',
+                            '/operations/quorum/default-addresses',
+                            '/operations/quorum/key-management',
+                            '/operations/quorum/tools',
+                        ]
+                    },
                 ]
             },
             {
                 title: 'Tutorials',
                 collapsable: true,
                 children: [
+                    '/tutorials/',
                     '/tutorials/academic-certificates-on-ethereum',
-                    '/tutorials/loyalty-program-on-quorum',
                     '/tutorials/asset-tokenization-on-ethereum',
+                    '/tutorials/distributed-company-scrips-on-multichain',
                     '/tutorials/food-supply-temperature-control-on-quorum',
-                ]
-            },
-            {
-                title: 'Projects',
-                collapsable: true,
-                children: [
-                    '/projects/',
-                    '/projects/consortium',
-                    '/projects/public-chain',
-                ]
+                    '/tutorials/loyalty-program-on-quorum',
+                    ]
             },
             {
                 title: 'Blockchains',
                 collapsable: true,
                 children: [
                     '/blockchains/',
+                    '/blockchains/ethereum',
                     '/blockchains/multichain',
                     '/blockchains/quorum',
-                    '/blockchains/fabric',
-                    '/blockchains/ethereum',
-                ]
+                    '/blockchains/corda',
+                    ]
             },
             {
-                title: 'Reference',
+                title: 'Glossary',
                 collapsable: true,
                 children: [
-                    '/reference/glossary',
-                    '/reference/release-notes',                    
-                ]
-            }
+                    '/glossary/bft',
+                    '/glossary/blockchain-protocol',
+                    '/glossary/bolt',
+                    '/glossary/cft',
+                    '/glossary/cloud',
+                    '/glossary/consortium-project',
+                    '/glossary/consortium',
+                    '/glossary/dedicated-node',
+                    '/glossary/hybrid',
+                    '/glossary/member',
+                    '/glossary/network',
+                    '/glossary/node',
+                    '/glossary/on-premises',
+                    '/glossary/project',
+                    '/glossary/public-chain-project',
+                    '/glossary/shared-node',
+                    ]
+            },
+
+        '/release-notes',
         ],
         algolia: {
             apiKey: '1194997ecec7d141de5c746bc3463e9c',
@@ -67,14 +142,13 @@ module.exports = {
         docsDir: 'docs',
         editLinks: true,
         editLinkText: 'Edit on GitHub'
-   
     },
     plugins: {
-        '@vuepress/google-analytics': {
-            'ga': 'UA-118674508-7'
-        },
         'clean-urls': {
             normalSuffix: ''
+        },
+        'google-tag-manager': {
+            'gtm': 'GTM-PXSGW6M'
         },
         'sitemap': {
             hostname: 'https://docs.chainstack.com'

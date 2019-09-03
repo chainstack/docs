@@ -48,7 +48,7 @@ labels:
     color: e11d21
   # Priority
   - name: High Priority
-    color: e11d21
+    color: ef653b
   - name: Low Priority
     color: ffd0cc
   # Status
