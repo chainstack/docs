@@ -8,7 +8,7 @@ In this tutorial, you will:
 The premise of the Quorum network in this tutorial is the following:
 
 * This is a supply chain management network for a *supermarket* and a *storage facility*.
-* The supermarket and the storage facility deploy a Quorum network with three nodes.
+* The supermarket and the storage facility deploy a Quorum network with [Raft consensus](/blockchains/quorum#raft) with at least three nodes.
 * The storage facility monitors the temperature of the products it stores and records the temperature readings to the contract on the Quorum network.
 * There is a public contract that allows any party to read the temperature off the contract.
 * There is a private contract that allows only a specifically set party to read the temperature off the contract.
@@ -25,7 +25,7 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 * Prepare:
 
-  1. Deploy a Quorum network with Chainstack.
+  1. With Chainstack, deploy a Quorum network with [Raft consensus](/blockchains/quorum#raft).
   1. Install Ethereum JavaScript API to interact with the Quorum network.
   1. Install Solidity JavaScript Compiler to format the contract for the Quorum network deployment.
   1. Install dotenv and create an `.env` file with your Quorum nodes access and credentials.
@@ -42,11 +42,15 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 See [Create a project](/platform/create-a-project).
 
-#### Deploy a Quorum network
+#### Deploy a Quorum network with Raft consensus
 
 See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
-Deploy three nodes for this tutorial.
+Deploy at least three nodes for this tutorial.
+
+::: warning Quorum Raft
+Make sure you deploy a Quorum network with Raft consensus. The tutorial will not work with Quorum IBFT.
+:::
 
 #### Get your Quorum node access and credentials
 
@@ -93,8 +97,8 @@ PK3='CONSTELLATION_PUBLIC_KEY'
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
-* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Access and credentials** > **Constellation public key**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Access and credentials** > **Transaction manager public key**.
 
 ## Create the contract
 
@@ -407,6 +411,6 @@ Contract address after deployment: 0x60b695429838abA534273396ab90e25346F571B8
 
 ::: tip See also
 
-* [Operations: Ethereum](/operations/ethereum/)
+* [Operations: Quorum](/operations/quorum/)
 
 :::
