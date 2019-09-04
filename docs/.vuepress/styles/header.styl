@@ -12,6 +12,9 @@
         position static
         margin-right 1.5rem
         margin-left -0.375rem
+        @media (max-width: $size-xs)
+            margin-right 1rem
+            margin-left -0.6875rem
 
     .home-link
         display inline-flex
@@ -25,11 +28,13 @@
         display inline-flex
         top 0
         bottom 0
+        @media (max-width: $size-xs)
+            padding-left 0
         .search-box
             display flex
             align-items center
             margin-right 1.5rem
-            @media (max-width: 719px)
+            @media (max-width: $size-xs)
                 margin-right 0
 
             .search-query
@@ -38,13 +43,13 @@
                 background-image url('/img/search.svg')
                 &:not(:focus)
                     border-color $borderColor
-                    @media (max-width: 959px)
+                    @media (max-width: $size-md)
                         border-color transparent
 
         .nav-links
             display flex
             align-items center
-            @media (max-width: 719px)
+            @media (max-width: $size-xs)
                 display none
 
             .nav-item
