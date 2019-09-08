@@ -84,6 +84,14 @@ module.exports = {
                             '/operations/quorum/tools',
                         ]
                     },
+                    {
+                        title: 'Corda',
+                        collapsable: true,
+                        children: [
+                            '/operations/corda/',
+                            '/operations/corda/tools',
+                        ]
+                    },
                 ]
             },
             {
