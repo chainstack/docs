@@ -8,7 +8,7 @@ In this tutorial, you will:
 The premise of the Quorum network in this tutorial is the following:
 
 * This is a supply chain management network for a *supermarket* and a *storage facility*.
-* The supermarket and the storage facility deploy a Quorum network with [Raft consensus](/blockchains/quorum#raft) with at least three nodes.
+* The supermarket and the storage facility deploy a Quorum network with at least three nodes.
 * The storage facility monitors the temperature of the products it stores and records the temperature readings to the contract on the Quorum network.
 * There is a public contract that allows any party to read the temperature off the contract.
 * There is a private contract that allows only a specifically set party to read the temperature off the contract.
@@ -25,7 +25,7 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 * Prepare:
 
-  1. With Chainstack, deploy a Quorum network with [Raft consensus](/blockchains/quorum#raft).
+  1. With Chainstack, deploy a Quorum network.
   1. Install Ethereum JavaScript API to interact with the Quorum network.
   1. Install Solidity JavaScript Compiler to format the contract for the Quorum network deployment.
   1. Install dotenv and create an `.env` file with your Quorum nodes access and credentials.
@@ -42,7 +42,7 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 See [Create a project](/platform/create-a-project).
 
-#### Deploy a Quorum network with Raft consensus
+#### Deploy a Quorum network
 
 See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
