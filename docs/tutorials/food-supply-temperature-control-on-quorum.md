@@ -48,10 +48,6 @@ See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
 Deploy at least three nodes for this tutorial.
 
-::: warning Quorum Raft
-Make sure you deploy a Quorum network with Raft consensus. The tutorial will not work with Quorum IBFT.
-:::
-
 #### Get your Quorum node access and credentials
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
