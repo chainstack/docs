@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "markdown-it-container": "^2.0.0",
-    "vuepress": "^1.0.3"
+    "vuepress": "^1.0.4"
   },
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
