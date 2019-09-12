@@ -151,7 +151,9 @@ module.exports = {
         docsRepo: 'chainstack/docs',
         docsDir: 'docs',
         editLinks: true,
-        editLinkText: 'Edit on GitHub'
+        editLinkText: 'Edit on GitHub',
+        nextLinks: false,
+        prevLinks: false
     },
     plugins: {
         'clean-urls': {
