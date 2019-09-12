@@ -8,7 +8,7 @@ module.exports = {
         logo: '/img/docs-logo.svg',
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com' },
-            { text: 'Log in', link: (process.env.HOSTNAME ? 'https://' + process.env.HOSTNAME : 'http://localhost:3000') + '/user/login' },
+            { text: 'Log in', link: (process.env.CONSOLE_HOSTNAME ? 'https://' + process.env.CONSOLE_HOSTNAME : 'http://localhost:3000') + '/user/login' },
             { text: 'Try free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
         ],
         sidebar: [
