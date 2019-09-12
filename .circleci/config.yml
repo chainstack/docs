@@ -4,7 +4,7 @@ workflows:
   version: 2
   docs:
     jobs:
-    
+
       - test
 
       - build_dev_image:
@@ -99,13 +99,17 @@ _job_build_image: &build_image
        name: Build production image
        command: |
          set -x
-         docker build -t ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} .
+         docker build \
+           --build-arg CONSOLE_HOSTNAME=${HOSTNAME} \
+           --build-arg WEBSITE_HOSTNAME=${WEBSITE_HOSTNAME} \
+           --build-arg DOCS_HOSTNAME=${DOCS_HOSTNAME} \
+           -t ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} .
          docker tag ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
          docker tag ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:latest
          docker push ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}
 
 jobs:
-  
+
   test:
     docker:
       - image: circleci/node:11
