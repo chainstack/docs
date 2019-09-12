@@ -165,6 +165,10 @@ module.exports = {
         'sitemap': {
             hostname: 'https://docs.chainstack.com'
         },
-        '@dovyp/vuepress-plugin-clipboard-copy': true,
+        '@limdongjin/vuepress-plugin-simple-seo': {
+            default_image: '/img/social-image.png',
+            root_url: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080'),
+            default_site_name: 'Chainstack documentation'
+      }
     }
 }
