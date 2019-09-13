@@ -2,7 +2,7 @@
 
 For the Quorum consensus details, see [Quorum](/blockchains/quorum).
 
-Use Quorum Geth to connect to the nodes. See [Tools](/operations/quorum/tools).
+Use [Quorum Geth](/operations/quorum/tools#geth) or [JSON-RPC API tools](/operations/quorum/tools#json-rpc-api) to interact with the nodes.
 
 ## Raft
 
@@ -14,9 +14,21 @@ You can always remove the existing verifier nodes or a minter node from the netw
 
 ### Get the list of current minter and verifier nodes
 
+Geth:
+
 ``` js
 raft.cluster
 ```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_cluster","params":[],"id":10001}'
+```
+
+where
+
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example of a 3 node Quorum Raft:
 
@@ -41,7 +53,6 @@ Example of a 3 node Quorum Raft:
     raftId: 3,
     raftPort: 50400
 }]
-
 ```
 
 where
@@ -54,9 +65,21 @@ where
 
 ### Get the node ID of the minter node
 
+Geth:
+
 ``` js
 raft.leader
 ```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_leader","params":[],"id":10001}'
+```
+
+where
+
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -67,9 +90,21 @@ Example:
 
 ### Get the role of the node you are connected to
 
+Geth:
+
 ``` js
 raft.role
 ```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_role","params":[],"id":10001}'
+```
+
+where
+
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -80,8 +115,16 @@ Example:
 
 ### Add a verifier node
 
+Geth:
+
 ``` js
 raft.addPeer('enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT')
+```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_addPeer","params":["enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT"],"id":10001}'
 ```
 
 where
@@ -90,6 +133,7 @@ where
 * NODE_IP — the IP address of the node.
 * P2P_PORT — the port of the node.
 * RAFT_PORT — the Raft port of the node.
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -102,9 +146,22 @@ You can get all of the node information by running `raft.cluster`.
 
 ### Remove a node
 
+Geth:
+
 ``` js
 raft.removePeer(RAFT_ID)
 ```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_removePeer","params":[RAFT_ID],"id":10001}'
+```
+
+where
+
+* RAFT_ID — the Raft node ID. You can get all node IDs by running `raft.cluster`.
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -113,21 +170,31 @@ Example:
 null
 ```
 
-You can get RAFT_ID by running `raft.cluster`.
-
 ## IBFT
 
 By default, the very first node you deploy with Chainstack as part of your IBFT Quorum network assumes the validator role.
 
-Each subsequent node that you deploy as part of the same network assumes a non-validating role. For Quorum IBFT details, see [IBFT](/blockchains/quorum#ibft).
+Each subsequent node that you deploy will need to be [proposed for the validator role](#add-a-new-validator-node) by the majority of validators. For Quorum IBFT details, see [IBFT](/blockchains/quorum#ibft).
 
 The group of validator nodes can always be changed on the network to ensure that only valid nodes are present and the faulty nodes can be removed.
 
 ### Get the list of current validator nodes
 
+Geth:
+
 ``` js
 istanbul.getValidators()
 ```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_getValidators","params":[],"id":10001}'
+```
+
+where
+
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -142,14 +209,23 @@ To add a new validator node, you must run a validator proposal command from the 
 
 Run the following command from a number of nodes in your network to make it a majority proposal.
 
+Geth:
+
 ``` js
 istanbul.propose("VALIDATOR_ADDRESS", true)
+```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_propose","params":["VALIDATOR_ADDRESS", true],"id":10001}'
 ```
 
 where
 
 * VALIDATOR_ADDRESS — the address of the node that you are proposing as a validator. Available under **Access and credentials** > **Validator address**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 * `true` — the parameter to add the node to the validator group.
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -161,7 +237,7 @@ null
 You can also see the node's validator address when you connect to the node with Quorum Geth:
 
 ``` js
-$ ./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.int.chainstack.com
+$ ./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 WARNING: call to admin.getNodeInfo() failed, unable to determine consensus mechanism
 Welcome to the Geth JavaScript console!
 
@@ -175,14 +251,23 @@ The `coinbase` parameter output is the validator address; `coinbase` has been re
 
 ### Remove a validator node
 
+Geth:
+
 ``` js
 istanbul.propose("VALIDATOR_ADDRESS", false)
+```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_propose","params":["VALIDATOR_ADDRESS", true],"id":10001}'
 ```
 
 where
 
 * VALIDATOR_ADDRESS — the address of the node that you are proposing as a validator. Available under **Access and credentials** > **Validator address**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 * `false` — the parameter to remove the node from the validator group.
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -193,9 +278,21 @@ null
 
 ### Get the list of the latest validator candidate proposals
 
+Geth:
+
 ``` js
 istanbul.candidates
 ```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_candidates","params":[],"id":10001}'
+```
+
+where
+
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -211,13 +308,22 @@ In the example, node `0x1234be669c541e92f64d6c133ca497d61fc87d4a6` is proposed t
 
 ### Remove a validator candidate from running for the validator role
 
+Geth:
+
 ``` js
 istanbul.discard("VALIDATOR_ADDRESS")
+```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_discard","params":["VALIDATOR_ADDRESS"],"id":10001}'
 ```
 
 where
 
 * VALIDATOR_ADDRESS — the address of the node that you are proposing as a validator. Available under **Access and credentials** > **Validator address**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* `id` — the Quorum network ID available under **Access and credentials** > **Network ID**. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
