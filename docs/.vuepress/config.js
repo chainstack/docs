@@ -7,9 +7,9 @@ module.exports = {
     themeConfig: {
         logo: '/img/docs-logo.svg',
         nav: [
-            { text: 'Support', link: 'https://support.chainstack.com/' },
-            { text: 'Log in', link: 'https://console.chainstack.com/user/login' },
-            { text: 'Try free', link: 'https://chainstack.com/pricing/' }
+            { text: 'Support', link: 'https://support.chainstack.com' },
+            { text: 'Log in', link: (process.env.CONSOLE_HOSTNAME ? 'https://' + process.env.CONSOLE_HOSTNAME : 'http://localhost:3000') + '/user/login' },
+            { text: 'Try free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
         ],
         sidebar: [
             {
@@ -141,7 +141,9 @@ module.exports = {
         docsRepo: 'chainstack/docs',
         docsDir: 'docs',
         editLinks: true,
-        editLinkText: 'Edit on GitHub'
+        editLinkText: 'Edit on GitHub',
+        nextLinks: false,
+        prevLinks: false
     },
     plugins: {
         'clean-urls': {
@@ -151,7 +153,12 @@ module.exports = {
             'gtm': 'GTM-PXSGW6M'
         },
         'sitemap': {
-            hostname: 'https://docs.chainstack.com'
+            hostname: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080')
         },
+        '@limdongjin/vuepress-plugin-simple-seo': {
+            default_image: '/img/social-image.png',
+            root_url: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080'),
+            default_site_name: 'Chainstack documentation'
+      }
     }
 }
