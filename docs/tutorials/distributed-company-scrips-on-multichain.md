@@ -80,7 +80,7 @@ The first node deployed in a MultiChain network is the admin node.
 Issue the token through your node:
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"issue","params":["WALLET_ADDRESS","TOKEN_NAME",QUANTITY,UNITS]}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"issue","params":["WALLET_ADDRESS","TOKEN_NAME",QUANTITY,UNITS],"id":1}'
 ```
 
 where
@@ -98,7 +98,7 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 Example command:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"issue","params":["123abcdiZmJnQr9vmj8yiucbYNabD6X8vKkBUW","company-token",500,1]}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"issue","params":["123abcdiZmJnQr9vmj8yiucbYNabD6X8vKkBUW","company-token",500,1],"id":1}'
 ```
 
 Now your system has tokens on your admin node's wallet address.
@@ -112,7 +112,7 @@ You may want to send the token in equal amounts to all members for a fresh start
 Send the tokens to all addresses:
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"createrawsendfrom","params":["WALLET_ADDRESS",{"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY},"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY},"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY}},[],"send"]}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"createrawsendfrom","params":["WALLET_ADDRESS",{"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY},"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY},"WALLET_ADDRESS_USER_n":{"TOKEN_NAME":QUANTITY}},[],"send"],"id":2}'
 ```
 
 where
@@ -129,7 +129,7 @@ where
 Example command:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"createrawsendfrom","params":["123abcdiZmJnQr9vmj8yiucbYNabD6X8vKkBUW",{"1ABC2aBCXxXC1Q2zSinXSxbD7zLANs3jc8RPYn6":{"company-token":10},"1Ab2jTzTFw1aJvcYMD3GcNpZcziXBFdyUGsBvC":{"company-token":10},"1Ab2CSx43hHhBSrozJitfkXf3jefT5ZvG6EgvS":{"company-token":10}},[],"send"]}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"createrawsendfrom","params":["123abcdiZmJnQr9vmj8yiucbYNabD6X8vKkBUW",{"1ABC2aBCXxXC1Q2zSinXSxbD7zLANs3jc8RPYn6":{"company-token":10},"1Ab2jTzTFw1aJvcYMD3GcNpZcziXBFdyUGsBvC":{"company-token":10},"1Ab2CSx43hHhBSrozJitfkXf3jefT5ZvG6EgvS":{"company-token":10}},[],"send"],"id":2}'
 ```
 
 ### Monitor the scrip system through MultiChain explorer

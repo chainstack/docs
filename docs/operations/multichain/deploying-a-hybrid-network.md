@@ -110,7 +110,7 @@ You need to send the `grant` request through your first deployed node.
 Sending a curl request from terminal:
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"]}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"],"id":1}'
 ```
 
 where
@@ -123,7 +123,7 @@ where
 Command example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"grant","params":["14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q","connect,send,receive"]}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"grant","params":["14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q","connect,send,receive"],"id":1}'
 ```
 
 Output example:
@@ -139,7 +139,7 @@ On your on-premises machine, add your on-premises MultiChain node to the network
 Sending a curl request from terminal:
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"addnode","params":["ON_PREM_IP:PORT","add"]}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"addnode","params":["ON_PREM_IP:PORT","add"],"id":2}'
 ```
 
 where
@@ -153,7 +153,7 @@ where
 Command example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"addnode","params":["123.45.100.80:7447","add"]}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"addnode","params":["123.45.100.80:7447","add"],"id":2}'
 ```
 
 ### Connect to the MultiChain network
@@ -255,7 +255,7 @@ Run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json
 Send `getinfo` to get the node and blockchain information:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"getinfo","params":[]}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"getinfo","params":[],"id":1}'
 ```
 
 Example output:
