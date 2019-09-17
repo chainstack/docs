@@ -11,7 +11,7 @@ Example below demonstrates how to get basic network information:
 ``` sh
 $ curl -H "Content-Type: application/json" \
   -u user-name:pass-word-pass-word-pass-word
-  -d '{"method":"getinfo","params":[]}' \
+  -d '{"method":"getinfo","params":[],"id":1}' \
   https://nd-123-456-789.p2pify.com
 
 {"result":{"version":"2.0","nodeversion":20000901,"protocolversion":20004,"chainname":"nw-123-456-7", ...}
