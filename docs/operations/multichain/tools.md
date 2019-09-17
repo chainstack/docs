@@ -10,9 +10,9 @@ Example below demonstrates how to get basic network information:
 
 ``` sh
 $ curl -H "Content-Type: application/json" \
-  -u amazing-crier:puppy-amino-volhard-dash-baggie-marrow
-  -d '{"method":"getinfo","params":[],"id":1,"chain_name":"nw-123-456-7"}' \
-  https://nd-123-456-789.p2pify.com:8545
+  -u user-name:pass-word-pass-word-pass-word
+  -d '{"method":"getinfo","params":[]}' \
+  https://nd-123-456-789.p2pify.com
 
 {"result":{"version":"2.0","nodeversion":20000901,"protocolversion":20004,"chainname":"nw-123-456-7", ...}
 ```
@@ -31,8 +31,8 @@ Work with MultiChain from your JavaScript application.
 let multichain = require("multinodejs")({
     host: "nd-123-456-789.p2pify.com",
     protocol: "https",
-    user: "amazing-crier",
-    pass: "puppy-amino-volhard-dash-baggie-marrow"
+    user: "user-name",
+    pass: "pass-word-pass-word-pass-word"
 });
 ```
 
@@ -49,7 +49,7 @@ multichain.getInfo((err, info) => {
 
 The example code above should output basic network information:
 
-``` js
+``` json
 { version: '2.0',
   nodeversion: 20000901,
   protocolversion: 20004,
@@ -70,8 +70,8 @@ from multichaincli import Multichain
 
 host = "nd-123-456-789.p2pify.com"
 port = "80"
-username = "amazing-crier"
-password = "puppy-amino-volhard-dash-baggie-marrow"
+username = "user-name"
+password = "pass-word-pass-word-pass-word"
 chainname = "nw-123-456-7"
 
 multichain = Multichain(username, password, host, port, chainname)
@@ -92,6 +92,6 @@ The example code above should output basic network information:
 
 ::: tip See also
 
-* [Decentralized reputation on MultiChain](/tutorials/decentralized-reputation-on-multichain)
+* [Distributed company scrips on MultiChain](/tutorials/distributed-company-scrips-on-multichain)
 
 :::

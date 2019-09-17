@@ -1,6 +1,6 @@
 # Deploying a hybrid network
 
-This section will guide you through the [hybrid](/glossary/hybrid-deployment) deployment of a MultiChain network.
+This section will guide you through the [hybrid](/glossary/hybrid) deployment of a MultiChain network.
 
 By the end of the section, you will have your MultiChain nodes from the same network running in cloud and [on-premises](/glossary/on-premises).
 
@@ -110,7 +110,7 @@ You need to send the `grant` request through your first deployed node.
 Sending a curl request from terminal:
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"],"id":1,"chain_name":"CHAIN_NAME"}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["WALLET_ADDRESS","connect,send,receive"]}'
 ```
 
 where
@@ -118,13 +118,12 @@ where
 * RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
 * RPC_USER — your cloud MultiChain node RPC username. Available under **Access and credentials** > **RPC user**.
 * RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
-* WALLET_ADDRESS — your on-premises MultiChain node's wallet address. You received the wallet address [when you initialized your on-premises node](/operations/multichain/deploying-a-hybrid-network#initialize-your-on-premises-multichain-node).
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
+* WALLET_ADDRESS — your on-premises MultiChain node's wallet address. You received the wallet address [when you initialized your on-premises node](#initialize-your-on-premises-multichain-node).
 
 Command example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth" -d '{"method":"grant","params":["14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q","connect,send,receive"],"id":1,"chain_name":"nw-123-456-7"}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"grant","params":["14SW7RsdNbktZxkTSzi52iLvXviHyPebqCaW1q","connect,send,receive"]}'
 ```
 
 Output example:
@@ -140,7 +139,7 @@ On your on-premises machine, add your on-premises MultiChain node to the network
 Sending a curl request from terminal:
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"addnode","params":["ON_PREM_IP:PORT","add"],"id":2,"chain_name":"CHAIN_NAME"}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"addnode","params":["ON_PREM_IP:PORT","add"]}'
 ```
 
 where
@@ -150,12 +149,11 @@ where
 * RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
 * ON_PREM_IP — your on-premises MultiChain node machine's IP address.
 * PORT — your on-premises MultiChain node machine's port.
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 
 Command example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth" -d '{"method":"addnode","params":["123.45.100.80:7447","add"],"id":2,"chain_name":"nw-123-456-7"}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"addnode","params":["123.45.100.80:7447","add"]}'
 ```
 
 ### Connect to the MultiChain network
@@ -209,7 +207,7 @@ multichain-cli nw-123-456-7
 
 After entering interactive mode, send any command. For example, `getinfo` to get the node and blockchain information:
 
-``` json
+``` js
 nw-123-456-7: getinfo
 ```
 
@@ -257,7 +255,7 @@ Run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json
 Send `getinfo` to get the node and blockchain information:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "modest-cori:ought-vilify-parcel-urging-dime-sixth" -d '{"method":"getinfo","params":[],"id":3,"chain_name":"nw-123-456-7"}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"getinfo","params":[]}'
 ```
 
 Example output:
