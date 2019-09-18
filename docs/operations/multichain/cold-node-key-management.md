@@ -184,17 +184,18 @@ Now that you have your keys securely stored on the cold node, you can safely imp
 Use the very first MultiChain node deployed with Chainstack as your hot node to send the requests to. This is your admin node. For details, see [Node permissions](/operations/multichain/node-permissions).
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"importaddress","params":["IMPORT_ADDRESS","false"],"id":1}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"importaddress","params":["IMPORT_ADDRESS","false"],"id":2}'
 ```
 
 where
 
 * IMPORT_ADDRESS — the address that you created at the previous step.
+* `false` — the parameter instructs to not scan the blockchain for any activity of the address. Using the `false` parameter here saves time, because you are importing a new address.
 
 Example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"importaddress","params":["12ABcdiuezg8EDHx2GkPke8VS3oiKACMch4Vng","false"],"id":1}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"importaddress","params":["12ABcdiuezg8EDHx2GkPke8VS3oiKACMch4Vng","false"],"id":2}'
 ```
 
 This will import the address to the MultiChain hot node without exposing the private key.
@@ -202,13 +203,13 @@ This will import the address to the MultiChain hot node without exposing the pri
 7. Grant the receive and send permissions to the imported address
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["IMPORTED_ADDRESS","receive,send"],"id":1}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["IMPORTED_ADDRESS","receive,send"],"id":3}'
 ```
 
 Example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"grant","params":["12ABcdiuezg8EDHx2GkPke8VS3oiKACMch4Vng","receive,send"],"id":1}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"grant","params":["12ABcdiuezg8EDHx2GkPke8VS3oiKACMch4Vng","receive,send"],"id":3}'
 ```
 
 8. Issue an asset to the imported address
@@ -216,7 +217,7 @@ curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-wo
 Issuing an asset at this step is for demonstration purposes, so that later you can send the asset with a cold node key signature.
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"issue","params":["IMPORT_ADDRESS","ASSET_NAME",100,0.001],"id":1}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"issue","params":["IMPORT_ADDRESS","ASSET_NAME",100,0.001],"id":4}'
 ```
 
 where
@@ -226,7 +227,7 @@ where
 Example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"issue","params":["12ABcdiuezg8EDHx2GkPke8VS3oiKACMch4Vng","token",100,0.001],"id":1}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"issue","params":["12ABcdiuezg8EDHx2GkPke8VS3oiKACMch4Vng","token",100,0.001],"id":4}'
 ```
 
 This will issue 100 units of the asset `token`.
@@ -236,7 +237,7 @@ This will issue 100 units of the asset `token`.
 Create a raw unsigned transaction that will send units of the issued asset from your address to a different address.
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"createrawsendfrom","params":["IMPORT_ADDRESS",{"ADDRESS":{"ASSET_NAME":50}}],"id":1}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"createrawsendfrom","params":["IMPORT_ADDRESS",{"ADDRESS":{"ASSET_NAME":50}}],"id":5}'
 ```
 
 where
@@ -246,7 +247,7 @@ where
 Example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"createrawsendfrom","params":["12ABcdiuezg8EDHx2GkPke8VS3oiKACMch4Vng",{"1abc2PLVeVPF1CEkGSmuBtRScRAmKzVsLgaPf":{"token":50}}],"id":1}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"createrawsendfrom","params":["12ABcdiuezg8EDHx2GkPke8VS3oiKACMch4Vng",{"1abc2PLVeVPF1CEkGSmuBtRScRAmKzVsLgaPf":{"token":50}}],"id":5}'
 ```
 
 This will create a raw unsigned transaction to send 50 units of the asset `token` and will give you a hexadecimal transaction ID.
@@ -254,13 +255,13 @@ This will create a raw unsigned transaction to send 50 units of the asset `token
 Example output:
 
 ``` json
-{"result":"010000000177acc507ee0b802f3b0dde19f3acb389a40498f388822fb3d48efa871135f1f60000000000ffffffff0200000000000000003776a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000000000003776a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000","error":null,"id":1}
+{"result":"010000000177acc507ee0b802f3b0dde19f3acb389a40498f388822fb3d48efa871135f1f60000000000ffffffff0200000000000000003776a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000000000003776a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000","error":null,"id":5}
 ```
 
 10. Decode the raw transaction to get the spent output
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"decoderawtransaction","params":["TRANSACTION_HEX"],"id":1}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"decoderawtransaction","params":["TRANSACTION_HEX"],"id":6}'
 ```
 
 where
@@ -270,13 +271,13 @@ where
 Example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"decoderawtransaction","params":["010000000177acc507ee0b802f3b0dde19f3acb389a40498f388822fb3d48efa871135f1f60000000000ffffffff0200000000000000003776a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000000000003776a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000"],"id":1}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"decoderawtransaction","params":["010000000177acc507ee0b802f3b0dde19f3acb389a40498f388822fb3d48efa871135f1f60000000000ffffffff0200000000000000003776a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000000000003776a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000"],"id":6}'
 ```
 
 Example output:
 
 ``` json
-{"result":{"txid":"5192ee142d70a124672d18f760b748c4373ee2c27331521bb5c825e0bf95b04e","version":1,"locktime":0,"vin":[{"txid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","vout":0,"scriptSig":{"asm":"","hex":""},"sequence":4294967295}],"vout":[{"value":0,"n":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 aab5af995a8d50eb35ca7044880b4ccc463b7e8c OP_EQUALVERIFY OP_CHECKSIG 73706b71a40498f388822fb3d48efa871135f1f650c3000000000000 OP_DROP","hex":"76a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c300000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["1Q5Bymiw44zwbMUKmX3uonwSdcxSXG2V35MLoq"]},"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":50,"raw":50000,"type":"transfer"}]},{"value":0,"n":1,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 21722e2f3414baa7c29cc31e833cfb01bef2eece OP_EQUALVERIFY OP_CHECKSIG 73706b71a40498f388822fb3d48efa871135f1f650c3000000000000 OP_DROP","hex":"76a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c300000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["15XBaziuezg8EDHx2GkPke8VS3oiKACMch4Vng"]},"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":50,"raw":50000,"type":"transfer"}]}]},"error":null,"id":1}
+{"result":{"txid":"5192ee142d70a124672d18f760b748c4373ee2c27331521bb5c825e0bf95b04e","version":1,"locktime":0,"vin":[{"txid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","vout":0,"scriptSig":{"asm":"","hex":""},"sequence":4294967295}],"vout":[{"value":0,"n":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 aab5af995a8d50eb35ca7044880b4ccc463b7e8c OP_EQUALVERIFY OP_CHECKSIG 73706b71a40498f388822fb3d48efa871135f1f650c3000000000000 OP_DROP","hex":"76a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c300000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["1Q5Bymiw44zwbMUKmX3uonwSdcxSXG2V35MLoq"]},"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":50,"raw":50000,"type":"transfer"}]},{"value":0,"n":1,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 21722e2f3414baa7c29cc31e833cfb01bef2eece OP_EQUALVERIFY OP_CHECKSIG 73706b71a40498f388822fb3d48efa871135f1f650c3000000000000 OP_DROP","hex":"76a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c300000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["15XBaziuezg8EDHx2GkPke8VS3oiKACMch4Vng"]},"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":50,"raw":50000,"type":"transfer"}]}]},"error":null,"id":6}
 ```
 
 In the output, look for the `vin` array. In the `vin` array, copy the `txid` value and the `vout` value. For the example above, you would need to copy and save the following values:
@@ -287,7 +288,7 @@ In the output, look for the `vin` array. In the `vin` array, copy the `txid` val
 11. Get the hexadecimal script for the `txid`, `vout` pair
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD -d '{"method":"gettxout","params":["TXID",VOUT],"id":1}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD -d '{"method":"gettxout","params":["TXID",VOUT],"id":7}'
 ```
 
 where
@@ -298,13 +299,13 @@ where
 Example:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"gettxout","params":["f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77",0],"id":1}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"gettxout","params":["f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77",0],"id":7}'
 ```
 
 Example output:
 
 ``` json
-{"result":{"bestblock":"008b50f38e2884f7470cbe173ad16fc642e7159aec2007496fac47f13aad36b7","confirmations":11,"value":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 21722e2f3414baa7c29cc31e833cfb01bef2eece OP_EQUALVERIFY OP_CHECKSIG 73706b67a086010000000000 OP_DROP","hex":"76a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac0c73706b67a08601000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["15XBaziuezg8EDHx2GkPke8VS3oiKACMch4Vng"]},"version":1,"coinbase":false,"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":100,"raw":100000,"issue":true}]},"error":null,"id":1}
+{"result":{"bestblock":"008b50f38e2884f7470cbe173ad16fc642e7159aec2007496fac47f13aad36b7","confirmations":11,"value":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 21722e2f3414baa7c29cc31e833cfb01bef2eece OP_EQUALVERIFY OP_CHECKSIG 73706b67a086010000000000 OP_DROP","hex":"76a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac0c73706b67a08601000000000075","reqSigs":1,"type":"pubkeyhash","addresses":["15XBaziuezg8EDHx2GkPke8VS3oiKACMch4Vng"]},"version":1,"coinbase":false,"assets":[{"name":"token","issuetxid":"f6f1351187fa8ed4b32f8288f39804a489b3acf319de0d3b2f800bee07c5ac77","assetref":"71-265-61942","qty":100,"raw":100000,"issue":true}]},"error":null,"id":7}
 ```
 
 In the output, look for the `hex` value of the `scriptPubKey` array. Copy the `hex` value. For the example above, you would need to copy and save the following value:
@@ -371,7 +372,7 @@ Move the saved values to the cold node in a manner that meets your security requ
 Now that your transaction is signed, broadcast it to the MultiChain network.
 
 ``` sh
-curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"sendrawtransaction","params":["HEX_VALUE"],"id":1}'
+curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"sendrawtransaction","params":["HEX_VALUE"],"id":8}'
 ```
 
 where
@@ -381,7 +382,7 @@ where
 For the example in this guide, the full command is:
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"sendrawtransaction","params":["010000000177acc507ee0b802f3b0dde19f3acb389a40498f388822fb3d48efa871135f1f6000000006b483045022100f905286e0f8a648b71625244eb623c641eb6e8caebbec30806e45c3b264342ad02200ef576fec5633326564e296e9d1698f7faa50536c919a0307abf5b08cd49264f012102251eece743174e0433086e1d978374de6a0d60e48c39282697b757ad968d3e1affffffff0200000000000000003776a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000000000003776a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000"],"id":1}'
+curl https://nd-123-456-789.p2pify.com -u "user-name:pass-word-pass-word-pass-word" -d '{"method":"sendrawtransaction","params":["010000000177acc507ee0b802f3b0dde19f3acb389a40498f388822fb3d48efa871135f1f6000000006b483045022100f905286e0f8a648b71625244eb623c641eb6e8caebbec30806e45c3b264342ad02200ef576fec5633326564e296e9d1698f7faa50536c919a0307abf5b08cd49264f012102251eece743174e0433086e1d978374de6a0d60e48c39282697b757ad968d3e1affffffff0200000000000000003776a914aab5af995a8d50eb35ca7044880b4ccc463b7e8c88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000000000003776a91421722e2f3414baa7c29cc31e833cfb01bef2eece88ac1c73706b71a40498f388822fb3d48efa871135f1f650c30000000000007500000000"],"id":8}'
 ```
 
 You created and signed the transaction without exposing your private key to the hot nodes on the MultiChain network.
