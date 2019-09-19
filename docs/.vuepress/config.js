@@ -2,7 +2,7 @@ module.exports = {
     title: 'Chainstack documentation',
     description: "Chainstack documentation",
     head: [
-        ['link', { rel: 'icon', href: './favicon.ico' }]
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     themeConfig: {
         logo: '/img/docs-logo.svg',
