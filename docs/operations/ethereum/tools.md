@@ -107,5 +107,6 @@ chainstack: {
 
 * [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
 * [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
+* [Using MetaMask with Chainstack](/operations/ethereum/using-metamask-with-chainstack)
 
 :::

@@ -31,3 +31,9 @@ Example:
 4. Click **Save**.
 
 Your MetaMask will now interact through your Ethereum nodes deployed with Chainstack.
+
+::: tip See also:
+
+* [Tools](/operations/ethereum/tools)
+
+:::
