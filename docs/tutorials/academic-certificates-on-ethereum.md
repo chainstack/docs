@@ -428,7 +428,7 @@ truffle migrate --network mainnet
 This will engage `2_deploy_contracts.js` and deploy the contract to the Ethereum mainnet as specified in `truffle-config.js`.
 
 ::: warning
-You have to use the mainnet ETH to deploy the contract to the Ethereum mainnet.
+You have to use the mainnet ether to deploy the contract to the Ethereum mainnet.
 :::
 
 ::: tip See also
