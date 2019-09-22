@@ -6,7 +6,7 @@
 
 ### What's New
 
-* **Security**. Protected endpoints added for Quorum and Ethereum nodes. [Read more](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/) about the upcoming deprecation of unprotected endpoints
+* **Security**. Protected endpoints added for Quorum and Ethereum nodes. [Read more](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/) about the deprecation of unprotected endpoints
 * **Deployment**. [Bolt](/glossary/bolt) snapshots are now updated hourly so that nodes are deployed and synchronized with fresher snapshots
 * **Protocols.** Numerous stability improvements for Quorum networks and nodes
 * **Activity and events**. In-platform notifications and activity log introduced to provide visibility into account activity
@@ -15,6 +15,10 @@
 ### Bug Fixes
 
 - Numerous UI and copy fixes and improvements
+
+### Breaking changes
+
+* Quorum and Ethereum nodes with unprotected endpoints are deprecated on October 1, 2019.
 
 ## Chainstack 1.2.1
 
