@@ -14,7 +14,7 @@ Interact with your Corda node using [Chainstack standalone shell](https://github
 #### Running the standalone shell
 
 ``` sh
-docker run -it chainstack/corda-shell --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD
+docker run -it chainstack/corda-shell --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD --cordapp-directory=/cordapps
 ```
 
 where
@@ -23,6 +23,7 @@ where
 * CORDA_RPC_PORT — your Corda node RPC port.
 * CORDA_RPC_USER — your Corda node RPC username.
 * CORDA_RPC_PASSWORD — your Corda node RPC password.
+* `--cordapp-directory=/cordapps` — the parameter to interact with your CorDapps. Without providing it, you will not be able interact with your CorDapps in the shell.
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
