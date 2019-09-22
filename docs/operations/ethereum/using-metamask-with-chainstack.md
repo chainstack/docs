@@ -4,11 +4,11 @@ You can set your [MetaMask](https://metamask.io/) to interact your Ethereum node
 
 1. Open your MetaMask and then the network selector:
 
-![Network Selector](../assets/using-metamask-wth-chainstack/metamask-network-selector.png)
+![Network Selector](./assets/using-metamask-wth-chainstack/metamask-network-selector.png)
 
 2. In the network selector, click **Custom RPC**:
 
-![Custom RPC](../assets/using-metamask-wth-chainstack/metamask-chainstack-rpc.png)
+![Custom RPC](./assets/using-metamask-wth-chainstack/metamask-custom-rpc.png)
 
 3. In the **New RPC URL** field, enter the URL in the following format:
 
@@ -26,7 +26,7 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 
 Example:
 
-![Chainstack RPC](../assets/using-metamask-wth-chainstack/metamask-custom-rpc.png)
+![Chainstack RPC](./assets/using-metamask-wth-chainstack/metamask-chainstack-rpc.png)
 
 4. Click **Save**.
 

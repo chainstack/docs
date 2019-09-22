@@ -1,6 +1,6 @@
 # Trust Fund account on Ethereum
 
-Unlike legacy finance systems where you need to rely on a well-established third party, you can build your own financial instrument on Ethereum.
+Unlike with legacy finance systems where you need to rely on a well-established third party, you can build your own financial instrument on Ethereum.
 
 The objective of this tutorial is to show how easy it is to build and run your own instance of a simple decentralized finance example, or DeFi.
 
@@ -19,6 +19,7 @@ In this tutorial, you will:
 
 ::: tip Ethereum Ropsten testnet
 For illustration purposes, this tutorial uses Ethereum Ropsten testnet.
+
 For Ethereum mainnet, the steps are exactly the same, except that you would need to use mainnet ether.
 :::
 
@@ -65,17 +66,19 @@ In your MetaMask, fund each account with Ropsten ether by clicking **Deposit** >
 
 ### Create and compile the Trust Fund smart contract
 
-1. On the home page, click **Environments** > **Solidity**:
+1. Open [Remix IDE](https://remix.ethereum.org/)
 
-<img src="../assets/remix-home-solidity.png" width="700" height="602">
+2. On the home page, click **Environments** > **Solidity**:
 
-2. On the left pane, click **File explorers** > plus sign:
+![Environment Solidity](./assets/trust-fund-account-on-ethereum/remix-home-solidity.png)
 
-<img src="../assets/trust-fund-account-on-ethereum/remix-plus-sign.png" width="700" height="689">
+3. On the left pane, click **File explorers** > plus sign:
 
-3. In the modal, give any name to your contract. For example, `transferableTrusFund.sol`
+![Add .sol](./assets/trust-fund-account-on-ethereum/remix-plus-sign.png)
 
-4. Put in the contract code:
+4. In the modal, give any name to your contract. For example, `transferableTrustFund.sol`.
+
+5. Put in the contract code:
 
 ``` js
 pragma solidity ^0.5.0;
@@ -120,11 +123,11 @@ This is your Trust Fund account smart contract:
 ``` js
 contract TransferableTrustFundAccount {
     address owner;
-``
+```
 
 * Only the contract owner can withdraw all funds from the contract through:
 
-``` sol
+``` js
 function withdrawAll() public {
         require(owner == msg.sender);
         msg.sender.transfer(address(this).balance);
@@ -166,11 +169,11 @@ function transferAccount(address newAccount) public {
     }
 ```
 
-5. Compile the contract:
+6. Compile the contract:
 
 On the left pane, click **Solidity compiler** > **Compile**:
 
-<img src="../assets/trust-fund-account-on-ethereum/remix-compile.png" width="700" height="309">
+![Select compile](./assets/trust-fund-account-on-ethereum/remix-compile.png)
 
 ### Set up Remix IDE to work through your Chainstack node
 
@@ -178,9 +181,9 @@ TTK
 
 ### Deploy the Trust Fund smart contract
 
-On the left pane, click **Deploy & run transactions** > **Deploy**:
+On the left pane, click **Deploy & run transactions** > **Deploy**: TTK
 
-<img src="../assets/trust-fund-account-on-ethereum/remix-deploy.png" width="700" height="282">
+![Deploy](./assets/trust-fund-account-on-ethereum/remix-deploy.png)
 
 This will engage your MetaMask to deploy the contract to Ethereum Ropsten testnet through your currently selected MetaMask account. Click **Confirm** in the MetaMask modal.
 
@@ -190,19 +193,19 @@ Once the contract is deployed, fund the contract:
 
 1. Copy the contract address under **Deployed Contracts**:
 
-<img src="../assets/trust-fund-account-on-ethereum/remix-copy-address.png" width="700" height="523">
+![Contract address](./assets/trust-fund-account-on-ethereum/remix-copy-address.png)
 
 2. Open your MetaMask and send Ropsten ether to the copied contract address.
 
-Interact with the contract:
+Now that your contract is funded, you can interact with it.
 
 Expand the contract under **Deployed Contracts**:
 
-<img src="../assets/trust-fund-account-on-ethereum/remix-interact.png" width="700" height="511">
+![Interact](./assets/trust-fund-account-on-ethereum/remix-interact.png)
 
 * `withdrawAmount` — enter any amount that is less than the current contract balance to withdraw partial funds.
 * `withdrawAll` — click to withdraw all funds from the contract.
-* `transferAccount` — enter any Ethereum address to transfer the contract ownership. For this example, enter the address of your second account in MetMask.
+* `transferAccount` — enter any Ethereum address to transfer the contract ownership. For this example, enter the address of your second account in MetaMask.
 * `terminateAccount` — click to terminate the account and have the remaining funds returned to the current contract owner.
 
 ::: tip See also
