@@ -57,6 +57,7 @@ module.exports = {
                         children: [
                             '/operations/ethereum/',
                             '/operations/ethereum/networks',
+                            '/operations/ethereum/using-metamask-with-chainstack',
                             '/operations/ethereum/tools',
                         ]
                     },
@@ -93,6 +94,7 @@ module.exports = {
                     '/tutorials/',
                     '/tutorials/academic-certificates-on-ethereum',
                     '/tutorials/asset-tokenization-on-ethereum',
+                    '/tutorials/trust-fund-account-on-ethereum',
                     '/tutorials/distributed-company-scrips-on-multichain',
                     '/tutorials/food-supply-temperature-control-on-quorum',
                     '/tutorials/loyalty-program-on-quorum',
