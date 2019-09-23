@@ -43,6 +43,7 @@ module.exports = {
                     '/platform/delete-a-node',
                     '/platform/delete-a-network',
                     '/platform/delete-a-project',
+                    '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
                 ]
             },
