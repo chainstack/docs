@@ -4,31 +4,31 @@
 
 *September 3, 2019*
 
-### What's New
+### What's new
 
-* **Security**. Protected endpoints added for Quorum and Ethereum nodes. [Read more](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/) about the deprecation of unprotected endpoints
+* **Security**. Protected endpoints added for Quorum and Ethereum nodes
 * **Deployment**. [Bolt](/glossary/bolt) snapshots are now updated hourly so that nodes are deployed and synchronized with fresher snapshots
 * **Protocols.** Numerous stability improvements for Quorum networks and nodes
 * **Activity and events**. In-platform notifications and activity log introduced to provide visibility into account activity
 * **Documentation.** Complete content and structure overhaul for improved access, browsing, and discovery
 
-### Bug Fixes
+### Bug fixes
 
 - Numerous UI and copy fixes and improvements
 
 ### Breaking changes
 
-* Quorum and Ethereum nodes with unprotected endpoints are deprecated on October 1, 2019.
+* Unprotected endpoints for Quorum and Ethereum nodes [will be deprecated on October 1, 2019](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/)
 
 ## Chainstack 1.2.1
 
 *July 1, 2019*
 
-### What’s New
+### What’s new
 
 * **Documentation**. New guide: [Deploying a hybrid MultiChain network](/operations/multichain/deploying-a-hybrid-network). New tutorial: [Loyalty program on Quorum](/tutorials/loyalty-program-on-quorum)
 
-### Bug Fixes
+### Bug fixes
 
 * Improved Ropsten nodes syncing
 
@@ -36,13 +36,13 @@
 
 *June 21, 2019*
 
-### What’s New
+### What’s new
 
 * **Protocols**. [Ethereum](/blockchains/ethereum) Ropsten testnet support with Bolt. Updated [Quorum](/blockchains/quorum) explorer from [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) to [epirus-free](https://github.com/blk-io/epirus-free)
 * **Node details**. Added complete details for [Quorum](/blockchains/quorum), including default wallet private/public keys. Standardized fields for all protocols
 * **Documentation**. New tutorial: [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
 
-### Bug Fixes
+### Bug fixes
 
 * Numerous UI and copy fixes and improvements
 
@@ -50,12 +50,12 @@
 
 *May 9, 2019*
 
-### What’s New
+### What’s new
 
 * **Protocols**. Shared [Ethereum](/blockchains/ethereum) Mainnet nodes support
 * [**Projects**](/glossary/project). Made project description field optional
 
-### Bug Fixes
+### Bug fixes
 
 * Issues with MultiChain stability
 
@@ -63,13 +63,13 @@
 
 *May 3, 2019*
 
-### What’s New
+### What’s new
 
 * **Updating and deleting resources**. Editing project name and description, network and node name. Deleting nodes by the owner, networks are deleted automatically when the last node is deleted, projects can be deleted if empty
 * **Navigation**. Updated menu with links to [Documentation](../) and [Support](https://support.chainstack.com)
 * **Support**. Added Zendesk widget
 
-### Bug Fixes
+### Bug fixes
 
 * Sign up markup issues
 * Adjusted columns in network/node list
@@ -78,11 +78,11 @@
 
 *April 11, 2019*
 
-### What’s New
+### What’s new
 
 * **Protocols**. [MultiChain](/blockchains/multichain) 2.0 release support. [Quorum](/blockchains/quorum) 2.2.3 support
 
-### Bug Fixes
+### Bug fixes
 
 * MultiChain explorer lack of connectivity
 * Project invitations duplicates
@@ -92,11 +92,11 @@
 
 *April 2, 2019*
 
-### What’s New
+### What’s new
 
 * **Registration and sign in**. Password recovery via email
 
-### Bug Fixes
+### Bug fixes
 
 * Provided links to documentation, ToS and Privacy Policy
 * Sorting by date in the network list
