@@ -107,6 +107,17 @@ chainstack: {
 
 3. Run `embark run chainstack` and Embark will deploy using Chainstack.
 
+### Remix IDE
+
+To make Remix IDE interact with the network through a Chainstack node:
+
+1. Get [MetaMask](https://metamask.io/) and set it to interact through a Chainstack node. See [Using MetaMask with Chainstack](/operations/ethereum/using-metamask-with-chainstack).
+1. In Remix IDE, navigate to the **Deploy** tab. Select **Injected Web3** in **Environment**.
+
+This will engage MetaMask and make Remix IDE interact with the network through a Chainstack node.
+
+For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
+
 ::: tip See also
 
 * [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)

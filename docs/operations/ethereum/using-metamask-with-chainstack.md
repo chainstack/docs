@@ -35,5 +35,6 @@ Your MetaMask will now interact through your Ethereum nodes deployed with Chains
 ::: tip See also:
 
 * [Tools](/operations/ethereum/tools)
+* [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum)
 
 :::
