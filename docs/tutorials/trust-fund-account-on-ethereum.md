@@ -26,8 +26,8 @@ For Ethereum mainnet, the steps are exactly the same, except that you would need
 ## Prerequisites
 
 * [Chainstack](https://console.chainstack.com/) account to deploy an Ethereum node.
-* [MetaMask](https://metamask.io/).
-* [Remix IDE](https://remix.ethereum.org/).
+* [Remix IDE](https://remix.ethereum.org/) to compile the contract and deploy through MetaMask.
+* [MetaMask](https://metamask.io/) to deploy the contract through Chainstack node and interact with the contract.
 
 ## Overview
 
@@ -60,7 +60,9 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 
 See [Using MetaMask with Chainstack](/operations/ethereum/using-metamask-with-chainstack).
 
-Create at least two accounts in MetaMask.
+Having set up your MetaMask to interact through a Chainstack node, your Remix IDE will also interact with the network through a Chainstack node.
+
+Create at least two accounts in MetaMask. You need two accounts to transfer the contract ownership from one to another.
 
 In your MetaMask, fund each account with Ropsten ether by clicking **Deposit** > **Test Faucet** > **Get Ether**.
 
@@ -177,11 +179,15 @@ On the left pane, click **Solidity compiler** > **Compile**:
 
 ### Set up Remix IDE to work through your Chainstack node
 
-TTK
+On the left pane, click **Deploy** and switch to **Injected Web3**:
+
+![Inject](./assets/trust-fund-account-on-ethereum/remix-injected-web3.png)
+
+This will engage your MetaMask and interact with the network through the Chainstack node provided in MetaMask.
 
 ### Deploy the Trust Fund smart contract
 
-On the left pane, click **Deploy & run transactions** > **Deploy**: TTK
+On the left pane, click **Deploy & run transactions** > **Deploy**:
 
 ![Deploy](./assets/trust-fund-account-on-ethereum/remix-deploy.png)
 
@@ -211,6 +217,7 @@ Expand the contract under **Deployed Contracts**:
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
+* [Using MetaMask with Chainstack](/operations/ethereum/using-metamask-with-chainstack)
 * [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
 * [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
 
