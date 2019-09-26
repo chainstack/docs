@@ -1,8 +1,8 @@
 # Using MetaMask with Chainstack
 
-You can set your [MetaMask](https://metamask.io/) to interact your Ethereum nodes deployed with Chainstack.
+You can set your [MetaMask](https://metamask.io/) to interact through your Ethereum nodes deployed with Chainstack.
 
-1. Open your MetaMask and then the network selector:
+1. Open your MetaMask and click the network selector:
 
 ![Network Selector](./assets/using-metamask-wth-chainstack/metamask-network-selector.png)
 
