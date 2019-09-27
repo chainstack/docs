@@ -64,6 +64,8 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 
 [Ethereum JavaScript API](https://github.com/ethereum/web3.js) is a collection of libraries to interact with your nodes.
 
+Install in your project directory:
+
 ``` sh
 npm install web3
 ```
@@ -71,6 +73,8 @@ npm install web3
 #### Install Solidity JavaScript Compiler
 
 The Solidity JavaScript compiler will compile the contract.
+
+Install in your project directory:
 
 ``` sh
 npm install solc
@@ -80,6 +84,8 @@ npm install solc
 
 [Ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-tx) is a module to create and sign transactions.
 
+Install in your project directory:
+
 ``` sh
 npm install ethereumjs-tx
 ```
@@ -87,6 +93,8 @@ npm install ethereumjs-tx
 #### Install Quorum.js
 
 [Quorum.js](https://github.com/jpmorganchase/quorum.js/) is an extension to [Ethereum JavaScript API](https://github.com/ethereum/web3.js) to support private transactions on Quorum.
+
+Install in your project directory:
 
 ``` sh
 npm install quorum-js
@@ -96,6 +104,8 @@ npm install quorum-js
 
 [Request-promise-native](https://github.com/request/request-promise-native) is a simplified HTTP request client with Promise support.
 
+Install in your project directory:
+
 ``` sh
 npm install request-promise-native
 ```
@@ -104,11 +114,13 @@ npm install request-promise-native
 
 You will use dotenv to pass your Quorum nodes access and credentials to deploy the contracts and run transactions.
 
+Install in your project directory:
+
 ``` sh
 npm install dotenv
 ```
 
-In your project folder, create a `.env` file:
+In your project directory, create a `.env` file:
 
 ``` js
 // Node 1
