@@ -2,8 +2,11 @@
 
 In this tutorial, you will:
 
-* Create a contract for public transactions, deploy it on your [Quorum](/blockchains/quorum) network, and run a public transaction.
-* Create a contract for private transactions, deploy it on your Quorum network, and run a private transaction.
+* Create a contract that sets and retrieves through your [Quorum](/blockchains/quorum) nodes.
+* Deploy the contract on your Quorum network, and run a public transaction.
+* Deploy the contract on your Quorum network, and run a private transaction.
+* Deploy the contract on your Quorum network, externally sign a public transaction, and run the public transaction.
+* Deploy the contract on your Quorum network, externally sign a private transaction, and run the private transaction.
 
 The premise of the Quorum network in this tutorial is the following:
 
@@ -11,7 +14,9 @@ The premise of the Quorum network in this tutorial is the following:
 * The supermarket and the storage facility deploy a Quorum network with at least three nodes.
 * The storage facility monitors the temperature of the products it stores and records the temperature readings to the contract on the Quorum network.
 * There is a public contract that allows any party to read the temperature off the contract.
-* There is a private contract that allows only a specifically set party to read the temperature off the contract.
+* There is a private contract that allows only an explicitly set party to read the temperature off the contract.
+
+This tutorial uses [Quorum Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) for private contracts.
 
 Sample code for this tutorial is in the [GitHub repository](https://github.com/chainstack/quorum-iot-tutorial).
 
@@ -24,15 +29,14 @@ Sample code for this tutorial is in the [GitHub repository](https://github.com/c
 To get from zero to a deployed Quorum network with a public contract and a private contract, do the following:
 
 * Prepare:
-
-  1. With Chainstack, deploy a Quorum network.
-  1. Install Ethereum JavaScript API to interact with the Quorum network.
-  1. Install Solidity JavaScript Compiler to format the contract for the Quorum network deployment.
-  1. Install dotenv and create an `.env` file with your Quorum nodes access and credentials.
-
+  * With Chainstack, deploy a Quorum network.
+  * Install additional Node.js packages.
+  * Create helper Node.js scripts.
 * Create the contract.
 * Deploy the contract as public and run a public transaction.
 * Deploy the contract as private and run a private transaction.
+* Deploy the contract as public, externally sign the contract, and run a public transaction.
+* Deploy the contract as private, externally sign the contract, and run a private transaction.
 
 ## Prepare
 
@@ -48,11 +52,15 @@ See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
 Deploy at least three nodes for this tutorial.
 
+See also [Quorum](/blockchains/quorum) for recommendations on the number of nodes.
+
 #### Get your Quorum node access and credentials
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-### Install Ethereum JavaScript API
+### Install Node.js packages
+
+#### Install Ethereum JavaScript API
 
 [Ethereum JavaScript API](https://github.com/ethereum/web3.js) is a collection of libraries to interact with your nodes.
 
@@ -60,19 +68,39 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 npm install web3
 ```
 
-### Install Solidity JavaScript Compiler
+#### Install Solidity JavaScript Compiler
 
-The Solidity JavaScript compiler will compile the contract, the ABI, and bytecode formats that you will deploy on your Quorum network.
-
-::: warning
-This tutorial uses Solidity Compiler 0.4.25 for web3 compatibility.
-:::
+The Solidity JavaScript compiler will compile the contract.
 
 ``` sh
-npm install solc@0.4.25
+npm install solc
 ```
 
-### Install and configure dotenv
+#### Install ethereumjs-tx
+
+[Ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-tx) is a module to create and sign transactions.
+
+``` sh
+npm install ethereumjs-tx
+```
+
+#### Install Quorum.js
+
+[Quorum.js](https://github.com/jpmorganchase/quorum.js/) is an extension to [Ethereum JavaScript API](https://github.com/ethereum/web3.js) to support private transactions on Quorum.
+
+``` sh
+npm install quorum-js
+```
+
+#### Install request-promise-native
+
+[Request-promise-native](https://github.com/request/request-promise-native) is a simplified HTTP request client with Promise support.
+
+``` sh
+npm install request-promise-native
+```
+
+#### Install and configure dotenv
 
 You will use dotenv to pass your Quorum nodes access and credentials to deploy the contracts and run transactions.
 
@@ -80,34 +108,285 @@ You will use dotenv to pass your Quorum nodes access and credentials to deploy t
 npm install dotenv
 ```
 
-In your project folder, create an `.env` file:
+In your project folder, create a `.env` file:
 
 ``` js
+// Node 1
 RPC1='RPC_ENDPOINT'
-PK1='CONSTELLATION_PUBLIC_KEY'
+
+WALLET_ADDRESS1='DEFAULT_WALLET_ADDRESS'
+WALLET_KEY1='DEFAULT_WALLET_PRIVATE_KEY'
+
+TM_PUBLIC_KEY1='TRANSACTION_MANAGER_PUBLIC_KEY'
+TM1='TRANSACTION_MANAGER_ENDPOINT'
+
+// Node 2
 RPC2='RPC_ENDPOINT'
-PK2='CONSTELLATION_PUBLIC_KEY'
+
+WALLET_ADDRESS2='DEFAULT_WALLET_ADDRESS'
+WALLET_KEY2='DEFAULT_WALLET_PRIVATE_KEY'
+
+TM_PUBLIC_KEY2='TRANSACTION_MANAGER_PUBLIC_KEY'
+TM2='TRANSACTION_MANAGER_ENDPOINT'
+
+// Node 3
 RPC3='RPC_ENDPOINT'
-PK3='CONSTELLATION_PUBLIC_KEY'
+
+WALLET_ADDRESS3='DEFAULT_WALLET_ADDRESS'
+WALLET_KEY3='DEFAULT_WALLET_PRIVATE_KEY'
+
+TM_PUBLIC_KEY3='TRANSACTION_MANAGER_PUBLIC_KEY'
+TM3='TRANSACTION_MANAGER_ENDPOINT'
 ```
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
-* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Access and credentials** > **Transaction manager public key**.
+* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. Available under **Access and credentials** > **RPC endpoint**.
+* DEFAULT_WALLET_ADDRESS — your Quorum node default wallet address to deploy the contract. Available under **Access and credentials** > **Default wallet address**.
+* DEFAULT_WALLET_PRIVATE_KEY — a private key to your Quorum node default wallet address to sign the transaction. Available under **Access and credentials** > **Default wallet private key**.
+* TRANSACTION_MANAGER_PUBLIC_KEY — your Quorum node Tessera public key. The contract will use this key to make the contract private for the node that signs the contract transaction with the Tessera private key from this public-private key pair. Available under **Access and credentials** > **Transaction manager public key**.
+* TRANSACTION_MANAGER_ENDPOINT — an endpoint to the Tessera node deployed with your Quorum node. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. Available under **Access and credentials** > **Transaction manager endpoint**.
+
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
+
+### Create helper scripts
+
+In your project's `utils` directory, create the following scripts:
+
+* `compiler.js` — a script to compile the contract into bytecode.
+* `environment.js` — a script to mount the Tessera nodes for the contract deployment and transactions.
+* `helper.js` — a script to create and sign private transactions.
+* `jsonRPC.js` — a script to get the block nonce to ensure a public transaction does not overwrite an existing one.
+
+#### Create compiler.js
+
+In your project's `utils` directory, create `compiler.js`:
+
+``` js
+const path = require('path');
+const fs = require('fs');
+const solc = require('solc');
+
+const getConfigTemplate = () => ({
+  language: 'Solidity',
+  settings: {
+    outputSelection: {
+      '*': {
+        '*': ['*'],
+      },
+    },
+  },
+});
+
+const findImport = name => {
+  const contents = fs.readFileSync(
+    path.resolve(__dirname, '../contracts', name),
+    'utf8',
+  );
+
+  return {
+    contents,
+  };
+};
+
+const compileContract = name => {
+  const contractPath = path.resolve(__dirname, '../contracts', name);
+  const source = fs.readFileSync(contractPath, 'UTF-8');
+
+  const contractSource = getConfigTemplate();
+  contractSource.sources = {
+    [name]: {
+      content: fs.readFileSync(
+        path.resolve(__dirname, '../contracts', name),
+        'utf8',
+      ),
+    },
+  };
+
+  let contract = JSON.parse(
+    solc.compile(JSON.stringify(contractSource), findImport),
+  ).contracts[name];
+
+  contract = contract[Object.keys(contract)[0]];
+
+  return {
+    interface: contract.abi,
+    bytecode: `0x${contract.evm.bytecode.object}`,
+  };
+};
+
+module.exports = {
+  compileContract,
+};
+```
+
+#### Create environment.js
+
+In your project's `utils` directory, create `environment.js`:
+
+``` js
+const Web3 = require('web3');
+const quorumjs = require('quorum-js');
+const dotenv = require('dotenv');
+
+dotenv.config();
+const node1 = {
+  RPC: process.env.RPC1,
+  TM_URL: process.env.TM1,
+  TM_PK: process.env.TM_PUBLIC_KEY1,
+  WALLET_ADDRESS: process.env.WALLET_ADDRESS1,
+  WALLET_KEY: process.env.WALLET_KEY1,
+};
+
+const node2 = {
+  RPC: process.env.RPC2,
+  TM_URL: process.env.TM2,
+  TM_PK: process.env.TM_PUBLIC_KEY2,
+  WALLET_ADDRESS: process.env.WALLET_ADDRESS2,
+  WALLET_KEY: process.env.WALLET_KEY2,
+};
+
+const node3 = {
+  RPC: process.env.RPC3,
+  TM_URL: process.env.TM3,
+  TM_PK: process.env.TM_PUBLIC_KEY3,
+  WALLET_ADDRESS: process.env.WALLET_ADDRESS3,
+  WALLET_KEY: process.env.WALLET_KEY3,
+};
+
+const mountWeb3 = (RPC) => new Web3(
+  new Web3.providers.HttpProvider(RPC),
+  null,
+  { transactionConfirmationBlocks: 1 },
+);
+
+const mountTransactionManager = (web3, privateUrl) => quorumjs.RawTransactionManager(
+  web3,
+  { privateUrl },
+);
+
+node1.web3 = mountWeb3(node1.RPC);
+node1.txManager = mountTransactionManager(node1.web3, node1.TM_URL);
+
+node2.web3 = mountWeb3(node2.RPC);
+node2.txManager = mountTransactionManager(node2.web3, node2.TM_URL);
+
+node3.web3 = mountWeb3(node3.RPC);
+node3.txManager = mountTransactionManager(node3.web3, node3.TM_URL);
+
+
+module.exports = {
+  node1,
+  node2,
+  node3,
+};
+```
+
+#### Create helper.js
+
+In your project's `utils` directory, create `helper.js`:
+
+``` js
+const EthereumTx = require('ethereumjs-tx').Transaction;
+const { getNonce } = require("./jsonRPC.js");
+
+const serializePayload = async (node, { to, data }, overrideNonce = null) => {
+  const nonce = await getNonce(node.WALLET_ADDRESS, node.RPC);
+
+  const rawTransaction = {
+    data,
+    nonce: overrideNonce || nonce,
+    to,
+    gasPrice: 0,
+    gasLimit: 4300000,
+    value: 0,
+  };
+
+  const tx = new EthereumTx(rawTransaction);
+  tx.sign(Buffer.from(node.WALLET_KEY, 'hex')); // WALLET PRIVATE KEY
+
+  return `0x${tx.serialize().toString('hex')}`;
+};
+
+const setPrivate = (txManager, payload) => {
+  const privateSignedTx = txManager.setPrivate(payload);
+
+  return `0x${privateSignedTx.toString('hex')}`;
+};
+
+const serializeAndSign = async (node, payload) => {
+  const serializedPayload = await serializePayload(node, payload, "0x0");
+
+  return setPrivate(node.txManager, serializedPayload);
+};
+
+module.exports = {
+  serializePayload,
+  serializeAndSign,
+};
+```
+
+#### Create jsonRPC.js
+
+In your project's `utils` directory, create `jsonRPC.js`:
+
+``` js
+const rp = require('request-promise-native');
+
+const getAccount = uri =>
+  rp({
+    method: 'POST',
+    uri,
+    json: true,
+    body: {
+      jsonrpc: '2.0',
+      method: 'eth_accounts',
+      params: [],
+      id: 1,
+    },
+  })
+    .then(res => res.result[0])
+    .catch(error => new Error(error));
+
+const getNonce = async (address, uri) => {
+  return rp({
+    method: 'POST',
+    uri,
+    json: true,
+    body: {
+      jsonrpc: '2.0',
+      method: 'eth_getTransactionCount',
+      params: [
+        address,
+        'pending',
+      ],
+      id: 1,
+    },
+  }).then(res => res.result )
+  .catch(error => new Error(error));
+};
+
+module.exports = {
+  getAccount,
+  getNonce,
+};
+```
 
 ## Create the contract
 
 In your project's `contracts` directory, create `temperatureMonitor.sol`:
 
 ``` js
-pragma solidity ^0.4.25;
+pragma solidity ^0.5.11;
+
 contract TemperatureMonitor {
   int8 public temperature;
-function set(int8 temp) public {
+
+  function set(int8 temp) public {
     temperature = temp;
   }
-function get() view public returns (int8) {
+
+  function get() view public returns (int8) {
     return temperature;
   }
 }
@@ -119,126 +398,118 @@ where
 * `set` — the function to write the temperature.
 * `get` — the function to fetch the temperature.
 
+## Review the project structure
+
+At this point, you should have the following project structure with all the required Node.js packages installed:
+
+``` sh
+.
+├── contracts
+│   └── temperatureMonitor.sol
+├── utils
+│   └── compiler.js
+│   └── environment.js
+│   └── helper.js
+│   └── jsonRPC.js
+├── node_modules
+├── .env
+└── package.json
+```
+
 ## Deploy the contract as public and run a public transaction
 
 ### Create a public.js file
 
-Create a `public.js` file that will:
+In your project's root directory, create a `public.js` file that will:
 
-1. Format and deploy the contract through Node 1.
+1. Compile and deploy the contract through Node 1.
 2. Set the temperature to `3` through Node 2.
 3. Retrieve the temperature through Node 3.
 
 ``` js
-const dotenv = require('dotenv');
-const Web3 = require('web3');
-const fs = require('fs');
-const solc = require('solc');
+const { compileContract } = require('./utils/compiler.js');
+const {
+  node1,
+  node2,
+  node3,
+} = require('./utils/environment.js');
 
 let temperatureMonitor = {};
 
-dotenv.config();
-
-const raft1Node = new Web3(
-  new Web3.providers.HttpProvider(process.env.RPC1), null, {
-    transactionConfirmationBlocks: 1,
-  },
-);
-
-const raft2Node = new Web3(
-  new Web3.providers.HttpProvider(process.env.RPC2), null, {
-    transactionConfirmationBlocks: 1,
-  },
-);
-
-const raft3Node = new Web3(
-  new Web3.providers.HttpProvider(process.env.RPC3), null, {
-    transactionConfirmationBlocks: 1,
-  },
-);
-
 const main = async () => {
-  const {interface, bytecode} = formatContract();
+  const {interface, bytecode} = compileContract('temperatureMonitor.sol');
   temperatureMonitor = {
-    interface: JSON.parse(interface),
-    bytecode: `0x${bytecode}`,
+    interface,
+    bytecode,
   };
 
-  console.log('Formatted Contract:', temperatureMonitor);
-  const contractAddress = await deployContract(raft1Node);
+  const contractAddress = await deployContract(node1);
   console.log(`Contract address after deployment: ${contractAddress}`);
 
-  const status = await setTemperature(raft2Node, contractAddress, 3);
+  const status = await setTemperature({
+    node: node2,
+    contractAddress,
+    temp: 3,
+  });
   console.log(`Transaction status: ${status}`);
 
-  const temp = await getTemperature(raft3Node, contractAddress);
+  const temp = await getTemperature({
+    node: node3,
+    contractAddress,
+  });
   console.log('Retrieved contract Temperature', temp);
 }
 
-async function getContract(web3, contractAddress) {
-  const address = await getAddress(web3);
-
-  return new web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
-    defaultAccount: address,
-  });
+function getContract(web3, contractAddress) {
+  return new web3.eth.Contract(temperatureMonitor.interface,  contractAddress);
 }
 
-function getAddress(web3) {
-  return web3.eth.getAccounts().then(accounts => accounts[0]);
-}
+async function deployContract(node) {
+  await node.web3.eth.personal.unlockAccount(node.WALLET_ADDRESS, '', 1000);
+  const contract = new node.web3.eth.Contract(temperatureMonitor.interface);
 
-function formatContract() {
-  const source = fs.readFileSync('./contracts/temperatureMonitor.sol', 'UTF8');
-  return solc.compile(source, 1).contracts[':TemperatureMonitor'];
-}
-
-async function deployContract(web3) {
-  const address = await getAddress(web3);
-  await web3.eth.personal.unlockAccount(address,'',1000)
-  const contract = new web3.eth.Contract(temperatureMonitor.interface);
   return contract.deploy({
     data: temperatureMonitor.bytecode,
   })
   .send({
-      from: address,
-      gas: '0x2CD29C0',
+      from: node.WALLET_ADDRESS,
+      gas: '0x1dcd6500',
+      gasPrice: '0',
   })
-  .on('transactionHash',console.log)
   .on('error', console.error)
   .then((newContractInstance) => {
     return newContractInstance.options.address;
   });
 }
 
-async function setTemperature(web3, contractAddress, temp) {
-  const myContract = await getContract(web3, contractAddress);
-  const address = await getAddress(web3);
-  await web3.eth.personal.unlockAccount(address,'',1000)
+async function setTemperature({ node, contractAddress, temp }) {
+  await node.web3.eth.personal.unlockAccount(node.WALLET_ADDRESS, '', 1000);
+
+  const myContract = getContract(node.web3, contractAddress);
+
   return myContract.methods.set(temp).send({
-    from: address
-  }).then((receipt) => {
+    from: node.WALLET_ADDRESS,
+  })
+  .on('error', console.error)
+  .then((receipt) => {
     return receipt.status;
   });
 }
 
-async function getTemperature(web3, contractAddress) {
-  const myContract = await getContract(web3, contractAddress);
-  const address = await getAddress(web3);
-  await web3.eth.personal.unlockAccount(address,'',1000)
+async function getTemperature({ node, contractAddress }) {
+  const myContract = getContract(node.web3, contractAddress);
+
   return myContract.methods.get().call().then(result => result);
 }
 
 main()
-
 ```
 
 where
 
-* `formatContract` — the function to format the contract in ABI and bytecode for deployment.
-* `deployContract` — the function to deploy the contract with Ethereum JavaScript API libraries.
+* `deployContract` — the function to deploy the contract.
 * `setTemperature` — the function to write the temperature value.
 * `getTemperature` — the function to fetch the temperature value.
-* `process.env` — loads your nodes access variables from the `.env` file.
 
 ### Run the transaction
 
@@ -251,7 +522,7 @@ This will deploy the contract, set the temperature value, and read the temperatu
 Example output:
 
 ``` sh
-Contract address after deployment: 0xf12345Ac7D7D8E986eFb2321756b5d1e8a25008F
+Contract address after deployment: 0x06eF93bf30Bf7f265361c1893141f400617AC135
 Transaction status: true
 Retrieved contract Temperature 3
 ```
@@ -262,119 +533,108 @@ Retrieved contract Temperature 3
 
 The `private.js` file will:
 
-1. Format and deploy the contract as private through Node 1.
-2. Set the temperature to `12` through Node 2.
+1. Compile and deploy the contract as private through Node 1.
+2. Set the temperature to `18` through Node 2.
 3. Retrieve the temperature through Node 2.
 4. Attempt to set the temperature through Node 3 and fail.
 5. Attempt to retrieve the temperature through Node 3 and fail.
 
 ``` js
-const dotenv = require('dotenv');
-const Web3 = require('web3');
-const fs = require('fs');
-const solc = require('solc');
+const { compileContract } = require('./utils/compiler.js');
+const { serializePayload } = require('./utils/helper.js');
+const {
+  node1,
+  node2,
+  node3,
+} = require('./utils/environment.js');
 
 let temperatureMonitor = {};
 
-dotenv.config();
-
-const raft1Node = new Web3(
-  new Web3.providers.HttpProvider(process.env.RPC1), null, {
-    transactionConfirmationBlocks: 1,
-  },
-);
-
-const raft2Node = new Web3(
-  new Web3.providers.HttpProvider(process.env.RPC2), null, {
-    transactionConfirmationBlocks: 1,
-  },
-);
-
-const raft3Node = new Web3(
-  new Web3.providers.HttpProvider(process.env.RPC3), null, {
-    transactionConfirmationBlocks: 1,
-  },
-);
-
 const main = async () => {
-  const {interface, bytecode} = formatContract();
+  const {interface, bytecode} = compileContract('temperatureMonitor.sol');
   temperatureMonitor = {
-    interface: JSON.parse(interface),
-    bytecode: `0x${bytecode}`,
+    interface,
+    bytecode,
   };
 
-  console.log('Formatted Contract:', temperatureMonitor);
-
-  const contractAddress = await deployContract(raft1Node, process.env.PK2);
+  const contractAddress = await deployContract({
+    node: node1,
+    privateFor: [node2.TM_PK],
+  });
   console.log(`Contract address after deployment: ${contractAddress}`);
 
-  await setTemperature(raft3Node, contractAddress, process.env.PK1, 10);
-  const temp = await getTemperature(raft3Node, contractAddress);
-  console.log(`[Node3] temp retrieved after updating contract from external nodes: ${temp}`);
-
-  await setTemperature(raft2Node, contractAddress, process.env.PK1, 12);
-  const temp2 = await getTemperature(raft2Node, contractAddress);
-  console.log(`[Node2] temp retrieved after updating contract from internal nodes: ${temp2}`);
-
-  const temp3 = await getTemperature(raft3Node, contractAddress);
-  console.log(`[Node3] temp retrieved from external nodes after update ${temp}`);
-}
-
-function getAddress(web3) {
-  return web3.eth.getAccounts().then(accounts => accounts[0]);
-}
-
-function formatContract() {
-  const source = fs.readFileSync('./contracts/temperatureMonitor.sol', 'UTF8');
-  return solc.compile(source, 1).contracts[':TemperatureMonitor'];
-}
-
-async function getContract(web3, contractAddress) {
-  const address = await getAddress(web3);
-  await web3.eth.personal.unlockAccount(address,'',1000)
-  return new web3.eth.Contract(temperatureMonitor.interface, contractAddress, {
-    defaultAccount: address,
+  const unauthorizedStatus = await setTemperature({
+    contractAddress,
+    node: node3,
+    privateFor: [node1.TM_PK],
+    temp: 3,
   });
+  console.log(`Unauthorized - Transaction status: ${unauthorizedStatus}`);
+
+  const unauthorizedTemp = await getTemperature({
+    contractAddress,
+    node: node3,
+  });
+  console.log('Unauthorized - Retrieved contract Temperature', unauthorizedTemp);
+
+  const authorizedStatus = await setTemperature({
+    contractAddress,
+    node: node2,
+    privateFor: [node1.TM_PK],
+    temp: 18,
+  });
+  console.log(`Authorized - Transaction status: ${authorizedStatus}`);
+
+  const authorizedTemp = await getTemperature({
+    node: node2,
+    contractAddress,
+  });
+  console.log('Authorized - Retrieved contract Temperature', authorizedTemp);
 }
 
-async function deployContract(web3, publicKey) {
-  const address = await getAddress(web3);
-  await web3.eth.personal.unlockAccount(address,'',1000)
-  const contract = new web3.eth.Contract(temperatureMonitor.interface);
+function getContract(web3, contractAddress) {
+  return new web3.eth.Contract(temperatureMonitor.interface,  contractAddress);
+}
+
+async function deployContract({ node, privateFor }) {
+  await node.web3.eth.personal.unlockAccount(node.WALLET_ADDRESS, '', 1000);
+  const contract = new node.web3.eth.Contract(temperatureMonitor.interface);
 
   return contract.deploy({
     data: temperatureMonitor.bytecode,
   })
   .send({
-    from: address,
-    gas: '0x2CD29C0',
-    privateFor: [publicKey],
+      from: node.WALLET_ADDRESS,
+      gasPrice: 0,
+      gasLimit: 4300000,
+      privateFor,
+      value: 0,
   })
-  .then((contract) => {
-    return contract.options.address;
+  .on('error', console.error)
+  .then((newContractInstance) => {
+    return newContractInstance.options.address;
   });
 }
 
-async function setTemperature(web3, contractAddress, publicKey, temp) {
-  const address = await getAddress(web3);
-  await web3.eth.personal.unlockAccount(address,'',1000)
-  const myContract = await getContract(web3, contractAddress);
+async function setTemperature({ node, contractAddress, privateFor, temp }) {
+  await node.web3.eth.personal.unlockAccount(node.WALLET_ADDRESS, '', 1000);
+
+  const myContract = getContract(node.web3, contractAddress);
 
   return myContract.methods.set(temp).send({
-    from: address,
-    privateFor: [publicKey],
-  }).then((receipt) => {
+    from: node.WALLET_ADDRESS,
+    privateFor,
+  })
+  .on('error', console.error)
+  .then((receipt) => {
     return receipt.status;
   });
 }
 
-async function getTemperature(web3, contractAddress) {
-  const myContract = await getContract(web3, contractAddress);
-  const address = await getAddress(web3);
-  await web3.eth.personal.unlockAccount(address,'',1000)
-  return myContract.methods.get().call()
-  .then(result => result)
-  .catch(error => null)
+async function getTemperature({ node, contractAddress }) {
+  const myContract = getContract(node.web3, contractAddress);
+
+  return myContract.methods.get().call().then(result => result);
 }
 
 main()
@@ -382,12 +642,10 @@ main()
 
 where
 
-* `formatContract` — the function to format the contract in ABI and bytecode for deployment.
-* `deployContract` — the function to deploy the contract with Ethereum JavaScript API libraries.
+* `deployContract` — the function to deploy the contract.
 * `setTemperature` — the function to write the temperature value.
 * `getTemperature` — the function to fetch the temperature value.
-* `process.env` — loads your nodes access variables from the `.env` file.
-* `privateFor` — the Quorum specific parameter that sets the transaction private for the account identified by `publicKey`.
+* `privateFor` — the Quorum specific parameter that sets the transaction private for an account in your `.env` file.
 
 ### Run the transaction
 
@@ -395,15 +653,306 @@ where
 node private.js
 ```
 
-This will deploy the contract, set the temperature value through the `publicKey` account, read the temperature value through the `publicKey` account, and fail to set and read the temperature through other accounts.
+This will deploy the contract, set the temperature value, and read the temperature value through an account in your `.env` file. This will also fail to set and read the temperature through the two other accounts in your `.env` file.
 
 Example output:
 
 ``` sh
-Contract address after deployment: 0x60b695429838abA534273396ab90e25346F571B8
-[Node3] temp retrieved after updating contract from external nodes: null
-[Node2] temp retrieved after updating contract from internal nodes: 12
-[Node3] temp retrieved from external nodes after update null
+Contract address after deployment: 0xB89FBFE18E1169b5236A87A526e330e9AF101973
+Unauthorized - Transaction status: true
+Unauthorized - Retrieved contract Temperature null
+Authorized - Transaction status: true
+Authorized - Retrieved contract Temperature 18
+```
+
+## Deploy the contract as public and run an externally signed public transaction
+
+### Create a public-externalSign.js file
+
+In your project's root directory, create a `public-externalSign.js` file that will:
+
+1. Compile, sign the deployment transaction externally, and deploy the contract through Node 1.
+2. Set the temperature to `3` through Node 2.
+3. Retrieve the temperature through Node 3.
+
+``` js
+const { compileContract } = require('./utils/compiler.js');
+const { getNonce } = require("./utils/jsonRPC.js");
+const {
+  node1,
+  node2,
+  node3,
+} = require('./utils/environment.js');
+let temperatureMonitor = {};
+
+const main = async () => {
+  const { interface, bytecode } = compileContract('temperatureMonitor.sol');
+  temperatureMonitor = {
+    interface,
+    bytecode,
+  };
+
+  const contractAddress = await deployContract(node3);
+  console.log(`Contract deployed at address: ${contractAddress}`);
+
+  const status = await setTemperature({
+    node: node2,
+    contractAddress,
+    temp: 3,
+  });
+  console.log(`Transaction status: ${status}`);
+
+  const temp = await getTemperature({
+    node: node3,
+    contractAddress,
+  });
+  console.log('Retrieved contract Temperature', temp);
+};
+
+async function deployContract(node) {
+  // encode contract
+  const contract = new node.web3.eth.Contract(temperatureMonitor.interface);
+  const encodedABI = contract
+    .deploy({
+      data: temperatureMonitor.bytecode,
+    })
+    .encodeABI();
+
+  const nonce = await getNonce(node.WALLET_ADDRESS, node.RPC);
+
+  return node.web3.eth.accounts.signTransaction({
+    nonce,
+    gasPrice: 0,
+    gasLimit: 4300000,
+    value: 0,
+    data: encodedABI,
+  }, node.WALLET_KEY)
+    .then(payload => {
+      return node.web3.eth.sendSignedTransaction(payload.rawTransaction)
+        .then(receipt => receipt.contractAddress)
+        .catch(error => error.message);
+    });
+}
+
+async function setTemperature({ node, contractAddress, temp }) {
+  const encodedABI = node.web3.eth.abi.encodeFunctionCall(
+    temperatureMonitor.interface.find(x => x.name === 'set'),
+    [temp],
+  );
+
+  const nonce = await getNonce(node.WALLET_ADDRESS, node.RPC);
+
+  return node.web3.eth.accounts.signTransaction({
+    nonce,
+    to: contractAddress,
+    gasLimit: '0x47b760',
+    gasPrice: "0x0",
+    data: encodedABI,
+  }, node.WALLET_KEY)
+    .then(payload => {
+      return node.web3.eth.sendSignedTransaction(payload.rawTransaction)
+        .then(receipt => receipt.status)
+        .catch(error => error.message);
+    });
+}
+
+async function getTemperature({ contractAddress, node }) {
+  const contract = new node.web3.eth.Contract(
+    temperatureMonitor.interface,
+    contractAddress,
+  );
+
+  return contract.methods
+    .get().call({
+      from: node.WALLET_ADDRESS,
+    })
+    .then(data => data)
+    .catch(error => error.message);
+}
+
+main();
+```
+
+where
+
+* `deployContract` — the function to deploy the contract.
+* `setTemperature` — the function to write the temperature value.
+* `getTemperature` — the function to fetch the temperature value.
+* `node.web3.eth.accounts.signTransaction` — externally signs the transaction.
+
+Example output:
+
+``` sh
+Contract deployed at address: 0xdA9b9ce46FAA89e025e91696f46AbC5CA2557dF8
+Transaction status: true
+Retrieved contract Temperature 3
+```
+
+## Deploy the contract as private and run an externally signed private transaction
+
+### Create a private-externalSign.js file
+
+The `private-externalSign.js` file will:
+
+1. Compile and deploy the contract as private through Node 1.
+2. Set the temperature to `22` through Node 2.
+3. Retrieve the temperature through Node 2.
+4. Attempt to set the temperature through Node 3 and fail.
+5. Attempt to retrieve the temperature through Node 3 and fail.
+
+``` js
+const { compileContract } = require('./utils/compiler.js');
+const { serializeAndSign } = require('./utils/helper.js');
+
+const {
+  node1,
+  node2,
+  node3,
+} = require('./utils/environment.js');
+let temperatureMonitor = {};
+
+const main = async () => {
+  const { interface, bytecode } = compileContract('temperatureMonitor.sol');
+  temperatureMonitor = {
+    interface,
+    bytecode,
+  };
+
+  const contractAddress = await deployContract(node1, [node2.TM_PK]);
+  console.log(`Contract deployed at address: ${contractAddress}`);
+
+  const statusUnAuthorized = await setTemp({
+    to: contractAddress,
+    node: node3,
+    privateFor: [node1.TM_PK],
+    temp: 8,
+  });
+
+  console.log(`Set Temp status from unauthorized node:  ${statusUnAuthorized}`);
+  const resultUnAuthorized = await getTemp({
+    contractAddress,
+    node: node3,
+  });
+  console.log(`Contract temperature: ${resultUnAuthorized}`);
+
+  const status = await setTemp({
+    to: contractAddress,
+    node: node2,
+    privateFor: [node1.TM_PK],
+    temp: 22,
+  });
+  console.log(`Set temp status from authorized node: ${status}`);
+  const result = await getTemp({
+    contractAddress,
+    node: node2,
+  });
+  console.log(`Contract temperature after update: ${result}`);
+};
+
+async function deployContract(node, privateFor) {
+  // encode contract
+  const contract = new node.web3.eth.Contract(temperatureMonitor.interface);
+  const encodedABI = contract
+    .deploy({
+      data: temperatureMonitor.bytecode,
+    })
+    .encodeABI();
+
+  // store the bytecode in tessera using the storeRawRequest API
+  const rawTxHash = await node.txManager.storeRawRequest(
+    encodedABI,
+    node.TM_PK,
+  );
+
+  const privateSignedTxHex = await serializeAndSign(node, {
+    to: '',
+    data: `0x${rawTxHash}`,
+  });
+
+  console.log('rawTx', privateSignedTxHex);
+
+  return node.txManager
+    .sendRawRequest(privateSignedTxHex, privateFor)
+    .then(tx => {
+      console.log(tx);
+
+      return tx.contractAddress;
+    })
+    .catch(error => error);
+}
+
+async function setTemp({ to, node, privateFor, temp}) {
+  const encodedABI = node.web3.eth.abi.encodeFunctionCall(
+    temperatureMonitor.interface.find(x => x.name === 'set'),
+    [temp],
+  );
+  
+  const rawTxHash = await node.txManager.storeRawRequest(encodedABI, node.TM_PK);
+
+  const privateSignedTxHex = await serializeAndSign(node, {
+    to,
+    data: `0x${rawTxHash}`,
+  });
+
+  console.log('privateSignedTxHex', privateSignedTxHex);
+
+  return node.txManager
+    .sendRawRequest(privateSignedTxHex, privateFor)
+    .then(tx => {
+      console.log(tx);
+
+      return `${tx.status} - ${tx.blockHash}`;
+    })
+    .catch(error => error.message);
+}
+
+async function getTemp({ contractAddress, node }) {
+  const contract = new node.web3.eth.Contract(
+    temperatureMonitor.interface,
+    contractAddress,
+  );
+
+  return contract.methods
+    .get().call({
+      from: node.WALLET_ADDRESS,
+    })
+    .then(data => data)
+    .catch(error => error.message);
+}
+
+main();
+```
+
+where
+
+* `deployContract` — the function to deploy the contract.
+* `setTemperature` — the function to write the temperature value.
+* `getTemperature` — the function to fetch the temperature value.
+* `serializeAndSign` — externally signs the transaction.
+* `privateFor` — the Quorum specific parameter that sets the transaction private for an account.
+
+### Run the transaction
+
+``` sh
+node private-externalSign.js
+```
+
+This will deploy the contract, set the temperature value, and read the temperature value through an account in your `.env` file. This will also fail to set and read the temperature through the two other accounts in your `.env` file.
+
+Example output:
+
+``` sh
+rawTx 0xf88d808083419ce08080b840350ca231bc4c7dbd4f2bc99361b3dedaa74e8cf37f1eca19f1105f1b93df15c54dbdd3b21afe13d083d109c990e60d537406c2f76ee290d0e546bebc092d2b6025a0538d82a8481a53a1ac0736d6d4e9682919b94858bf1f592d177708bab30e447fa051c0aa24c0a67f75ce2cd1d57dc3fe4c5e77e42526fb1b564016d9f1dfee7649
+...
+Contract deployed at address: 0x993369D96bDdB6FfB30Ed89FC7d1aED261A752BF
+privateSignedTxHex 0xf8a1808083419ce094993369d96bddb6ffb30ed89fc7d1aed261a752bf80b840032532e7aa75b4779a48b5c4b0342e0bbe40c8c96918da703533133bafd1e61e2371d2438836a799b5c602d99e6fe0373f86ce9dff98ce8a057be5a396edd75425a0f9a575f2c0372e944e07f26b8fbb2e5cfc0322ebb3d4b358d8484af31dde962aa0787ba3ba4efe6db7bdcd8b6dcba6ec01570e98df1d3ad446075c5b1e36943b37
+...
+Set Temp status from unauthorized node:  true - 0xebc7533a3c26f08e46dd61367d2d0581e519b6583c091c8ddc3fc3865f414643
+Contract temperature: null
+privateSignedTxHex 0xf8a1808083419ce094993369d96bddb6ffb30ed89fc7d1aed261a752bf80b840eec5f07fdc2a33abe831d12cd2c4c960b17cd64dfede607cb7fb94c306d6a656d22163edc992d2c12ceed47e59b875fe8957b24d81667056ef8eafff1a93b62125a09b3b161a689651ef634f38cbf30e16d5369536c24ca9faae3b8b6fc7f5bc6324a014a91232f03288597e9ff97416254bcf63e2116b8d2380f60867050d47a874e1
+...
+Set temp status from authorized node: true - 0x140d05bf4fd7881dbde709f54ba9bd60b0ffcf851692009b6d2bac6ce214ca34
+Contract temperature after update: 22
 ```
 
 ::: tip See also
