@@ -118,3 +118,10 @@ See [Getting started developing CorDapps](https://docs.corda.net/quickstart-inde
 ::: warning Java 8
 Corda requires at least Java 8u171 and does *not* support Java 9 or higher.
 :::
+
+::: tip See also
+
+* [Installing a CorDapp](/operations/corda/installing-a-cordapp)
+* [Node explorer](/operations/corda/node-explorer)
+
+:::
