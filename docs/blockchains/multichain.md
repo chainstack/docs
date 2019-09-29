@@ -23,9 +23,9 @@ The round-robin scheme is the following:
 * Multiply the number of `mine` nodes by the `mining-diversity` value to get the value *spacing*.
 * Check if the `mine` node validating the current block validated a *spacing*-1 block. If the `mine` node validated a *spacing*-1 block, render the block invalid.
 
-The `mining-diversity` parameter cannot be changed once the chain is initialized. Chainstack deploys MultiChain with the default `mining-diversity` value set to `0.3`.
+The default `mining-diversity` parameter is `0.3` and cannot be changed once the chain is initialized.
 
-Round-robin example with 10 `mine` nodes deployed with Chainstack:
+Round-robin example with 10 `mine` nodes with  `mining-diversity` set to `0.3`:
 
 * 10 nodes permitted to validate blocks.
 * 10*0.3=3. *spacing* is 3. *spacing*-1 is 2.

@@ -31,7 +31,7 @@ A Raft Quorum network always has the nodes in one of the following roles:
 
 The minter node creates the blocks and the verifier nodes follow the minter node.
 
-By default, the very first node you deploy with Chainstack as part of your Raft Quorum network assumes the minter role.
+By default, the very first node you deploy as part of your Raft Quorum network assumes the minter role.
 
 Each subsequent node that you deploy as part of the same network assumes the verifier role.
 
@@ -70,11 +70,6 @@ Example with **f** is 3:
 #### Transaction finality
 
 An IBFT Quorum network reaches transaction finality on a per-block basis. Every block formed in network is validated and sealed by nodes before being added to the chain. This per-block validation and sealing provide absolute transaction finality and remove any chance of forking or any other possibility to undo a transaction.
-
-All nodes in a Quorum network deployed with Chainstack have the following two roles at the same time:
-
-* Validator — the node is a part of the group of nodes that validate the block to seal it and include in the chain.
-* Proposer — the node proposes a block to the group of the validator nodes.
 
 The process of sealing and including a block in the chain is the following:
 

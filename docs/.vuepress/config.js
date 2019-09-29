@@ -89,6 +89,8 @@ module.exports = {
                         collapsable: true,
                         children: [
                             '/operations/corda/',
+                            '/operations/corda/node-explorer',
+                            '/operations/corda/installing-a-cordapp',
                             '/operations/corda/tools',
                         ]
                     },
