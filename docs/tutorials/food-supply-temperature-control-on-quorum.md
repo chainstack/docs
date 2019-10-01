@@ -2,7 +2,8 @@
 
 In this tutorial, you will:
 
-* Create a contract that sets and retrieves through your [Quorum](/blockchains/quorum) nodes.
+* Create a [Quorum](/blockchains/quorum) network.
+* Create a contract that sets and retrieves through your nodes.
 * Deploy the contract on your Quorum network, and run a public transaction.
 * Deploy the contract on your Quorum network, and run a private transaction.
 * Deploy the contract on your Quorum network, externally sign a public transaction, and run the public transaction.
@@ -72,7 +73,7 @@ npm install web3
 
 #### Install Solidity JavaScript Compiler
 
-The Solidity JavaScript compiler will compile the contract.
+The Solidity JavaScript compiler will compile the contract into bytecode.
 
 Install in your project directory:
 
@@ -165,12 +166,14 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 
 In your project's `utils` directory, create the following scripts:
 
-* `compiler.js` — a script to compile the contract into bytecode.
-* `environment.js` — a script to mount the Tessera nodes for the contract deployment and transactions.
-* `helper.js` — a script to create and sign private transactions.
-* `jsonRPC.js` — a script to get the block nonce to ensure a public transaction does not overwrite an existing one.
+* `compiler.js` — a script to compile the contract into the bytecode and interface formats.
+* `environment.js` — a script to set up the environment with a Web3 instance a Tessera transaction manager instance for the scripts executing the contract deployment and transactions.
+* `helper.js` — a script to serialize and sign transactions.
+* `jsonRPC.js` — a script to execute RPC calls to Geth directly.
 
 #### Create compiler.js
+
+This script will compile the contract into bytecode and interface formats.
 
 In your project's `utils` directory, create `compiler.js`:
 
@@ -234,6 +237,8 @@ module.exports = {
 
 #### Create environment.js
 
+This script will set up your environment with a Web3 instance and a Tessera transaction manager instance for the scripts to deploy the contract and sign the transactions.
+
 In your project's `utils` directory, create `environment.js`:
 
 ``` js
@@ -296,6 +301,8 @@ module.exports = {
 
 #### Create helper.js
 
+This script will serialize and sign the transactions.
+
 In your project's `utils` directory, create `helper.js`:
 
 ``` js
@@ -339,6 +346,8 @@ module.exports = {
 ```
 
 #### Create jsonRPC.js
+
+This script will execute RPC call to Geth directly.
 
 In your project's `utils` directory, create `jsonRPC.js`:
 
@@ -548,8 +557,8 @@ The `private.js` file will:
 1. Compile and deploy the contract as private through Node 1.
 2. Set the temperature to `18` through Node 2.
 3. Retrieve the temperature through Node 2.
-4. Attempt to set the temperature through Node 3 and fail.
-5. Attempt to retrieve the temperature through Node 3 and fail.
+4. Attempt to set the temperature through Node 3, pass the transaction, and fail to update the contract value.
+5. Attempt to retrieve the temperature through Node 3 and receive null instead of the contract value.
 
 ``` js
 const { compileContract } = require('./utils/compiler.js');
@@ -809,8 +818,8 @@ The `private-externalSign.js` file will:
 1. Compile and deploy the contract as private through Node 1.
 2. Set the temperature to `22` through Node 2.
 3. Retrieve the temperature through Node 2.
-4. Attempt to set the temperature through Node 3 and fail.
-5. Attempt to retrieve the temperature through Node 3 and fail.
+4. Attempt to set the temperature through Node 3, pass the transaction, and fail to update the contract value.
+5. Attempt to retrieve the temperature through Node 3 and receive null instead of the contract value.
 
 ``` js
 const { compileContract } = require('./utils/compiler.js');
