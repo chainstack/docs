@@ -18,7 +18,7 @@
 
 ### Breaking changes
 
-* Unprotected endpoints for Quorum and Ethereum nodes [will be deprecated on October 1, 2019](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/).
+* Unprotected endpoints for Quorum and Ethereum nodes [deprecated on October 1, 2019](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/).
 
 ## Chainstack 1.2.1
 
