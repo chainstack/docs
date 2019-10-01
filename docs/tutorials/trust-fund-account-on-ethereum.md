@@ -20,7 +20,7 @@ In this tutorial, you will:
 ::: tip Ethereum Ropsten testnet
 For illustration purposes, this tutorial uses Ethereum Ropsten testnet.
 
-For Ethereum mainnet, the steps are exactly the same, except that you would need to use mainnet ether.
+For Ethereum mainnet, the steps are exactly the same, except you need to use mainnet ether.
 :::
 
 ## Prerequisites
@@ -31,7 +31,7 @@ For Ethereum mainnet, the steps are exactly the same, except that you would need
 
 ## Overview
 
-To get from zero to a deployed Trust Fund account on the Ethereum Ropsten, do the following:
+To get from zero to a deployed Trust Fund account on the Ethereum Ropsten testnet, do the following:
 
 1. With Chainstack, create a [Public chain project](/glossary/public-chain-project).
 1. With Chainstack, join the Ethereum Ropsten testnet.
@@ -39,8 +39,8 @@ To get from zero to a deployed Trust Fund account on the Ethereum Ropsten, do th
 1. Set up your MetaMask to work through a Chainstack node.
 1. With Remix IDE, create and compile the Trust Fund smart contract.
 1. Set up your Remix IDE to work through a Chainstack node.
-1. With Remix IDE, deploy the contract to Ethereum Ropsten testnet.
-1. With Remix IDE, interact with the contract on Ethereum Ropsten testnet.
+1. With Remix IDE, deploy the contract to the Ethereum Ropsten testnet.
+1. With Remix IDE, interact with the contract on the Ethereum Ropsten testnet.
 
 ## Step-by-step
 
@@ -58,7 +58,7 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 
 ### Set up MetaMask
 
-See [Using MetaMask with Chainstack](/operations/ethereum/using-metamask-with-chainstack).
+See [Tools: MetaMask](/operations/ethereum/tools#metamask).
 
 Having set up your MetaMask to interact through a Chainstack node, your Remix IDE will also interact with the network through a Chainstack node.
 
@@ -68,18 +68,10 @@ In your MetaMask, fund each account with Ropsten ether by clicking **Deposit** >
 
 ### Create and compile the Trust Fund smart contract
 
-1. Open [Remix IDE](https://remix.ethereum.org/)
-
-2. On the home page, click **Environments** > **Solidity**:
-
-![Environment Solidity](./assets/trust-fund-account-on-ethereum/remix-home-solidity.png)
-
-3. On the left pane, click **File explorers** > plus sign:
-
-![Add .sol](./assets/trust-fund-account-on-ethereum/remix-plus-sign.png)
-
+1. Open [Remix IDE](https://remix.ethereum.org/).
+2. On the home page, click **Environments** > **Solidity**.
+3. On the left pane, click **File explorers** > plus sign.
 4. In the modal, give any name to your contract. For example, `transferableTrustFund.sol`.
-
 5. Put in the contract code:
 
 ``` js
@@ -125,6 +117,8 @@ This is your Trust Fund account smart contract:
 ``` js
 contract TransferableTrustFundAccount {
     address owner;
+    ...
+}
 ```
 
 * Only the contract owner can withdraw all funds from the contract through:
@@ -191,7 +185,7 @@ On the left pane, click **Deploy & run transactions** > **Deploy**:
 
 ![Deploy](./assets/trust-fund-account-on-ethereum/remix-deploy.png)
 
-This will engage your MetaMask to deploy the contract to Ethereum Ropsten testnet through your currently selected MetaMask account. Click **Confirm** in the MetaMask modal.
+This will engage your MetaMask to deploy the contract to the Ethereum Ropsten testnet through your currently selected MetaMask account. Click **Confirm** in the MetaMask modal.
 
 ### Interact with the Trust Fund smart contract
 
@@ -217,7 +211,6 @@ Expand the contract under **Deployed Contracts**:
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
-* [Using MetaMask with Chainstack](/operations/ethereum/using-metamask-with-chainstack)
 * [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
 * [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
 
