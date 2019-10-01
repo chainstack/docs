@@ -57,7 +57,6 @@ module.exports = {
                         children: [
                             '/operations/ethereum/',
                             '/operations/ethereum/networks',
-                            '/operations/ethereum/using-metamask-with-chainstack',
                             '/operations/ethereum/tools',
                         ]
                     },

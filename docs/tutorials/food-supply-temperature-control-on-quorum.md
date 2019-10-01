@@ -2,11 +2,8 @@
 
 In this tutorial, you will:
 
-* Create a contract that sets and retrieves through your [Quorum](/blockchains/quorum) nodes.
-* Deploy the contract on your Quorum network, and run a public transaction.
-* Deploy the contract on your Quorum network, and run a private transaction.
-* Deploy the contract on your Quorum network, externally sign a public transaction, and run the public transaction.
-* Deploy the contract on your Quorum network, externally sign a private transaction, and run the private transaction.
+* Create a contract for public transactions, deploy it on your [Quorum](/blockchains/quorum) network, and run a public transaction.
+* Create a contract for private transactions, deploy it on your Quorum network, and run a private transaction.
 
 The premise of the Quorum network in this tutorial is the following:
 
@@ -15,8 +12,6 @@ The premise of the Quorum network in this tutorial is the following:
 * The storage facility monitors the temperature of the products it stores and records the temperature readings to the contract on the Quorum network.
 * There is a public contract that allows any party to read the temperature off the contract.
 * There is a private contract that allows only a specifically set party to read the temperature off the contract.
-
-This tutorial uses [Quorum Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) for private contracts.
 
 Sample code for this tutorial is in the [GitHub repository](https://github.com/chainstack/quorum-iot-tutorial).
 
@@ -38,8 +33,6 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 * Create the contract.
 * Deploy the contract as public and run a public transaction.
 * Deploy the contract as private and run a private transaction.
-* Deploy the contract as public, externally sign the contract, and run a public transaction.
-* Deploy the contract as private, externally sign the contract, and run a private transaction.
 
 ## Prepare
 
@@ -54,8 +47,6 @@ See [Create a project](/platform/create-a-project).
 See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
 Deploy at least three nodes for this tutorial.
-
-See also [Quorum](/blockchains/quorum) for recommendations on the number of nodes.
 
 #### Get your Quorum node access and credentials
 
@@ -73,8 +64,12 @@ npm install web3
 
 The Solidity JavaScript compiler will compile the contract, the ABI, and bytecode formats that you will deploy on your Quorum network.
 
+::: warning
+This tutorial uses Solidity Compiler 0.4.25 for web3 compatibility.
+:::
+
 ``` sh
-npm install solc
+npm install solc@0.4.25
 ```
 
 ### Install and configure dotenv
@@ -88,43 +83,18 @@ npm install dotenv
 In your project folder, create an `.env` file:
 
 ``` js
-// Node 1
 RPC1='RPC_ENDPOINT'
-
-WALLET_ADDRESS1='DEFAULT_WALLET_ADDRESS'
-WALLET_KEY1='DEFAULT_WALLET_PRIVATE_KEY'
-
-TM_PUBLIC_KEY1='TRANSACTION_MANAGER_PUBLIC_KEY'
-TM1='TRANSACTION_MANAGER_ENDPOINT'
-
-// Node 2
+PK1='CONSTELLATION_PUBLIC_KEY'
 RPC2='RPC_ENDPOINT'
-
-WALLET_ADDRESS2='DEFAULT_WALLET_ADDRESS'
-WALLET_KEY2='DEFAULT_WALLET_PRIVATE_KEY'
-
-TM_PUBLIC_KEY2='TRANSACTION_MANAGER_PUBLIC_KEY'
-TM2='TRANSACTION_MANAGER_ENDPOINT'
-
-// Node 3
+PK2='CONSTELLATION_PUBLIC_KEY'
 RPC3='RPC_ENDPOINT'
-
-WALLET_ADDRESS3='DEFAULT_WALLET_ADDRESS'
-WALLET_KEY3='DEFAULT_WALLET_PRIVATE_KEY'
-
-TM_PUBLIC_KEY3='TRANSACTION_MANAGER_PUBLIC_KEY'
-TM3='TRANSACTION_MANAGER_ENDPOINT'
+PK3='CONSTELLATION_PUBLIC_KEY'
 ```
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`.
-* DEFAULT_WALLET_ADDRESS — your Quorum node default wallet address to deploy the contract. Available under **Access and credentials** > **Default wallet address**.
-* DEFAULT_WALLET_PRIVATE_KEY — a private key to your Quorum node default wallet address to sign the transaction. Available under **Access and credentials** > **Default wallet private key**.
-* TRANSACTION_MANAGER_PUBLIC_KEY — your Quorum node Tessera public key. The contract will use this key to make the contract private for the node that signs the contract transaction with the Tessera private key from this public-private key pair. Available under **Access and credentials** > **Transaction manager public key**.
-* TRANSACTION_MANAGER_ENDPOINT — an endpoint to the Tessera node deployed with your Quorum node. Available under **Access and credentials** > **Transaction manager endpoint**.
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* CONSTELLATION_PUBLIC_KEY — your Quorum node Constellation public key. Available under **Access and credentials** > **Transaction manager public key**.
 
 ## Create the contract
 

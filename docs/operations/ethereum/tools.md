@@ -6,6 +6,8 @@ Ethereum nodes with unprotected endpoints will be deprecated on October 1, 2019.
 
 ## Interaction tools
 
+### Geth
+
 Interact with your Ethereum node using [Geth](https://github.com/ethereum/go-ethereum/wiki/geth).
 
 1. Install [Geth](https://github.com/ethereum/go-ethereum).
@@ -53,6 +55,24 @@ Example below demonstrates how to get the balance of an address in wei value and
 > web3.fromWei(web3.eth.getBalance("0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae"))
 642538.078574759898951277
 ```
+
+### MetaMask
+
+You can set your [MetaMask](https://metamask.io/) to interact through your Ethereum nodes deployed with Chainstack.
+
+1. Open your MetaMask and click the network selector.
+1. In the network selector, click **Custom RPC**.
+1. In the **New RPC URL** field, enter the URL in the following format:
+
+https://USERNAME:PASSWORD@RPC_ENDPOINT
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* RPC_ENDPOINT — your Ethereum node RPC endpoint.
+
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 ## Development tools
 
@@ -111,7 +131,7 @@ chainstack: {
 
 To make Remix IDE interact with the network through a Chainstack node:
 
-1. Get [MetaMask](https://metamask.io/) and set it to interact through a Chainstack node. See [Using MetaMask with Chainstack](/operations/ethereum/using-metamask-with-chainstack).
+1. Get [MetaMask](https://metamask.io/) and set it to interact through a Chainstack node. See [Interacting through MetaMask](#metamask).
 1. In Remix IDE, navigate to the **Deploy** tab. Select **Injected Web3** in **Environment**.
 
 This will engage MetaMask and make Remix IDE interact with the network through a Chainstack node.
@@ -122,6 +142,5 @@ For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tu
 
 * [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
 * [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
-* [Using MetaMask with Chainstack](/operations/ethereum/using-metamask-with-chainstack)
 
 :::
