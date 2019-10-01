@@ -51,6 +51,8 @@ Example:
 * A Raft network with 5 nodes can tolerate 2 node failure. The majority of nodes in a 5 node network is 3; 5=2(2)+1.
 * A Raft network with 6 nodes can tolerate 2 node failure. The majority of nodes in a 6 node network is 4.
 
+The minimum recommended number of nodes in a Raft network is 5.
+
 #### Transaction finality
 
 A Quorum Raft network reaches transaction finality on a per-block basis.
@@ -80,6 +82,8 @@ Example with **f** is 3:
 * Total nodes in the network: 10
 * Maximum number of faulty nodes can be tolerated: 3
 * The network reaches consensus with the number of non-faulty nodes: 7
+
+The minimum recommended number of nodes in an IBFT network is 4.
 
 #### Transaction finality
 
