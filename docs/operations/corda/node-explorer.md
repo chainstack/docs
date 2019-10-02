@@ -10,13 +10,13 @@ With the Corda Node Explorer, you can:
 
 ## Install the Corda Finance CorDapp on your node
 
-In order to connect to your node using the Node Explorer, you will need Corda's default Finance CorDapp to be installed on the node that you want to explore. This enables basic cash issuance and payment transactions.
+To connect to your node using the Node Explorer, you will need Corda's default Finance CorDapp installed on the node that you want to explore. This enables basic cash issuance and payment transactions.
 
 1. Download the Corda Finance CorDapp JARs:
-    - [Contracts](https://ci-artifactory.corda.r3cev.com/artifactory/corda-releases/net/corda/corda-finance-contracts/4.1/corda-finance-contracts-4.1.jar)
-    - [Workflows](https://ci-artifactory.corda.r3cev.com/artifactory/corda-releases/net/corda/corda-finance-workflows/4.1/corda-finance-workflows-4.1.jar)
+    * [Contracts](https://ci-artifactory.corda.r3cev.com/artifactory/corda-releases/net/corda/corda-finance-contracts/4.1/corda-finance-contracts-4.1.jar)
+    * [Workflows](https://ci-artifactory.corda.r3cev.com/artifactory/corda-releases/net/corda/corda-finance-workflows/4.1/corda-finance-workflows-4.1.jar)
 
-2. [Install](/operations/corda/installing-a-cordapp) the Corda Finance CorDapp contracts and workflows on your node.
+2. Install the Corda Finance CorDapp contracts and workflows on your node. See [Installing a CorDapp](/operations/corda/installing-a-cordapp).
 
 ## Install and run the Node Explorer
 
