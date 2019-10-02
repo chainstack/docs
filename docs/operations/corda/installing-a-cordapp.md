@@ -1,17 +1,17 @@
 # Installing a CorDapp
 
-You can install [CorDapps](/blockchains/corda#cordapp) on your nodes.
+You can install [CorDapps](/blockchains/corda#cordapp) on your nodes as a set of JAR files.
 
-Your node will be rebooted automatically to load your CorDapp.
+On installation, the node will be rebooted automatically to complete installation of the CorDapp.
 
 To install a CorDapp:
 
 1. On your node's **Access and credentials** page, click **CorDapps**.
-2. Click **Add CorDapp**.
-3. Upload the contract jar file and the workflow jar file of your CorDapp one by one.
+2. Click **Install CorDapp**.
+3. Upload either the contract or workflow JAR file of your CorDapp.
 4. Click **Install**.
 
-Chainstack will reboot your node and load your CorDapp.
+Chainstack will reboot your node and install your CorDapp.
 
 ::: tip See also
 
