@@ -92,7 +92,7 @@ module.exports = {
  networks: {
     chainstack: {
         provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
-        network_id: 1
+        network_id: "*"
     },
    }
   }
