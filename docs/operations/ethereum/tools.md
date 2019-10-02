@@ -6,6 +6,8 @@ Ethereum nodes with unprotected endpoints will be deprecated on October 1, 2019.
 
 ## Interaction tools
 
+### Geth
+
 Interact with your Ethereum node using [Geth](https://github.com/ethereum/go-ethereum/wiki/geth).
 
 1. Install [Geth](https://github.com/ethereum/go-ethereum).
@@ -54,6 +56,24 @@ Example below demonstrates how to get the balance of an address in wei value and
 642538.078574759898951277
 ```
 
+### MetaMask
+
+You can set your [MetaMask](https://metamask.io/) to interact through your Ethereum nodes deployed with Chainstack.
+
+1. Open your MetaMask and click the network selector.
+1. In the network selector, click **Custom RPC**.
+1. In the **New RPC URL** field, enter the URL in the following format:
+
+https://USERNAME:PASSWORD@RPC_ENDPOINT
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* RPC_ENDPOINT — your Ethereum node RPC endpoint.
+
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
+
 ## Development tools
 
 ### Truffle
@@ -72,7 +92,7 @@ module.exports = {
  networks: {
     chainstack: {
         provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
-        network_id: 1
+        network_id: "*"
     },
    }
   }
@@ -106,6 +126,17 @@ chainstack: {
 ```
 
 3. Run `embark run chainstack` and Embark will deploy using Chainstack.
+
+### Remix IDE
+
+To make Remix IDE interact with the network through a Chainstack node:
+
+1. Get [MetaMask](https://metamask.io/) and set it to interact through a Chainstack node. See [Interacting through MetaMask](#metamask).
+1. In Remix IDE, navigate to the **Deploy** tab. Select **Injected Web3** in **Environment**.
+
+This will engage MetaMask and make Remix IDE interact with the network through a Chainstack node.
+
+For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
 
 ::: tip See also
 
