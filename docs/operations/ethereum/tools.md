@@ -1,9 +1,5 @@
 # Tools
 
-::: warning
-Ethereum nodes with unprotected endpoints will be deprecated on October 1, 2019. [Read more.](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/)
-:::
-
 ## Interaction tools
 
 ### Geth
