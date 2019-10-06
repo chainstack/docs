@@ -106,6 +106,7 @@ module.exports = {
                     '/tutorials/distributed-company-scrips-on-multichain',
                     '/tutorials/food-supply-temperature-control-on-quorum',
                     '/tutorials/loyalty-program-on-quorum',
+                    '/tutorials/no-ticket-scalping-cordapp-on-corda',
                     ]
             },
             {

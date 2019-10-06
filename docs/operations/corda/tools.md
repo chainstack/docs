@@ -2,6 +2,88 @@
 
 ## Interaction tools
 
+### Corda standalone shell
+
+Interact with your Corda node using [Corda standalone shell](https://docs.corda.net/head/shell.html#the-standalone-shell).
+
+#### Prerequisites
+
+* Install Java 8. See [See Corda docs: Set-up instructions](https://docs.corda.net/getting-set-up.html#set-up-instructions).
+* Download Corda standalone shell from [Corda artifactory](https://software.r3.com/artifactory/corda-releases/net/corda/corda-tools-shell-cli/4.1/corda-tools-shell-cli-4.1.jar).
+* A Corda node deployed with Chainstack.
+
+#### Running the standalone shell without CorDapps
+
+You can connect to your Corda node and interact with it in shell without the option to run the CorDapps on the node.
+
+``` sh
+java -jar corda-tools-shell-cli-4.1.jar --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD
+```
+
+where
+
+* CORDA_RPC_HOSTNAME — your Corda node RPC hostname.
+* CORDA_RPC_PORT — your Corda node RPC port.
+* CORDA_RPC_USER — your Corda node RPC username.
+* CORDA_RPC_PASSWORD — your Corda node RPC password.
+
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
+
+Example:
+
+``` sh
+$ java -jar corda-tools-shell-cli-4.1.jar --host=nd-123-456-789.rg-123-456.p2pify.com --port=12345 --user=admin --password=pass
+
+   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/
+/ /___  /_/ / /  / /_/ / /_/ /
+\____/     /_/   \__,_/\__,_/
+--- Corda Open Source 4.1 (c11f6c1) ---
+
+Standalone Shell connected to corda-1234.rg-123-456.p2pify.com:12345
+```
+
+Once connected, run `help` to see the list of available commands.
+
+#### Running the standalone shell with CorDapps
+
+You can connect to your Corda node and interact with it in shell with the option to run the CorDapps on the node.
+
+To be able to interact with the CorDapps through shell, you must have the CorDapp contract and workflow JAR files both locally on your machine and on the node you are connecting to.
+
+``` sh
+java -jar corda-tools-shell-cli-4.1.jar --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD --cordapp-directory=/host/path/to/cordapps
+```
+
+where
+
+* CORDA_RPC_HOSTNAME — your Corda node RPC hostname.
+* CORDA_RPC_PORT — your Corda node RPC port.
+* CORDA_RPC_USER — your Corda node RPC username.
+* CORDA_RPC_PASSWORD — your Corda node RPC password.
+* `--cordapp-directory=/cordapps` — the parameter to interact with your CorDapps. Without providing it, you will not be able interact with your CorDapps in the shell.
+* /host/path/to/cordapps — path to your local directory with the contract and workflow JAR files that you uploaded to your Corda node.
+
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
+
+Example:
+
+``` sh
+$ java -jar corda-tools-shell-cli-4.1.jar --host=nd-123-456-789.rg-123-456.p2pify.com --port=12345 --user=admin --password=pass --cordapp-directory=⁨/Users/username/Downloads/cordapps
+
+   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/
+/ /___  /_/ / /  / /_/ / /_/ /
+\____/     /_/   \__,_/\__,_/
+--- Corda Open Source 4.1 (c11f6c1) ---
+
+Standalone Shell connected to corda-1234.rg-123-456.p2pify.com:12345
+```
+
+Once connected, run `flow list` to see the CorDapps on the node.
+
 ### Chainstack standalone shell
 
 Interact with your Corda node using [Chainstack standalone shell](https://github.com/chainstack/corda-shell-docker).
@@ -11,14 +93,53 @@ Interact with your Corda node using [Chainstack standalone shell](https://github
 * Download and install Docker. See [Get Started with Docker](https://www.docker.com/get-started).
 * A Corda node deployed with Chainstack.
 
-#### Running the standalone shell
+#### Running the standalone shell without CorDapps
+
+You can connect to your Corda node and interact with it in shell without the option to run the CorDapps on the node.
 
 ``` sh
-docker run -it chainstack/corda-shell --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD --cordapp-directory=/cordapps
+docker run -it chainstack/corda-shell --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD
 ```
 
 where
 
+* CORDA_RPC_HOSTNAME — your Corda node RPC hostname.
+* CORDA_RPC_PORT — your Corda node RPC port.
+* CORDA_RPC_USER — your Corda node RPC username.
+* CORDA_RPC_PASSWORD — your Corda node RPC password.
+
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
+
+Example:
+
+``` sh
+$ docker run -it chainstack/corda-shell --host=corda-1234.rg-123-456.p2pify.com --port=12345 --user=username --password=password
+
+   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/
+/ /___  /_/ / /  / /_/ / /_/ /
+\____/     /_/   \__,_/\__,_/
+--- Corda Open Source 4.1 (c11f6c1) ---
+
+Standalone Shell connected to corda-1234.rg-123-456.p2pify.com:12345
+```
+
+Once connected, run `help` to see the list of available commands.
+
+#### Running the standalone shell with CorDapps
+
+You can connect to your Corda node and interact with it in shell with the option to run the CorDapps on the node.
+
+To be able to interact with the CorDapps through shell, you must have the CorDapp contract and workflow JAR files both locally on your machine and on the node you are connecting to.
+
+``` sh
+docker run -it -v /host/path/to/cordapps:/cordapps chainstack/corda-shell --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD --cordapp-directory=/cordapps
+```
+
+where
+
+* /host/path/to/cordapps — path to your local directory with the contract and workflow JAR files that you uploaded to your Corda node.
 * CORDA_RPC_HOSTNAME — your Corda node RPC hostname.
 * CORDA_RPC_PORT — your Corda node RPC port.
 * CORDA_RPC_USER — your Corda node RPC username.
@@ -30,7 +151,7 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 Example:
 
 ``` sh
-$ docker run -it chainstack/corda-shell --host=corda-1234.rg-123-456.int.chainstack.com --port=12345 --user=username --password=password
+$ docker run -it -v /Users/username/Downloads/cordapps:/cordapps chainstack/corda-shell --host=nd-123-456-789.rg-123-456.p2pify.com --port=12345 --user=username --password=password --cordapp-directory=/cordapps
 
    ______               __
   / ____/     _________/ /___ _
@@ -39,10 +160,10 @@ $ docker run -it chainstack/corda-shell --host=corda-1234.rg-123-456.int.chainst
 \____/     /_/   \__,_/\__,_/
 --- Corda Open Source 4.1 (c11f6c1) ---
 
-Standalone Shell connected to corda-1234.rg-123-456.int.chainstack.com:12345
+Standalone Shell connected to corda-1234.rg-123-456.p2pify.com:12345
 ```
 
-Once connected, run `help` to see the list of available commands.
+Once connected, run `flow list` to see the CorDapps on the node.
 
 ### Using a client with the CordaRPCClient class
 
@@ -66,7 +187,7 @@ To use the webserver, do the following:
 git clone https://github.com/corda/samples.git
 ```
 
-1. Edit the `spring-webserver/src/main/resources/application.properties` file:
+2. Edit the `spring-webserver/src/main/resources/application.properties` file:
 
 ```
 server.port=SERVER_PORT
@@ -86,16 +207,16 @@ where
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
-2. Run the Spring webserver:
+3. Run the Spring webserver:
 
 ``` sh
 ./gradlew runPartyAServer
 ```
 
-This will engage the `runPartyAServer` task specified in `build.gradle` and start the server connected to your node.
+This will engage the `runPartyAServer` task specified in `build.gradle`, start the server, and connect the server to your node.
 
 ::: warning
-The task progress for the webserver start printed in the output will never reach 100% completion. You can access the webserver at around 85%.
+The task progress for the webserver start printed in the output will never reach 100% completion. You can access the webserver at around 95%.
 :::
 
 You can access the server locally via `localhost:SERVER_PORT` or from a remote machine via `IP_ADDRESS:SERVER_PORT`.
@@ -106,10 +227,10 @@ Example:
 
 ``` sh
 $ curl http://localhost:10055/identities
-[O=Chainstack987, L=Singapore, C=SG]
+[OU=Organization-ND-123-456-789, O=Organization, L=Singapore, C=SG]
 ```
 
-You can also write your own REST endpoints for your CorDapps. For the examples, see [Corda samples](https://github.com/corda/samples/) or TTK CORDAPP TUTORIAL.
+You can also write your own REST endpoints for your CorDapps. For the examples, see [Corda samples](https://github.com/corda/samples/) or the [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda) tutorial.
 
 ## Development tools
 
@@ -123,5 +244,6 @@ Corda requires at least Java 8u171 and does *not* support Java 9 or higher.
 
 * [Installing a CorDapp](/operations/corda/installing-a-cordapp)
 * [Node explorer](/operations/corda/node-explorer)
+* [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda)
 
 :::
