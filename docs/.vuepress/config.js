@@ -9,7 +9,7 @@ module.exports = {
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com' },
             { text: 'Log in', link: (process.env.CONSOLE_HOSTNAME ? 'https://' + process.env.CONSOLE_HOSTNAME : 'http://localhost:3000') + '/user/login' },
-            { text: 'Try free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
+            { text: 'Start for free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
         ],
         sidebar: [
             {
