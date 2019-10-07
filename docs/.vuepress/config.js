@@ -2,14 +2,14 @@ module.exports = {
     title: 'Chainstack documentation',
     description: "Chainstack documentation",
     head: [
-        ['link', { rel: 'icon', href: './favicon.ico' }]
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     themeConfig: {
         logo: '/img/docs-logo.svg',
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com' },
             { text: 'Log in', link: (process.env.CONSOLE_HOSTNAME ? 'https://' + process.env.CONSOLE_HOSTNAME : 'http://localhost:3000') + '/user/login' },
-            { text: 'Try free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
+            { text: 'Start for free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
         ],
         sidebar: [
             {
@@ -43,6 +43,7 @@ module.exports = {
                     '/platform/delete-a-node',
                     '/platform/delete-a-network',
                     '/platform/delete-a-project',
+                    '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
                 ]
             },
@@ -93,6 +94,7 @@ module.exports = {
                     '/tutorials/',
                     '/tutorials/academic-certificates-on-ethereum',
                     '/tutorials/asset-tokenization-on-ethereum',
+                    '/tutorials/trust-fund-account-on-ethereum',
                     '/tutorials/distributed-company-scrips-on-multichain',
                     '/tutorials/food-supply-temperature-control-on-quorum',
                     '/tutorials/loyalty-program-on-quorum',

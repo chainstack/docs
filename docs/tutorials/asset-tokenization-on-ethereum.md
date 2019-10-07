@@ -5,8 +5,8 @@ This tutorial will guide you through creating a tokenized asset contract and dep
 For illustration purposes, this contract does the following:
 
 * Creates a total supply of 1000 tokens specific to the asset.
-* Sets the token price to 0.1 Ether.
-* Lets anyone exchange Ether for the asset tokens.
+* Sets the token price to 0.1 ether.
+* Lets anyone exchange ether for the asset tokens.
 
 This tutorial uses [Embark](https://embark.status.im/) to test and deploy the contract.
 
@@ -15,7 +15,7 @@ This tutorial uses [Embark](https://embark.status.im/) to test and deploy the co
 * [Chainstack account](https://console.chainstack.com/) to deploy a Ropsten testnet node.
 * [Embark](https://embark.status.im/) to test and deploy the contract.
 * [Geth](https://geth.ethereum.org/) to create an Ethereum account that will deploy the contract.
-* [Metamask](https://metamask.io/) to interact with the contract.
+* [MetaMask](https://metamask.io/) to interact with the contract.
 
 ## Overview
 
@@ -25,10 +25,10 @@ To get from zero to an asset tokenization contract running on Ropsten, do the fo
 1. With Chainstack, deploy a Ropsten testnet node.
 1. With Embark, create a project and the contract.
 1. With Geth, create a new account.
-1. Import the account in Metamask and fund the account with Ropsten Ether.
+1. Import the account in MetaMask and fund the account with Ropsten ether.
 1. With Embark, deploy the contract through the Ropsten node.
 1. With Embark, check the contract with Cockpit.
-1. Interact with the contract through Metamask.
+1. Interact with the contract through MetaMask.
 
 ## Step-by-step
 
@@ -72,7 +72,7 @@ See [Join a public network](/platform/join-a-public-network).
       }
 
       function () external payable {
-        balance[msg.sender] += msg.value/pricePerEth; // adds asset tokens to how much Ether is sent by the investor
+        balance[msg.sender] += msg.value/pricePerEth; // adds asset tokens to how much ether is sent by the investor
         supply -= msg.value/pricePerEth;              //subtracts the remaining asset tokens from the total supply
       }
     }
@@ -94,11 +94,11 @@ You will use this account to deploy the contract.
     geth account list
     ```
 
-### Import the account in Metamask and fund the account
+### Import the account in MetaMask and fund the account
 
-1. In Metamask, click **Import Account** > **JSON FIle**.
+1. In MetaMask, click **Import Account** > **JSON FIle**.
 1. Select the keystore file that you created earlier.
-1. Fund the account with Ropsten Ether at [Ropsten Ethereum Faucet](https://faucet.ropsten.be/).
+1. Fund the account with Ropsten ether at [Ropsten Ethereum Faucet](https://faucet.ropsten.be/).
 
 ### Deploy the contract
 
@@ -193,7 +193,7 @@ Test the contract by calling:
 
 ### Interact with the contract
 
-1. In Metamask, send an amount of Ropsten Ether to the contract address.
+1. In MetaMask, send an amount of Ropsten ether to the contract address.
 1. In Cockpit, call the contract functions `supply()` and `check()` after a few seconds to see a change in values returned.
 
 ::: tip See also
