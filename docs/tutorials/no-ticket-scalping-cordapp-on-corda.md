@@ -19,7 +19,7 @@ In this tutorial you will:
 
 This tutorial will guide you through building and deploying a [CorDapp](/blockchains/corda#cordapp) that immutably registers ticket distribution with ticket distributors.
 
-The ticket registration is done by running [noScalpDapp](TTK) on [Corda nodes](/blockchains/corda#node).
+The ticket registration is done by running [noScalpDapp](https://github.com/chainstack/no-ticket-scalping-cordapp) on [Corda nodes](/blockchains/corda#node).
 
 What noScalpDapp does is it lets the nodes running it send each other mutually signed transactions with the event name and the number of tickets distributed. All verified by a [notary](/blockchains/corda#notary-service).
 
@@ -27,7 +27,7 @@ In this framework, one node equals one ticket distributor. A distributor can be 
 
 ## Prerequisites
 
-1. Clone the [CorDapp repository](TTK) to your machine.
+1. Clone the [CorDapp repository](https://github.com/chainstack/no-ticket-scalping-cordapp) to your machine.
 1. Set up your CorDapp development environment. See [Corda docs: Set-up instructions](https://docs.corda.net/getting-set-up.html#set-up-instructions).
 
 ## noScalpDapp
@@ -40,9 +40,9 @@ Each CorDapp has the following components:
 
 noScalpDapp is no exception and has the components written in Kotlin:
 
-* [noScalpFlow.kt](TTK) — the CorDapp flow that starts sessions between the nodes and builds and verifies the ticket distribution transactions.
-* [noScalpContract.kt](TTK) — the CorDapp contract for the ticket distribution transaction.
-* [noScalpState.kt](TTK) — the CorDapp state that creates an on-ledger fact that can be retrieved by the nodes participating in the transaction.
+* [noScalpFlow.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/workflows/src/main/kotlin/com/noScalpDapp/flows/noScalpFlow.kt) — the CorDapp flow that starts sessions between the nodes and builds and verifies the ticket distribution transactions.
+* [noScalpContract.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/contracts/noScalpContract.kt) — the CorDapp contract for the ticket distribution transaction.
+* [noScalpState.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/states/noScalpState.kt) — the CorDapp state that creates an on-ledger fact that can be retrieved by the nodes participating in the transaction.
 
 The code in `noScalpFlow`, `noScalpContract`, and `noScalpState` has comments explaining the what and how, so do check them.
 
@@ -184,18 +184,18 @@ The webserver is a Spring Boot implementation.
 
 For a general webserver implementation, see [Interaction tools: Using Spring Boot webserver](http://localhost:8080/operations/corda/tools#using-spring-boot-webserver).
 
-For this tutorial, the webserver implementation is in the `clients` directory of the [CorDapp repository](TTK) that you cloned at the start of the tutorial.
+For this tutorial, the webserver implementation is in the `clients` directory of the [CorDapp repository](https://github.com/chainstack/no-ticket-scalping-cordapp) that you cloned at the start of the tutorial.
 
 Components:
 
 * Backend:
-  * [MainController.kt](TTK) — the main component that does POST and GET mappings and calls [noScalpState.kt](TTK).
-  * [NodeRPCConnection.kt](TTK) — the standard Corda RPC wrapper that uses the [CordaRPCClient](https://docs.corda.net/api/javadoc/net/corda/client/rpc/CordaRPCClient.html) and [CordaRPCConnection](https://docs.corda.net/api/javadoc/net/corda/client/rpc/CordaRPCConnection.html) classes.
-  * [Server.kt](TTK) — a Spring Boot application with [JacksonSupport](https://docs.corda.net/api/kotlin/corda/net.corda.client.jackson/-jackson-support/index.html).
+  * [MainController.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt) — the main component that does POST and GET mappings and calls [noScalpState.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/states/noScalpState.kt).
+  * [NodeRPCConnection.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/NodeRPCConnection.kt) — the standard Corda RPC wrapper that uses the [CordaRPCClient](https://docs.corda.net/api/javadoc/net/corda/client/rpc/CordaRPCClient.html) and [CordaRPCConnection](https://docs.corda.net/api/javadoc/net/corda/client/rpc/CordaRPCConnection.html) classes.
+  * [Server.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/Server.kt) — a Spring Boot application with [JacksonSupport](https://docs.corda.net/api/kotlin/corda/net.corda.client.jackson/-jackson-support/index.html).
 
 * Frontend:
-  * [index.html](TTK) — calls [angular-module.js](TTK).
-  * [angular-module.js](TTK) — calls [MainController.kt](TTK) for GET and POST mappings.
+  * [index.html](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/index.html) — calls [angular-module.js](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/js/angular-module.js).
+  * [angular-module.js](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/js/angular-module.js) — calls [MainController.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt) for GET and POST mappings.
 
 ### Configure the webserver
 
@@ -262,9 +262,9 @@ Refresh the page to see your distribution under **Registered distributions**.
 
 ### API endpoints
 
-The GET requests are defined via `@GetMapping` in [MainController.kt](TTK).
+The GET requests are defined via `@GetMapping` in [MainController.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt).
 
-The POST requests are defined via `@PostMapping` in [MainController.kt](TTK).
+The POST requests are defined via `@PostMapping` in [MainController.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt).
 
 A GET request example to see the legal name of the node the webserver is connected to:
 
