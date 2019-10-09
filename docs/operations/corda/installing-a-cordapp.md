@@ -4,7 +4,7 @@ You can install [CorDapps](/blockchains/corda#cordapp) on your nodes as a set of
 
 To install a CorDapp:
 
-1. On your node's **Access and credentials** page, click **CorDapps**.
+1. On your node details page, click **CorDapps**.
 2. Click **Install CorDapp**.
 3. Upload either the contract or workflow JAR file of your CorDapp.
 4. Click **Install**.
