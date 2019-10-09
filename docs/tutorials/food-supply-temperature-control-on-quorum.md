@@ -68,7 +68,7 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 Install in your project directory:
 
 ``` sh
-npm install web3
+npm install web3@2.0.0-alpha.1
 ```
 
 #### Install Solidity JavaScript Compiler
@@ -133,6 +133,8 @@ WALLET_KEY1='DEFAULT_WALLET_PRIVATE_KEY'
 TM_PUBLIC_KEY1='TRANSACTION_MANAGER_PUBLIC_KEY'
 TM1='TRANSACTION_MANAGER_ENDPOINT'
 
+NETWORK_ID1=NETWORK_ID
+
 // Node 2
 RPC2='RPC_ENDPOINT'
 
@@ -142,6 +144,8 @@ WALLET_KEY2='DEFAULT_WALLET_PRIVATE_KEY'
 TM_PUBLIC_KEY2='TRANSACTION_MANAGER_PUBLIC_KEY'
 TM2='TRANSACTION_MANAGER_ENDPOINT'
 
+NETWORK_ID2=NETWORK_ID
+
 // Node 3
 RPC3='RPC_ENDPOINT'
 
@@ -150,6 +154,8 @@ WALLET_KEY3='DEFAULT_WALLET_PRIVATE_KEY'
 
 TM_PUBLIC_KEY3='TRANSACTION_MANAGER_PUBLIC_KEY'
 TM3='TRANSACTION_MANAGER_ENDPOINT'
+
+NETWORK_ID3=NETWORK_ID
 ```
 
 where
@@ -159,6 +165,7 @@ where
 * DEFAULT_WALLET_PRIVATE_KEY — a private key to your Quorum node default wallet address to sign the transaction. Available under **Access and credentials** > **Default wallet private key**.
 * TRANSACTION_MANAGER_PUBLIC_KEY — your Quorum node Tessera public key. The contract will use this key to make the contract private for the node that signs the contract transaction with the Tessera private key from this public-private key pair. Available under **Access and credentials** > **Transaction manager public key**.
 * TRANSACTION_MANAGER_ENDPOINT — an endpoint to the Tessera node deployed with your Quorum node. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. Available under **Access and credentials** > **Transaction manager endpoint**.
+* NETWORK_ID — your Quorum network ID. Available under **Access and credentials** > **Network ID**.
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -248,25 +255,28 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 const node1 = {
+  NETWORK_ID: process.env.NETWORK_ID1,
   RPC: process.env.RPC1,
-  TM_URL: process.env.TM1,
   TM_PK: process.env.TM_PUBLIC_KEY1,
+  TM_URL: process.env.TM1,
   WALLET_ADDRESS: process.env.WALLET_ADDRESS1,
   WALLET_KEY: process.env.WALLET_KEY1,
 };
 
 const node2 = {
+  NETWORK_ID: process.env.NETWORK_ID2,
   RPC: process.env.RPC2,
-  TM_URL: process.env.TM2,
   TM_PK: process.env.TM_PUBLIC_KEY2,
+  TM_URL: process.env.TM2,
   WALLET_ADDRESS: process.env.WALLET_ADDRESS2,
   WALLET_KEY: process.env.WALLET_KEY2,
 };
 
 const node3 = {
+  NETWORK_ID: process.env.NETWORK_ID3,
   RPC: process.env.RPC3,
-  TM_URL: process.env.TM3,
   TM_PK: process.env.TM_PUBLIC_KEY3,
+  TM_URL: process.env.TM3,
   WALLET_ADDRESS: process.env.WALLET_ADDRESS3,
   WALLET_KEY: process.env.WALLET_KEY3,
 };
@@ -307,21 +317,32 @@ In your project's `utils` directory, create `helper.js`:
 
 ``` js
 const EthereumTx = require('ethereumjs-tx').Transaction;
+const Common = require('ethereumjs-common').default;
 const { getNonce } = require("./jsonRPC.js");
 
-const serializePayload = async (node, { to, data }, overrideNonce = null) => {
+const customConfig = (id) => Common.forCustomChain(
+  'mainnet',
+  {
+    networkId: id,
+    chainId: id,
+  },
+  'homestead',
+);
+
+const serializePayload = async (node, { to, data }) => {
   const nonce = await getNonce(node.WALLET_ADDRESS, node.RPC);
 
   const rawTransaction = {
     data,
-    nonce: overrideNonce || nonce,
+    nonce,
     to,
     gasPrice: 0,
     gasLimit: 4300000,
     value: 0,
   };
 
-  const tx = new EthereumTx(rawTransaction);
+  const common = customConfig(node.NETWORK_ID);
+  const tx = new EthereumTx(rawTransaction, { common });
   tx.sign(Buffer.from(node.WALLET_KEY, 'hex')); // WALLET PRIVATE KEY
 
   return `0x${tx.serialize().toString('hex')}`;
@@ -334,7 +355,7 @@ const setPrivate = (txManager, payload) => {
 };
 
 const serializeAndSign = async (node, payload) => {
-  const serializedPayload = await serializePayload(node, payload, "0x0");
+  const serializedPayload = await serializePayload(node, payload);
 
   return setPrivate(node.txManager, serializedPayload);
 };
@@ -562,7 +583,6 @@ The `private.js` file will:
 
 ``` js
 const { compileContract } = require('./utils/compiler.js');
-const { serializePayload } = require('./utils/helper.js');
 const {
   node1,
   node2,
@@ -890,8 +910,6 @@ async function deployContract(node, privateFor) {
     data: `0x${rawTxHash}`,
   });
 
-  console.log('rawTx', privateSignedTxHex);
-
   return node.txManager
     .sendRawRequest(privateSignedTxHex, privateFor)
     .then(tx => {
@@ -899,7 +917,7 @@ async function deployContract(node, privateFor) {
 
       return tx.contractAddress;
     })
-    .catch(error => error);
+    .catch(console.log);
 }
 
 async function setTemp({ to, node, privateFor, temp}) {
