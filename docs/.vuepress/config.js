@@ -9,7 +9,7 @@ module.exports = {
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com' },
             { text: 'Log in', link: (process.env.CONSOLE_HOSTNAME ? 'https://' + process.env.CONSOLE_HOSTNAME : 'http://localhost:3000') + '/user/login' },
-            { text: 'Try free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
+            { text: 'Start for free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
         ],
         sidebar: [
             {
@@ -94,6 +94,7 @@ module.exports = {
                     '/tutorials/',
                     '/tutorials/academic-certificates-on-ethereum',
                     '/tutorials/asset-tokenization-on-ethereum',
+                    '/tutorials/trust-fund-account-on-ethereum',
                     '/tutorials/distributed-company-scrips-on-multichain',
                     '/tutorials/food-supply-temperature-control-on-quorum',
                     '/tutorials/loyalty-program-on-quorum',
