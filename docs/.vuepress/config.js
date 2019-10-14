@@ -52,12 +52,24 @@ module.exports = {
                 children: [
                     '/operations/',
                     {
-                        title: 'Ethereum',
+                        title: 'Corda',
                         collapsable: true,
                         children: [
-                            '/operations/ethereum/',
-                            '/operations/ethereum/networks',
-                            '/operations/ethereum/tools',
+                            '/operations/corda/',
+                            '/operations/corda/node-explorer',
+                            '/operations/corda/installing-a-cordapp',
+                            '/operations/corda/tools',
+                        ]
+                    },
+                    {
+                        title: 'Quorum',
+                        collapsable: true,
+                        children: [
+                            '/operations/quorum/',
+                            '/operations/quorum/configuring-consensus',
+                            '/operations/quorum/default-addresses',
+                            '/operations/quorum/key-management',
+                            '/operations/quorum/tools',
                         ]
                     },
                     {
@@ -74,24 +86,12 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Quorum',
+                        title: 'Ethereum',
                         collapsable: true,
                         children: [
-                            '/operations/quorum/',
-                            '/operations/quorum/configuring-consensus',
-                            '/operations/quorum/default-addresses',
-                            '/operations/quorum/key-management',
-                            '/operations/quorum/tools',
-                        ]
-                    },
-                    {
-                        title: 'Corda',
-                        collapsable: true,
-                        children: [
-                            '/operations/corda/',
-                            '/operations/corda/node-explorer',
-                            '/operations/corda/installing-a-cordapp',
-                            '/operations/corda/tools',
+                            '/operations/ethereum/',
+                            '/operations/ethereum/networks',
+                            '/operations/ethereum/tools',
                         ]
                     },
                 ]
@@ -101,12 +101,12 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/tutorials/',
-                    '/tutorials/academic-certificates-on-ethereum',
-                    '/tutorials/asset-tokenization-on-ethereum',
-                    '/tutorials/distributed-company-scrips-on-multichain',
+                    '/tutorials/no-ticket-scalping-cordapp-on-corda',
                     '/tutorials/food-supply-temperature-control-on-quorum',
                     '/tutorials/loyalty-program-on-quorum',
-                    '/tutorials/no-ticket-scalping-cordapp-on-corda',
+                    '/tutorials/distributed-company-scrips-on-multichain',
+                    '/tutorials/academic-certificates-on-ethereum',
+                    '/tutorials/asset-tokenization-on-ethereum',
                     ]
             },
             {
@@ -114,10 +114,10 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/blockchains/',
-                    '/blockchains/ethereum',
-                    '/blockchains/multichain',
-                    '/blockchains/quorum',
                     '/blockchains/corda',
+                    '/blockchains/quorum',
+                    '/blockchains/multichain',
+                    '/blockchains/ethereum',
                     ]
             },
             {

@@ -2,9 +2,9 @@
 
 Consortium:
 
-* [MultiChain](/blockchains/multichain)
-* [Quorum](/blockchains/quorum)
 * [Corda](/blockchains/corda)
+* [Quorum](/blockchains/quorum)
+* [MultiChain](/blockchains/multichain)
 
 Public network:
 
