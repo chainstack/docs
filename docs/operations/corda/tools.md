@@ -19,7 +19,7 @@ You can connect to your Corda node and interact with it in shell.
 To be able to interact with the CorDapps through shell, you must have the CorDapp contract and workflow JAR files both locally on your machine and on the node you are connecting to.
 
 ``` sh
-java -jar corda-tools-shell-cli-4.1.jar --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD --cordapp-directory=/host/path/to/cordapps
+java -jar corda-tools-shell-cli-4.1.jar --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD --cordapp-directory=⁨/home/user/cordapps
 ```
 
 where
@@ -28,7 +28,7 @@ where
 * CORDA_RPC_PORT — your Corda node RPC port.
 * CORDA_RPC_USER — your Corda node RPC username.
 * CORDA_RPC_PASSWORD — your Corda node RPC password.
-* /host/path/to/cordapps — path to your local directory with the contract and workflow JAR files that you uploaded to your Corda node. You only need the `--cordapp-directory=/host/path/to/cordapps` parameter if you intend to interact with the CorDapps on the node.
+* ⁨/home/user/cordapps — path to your local directory with the contract and workflow JAR files that you uploaded to your Corda node. You only need to specify the `--cordapp-directory` parameter if you intend to interact with the CorDapps on the node.
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -51,7 +51,7 @@ Once connected, run `help` to see the list of available commands.
 
 ### Chainstack standalone shell
 
-Interact with your Corda node using [Chainstack standalone shell](https://github.com/chainstack/corda-shell-docker).
+Interact with your Corda node using [Chainstack standalone shell](https://github.com/chainstack/corda-shell-docker) which is a containerized version of [Corda standalone shell](#corda-standalone-shell).
 
 #### Prerequisites
 
@@ -70,7 +70,7 @@ docker run -it -v /host/path/to/cordapps:/cordapps chainstack/corda-shell --host
 
 where
 
-* /host/path/to/cordapps — path to your local directory with the contract and workflow JAR files that you uploaded to your Corda node. You only need the `-v /host/path/to/cordapps:/cordapps` and `--cordapp-directory=/cordapps` parameters if you intend to interact with the CorDapps on the node.
+* /host/path/to/cordapps — path to your local directory with the contract and workflow JAR files that you uploaded to your Corda node. You only need to specify the `-v` and `--cordapp-directory` parameters if you intend to interact with the CorDapps on the node.
 * CORDA_RPC_HOSTNAME — your Corda node RPC hostname.
 * CORDA_RPC_PORT — your Corda node RPC port.
 * CORDA_RPC_USER — your Corda node RPC username.
