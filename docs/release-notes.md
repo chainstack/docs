@@ -6,18 +6,23 @@
 
 ### What's new
 
-* **Corda**. Introducing support for deploying, managing and scaling Corda networks. Users can now:
-    * Create a Corda compatibility zone complete with NMS, doorman and non-validating notary.
+* **[Corda](/blockchains/corda)**. Introducing support for deploying, managing and scaling Corda networks. You can now:
+    * Create a Corda compatibility zone complete with [network map service](/blockchains/corda#network-map-service), doorman, and [non-validating notary](/blockchains/corda#notary-service).
     * Scale networks by inviting other members to participate and deploy their own nodes.
-    * Install and remove CorDapps directly from the Chainstack platform.
-* **Free shared nodes**. Run shared nodes on public chains completely for free at all subscription tiers.
+    * Install and remove [CorDapps](/blockchains/corda#cordapp) directly from the Chainstack platform.
+* **Free shared nodes**. Run [shared nodes](/glossary/shared-node) on public networks completely for free at all subscription tiers.
 * **Tessera**. Add support for Tessera transaction manager for Quorum.
 * **Usage reporting**. Visibility into your metered usage costs for the current billing period. Updated hourly. 
-* **User management**. Invite other users to join your organization to participate in creating networks and deploying nodes without getting access to sensitive account settings and controls.
+* **User management**. [Invite other users](/platform/invite-a-member-to-the-project) to join your organization to participate in creating networks and deploying nodes without getting access to sensitive account settings and controls.
+* **Documentation:**
+	* New tutorial: [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda).
+	* New tutorial: [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
+	* [Corda operations](http://localhost:8080/operations/corda/).
+	* [Corda general description](/blockchains/corda).
 
 ### Bug fixes
 
-* Resolve unexpected leader changes on Quorum by increasing raftblocktime from 50 -> 150 ms.
+* Resolved unexpected leader changes on Quorum by increasing raftblocktime from 50 -> 150 ms.
 * Numerous UI and copy fixes and improvements.
 
 ## Chainstack 1.3
