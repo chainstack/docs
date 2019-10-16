@@ -6,7 +6,7 @@ By the end of the section, you will have your MultiChain nodes from the same net
 
 ## Prerequisites
 
-* [Chainstack](https://console.chainstack.com/) account
+* [Chainstack account](https://console.chainstack.com/)
 * A supported operating system for the MultiChain on-premises deployment:
   * Linux 64-bit: Ubuntu 12.04+, CentOS 6.2+, Debian 7+, Fedora 15+, RHEL 6.2+
   * Windows 64-bit: Windows 7, 8, 10, Server 2008 or later
