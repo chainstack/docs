@@ -1,5 +1,25 @@
 # Release notes
 
+## Chainstack 1.4
+
+*October 16, 2019*
+
+### What's new
+
+* **Corda**. Introducing support for deploying, managing and scaling Corda networks. Users can now:
+    * Create a Corda compatibility zone complete with NMS, doorman and non-validating notary.
+    * Scale networks by inviting other members to participate and deploy their own nodes.
+    * Install and remove CorDapps directly from the Chainstack platform.
+* **Free shared nodes**. Run shared nodes on public chains completely for free at all subscription tiers.
+* **Tessera**. Add support for Tessera transaction manager for Quorum.
+* **Usage reporting**. Visibility into your metered usage costs for the current billing period. Updated hourly. 
+* **User management**. Invite other users to join your organization to participate in creating networks and deploying nodes without getting access to sensitive account settings and controls.
+
+### Bug fixes
+
+* Resolve unexpected leader changes on Quorum by increasing raftblocktime from 50 -> 150 ms.
+* Numerous UI and copy fixes and improvements.
+
 ## Chainstack 1.3
 
 *September 3, 2019*
