@@ -9,7 +9,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 ## Prerequisites
 
-* [Chainstack](https://console.chainstack.com/) account to deploy an Ethereum node.
+* [Chainstack account](https://console.chainstack.com/) to deploy an Ethereum node.
 * [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
 
 ## Overview
@@ -354,12 +354,12 @@ The test run output should be `Passing`.
 
 1. Install `HDWalletProvider`.
 
-[HDWalletProvider](https://www.npmjs.com/package/truffle-hdwallet-provider) is Truffle's separate npm package used to sign transactions.
+[HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider) is Truffle's separate npm package used to sign transactions.
 
 Run:
 
 ``` sh
-npm install truffle-hdwallet-provider
+npm install @truffle/hdwallet-provider
 ```
 
 2. Edit `truffle-config.js` to add:
@@ -368,7 +368,7 @@ npm install truffle-hdwallet-provider
 * Your Ethereum node access and credentials
 
 ``` js
-const HDWalletProvider = require('truffle-hdwallet-provider');
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 const mnemonic = 'misery walnut expose ...';
 
 module.exports = {
@@ -399,8 +399,8 @@ where
 Example:
 
 ``` js
-const HDWalletProvider = require('truffle-hdwallet-provider');
-const mnemonic = 'misery walnut expose ...';
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+const mnemonic = "misery walnut expose ...";
 
 module.exports = {
  networks: {
