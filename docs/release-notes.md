@@ -2,27 +2,22 @@
 
 ## Chainstack 1.4
 
-*October 16, 2019*
+*October 17, 2019*
 
 ### What's new
 
-* **Protocols:**
-  * [Corda](/blockchains/corda):
-    * You can now create a Corda compatibility zone complete with [network map service](/blockchains/corda#network-map-service), doorman, and [non-validating notary](/blockchains/corda#notary-service).
-    * You can now install and remove [CorDapps](/blockchains/corda#cordapp) directly from the Chainstack platform.
-  * [Quorum](/blockchains/Quorum):
-    * Added support for Tessera transaction manager for Quorum.
-* **Usage reporting**. Added visibility into your metered usage costs for the current billing period. Updated hourly.
-* **User management**. [Invited users](/platform/invite-a-member-to-the-project) can join your organization to participate in creating networks and deploying nodes without getting access to sensitive account settings and controls.
-* **Documentation:**
-  * New tutorial: [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda).
-  * New tutorial: [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
-  * [Corda operations](http://localhost:8080/operations/corda/).
-  * [Corda general description](/blockchains/corda).
+* **Protocols**
+  * [Corda](/blockchains/corda) 4.1 support. Deployment of consortium network with [network map service](/blockchains/corda#network-map-service), doorman, and [notary](/blockchains/corda#notary-service). Dynamic addition and removal of participant nodes. Installation and removal of [CorDapps](/blockchains/corda#cordapp).
+  * [Quorum](/blockchains/Quorum) 2.3.0 support. Replaced Constellation transaction manager with Tessera.
+* **User management**. Invitation of users into the organization.
+* **Billing**. Display of metered usage cost for the current billing period, updated hourly.
+* **Documentation**
+  * [Corda general description](/blockchains/corda) and [Corda operations](/operations/corda).
+  * New tutorials: [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda) and [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
 
 ### Bug fixes
 
-* Resolved unexpected leader changes on Quorum by increasing raftblocktime from 50 -> 150 ms.
+* Resolved unexpected leader changes on Quorum networks with Raft consensus by increasing Raft block time from 50 to 150 ms.
 * Numerous UI and copy fixes and improvements.
 
 ## Chainstack 1.3
@@ -43,7 +38,7 @@
 
 ### Breaking changes
 
-* Unprotected endpoints for Quorum and Ethereum nodes [deprecated on October 1, 2019](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/).
+* Unprotected endpoints for Quorum and Ethereum nodes [deprecation on October 1, 2019](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/).
 
 ## Chainstack 1.2.1
 
@@ -51,7 +46,9 @@
 
 ### What’s new
 
-* **Documentation**. New guide: [Deploying a hybrid MultiChain network](/operations/multichain/deploying-a-hybrid-network). New tutorial: [Loyalty program on Quorum](/tutorials/loyalty-program-on-quorum).
+* **Documentation**
+  * New guide: [Deploying a hybrid MultiChain network](/operations/multichain/deploying-a-hybrid-network).
+  * New tutorial: [Loyalty program on Quorum](/tutorials/loyalty-program-on-quorum).
 
 ### Bug fixes
 
@@ -63,7 +60,9 @@
 
 ### What’s new
 
-* **Protocols**. [Ethereum](/blockchains/ethereum) Ropsten testnet support with Bolt. Updated [Quorum](/blockchains/quorum) explorer from [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) to [epirus-free](https://github.com/blk-io/epirus-free).
+* **Protocols**
+  * [Ethereum](/blockchains/ethereum) Ropsten testnet support with Bolt.
+  * Updated [Quorum](/blockchains/quorum) explorer from [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) to [epirus-free](https://github.com/blk-io/epirus-free).
 * **Node details**. Added complete details for [Quorum](/blockchains/quorum), including default wallet private/public keys. Standardized fields for all protocols.
 * **Documentation**. New tutorial: [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum).
 
@@ -105,7 +104,9 @@
 
 ### What’s new
 
-* **Protocols**. [MultiChain](/blockchains/multichain) 2.0 release support. [Quorum](/blockchains/quorum) 2.2.3 support.
+* **Protocols**
+  * [MultiChain](/blockchains/multichain) 2.0 release support.
+  * [Quorum](/blockchains/quorum) 2.2.3 support.
 
 ### Bug fixes
 
@@ -133,7 +134,10 @@
 * **Registration and sign in**. Signing up via email, password and personal details. Signing up for a member invited to the project. Email confirmation on successful registration. Email verification.
 * [**Consortium project**](/glossary/consortium-project). Wizards to create a new network and add a node to the existing network. Invitation of other organizations as members to the project via email.
 * [**Public chain project**](/glossary/public-chain-project). Wizards to join a public network and add another node.
-* **Protocols**. [MultiChain](/blockchains/multichain) 2.0-beta-1 support with blockchain explorer. [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#istanbul-byzantine-fault-tolerance), and [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) blockchain explorer. Full [Ethereum](/blockchains/ethereum) Mainnet node deployment with [Bolt](/glossary/bolt) rapid sync mechanism.
+* **Protocols**
+  * [MultiChain](/blockchains/multichain) 2.0-beta-1 support with blockchain explorer.
+  * [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#istanbul-byzantine-fault-tolerance), and [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) blockchain explorer.
+  * Full [Ethereum](/blockchains/ethereum) Mainnet node deployment with [Bolt](/glossary/bolt) rapid sync mechanism.
 * **Clouds**. Google Cloud Platform and Amazon Web Services in APAC region.
 * **Node details**. Default wallet private/public keys and chain name for [MultiChain](/blockchains/multichain). Constellation private/public keys and network ID for [Quorum](/blockchains/quorum). Sync mode and network ID for [Ethereum](/blockchains/ethereum). Client version for all protocols.
 * **Settings**. Editing personal and organization details. Changing password.
