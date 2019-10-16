@@ -6,19 +6,19 @@
 
 ### What's new
 
-* **[Corda](/blockchains/corda)**. Introducing support for deploying, managing and scaling Corda networks. You can now:
-    * Create a Corda compatibility zone complete with [network map service](/blockchains/corda#network-map-service), doorman, and [non-validating notary](/blockchains/corda#notary-service).
-    * Scale networks by inviting other members to participate and deploy their own nodes.
-    * Install and remove [CorDapps](/blockchains/corda#cordapp) directly from the Chainstack platform.
-* **Free shared nodes**. Run [shared nodes](/glossary/shared-node) on public networks completely for free at all subscription tiers.
-* **Tessera**. Add support for Tessera transaction manager for Quorum.
-* **Usage reporting**. Visibility into your metered usage costs for the current billing period. Updated hourly. 
-* **User management**. [Invite other users](/platform/invite-a-member-to-the-project) to join your organization to participate in creating networks and deploying nodes without getting access to sensitive account settings and controls.
+* **Protocols:**
+  * [Corda](/blockchains/corda):
+    * You can now create a Corda compatibility zone complete with [network map service](/blockchains/corda#network-map-service), doorman, and [non-validating notary](/blockchains/corda#notary-service).
+    * You can now install and remove [CorDapps](/blockchains/corda#cordapp) directly from the Chainstack platform.
+  * [Quorum](/blockchains/Quorum):
+    * Added support for Tessera transaction manager for Quorum.
+* **Usage reporting**. Added visibility into your metered usage costs for the current billing period. Updated hourly.
+* **User management**. [Invited users](/platform/invite-a-member-to-the-project) can join your organization to participate in creating networks and deploying nodes without getting access to sensitive account settings and controls.
 * **Documentation:**
-	* New tutorial: [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda).
-	* New tutorial: [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
-	* [Corda operations](http://localhost:8080/operations/corda/).
-	* [Corda general description](/blockchains/corda).
+  * New tutorial: [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda).
+  * New tutorial: [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
+  * [Corda operations](http://localhost:8080/operations/corda/).
+  * [Corda general description](/blockchains/corda).
 
 ### Bug fixes
 
@@ -64,7 +64,7 @@
 ### What’s new
 
 * **Protocols**. [Ethereum](/blockchains/ethereum) Ropsten testnet support with Bolt. Updated [Quorum](/blockchains/quorum) explorer from [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) to [epirus-free](https://github.com/blk-io/epirus-free).
-* **Node details**. Added complete details for [Quorum](/blockchains/quorum), including default wallet private/public keys. Standardized fields for all protocolsю
+* **Node details**. Added complete details for [Quorum](/blockchains/quorum), including default wallet private/public keys. Standardized fields for all protocols.
 * **Documentation**. New tutorial: [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum).
 
 ### Bug fixes
