@@ -13,7 +13,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 ## Prerequisites
 
-* [Chainstack](https://console.chainstack.com/) account to deploy a Quorum network.
+* [Chainstack account](https://console.chainstack.com/) to deploy a Quorum network.
 * [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
 
 ## Overview
@@ -174,12 +174,12 @@ The test run output should be `Passing`.
 
 1. Install `HDWalletProvider`.
 
-[HDWalletProvider](https://www.npmjs.com/package/truffle-hdwallet-provider) is Truffle's separate npm package used to sign transactions.
+[HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider) is Truffle's separate npm package used to sign transactions.
 
 Run:
 
 ``` sh
-npm install truffle-hdwallet-provider
+npm install @truffle/hdwallet-provider
 ```
 
 2. Edit `truffle-config.js` to add:
@@ -188,7 +188,7 @@ npm install truffle-hdwallet-provider
 * Your Quorum network running with Chainstack
 
 ``` js
-const HDWalletProvider = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15";
 
 module.exports = {
@@ -223,7 +223,7 @@ where
 Example:
 
 ``` js
-const HDWalletProvider = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15";
 
 module.exports = {

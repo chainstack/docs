@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "markdown-it-container": "^2.0.0",
-    "vuepress": "^1.1.0"
+    "vuepress": "^1.2.0"
   },
   "dependencies": {
     "clean": "^4.0.2",

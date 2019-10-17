@@ -38,6 +38,8 @@ A Quorum Raft network always has the nodes in one of the following roles:
 
 The minter node creates the blocks and the verifier nodes follow the minter node.
 
+By default, the very first node you deploy as part of your Raft Quorum network assumes the minter role.
+
 If the minter node goes offline or if you force a removal of the minter node from the network, a new minter node is automatically elected from the pool of the verifier nodes.
 
 Raft networks usually have an odd number of nodes as there is no benefit in having an even number of nodes. Raft can tolerate an **f** number of faulty nodes in **n=2f+1**, where **n** is the total number of nodes.
@@ -86,11 +88,6 @@ The minimum recommended number of nodes in an IBFT network is 4.
 #### Transaction finality
 
 A Quorum IBFT network reaches transaction finality on a per-block basis. Every block formed in the network is validated and sealed by nodes before being added to the chain. This per-block validation and sealing provide absolute transaction finality and remove any chance of forking or any other possibility to undo a transaction.
-
-All nodes in a Quorum IBFT network have the following two roles at the same time:
-
-* Validator — the node is a part of the group of nodes that validate the block to seal it and include in the chain.
-* Proposer — the node proposes a block to the group of the validator nodes.
 
 The process of sealing and including a block in the chain is the following:
 

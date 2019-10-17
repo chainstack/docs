@@ -13,6 +13,12 @@ Corda is different from *permissioned* consortium blockchain protocols in that i
 * The ability for a diverse user-base with vastly different business-logic and flow requirements to co-exist and interoperate on the same network.
 * The ability for the nodes to have direct peer-to-peer communication over TLS for transaction privacy.
 
+## Consensus
+
+* Single Notary — one notary node runs the [notary service](#notary-service) for the deployed network.
+* Raft — a [CFT](/glossary/cft) consensus implementation on [Atomix](https://atomix.io/). See [Crash fault-tolerant (experimental)](https://docs.corda.net/running-a-notary.html#crash-fault-tolerant-experimental).
+* BFT-SMaRt — a [BFT](/glossary/bft) consensus implementation. See [Byzantine fault-tolerant (experimental)](https://docs.corda.net/running-a-notary.html#byzantine-fault-tolerant-experimental).
+
 ## Network structure
 
 The Corda network has the following foundational components:
@@ -27,7 +33,7 @@ A node is a JVM instance.
 
 Each node has a unique identity on the network in the form of:
 
-* A [certificate](#certificates) issued to the node.
+* A certificate issued to the node.
 * The node's IP address.
 
 Each node has two communication interfaces:
@@ -46,15 +52,11 @@ Each node can be configured to be:
 
 The network map service is the catalog of all nodes on a [compatibility zone](#compatibility-zones) with the information on the node identities, node certificates, and node IP addresses.
 
-Chainstack deploys a separate network map service for every Corda network instance.
-
 ### Notary service
 
 A notary service is a part of a node on the Corda network that turns a regular node into a notary node.
 
 The objective of a notary node is to check transactions for double-spending. If the transaction is unique and is not a double-spend attempt, the notary node signs the transaction. If the transaction is a double-spend attempt, the notary node rejects the transaction.
-
-Chainstack deploys one notary node with each instance of the Corda network.
 
 ## Network operation
 
@@ -137,14 +139,6 @@ There are compatibility zones managed by [Corda Network Foundation](https://cord
 * [Corda Testnet](https://marketplace.r3.com/network/testnet) — Corda's compatibility zone for testing.
 
 There are also non-Corda Network Foundation managed compatibility zones. These are basically networks that rely on custom network map and doorman services to discover the nodes and control network permissions. These zones are managed by organizations deploying the zones and acting as network operators for the zones.
-
-Chainstack deploys every Corda network in a compatibility zone and acts as the network operator for each zone. Every compatibility zone deployed with Chainstack comes with the network map and doorman services.
-
-In the future, Chainstack will also support joining the non-Chainstack managed compatibility zones like [Corda Network](https://corda.network/).
-
-### Certificates
-
-Chainstack uses self-signed certificates for the compatibility zones it deploys.
 
 ::: tip See also
 
