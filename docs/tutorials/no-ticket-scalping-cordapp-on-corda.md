@@ -223,7 +223,7 @@ Example:
 task runDistributor(type: JavaExec, dependsOn: jar) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'com.noScalpDapp.server.ServerKt'
-    args '--server.port=50005', '--config.rpc.host=nd-123-456-789.p2pify.com', '--config.rpc.port=10201', '--config.rpc.username=username', '--config.rpc.password=password'
+    args '--server.port=50005', '--config.rpc.host=nd-123-456-789.rg-123-456.p2pify.com', '--config.rpc.port=10201', '--config.rpc.username=username', '--config.rpc.password=password'
 }
 ```
 
