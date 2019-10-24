@@ -35,7 +35,7 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 Example:
 
 ``` sh
-$ java -jar corda-tools-shell-cli-4.1.jar --host=nd-123-456-789.p2pify.com --port=10201 --user=admin --password=pass --cordapp-directory=⁨/home/user/cordapps
+$ java -jar corda-tools-shell-cli-4.1.jar --host=nd-123-456-789.rg-123-456.p2pify.com --port=10201 --user=admin --password=pass --cordapp-directory=⁨/home/user/cordapps
 
    ______               __
   / ____/     _________/ /___ _
@@ -44,7 +44,7 @@ $ java -jar corda-tools-shell-cli-4.1.jar --host=nd-123-456-789.p2pify.com --por
 \____/     /_/   \__,_/\__,_/
 --- Corda Open Source 4.1 (c11f6c1) ---
 
-Standalone Shell connected to nd-123-456-789.p2pify.com:10201
+Standalone Shell connected to nd-123-456-789.rg-123-456.p2pify.com:10201
 ```
 
 Once connected, run `help` to see the list of available commands.
@@ -81,7 +81,7 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 Example:
 
 ``` sh
-$ docker run -it -v /home/user/cordapps:/cordapps chainstack/corda-shell --host=nd-123-456-789.p2pify.com --port=10201 --user=username --password=password --cordapp-directory=/cordapps
+$ docker run -it -v /home/user/cordapps:/cordapps chainstack/corda-shell --host=nd-123-456-789.rg-123-456.p2pify.com --port=10201 --user=username --password=password --cordapp-directory=/cordapps
 
    ______               __
   / ____/     _________/ /___ _
@@ -90,7 +90,7 @@ $ docker run -it -v /home/user/cordapps:/cordapps chainstack/corda-shell --host=
 \____/     /_/   \__,_/\__,_/
 --- Corda Open Source 4.1 (c11f6c1) ---
 
-Standalone Shell connected to nd-123-456-789.p2pify.com:10201
+Standalone Shell connected to nd-123-456-789.rg-123-456.p2pify.com:10201
 ```
 
 Once connected, run `help` to see the list of available commands.
