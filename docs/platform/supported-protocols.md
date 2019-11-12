@@ -10,6 +10,7 @@ Public network:
 
 * [Ethereum](/blockchains/ethereum) Mainnet
 * [Ethereum](/blockchains/ethereum) Ropsten
+* [Bitcoin](/blockchains/bitcoin) Mainnet
 
 ::: tip
 Chainstack is always working on introducing support for other protocols.
