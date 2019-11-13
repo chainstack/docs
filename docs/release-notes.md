@@ -2,7 +2,7 @@
 
 ## Chainstack 1.4.1
 
-*November xx, 2019*
+*November 13, 2019*
 
 ### What's new
 
