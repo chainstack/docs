@@ -43,7 +43,7 @@ print(info)
 The example code above should output basic network information:
 
 ``` python
-u'pruned': False, u'blocks': 603485, u'chainwork': u'00000000000000000000000000000000000000000a07642616c80b44959233ce'...}
+{u'pruned': False, u'blocks': 603580, u'chainwork': u'00000000000000000000000000000000000000000a0baf330c67a89653c67005', u'chain': u'main', u'difficulty': 12720005267390.51, u'bip9_softforks': {u'csv': {u'status': u'active', u'since': 419328, u'timeout': 1493596800, u'startTime': 1462060800}, u'segwit': {u'status': u'active', u'since': 481824, u'timeout': 1510704000, u'startTime': 1479168000}}, u'warnings': u'', u'softforks': [{u'version': 2, u'id': u'bip34', u'reject': {u'status': True}}, {u'version': 3, u'id': u'bip66', u'reject': {u'status': True}}, {u'version': 4, u'id': u'bip65', u'reject': {u'status': True}}], u'initialblockdownload': False, u'headers': 603580, u'mediantime': 1573647950, u'verificationprogress': 0.9999919488385801, u'bestblockhash': u'000000000000000000068b536474a44f9e0a0a0ab6be75d9afdaddc8c513bcea', u'size_on_disk': 282597514457}
 ```
 
 ::: tip See also
