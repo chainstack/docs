@@ -2,13 +2,13 @@
 
 ## Chainstack 1.4.1
 
-*November 13, 2019*
+*November 14, 2019*
 
 ### What's new
 
-* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. Deployment of [dedicated](/glossary/dedicated-node) Bitcoin nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/shared-node) Bitcoin nodes on Mainnet.
+* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. Deployment of [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/shared-node) nodes on Mainnet.
 * **Network and node statuses**. Update network and node statuses to display when operations are occuring on any network resource.
-* **Node details.**. Divide node [access and credentials](/platform/view-node-access-and-credentials) into grouped sections to ease understanding and facilitate node operation.
+* **Node details**. Divide node [access and credentials](/platform/view-node-access-and-credentials) into grouped sections to ease understanding and facilitate node operation.
 * **Billing**. Display individual metered usage cost line items for the current billing period, updated hourly.
 * **Documentation**. [Bitcoin general description](/blockchains/bitcoin) and [Bitcoin operations](/operations/bitcoin).
 
