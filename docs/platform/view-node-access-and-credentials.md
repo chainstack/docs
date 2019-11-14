@@ -17,5 +17,6 @@ If you are an invited member of a [Consortium project](/glossary/consortium-proj
 * [Operations: Quorum](/operations/quorum/)
 * [Operations: MultiChain](/operations/multichain/)
 * [Operations: Ethereum](/operations/ethereum/)
+* [Operations: Bitcoin](/operations/bitcoin/)
 
 :::
