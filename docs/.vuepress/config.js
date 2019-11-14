@@ -95,6 +95,15 @@ module.exports = {
                             '/operations/ethereum/tools',
                         ]
                     },
+                    {
+                        title: 'Bitcoin',
+                        collapsable: true,
+                        children: [
+                            '/operations/bitcoin/',
+                            '/operations/bitcoin/networks',
+                            '/operations/bitcoin/tools',
+                        ]
+                    },
                 ]
             },
             {
@@ -121,6 +130,7 @@ module.exports = {
                     '/blockchains/quorum',
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
+                    '/blockchains/bitcoin',
                     ]
             },
             {
