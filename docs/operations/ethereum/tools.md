@@ -134,9 +134,9 @@ This will engage MetaMask and make Remix IDE interact with the network through a
 
 For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
 
-### Logging with TerminalSDK
+### Logging and analytics with TerminalSDK
 
-You can set up your DApp logging with TerminalSDK of [Terminal.co](https://terminal.co/) and Chainstack.
+You can set up your DApp logging and analytics with TerminalSDK of [Terminal.co](https://terminal.co/) and Chainstack.
 
 1. Sign up with [Terminal.co](https://terminal.co/).
 1. Get your Terminal API key. See [Generating an API Key](https://docs.terminal.co/logs-analytics/create-an-api-key).
@@ -189,7 +189,10 @@ web3.eth.getBalance(address, (err, wei) => {
 });
 ```
 
-For information on how to view the logs, see [Logs Overview](https://docs.terminal.co/logs-analytics/logs-overview).
+For information on how to view the logs and analytics, see:
+
+* [Logs Overview](https://docs.terminal.co/logs-analytics/logs-overview).
+* [Analytics Overview](https://docs.terminal.co/logs-analytics/analytics-overview)
 
 ::: tip See also
 
