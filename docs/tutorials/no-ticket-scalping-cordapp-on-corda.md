@@ -182,7 +182,7 @@ Once you have your Corda network with noScalpDapp running, you can start a webse
 
 The webserver is a Spring Boot implementation.
 
-For a general webserver implementation, see [Interaction tools: Using Spring Boot webserver](http://localhost:8080/operations/corda/tools#using-spring-boot-webserver).
+For a general webserver implementation, see [Interaction tools: Using Spring Boot webserver](/operations/corda/tools#using-spring-boot-webserver).
 
 For this tutorial, the webserver implementation is in the `clients` directory of the [CorDapp repository](https://github.com/chainstack/no-ticket-scalping-cordapp) that you cloned at the start of the tutorial.
 
