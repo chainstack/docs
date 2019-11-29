@@ -1,4 +1,4 @@
-# Academic certificates on Ethereum
+# Academic certificates with Truffle
 
 In this tutorial, you will:
 

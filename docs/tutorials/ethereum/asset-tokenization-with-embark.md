@@ -1,4 +1,4 @@
-# Asset tokenization on Ethereum
+# Asset tokenization with Embark
 
 This tutorial will guide you through creating a tokenized asset contract and deploying it on Ropsten testnet.
 

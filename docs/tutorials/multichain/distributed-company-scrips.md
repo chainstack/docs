@@ -1,4 +1,4 @@
-# Distributed company scrips on MultiChain
+# Distributed company scrips
 
 Companies interested in exploring the teal organization structure and experimenting with it will find it useful to issue internal  currency for employees.
 
