@@ -15,6 +15,10 @@ In this tutorial you will:
 1. Connect to the nodes in shell and run the CorDapp.
 1. Build and run a webserver that connects to your Corda node and interacts with the CorDapp.
 
+::: tip Get the CorDapp without building
+If you want to just try out the CorDapp, you can [download the latest contract and workflow versions](https://github.com/chainstack/no-ticket-scalping-cordapp/releases/) and skip this tutorial to the [Install the CorDapp](#install-the-cordapp) section.
+:::
+
 ## Overview
 
 This tutorial will guide you through building and deploying a [CorDapp](/blockchains/corda#cordapp) that immutably registers ticket distribution with ticket distributors.
