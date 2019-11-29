@@ -211,7 +211,7 @@ Expand the contract under **Deployed Contracts**:
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
-* [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
-* [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
+* [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)
+* [Asset tokenization with Embark](/tutorials/ethereum/asset-tokenization-with-embark)
 
 :::

@@ -92,6 +92,6 @@ The example code above should output basic network information:
 
 ::: tip See also
 
-* [Distributed company scrips on MultiChain](/tutorials/distributed-company-scrips-on-multichain)
+* [Distributed company scrips](/tutorials/multichain/distributed-company-scrips)
 
 :::

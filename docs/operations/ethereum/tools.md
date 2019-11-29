@@ -196,8 +196,8 @@ For information on how to view the logs and analytics, see:
 
 ::: tip See also
 
-* [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
-* [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
-* [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum)
+* [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)
+* [Asset tokenization with Embark](/tutorials/ethereum/asset-tokenization-with-embark)
+* [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix)
 
 :::
