@@ -160,7 +160,7 @@ $ curl http://localhost:10055/identities
 [OU=Organization-ND-123-456-789, O=Organization, L=Singapore, C=SG]
 ```
 
-You can also write your own REST endpoints for your CorDapps. For the examples, see [Corda samples](https://github.com/corda/samples/) or the [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda) tutorial.
+You can also write your own REST endpoints for your CorDapps. For the examples, see [Corda samples](https://github.com/corda/samples/) or the [No ticket scalping CorDapp](/tutorials/corda/no-ticket-scalping-cordapp) tutorial.
 
 ## Development tools
 
@@ -174,6 +174,6 @@ Corda requires at least Java 8u171 and does *not* support Java 9 or higher.
 
 * [Installing a CorDapp](/operations/corda/installing-a-cordapp)
 * [Node explorer](/operations/corda/node-explorer)
-* [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda)
+* [No ticket scalping CorDapp](/tutorials/corda/no-ticket-scalping-cordapp)
 
 :::

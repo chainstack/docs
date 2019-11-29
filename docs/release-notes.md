@@ -29,7 +29,7 @@
 * **Billing**. Display of metered usage cost for the current billing period, updated hourly.
 * **Documentation**
   * [Corda general description](/blockchains/corda) and [Corda operations](/operations/corda).
-  * New tutorials: [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda) and [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
+  * New tutorials: [No ticket scalping CorDapp](/tutorials/corda/no-ticket-scalping-cordapp) and [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix).
 
 ### Bug fixes
 
@@ -64,7 +64,7 @@
 
 * **Documentation**
   * New guide: [Deploying a hybrid MultiChain network](/operations/multichain/deploying-a-hybrid-network).
-  * New tutorial: [Loyalty program on Quorum](/tutorials/loyalty-program-on-quorum).
+  * New tutorial: [Loyalty program with Truffle](/tutorials/quorum/loyalty-program-with-truffle).
 
 ### Bug fixes
 
@@ -80,7 +80,7 @@
   * [Ethereum](/blockchains/ethereum) Ropsten testnet support with Bolt.
   * Updated [Quorum](/blockchains/quorum) explorer from [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) to [epirus-free](https://github.com/blk-io/epirus-free).
 * **Node details**. Added complete details for [Quorum](/blockchains/quorum), including default wallet private/public keys. Standardized fields for all protocols.
-* **Documentation**. New tutorial: [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum).
+* **Documentation**. New tutorial: [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle).
 
 ### Bug fixes
 

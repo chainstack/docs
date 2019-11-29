@@ -199,5 +199,7 @@ Test the contract by calling:
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
+* [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)
+* [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix)
 
 :::
