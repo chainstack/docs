@@ -1,4 +1,4 @@
-# Loyalty program on Quorum
+# Loyalty program with Truffle
 
 This tutorial will guide you through creating a simple loyalty program contract and deploying it on your [Quorum](/blockchains/quorum) network.
 

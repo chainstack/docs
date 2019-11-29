@@ -1,4 +1,4 @@
-# Trust Fund account on Ethereum
+# Trust fund account with Remix
 
 Unlike with legacy finance systems where you need to rely on a well-established third party, you can build your own financial instrument on Ethereum.
 
@@ -169,13 +169,13 @@ function transferAccount(address newAccount) public {
 
 On the left pane, click **Solidity compiler** > **Compile**:
 
-![Select compile](./assets/trust-fund-account-on-ethereum/remix-compile.png)
+![Select compile](./assets/trust-fund-account-with-remix/remix-compile.png)
 
 ### Set up Remix IDE to work through your Chainstack node
 
 On the left pane, click **Deploy** and switch to **Injected Web3**:
 
-![Inject](./assets/trust-fund-account-on-ethereum/remix-injected-web3.png)
+![Inject](./assets/trust-fund-account-with-remix/remix-injected-web3.png)
 
 This will engage your MetaMask and interact with the network through the Chainstack node provided in MetaMask.
 
@@ -183,7 +183,7 @@ This will engage your MetaMask and interact with the network through the Chainst
 
 On the left pane, click **Deploy & run transactions** > **Deploy**:
 
-![Deploy](./assets/trust-fund-account-on-ethereum/remix-deploy.png)
+![Deploy](./assets/trust-fund-account-with-remix/remix-deploy.png)
 
 This will engage your MetaMask to deploy the contract to the Ethereum Ropsten testnet through your currently selected MetaMask account. Click **Confirm** in the MetaMask modal.
 
@@ -193,7 +193,7 @@ Once the contract is deployed, fund the contract:
 
 1. Copy the contract address under **Deployed Contracts**:
 
-![Contract address](./assets/trust-fund-account-on-ethereum/remix-copy-address.png)
+![Contract address](./assets/trust-fund-account-with-remix/remix-copy-address.png)
 
 2. Open your MetaMask and send Ropsten ether to the copied contract address.
 
@@ -201,7 +201,7 @@ Now that your contract is funded, you can interact with it.
 
 Expand the contract under **Deployed Contracts**:
 
-![Interact](./assets/trust-fund-account-on-ethereum/remix-interact.png)
+![Interact](./assets/trust-fund-account-with-remix/remix-interact.png)
 
 * `withdrawAmount` — enter any amount that is less than the current contract balance to withdraw partial funds.
 * `withdrawAll` — click to withdraw all funds from the contract.
