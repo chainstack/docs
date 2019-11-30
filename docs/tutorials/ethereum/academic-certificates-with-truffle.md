@@ -1,4 +1,4 @@
-# Academic certificates on Ethereum
+# Academic certificates with Truffle
 
 In this tutorial, you will:
 
@@ -434,6 +434,7 @@ You have to use the mainnet ether to deploy the contract to the Ethereum mainnet
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
-* [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
+* [Asset tokenization with Embark](/tutorials/ethereum/asset-tokenization-with-embark)
+* [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix)
 
 :::

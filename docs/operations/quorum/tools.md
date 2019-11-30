@@ -138,7 +138,7 @@ module.exports = {
 
 ::: tip See also
 
-* [Food supply temperature control on Quorum](/tutorials/food-supply-temperature-control-on-quorum)
-* [Loyalty program on Quorum](/tutorials/loyalty-program-on-quorum)
+* [Food supply temperature control with Web3](/tutorials/quorum/food-supply-temperature-control-with-web3)
+* [Loyalty program with Truffle](/tutorials/quorum/loyalty-program-with-truffle)
 
 :::

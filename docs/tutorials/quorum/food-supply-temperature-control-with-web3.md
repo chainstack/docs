@@ -1,4 +1,4 @@
-# Food supply temperature control on Quorum
+# Food supply temperature control with Web3
 
 In this tutorial, you will:
 
