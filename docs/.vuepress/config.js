@@ -101,6 +101,7 @@ module.exports = {
                         children: [
                             '/operations/bitcoin/',
                             '/operations/bitcoin/networks',
+                            '/operations/bitcoin/creating-a-raw-transaction',
                             '/operations/bitcoin/tools',
                         ]
                     },
