@@ -185,6 +185,7 @@ module.exports = {
 
         '/release-notes',
         ],
+        sidebarDepth: 2,
         algolia: {
             apiKey: '1194997ecec7d141de5c746bc3463e9c',
             indexName: 'chainstack'
