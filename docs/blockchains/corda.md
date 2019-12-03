@@ -136,7 +136,7 @@ A compatibility zone is a deployed network instance that is managed by a network
 There are compatibility zones managed by [Corda Network Foundation](https://corda.network/governance/index.html):
 
 * [Corda Network](https://corda.network/) — Corda's main compatibility zone.
-* [Corda testnet](https://marketplace.r3.com/network/testnet) — Corda's compatibility zone for testing.
+* [Corda Testnet](https://marketplace.r3.com/network/testnet) — Corda's compatibility zone for testing.
 
 There are also non-Corda Network Foundation managed compatibility zones. These are basically networks that rely on custom network map and doorman services to discover the nodes and control network permissions. These zones are managed by organizations deploying the zones and acting as network operators for the zones.
 
