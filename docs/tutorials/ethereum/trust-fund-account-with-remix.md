@@ -33,7 +33,7 @@ For Ethereum mainnet, the steps are exactly the same, except you need to use mai
 
 To get from zero to a deployed Trust Fund account on the Ethereum Ropsten testnet, do the following:
 
-1. With Chainstack, create a [Public chain project](/glossary/public-chain-project).
+1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
 1. With Chainstack, join the Ethereum Ropsten testnet.
 1. With Chainstack, access your Ethereum node credentials.
 1. Set up your MetaMask to work through a Chainstack node.
@@ -44,7 +44,7 @@ To get from zero to a deployed Trust Fund account on the Ethereum Ropsten testne
 
 ## Step-by-step
 
-### Create a Public chain project
+### Create a public chain project
 
 See [Create a project](/platform/create-a-project).
 

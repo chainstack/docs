@@ -19,7 +19,7 @@ By the end of the section, you will have your MultiChain nodes from the same net
 
 To deploy a hybrid MultiChain network, do the following:
 
-1. With Chainstack, create a [Consortium project](/glossary/consortium-project) project.
+1. With Chainstack, create a [consortium project](/glossary/consortium-project) project.
 1. With Chainstack, deploy a MultiChain network in cloud.
 1. With Chainstack, get your cloud MultiChain node access and credentials.
 1. On-premises, install MultiChain.
@@ -30,7 +30,7 @@ To deploy a hybrid MultiChain network, do the following:
 
 ## Step-by-step
 
-### Create a Consortium project
+### Create a consortium project
 
 See [Create a project](/platform/create-a-project).
 

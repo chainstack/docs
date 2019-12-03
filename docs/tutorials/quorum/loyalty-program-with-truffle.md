@@ -20,7 +20,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 To get from zero to a deployed Quorum network with the running contract, do the following:
 
-1. With Chainstack, create a [Consortium project](/glossary/consortium-project).
+1. With Chainstack, create a [consortium project](/glossary/consortium-project).
 1. With Chainstack, deploy a Quorum network.
 1. With Chainstack, access your Quorum node credentials.
 1. With Truffle, create and compile the contract.
@@ -30,7 +30,7 @@ To get from zero to a deployed Quorum network with the running contract, do the 
 
 ## Step-by-step
 
-### Create a Consortium project
+### Create a consortium project
 
 See [Create a project](/platform/create-a-project).
 

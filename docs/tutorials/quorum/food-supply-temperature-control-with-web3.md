@@ -43,7 +43,7 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 ### Deploy a Quorum network
 
-#### Create a Consortium project
+#### Create a consortium project
 
 See [Create a project](/platform/create-a-project).
 

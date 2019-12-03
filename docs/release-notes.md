@@ -6,10 +6,10 @@
 
 ### What's new
 
-* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. Deployment of [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/shared-node) nodes on Mainnet.
-* **Network and node statuses**. Update network and node statuses to display when operations are occurring on any network resource.
-* **Node details**. Divide node [access and credentials](/platform/view-node-access-and-credentials) into grouped sections to ease understanding and facilitate node operation.
-* **Billing**. Display individual metered usage cost line items for the current billing period, updated hourly.
+* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. You can now deploy [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/shared-node) nodes on mainnet.
+* **Network and node statuses**. You can now see network and node statuses to when operations are occurring on any network resource.
+* **Node details**. Node [access and credentials](/platform/view-node-access-and-credentials) are now grouped into sections, so it's easier to read.
+* **Billing**. View individual metered usage cost line items for the current billing period, updated hourly.
 * **Documentation**. [Bitcoin general description](/blockchains/bitcoin) and [Bitcoin operations](/operations/bitcoin).
 
 ### Bug fixes
@@ -23,10 +23,10 @@
 ### What's new
 
 * **Protocols**
-  * [Corda](/blockchains/corda) 4.1 support. Deployment of consortium network with [network map service](/blockchains/corda#network-map-service), doorman, and [notary](/blockchains/corda#notary-service). Dynamic addition and removal of participant nodes. Installation and removal of [CorDapps](/blockchains/corda#cordapp).
+  * [Corda](/blockchains/corda) 4.1 support. You can now deploy a consortium network with [network map service](/blockchains/corda#network-map-service), doorman, and [notary](/blockchains/corda#notary-service). Dynamically add and remove participant nodes. Install and remove [CorDapps](/blockchains/corda#cordapp).
   * [Quorum](/blockchains/Quorum) 2.3.0 support. Replaced Constellation transaction manager with Tessera.
-* **User management**. Invitation of users into the organization.
-* **Billing**. Display of metered usage cost for the current billing period, updated hourly.
+* **User management**. Invite users into the organization.
+* **Billing**. View metered usage cost for the current billing period, updated hourly.
 * **Documentation**
   * [Corda general description](/blockchains/corda) and [Corda operations](/operations/corda).
   * New tutorials: [No ticket scalping CorDapp](/tutorials/corda/no-ticket-scalping-cordapp) and [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix).
@@ -42,7 +42,7 @@
 
 ### What's new
 
-* **Security**. Protected endpoints added for Quorum and Ethereum nodes.
+* **Security**. Protected endpoints added for [Quorum](/operations/quorum/) and [Ethereum](/operations/ethereum/) nodes.
 * **Deployment**. [Bolt](/glossary/bolt) snapshots are now updated hourly so that nodes are deployed and synchronized with fresher snapshots.
 * **Protocols.** Numerous stability improvements for Quorum networks and nodes.
 * **Activity and events**. In-platform notifications and activity log introduced to provide visibility into account activity.
@@ -50,7 +50,7 @@
 
 ### Bug fixes
 
-* Numerous UI and copy fixes and improvements.
+* Introduced numerous UI and copy fixes and improvements.
 
 ### Breaking changes
 
@@ -77,14 +77,14 @@
 ### What’s new
 
 * **Protocols**
-  * [Ethereum](/blockchains/ethereum) Ropsten testnet support with Bolt.
+  * Added [Ethereum](/blockchains/ethereum) Ropsten testnet support with Bolt.
   * Updated [Quorum](/blockchains/quorum) explorer from [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) to [epirus-free](https://github.com/blk-io/epirus-free).
 * **Node details**. Added complete details for [Quorum](/blockchains/quorum), including default wallet private/public keys. Standardized fields for all protocols.
 * **Documentation**. New tutorial: [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle).
 
 ### Bug fixes
 
-* Numerous UI and copy fixes and improvements.
+* Introduced numerous UI and copy fixes and improvements.
 
 ## Chainstack 1.1.1
 
@@ -92,12 +92,12 @@
 
 ### What’s new
 
-* **Protocols**. Shared [Ethereum](/blockchains/ethereum) Mainnet nodes support.
-* [**Projects**](/glossary/project). Made project description field optional.
+* **Protocols**. Introdcued shared [Ethereum](/blockchains/ethereum) mainnet nodes support.
+* [**Projects**](/glossary/project). The project description field is now optional.
 
 ### Bug fixes
 
-* Issues with MultiChain stability.
+* Fixed issues with MultiChain stability.
 
 ## Chainstack 1.1
 
@@ -105,14 +105,14 @@
 
 ### What’s new
 
-* **Updating and deleting resources**. Editing project name and description, network and node name. Deleting nodes by the owner, networks are deleted automatically when the last node is deleted, projects can be deleted if empty.
+* **Updating and deleting resources**. You can now edit project name and description, network and node name. You can delete nodes by the owner, networks are deleted automatically when the last node is deleted, projects can be deleted if empty.
 * **Navigation**. Updated menu with links to [Documentation](../) and [Support](https://support.chainstack.com).
 * **Support**. Added Zendesk widget.
 
 ### Bug fixes
 
-* Sign up markup issues.
-* Adjusted columns in network/node list.
+* Fixed sign-up markup issues.
+* Adjusted columns in the network and node list.
 
 ## Chainstack 1.0.2
 
@@ -121,14 +121,14 @@
 ### What’s new
 
 * **Protocols**
-  * [MultiChain](/blockchains/multichain) 2.0 release support.
-  * [Quorum](/blockchains/quorum) 2.2.3 support.
+  * Added [MultiChain](/blockchains/multichain) 2.0 release support.
+  * Added [Quorum](/blockchains/quorum) 2.2.3 support.
 
 ### Bug fixes
 
-* MultiChain explorer lack of connectivity.
-* Project invitations duplicates.
-* Clearing the cookies on log out without a valid token.
+* Fixed the MultiChain explorer lack of connectivity.
+* Fixed project invitations duplicates.
+* Fixed clearing the cookies on log out without a valid token.
 
 ## Chainstack 1.0.1
 
@@ -140,21 +140,21 @@
 
 ### Bug fixes
 
-* Provided links to documentation, ToS, and Privacy Policy.
-* Sorting by date in the network list.
+* Provided links to documentation, terms of servuce, and privacy policy.
+* Introduced sorting by date in the network list.
 
 ## Chainstack 1.0
 
 *March 17, 2019*
 
-* **Registration and sign in**. Signing up via email, password and personal details. Signing up for a member invited to the project. Email confirmation on successful registration. Email verification.
+* **Registration and sign in**. Signing up via email, password, and personal details. Signing up for a member invited to the project. Email confirmation on successful registration. Email verification.
 * [**Consortium project**](/glossary/consortium-project). Wizards to create a new network and add a node to the existing network. Invitation of other organizations as members to the project via email.
 * [**Public chain project**](/glossary/public-chain-project). Wizards to join a public network and add another node.
 * **Protocols**
   * [MultiChain](/blockchains/multichain) 2.0-beta-1 support with blockchain explorer.
   * [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#istanbul-byzantine-fault-tolerance), and [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) blockchain explorer.
-  * Full [Ethereum](/blockchains/ethereum) Mainnet node deployment with [Bolt](/glossary/bolt) rapid sync mechanism.
-* **Clouds**. Google Cloud Platform and Amazon Web Services in APAC region.
-* **Node details**. Default wallet private/public keys and chain name for [MultiChain](/blockchains/multichain). Constellation private/public keys and network ID for [Quorum](/blockchains/quorum). Sync mode and network ID for [Ethereum](/blockchains/ethereum). Client version for all protocols.
+  * Full [Ethereum](/blockchains/ethereum) mainnet node deployment with [Bolt](/glossary/bolt) rapid sync mechanism.
+* **Clouds**. Google Cloud Platform and Amazon Web Services in the Asia-Pacific region.
+* **Node details**. Default wallet private/public keys, and chain name for MultiChain. Constellation private/public keys, and network ID for [Quorum](/blockchains/quorum). Sync mode and network ID for Ethereum. Client version for all protocols.
 * **Settings**. Editing personal and organization details. Changing password.
 * **Documentation**. [Portal based on VuePress](../).

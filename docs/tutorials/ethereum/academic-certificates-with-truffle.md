@@ -16,7 +16,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 To get from zero to a deployed DApp on the Ethereum mainnet, do the following:
 
-1. With Chainstack, create a [Public chain project](/glossary/public-chain-project).
+1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
 1. With Chainstack, join the Ethereum mainnet.
 1. With Chainstack, access your Ethereum node credentials.
 1. With Truffle, create and compile the DApp contract.
@@ -27,7 +27,7 @@ To get from zero to a deployed DApp on the Ethereum mainnet, do the following:
 
 ## Step-by-step
 
-### Create a Public chain project
+### Create a public chain project
 
 See [Create a project](/platform/create-a-project).
 
