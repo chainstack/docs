@@ -8,7 +8,7 @@ To view the access information:
 
 This will give you the access and credentials to your nodes.
 
-If you are an invited member of a [Consortium project](/glossary/consortium-project), you will be able to see the basic access information of other nodes in the project.
+If you are an invited member of a [consortium project](/glossary/consortium-project), you will be able to see the basic access information of other nodes in the project.
 
 ::: tip See also
 

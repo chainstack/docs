@@ -10,7 +10,7 @@ To delete a node:
 
 This will delete the node.
 
-When deleting nodes in a [Consortium project](/glossary/consortium-project), you can only delete the first deployed node after deleting all other nodes in the network.
+When deleting nodes in a [consortium project](/glossary/consortium-project), you can only delete the first deployed node after deleting all other nodes in the network.
 
 ::: tip See also
 
