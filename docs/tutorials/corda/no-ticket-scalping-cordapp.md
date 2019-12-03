@@ -52,7 +52,7 @@ The code in `noScalpFlow`, `noScalpContract`, and `noScalpState` has comments ex
 
 ## Prepare a Corda network
 
-### Create a Consortium project
+### Create a consortium project
 
 See [Create a project](/platform/create-a-project).
 
