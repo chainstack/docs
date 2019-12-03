@@ -6,7 +6,7 @@
 
 ### What's new
 
-* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. You can now deploy [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/shared-node) nodes on mainnet.
+* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. You can now deploy [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/shared-node) nodes on the mainnet.
 * **Network and node statuses**. You can now see network and node statuses to when operations are occurring on any network resource.
 * **Node details**. Node [access and credentials](/platform/view-node-access-and-credentials) are now grouped into sections, so it's easier to read.
 * **Billing**. View individual metered usage cost line items for the current billing period, updated hourly.
@@ -92,7 +92,7 @@
 
 ### What’s new
 
-* **Protocols**. Introdcued shared [Ethereum](/blockchains/ethereum) mainnet nodes support.
+* **Protocols**. Introduced shared [Ethereum](/blockchains/ethereum) mainnet nodes support.
 * [**Projects**](/glossary/project). The project description field is now optional.
 
 ### Bug fixes
@@ -140,7 +140,7 @@
 
 ### Bug fixes
 
-* Provided links to documentation, terms of servuce, and privacy policy.
+* Provided links to documentation, terms of service, and privacy policy.
 * Introduced sorting by date in the network list.
 
 ## Chainstack 1.0
