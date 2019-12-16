@@ -6,6 +6,6 @@ You can filter the activity log by project name or a date range.
 
 ::: tip See also
 
-* [Create a project](/platform/create-a-project)
+* [View node and network status](/platform/view-node-and-network-status)
 
 :::

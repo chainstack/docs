@@ -31,33 +31,37 @@ Example of a 3 node Quorum Raft:
 ``` js
 > raft.cluster
 [{
-    ip: "12.345.678.912",
+    hostname: "12.345.678.912",
     nodeId: "aa41b2c83ea797d1aae60a3059d2693038aaef44aeaf14d1afaa06c5d6a55d6741c134befee9d5859f424054fb131bf3c65c11d184defe9c35e6d69fccc8c156",
     p2pPort: 12345,
     raftId: 1,
-    raftPort: 50400
+    raftPort: 50400,
+    role: "minter"
 }, {
-    ip: "34.567.891.234",
+    hostname: "34.567.891.234",
     nodeId: "12aabb9dcc145fce63c737a454f8bf49f4439cad32e1f96e6c752e05ca5443921f6aebcb25b7392c6508eeb72efb4ffe1cd0f67812610d12473da8b73f3336cb",
     p2pPort: 12345,
     raftId: 2,
-    raftPort: 50400
+    raftPort: 50400,
+    role: "verifier"
 }, {
-    ip: "56.789.123.45",
+    hostname: "56.789.123.45",
     nodeId: "1aabc26c96b5443ca87209816356b32018d198df124252bdc78c9f9ece5e44a8684fad54e36563b0b2fea0e21090b5eeae0be667bfa9a2bc24b4f12ddacd98d4",
     p2pPort: 12345,
     raftId: 3,
-    raftPort: 50400
+    raftPort: 50400,
+    role: "verifier"
 }]
 ```
 
 where
 
-* `ip` — the IP address of the node.
+* `hostname` — the IP address of the node.
 * `nodeId` — the node ID in the network.
 * `p2pPort` — the node to node connection port.
 * `raftId` — the Quorum Raft node ID in the network.
 * `raftPort` — the Quorum Raft transport layer port.
+* `role` — the node role in the consensus.
 
 ### Get the node ID of the minter node
 
@@ -130,6 +134,59 @@ Example:
 ```
 
 You can get all of the node information by running `raft.cluster`.
+
+### Add a learner node
+
+Geth:
+
+``` js
+raft.addLearner('enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT')
+```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_addLearner","params":["enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT"],"id":1}'
+```
+
+where
+
+* NODE_ID — the hexadecimal node ID.
+* NODE_IP — the IP address of the node.
+* P2P_PORT — the port of the node.
+* RAFT_PORT — the Raft port of the node.
+
+Example:
+
+``` js
+> raft.addLearner('enode://12345f021112a110487689706b984ffe81b1584aa44f5ece7a57b9929091c43aefa892a30e082795e109a5c22f531d313e78b7e90caf8f6da53dc027f1d90976@56.789.123.45:12345?raftport=50400')
+4
+```
+
+### Promote a learner node to the verifier role
+
+Geth:
+
+``` js
+raft.promoteToPeer(RAFT_ID)
+```
+
+Curl:
+
+``` sh
+curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"promoteToPeer","params":[RAFT_ID],"id":1}'
+```
+
+where
+
+* RAFT_ID — the Raft node ID of the learner node. You can get all node IDs by running `raft.cluster`.
+
+Example:
+
+``` js
+> raft.promoteToPeer(4)
+true
+```
 
 ### Remove a node
 
