@@ -42,7 +42,7 @@ $ java -jar corda-tools-shell-cli-4.3-all.jar --host=nd-123-456-789.rg-123-456.p
  / /     __  / ___/ __  / __ `/
 / /___  /_/ / /  / /_/ / /_/ /
 \____/     /_/   \__,_/\__,_/
---- Corda Open Source 4.3 (c11f6c1) ---
+--- Corda Open Source 4.3 (d679784) ---
 
 Standalone Shell connected to nd-123-456-789.rg-123-456.p2pify.com:10201
 ```
@@ -88,7 +88,7 @@ $ docker run -it -v /home/user/cordapps:/cordapps chainstack/corda-shell --host=
  / /     __  / ___/ __  / __ `/
 / /___  /_/ / /  / /_/ / /_/ /
 \____/     /_/   \__,_/\__,_/
---- Corda Open Source 4.3 (c11f6c1) ---
+--- Corda Open Source 4.3 (d679784) ---
 
 Standalone Shell connected to nd-123-456-789.rg-123-456.p2pify.com:10201
 ```
