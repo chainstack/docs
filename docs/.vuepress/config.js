@@ -39,6 +39,7 @@ module.exports = {
                     '/platform/add-a-network-to-a-project',
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
+                    '/platform/view-node-and-network-status',
                     '/platform/explore-a-network',
                     '/platform/delete-a-node',
                     '/platform/delete-a-network',

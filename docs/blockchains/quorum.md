@@ -31,12 +31,13 @@ The Raft consensus algorithm has the following key characteristics:
 
 Crash fault tolerance assumes that there are no adversary nodes on the network.
 
-A Quorum Raft network always has the nodes in one of the following roles:
+A Quorum Raft network has the nodes in one of the following roles:
 
 * Minter — in Raft terminology, this is the *leader* node. In Quorum Raft terminology, this is the *minter* node.
 * Verifier — in Raft terminology, this is the *follower* node. In Quorum Raft terminology, this is the *verifier* node.
+* Learner — this is the *learner* node in both Raft and Quorum Raft terminology.
 
-The minter node creates the blocks and the verifier nodes follow the minter node.
+The minter node creates the blocks and the verifier nodes follow the minter node. The learner node is not a part of the Raft consensus. The objective of the learner node is to sync with the network and then be manually promoted to the verifier role.
 
 By default, the very first node you deploy as part of your Raft Quorum network assumes the minter role.
 
