@@ -17,7 +17,7 @@
     "@limdongjin/vuepress-plugin-simple-seo": "^1.0.4-alpha.5",
     "clean": "^4.0.2",
     "esm": "^3.2.25",
-    "vuepress-plugin-clean-urls": "^1.1.0",
+    "vuepress-plugin-clean-urls": "^1.1.1",
     "vuepress-plugin-google-tag-manager": "^0.0.3",
     "vuepress-plugin-sitemap": "^2.3.1"
   }
