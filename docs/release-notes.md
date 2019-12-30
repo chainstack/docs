@@ -1,5 +1,22 @@
 # Release notes
 
+## Chainstack 1.4.2
+
+*December/January TTK, 2019/2020*
+
+### What's new
+
+* **Protocols**
+  * [Corda](/blockchains/corda) 4.3 support. You can also now install combined CorDapps.
+  * [Quorum](/blockchains/Quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
+  * [MultiChain](/blockchains/multichain) 2.0.3 support.
+  * [Bitcoin](/blockchains/bitcoin) 0.19.0.1 support. Bitcoin nodes now run with the `-txindex` flag.
+*  **Documentation**. Context-sensitive documentation links in the platform UI.
+
+### Bug fixes
+
+* Numerous UI and copy fixes and improvements.
+
 ## Chainstack 1.4.1
 
 *November 14, 2019*
