@@ -8,11 +8,11 @@ Use [Quorum Geth](/operations/quorum/tools#geth) or [JSON-RPC API tools](/operat
 
 By default, the very first node you deploy with Chainstack as part of your Quorum Raft network assumes the minter role.
 
-Each subsequent node that you deploy as part of the same network assumes the verifier role. For Quorum Raft details, see [Raft](/blockchains/quorum#raft).
+Each subsequent node that you deploy as part of the same network assumes the learner role. For Quorum Raft details, see [Raft](/blockchains/quorum#raft).
 
-You can always [remove the existing](#remove-a-node) verifier nodes or a minter node from the network. You can also always [add new](#add-a-verifier-node) verifier nodes to the network.
+You can always [remove the existing](#remove-a-node) minter, verifier, or learner nodes from the network. You can also always add [verifier nodes](#add-a-verifier-node) or [learner nodes](#add-a-learner-node) to the network.
 
-### Get the list of current minter and verifier nodes
+### Get the list of current nodes and roles
 
 Geth:
 
