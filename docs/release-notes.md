@@ -2,19 +2,20 @@
 
 ## Chainstack 1.4.2
 
-*December/January TTK, 2019/2020*
+*December 31, 2019*
 
 ### What's new
 
 * **Protocols**
-  * [Corda](/blockchains/corda) 4.3 support. You can also now install combined CorDapps.
+  * [Corda](/blockchains/corda) 4.3 support. You can also now install CorDapps containing workflows and contracts in a single JAR file.
   * [Quorum](/blockchains/Quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
   * [MultiChain](/blockchains/multichain) 2.0.3 support.
-  * [Bitcoin](/blockchains/bitcoin) 0.19.0.1 support. Bitcoin nodes now run with the `-txindex` flag.
-*  **Documentation**. Context-sensitive documentation links in the platform UI.
+  * [Bitcoin](/blockchains/bitcoin) 0.19.0.1 support. Bitcoin nodes now run with the `txindex` flag allowing to query any transaction on the blockchain.
+* **Documentation**. Context-sensitive documentation links in the platform UI.
 
 ### Bug fixes
 
+* Installation rollback for CorDapps not compatible with Corda node.
 * Numerous UI and copy fixes and improvements.
 
 ## Chainstack 1.4.1
@@ -67,7 +68,7 @@
 
 ### Bug fixes
 
-* Introduced numerous UI and copy fixes and improvements.
+* Numerous UI and copy fixes and improvements.
 
 ### Breaking changes
 
@@ -101,7 +102,7 @@
 
 ### Bug fixes
 
-* Introduced numerous UI and copy fixes and improvements.
+* Numerous UI and copy fixes and improvements.
 
 ## Chainstack 1.1.1
 
@@ -157,8 +158,8 @@
 
 ### Bug fixes
 
-* Provided links to documentation, terms of service, and privacy policy.
-* Introduced sorting by date in the network list.
+* Fixed links to documentation, terms of service, and privacy policy.
+* Fixed sorting by date in the network list.
 
 ## Chainstack 1.0
 
