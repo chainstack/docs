@@ -52,35 +52,6 @@ Example below demonstrates how to get the balance of an address in wei value and
 642538.078574759898951277
 ```
 
-### web3.js
-
-Interact with your Ethereum node using [web3.js](https://github.com/ethereum/web3.js/).
-
-1. Install [web3.js](https://web3js.readthedocs.io/).
-1. Use the `WebsocketProvider` object to connect to your node's WSS endpoint.
-
-``` js
-const Web3 = require('web3');
-
-const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://USERNAME:PASSWORD@WSS_ENDPOINT'));
-```
-
-where
-
-* USERNAME — your Ethereum node access username.
-* PASSWORD — your Ethereum node access password.
-* WSS_ENDPOINT — your Ethereum node WSS endpoint.
-
-Example to get the latest block number:
-
-``` js
-const Web3 = require('web3');
-
-const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com'));
-
-web3.eth.getBlockNumber().then(console.log);
-```
-
 ### MetaMask
 
 You can set your [MetaMask](https://metamask.io/) to interact through your Ethereum nodes deployed with Chainstack.
@@ -162,6 +133,35 @@ To make Remix IDE interact with the network through a Chainstack node:
 This will engage MetaMask and make Remix IDE interact with the network through a Chainstack node.
 
 For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
+
+### web3.js
+
+Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Ethereum nodes deployed with Chainstack.
+
+1. Install [web3.js](https://web3js.readthedocs.io/).
+1. Use the `WebsocketProvider` object to connect to your node's WSS endpoint.
+
+``` js
+const Web3 = require('web3');
+
+const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://USERNAME:PASSWORD@WSS_ENDPOINT'));
+```
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* WSS_ENDPOINT — your Ethereum node WSS endpoint.
+
+Example to get the latest block number:
+
+``` js
+const Web3 = require('web3');
+
+const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com'));
+
+web3.eth.getBlockNumber().then(console.log);
+```
 
 ## Monitoring tools
 
