@@ -1,4 +1,4 @@
-# Asset tokenization on Ethereum
+# Asset tokenization with Embark
 
 This tutorial will guide you through creating a tokenized asset contract and deploying it on Ropsten testnet.
 
@@ -21,7 +21,7 @@ This tutorial uses [Embark](https://embark.status.im/) to test and deploy the co
 
 To get from zero to an asset tokenization contract running on Ropsten, do the following:
 
-1. With Chainstack, create a [Public chain project](/glossary/public-chain-project).
+1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
 1. With Chainstack, deploy a Ropsten testnet node.
 1. With Embark, create a project and the contract.
 1. With Geth, create a new account.
@@ -199,5 +199,7 @@ Test the contract by calling:
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
+* [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)
+* [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix)
 
 :::

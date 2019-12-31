@@ -1,4 +1,4 @@
-# Academic certificates on Ethereum
+# Academic certificates with Truffle
 
 In this tutorial, you will:
 
@@ -16,7 +16,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 To get from zero to a deployed DApp on the Ethereum mainnet, do the following:
 
-1. With Chainstack, create a [Public chain project](/glossary/public-chain-project).
+1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
 1. With Chainstack, join the Ethereum mainnet.
 1. With Chainstack, access your Ethereum node credentials.
 1. With Truffle, create and compile the DApp contract.
@@ -27,7 +27,7 @@ To get from zero to a deployed DApp on the Ethereum mainnet, do the following:
 
 ## Step-by-step
 
-### Create a Public chain project
+### Create a public chain project
 
 See [Create a project](/platform/create-a-project).
 
@@ -434,6 +434,7 @@ You have to use the mainnet ether to deploy the contract to the Ethereum mainnet
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
-* [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
+* [Asset tokenization with Embark](/tutorials/ethereum/asset-tokenization-with-embark)
+* [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix)
 
 :::

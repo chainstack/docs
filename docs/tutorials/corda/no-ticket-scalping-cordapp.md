@@ -1,4 +1,4 @@
-# No ticket scalping CorDapp on Corda
+# No ticket scalping CorDapp
 
 Ticket scalping for popular events has been a problem even in the pre-Internet era; however, with the digital technology becoming ubiquitous, scalping looked like a solved problem for a brief moment—it made sense too, the tickets became digital and available through websites, and all one had to do was enter their credit card details online and click *Buy*.
 
@@ -52,7 +52,7 @@ The code in `noScalpFlow`, `noScalpContract`, and `noScalpState` has comments ex
 
 ## Prepare a Corda network
 
-### Create a Consortium project
+### Create a consortium project
 
 See [Create a project](/platform/create-a-project).
 

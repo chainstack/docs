@@ -8,9 +8,9 @@ Consortium:
 
 Public network:
 
-* [Ethereum](/blockchains/ethereum) Mainnet
-* [Ethereum](/blockchains/ethereum) Ropsten
-* [Bitcoin](/blockchains/bitcoin) Mainnet
+* [Ethereum](/blockchains/ethereum) mainnet
+* [Ethereum](/blockchains/ethereum) Ropsten testnet
+* [Bitcoin](/blockchains/bitcoin) mainnet
 
 ::: tip
 Chainstack is always working on introducing support for other protocols.

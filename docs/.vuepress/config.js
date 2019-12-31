@@ -39,6 +39,7 @@ module.exports = {
                     '/platform/add-a-network-to-a-project',
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
+                    '/platform/view-node-and-network-status',
                     '/platform/explore-a-network',
                     '/platform/delete-a-node',
                     '/platform/delete-a-network',
@@ -111,15 +112,42 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/tutorials/',
-                    '/tutorials/no-ticket-scalping-cordapp-on-corda',
-                    '/tutorials/food-supply-temperature-control-on-quorum',
-                    '/tutorials/loyalty-program-on-quorum',
-                    '/tutorials/distributed-company-scrips-on-multichain',
-                    '/tutorials/academic-certificates-on-ethereum',
-                    '/tutorials/asset-tokenization-on-ethereum',
-                    '/tutorials/trust-fund-account-on-ethereum',
-
-                    ]
+                    {
+                        title: 'Corda',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/corda/',
+                            '/tutorials/corda/no-ticket-scalping-cordapp',
+                        ]
+                    },
+                    {
+                        title: 'Quorum',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/quorum/',
+                            '/tutorials/quorum/food-supply-temperature-control-with-web3',
+                            '/tutorials/quorum/loyalty-program-with-truffle',
+                        ]
+                    },
+                    {
+                        title: 'MultiChain',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/multichain/',
+                            '/tutorials/multichain/distributed-company-scrips',
+                        ]
+                    },
+                    {
+                        title: 'Ethereum',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/ethereum/',
+                            '/tutorials/ethereum/academic-certificates-with-truffle',
+                            '/tutorials/ethereum/asset-tokenization-with-embark',
+                            '/tutorials/ethereum/trust-fund-account-with-remix',
+                        ]
+                    },
+                ]
             },
             {
                 title: 'Blockchains',
@@ -158,6 +186,7 @@ module.exports = {
 
         '/release-notes',
         ],
+        sidebarDepth: 2,
         algolia: {
             apiKey: '1194997ecec7d141de5c746bc3463e9c',
             indexName: 'chainstack'

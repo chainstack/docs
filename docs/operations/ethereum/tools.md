@@ -134,7 +134,38 @@ This will engage MetaMask and make Remix IDE interact with the network through a
 
 For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
 
-### Logging and analytics with TerminalSDK
+### web3.js
+
+Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Ethereum nodes deployed with Chainstack.
+
+1. Install [web3.js](https://web3js.readthedocs.io/).
+1. Use the `WebsocketProvider` object to connect to your node's WSS endpoint.
+
+``` js
+const Web3 = require('web3');
+
+const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://USERNAME:PASSWORD@WSS_ENDPOINT'));
+```
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* WSS_ENDPOINT — your Ethereum node WSS endpoint.
+
+Example to get the latest block number:
+
+``` js
+const Web3 = require('web3');
+
+const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com'));
+
+web3.eth.getBlockNumber().then(console.log);
+```
+
+## Monitoring tools
+
+### TerminalSDK
 
 You can set up your DApp logging and analytics with TerminalSDK of [Terminal.co](https://terminal.co/) and Chainstack.
 
@@ -196,8 +227,8 @@ For information on how to view the logs and analytics, see:
 
 ::: tip See also
 
-* [Asset tokenization on Ethereum](/tutorials/asset-tokenization-on-ethereum)
-* [Academic certificates on Ethereum](/tutorials/academic-certificates-on-ethereum)
-* [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum)
+* [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)
+* [Asset tokenization with Embark](/tutorials/ethereum/asset-tokenization-with-embark)
+* [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix)
 
 :::

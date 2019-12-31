@@ -9,7 +9,7 @@ Interact with your Corda node using [Corda standalone shell](https://docs.corda.
 #### Prerequisites
 
 * Install Java 8. See [See Corda docs: Set-up instructions](https://docs.corda.net/getting-set-up.html#set-up-instructions).
-* Download Corda standalone shell from [Corda artifactory](https://software.r3.com/artifactory/corda-releases/net/corda/corda-tools-shell-cli/4.1/corda-tools-shell-cli-4.1.jar).
+* Download Corda standalone shell from [Corda artifactory](https://software.r3.com/artifactory/corda-releases/net/corda/corda-tools-shell-cli/4.3/corda-tools-shell-cli-4.3-all.jar).
 * A Corda node deployed with Chainstack.
 
 #### Running the standalone shell
@@ -19,7 +19,7 @@ You can connect to your Corda node and interact with it in shell.
 To be able to interact with the CorDapps through shell, you must have the CorDapp contract and workflow JAR files both locally on your machine and on the node you are connecting to.
 
 ``` sh
-java -jar corda-tools-shell-cli-4.1.jar --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD --cordapp-directory=⁨/home/user/cordapps
+java -jar corda-tools-shell-cli-4.3-all.jar --host=CORDA_RPC_HOSTNAME --port=CORDA_RPC_PORT --user=CORDA_RPC_USER --password=CORDA_RPC_PASSWORD --cordapp-directory=⁨/home/user/cordapps
 ```
 
 where
@@ -35,14 +35,14 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 Example:
 
 ``` sh
-$ java -jar corda-tools-shell-cli-4.1.jar --host=nd-123-456-789.rg-123-456.p2pify.com --port=10201 --user=admin --password=pass --cordapp-directory=⁨/home/user/cordapps
+$ java -jar corda-tools-shell-cli-4.3-all.jar --host=nd-123-456-789.rg-123-456.p2pify.com --port=10201 --user=admin --password=pass --cordapp-directory=⁨/home/user/cordapps
 
    ______               __
   / ____/     _________/ /___ _
  / /     __  / ___/ __  / __ `/
 / /___  /_/ / /  / /_/ / /_/ /
 \____/     /_/   \__,_/\__,_/
---- Corda Open Source 4.1 (c11f6c1) ---
+--- Corda Open Source 4.3 (d679784) ---
 
 Standalone Shell connected to nd-123-456-789.rg-123-456.p2pify.com:10201
 ```
@@ -88,7 +88,7 @@ $ docker run -it -v /home/user/cordapps:/cordapps chainstack/corda-shell --host=
  / /     __  / ___/ __  / __ `/
 / /___  /_/ / /  / /_/ / /_/ /
 \____/     /_/   \__,_/\__,_/
---- Corda Open Source 4.1 (c11f6c1) ---
+--- Corda Open Source 4.3 (d679784) ---
 
 Standalone Shell connected to nd-123-456-789.rg-123-456.p2pify.com:10201
 ```
@@ -160,7 +160,7 @@ $ curl http://localhost:10055/identities
 [OU=Organization-ND-123-456-789, O=Organization, L=Singapore, C=SG]
 ```
 
-You can also write your own REST endpoints for your CorDapps. For the examples, see [Corda samples](https://github.com/corda/samples/) or the [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda) tutorial.
+You can also write your own REST endpoints for your CorDapps. For the examples, see [Corda samples](https://github.com/corda/samples/) or the [No ticket scalping CorDapp](/tutorials/corda/no-ticket-scalping-cordapp) tutorial.
 
 ## Development tools
 
@@ -174,6 +174,6 @@ Corda requires at least Java 8u171 and does *not* support Java 9 or higher.
 
 * [Installing a CorDapp](/operations/corda/installing-a-cordapp)
 * [Node explorer](/operations/corda/node-explorer)
-* [No ticket scalping CorDapp on Corda](/tutorials/no-ticket-scalping-cordapp-on-corda)
+* [No ticket scalping CorDapp](/tutorials/corda/no-ticket-scalping-cordapp)
 
 :::

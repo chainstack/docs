@@ -1,4 +1,4 @@
-# Food supply temperature control on Quorum
+# Food supply temperature control with Web3
 
 In this tutorial, you will:
 
@@ -43,7 +43,7 @@ To get from zero to a deployed Quorum network with a public contract and a priva
 
 ### Deploy a Quorum network
 
-#### Create a Consortium project
+#### Create a consortium project
 
 See [Create a project](/platform/create-a-project).
 
@@ -165,7 +165,7 @@ where
 * DEFAULT_WALLET_PRIVATE_KEY — a private key to your Quorum node default wallet address to sign the transaction. Available under **Access and credentials** > **Default wallet private key**.
 * TRANSACTION_MANAGER_PUBLIC_KEY — your Quorum node Tessera public key. The contract will use this key to make the contract private for the node that signs the contract transaction with the Tessera private key from this public-private key pair. Available under **Access and credentials** > **Transaction manager public key**.
 * TRANSACTION_MANAGER_ENDPOINT — an endpoint to the Tessera node deployed with your Quorum node. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. Available under **Access and credentials** > **Transaction manager endpoint**.
-* NETWORK_ID — your Quorum network ID. Available under **Access and credentials** > **Network ID**.
+* NETWORK_ID — your Quorum network ID. Use the default ID `10001`.
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
