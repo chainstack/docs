@@ -93,7 +93,7 @@ _job_build_image: &build_image
         name: Create service version
         command: |
           set -x
-          sed -i -e "s:{BUILD_NUM}:${CIRCLE_BUILD_NUM}-${CIRCLE_BRANCH}:g" ./VERSION
+          sed -i -e "s:{BUILD_NUM}:${CIRCLE_BUILD_NUM}.${CIRCLE_BRANCH}:g" ./VERSION
 
     - run:
        name: Build production image
