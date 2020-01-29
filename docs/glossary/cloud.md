@@ -4,6 +4,6 @@ Deployment of the node on a public cloud such as Alibaba Cloud, Amazon Web Servi
 
 ::: tip See also
 
-* [Supported cloud hosting providers](/platform/supported-cloud-hosting-providers)
+* [Supported cloud providers](/platform/supported-cloud-hosting-providers)
 
 :::

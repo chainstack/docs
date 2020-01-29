@@ -93,6 +93,7 @@ module.exports = {
                         children: [
                             '/operations/ethereum/',
                             '/operations/ethereum/networks',
+                            '/operations/ethereum/modes',
                             '/operations/ethereum/tools',
                         ]
                     },
