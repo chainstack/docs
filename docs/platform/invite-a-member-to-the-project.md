@@ -14,7 +14,7 @@ This will send an email invitation to join the project.
 
 ::: tip See also
 
-* [Invite a member to the organization](/platform/invite-a-member-to-the-organization)
+* [Invite a user to the organization](/platform/invite-a-user-to-the-organization)
 * [View node access and credentials](/platform/view-node-access-and-credentials)
 
 :::
