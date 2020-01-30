@@ -7,5 +7,6 @@ Chainstack supports the deployment of [dedicated](/glossary/dedicated-node) and 
 ::: tip See also
 
 * [Supported protocols](/platform/supported-protocols)
+* [Ethereum node modes](/operations/ethereum/modes)
 
 :::

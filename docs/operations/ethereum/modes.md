@@ -7,7 +7,9 @@ Chainstack supports deploying an Ethereum node on the mainnet in the following m
 
 To be a part of the Ethereum mainnet, you can deploy either a full node or an archive node.
 
-To be able to query the historical state of the Ethereum mainnet at any block number, you need an archive node.
+With a full node, you can query the historical state of the Ethereum mainnet at only the latest 128 blocks.
+
+To be able to query the historical state of the Ethereum mainnet at any block, you need an archive node.
 
 See [Geth JSON-RPC methods](https://github.com/ethereum/wiki/wiki/JSON-RPC#the-default-block-parameter) that support querying at a block number.
 
