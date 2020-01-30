@@ -36,6 +36,7 @@ module.exports = {
                     '/platform/deploy-a-consortium-network',
                     '/platform/join-a-public-network',
                     '/platform/invite-a-member-to-the-project',
+                    '/platform/invite-a-member-to-the-organization',
                     '/platform/add-a-network-to-a-project',
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
@@ -93,6 +94,7 @@ module.exports = {
                         children: [
                             '/operations/ethereum/',
                             '/operations/ethereum/networks',
+                            '/operations/ethereum/types',
                             '/operations/ethereum/modes',
                             '/operations/ethereum/tools',
                         ]
@@ -103,6 +105,7 @@ module.exports = {
                         children: [
                             '/operations/bitcoin/',
                             '/operations/bitcoin/networks',
+                            '/operations/bitcoin/types',
                             '/operations/bitcoin/tools',
                         ]
                     },
