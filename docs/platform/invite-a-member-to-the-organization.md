@@ -1,14 +1,14 @@
-# Invite a member to the organization
+# Invite a user to the organization
 
-You can invite a member to your organization who will:
+You can invite a user to your organization who will:
 
 * Create both public and consortium projects.
 * Deploy nodes and networks.
 * Access all existing projects, networks, nodes and their access and credentials.
 
-The invited member will not be able to invite new users, change the organization name, or the billing settings.
+The invited user will not be able to invite new users, change the organization name, or the billing settings.
 
-To invite a member to your organization:
+To invite a user to your organization:
 
 1. Click **Settings** > **Organization**.
 1. Click **Invite user**.
