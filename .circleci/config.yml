@@ -65,7 +65,7 @@ _job_deploy: &deploy
        command: |
         set -x
         helm init --service-account ci-helm --client-only
-        helm repo add cs gs://chainstack-helm-charts
+        helm repo add cs ${HELM_REPO}
         helm repo update
 
     - run:
