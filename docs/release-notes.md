@@ -1,5 +1,21 @@
 # Release notes
 
+## Chainstack 1.4.3
+
+*February 13, 2020*
+
+### What's new
+
+* **Protocols**.
+  * [Ethereum](/blockchains/ethereum) archive node support. Deploy a dedicated Ethereum archive node. Connect to a shared archive node for free on Business and Enterprise tiers. Geth 1.9.10 support.
+  * [Quorum](/blockchains/quorum) transaction manager Tessera 0.10.3 support.
+* **UI**. In-line edit button for all resources to improve access to quick actions.
+* **Documentation**. [Ethereum modes](/operations/ethereum/modes) section to help in selecting whether to deploy a full or archive Ethereum node.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 1.4.2
 
 *December 31, 2019*
