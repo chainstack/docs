@@ -62,7 +62,7 @@ Ensure members know how to add a node:
 1. Under the project, click the network name. The network name will probably be **Currency System in COMPANY_NAME**.
 1. Click **Add node**.
 1. In the **Node name** field, provide a name that identifies you as a member of the system. Remember that other members will use this name to send you tokens.
-1. Under **Cloud hosting provider**, select your preferred provider.
+1. Under **Cloud provider**, select your preferred provider.
 1. Click **Add node**.
 
 ### Issue a company token

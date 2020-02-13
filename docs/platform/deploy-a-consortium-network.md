@@ -8,7 +8,7 @@ To deploy a [Corda](/blockchains/corda) network:
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select **Corda**.
 1. The consensus algorithm is [Single Notary](/blockchains/corda#consensus). Click **Next**.
-1. Under **Cloud hosting provider**, select your preferred provider.
+1. Under **Cloud provider**, select your preferred provider.
 1. Under **Region**, select the region for your deployment.
 1. Review your changes and click **Create network**.
 
@@ -20,7 +20,7 @@ To deploy a [Quorum](/blockchains/quorum) network:
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select **Quorum**.
 1. Under **Consensus algorithm**, select [Raft or IBFT](/blockchains/quorum#consensus). Click **Next**.
-1. Under **Cloud hosting provider**, select your preferred provider.
+1. Under **Cloud provider**, select your preferred provider.
 1. Under **Region**, select the region for your deployment.
 1. Review your changes and click **Create network**.
 
@@ -32,7 +32,7 @@ To deploy a [MultiChain](/blockchains/multichain) network:
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select **MultiChain**.
 1. The consensus algorithm is [Round-robin](/blockchains/multichain#consensus). Click **Next**.
-1. Under **Cloud hosting provider**, select your preferred provider.
+1. Under **Cloud provider**, select your preferred provider.
 1. Under **Region**, select the region for your deployment.
 1. Review your changes and click **Create network**.
 
@@ -40,7 +40,7 @@ The network status will change from **Pending** to **Running** once deployed.
 
 ::: tip See also
 
-* [Supported cloud hosting providers](/platform/supported-cloud-hosting-providers)
+* [Supported cloud providers](/platform/supported-cloud-hosting-providers)
 * [Operations: Corda](/operations/corda/)
 * [Operations: Quorum](/operations/quorum/)
 * [Operations: MultiChain](/operations/multichain/)
