@@ -14,6 +14,7 @@ If you are an invited member of a [consortium project](/glossary/consortium-proj
 
 * [Project](/glossary/project)
 * [Operations: Corda](/operations/corda/)
+* [Operations: Hyperledger Fabric](/operations/hyperledger-fabric/)
 * [Operations: Quorum](/operations/quorum/)
 * [Operations: MultiChain](/operations/multichain/)
 * [Operations: Ethereum](/operations/ethereum/)

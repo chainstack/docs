@@ -65,6 +65,13 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Hyperledger Fabric',
+                        collapsable: true,
+                        children: [
+                            '/operations/hyperledger-fabric/tools',
+                        ]
+                    },
+                    {
                         title: 'Quorum',
                         collapsable: true,
                         children: [
@@ -125,6 +132,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Hyperledger Fabric',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/corda/',
+                            '/tutorials/hyperledger-fabric/universal-basic-income-opt-in-chaincode',
+                        ]
+                    },
+                    {
                         title: 'Quorum',
                         collapsable: true,
                         children: [
@@ -159,6 +174,7 @@ module.exports = {
                 children: [
                     '/blockchains/',
                     '/blockchains/corda',
+                    '/blockchains/hyperledger-fabric',
                     '/blockchains/quorum',
                     '/blockchains/multichain',
                     '/blockchains/ethereum',

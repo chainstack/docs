@@ -3,6 +3,7 @@
 Consortium:
 
 * [Corda](/blockchains/corda)
+* [Hyperledger Fabric](/blockchains/hyperledger-fabric)
 * [Quorum](/blockchains/quorum)
 * [MultiChain](/blockchains/multichain)
 
