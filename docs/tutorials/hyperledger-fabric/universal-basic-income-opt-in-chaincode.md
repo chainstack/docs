@@ -80,7 +80,7 @@ Example:
 
 ``` sh
 $ peer lifecycle chaincode install freedom.tar.gz
-2020-02-27 07:53:19.529 UTC [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001 Installed remotely: response:<status:200 payload:"\nHfreedomDividend:6bf3538844b3756d2305968e5b51e3a1a2f80f8c12dcb5631c73893e927b2389\022\007freedom" > 
+2020-02-27 07:53:19.529 UTC [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001 Installed remotely: response:<status:200 payload:"\nHfreedomDividend:6bf3538844b3756d2305968e5b51e3a1a2f80f8c12dcb5631c73893e927b2389\022\007freedom" >
 2020-02-27 07:53:19.530 UTC [cli.lifecycle.chaincode] submitInstallProposal -> INFO 002 Chaincode code package identifier: freedomDividend:6bf3538844b3756d2305968e5b51e3a1a2f80f8c12dcb5631c73893e927b2389
 ```
 
@@ -158,7 +158,7 @@ Example:
 
 ``` sh
 $ peer chaincode invoke -o $ORDERER_ADDRESS --tls true --cafile $ORDERER_CA -C defaultchannel -n freedomDividend --peerAddresses $CORE_PEER_ADDRESS --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE -c '{"Args":["optIn", "286-46-6157", "opt in"]}'
-2020-02-27 08:26:08.866 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> INFO 001 Chaincode invoke successful. result: status:200 
+2020-02-27 08:26:08.866 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> INFO 001 Chaincode invoke successful. result: status:200
 ```
 
 Social Security number `286-46-6157` has now opted in the Freedom Dividend program and the world state has been updated.
@@ -177,7 +177,7 @@ Example:
 
 ``` sh
 $ peer chaincode invoke -o $ORDERER_ADDRESS --tls true --cafile $ORDERER_CA -C defaultchannel -n freedomDividend --peerAddresses $CORE_PEER_ADDRESS --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE -c '{"Args":["querySSN", "286-46-6157"]}'
-2020-02-27 08:27:06.566 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> INFO 001 Chaincode invoke successful. result: status:200 payload:"{\"opt\":\"opt in\"}" 
+2020-02-27 08:27:06.566 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> INFO 001 Chaincode invoke successful. result: status:200 payload:"{\"opt\":\"opt in\"}"
 ```
 
 ### Opt out
@@ -194,7 +194,7 @@ Example:
 
 ``` sh
 $ peer chaincode invoke -o $ORDERER_ADDRESS --tls true --cafile $ORDERER_CA -C defaultchannel -n freedomDividend --peerAddresses $CORE_PEER_ADDRESS --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE -c '{"Args":["optOut", "286-46-6157"]}'
-2020-02-27 08:27:55.342 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> INFO 001 Chaincode invoke successful. result: status:200 
+2020-02-27 08:27:55.342 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> INFO 001 Chaincode invoke successful. result: status:200
 ```
 
 The Social Security number has now been opted out and removed from the world state.
