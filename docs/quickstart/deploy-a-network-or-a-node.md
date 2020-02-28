@@ -7,8 +7,8 @@ To deploy a network or a node:
 1. Select the created project and click **Get started**.
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select the protocol.
-1. Under **Cloud provider**, select your preferred provider.
-1. Under **Region**, select the region for your deployment.
+1. Under **Cloud provider**, select your preferred provider and location.
+1. Provide a node name. Click **Next**.
 1. Review your changes and click **Create network** if you are deploying a consortium network, or **Join network** if you are joining a public network.
 
 This will deploy or join a network.
