@@ -27,18 +27,18 @@ This will export the orderer certificate. Place the certificate in the directory
 #### Run the fabric-tools Docker container
 
 ``` sh
-docker run -v /home/user/IDENTITY_DIRECTORY/:/MOUNT_DIRECTORY -it hyperledger/fabric-tools:2.0.0 /bin/ash
+docker run -v /host/path/to/IDENTITY_DIRECTORY/:/MOUNT_DIRECTORY -it hyperledger/fabric-tools:2.0.1 /bin/ash
 ```
 
 where
 
-* /home/user/IDENTITY_DIRECTORY/ — path to the directory with the organization identity that you exported at the previous step.
+* /host/path/to/IDENTITY_DIRECTORY/ — path to the directory with the organization identity that you exported at the previous step.
 * MOUNT_DIRECTORY — any name to mount a directory.
 
 Example:
 
 ``` sh
-docker run -v /home/user/RG-123-456-MSP/:/resources -it hyperledger/fabric-tools:2.0.0 /bin/ash
+docker run -v /home/user/RG-123-456-MSP/:/data -it hyperledger/fabric-tools:2.0.1 /bin/ash
 ```
 
 #### Provide connection details and certificate paths
@@ -57,10 +57,10 @@ export ORDERER_ADDRESS=ORDERER_RPC_ENDPOINT
 
 where
 
-* PEER_RPC_ENDPOINT — the RPC endpoint of your peer. Available in the platform UI under **Access and credentials** > **RPC endpoint**.
+* PEER_RPC_ENDPOINT — the RPC endpoint of your peer. In the platform UI, navigate to your peer; click **Access and credentials** > **RPC endpoint**.
 * MOUNT_DIRECTORY — the name of the directory that you mounted at the previous step.
 * ADMIN_USER_DIRECTORY — the directory of your admin user that has the certificates. Exported at a previous step.
-* MSP_ID — the ID of your organization. Available in the platform UI under **Organization identity** > **MSP ID**.
+* MSP_ID — the ID of your organization. In the platform UI, navigate to your peer; click **Organization identity** > **MSP ID**.
 * PEER_DIRECTORY — the directory of your peer that has the certificates. Exported at a previous step.
 * ORDERER_CERTIFICATE — name and path of the certificate file that you exported at a previous step.
 * ORDERER_RPC_ENDPOINT — the RPC endpoint of your orderer. In the platform UI, navigate to your network; click **Details** > **Orderer RPC endpoint**.
@@ -69,11 +69,11 @@ Example:
 
 ``` sh
 export CORE_PEER_ADDRESS=nd-123-456-789.rg-123-456.p2pify.com:7051
-export CORE_PEER_MSPCONFIGPATH=/resources/users/Admin@rg-123-456.p2pify.com/msp/
+export CORE_PEER_MSPCONFIGPATH=/data/users/Admin@rg-123-456.p2pify.com/msp/
 export CORE_PEER_LOCALMSPID="RG-123-456-MSP"
 export CORE_PEER_TLS_ENABLED=true
-export CORE_PEER_TLS_ROOTCERT_FILE=/resources/peers/nd-123-456-789.rg-123-456.p2pify.com/tls/ca.crt
-export ORDERER_CA=/resources/nd-123-456-789-cert.pem
+export CORE_PEER_TLS_ROOTCERT_FILE=/data/peers/nd-123-456-789.rg-123-456.p2pify.com/tls/ca.crt
+export ORDERER_CA=/data/nd-123-456-789-cert.pem
 export ORDERER_ADDRESS=nd-123-456-789.rg-123-456.p2pify.com:7050
 ```
 
@@ -112,7 +112,7 @@ This will package the chaincode and place it in the root of your mounted directo
 Example:
 
 ``` sh
-$ peer lifecycle chaincode package fabcar.tar.gz --lang node --path /resources/chaincode/fabcar/javascript/ --label fabcar
+$ peer lifecycle chaincode package fabcar.tar.gz --lang node --path /data/chaincode/fabcar/javascript/ --label fabcar
 $ ls
 bin  fabcar.tar.gz  src
 ```
@@ -170,8 +170,7 @@ where
 Example:
 
 ``` sh
-$ peer lifecycle chaincode approveformyorg --name fabcar --package-id fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb -o $ORDERER_ADD
-RESS --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE --cafile $ORDERER_CA --version 1.0 --channelID defaultchannel --sequence 1 --init-required --waitForEvent
+$ peer lifecycle chaincode approveformyorg --name fabcar --package-id fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb -o $ORDERER_ADDRESS --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE --cafile $ORDERER_CA --version 1.0 --channelID defaultchannel --sequence 1 --init-required --waitForEvent
 2020-02-27 07:45:27.742 UTC [chaincodeCmd] ClientWait -> INFO 001 txid [817547cebd7dd66084e7ff852ca8cac35d0c505416a7787ddd81947558280dc7] committed with status (VALID)
 ```
 
@@ -241,6 +240,6 @@ See [Hyperledger Fabric 2.0: Developing Applications](https://hyperledger-fabric
 
 ::: tip See also
 
-* [Universal basic income opt-in chaincode](/tutorials/hyperledger-fabric/universal-basic-income-opt-in-chaincode)
+* [Universal basic income opt-in chaincode](/tutorials/fabric/universal-basic-income-opt-in-chaincode)
 
 :::

@@ -64,6 +64,6 @@ See [Hyperledger Fabric 2.0: Smart Contracts and Chaincode](https://hyperledger-
 
 ::: tip See also
 
-* [Tools](/operations/hyperledger-fabric/tools)
+* [Tools](/operations/fabric/tools)
 
 :::

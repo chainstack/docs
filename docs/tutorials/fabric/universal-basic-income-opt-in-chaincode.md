@@ -6,7 +6,7 @@ Yang predicts that there will be massive worker displacement due to technologica
 
 Since there is money distribution involved and Andrew Yang's entire career being in technology, it makes for a fun thought experiment to imagine what the tech infrastructure could look like.
 
-The very basic framework proposed here is a [chaincode](/blockchains/hyperledger-fabric#chaincode) on Hyperledger Fabric.
+The very basic framework proposed here is a [chaincode](/blockchains/fabric#chaincode) on Hyperledger Fabric.
 
 Each of the 50 states can run organizations and peers that join a channel.
 
@@ -22,7 +22,7 @@ In this tutorial you will:
 
 ## Prerequisites
 
-1. Clone the [contract repository](https://github.com/chainstack/freedomDividend) to your machine.
+1. Clone the [contract repository](https://github.com/chainstack/freedom-dividend-chaincode) to your machine.
 1. Install [Visual Studio Code](https://code.visualstudio.com/) with the [IBM Blockchain Platform extension](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform).
 
 ## Prepare a Hyperledger Fabric network
@@ -42,13 +42,13 @@ See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 1. Click **Smart Contracts** > **Create New Project**.
 1. Select **Default Contract**. Select **JavaScript**. Type in a name for your chaincode. For this tutorial, it's `freedomDividendContract`.
 1. Choose a directory to save your project to. In the directory, all the necessary chaincode files will be generated.
-1. Your main file is the contract in the `./lib/` directory. For this tutorial, it's [freedomDividendContract.js](https://github.com/chainstack/freedomDividend/blob/master/contract/lib/freedomDividendContract.js). Do check out the code, as it's commented.
-1. Make sure your `index.js` file has the correct parameters relative to the contract. See [index.js](https://github.com/chainstack/freedomDividend/blob/master/contract/index.js).
-1. Make sure you have the correct name and chaincode version in `package.json`. See [package.json](https://github.com/chainstack/chainstack/blob/master/contract/package.json).
+1. Your main file is the contract in the `./lib/` directory. For this tutorial, it's [freedomDividendContract.js](https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/lib/freedomDividendContract.js). Do check out the code, as it's commented.
+1. Make sure your `index.js` file has the correct parameters relative to the contract. See [index.js](https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/index.js).
+1. Make sure you have the correct name and chaincode version in `package.json`. See [package.json](https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/package.json).
 
 ### Connect to your peer
 
-See [Tools](/operations/hyperledger-fabric/tools).
+See [Tools](/operations/fabric/tools).
 
 ### Package the chaincode
 
@@ -65,7 +65,7 @@ where
 Example:
 
 ``` sh
-$ peer lifecycle chaincode package freedomDividend.tar.gz --lang node --path /resources/chaincode/freedomDividend/ --label freedomDividend
+$ peer lifecycle chaincode package freedomDividend.tar.gz --lang node --path /data/chaincode/freedom-dividend-chaincode/ --label freedomDividend
 $ ls
 bin  freedomDividend.tar.gz  src
 ```
@@ -152,7 +152,7 @@ peer chaincode invoke -o $ORDERER_ADDRESS --tls true --cafile $ORDERER_CA -C def
 where
 
 * SSN_ID — a Social Security number.
-* OPT_IN — an opt-in.
+* OPT_IN — your opt-in statement.
 
 Example:
 
@@ -209,7 +209,7 @@ You also interacted with the chaincode by submitting transactions and updating t
 
 ::: tip See also
 
-* [Tools](/operations/hyperledger-fabric/tools)
+* [Tools](/operations/fabric/tools)
 * [Hyperledger Fabric samples](https://github.com/hyperledger/fabric-samples/)
 
 :::

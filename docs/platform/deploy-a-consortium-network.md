@@ -8,19 +8,19 @@ To deploy a [Corda](/blockchains/corda) network:
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select **Corda**.
 1. The consensus algorithm is [Single Notary](/blockchains/corda#consensus). Click **Next**.
-1. Under **Cloud provider**, select your preferred provider and region.
+1. Under **Cloud provider**, select your preferred provider and location.
 1. Provide a node name. Click **Next**.
 1. Review your changes and click **Create network**.
 
 The network status will change from **Pending** to **Running** once deployed.
 
-To deploy a [Hyperledger Fabric](/blockchains/hyperledger-fabric) network:
+To deploy a [Hyperledger Fabric](/blockchains/fabric) network:
 
 1. Select a project and click **Get started** or **Create network**.
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select **Hyperledger Fabric**.
-1. The consensus algorithm is [Raft](/blockchains/hyperledger-fabric#consensus). Click **Next**.
-1. Under **Cloud provider**, select your preferred provider and region.
+1. The consensus algorithm is [Raft](/blockchains/fabric#consensus). Click **Next**.
+1. Under **Cloud provider**, select your preferred provider and location.
 1. Provide a peer name. Click **Next**.
 1. Review your changes and click **Create network**.
 
@@ -32,7 +32,7 @@ To deploy a [Quorum](/blockchains/quorum) network:
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select **Quorum**.
 1. Under **Consensus algorithm**, select [Raft or IBFT](/blockchains/quorum#consensus). Click **Next**.
-1. Under **Cloud provider**, select your preferred provider and region.
+1. Under **Cloud provider**, select your preferred provider and location.
 1. Provide a node name. Click **Next**.
 1. Review your changes and click **Create network**.
 
@@ -44,7 +44,7 @@ To deploy a [MultiChain](/blockchains/multichain) network:
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select **MultiChain**.
 1. The consensus algorithm is [Round-robin](/blockchains/multichain#consensus). Click **Next**.
-1. Under **Cloud provider**, select your preferred provider and region.
+1. Under **Cloud provider**, select your preferred provider and location.
 1. Provide a node name. Click **Next**.
 1. Review your changes and click **Create network**.
 
@@ -54,7 +54,7 @@ The network status will change from **Pending** to **Running** once deployed.
 
 * [Supported cloud providers](/platform/supported-cloud-hosting-providers)
 * [Operations: Corda](/operations/corda/)
-* [Operations: Hyperledger Fabric](/operations/hyperledger-fabric/)
+* [Operations: Hyperledger Fabric](/operations/fabric/)
 * [Operations: Quorum](/operations/quorum/)
 * [Operations: MultiChain](/operations/multichain/)
 
