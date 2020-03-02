@@ -1,5 +1,19 @@
 # Release notes
 
+## Chainstack 1.5
+
+*March 2, 2020*
+
+### What's new
+
+* **Protocols**. [Hyperledger Fabric](/blockchains/fabric) support. You can deploy a multi-org Hyperledger Fabric v2.0.1 network, complete with Raft ordering service, new chaincode lifecycle capabilities, and a network explorer.
+* **UI**. Updated cloud provider selector to provide easier visibility of available hosting options.
+* **Documentation**. Hyperledger Fabric [general description](/blockchains/fabric), [operations](/operations/fabric), [chaincode tutorial](/tutorials/fabric/universal-basic-income-opt-in-chaincode).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 1.4.3
 
 *February 13, 2020*
