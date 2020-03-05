@@ -2,7 +2,7 @@
 
 Once you have [deployed a consortium network](/platform/deploy-a-consortium-network) or [joined a public network](/platform/join-a-public-network), you can add more nodes to the network.
 
-For consortium networks, you can add a node to run in [cloud](/glossary/cloud) or [on-premises](/glossary/on-premises).
+For consortium networks, you can add a node to run in [cloud](/glossary/cloud) or [on-premises](/glossary/on-premises). On-premises nodes can only be deployed in [hybrid](/glossary/hybrid) networks. 
 
 For public networks, you can add a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
 
