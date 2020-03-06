@@ -135,7 +135,7 @@ module.exports = {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
                         children: [
-                            '/tutorials/corda/',
+                            '/tutorials/fabric/',
                             '/tutorials/fabric/universal-basic-income-opt-in-chaincode',
                         ]
                     },
