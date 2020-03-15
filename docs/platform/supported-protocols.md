@@ -9,7 +9,7 @@ Consortium:
 
 Public network:
 
-* [Ethereum](/blockchains/ethereum) mainnet
+* [Ethereum](/blockchains/ethereum) mainnet. [Full and archive nodes](/operations/ethereum/modes).
 * [Ethereum](/blockchains/ethereum) Ropsten testnet
 * [Bitcoin](/blockchains/bitcoin) mainnet
 

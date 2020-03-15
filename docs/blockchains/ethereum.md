@@ -12,5 +12,6 @@ For development purposes on the Ropsten testnet, fund your accounts with Ropsten
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
+* [Build better with Ethereum](https://chainstack.com/build-better-with-ethereum/)
 
 :::
