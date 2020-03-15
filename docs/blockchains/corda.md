@@ -143,5 +143,6 @@ There are also non-Corda Network Foundation managed compatibility zones. These a
 ::: tip See also
 
 * [Corda documentation](https://docs.corda.net)
+* [Build better with Corda](https://chainstack.com/build-better-with-corda/)
 
 :::

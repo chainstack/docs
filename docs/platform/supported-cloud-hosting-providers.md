@@ -5,10 +5,6 @@ Chainstack currently supports the following cloud providers:
 * Google Cloud Platform
 * Amazon Web Services
 
-::: warning
-Currently only Asia-Pacific region hosting is supported.
-:::
-
 ::: tip
 Chainstack is always working on introducing support for other regions for cloud deployment.
 

@@ -6,7 +6,7 @@ To create a project:
 
 1. Log in to your [Chainstack account](https://console.chainstack.com/).
 1. Click **Create project**.
-1. Click **Public chain** for an [Ethereum](/blockchains/ethereum) or [Bitcoin](/blockchains/bitcoin) node deployment, or **Consortium** for [Corda](/blockchains/corda), [Quorum](/blockchains/quorum), or [MultiChain](/blockchains/multichain).
+1. Click **Public chain** for an [Ethereum](/blockchains/ethereum) or [Bitcoin](/blockchains/bitcoin) node deployment, or **Consortium** for [Corda](/blockchains/corda), [Hyperledger Fabric](/blockchains/fabric), [Quorum](/blockchains/quorum), or [MultiChain](/blockchains/multichain).
 1. Provide **Project name** and optionally **Description**.
 1. Click **Create**.
 
