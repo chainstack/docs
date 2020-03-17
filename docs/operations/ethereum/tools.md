@@ -163,12 +163,6 @@ const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass
 web3.eth.getBlockNumber().then(console.log);
 ```
 
-## Monitoring tools
-
-### Tenderly
-
-Monitor and debug your contracts with [Tenderly](https://tenderly.dev/).
-
 ::: tip See also
 
 * [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)
