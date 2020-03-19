@@ -163,68 +163,6 @@ const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass
 web3.eth.getBlockNumber().then(console.log);
 ```
 
-## Monitoring tools
-
-### TerminalSDK
-
-You can set up your DApp logging and analytics with TerminalSDK of [Terminal.co](https://terminal.co/) and Chainstack.
-
-1. Sign up with [Terminal.co](https://terminal.co/).
-1. Get your Terminal API key. See [Generating an API Key](https://docs.terminal.co/logs-analytics/create-an-api-key).
-1. Get your Terminal project ID. See [Locating the Project ID](https://docs.terminal.co/logs-analytics/locating-the-project-id).
-1. Install TerminalSDK. See [Installing TerminalSDK](https://docs.terminal.co/logs-analytics/hexsdk-quickstart#installing-terminalsdk).
-1. Wrap your Web3 instance with TerminalSDK:
-
-``` js
-const Web3 = require("web3");
-const {TerminalHttpProvider} = require("@terminal-packages/sdk");
-
-const web3 = new Web3(
-   new TerminalHttpProvider({
-    host: "https://USERNAME:PASSWORD@RPC_ENDPOINT",
-    apiKey: "TERMINAL_API_KEY",
-    projectId: "TERMINAL_PROJECT_ID",
-    source: "STRING"
-  })
-);
-```
-
-where
-
-* USERNAME — your Ethereum node access username.
-* PASSWORD — your Ethereum node access password.
-* RPC_ENDPOINT — your Ethereum node RPC endpoint.
-* TERMINAL_API_KEY — your Terminal.co API key.
-* TERMINAL_PROJECT_ID — your Terminal.co project ID.
-* STRING — any string that you will use to filter your logs at Terminal.co.
-
-Example to get an address balance and have it logged with Terminal.co:
-
-``` js
-const Web3 = require("web3");
-const {TerminalHttpProvider} = require("@terminal-packages/sdk");
-
-const web3 = new Web3(
-   new TerminalHttpProvider({
-    host: "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com",
-    apiKey: "abcDfGhI1+JKl23MnOPQRS==",
-    projectId: "yuVXYZABcdeFgHIj",
-    source: "Chainstack"
-  })
-);
-const address = "0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae";
-
-web3.eth.getBalance(address, (err, wei) => {
-  balance = web3.utils.fromWei(wei, "ether");
-  console.log(balance.toString(10));
-});
-```
-
-For information on how to view the logs and analytics, see:
-
-* [Logs Overview](https://docs.terminal.co/logs-analytics/logs-overview).
-* [Analytics Overview](https://docs.terminal.co/logs-analytics/analytics-overview)
-
 ::: tip See also
 
 * [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)

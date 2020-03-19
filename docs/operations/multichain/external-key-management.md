@@ -10,7 +10,7 @@ External key management assumes that you do not store the keys in a MultiChain w
 
 This section will guide you through creating a key pair, issuing an asset and signing the transaction without keeping the private key in any wallet.
 
-You will call the MultiChain nodes running in the cloud. You can, however, do the transactions through a local node if you run a hybrid MultiChain network.
+You will call the MultiChain nodes running in the cloud. You can, however, do the transactions through a local node if you run a [hybrid](/glossary/hybrid) MultiChain network.
 
 1. Get your node access and credentials
 
