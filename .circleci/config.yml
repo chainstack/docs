@@ -25,6 +25,11 @@ workflows:
               only:
                - prod
 
+      - hold_prod:
+          type: approval
+          requires:
+            - build_prod_image
+
       - dev_deploy:
           context: "dev.chainstack | GCP"
           requires:
@@ -33,7 +38,7 @@ workflows:
       - prod_deploy:
           context: "prod.chainstack | GCP"
           requires:
-            - build_prod_image
+            - hold_prod
 
 _run:
   gcloud_routine: &gcloud_routine
