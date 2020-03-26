@@ -149,6 +149,24 @@ Installed chaincodes on peer:
 Package ID: fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb, Label: fabcar
 ```
 
+#### Download the installed chaincode
+
+``` sh
+peer lifecycle chaincode getinstalledpackage --package-id PACKAGE_ID --peerAddresses $CORE_PEER_ADDRESS --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE
+```
+
+where
+
+* PACKAGE_ID — the ID of your chaincode installed on the peer. You can get the ID by running `peer lifecycle chaincode queryinstalled`.
+
+Example:
+
+``` sh
+$ peer lifecycle chaincode getinstalledpackage --package-id fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb --peerAddresses $CORE_PEER_ADDRESS --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE
+$ ls
+bin  fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb.tar.gz  src
+```
+
 #### Approve the chaincode for your organization
 
 The majority of organizations in the channel must agree to the parameters of the chaincode.
@@ -170,7 +188,7 @@ where
 Example:
 
 ``` sh
-$ peer lifecycle chaincode approveformyorg --name fabcar --package-id fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb -o $ORDERER_ADDRESS --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE --cafile $ORDERER_CA --version 1.0 --channelID defaultchannel --sequence 1 --init-required --waitForEvent
+$ peer lifecycle chaincode approveformyorg --name fabcar --package-id fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb -o $ORDERER_ADDRESS --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE --cafile $ORDERER_CA --version 1.0.0 --channelID defaultchannel --sequence 1 --init-required --waitForEvent
 2020-02-27 07:45:27.742 UTC [chaincodeCmd] ClientWait -> INFO 001 txid [817547cebd7dd66084e7ff852ca8cac35d0c505416a7787ddd81947558280dc7] committed with status (VALID)
 ```
 
@@ -190,8 +208,8 @@ where
 Example:
 
 ``` sh
-$ peer lifecycle chaincode checkcommitreadiness -o $ORDERER_ADDRESS --channelID defaultchannel --tls --cafile $ORDERER_CA --name fabcar --version 1.0 --init-required
-Chaincode definition for chaincode 'fabcar', version '1.0', sequence '1' on channel 'defaultchannel' approval status by org:
+$ peer lifecycle chaincode checkcommitreadiness -o $ORDERER_ADDRESS --channelID defaultchannel --tls --cafile $ORDERER_CA --name fabcar --version 1.0.0 --init-required
+Chaincode definition for chaincode 'fabcar', version '1.0.0', sequence '1' on channel 'defaultchannel' approval status by org:
 RG-123-456-MSP: true
 ```
 
@@ -212,7 +230,7 @@ where
 Example:
 
 ``` sh
-$ peer lifecycle chaincode commit -o $ORDERER_ADDRESS --channelID defaultchannel --name fabcar --version 1.0 --sequence 1 --init-required --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE --cafile $ORDERER_CA --peerAddresses $CORE_PEER_ADDRESS
+$ peer lifecycle chaincode commit -o $ORDERER_ADDRESS --channelID defaultchannel --name fabcar --version 1.0.0 --sequence 1 --init-required --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE --cafile $ORDERER_CA --peerAddresses $CORE_PEER_ADDRESS
 2020-02-27 07:48:29.579 UTC [chaincodeCmd] ClientWait -> INFO 001 txid [df2ce4feadf60dea1d7969a59ef6c512e71334b2d56bd208e0c5980b7a19ee42] committed with status (VALID)
 ```
 
@@ -231,7 +249,7 @@ Example:
 ``` sh
 $ peer lifecycle chaincode querycommitted -o $ORDERER_ADDRESS --channelID defaultchannel --tls --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE --cafile $ORDERER_CA
 Committed chaincode definitions on channel 'defaultchannel':
-Name: fabcar, Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc
+Name: fabcar, Version: 1.0.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc
 ```
 
 ## Development tools
