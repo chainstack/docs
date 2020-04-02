@@ -2,15 +2,19 @@
 
 Consortium:
 
-* [Corda](/blockchains/corda)
+* [Corda](/blockchains/corda): 
+	* Private consortium networks
+	* [Corda Network](https://corda.network/)
+	* [Corda Pre-Production Network](https://corda.network/participation/preprod/).
 * [Hyperledger Fabric](/blockchains/fabric)
 * [Quorum](/blockchains/quorum)
 * [MultiChain](/blockchains/multichain)
 
 Public network:
 
-* [Ethereum](/blockchains/ethereum) mainnet. [Full and archive nodes](/operations/ethereum/modes).
-* [Ethereum](/blockchains/ethereum) Ropsten testnet
+* [Ethereum](/blockchains/ethereum):
+	* Mainnet. [Full and archive nodes](/operations/ethereum/modes).
+	* Ropsten testnet
 * [Bitcoin](/blockchains/bitcoin) mainnet
 
 ::: tip
