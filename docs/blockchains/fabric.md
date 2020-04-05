@@ -34,6 +34,11 @@ Peers are nodes in a Hyperledger Fabric network.
 
 Peers host ledgers and [chaincodes](#chaincode).
 
+Each peer has two communication interfaces:
+
+* Peer to peer communication that implements [gossip data dissemination protocol](https://hyperledger-fabric.readthedocs.io/en/release-2.0/gossip.html) over [TLS](https://hyperledger-fabric.readthedocs.io/en/release-2.0/enable_tls.html).
+* Node to owner communication implemented as gRPC.
+
 See [Hyperledger Fabric 2.0: Peers](https://hyperledger-fabric.readthedocs.io/en/release-2.0/peers/peers.html).
 
 ### Certificate Authority

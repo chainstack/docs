@@ -2,8 +2,8 @@
 
 Chainstack supports joining the following Corda networks:
 
-* [Corda Network](https://corda.network/) — main Corda network.
-* [Corda Pre-Production Network](https://corda.network/participation/preprod) — a pre-production Corda network.
+* [Corda Network](https://corda.network/) — the production Corda network.
+* [Corda Pre-Production Network](https://corda.network/participation/preprod) — the pre-production Corda network.
 
 ::: tip See also
 

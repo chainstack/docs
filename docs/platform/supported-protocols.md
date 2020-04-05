@@ -2,10 +2,7 @@
 
 Consortium:
 
-* [Corda](/blockchains/corda): 
-	* Private consortium networks
-	* [Corda Network](https://corda.network/)
-	* [Corda Pre-Production Network](https://corda.network/participation/preprod/).
+* [Corda](/blockchains/corda)
 * [Hyperledger Fabric](/blockchains/fabric)
 * [Quorum](/blockchains/quorum)
 * [MultiChain](/blockchains/multichain)
@@ -16,6 +13,9 @@ Public network:
 	* Mainnet. [Full and archive nodes](/operations/ethereum/modes).
 	* Ropsten testnet
 * [Bitcoin](/blockchains/bitcoin) mainnet
+* [Corda](/blockchains/corda): 
+	* [Corda Network](https://corda.network/)
+	* [Corda Pre-Production Network](https://corda.network/participation/preprod/).
 
 ::: tip
 Chainstack is always working on introducing support for other protocols.

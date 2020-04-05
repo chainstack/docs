@@ -9,14 +9,14 @@ Chainstack currently supports identity management for the following networks:
 
 A Corda identity consists of the following Java KeyStore (JKS) files:
 
-* `nodekeystore.jks` — a keystore with the node's identity key pairs and certificates.
-* `sslkeystore.jks` — a keystore with the node's TLS key pair and certificate.
-* `truststore.jks` — a keystore with the network operator's root certificate.
+* `nodekeystore.jks` — a keystore with the node's identity key pairs and certificates; protected by **Keystore password**.
+* `sslkeystore.jks` — a keystore with the node's TLS key pair and certificate; protected by **Keystore password**.
+* `truststore.jks` — a keystore with the network operator's root certificate; protected by **Truststore password**.
 
 ## Add a new identity
 
 1. Complete steps 1 and 2 of the [Corda Network Foundation guide](https://corda.network/participation/index/).
-1. On Chainstack, click **Vault** > **Add identity**.
+1. On Chainstack, navigate to [your vault](https://console.chainstack.com/vault). Click **Add identity**.
 1. Under **Blockchain protocol**, select **Corda**.
 1. Under **Network**, select **Corda Network** or **Corda Pre-Production Network**. Click **Next**.
 1. Under **Identification**, provide the email and X.500 name that you used to sign up with the Corda Network Foundation.
@@ -26,18 +26,18 @@ This will send the new identity request to the Corda Network Foundation. Once th
 
 ## Export an identity
 
-You may want to export your existing identity from the vault to run an on-premises Cord node as part of Corda Network or Corda Pre-Production Network.
+You may want to export your existing identity from the vault to host a Corda node elsewhere as part of Corda Network or Corda Pre-Production Network.
 
 To export an identity:
 
-1. Click **Vault** and select the identity to export.
+1. Navigate to [your vault](https://console.chainstack.com/vault) and select the identity to export.
 1. Click **Export**.
 
 This will download the identity keystore files.
 
 ## Delete an identity
 
-1. Click **Vault** and select the identity to delete.
+1. Navigate to [your vault](https://console.chainstack.com/vault) and select the identity to delete.
 1. Click **Edit** > **Delete**.
 
 This will irrevocably delete the identity keystore files.
