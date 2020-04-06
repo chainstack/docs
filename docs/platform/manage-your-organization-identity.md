@@ -22,7 +22,7 @@ A Corda identity consists of the following Java KeyStore (JKS) files:
 1. Under **Identification**, provide the email and X.500 name that you used to sign up with the Corda Network Foundation.
 1. Review the summary and click **Add identity**.
 
-This will send the new identity request to the Corda Network Foundation. Once the Corda Network Foundation approves your request, you will be able to deploy your nodes in Corda Network or Corda Pre-Production Network.
+This will send the new certificate signing request to the Corda Network Foundation. Once the Corda Network Foundation approves your request, you will be able to deploy your nodes in Corda Network or Corda Pre-Production Network using this identity.
 
 ## Export an identity
 
