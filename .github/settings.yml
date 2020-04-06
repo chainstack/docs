@@ -51,9 +51,6 @@ labels:
     color: ef653b
   - name: Low Priority
     color: ffd0cc
-  # Status
-  - name: WIP
-    color: fef2c0
   # Theme
   - name: Infrastructure
     color: 005be5
