@@ -45,6 +45,8 @@ module.exports = {
                     '/platform/delete-a-node',
                     '/platform/delete-a-network',
                     '/platform/delete-a-project',
+                    '/platform/manage-your-organization-identity',
+                    '/platform/view-your-organization-vault',
                     '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
                 ]
@@ -59,6 +61,7 @@ module.exports = {
                         collapsable: true,
                         children: [
                             '/operations/corda/',
+                            '/operations/corda/networks',
                             '/operations/corda/node-explorer',
                             '/operations/corda/installing-a-cordapp',
                             '/operations/corda/tools',
