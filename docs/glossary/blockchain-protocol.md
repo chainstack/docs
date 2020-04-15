@@ -1,6 +1,6 @@
 # Blockchain protocol
 
-The blockchain protocol such as Corda, Quorum, MultiChain, Hyperledger Fabric, and Ethereum among several others.
+The blockchain protocol such as Corda, Hyperledger Fabric, Quorum, MultiChain, Ethereum, and Bitcoin.
 
 ::: tip See also
 

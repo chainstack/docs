@@ -4,7 +4,7 @@ You can invite a user to your organization who will:
 
 * Create both public and consortium projects.
 * Deploy nodes and networks.
-* Access all existing projects, networks, nodes and their access and credentials.
+* Access all existing projects, networks, nodes, identities and their access and credentials.
 
 The invited user will not be able to invite new users, change the organization name, or the billing settings.
 
