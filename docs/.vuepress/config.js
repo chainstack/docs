@@ -204,6 +204,7 @@ module.exports = {
                     '/glossary/project',
                     '/glossary/public-chain-project',
                     '/glossary/shared-node',
+                    '/glossary/vault',
                     ]
             },
         '/release-notes',

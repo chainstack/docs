@@ -46,5 +46,6 @@ This will irrevocably delete the identity keystore files.
 
 * [Join a public network](/platform/join-a-public-network)
 * [View your organization's vault](/platform/view-your-organization-vault)
+* [Vault](/glossary/vault)
 
 :::
