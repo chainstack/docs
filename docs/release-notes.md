@@ -1,5 +1,21 @@
 # Release notes
 
+## Chainstack 1.5.1
+
+*April 22, 2020*
+
+### What's new
+
+* **Protocols**.
+  * [Corda Network](https://corda.network/) and [Corda Pre-Production Network](https://corda.network/participation/preprod/) support. You can now join the Corda production and pre-production networks. See also [Join a public network](/platform/join-a-public-network).
+  * [Hyperledger Fabric 2.1.0](/blockchains/fabric) support.
+* **Vault**. You can now store your Corda identity key material in a [secure vault](/glossary/vault). See also [View your organization's vault](/platform/view-your-organization-vault).
+* **Identity management**. You can now securely manage your organization's identity for the [Corda networks](/operations/corda/networks). See also [Manage your organization's identity](/platform/manage-your-organization-identity).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 1.5
 
 *March 2, 2020*

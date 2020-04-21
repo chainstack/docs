@@ -65,7 +65,7 @@ where
 Example:
 
 ``` sh
-$ peer lifecycle chaincode package freedomDividend.tar.gz --lang node --path /data/chaincode/freedom-dividend-chaincode/ --label freedomDividend
+$ peer lifecycle chaincode package freedomDividend.tar.gz --lang node --path /data/chaincode/freedom-dividend-chaincode/contract/ --label freedomDividend
 $ ls
 bin  freedomDividend.tar.gz  src
 ```
