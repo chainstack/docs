@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "markdown-it-container": "^2.0.0",
-    "vuepress": "^1.4.0"
+    "vuepress": "^1.4.1"
   },
   "dependencies": {
     "@limdongjin/vuepress-plugin-simple-seo": "^1.0.4-alpha.5",
