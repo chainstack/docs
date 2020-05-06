@@ -6,7 +6,7 @@
 
 ### What's new
 
-* **Protocols**.
+* **Protocols**
   * [Corda Network](https://corda.network/) and [Corda Pre-Production Network](https://corda.network/participation/preprod/) support. You can now join the Corda production and pre-production networks. See also [Join a public network](/platform/join-a-public-network).
   * [Hyperledger Fabric 2.1.0](/blockchains/fabric) support.
 * **Clouds**. You can now deploy your nodes and networks in the Amazon Web Services US West region.
@@ -37,7 +37,7 @@
 
 ### What's new
 
-* **Protocols**.
+* **Protocols**
   * [Ethereum](/blockchains/ethereum) archive node support. Deploy a dedicated Ethereum archive node. Connect to a shared archive node for free on Business and Enterprise tiers. Geth 1.9.10 support.
   * [Quorum](/blockchains/quorum) transaction manager Tessera 0.10.3 support.
 * **UI**. In-line edit button for all resources to improve access to quick actions.
