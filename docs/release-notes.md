@@ -55,7 +55,7 @@
 
 * **Protocols**
   * [Corda](/blockchains/corda) 4.3 support. You can also now install CorDapps containing workflows and contracts in a single JAR file.
-  * [Quorum](/blockchains/Quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
+  * [Quorum](/blockchains/quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
   * [MultiChain](/blockchains/multichain) 2.0.3 support.
   * [Bitcoin](/blockchains/bitcoin) 0.19.0.1 support. Bitcoin nodes now run with the `txindex` flag allowing to query any transaction on the blockchain.
 * **Documentation**. Context-sensitive documentation links in the platform UI.
@@ -89,7 +89,7 @@
 
 * **Protocols**
   * [Corda](/blockchains/corda) 4.1 support. You can now deploy a consortium network with [network map service](/blockchains/corda#network-map-service), doorman, and [notary](/blockchains/corda#notary-service). Dynamically add and remove participant nodes. Install and remove [CorDapps](/blockchains/corda#cordapp).
-  * [Quorum](/blockchains/Quorum) 2.3.0 support. Replaced Constellation transaction manager with Tessera.
+  * [Quorum](/blockchains/quorum) 2.3.0 support. Replaced Constellation transaction manager with Tessera.
 * **User management**. Invite users into the organization.
 * **Billing**. View metered usage cost for the current billing period, updated hourly.
 * **Documentation**
@@ -217,7 +217,7 @@
 * [**Public chain project**](/glossary/public-chain-project). Wizards to join a public network and add another node.
 * **Protocols**
   * [MultiChain](/blockchains/multichain) 2.0-beta-1 support with blockchain explorer.
-  * [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#istanbul-byzantine-fault-tolerance), and [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) blockchain explorer.
+  * [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#ibft), and [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) blockchain explorer.
   * Full [Ethereum](/blockchains/ethereum) mainnet node deployment with [Bolt](/glossary/bolt) rapid sync mechanism.
 * **Clouds**. Google Cloud Platform and Amazon Web Services in the Asia-Pacific region.
 * **Node details**. Default wallet private/public keys, and chain name for MultiChain. Constellation private/public keys, and network ID for [Quorum](/blockchains/quorum). Sync mode and network ID for Ethereum. Client version for all protocols.

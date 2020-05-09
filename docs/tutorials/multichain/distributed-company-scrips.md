@@ -122,7 +122,7 @@ where
 * RPC_PASSWORD — your MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
 * WALLET_ADDRESS — your MultiChain node's wallet address. Available under **Access and credentials** > **Default wallet address**. This is the address that at this point in the tutorial holds the entire supply of the tokens.
 * WALLET_ADDRESS_USER_n — member's address as part of this system. You and anyone can view any member's address under **Access and credentials** > **Default wallet address**.
-* TOKEN_NAME — the token name that you set up at [the previous step](distributed-company-scrips-on-multichain#issue-a-company-token).
+* TOKEN_NAME — the token name that you set up at [the previous step](#issue-a-company-token).
 * QUANTITY — the amount of tokens to transfer.
 * CHAIN_NAME — your MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 
