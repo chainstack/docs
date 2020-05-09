@@ -122,6 +122,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
+      - run: npm run check-md
 
   build_dev_image:
     <<: *build_image
