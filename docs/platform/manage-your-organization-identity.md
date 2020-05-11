@@ -1,11 +1,19 @@
+---
+meta:
+  - name: description
+    content: Manage your organization's identities consisting of key pairs and certificates securely with the Chainstack vault.
+  - name: keywords
+    content: key identity vault secure certificate
+---
+
 # Manage your organization's identity
 
 You can add and delete new identities in your organization's [vault](https://console.chainstack.com/vault).
 
 Chainstack currently supports identity management for the following networks:
 
-* [Corda Network](https://corda.network/)
-* [Corda Pre-Production Network](https://corda.network/participation/preprod)
+* <a href="https://corda.network/" rel="nofollow">Corda Network</a>
+* <a href="https://corda.network/participation/preprod" rel="nofollow">Corda Pre-Production Network</a>
 
 A Corda identity consists of the following Java KeyStore (JKS) files:
 
@@ -15,7 +23,7 @@ A Corda identity consists of the following Java KeyStore (JKS) files:
 
 ## Add a new identity
 
-1. Complete steps 1 and 2 of the [Corda Network Foundation guide](https://corda.network/participation/index/).
+1. Complete steps 1 and 2 of the <a href="https://corda.network/participation/index/" rel="nofollow">Corda Network Foundation guide</a>.
 1. On Chainstack, navigate to [your vault](https://console.chainstack.com/vault). Click **Add identity**.
 1. Under **Blockchain protocol**, select **Corda**.
 1. Under **Network**, select **Corda Network** or **Corda Pre-Production Network**. Click **Next**.

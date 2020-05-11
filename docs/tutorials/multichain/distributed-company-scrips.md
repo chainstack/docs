@@ -1,8 +1,16 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop an application on MultiChain from scratch by following the distributed company scrips tutorial.
+  - name: keywords
+    content: multichain blockchain application tutorial develop
+---
+
 # Distributed company scrips
 
 Companies interested in exploring the teal organization structure and experimenting with it will find it useful to issue internal  currency for employees.
 
-A famous example of a teal organization leveraging internal currency for employee self-management is [Zappos with *Zollars*](https://www.zappos.com/about/stories/employee-happiness-amenities).
+A famous example of a teal organization leveraging internal currency for employee self-management is <a href="https://www.zappos.com/about/stories/employee-happiness-amenities" rel="nofollow">Zappos with *Zollars*</a>.
 
 Non-teal companies like Amazon, however, also experiment with boosting productivity with internal currency known as *swag bucks*.
 

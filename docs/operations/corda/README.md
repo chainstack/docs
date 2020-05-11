@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn what Corda networks you can join or deploy, how to install a CorDapp, how to run and connect the Corda Node Explorer, and how to operate your Corda node.
+  - name: keywords
+    content: corda node cordapp connect operate
+---
+
 # Introduction
 
 This section outlines the fundamentals of and operations for Corda.

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Access the secure vault that stores your organization's key pairs and certificates on the Chainstack managed blockchain services.
+  - name: keywords
+    content: blockchain vault key certificate identity
+---
+
 # View your organization's vault
 
 [Vault](https://console.chainstack.com/vault) is a secure encrypted storage for your organization's identities.

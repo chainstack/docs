@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Quickly create an account to start with the Chainstack managed blockchain services.
+  - name: keywords
+    content: quickstart account blockchain deploy free
+---
+
 # Create an account
 
 [Create an account](https://console.chainstack.com/user/account/create) with Chainstack.

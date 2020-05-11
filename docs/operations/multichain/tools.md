@@ -1,10 +1,18 @@
+---
+meta:
+  - name: description
+    content: Learn how to interact with your MultiChain nodes using JSON-RPC API and how to developer a JavaScript or a Python application.
+  - name: keywords
+    content: multichain javascript python develop blockchain
+---
+
 # Tools
 
 ## Interaction tools
 
-Interact with your MultiChain nodes using [JSON-RPC API](https://www.multichain.com/developers/json-rpc-api/).
+Interact with your MultiChain nodes using <a href="https://www.multichain.com/developers/json-rpc-api/" rel="nofollow">JSON-RPC API</a>.
 
-Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com) to invoke [MultiChain API methods](https://www.multichain.com/developers/json-rpc-api/).
+Use <a href="https://curl.haxx.se" rel="nofollow">curl</a> or <a href="https://www.getpostman.com" rel="nofollow">Postman</a> to invoke <a href="https://www.multichain.com/developers/json-rpc-api/" rel="nofollow">MultiChain API methods</a>.
 
 Example below demonstrates how to get basic network information:
 
@@ -23,7 +31,7 @@ $ curl -H "Content-Type: application/json" \
 
 Work with MultiChain from your JavaScript application.
 
-1. Install [multinodejs](https://github.com/sdec-brasil/multinodejs).
+1. Install <a href="https://github.com/sdec-brasil/multinodejs" rel="nofollow">multinodejs</a>.
 
 2. Configure the client to use `host` of the node RPC endpoint and the corresponding RPC `user` and `pass`:
 
@@ -36,7 +44,7 @@ let multichain = require("multinodejs")({
 });
 ```
 
-3. Invoke any methods from the [MultiChain API specification](http://www.multichain.com/developers/json-rpc-api/):
+3. Invoke any methods from the <a href="https://www.multichain.com/developers/json-rpc-api/" rel="nofollow">MultiChain API specification</a>:
 
 ``` js
 multichain.getInfo((err, info) => {
@@ -61,7 +69,7 @@ The example code above should output basic network information:
 
 Work with MultiChain from your Python application.
 
-1. Install [multichaincli](https://github.com/chainstack/multichaincli).
+1. Install <a href="https://github.com/chainstack/multichaincli" rel="nofollow">multichaincli</a>.
 
 2. Configure the client to use `host` and `port` of the node RPC endpoint, the corresponding RPC `username` and `password` and network `chainname`:
 
@@ -77,7 +85,7 @@ chainname = "nw-123-456-7"
 multichain = Multichain(username, password, host, port, chainname)
 ```
 
-3. Invoke any methods from the [MultiChain API specification](http://www.multichain.com/developers/json-rpc-api/):
+3. Invoke any methods from the <a href="http://www.multichain.com/developers/json-rpc-api/" rel="nofollow">MultiChain API specification</a>:
 
 ``` python
 info = multichain.getinfo()

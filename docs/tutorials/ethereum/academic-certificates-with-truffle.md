@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy a smart contract that registers academic certificates on the Ethereum network.
+  - name: keywords
+    content: tutorial ethereum blockchain dapp truffle
+---
+
 # Academic certificates with Truffle
 
 In this tutorial, you will:
@@ -5,12 +13,12 @@ In this tutorial, you will:
 * Create a DApp that generates an academic certificate.
 * Deploy the DApp on a public Ethereum node using Chainstack.
 
-The contract and the Truffle configuration are in the [GitHub repository](https://github.com/chainstack/ethereum-certificates-tutorial).
+The contract and the Truffle configuration are in the <a href="https://github.com/chainstack/ethereum-certificates-tutorial" rel="nofollow">GitHub repository</a>.
 
 ## Prerequisites
 
 * [Chainstack account](https://console.chainstack.com/) to deploy an Ethereum node.
-* [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
+* <a href="https://www.trufflesuite.com/" rel="nofollow">Truffle Suite</a> to create and deploy contracts.
 
 ## Overview
 
@@ -210,7 +218,7 @@ Run `result.logs` to view the full certificate details.
 ::: warning
 Running `result` will not print the certificate details in Truffle console. You must run `result.logs`.
 
-See also [Processing transaction results](https://www.trufflesuite.com/docs/truffle/getting-started/interacting-with-your-contracts#processing-transaction-results).
+See also <a href="https://www.trufflesuite.com/docs/truffle/getting-started/interacting-with-your-contracts#processing-transaction-results" rel="nofollow">Processing transaction results</a>.
 :::
 
 Example output:
@@ -346,7 +354,7 @@ The test run output should be `Passing`.
 
 ::: tip See also
 
-* [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
+* <a href="https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript" rel="nofollow">Truffle: Writing Tests in JavaScript</a>
 
 :::
 
@@ -354,7 +362,7 @@ The test run output should be `Passing`.
 
 1. Install `HDWalletProvider`.
 
-[HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider) is Truffle's separate npm package used to sign transactions.
+<a href="https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider" rel="nofollow">HDWalletProvider</a> is Truffle's separate npm package used to sign transactions.
 
 Run:
 
@@ -392,7 +400,7 @@ where
 
 * `mainnet` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
-* `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
+* `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with <a href="https://iancoleman.io/bip39/" rel="nofollow">Mnemonic Code Converter</a>. Make sure you generate a 15 word mnemonic.
 * RPC_ENDPOINT — your Ethereum node RPC endpoint with username and password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 * `network_id` — the Ethereum mainnet network ID: `1`.
 

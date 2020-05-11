@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn about the default wallet addresses created with your MultiChain nodes and how to view them.
+  - name: keywords
+    content: multichain node default address key
+---
+
 # Default addresses
 
 You can view the default wallet addresses of each of your MultiChain node. See [View node access and credentials](/platform/view-node-access-and-credentials).

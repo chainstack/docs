@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy smart contracts on the Quorum blockchain protocol. Learn how to interact with the contracts.
+  - name: keywords
+    content: quorum tutorial truffle web3 blockchain
+---
+
 # Introduction
 
 This section guides you through developing applications on Quorum from scratch.

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Quickly create a project for blockchain nodes and networks on the Chainstack managed blockchain services.
+  - name: keywords
+    content: quickstart blockchain project node network
+---
+
 # Create a project
 
 You must create a [project](/glossary/project) to be able to deploy a node or a network, or to join a network.

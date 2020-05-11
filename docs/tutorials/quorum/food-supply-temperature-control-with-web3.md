@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy a food supply temperature control solution with Web3 on the Quorum blockchain protocol.
+  - name: keywords
+    content: quorum blockchain dapp tutorial web3
+---
+
 # Food supply temperature control with Web3
 
 In this tutorial, you will:
@@ -17,9 +25,9 @@ The premise of the Quorum network in this tutorial is the following:
 * There is a public contract that allows any party to read the temperature off the contract.
 * There is a private contract that allows only an explicitly set party to read the temperature off the contract.
 
-This tutorial uses [Quorum Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) for private contracts.
+This tutorial uses <a href="https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/" rel="nofollow">Quorum Tessera</a> for private contracts.
 
-Sample code for this tutorial is in the [GitHub repository](https://github.com/chainstack/quorum-iot-tutorial).
+Sample code for this tutorial is in the <a href="https://github.com/chainstack/quorum-iot-tutorial" rel="nofollow">GitHub repository</a>.
 
 ## Prerequisites
 
@@ -63,7 +71,7 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 
 #### Install Ethereum JavaScript API
 
-[Ethereum JavaScript API](https://github.com/ethereum/web3.js) is a collection of libraries to interact with your nodes.
+<a href="https://github.com/ethereum/web3.js" rel="nofollow">Ethereum JavaScript API</a> is a collection of libraries to interact with your nodes.
 
 Install in your project directory:
 
@@ -83,7 +91,7 @@ npm install solc
 
 #### Install ethereumjs-tx
 
-[Ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-tx) is a module to create and sign transactions.
+<a href="https://github.com/ethereumjs/ethereumjs-tx" rel="nofollow">Ethereumjs-tx</a> is a module to create and sign transactions.
 
 Install in your project directory:
 
@@ -93,7 +101,7 @@ npm install ethereumjs-tx
 
 #### Install Quorum.js
 
-[Quorum.js](https://github.com/jpmorganchase/quorum.js/) is an extension to [Ethereum JavaScript API](https://github.com/ethereum/web3.js) to support private transactions on Quorum.
+<a href="https://github.com/jpmorganchase/quorum.js/" rel="nofollow">Quorum.js</a> is an extension to <a href="https://github.com/ethereum/web3.js" rel="nofollow">Ethereum JavaScript API</a> to support private transactions on Quorum.
 
 Install in your project directory:
 
@@ -103,7 +111,7 @@ npm install quorum-js
 
 #### Install request-promise-native
 
-[Request-promise-native](https://github.com/request/request-promise-native) is a simplified HTTP request client with Promise support.
+<a href="https://github.com/request/request-promise-native" rel="nofollow">Request-promise-native</a> is a simplified HTTP request client with Promise support.
 
 Install in your project directory:
 

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn the difference between an Ethereum full node and an Ethereum archive node. Run sample commands to see the difference.
+  - name: keywords
+    content: ethereum node full archive difference
+---
+
 # Modes
 
 Chainstack supports deploying an Ethereum node on the mainnet in the following modes:
@@ -11,7 +19,7 @@ With a full node, you can query the historical state of the Ethereum mainnet at 
 
 To be able to query the historical state of the Ethereum mainnet at any block, you need an archive node.
 
-See [Geth JSON-RPC methods](https://github.com/ethereum/wiki/wiki/JSON-RPC#the-default-block-parameter) that support querying at a block number.
+See <a href="https://github.com/ethereum/wiki/wiki/JSON-RPC#the-default-block-parameter" rel="nofollow">Geth JSON-RPC methods</a> that support querying at a block number.
 
 Query example to get the balance of an address at different block numbers through an archive node:
 

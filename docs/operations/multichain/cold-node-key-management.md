@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to manage your MultiChain keys using a cold node and how to sign transactions.
+  - name: keywords
+    content: multichain cold node key sign
+---
+
 # Cold node key management
 
 By default, you can view your MultiChain wallet addresses and keys specific to the node that you deployed, provided that you are logged in as the same user with Chainstack. See [View node access and credentials](/platform/view-node-access-and-credentials).
@@ -10,11 +18,11 @@ Cold node key management assumes that you do not store the keys in a hot MultiCh
 
 This section will guide you through setting up a MultiChain cold node, creating a key pair, issuing an asset, and signing the transaction on the cold node without exposing the private key to the MultiChain network.
 
-For an overview of what a MultiChain cold node is, see [Cold nodes and wallets](https://www.multichain.com/developers/cold-nodes-wallets/).
+For an overview of what a MultiChain cold node is, see <a href="https://www.multichain.com/developers/cold-nodes-wallets/" rel="nofollow">Cold nodes and wallets</a>.
 
 1. On a server that meets your security requirements, install MultiChain
 
-See [Download and Install MultiChain](https://www.multichain.com/download-install/).
+See <a href="https://www.multichain.com/download-install/" rel="nofollow">Download and Install MultiChain</a>.
 
 2. Set up a MultiChain cold node on the server
 

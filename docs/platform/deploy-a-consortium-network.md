@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to deploy Corda, Hyperledger Fabric, Quorum, MultiChain with the Chainstack managed blockchain services.
+  - name: keywords
+    content: deploy corda hyperledger quorum multichain
+---
+
 # Deploy a consortium network
 
 Chainstack supports [cloud](/glossary/cloud) and [hybrid](/glossary/hybrid) deployment of consortium blockchain networks.

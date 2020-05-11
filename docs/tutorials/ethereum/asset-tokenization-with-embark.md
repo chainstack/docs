@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy a smart contract that tokenizes assets on the Ethereum network.
+  - name: keywords
+    content: ethereum dapp blockchain tutorial tokenize
+---
+
 # Asset tokenization with Embark
 
 This tutorial will guide you through creating a tokenized asset contract and deploying it on Ropsten testnet.
@@ -8,14 +16,14 @@ For illustration purposes, this contract does the following:
 * Sets the token price to 0.1 ether.
 * Lets anyone exchange ether for the asset tokens.
 
-This tutorial uses [Embark](https://embark.status.im/) to test and deploy the contract.
+This tutorial uses <a href="https://embark.status.im/" rel="nofollow">Embark</a> to test and deploy the contract.
 
 ## Prerequisites
 
 * [Chainstack account](https://console.chainstack.com/) to deploy a Ropsten testnet node.
-* [Embark](https://embark.status.im/) to test and deploy the contract.
-* [Geth](https://geth.ethereum.org/) to create an Ethereum account that will deploy the contract.
-* [MetaMask](https://metamask.io/) to interact with the contract.
+* <a href="https://embark.status.im/" rel="nofollow">Embark</a> to test and deploy the contract.
+* <a href="https://geth.ethereum.org/" rel="nofollow">Geth</a> to create an Ethereum account that will deploy the contract.
+* <a href="https://metamask.io/" rel="nofollow">MetaMask</a> to interact with the contract.
 
 ## Overview
 
@@ -98,7 +106,7 @@ You will use this account to deploy the contract.
 
 1. In MetaMask, click **Import Account** > **JSON FIle**.
 1. Select the keystore file that you created earlier.
-1. Fund the account with Ropsten ether at [Ropsten Ethereum Faucet](https://faucet.ropsten.be/).
+1. Fund the account with Ropsten ether at <a href="https://faucet.ropsten.be/" rel="nofollow">Ropsten Ethereum Faucet</a>.
 
 ### Deploy the contract
 

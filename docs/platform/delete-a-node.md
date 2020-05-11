@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to delete a node deployed with the Chainstack managed blockchain services.
+  - name: keywords
+    content: blockchain network consortium node delete
+---
+
 # Delete a node
 
 To be able to delete a project or a network, you must first delete all nodes associated with the network.

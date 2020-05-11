@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to access a network explorer for your nodes and networks deployed with the Chainstack managed blockchain services.
+  - name: keywords
+    content: explorer corda hyperledger quorum multichain ethereum bitcoin
+---
+
 # Explore a network
 
 You can access your network's explorer to see all the transactions and contracts on the network.

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to add a network to a project on the Chainstack managed blockchain services.
+  - name: keywords
+    content: blockchain network consortium project deploy
+---
+
 # Add a network to a project
 
 A [project](/glossary/project) can have more than one network.

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: View your user settings on the Chainstack managed blockchain services.
+  - name: keywords
+    content: blockchain user settings organization billing
+---
+
 # View your user settings
 
 * [Personal settings](https://console.chainstack.com/user/settings/personal)

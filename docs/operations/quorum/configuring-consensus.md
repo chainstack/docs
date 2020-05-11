@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to configure a Raft or IBFT consensus of a Quorum network.
+  - name: keywords
+    content: quorum raft ibft consensus configure
+---
+
 # Configuring consensus
 
 For the Quorum consensus details, see [Quorum](/blockchains/quorum).
@@ -370,6 +378,6 @@ null
 
 ::: tip See also
 
-* [Istanbul RPC API](https://docs.goquorum.com/en/latest/Consensus/istanbul-rpc-api/)
+* <a href="https://docs.goquorum.com/en/latest/Consensus/istanbul-rpc-api/" rel="nofollow">Istanbul RPC API</a>
 
 :::

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to create a project on the Chainstack managed blockchain services.
+  - name: keywords
+    content: blockchain public consortium project deploy
+---
+
 # Create a project
 
 To create a [consortium project](/glossary/consortium-project):

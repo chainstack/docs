@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: MultiChain is a permissioned consortium blockchain protocol and is a fork of Bitcoin Core. Learn how the round-robin consensus works and how to adjust it.
+  - name: keywords
+    content: multichain bitcoin blockchain consensus permissioned
+---
+
 # MultiChain
 
 MultiChain is a fork of Bitcoin Core.
@@ -33,6 +41,6 @@ Round-robin example with 10 `mine` nodes with  `mining-diversity` set to `0.3`:
 
 ::: tip See also
 
-* [MultiChain for Developers](https://www.multichain.com/developers/)
+* <a href="https://www.multichain.com/developers/" rel="nofollow">MultiChain for Developers</a>
 
 :::

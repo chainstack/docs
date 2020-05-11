@@ -1,8 +1,16 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and install a chaincode on a Hyperledger Fabric network. Learn how to interact with the chaincode.
+  - name: keywords
+    content: hyperledger fabric chaincode tutorial javascript
+---
+
 # Universal basic income opt-in chaincode
 
-[Andrew Yang](https://en.wikipedia.org/wiki/Andrew_Yang), a 2020 presidential candidate in the U.S., is arguably the only technologist to ever join the race.
+<a href="https://en.wikipedia.org/wiki/Andrew_Yang" rel="nofollow">Andrew Yang</a>, a 2020 presidential candidate in the U.S., is arguably the only technologist to ever join the race.
 
-Yang predicts that there will be massive worker displacement due to technological automation in the next five years. His solution to the worker displacement problem and the core proposal of his presidential campaign is enrolling every U.S. citizen in the Universal Basic Income program, which he calls the [Freedom Dividend](https://en.wikipedia.org/wiki/Andrew_Yang_2020_presidential_campaign#Freedom_Dividend_(UBI)).
+Yang predicts that there will be massive worker displacement due to technological automation in the next five years. His solution to the worker displacement problem and the core proposal of his presidential campaign is enrolling every U.S. citizen in the Universal Basic Income program, which he calls the <a href="https://en.wikipedia.org/wiki/Andrew_Yang_2020_presidential_campaign#Freedom_Dividend_(UBI)" rel="nofollow">Freedom Dividend</a>.
 
 Since there is money distribution involved and Andrew Yang's entire career being in technology, it makes for a fun thought experiment to imagine what the tech infrastructure could look like.
 
@@ -22,8 +30,8 @@ In this tutorial you will:
 
 ## Prerequisites
 
-1. Clone the [contract repository](https://github.com/chainstack/freedom-dividend-chaincode) to your machine.
-1. Install [Visual Studio Code](https://code.visualstudio.com/) with the [IBM Blockchain Platform extension](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform).
+1. Clone the <a href="https://github.com/chainstack/freedom-dividend-chaincode" rel="nofollow">contract repository</a> to your machine.
+1. Install <a href="https://code.visualstudio.com/" rel="nofollow">Visual Studio Code</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform" rel="nofollow">IBM Blockchain Platform extension</a>.
 
 ## Prepare a Hyperledger Fabric network
 
@@ -42,9 +50,9 @@ See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 1. Click **Smart Contracts** > **Create New Project**.
 1. Select **Default Contract**. Select **JavaScript**. Type in a name for your chaincode. For this tutorial, it's `freedomDividendContract`.
 1. Choose a directory to save your project to. In the directory, all the necessary chaincode files will be generated.
-1. Your main file is the contract in the `./lib/` directory. For this tutorial, it's [freedomDividendContract.js](https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/lib/freedomDividendContract.js). Do check out the code, as it's commented.
-1. Make sure your `index.js` file has the correct parameters relative to the contract. See [index.js](https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/index.js).
-1. Make sure you have the correct name and chaincode version in `package.json`. See [package.json](https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/package.json).
+1. Your main file is the contract in the `./lib/` directory. For this tutorial, it's <a href="https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/lib/freedomDividendContract.js" rel="nofollow">freedomDividendContract.js</a>. Do check out the code, as it's commented.
+1. Make sure your `index.js` file has the correct parameters relative to the contract. See <a href="https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/index.js" rel="nofollow">index.js</a>.
+1. Make sure you have the correct name and chaincode version in `package.json`. See <a href="https://github.com/chainstack/freedom-dividend-chaincode/blob/master/contract/package.json" rel="nofollow">package.json</a>.
 
 ### Connect to your peer
 
@@ -210,6 +218,6 @@ You also interacted with the chaincode by submitting transactions and updating t
 ::: tip See also
 
 * [Tools](/operations/fabric/tools)
-* [Hyperledger Fabric samples](https://github.com/hyperledger/fabric-samples/)
+* <a href="https://github.com/hyperledger/fabric-samples/" rel="nofollow">Hyperledger Fabric samples</a>
 
 :::

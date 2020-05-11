@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn what Ethereum networks you can deploy your nodes on, how to deploy a smart contract, how to connect to your Ethereum node.
+  - name: keywords
+    content: ethereum node deploy smart contract
+---
+
 # Introduction
 
 This section outlines the fundamentals of and operations for Ethereum.

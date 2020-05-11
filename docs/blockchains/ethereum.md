@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Ethereum is a public permissionless blockchain protocol. Learn how to join the Ethereum mainnet or Ropsten testnet and operate an Ethereum node.
+  - name: keywords
+    content: ethereum blockchain ropsten mainnet node
+---
+
 # Ethereum
 
 Ethereum is a public permissionless blockchain protocol.
@@ -7,7 +15,7 @@ Chainstack currently supports joining the following Ethereum networks:
 * Mainnet — public Ethereum mainnet.
 * Ropsten testnet — public Ethereum testnet.
 
-For development purposes on the Ropsten testnet, fund your accounts with Ropsten ether at the [Ropsten faucet](https://faucet.ropsten.be/).
+For development purposes on the Ropsten testnet, fund your accounts with Ropsten ether at the <a href="https://faucet.ropsten.be/" rel="nofollow">Ropsten faucet</a>.
 
 ::: tip See also
 

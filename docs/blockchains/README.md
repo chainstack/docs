@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn the blockchain essentials of Corda, Hyperledger Fabric, Quorum, Multichain, Ethereum, and Bitcoin. Learn how the networks operate and reach consensus.
+  - name: keywords
+    content: corda hyperledger quorum multichain ethereum bitcoin
+---
+
 # Introduction
 
 This section covers the blockchain essentials for the protocols supported by Chainstack.

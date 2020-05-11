@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: See the release notes for all versions of the Chainstack managed blockchain services platform.
+  - name: keywords
+    content: release notes version blockchain cloud protocol
+---
+
 # Release notes
 
 ## Chainstack 1.5.1
@@ -7,7 +15,7 @@
 ### What's new
 
 * **Protocols**
-  * [Corda Network](https://corda.network/) and [Corda Pre-Production Network](https://corda.network/participation/preprod/) support. You can now join the Corda production and pre-production networks. See also [Join a public network](/platform/join-a-public-network).
+  * <a href="https://corda.network/" rel="nofollow">Corda Network</a> and <a href="https://corda.network/participation/preprod/" rel="nofollow">Corda Pre-Production Network</a> support. You can now join the Corda production and pre-production networks. See also [Join a public network](/platform/join-a-public-network).
   * [Hyperledger Fabric 2.1.0](/blockchains/fabric) support.
 * **Clouds**. You can now deploy your nodes and networks in the Amazon Web Services US West region.
 * **Vault**. You can now store your Corda identity key material in a [secure vault](/glossary/vault). See also [View your organization's vault](/platform/view-your-organization-vault).
@@ -55,7 +63,7 @@
 
 * **Protocols**
   * [Corda](/blockchains/corda) 4.3 support. You can also now install CorDapps containing workflows and contracts in a single JAR file.
-  * [Quorum](/blockchains/quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
+  * [Quorum](/blockchains/quorum) 2.4.0 support. Learner node role support. <a href="https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/" rel="nofollow">Tessera</a> 0.10.2 support.
   * [MultiChain](/blockchains/multichain) 2.0.3 support.
   * [Bitcoin](/blockchains/bitcoin) 0.19.0.1 support. Bitcoin nodes now run with the `txindex` flag allowing to query any transaction on the blockchain.
 * **Documentation**. Context-sensitive documentation links in the platform UI.
@@ -143,7 +151,7 @@
 
 * **Protocols**
   * Added [Ethereum](/blockchains/ethereum) Ropsten testnet support with Bolt.
-  * Updated [Quorum](/blockchains/quorum) explorer from [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) to [epirus-free](https://github.com/blk-io/epirus-free).
+  * Updated [Quorum](/blockchains/quorum) explorer from <a href="https://github.com/blk-io/blk-explorer-free" rel="nofollow">blk-explorer-free</a> to <a href="https://github.com/blk-io/epirus-free" rel="nofollow">epirus-free</a>.
 * **Node details**. Added complete details for [Quorum](/blockchains/quorum), including default wallet private/public keys. Standardized fields for all protocols.
 * **Documentation**. New tutorial: [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle).
 
@@ -217,7 +225,7 @@
 * [**Public chain project**](/glossary/public-chain-project). Wizards to join a public network and add another node.
 * **Protocols**
   * [MultiChain](/blockchains/multichain) 2.0-beta-1 support with blockchain explorer.
-  * [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#ibft), and [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) blockchain explorer.
+  * [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#ibft), and <a href="https://github.com/blk-io/blk-explorer-free" rel="nofollow">blk-explorer-free</a> blockchain explorer.
   * Full [Ethereum](/blockchains/ethereum) mainnet node deployment with [Bolt](/glossary/bolt) rapid sync mechanism.
 * **Clouds**. Google Cloud Platform and Amazon Web Services in the Asia-Pacific region.
 * **Node details**. Default wallet private/public keys, and chain name for MultiChain. Constellation private/public keys, and network ID for [Quorum](/blockchains/quorum). Sync mode and network ID for Ethereum. Client version for all protocols.

@@ -1,12 +1,20 @@
+---
+meta:
+  - name: description
+    content: Learn how to connect to a Hyperledger Fabric peer, how to package, install, approve, and commit chaincodes.
+  - name: keywords
+    content: hyperledger fabric chaincode install commit
+---
+
 # Tools
 
 ## Interaction tools
 
-Interact with your Hyperledger Fabric peer using [the fabric-tools Docker container](https://hub.docker.com/r/hyperledger/fabric-tools/).
+Interact with your Hyperledger Fabric peer using <a href="https://hub.docker.com/r/hyperledger/fabric-tools/" rel="nofollow">the fabric-tools Docker container</a>.
 
 ### Prerequisites
 
-[Install and run Docker](https://www.docker.com/get-started).
+<a href="https://www.docker.com/get-started" rel="nofollow">Install and run Docker</a>.
 
 ### Connect to your peer
 
@@ -254,7 +262,7 @@ Name: fabcar, Version: 1.0.0, Sequence: 1, Endorsement Plugin: escc, Validation 
 
 ## Development tools
 
-See [Hyperledger Fabric 2.0: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/release-2.0/developapps/developing_applications.html).
+See <a href="https://hyperledger-fabric.readthedocs.io/en/release-2.0/developapps/developing_applications.html" rel="nofollow">Hyperledger Fabric 2.0: Developing Applications</a>.
 
 ::: tip See also
 

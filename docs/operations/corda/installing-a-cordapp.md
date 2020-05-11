@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to install a CorDapp on your Corda node deployed with the Chainstack managed blockchain services.
+  - name: keywords
+    content: corda blockchain cordapp flow contract
+---
+
 # Installing a CorDapp
 
 You can install [CorDapps](/blockchains/corda#cordapp) on your nodes as a set of JAR files.
@@ -15,6 +23,6 @@ Chainstack will reboot your node to complete the installation of your CorDapp.
 
 * [Tools](/operations/corda/tools) for information on how to interact with the installed CorDapp.
 * [No ticket scalping CorDapp](/tutorials/corda/no-ticket-scalping-cordapp)
-* [CorDapp tutorials](https://docs.corda.net/tutorials-index.html)
+* <a href="https://docs.corda.net/tutorials-index.html" rel="nofollow">CorDapp tutorials</a>
 
 :::

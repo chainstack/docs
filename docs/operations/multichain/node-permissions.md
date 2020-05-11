@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn about the MultiChain node roles and address permissions.
+  - name: keywords
+    content: multichain node role address permission
+---
+
 # Node permissions
 
 The permissions in MultiChain are assigned on a per-address basis.
@@ -25,6 +33,6 @@ Each subsequent node that you add to your MultiChain network starts with the low
 ::: tip See also
 
 * [Default addresses](/operations/multichain/default-addresses)
-* [MultiChain permissions management](https://www.multichain.com/developers/permissions-management/)
+* <a href="https://www.multichain.com/developers/permissions-management/" rel="nofollow">MultiChain permissions management</a>
 
 :::

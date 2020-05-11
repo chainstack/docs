@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to deploy a hybrid MultiChain network with nodes running in cloud and on-premises.
+  - name: keywords
+    content: multichain cloud on-premises node hybrid
+---
+
 # Deploying a hybrid network
 
 This section will guide you through the [hybrid](/glossary/hybrid) deployment of a MultiChain network.
@@ -46,7 +54,7 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 
 On your on-premises machine, install MultiChain.
 
-See [MultiChain 2.0: Download and Install MultiChain](https://www.multichain.com/download-install/).
+See <a href="https://www.multichain.com/download-install/" rel="nofollow">MultiChain 2.0: Download and Install MultiChain</a>.
 
 ### Initialize your on-premises MultiChain node
 
@@ -248,7 +256,7 @@ Example output:
 }
 ```
 
-Run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
+Run any <a href="https://www.multichain.com/developers/json-rpc-api/" rel="nofollow">MultiChain JSON-RPC command</a>.
 
 ### Send commands to your cloud node
 
@@ -264,7 +272,7 @@ Example output:
 {"result":{"version":"2.0","nodeversion":20000901,"protocolversion":20004,"chainname":"nw-123-456-7","description":"My Network","protocol":"multichain","port":7447,"setupblocks":60,"nodeaddress":"nw-123-456-7@12.34.56.78:7447","burnaddress":"1XXXXXXX24XXXXXXoiXXXXXXegXXXXXXURq4HJ","incomingpaused":false,"miningpaused":false,"offchainpaused":false,"walletversion":60000,"balance":0,"walletdbversion":3,"reindex":false,"blocks":81,"timeoffset":0,"connections":3,"proxy":"","difficulty":5.96046447753906e-8,"testnet":false,"keypoololdest":1561618750,"keypoolsize":2,"paytxfee":0,"relayfee":0,"errors":""},"error":null,"id":3}
 ```
 
-Send any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
+Send any <a href="https://www.multichain.com/developers/json-rpc-api/" rel="nofollow">MultiChain JSON-RPC command</a>.
 
 ::: tip See also
 

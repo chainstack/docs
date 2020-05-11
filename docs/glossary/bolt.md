@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Bolt is Chainstack's node synchronization technology that allows you to deploy blockchain nodes and networks in minutes instead of hours, days, or months.
+  - name: keywords
+    content: node blockchain quick sync synchronization
+---
+
 # Bolt
 
 A Chainstack patent pending node synchronization technology.

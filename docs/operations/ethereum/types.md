@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn the difference between a shared and a dedicated Ethereum node deployed with the Chainstack managed blockchain services.
+  - name: keywords
+    content: ethereum node shared dedicated blockchain
+---
+
 # Types
 
 Chainstack supports deploying an Ethereum node of the following types:
