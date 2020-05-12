@@ -378,6 +378,6 @@ null
 
 ::: tip See also
 
-* <a href="https://docs.goquorum.com/en/latest/Consensus/istanbul-rpc-api/" rel="nofollow">Istanbul RPC API</a>
+* [Istanbul RPC API](https://docs.goquorum.com/en/latest/Consensus/istanbul-rpc-api/)
 
 :::

@@ -23,6 +23,6 @@ Chainstack will reboot your node to complete the installation of your CorDapp.
 
 * [Tools](/operations/corda/tools) for information on how to interact with the installed CorDapp.
 * [No ticket scalping CorDapp](/tutorials/corda/no-ticket-scalping-cordapp)
-* <a href="https://docs.corda.net/tutorials-index.html" rel="nofollow">CorDapp tutorials</a>
+* [CorDapp tutorials](https://docs.corda.net/tutorials-index.html)
 
 :::

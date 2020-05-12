@@ -8,8 +8,8 @@ meta:
 
 # Introduction
 
-Access the Chainstack platform at [https://console.chainstack.com](https://console.chainstack.com).
+Access the Chainstack platform at <a href="https://console.chainstack.com" target="_blank">https://console.chainstack.com</a>.
 
-For assistance, reach out to [Chainstack support](https://support.chainstack.com).
+For assistance, reach out to <a href="https://support.chainstack.com" target="_blank">Chainstack support</a>.
 
-For other enquiries, use the [contact form](https://chainstack.com/contact/).
+For other enquiries, use the <a href="https://chainstack.com/contact/" target="_blank">contact form</a>.

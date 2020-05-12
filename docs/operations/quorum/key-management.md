@@ -12,7 +12,7 @@ By default, you can view your Quorum wallet addresses and keys specific to the n
 
 You can use the default wallet addresses and key pairs for development and testing purposes.
 
-If you are moving your Quorum network to production, you are strongly recommended to use secure key management. <a href="https://metamask.io/" rel="nofollow">MetaMask</a> is one of the more popular choices with the Quorum community.
+If you are moving your Quorum network to production, you are strongly recommended to use secure key management. [MetaMask](https://metamask.io/) is one of the more popular choices with the Quorum community.
 
 ::: tip See also
 

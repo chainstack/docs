@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to build a simple defi smart contract to decentrally manage funds on the Ethereum network.
   - name: keywords
-    content: ethereum defi dapp tutorial smart contract
+    content: ethereum defi dapp tutorial remix contract
 ---
 
 # Trust fund account with Remix
@@ -33,9 +33,9 @@ For Ethereum mainnet, the steps are exactly the same, except you need to use mai
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy an Ethereum node.
-* <a href="https://remix.ethereum.org/" rel="nofollow">Remix IDE</a> to compile the contract and deploy through MetaMask.
-* <a href="https://metamask.io/" rel="nofollow">MetaMask</a> to deploy the contract through Chainstack node and interact with the contract.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy an Ethereum node.
+* [Remix IDE](https://remix.ethereum.org/) to compile the contract and deploy through MetaMask.
+* [MetaMask](https://metamask.io/) to deploy the contract through Chainstack node and interact with the contract.
 
 ## Overview
 
@@ -76,7 +76,7 @@ In your MetaMask, fund each account with Ropsten ether by clicking **Deposit** >
 
 ### Create and compile the Trust Fund smart contract
 
-1. Open <a href="https://remix.ethereum.org/" rel="nofollow">Remix IDE</a>.
+1. Open [Remix IDE](https://remix.ethereum.org/).
 2. On the home page, click **Environments** > **Solidity**.
 3. On the left pane, click **File explorers** > plus sign.
 4. In the modal, give any name to your contract. For example, `transferableTrustFund.sol`.

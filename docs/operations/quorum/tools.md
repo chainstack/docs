@@ -15,10 +15,10 @@ meta:
 To interact with your Quorum network, you must install a Quorum Geth client.
 
 ::: tip Install Go
-To be able to install Quorum Geth, you must install Go first. See <a href="https://golang.org/doc/install" rel="nofollow">Go: Getting Started</a>.
+To be able to install Quorum Geth, you must install Go first. See [Go: Getting Started](https://golang.org/doc/install).
 :::
 
-Having installed Go, install Quorum Geth as described in <a href="https://docs.goquorum.com/en/latest/Getting%20Started/Installing/" rel="nofollow">Quorum: Installing</a>.
+Having installed Go, install Quorum Geth as described in [Quorum: Installing](https://docs.goquorum.com/en/latest/Getting%20Started/Installing/).
 
 With Quorum Geth installed, you can connect to the Quorum nodes with the `geth attach` command:
 
@@ -46,7 +46,7 @@ at block: 0 (Thu, 01 Jan 1970 00:00:00 UTC)
 >
 ```
 
-Invoke any methods from <a href="https://github.com/ethereum/wiki/wiki/JavaScript-API" rel="nofollow">Web3 JavaScript API</a>.
+Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
 
 Example below demonstrates how to get the current block number:
 
@@ -57,9 +57,9 @@ Example below demonstrates how to get the current block number:
 
 ### JSON-RPC API
 
-Interact with your Quorum network using <a href="https://github.com/ethereum/wiki/wiki/JSON-RPC" rel="nofollow">Geth JSON-RPC</a> and <a href="https://docs.goquorum.com/en/latest/Getting%20Started/api/" rel="nofollow">Quorum API</a>.
+Interact with your Quorum network using [Geth JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) and [Quorum API](https://docs.goquorum.com/en/latest/Getting%20Started/api/).
 
-Use <a href="https://curl.haxx.se" rel="nofollow">curl</a> or <a href="https://www.getpostman.com" rel="nofollow">Postman</a> to invoke <a href="https://github.com/ethereum/wiki/wiki/JSON-RPC" rel="nofollow">Geth JSON-RPC</a> and <a href="https://docs.goquorum.com/en/latest/Getting%20Started/api/" rel="nofollow">Quorum API</a>.
+Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com) to invoke [Geth JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) and [Quorum API](https://docs.goquorum.com/en/latest/Getting%20Started/api/).
 
 Example below demonstrates how to get basic network information:
 
@@ -73,9 +73,9 @@ $ curl -H "Content-Type: application/json" \
 
 ## Developments tools
 
-Configure <a href="https://truffleframework.com" rel="nofollow">Truffle Suite</a> to deploy contracts to your Quorum network.
+Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Quorum network.
 
-1. Install <a href="https://truffleframework.com" rel="nofollow">Truffle Suite</a> and create a project.
+1. Install [Truffle Suite](https://truffleframework.com) and create a project.
 
 ::: warning
 Use Truffle >= 5.0.14 which has complete Quorum support with privacy features.
@@ -83,7 +83,7 @@ Use Truffle >= 5.0.14 which has complete Quorum support with privacy features.
 
 2. Install `HDWalletProvider`.
 
-<a href="https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider" rel="nofollow">HDWalletProvider</a> is Truffle's separate npm package used to sign transactions.
+[HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider) is Truffle's separate npm package used to sign transactions.
 
 Run:
 
@@ -116,7 +116,7 @@ where
 
 * `chainstack` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
-* `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with <a href="https://iancoleman.io/bip39/" rel="nofollow">Mnemonic Code Converter</a>. Make sure you generate a 15 word mnemonic.
+* `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
 * RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
 * `network_id` — your Quorum network ID. Available under **Access and credentials** > **Network ID**. You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.

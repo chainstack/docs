@@ -14,7 +14,7 @@ By the end of the section, you will have your MultiChain nodes from the same net
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/)
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a>
 * A supported operating system for the MultiChain on-premises deployment:
   * Linux 64-bit: Ubuntu 12.04+, CentOS 6.2+, Debian 7+, Fedora 15+, RHEL 6.2+
   * Windows 64-bit: Windows 7, 8, 10, Server 2008 or later
@@ -54,7 +54,7 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 
 On your on-premises machine, install MultiChain.
 
-See <a href="https://www.multichain.com/download-install/" rel="nofollow">MultiChain 2.0: Download and Install MultiChain</a>.
+See [MultiChain 2.0: Download and Install MultiChain](https://www.multichain.com/download-install/).
 
 ### Initialize your on-premises MultiChain node
 
@@ -71,7 +71,7 @@ where
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 * HOSTNAME — your cloud MultiChain node hostname.
   * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
-  * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
+  * Get your Organization ID on your <a href="https://console.chainstack.com/user/settings/organization" target="_blank">Organization Settings</a> page.
   * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
@@ -179,7 +179,7 @@ where
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 * HOSTNAME — your cloud MultiChain node hostname.
   * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
-  * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
+  * Get your Organization ID on your <a href="https://console.chainstack.com/user/settings/organization" target="_blank">Organization Settings</a> page.
   * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
@@ -256,7 +256,7 @@ Example output:
 }
 ```
 
-Run any <a href="https://www.multichain.com/developers/json-rpc-api/" rel="nofollow">MultiChain JSON-RPC command</a>.
+Run any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
 
 ### Send commands to your cloud node
 
@@ -272,7 +272,7 @@ Example output:
 {"result":{"version":"2.0","nodeversion":20000901,"protocolversion":20004,"chainname":"nw-123-456-7","description":"My Network","protocol":"multichain","port":7447,"setupblocks":60,"nodeaddress":"nw-123-456-7@12.34.56.78:7447","burnaddress":"1XXXXXXX24XXXXXXoiXXXXXXegXXXXXXURq4HJ","incomingpaused":false,"miningpaused":false,"offchainpaused":false,"walletversion":60000,"balance":0,"walletdbversion":3,"reindex":false,"blocks":81,"timeoffset":0,"connections":3,"proxy":"","difficulty":5.96046447753906e-8,"testnet":false,"keypoololdest":1561618750,"keypoolsize":2,"paytxfee":0,"relayfee":0,"errors":""},"error":null,"id":3}
 ```
 
-Send any <a href="https://www.multichain.com/developers/json-rpc-api/" rel="nofollow">MultiChain JSON-RPC command</a>.
+Send any [MultiChain JSON-RPC command](https://www.multichain.com/developers/json-rpc-api/).
 
 ::: tip See also
 

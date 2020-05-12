@@ -10,11 +10,11 @@ meta:
 
 ## Interaction tools
 
-Interact with your Hyperledger Fabric peer using <a href="https://hub.docker.com/r/hyperledger/fabric-tools/" rel="nofollow">the fabric-tools Docker container</a>.
+Interact with your Hyperledger Fabric peer using [the fabric-tools Docker container](https://hub.docker.com/r/hyperledger/fabric-tools/).
 
 ### Prerequisites
 
-<a href="https://www.docker.com/get-started" rel="nofollow">Install and run Docker</a>.
+[Install and run Docker](https://www.docker.com/get-started).
 
 ### Connect to your peer
 
@@ -262,7 +262,7 @@ Name: fabcar, Version: 1.0.0, Sequence: 1, Endorsement Plugin: escc, Validation 
 
 ## Development tools
 
-See <a href="https://hyperledger-fabric.readthedocs.io/en/release-2.0/developapps/developing_applications.html" rel="nofollow">Hyperledger Fabric 2.0: Developing Applications</a>.
+See [Hyperledger Fabric 2.0: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/release-2.0/developapps/developing_applications.html).
 
 ::: tip See also
 

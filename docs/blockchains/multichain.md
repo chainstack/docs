@@ -41,6 +41,6 @@ Round-robin example with 10 `mine` nodes with  `mining-diversity` set to `0.3`:
 
 ::: tip See also
 
-* <a href="https://www.multichain.com/developers/" rel="nofollow">MultiChain for Developers</a>
+* [MultiChain for Developers](https://www.multichain.com/developers/)
 
 :::

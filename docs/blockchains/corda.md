@@ -24,8 +24,8 @@ Corda is different from *permissioned* consortium blockchain protocols in that i
 ## Consensus
 
 * Single Notary — one notary node runs the [notary service](#notary-service) for the deployed network.
-* Raft — a [CFT](/glossary/cft) consensus implementation on <a href="https://atomix.io/" rel="nofollow">Atomix</a>. See <a href="https://docs.corda.net/running-a-notary.html#crash-fault-tolerant-experimental" rel="nofollow">Crash fault-tolerant (experimental)</a>.
-* BFT-SMaRt — a [BFT](/glossary/bft) consensus implementation. See <a href="https://docs.corda.net/running-a-notary.html#byzantine-fault-tolerant-experimental" rel="nofollow">Byzantine fault-tolerant (experimental)</a>.
+* Raft — a [CFT](/glossary/cft) consensus implementation on [Atomix](https://atomix.io/). See [Crash fault-tolerant (experimental)](https://docs.corda.net/running-a-notary.html#crash-fault-tolerant-experimental).
+* BFT-SMaRt — a [BFT](/glossary/bft) consensus implementation. See [Byzantine fault-tolerant (experimental)](https://docs.corda.net/running-a-notary.html#byzantine-fault-tolerant-experimental).
 
 ## Network structure
 
@@ -46,7 +46,7 @@ Each node has a unique identity on the network in the form of:
 
 Each node has two communication interfaces:
 
-* Node to node communication implemented as <a href="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-overview-v1.0-os.html" rel="nofollow">AMQP 1.0</a> over TLS using <a href="https://activemq.apache.org/components/artemis/" rel="nofollow">Apache ActiveMQ Artemis</a>.
+* Node to node communication implemented as [AMQP 1.0](http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-overview-v1.0-os.html) over TLS using [Apache ActiveMQ Artemis](https://activemq.apache.org/components/artemis/).
 * Node to owner communication implemented as RPC.
 
 Each node keeps historic (consumed) and current (unconsumed) states of on-ledger facts shared between nodes participating in transactions. No node on the network has read access to the entirety of the [ledger](#ledger). Two or more nodes participating in a transaction always have the same read access to the subset of the ledger relevant to the transaction.
@@ -141,16 +141,16 @@ A flow is basically an automated business process split into a sequence of speci
 
 A compatibility zone is a deployed network instance that is managed by a network operator.
 
-There are compatibility zones managed by <a href="https://corda.network/governance/index.html" rel="nofollow">Corda Network Foundation</a>:
+There are compatibility zones managed by [Corda Network Foundation](https://corda.network/governance/index.html):
 
-* <a href="https://corda.network/" rel="nofollow">Corda Network</a> — the production Corda network.
-* <a href="https://corda.network/participation/preprod" rel="nofollow">Corda Pre-Production Network</a> — the pre-production Corda network.
+* [Corda Network](https://corda.network/) — the production Corda network.
+* [Corda Pre-Production Network](https://corda.network/participation/preprod) — the pre-production Corda network.
 
 There are also non-Corda Network Foundation managed compatibility zones. These are networks that rely on custom network map and doorman services to discover the nodes and control network permissions. These zones are managed by organizations deploying the zones and acting as network operators for the zones.
 
 ::: tip See also
 
-* <a href="https://docs.corda.net" rel="nofollow">Corda documentation</a>
-* [Build better with Corda](https://chainstack.com/build-better-with-corda/)
+* [Corda documentation](https://docs.corda.net)
+* <a href="https://chainstack.com/build-better-with-corda/" target="_blank">Build better with Corda</a>
 
 :::

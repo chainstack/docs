@@ -33,6 +33,6 @@ Each subsequent node that you add to your MultiChain network starts with the low
 ::: tip See also
 
 * [Default addresses](/operations/multichain/default-addresses)
-* <a href="https://www.multichain.com/developers/permissions-management/" rel="nofollow">MultiChain permissions management</a>
+* [MultiChain permissions management](https://www.multichain.com/developers/permissions-management/)
 
 :::

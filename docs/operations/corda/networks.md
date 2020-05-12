@@ -10,8 +10,8 @@ meta:
 
 Chainstack supports joining the following Corda networks:
 
-* <a href="https://corda.network/" rel="nofollow">Corda Network</a> — the production Corda network.
-* <a href="https://corda.network/participation/preprod" rel="nofollow">Corda Pre-Production Network</a> — the pre-production Corda network.
+* [Corda Network](https://corda.network/) — the production Corda network.
+* [Corda Pre-Production Network](https://corda.network/participation/preprod) — the pre-production Corda network.
 
 See [Join a public network](/platform/join-a-public-network).
 

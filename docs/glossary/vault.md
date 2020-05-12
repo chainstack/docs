@@ -8,7 +8,7 @@ meta:
 
 # Vault
 
-[Vault](https://console.chainstack.com/vault) is a secure storage for your organization's identities.
+<a href="https://console.chainstack.com/vault" target="_blank">Vault</a> is a secure storage for your organization's identities.
 
 All identity key material in the vault is split into data chunks. Each chunk is AES-256 encrypted with a unique key.
 

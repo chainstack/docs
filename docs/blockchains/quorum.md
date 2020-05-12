@@ -111,6 +111,6 @@ Since IBFT is designed to run even in the presence of malicious actors, the bloc
 ::: tip See also
 
 * [Configuring Quorum consensus](/operations/quorum/configuring-consensus)
-* <a href="https://www.goquorum.com/developers" rel="nofollow">Quorum for Developers</a>
+* [Quorum for Developers](https://www.goquorum.com/developers)
 
 :::

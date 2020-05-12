@@ -15,14 +15,14 @@ The loyalty program does the following:
 * Joins each account that calls the contract.
 * Lets each account check their loyalty program balance.
 
-This tutorial uses Truffle as <a href="https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum" rel="nofollow">Truffle officially supports Quorum</a>.
+This tutorial uses Truffle as [Truffle officially supports Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum).
 
-The contract and the Truffle configuration are in the <a href="https://github.com/chainstack/quorum-loyalty-program-tutorial" rel="nofollow">GitHub repository</a>.
+The contract and the Truffle configuration are in the [GitHub repository](https://github.com/chainstack/quorum-loyalty-program-tutorial).
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy a Quorum network.
-* <a href="https://www.trufflesuite.com/" rel="nofollow">Truffle Suite</a> to create and deploy contracts.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Quorum network.
+* [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
 
 ## Overview
 
@@ -160,7 +160,7 @@ contract("loyaltyProgram", function(accounts) {
 
 ::: tip See also
 
-* <a href="https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript" rel="nofollow">Truffle: Writing Tests in JavaScript</a>
+* [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
 
 :::
 
@@ -182,7 +182,7 @@ The test run output should be `Passing`.
 
 1. Install `HDWalletProvider`.
 
-<a href="https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider" rel="nofollow">HDWalletProvider</a> is Truffle's separate npm package used to sign transactions.
+[HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider) is Truffle's separate npm package used to sign transactions.
 
 Run:
 
@@ -221,7 +221,7 @@ where
 
 * `quorum` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
-* `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with <a href="https://iancoleman.io/bip39/" rel="nofollow">Mnemonic Code Converter</a>. Make sure you generate a 15 word mnemonic.
+* `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
 * RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
 * `network_id` — your Quorum network ID. Available under **Access and credentials** > **Network ID**. You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
@@ -388,7 +388,7 @@ This will display the balance:
 ::: tip See also
 
 * [Operations: Quorum](/operations/quorum/)
-* <a href="https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum" rel="nofollow">Truffle: Working with Quorum</a>
-* <a href="https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript" rel="nofollow">Truffle: Writing Tests in JavaScript</a>
+* [Truffle: Working with Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum)
+* [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
 
 :::

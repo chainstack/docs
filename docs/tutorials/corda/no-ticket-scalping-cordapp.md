@@ -12,7 +12,7 @@ Ticket scalping for popular events has been a problem even in the pre-Internet e
 
 This brief period of fair distribution lasted mostly during the dawn of the Internet. What happened later and is still happening today is that the ticket scalping returned at a much grander scale—something that the pre-Internet speculators could only dream of.
 
-Today ticket scalping is run through <a href="https://en.wikipedia.org/wiki/Ticket_resale#Automated_scalping_bots" rel="nofollow">automated scalping bots</a>, there are even <a href="https://www.rollingstone.com/music/music-news/ticketmaster-cheating-scalpers-726353/" rel="nofollow">claims of insider scalping</a>, and some well-known media like Pitchfork just putting it bluntly that <a href="https://pitchfork.com/thepitch/why-ticket-scalping-wont-go-away/" rel="nofollow">scalping won't go away</a>.
+Today ticket scalping is run through [automated scalping bots](https://en.wikipedia.org/wiki/Ticket_resale#Automated_scalping_bots), there are even [claims of insider scalping](https://www.rollingstone.com/music/music-news/ticketmaster-cheating-scalpers-726353/), and some well-known media like Pitchfork just putting it bluntly that [scalping won't go away](https://pitchfork.com/thepitch/why-ticket-scalping-wont-go-away/).
 
 What this tutorial offers is a very basic CorDapp on the [Corda blockchain platform](/blockchains/corda) to give an idea and a steer in the direction of how the scalping problem can be solved.
 
@@ -24,14 +24,14 @@ In this tutorial you will:
 1. Build and run a webserver that connects to your Corda node and interacts with the CorDapp.
 
 ::: tip Get the CorDapp without building
-If you want to just try out the CorDapp, you can <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/releases/" rel="nofollow">download the latest contract and workflow versions</a> and skip this tutorial to the [Install the CorDapp](#install-the-cordapp) section.
+If you want to just try out the CorDapp, you can [download the latest contract and workflow versions](https://github.com/chainstack/no-ticket-scalping-cordapp/releases/) and skip this tutorial to the [Install the CorDapp](#install-the-cordapp) section.
 :::
 
 ## Overview
 
 This tutorial will guide you through building and deploying a [CorDapp](/blockchains/corda#cordapp) that immutably registers ticket distribution with ticket distributors.
 
-The ticket registration is done by running <a href="https://github.com/chainstack/no-ticket-scalping-cordapp" rel="nofollow">noScalpDapp</a> on [Corda nodes](/blockchains/corda#node).
+The ticket registration is done by running [noScalpDapp](https://github.com/chainstack/no-ticket-scalping-cordapp) on [Corda nodes](/blockchains/corda#node).
 
 What noScalpDapp does is it lets the nodes running it send each other mutually signed transactions with the event name and the number of tickets distributed. All verified by a [notary](/blockchains/corda#notary-service).
 
@@ -39,8 +39,8 @@ In this framework, one node equals one ticket distributor. A distributor can be 
 
 ## Prerequisites
 
-1. Clone the <a href="https://github.com/chainstack/no-ticket-scalping-cordapp" rel="nofollow">CorDapp repository</a> to your machine.
-1. Set up your CorDapp development environment. See <a href="https://docs.corda.net/getting-set-up.html#set-up-instructions" rel="nofollow">Corda docs: Set-up instructions</a>.
+1. Clone the [CorDapp repository](https://github.com/chainstack/no-ticket-scalping-cordapp) to your machine.
+1. Set up your CorDapp development environment. See [Corda docs: Set-up instructions](https://docs.corda.net/getting-set-up.html#set-up-instructions).
 
 ## noScalpDapp
 
@@ -52,9 +52,9 @@ Each CorDapp has the following components:
 
 noScalpDapp is no exception and has the components written in Kotlin:
 
-* <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/workflows/src/main/kotlin/com/noScalpDapp/flows/noScalpFlow.kt" rel="nofollow">noScalpFlow.kt</a> — the CorDapp flow that starts sessions between the nodes and builds and verifies the ticket distribution transactions.
-* <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/contracts/noScalpContract.kt" rel="nofollow">noScalpContract.kt</a> — the CorDapp contract for the ticket distribution transaction.
-* <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/states/noScalpState.kt" rel="nofollow">noScalpState.kt</a> — the CorDapp state that creates an on-ledger fact that can be retrieved by the nodes participating in the transaction.
+* [noScalpFlow.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/workflows/src/main/kotlin/com/noScalpDapp/flows/noScalpFlow.kt) — the CorDapp flow that starts sessions between the nodes and builds and verifies the ticket distribution transactions.
+* [noScalpContract.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/contracts/noScalpContract.kt) — the CorDapp contract for the ticket distribution transaction.
+* [noScalpState.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/states/noScalpState.kt) — the CorDapp state that creates an on-ledger fact that can be retrieved by the nodes participating in the transaction.
 
 The code in `noScalpFlow`, `noScalpContract`, and `noScalpState` has comments explaining the what and how, so do check them.
 
@@ -184,7 +184,7 @@ stateTypes: "UNCONSUMED"
 otherResults: []
 ```
 
-Note that the transaction details output shows the confusing `totalStatesAvailable: -1`. This is a <a href="https://r3-cev.atlassian.net/browse/CORDA-2601" rel="nofollow">known Corda issue</a>.
+Note that the transaction details output shows the confusing `totalStatesAvailable: -1`. This is a [known Corda issue](https://r3-cev.atlassian.net/browse/CORDA-2601).
 
 ## Build and run the noScalpDapp webserver and client
 
@@ -196,18 +196,18 @@ The webserver is a Spring Boot implementation.
 
 For a general webserver implementation, see [Interaction tools: Using Spring Boot webserver](/operations/corda/tools#using-spring-boot-webserver).
 
-For this tutorial, the webserver implementation is in the `clients` directory of the <a href="https://github.com/chainstack/no-ticket-scalping-cordapp" rel="nofollow">CorDapp repository</a> that you cloned at the start of the tutorial.
+For this tutorial, the webserver implementation is in the `clients` directory of the [CorDapp repository](https://github.com/chainstack/no-ticket-scalping-cordapp) that you cloned at the start of the tutorial.
 
 Components:
 
 * Backend:
-  * <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt" rel="nofollow">MainController.kt</a> — the main component that does POST and GET mappings and calls <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/states/noScalpState.kt" rel="nofollow">noScalpState.kt</a>.
-  * <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/NodeRPCConnection.kt" rel="nofollow">NodeRPCConnection.kt</a> — the standard Corda RPC wrapper that uses the <a href="https://docs.corda.net/api/javadoc/net/corda/client/rpc/CordaRPCClient.html" rel="nofollow">CordaRPCClient</a> and <a href="https://docs.corda.net/api/javadoc/net/corda/client/rpc/CordaRPCConnection.html" rel="nofollow">CordaRPCConnection</a> classes.
-  * <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/Server.kt" rel="nofollow">Server.kt</a> — a Spring Boot application with <a href="https://docs.corda.net/api/kotlin/corda/net.corda.client.jackson/-jackson-support/index.html" rel="nofollow">JacksonSupport</a>.
+  * [MainController.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt) — the main component that does POST and GET mappings and calls [noScalpState.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/contracts/src/main/kotlin/com/noScalpDapp/states/noScalpState.kt).
+  * [NodeRPCConnection.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/NodeRPCConnection.kt) — the standard Corda RPC wrapper that uses the [CordaRPCClient](https://docs.corda.net/api/javadoc/net/corda/client/rpc/CordaRPCClient.html) and [CordaRPCConnection](https://docs.corda.net/api/javadoc/net/corda/client/rpc/CordaRPCConnection.html) classes.
+  * [Server.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/Server.kt) — a Spring Boot application with [JacksonSupport](https://docs.corda.net/api/kotlin/corda/net.corda.client.jackson/-jackson-support/index.html).
 
 * Frontend:
-  * <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/index.html" rel="nofollow">index.html</a> — calls <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/js/angular-module.js" rel="nofollow">angular-module.js</a>.
-  * <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/js/angular-module.js" rel="nofollow">angular-module.js</a> — calls <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt" rel="nofollow">MainController.kt</a> for GET and POST mappings.
+  * [index.html](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/index.html) — calls [angular-module.js](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/js/angular-module.js).
+  * [angular-module.js](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/resources/public/js/angular-module.js) — calls [MainController.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt) for GET and POST mappings.
 
 ### Configure the webserver
 
@@ -274,9 +274,9 @@ Refresh the page to see your distribution under **Registered distributions**.
 
 ### API endpoints
 
-The GET requests are defined via `@GetMapping` in <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt" rel="nofollow">MainController.kt</a>.
+The GET requests are defined via `@GetMapping` in [MainController.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt).
 
-The POST requests are defined via `@PostMapping` in <a href="https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt" rel="nofollow">MainController.kt</a>.
+The POST requests are defined via `@PostMapping` in [MainController.kt](https://github.com/chainstack/no-ticket-scalping-cordapp/blob/master/clients/src/main/kotlin/com/noScalpDapp/server/MainController.kt).
 
 A GET request example to see the legal name of the node the webserver is connected to:
 
@@ -298,6 +298,6 @@ You also built and ran a Spring Boot webserver. You interacted with the CorDapp 
 ::: tip See also
 
 * [Tools](/operations/corda/tools)
-* <a href="https://github.com/corda/samples/" rel="nofollow">Corda samples</a> repository to check other CorDapps and build your own. This tutorial used the Corda samples as well.
+* [Corda samples](https://github.com/corda/samples/) repository to check other CorDapps and build your own. This tutorial used the Corda samples as well.
 
 :::

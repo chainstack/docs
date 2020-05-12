@@ -12,12 +12,12 @@ Chainstack is a managed blockchain services platform making it simple to launch 
 
 Follow us:
 
-* <a href="https://twitter.com/chainstackhq" rel="nofollow">Twitter</a>
-* <a href="https://www.linkedin.com/company/chainstack/" rel="nofollow">LinkedIn</a>
-* <a href="https://github.com/chainstack" rel="nofollow">GitHub</a>
+* [Twitter](https://twitter.com/chainstackhq)
+* [LinkedIn](https://www.linkedin.com/company/chainstack/)
+* [GitHub](https://github.com/chainstack)
 
 Contact us:
 
-* <a href="https://gitter.im/chainstack/Lobby" rel="nofollow">Gitter</a>
-* <a href="https://support.chainstack.com" rel="nofollow">Support</a>
-* <a href="https://chainstack.com/contact/" rel="nofollow">Other enquiries</a>
+* [Gitter](https://gitter.im/chainstack/Lobby)
+* [Support](https://support.chainstack.com)
+* <a href="https://chainstack.com/contact/" target="_blank">Other enquiries</a>

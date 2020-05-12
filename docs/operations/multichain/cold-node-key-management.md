@@ -18,11 +18,11 @@ Cold node key management assumes that you do not store the keys in a hot MultiCh
 
 This section will guide you through setting up a MultiChain cold node, creating a key pair, issuing an asset, and signing the transaction on the cold node without exposing the private key to the MultiChain network.
 
-For an overview of what a MultiChain cold node is, see <a href="https://www.multichain.com/developers/cold-nodes-wallets/" rel="nofollow">Cold nodes and wallets</a>.
+For an overview of what a MultiChain cold node is, see [Cold nodes and wallets](https://www.multichain.com/developers/cold-nodes-wallets/).
 
 1. On a server that meets your security requirements, install MultiChain
 
-See <a href="https://www.multichain.com/download-install/" rel="nofollow">Download and Install MultiChain</a>.
+See [Download and Install MultiChain](https://www.multichain.com/download-install/).
 
 2. Set up a MultiChain cold node on the server
 

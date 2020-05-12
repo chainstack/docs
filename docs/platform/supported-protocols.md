@@ -22,11 +22,11 @@ Public network:
 	* Ropsten testnet
 * [Bitcoin](/blockchains/bitcoin) mainnet
 * [Corda](/blockchains/corda)
-	* <a href="https://corda.network/" rel="nofollow">Corda Network</a>
-	* <a href="https://corda.network/participation/preprod/" rel="nofollow">Corda Pre-Production Network</a>
+	* [Corda Network](https://corda.network/)
+	* [Corda Pre-Production Network](https://corda.network/participation/preprod/).
 
 ::: tip
 Chainstack is always working on introducing support for other protocols.
 
-Want to request protocol support? [Contact us](https://chainstack.com/contact/).
+Want to request protocol support? <a href="https://chainstack.com/contact/" target="_blank">Contact us</a>.
 :::
