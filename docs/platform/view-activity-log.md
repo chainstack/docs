@@ -8,7 +8,7 @@ meta:
 
 # View activity log
 
-<a href="https://console.chainstack.com/events" rel="dofollow" target="_blank">Activity log</a> lets you view activity across your organization and all projects that you are a member of.
+[Activity log](https://console.chainstack.com/events) lets you view activity across your organization and all projects that you are a member of.
 
 You can filter the activity log by project name or a date range.
 

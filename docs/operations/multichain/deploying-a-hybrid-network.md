@@ -71,7 +71,7 @@ where
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 * HOSTNAME — your cloud MultiChain node hostname.
   * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
-  * Get your Organization ID on your <a href="https://console.chainstack.com/user/settings/organization" rel="dofollow" target="_blank">Organization Settings</a> page.
+  * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
   * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
@@ -179,7 +179,7 @@ where
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 * HOSTNAME — your cloud MultiChain node hostname.
   * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
-  * Get your Organization ID on your <a href="https://console.chainstack.com/user/settings/organization" rel="dofollow" target="_blank">Organization Settings</a> page.
+  * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
   * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 

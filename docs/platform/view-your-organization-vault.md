@@ -8,7 +8,7 @@ meta:
 
 # View your organization's vault
 
-<a href="https://console.chainstack.com/vault" rel="dofollow" target="_blank">Vault</a> is a secure encrypted storage for your organization's identities.
+[Vault](https://console.chainstack.com/vault) is a secure encrypted storage for your organization's identities.
 
 The identity keystore files are stored using AES-256 encryption.
 
