@@ -8,9 +8,9 @@ meta:
 
 # View your user settings
 
-* <a href="https://console.chainstack.com/user/settings/personal" target="_blank">Personal settings</a>
-* <a href="https://console.chainstack.com/user/settings/organization" target="_blank">Organization setting</a>
-* <a href="https://console.chainstack.com/user/settings/billing" target="_blank">Billing</a>
+* <a href="https://console.chainstack.com/user/settings/personal" rel="dofollow" target="_blank">Personal settings</a>
+* <a href="https://console.chainstack.com/user/settings/organization" rel="dofollow" target="_blank">Organization setting</a>
+* <a href="https://console.chainstack.com/user/settings/billing" rel="dofollow" target="_blank">Billing</a>
 
 ::: tip See also
 

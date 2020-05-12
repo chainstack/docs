@@ -151,6 +151,6 @@ There are also non-Corda Network Foundation managed compatibility zones. These a
 ::: tip See also
 
 * [Corda documentation](https://docs.corda.net)
-* <a href="https://chainstack.com/build-better-with-corda/" target="_blank">Build better with Corda</a>
+* <a href="https://chainstack.com/build-better-with-corda/" rel="dofollow" target="_blank">Build better with Corda</a>
 
 :::

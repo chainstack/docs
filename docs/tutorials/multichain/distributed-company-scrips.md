@@ -26,7 +26,7 @@ In brief, the implementation is the following:
 
 ## Prerequisites
 
-A <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> for every participant.
+A <a href="https://console.chainstack.com/" rel="dofollow" target="_blank">Chainstack account</a> for every participant.
 
 ## Overview
 

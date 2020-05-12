@@ -14,7 +14,7 @@ By the end of the section, you will have your MultiChain nodes from the same net
 
 ## Prerequisites
 
-* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a>
+* <a href="https://console.chainstack.com/" rel="dofollow" target="_blank">Chainstack account</a>
 * A supported operating system for the MultiChain on-premises deployment:
   * Linux 64-bit: Ubuntu 12.04+, CentOS 6.2+, Debian 7+, Fedora 15+, RHEL 6.2+
   * Windows 64-bit: Windows 7, 8, 10, Server 2008 or later
@@ -71,7 +71,7 @@ where
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 * HOSTNAME — your cloud MultiChain node hostname.
   * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
-  * Get your Organization ID on your <a href="https://console.chainstack.com/user/settings/organization" target="_blank">Organization Settings</a> page.
+  * Get your Organization ID on your <a href="https://console.chainstack.com/user/settings/organization" rel="dofollow" target="_blank">Organization Settings</a> page.
   * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 
@@ -179,7 +179,7 @@ where
 * CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
 * HOSTNAME — your cloud MultiChain node hostname.
   * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
-  * Get your Organization ID on your <a href="https://console.chainstack.com/user/settings/organization" target="_blank">Organization Settings</a> page.
+  * Get your Organization ID on your <a href="https://console.chainstack.com/user/settings/organization" rel="dofollow" target="_blank">Organization Settings</a> page.
   * Combine them using the following format: `nd-XXX-XXX-XXX.rg-XXX-XXX.p2pify.com`.
 * PORT — your cloud MultiChain node port. Always use the default value `7447`.
 

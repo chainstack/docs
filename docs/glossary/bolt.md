@@ -16,6 +16,6 @@ The platform restores the latest snapshot to every newly initiated node. As a re
 
 ::: tip See also
 
-* <a href="https://chainstack.com/introducing-bolt-the-chainstack-technology-made-for-simple-node-synchronization/" target="_blank">Introducing Bolt: The Chainstack Technology Made for Simple Node Synchronization</a>
+* <a href="https://chainstack.com/introducing-bolt-the-chainstack-technology-made-for-simple-node-synchronization/" rel="dofollow" target="_blank">Introducing Bolt: The Chainstack Technology Made for Simple Node Synchronization</a>
 
 :::

@@ -20,6 +20,6 @@ For development purposes on the Ropsten testnet, fund your accounts with Ropsten
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
-* <a href="https://chainstack.com/build-better-with-ethereum/" target="_blank">Build better with Ethereum</a>
+* <a href="https://chainstack.com/build-better-with-ethereum/" rel="dofollow" target="_blank">Build better with Ethereum</a>
 
 :::

@@ -19,5 +19,5 @@ Follow us:
 Contact us:
 
 * [Gitter](https://gitter.im/chainstack/Lobby)
-* [Support](https://support.chainstack.com)
-* <a href="https://chainstack.com/contact/" target="_blank">Other enquiries</a>
+* <a href="https://support.chainstack.com" rel="dofollow" target="_blank">Support</a>
+* <a href="https://chainstack.com/contact/" rel="dofollow" target="_blank">Other enquiries</a>
