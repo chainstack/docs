@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: See the release notes for all versions of the Chainstack managed blockchain services platform.
+  - name: keywords
+    content: release notes version blockchain cloud protocol
+---
+
 # Release notes
 
 ## Chainstack 1.5.1
@@ -119,7 +127,7 @@
 
 ### Breaking changes
 
-* Unprotected endpoints for Quorum and Ethereum nodes [deprecation on October 1, 2019](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/).
+* Unprotected endpoints for Quorum and Ethereum nodes <a href="https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/" target="_blank">deprecation on October 1, 2019</a>.
 
 ## Chainstack 1.2.1
 
@@ -171,7 +179,7 @@
 ### What’s new
 
 * **Updating and deleting resources**. You can now edit project name and description, network and node name. You can delete nodes by the owner, networks are deleted automatically when the last node is deleted, projects can be deleted if empty.
-* **Navigation**. Updated menu with links to [Documentation](../) and [Support](https://support.chainstack.com).
+* **Navigation**. Updated menu with links to [Documentation](../) and <a href="https://support.chainstack.com" target="_blank">Support</a>.
 * **Support**. Added Zendesk widget.
 
 ### Bug fixes

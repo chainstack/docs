@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to configure the consensus of your Quorum network, manage your keys, and how to interact with your Quorum node.
+  - name: keywords
+    content: quorum consensus node network manage
+---
+
 # Introduction
 
 This section outlines the fundamentals of and operations for Quorum.

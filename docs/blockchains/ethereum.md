@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Ethereum is a public permissionless blockchain protocol. Learn how to join the Ethereum mainnet or Ropsten testnet and operate an Ethereum node.
+  - name: keywords
+    content: ethereum blockchain ropsten mainnet node
+---
+
 # Ethereum
 
 Ethereum is a public permissionless blockchain protocol.
@@ -12,6 +20,6 @@ For development purposes on the Ropsten testnet, fund your accounts with Ropsten
 ::: tip See also
 
 * [Operations: Ethereum](/operations/ethereum/)
-* [Build better with Ethereum](https://chainstack.com/build-better-with-ethereum/)
+* <a href="https://chainstack.com/build-better-with-ethereum/" target="_blank">Build better with Ethereum</a>
 
 :::

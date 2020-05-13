@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn about the MultiChain node roles and address permissions.
+  - name: keywords
+    content: multichain node role address permission
+---
+
 # Node permissions
 
 The permissions in MultiChain are assigned on a per-address basis.

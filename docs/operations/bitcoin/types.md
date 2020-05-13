@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn about the Bitcoin node deployment mode with the Chainstack managed blockchain services. Deploy a dedicated or a shared node.
+  - name: keywords
+    content: bitcoin node shared dedicated deploy
+---
+
 # Types
 
 Chainstack supports deploying a Bitcoin node of the following types:

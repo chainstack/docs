@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to interact with your Bitcoin node using JSON-RPC API. Learn how to connect a Python application to your Bitcoin node.
+  - name: keywords
+    content: bitcoin node rpc python api
+---
+
 # Tools
 
 ## Interaction tools

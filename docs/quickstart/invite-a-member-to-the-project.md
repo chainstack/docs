@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Invite a member to your consortium project created with the Chainstack managed blockchain services.
+  - name: keywords
+    content: invite member project blockchain consortium
+---
+
 # Invite a member to the project
 
 In a [consortium project](/glossary/consortium-project), you can always invite a member who will:

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: You can deploy a Corda node in the public Corda Network, public Corda Pre-Production Network, or deploy your own private Corda network.
+  - name: keywords
+    content: corda network public private deploy
+---
+
 # Networks
 
 Chainstack supports joining the following Corda networks:

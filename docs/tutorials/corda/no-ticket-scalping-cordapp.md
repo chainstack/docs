@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy a CorDapp and build an application that interacts with the CorDapp.
+  - name: keywords
+    content: corda blockchain cordapp tutorial kotlin
+---
+
 # No ticket scalping CorDapp
 
 Ticket scalping for popular events has been a problem even in the pre-Internet era; however, with the digital technology becoming ubiquitous, scalping looked like a solved problem for a brief moment—it made sense too, the tickets became digital and available through websites, and all one had to do was enter their credit card details online and click *Buy*.

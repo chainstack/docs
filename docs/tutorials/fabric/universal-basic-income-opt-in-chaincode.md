@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and install a chaincode on a Hyperledger Fabric network. Learn how to interact with the chaincode.
+  - name: keywords
+    content: hyperledger fabric chaincode tutorial javascript
+---
+
 # Universal basic income opt-in chaincode
 
 [Andrew Yang](https://en.wikipedia.org/wiki/Andrew_Yang), a 2020 presidential candidate in the U.S., is arguably the only technologist to ever join the race.

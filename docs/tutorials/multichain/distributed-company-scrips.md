@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop an application on MultiChain from scratch by following the distributed company scrips tutorial.
+  - name: keywords
+    content: multichain blockchain application tutorial develop
+---
+
 # Distributed company scrips
 
 Companies interested in exploring the teal organization structure and experimenting with it will find it useful to issue internal  currency for employees.
@@ -18,7 +26,7 @@ In brief, the implementation is the following:
 
 ## Prerequisites
 
-A [Chainstack account](https://console.chainstack.com/) for every participant.
+A <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> for every participant.
 
 ## Overview
 

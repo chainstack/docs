@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop, deploy, and interact with smart contracts on the Ethereum network.
+  - name: keywords
+    content: ethereum tutorial smart contract dapp
+---
+
 # Introduction
 
 This section guides you through developing applications on Ethereum from scratch.

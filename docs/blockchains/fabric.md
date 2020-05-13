@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Hyperledger Fabric is an open-source permissioned distributed ledger platform. Learn about the Hyperledger Fabric consensus, network structure, and chaincodes.
+  - name: keywords
+    content: hyperledger fabric blockchain consensus chaincode
+---
+
 # Hyperledger Fabric
 
 Hyperledger Fabric is an open-source permissioned distributed ledger platform.
@@ -70,6 +78,6 @@ See [Hyperledger Fabric 2.0: Smart Contracts and Chaincode](https://hyperledger-
 ::: tip See also
 
 * [Tools](/operations/fabric/tools)
-* [Build better with Hyperledger Fabric](https://chainstack.com/build-better-with-fabric/)
+* <a href="https://chainstack.com/build-better-with-fabric/" target="_blank">Build better with Hyperledger Fabric</a>
 
 :::

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to deploy a hybrid MultiChain network with nodes running in cloud and on-premises.
+  - name: keywords
+    content: multichain cloud on-premises node hybrid
+---
+
 # Deploying a hybrid network
 
 This section will guide you through the [hybrid](/glossary/hybrid) deployment of a MultiChain network.
@@ -6,7 +14,7 @@ By the end of the section, you will have your MultiChain nodes from the same net
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/)
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a>
 * A supported operating system for the MultiChain on-premises deployment:
   * Linux 64-bit: Ubuntu 12.04+, CentOS 6.2+, Debian 7+, Fedora 15+, RHEL 6.2+
   * Windows 64-bit: Windows 7, 8, 10, Server 2008 or later

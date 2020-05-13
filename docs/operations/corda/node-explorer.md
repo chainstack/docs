@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to install, run, and connect the Corda Node Explorer to your Corda nodes.
+  - name: keywords
+    content: corda node explorer finance cordapp
+---
+
 # Node explorer
 
 [The Corda Node Explorer](https://docs.corda.net/node-explorer.html) is a standalone JavaFX application.

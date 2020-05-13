@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy a food supply temperature control solution with Web3 on the Quorum blockchain protocol.
+  - name: keywords
+    content: quorum blockchain dapp tutorial web3
+---
+
 # Food supply temperature control with Web3
 
 In this tutorial, you will:
@@ -23,7 +31,7 @@ Sample code for this tutorial is in the [GitHub repository](https://github.com/c
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy a Quorum network.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Quorum network.
 
 ## Overview
 

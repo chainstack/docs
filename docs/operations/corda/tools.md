@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to connect to your Corda node, how to connect to it, how to run a Spring Boot webserver that interacts with your node.
+  - name: keywords
+    content: corda node connect developer webserver
+---
+
 # Tools
 
 ## Interaction tools
@@ -8,7 +16,7 @@ Interact with your Corda node using [Corda standalone shell](https://docs.corda.
 
 #### Prerequisites
 
-* Install Java 8. See [See Corda docs: Set-up instructions](https://docs.corda.net/getting-set-up.html#set-up-instructions).
+* Install Java 8. [See Corda docs: Set-up instructions](https://docs.corda.net/getting-set-up.html#set-up-instructions).
 * Download Corda standalone shell from [Corda artifactory](https://software.r3.com/artifactory/corda-releases/net/corda/corda-tools-shell-cli/4.3/corda-tools-shell-cli-4.3-all.jar).
 * A Corda node deployed with Chainstack.
 

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to interact with your Ethereum node, deploy smart contracts through your node, and develop dapps.
+  - name: keywords
+    content: ethereum truffle web3 dapp geth
+---
+
 # Tools
 
 ## Interaction tools
