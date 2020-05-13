@@ -3,7 +3,7 @@ meta:
   - name: description
     content: A dedicated node is a node deployed exclusively for a Chainstack managed blockchain services user.
   - name: keywords
-    content: dedicated node deploy exclusive production
+    content: dedicated node deploy exclusive production ethereum bitcoin
 ---
 
 # Dedicated node

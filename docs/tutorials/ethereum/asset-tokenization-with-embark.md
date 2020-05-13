@@ -20,7 +20,7 @@ This tutorial uses [Embark](https://embark.status.im/) to test and deploy the co
 
 ## Prerequisites
 
-* <a href="https://console.chainstack.com/" rel="dofollow" target="_blank">Chainstack account</a> to deploy a Ropsten testnet node.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Ropsten testnet node.
 * [Embark](https://embark.status.im/) to test and deploy the contract.
 * [Geth](https://geth.ethereum.org/) to create an Ethereum account that will deploy the contract.
 * [MetaMask](https://metamask.io/) to interact with the contract.

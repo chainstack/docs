@@ -31,7 +31,7 @@ Sample code for this tutorial is in the [GitHub repository](https://github.com/c
 
 ## Prerequisites
 
-* <a href="https://console.chainstack.com/" rel="dofollow" target="_blank">Chainstack account</a> to deploy a Quorum network.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Quorum network.
 
 ## Overview
 

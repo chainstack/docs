@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Learn the blockchain essentials of Corda, Hyperledger Fabric, Quorum, Multichain, Ethereum, and Bitcoin. Learn how the networks operate and reach consensus.
+    content: Learn the blockchain essentials of Corda, Hyperledger Fabric, Quorum, MultiChain, Ethereum, and Bitcoin. Learn how the networks operate and reach consensus.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin
+    content: corda hyperledger fabric quorum multichain ethereum bitcoin
 ---
 
 # Introduction

@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to deploy blockchain nodes and networks in minutes and how to build blockchain applications.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin
+    content: corda hyperledger fabric quorum multichain ethereum bitcoin
 ---
 
 # Chainstack documentation
@@ -19,5 +19,5 @@ Follow us:
 Contact us:
 
 * [Gitter](https://gitter.im/chainstack/Lobby)
-* <a href="https://support.chainstack.com" rel="dofollow" target="_blank">Support</a>
-* <a href="https://chainstack.com/contact/" rel="dofollow" target="_blank">Other enquiries</a>
+* <a href="https://support.chainstack.com" target="_blank">Support</a>
+* <a href="https://chainstack.com/contact/" target="_blank">Other enquiries</a>

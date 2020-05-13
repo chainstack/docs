@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn what the Crash Fault Tolerance (CFT) consensus is and how it is different from the Byzantine Fault Tolerance (BFT) consensus.
   - name: keywords
-    content: crash fault tolerance consensus cft
+    content: crash fault tolerance consensus cft quorum
 ---
 
 # CFT

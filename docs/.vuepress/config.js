@@ -5,7 +5,7 @@ module.exports = {
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     markdown: {
-    externalLinks: { target: '_blank', rel: 'nofollow noopener' }
+        externalLinks: { target: '_blank', rel: 'nofollow noopener' }
     },
     themeConfig: {
         logo: '/img/docs-logo.svg',

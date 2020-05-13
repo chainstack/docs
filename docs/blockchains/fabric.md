@@ -78,6 +78,6 @@ See [Hyperledger Fabric 2.0: Smart Contracts and Chaincode](https://hyperledger-
 ::: tip See also
 
 * [Tools](/operations/fabric/tools)
-* <a href="https://chainstack.com/build-better-with-fabric/" rel="dofollow" target="_blank">Build better with Hyperledger Fabric</a>
+* <a href="https://chainstack.com/build-better-with-fabric/" target="_blank">Build better with Hyperledger Fabric</a>
 
 :::

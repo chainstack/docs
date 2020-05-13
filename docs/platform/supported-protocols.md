@@ -28,5 +28,5 @@ Public network:
 ::: tip
 Chainstack is always working on introducing support for other protocols.
 
-Want to request protocol support? <a href="https://chainstack.com/contact/" rel="dofollow" target="_blank">Contact us</a>.
+Want to request protocol support? <a href="https://chainstack.com/contact/" target="_blank">Contact us</a>.
 :::

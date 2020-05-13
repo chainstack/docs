@@ -127,7 +127,7 @@ meta:
 
 ### Breaking changes
 
-* Unprotected endpoints for Quorum and Ethereum nodes <a href="https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/" rel="dofollow" target="_blank">deprecation on October 1, 2019</a>.
+* Unprotected endpoints for Quorum and Ethereum nodes <a href="https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/" target="_blank">deprecation on October 1, 2019</a>.
 
 ## Chainstack 1.2.1
 
@@ -179,7 +179,7 @@ meta:
 ### What’s new
 
 * **Updating and deleting resources**. You can now edit project name and description, network and node name. You can delete nodes by the owner, networks are deleted automatically when the last node is deleted, projects can be deleted if empty.
-* **Navigation**. Updated menu with links to [Documentation](../) and <a href="https://support.chainstack.com" rel="dofollow" target="_blank">Support</a>.
+* **Navigation**. Updated menu with links to [Documentation](../) and <a href="https://support.chainstack.com" target="_blank">Support</a>.
 * **Support**. Added Zendesk widget.
 
 ### Bug fixes

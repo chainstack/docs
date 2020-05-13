@@ -33,7 +33,7 @@ For Ethereum mainnet, the steps are exactly the same, except you need to use mai
 
 ## Prerequisites
 
-* <a href="https://console.chainstack.com" rel="dofollow" target="_blank">Chainstack account</a> to deploy an Ethereum node.
+* <a href="https://console.chainstack.com" target="_blank">Chainstack account</a> to deploy an Ethereum node.
 * [Remix IDE](https://remix.ethereum.org/) to compile the contract and deploy through MetaMask.
 * [MetaMask](https://metamask.io/) to deploy the contract through Chainstack node and interact with the contract.
 
