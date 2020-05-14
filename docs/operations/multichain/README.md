@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn about the MultiChain network structure, node permissions, how to deploy a hybrid network, and how to interact with your node.
+  - name: keywords
+    content: multichain network permission hybrid interact
+---
+
 # Introduction
 
 This section outlines the fundamentals of and operations for MultiChain.

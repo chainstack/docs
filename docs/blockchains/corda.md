@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Corda is an open-source blockchain platform. Learn about the Corda consensus, network structure, transactions, contracts and flows that make CorDapps.
+  - name: keywords
+    content: corda blockchain cordapp contract node
+---
+
 # Corda
 
 Corda is an open-source blockchain platform.
@@ -143,6 +151,6 @@ There are also non-Corda Network Foundation managed compatibility zones. These a
 ::: tip See also
 
 * [Corda documentation](https://docs.corda.net)
-* [Build better with Corda](https://chainstack.com/build-better-with-corda/)
+* <a href="https://chainstack.com/build-better-with-corda/" target="_blank">Build better with Corda</a>
 
 :::

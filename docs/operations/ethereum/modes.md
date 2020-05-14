@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn the difference between an Ethereum full node and an Ethereum archive node. Run sample commands to see the difference.
+  - name: keywords
+    content: ethereum node full archive difference
+---
+
 # Modes
 
 Chainstack supports deploying an Ethereum node on the mainnet in the following modes:

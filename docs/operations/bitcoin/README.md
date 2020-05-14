@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to deploy a fully synchronized Bitcoin node in minutes and interact with the node.
+  - name: keywords
+    content: bitcoin mainnet node deploy sync
+---
+
 # Introduction
 
 This section outlines the fundamentals of and operations for Bitcoin.

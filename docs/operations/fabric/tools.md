@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to connect to a Hyperledger Fabric peer, how to package, install, approve, and commit chaincodes.
+  - name: keywords
+    content: hyperledger fabric chaincode install commit
+---
+
 # Tools
 
 ## Interaction tools

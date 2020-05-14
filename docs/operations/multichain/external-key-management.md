@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to externally sign a transaction without exposing your keys to a MultiChain network.
+  - name: keywords
+    content: multichain key external sign cold
+---
+
 # External key management
 
 By default, you can view your MultiChain wallet addresses and keys specific to the node that you deployed, provided that you are logged in as the same user with Chainstack. See [View node access and credentials](/platform/view-node-access-and-credentials).

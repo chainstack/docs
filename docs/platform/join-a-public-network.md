@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to deploy a node on Ethereum, Bitcoin, or Corda in minutes with the Chainstack managed blockchain services.
+  - name: keywords
+    content: ethereum corda bitcoin deploy node
+---
+
 # Join a public network
 
 You can currently join the Ethereum and Bitcoin networks.

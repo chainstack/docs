@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy a smart contract that tokenizes assets on the Ethereum network.
+  - name: keywords
+    content: ethereum dapp blockchain tutorial tokenize
+---
+
 # Asset tokenization with Embark
 
 This tutorial will guide you through creating a tokenized asset contract and deploying it on Ropsten testnet.
@@ -12,7 +20,7 @@ This tutorial uses [Embark](https://embark.status.im/) to test and deploy the co
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy a Ropsten testnet node.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Ropsten testnet node.
 * [Embark](https://embark.status.im/) to test and deploy the contract.
 * [Geth](https://geth.ethereum.org/) to create an Ethereum account that will deploy the contract.
 * [MetaMask](https://metamask.io/) to interact with the contract.

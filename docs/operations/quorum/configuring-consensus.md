@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to configure a Raft or IBFT consensus of a Quorum network.
+  - name: keywords
+    content: quorum raft ibft consensus configure
+---
+
 # Configuring consensus
 
 For the Quorum consensus details, see [Quorum](/blockchains/quorum).

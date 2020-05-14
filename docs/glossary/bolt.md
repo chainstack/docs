@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Bolt is Chainstack's node synchronization technology that allows you to deploy blockchain nodes and networks in minutes instead of hours, days, or months.
+  - name: keywords
+    content: node blockchain quick sync synchronization ethereum bitcoin
+---
+
 # Bolt
 
 A Chainstack patent pending node synchronization technology.
@@ -8,6 +16,6 @@ The platform restores the latest snapshot to every newly initiated node. As a re
 
 ::: tip See also
 
-* [Introducing Bolt: The Chainstack Technology Made for Simple Node Synchronization](https://chainstack.com/introducing-bolt-the-chainstack-technology-made-for-simple-node-synchronization/)
+* <a href="https://chainstack.com/introducing-bolt-the-chainstack-technology-made-for-simple-node-synchronization/" target="_blank">Introducing Bolt: The Chainstack Technology Made for Simple Node Synchronization</a>
 
 :::

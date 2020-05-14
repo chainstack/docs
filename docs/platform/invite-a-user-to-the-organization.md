@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to invite a user to your organization registered with the Chainstack managed blockchain services.
+  - name: keywords
+    content: invite user organization blockchain identity
+---
+
 # Invite a user to the organization
 
 You can invite a user to your organization who will:

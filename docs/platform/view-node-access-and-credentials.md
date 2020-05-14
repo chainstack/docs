@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: View the access and credentials of your nodes deployed with the Chainstack managed blockchain services.
+  - name: keywords
+    content: blockchain node access credentials network
+---
+
 # View node access and credentials
 
 To view the access information:

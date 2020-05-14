@@ -1,10 +1,14 @@
 ---
-metaTitle: Chainstack documentation
+meta:
+  - name: description
+    content: Learn how to deploy blockchain nodes and networks in minutes and how to build blockchain applications.
+  - name: keywords
+    content: corda hyperledger fabric quorum multichain ethereum bitcoin
 ---
 
 # Chainstack documentation
 
-Chainstack is a multi-cloud and multi-protocol Platform as a Service that empowers businesses to rapidly build, deploy, and manage decentralized networks and services.
+Chainstack is a managed blockchain services platform making it simple to launch and scale decentralized networks and applications. 
 
 Follow us:
 
@@ -15,5 +19,5 @@ Follow us:
 Contact us:
 
 * [Gitter](https://gitter.im/chainstack/Lobby)
-* [Support](https://support.chainstack.com)
-* [Other enquiries](https://chainstack.com/contact/)
+* <a href="https://support.chainstack.com" target="_blank">Support</a>
+* <a href="https://chainstack.com/contact/" target="_blank">Other enquiries</a>

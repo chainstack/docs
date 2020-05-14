@@ -4,6 +4,9 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
+    markdown: {
+        externalLinks: { target: '_blank', rel: 'nofollow noopener' }
+    },
     themeConfig: {
         logo: '/img/docs-logo.svg',
         nav: [
@@ -226,7 +229,7 @@ module.exports = {
             normalSuffix: ''
         },
         'google-tag-manager': {
-            'gtm': 'GTM-PXSGW6M'
+            gtm: 'GTM-PXSGW6M'
         },
         'sitemap': {
             hostname: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080')
@@ -235,6 +238,7 @@ module.exports = {
             default_image: '/img/social-image.png',
             root_url: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080'),
             default_site_name: 'Chainstack documentation'
-      }
+        },
+        'check-md': {}
     }
 }

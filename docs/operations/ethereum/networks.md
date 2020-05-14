@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Deploy a public Ethereum mainnet node or a Ropsten testnet node with the Chainstack managed blockchain services in minutes.
+  - name: keywords
+    content: ethereum mainnet ropsten testnet node
+---
+
 # Networks
 
 Chainstack supports joining the following Ethereum networks:

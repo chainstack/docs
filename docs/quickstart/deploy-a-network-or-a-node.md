@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Quickly deploy blockchain nodes and networks with the Chainstack managed blockchain services.
+  - name: keywords
+    content: quickstart deploy node network blockchain
+---
+
 # Deploy a network or a node
 
 You can deploy one or more networks or nodes in one [project](/glossary/project).

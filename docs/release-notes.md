@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: See the release notes for all versions of the Chainstack managed blockchain services platform.
+  - name: keywords
+    content: release notes version blockchain cloud protocol
+---
+
 # Release notes
 
 ## Chainstack 1.5.1
@@ -6,7 +14,7 @@
 
 ### What's new
 
-* **Protocols**.
+* **Protocols**
   * [Corda Network](https://corda.network/) and [Corda Pre-Production Network](https://corda.network/participation/preprod/) support. You can now join the Corda production and pre-production networks. See also [Join a public network](/platform/join-a-public-network).
   * [Hyperledger Fabric 2.1.0](/blockchains/fabric) support.
 * **Clouds**. You can now deploy your nodes and networks in the Amazon Web Services US West region.
@@ -37,7 +45,7 @@
 
 ### What's new
 
-* **Protocols**.
+* **Protocols**
   * [Ethereum](/blockchains/ethereum) archive node support. Deploy a dedicated Ethereum archive node. Connect to a shared archive node for free on Business and Enterprise tiers. Geth 1.9.10 support.
   * [Quorum](/blockchains/quorum) transaction manager Tessera 0.10.3 support.
 * **UI**. In-line edit button for all resources to improve access to quick actions.
@@ -55,7 +63,7 @@
 
 * **Protocols**
   * [Corda](/blockchains/corda) 4.3 support. You can also now install CorDapps containing workflows and contracts in a single JAR file.
-  * [Quorum](/blockchains/Quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
+  * [Quorum](/blockchains/quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
   * [MultiChain](/blockchains/multichain) 2.0.3 support.
   * [Bitcoin](/blockchains/bitcoin) 0.19.0.1 support. Bitcoin nodes now run with the `txindex` flag allowing to query any transaction on the blockchain.
 * **Documentation**. Context-sensitive documentation links in the platform UI.
@@ -89,7 +97,7 @@
 
 * **Protocols**
   * [Corda](/blockchains/corda) 4.1 support. You can now deploy a consortium network with [network map service](/blockchains/corda#network-map-service), doorman, and [notary](/blockchains/corda#notary-service). Dynamically add and remove participant nodes. Install and remove [CorDapps](/blockchains/corda#cordapp).
-  * [Quorum](/blockchains/Quorum) 2.3.0 support. Replaced Constellation transaction manager with Tessera.
+  * [Quorum](/blockchains/quorum) 2.3.0 support. Replaced Constellation transaction manager with Tessera.
 * **User management**. Invite users into the organization.
 * **Billing**. View metered usage cost for the current billing period, updated hourly.
 * **Documentation**
@@ -119,7 +127,7 @@
 
 ### Breaking changes
 
-* Unprotected endpoints for Quorum and Ethereum nodes [deprecation on October 1, 2019](https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/).
+* Unprotected endpoints for Quorum and Ethereum nodes <a href="https://chainstack.com/protected-endpoints-for-ethereum-and-quorum-nodes-on-chainstack/" target="_blank">deprecation on October 1, 2019</a>.
 
 ## Chainstack 1.2.1
 
@@ -171,7 +179,7 @@
 ### What’s new
 
 * **Updating and deleting resources**. You can now edit project name and description, network and node name. You can delete nodes by the owner, networks are deleted automatically when the last node is deleted, projects can be deleted if empty.
-* **Navigation**. Updated menu with links to [Documentation](../) and [Support](https://support.chainstack.com).
+* **Navigation**. Updated menu with links to [Documentation](../) and <a href="https://support.chainstack.com" target="_blank">Support</a>.
 * **Support**. Added Zendesk widget.
 
 ### Bug fixes
@@ -217,7 +225,7 @@
 * [**Public chain project**](/glossary/public-chain-project). Wizards to join a public network and add another node.
 * **Protocols**
   * [MultiChain](/blockchains/multichain) 2.0-beta-1 support with blockchain explorer.
-  * [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#istanbul-byzantine-fault-tolerance), and [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) blockchain explorer.
+  * [Quorum](/blockchains/quorum) 2.2.1 support with [Raft](/blockchains/quorum#raft) and [IBFT](/blockchains/quorum#ibft), and [blk-explorer-free](https://github.com/blk-io/blk-explorer-free) blockchain explorer.
   * Full [Ethereum](/blockchains/ethereum) mainnet node deployment with [Bolt](/glossary/bolt) rapid sync mechanism.
 * **Clouds**. Google Cloud Platform and Amazon Web Services in the Asia-Pacific region.
 * **Node details**. Default wallet private/public keys, and chain name for MultiChain. Constellation private/public keys, and network ID for [Quorum](/blockchains/quorum). Sync mode and network ID for Ethereum. Client version for all protocols.

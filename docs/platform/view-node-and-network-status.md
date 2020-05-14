@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: View the status of your nodes and networks deployed with the Chainstack managed blockchain services.
+  - name: keywords
+    content: blockchain node network status monitor
+---
+
 # View node and network status
 
 You can view the node and network status in the **Status** column of your nodes list or your networks list.

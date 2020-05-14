@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to interact with your Ethereum node, deploy smart contracts through your node, and develop dapps.
+  - name: keywords
+    content: ethereum truffle web3 dapp geth
+---
+
 # Tools
 
 ## Interaction tools
@@ -132,7 +140,7 @@ To make Remix IDE interact with the network through a Chainstack node:
 
 This will engage MetaMask and make Remix IDE interact with the network through a Chainstack node.
 
-For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tutorials/trust-fund-account-on-ethereum).
+For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tutorials/ethereum/trust-fund-account-with-remix).
 
 ### web3.js
 

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Manage your organization's identities consisting of key pairs and certificates securely with the Chainstack vault.
+  - name: keywords
+    content: key identity vault secure certificate
+---
+
 # Manage your organization's identity
 
 You can add and delete new identities in your organization's [vault](https://console.chainstack.com/vault).

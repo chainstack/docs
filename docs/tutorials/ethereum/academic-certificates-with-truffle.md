@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy a smart contract that registers academic certificates on the Ethereum network.
+  - name: keywords
+    content: tutorial ethereum blockchain dapp truffle
+---
+
 # Academic certificates with Truffle
 
 In this tutorial, you will:
@@ -9,7 +17,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy an Ethereum node.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy an Ethereum node.
 * [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to interact with your Quorum node using Geth client or JSON-RPC API and how to develop Quorum applications.
+  - name: keywords
+    content: quorum geth truffle web3 develop
+---
+
 # Tools
 
 ## Interaction tools

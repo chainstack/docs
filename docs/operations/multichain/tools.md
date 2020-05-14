@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to interact with your MultiChain nodes using JSON-RPC API and how to developer a JavaScript or a Python application.
+  - name: keywords
+    content: multichain javascript python develop blockchain
+---
+
 # Tools
 
 ## Interaction tools

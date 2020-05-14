@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to develop and deploy a simple loyalty program smart contract on the Quorum blockchain protocol.
+  - name: keywords
+    content: quorum blockchain dapp tutorial truffle
+---
+
 # Loyalty program with Truffle
 
 This tutorial will guide you through creating a simple loyalty program contract and deploying it on your [Quorum](/blockchains/quorum) network.
@@ -13,7 +21,7 @@ The contract and the Truffle configuration are in the [GitHub repository](https:
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy a Quorum network.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Quorum network.
 * [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to build a simple defi smart contract to decentrally manage funds on the Ethereum network.
+  - name: keywords
+    content: ethereum defi dapp tutorial remix contract
+---
+
 # Trust fund account with Remix
 
 Unlike with legacy finance systems where you need to rely on a well-established third party, you can build your own financial instrument on Ethereum.
@@ -25,7 +33,7 @@ For Ethereum mainnet, the steps are exactly the same, except you need to use mai
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/) to deploy an Ethereum node.
+* <a href="https://console.chainstack.com" target="_blank">Chainstack account</a> to deploy an Ethereum node.
 * [Remix IDE](https://remix.ethereum.org/) to compile the contract and deploy through MetaMask.
 * [MetaMask](https://metamask.io/) to deploy the contract through Chainstack node and interact with the contract.
 

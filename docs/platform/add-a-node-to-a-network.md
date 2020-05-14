@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Learn how to add a node to a blockchain network on the Chainstack managed blockchain services.
+  - name: keywords
+    content: blockchain network consortium node deploy
+---
+
 # Add a node to a network
 
 Once you have [deployed a consortium network](/platform/deploy-a-consortium-network) or [joined a public network](/platform/join-a-public-network), you can add more nodes to the network.
