@@ -69,6 +69,10 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 
 ### Install Node.js packages
 
+::: tip Install all packages at once
+If you do not want go through installing each of the packages separately, you can install all of them by cloning the [tutorial repository](https://github.com/chainstack/quorum-iot-tutorial) and running `npm install`.
+:::
+
 #### Install Ethereum JavaScript API
 
 [Ethereum JavaScript API](https://github.com/ethereum/web3.js) is a collection of libraries to interact with your nodes.
@@ -86,7 +90,7 @@ The Solidity JavaScript compiler will compile the contract into bytecode.
 Install in your project directory:
 
 ``` sh
-npm install solc
+npm install solc@0.5.11
 ```
 
 #### Install ethereumjs-tx
@@ -412,7 +416,7 @@ const getNonce = async (address, uri) => {
       ],
       id: 1,
     },
-  }).then(res => res.result )
+  }).then(res => res.result)
   .catch(error => new Error(error));
 };
 
@@ -511,7 +515,7 @@ const main = async () => {
 }
 
 function getContract(web3, contractAddress) {
-  return new web3.eth.Contract(temperatureMonitor.interface,  contractAddress);
+  return new web3.eth.Contract(temperatureMonitor.interface, contractAddress);
 }
 
 async function deployContract(node) {
@@ -642,7 +646,7 @@ const main = async () => {
 }
 
 function getContract(web3, contractAddress) {
-  return new web3.eth.Contract(temperatureMonitor.interface,  contractAddress);
+  return new web3.eth.Contract(temperatureMonitor.interface, contractAddress);
 }
 
 async function deployContract({ node, privateFor }) {
@@ -829,6 +833,12 @@ where
 * `getTemperature` — the function to fetch the temperature value.
 * `node.web3.eth.accounts.signTransaction` — externally signs the transaction.
 
+### Run the transaction
+
+``` sh
+node public-externalSign.js
+```
+
 Example output:
 
 ``` sh
@@ -867,7 +877,10 @@ const main = async () => {
     bytecode,
   };
 
-  const contractAddress = await deployContract(node1, [node2.TM_PK]);
+  const contractAddress = await deployContract({
+    node: node1,
+    privateFor: [node2.TM_PK],
+  });
   console.log(`Contract deployed at address: ${contractAddress}`);
 
   const statusUnAuthorized = await setTemp({
@@ -877,7 +890,7 @@ const main = async () => {
     temp: 8,
   });
 
-  console.log(`Set Temp status from unauthorized node:  ${statusUnAuthorized}`);
+  console.log(`Set Temp status from unauthorized node: ${statusUnAuthorized}`);
   const resultUnAuthorized = await getTemp({
     contractAddress,
     node: node3,
@@ -898,7 +911,7 @@ const main = async () => {
   console.log(`Contract temperature after update: ${result}`);
 };
 
-async function deployContract(node, privateFor) {
+async function deployContract( {node, privateFor }) {
   // encode contract
   const contract = new node.web3.eth.Contract(temperatureMonitor.interface);
   const encodedABI = contract
@@ -914,18 +927,16 @@ async function deployContract(node, privateFor) {
   );
 
   const privateSignedTxHex = await serializeAndSign(node, {
-    to: '',
+    to: null,
     data: `0x${rawTxHash}`,
   });
 
   return node.txManager
     .sendRawRequest(privateSignedTxHex, privateFor)
     .then(tx => {
-      console.log(tx);
-
       return tx.contractAddress;
     })
-    .catch(console.log);
+    .catch(error => error.message);
 }
 
 async function setTemp({ to, node, privateFor, temp}) {
@@ -941,13 +952,9 @@ async function setTemp({ to, node, privateFor, temp}) {
     data: `0x${rawTxHash}`,
   });
 
-  console.log('privateSignedTxHex', privateSignedTxHex);
-
   return node.txManager
     .sendRawRequest(privateSignedTxHex, privateFor)
     .then(tx => {
-      console.log(tx);
-
       return `${tx.status} - ${tx.blockHash}`;
     })
     .catch(error => error.message);
@@ -989,16 +996,14 @@ This will deploy the contract, set the temperature value, and read the temperatu
 Example output:
 
 ``` sh
-rawTx 0xf88d808083419ce08080b840350ca231bc4c7dbd4f2bc99361b3dedaa74e8cf37f1eca19f1105f1b93df15c54dbdd3b21afe13d083d109c990e60d537406c2f76ee290d0e546bebc092d2b6025a0538d82a8481a53a1ac0736d6d4e9682919b94858bf1f592d177708bab30e447fa051c0aa24c0a67f75ce2cd1d57dc3fe4c5e77e42526fb1b564016d9f1dfee7649
-...
-Contract deployed at address: 0x993369D96bDdB6FfB30Ed89FC7d1aED261A752BF
-privateSignedTxHex 0xf8a1808083419ce094993369d96bddb6ffb30ed89fc7d1aed261a752bf80b840032532e7aa75b4779a48b5c4b0342e0bbe40c8c96918da703533133bafd1e61e2371d2438836a799b5c602d99e6fe0373f86ce9dff98ce8a057be5a396edd75425a0f9a575f2c0372e944e07f26b8fbb2e5cfc0322ebb3d4b358d8484af31dde962aa0787ba3ba4efe6db7bdcd8b6dcba6ec01570e98df1d3ad446075c5b1e36943b37
-...
-Set Temp status from unauthorized node:  true - 0xebc7533a3c26f08e46dd61367d2d0581e519b6583c091c8ddc3fc3865f414643
+Contract deployed at address: 0x059e649f745525BB43661eCCBa611CF0c00cC8D3
+Transaction status: true
+Retrieved contract Temperature 3
+root@ubuntu-s-1vcpu-2gb-ams3-01:~/quorum-iot-tutorial# node private-externalSign.js 
+Contract deployed at address: 0x6D6D30b9C46E4415183EeE6E9A7A31a7E1A67368
+Set Temp status from unauthorized node: true - 0xedfb9381ca9f2c3d887106f9ced8f19a18d629139f55cc7e771fdcffa16185ea
 Contract temperature: null
-privateSignedTxHex 0xf8a1808083419ce094993369d96bddb6ffb30ed89fc7d1aed261a752bf80b840eec5f07fdc2a33abe831d12cd2c4c960b17cd64dfede607cb7fb94c306d6a656d22163edc992d2c12ceed47e59b875fe8957b24d81667056ef8eafff1a93b62125a09b3b161a689651ef634f38cbf30e16d5369536c24ca9faae3b8b6fc7f5bc6324a014a91232f03288597e9ff97416254bcf63e2116b8d2380f60867050d47a874e1
-...
-Set temp status from authorized node: true - 0x140d05bf4fd7881dbde709f54ba9bd60b0ffcf851692009b6d2bac6ce214ca34
+Set temp status from authorized node: true - 0x60809f2fe330fbf24d2b37a71326c3ae413bba3efa8168e08d20421fd4436f69
 Contract temperature after update: 22
 ```
 
