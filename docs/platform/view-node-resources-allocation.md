@@ -34,7 +34,7 @@ Quorum:
 
 * Node — the storage allocated to your Quorum to maintain the ledger.
 * Geth — the CPU and memory allocated to Quorum Geth.
-* TM — the CPU and memory allocated to the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/).
+* Transaction manager — the CPU and memory allocated to the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/).
 
 MultiChain:
 
