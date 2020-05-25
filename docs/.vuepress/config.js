@@ -44,6 +44,8 @@ module.exports = {
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
                     '/platform/view-node-and-network-status',
+                    '/platform/view-node-resources-allocation',
+                    '/platform/view-node-logs',
                     '/platform/explore-a-network',
                     '/platform/delete-a-node',
                     '/platform/delete-a-network',
