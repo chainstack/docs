@@ -996,10 +996,6 @@ This will deploy the contract, set the temperature value, and read the temperatu
 Example output:
 
 ``` sh
-Contract deployed at address: 0x059e649f745525BB43661eCCBa611CF0c00cC8D3
-Transaction status: true
-Retrieved contract Temperature 3
-root@ubuntu-s-1vcpu-2gb-ams3-01:~/quorum-iot-tutorial# node private-externalSign.js 
 Contract deployed at address: 0x6D6D30b9C46E4415183EeE6E9A7A31a7E1A67368
 Set Temp status from unauthorized node: true - 0xedfb9381ca9f2c3d887106f9ced8f19a18d629139f55cc7e771fdcffa16185ea
 Contract temperature: null
