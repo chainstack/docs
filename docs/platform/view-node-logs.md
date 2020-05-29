@@ -17,6 +17,16 @@ To view the node logs:
 1. Click the node name.
 1. Click **Logs**.
 
+For Hyperledger Fabric, you additionally filter the logs by:
+
+* Peer — the logs of your Hyperledger Fabric [peer](/blockchains/fabric#peers).
+* Chaincode server — logs of your chaincode external builder and launcher. See also Hyperledger Fabric documentation: [External Builders and Launchers](https://hyperledger-fabric.readthedocs.io/en/release-2.0/cc_launcher.html) and [Chaincode as an external service](https://hyperledger-fabric.readthedocs.io/en/release-2.0/cc_service.html).
+
+For Quorum, you additionally filter the logs by:
+
+* Geth — the logs of your instance of Quorum Geth.
+* Transaction manager — the logs of your instance of the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/).
+
 The timestamps in the log entries are displayed in your local time.
 
 The logs are stored for 7 days. Logs older than 7 days are automatically deleted.
