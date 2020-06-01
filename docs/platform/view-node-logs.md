@@ -20,7 +20,7 @@ To view the node logs:
 For Hyperledger Fabric, you additionally filter the logs by:
 
 * Peer — the logs of your Hyperledger Fabric [peer](/blockchains/fabric#peers).
-* Chaincode server — logs of the service running your chaincode.
+* Chaincode server — the logs of the service running your chaincode.
 
 For Quorum, you additionally filter the logs by:
 
