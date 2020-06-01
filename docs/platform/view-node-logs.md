@@ -8,7 +8,7 @@ meta:
 
 # View node logs
 
-You can view the logs for your [dedicated nodes](/glossary/dedicated-node) on the Growth, Business, and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
+You can view the logs for your [dedicated nodes](/glossary/dedicated-node) on the Business and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
 
 To view the node logs:
 
@@ -20,7 +20,7 @@ To view the node logs:
 For Hyperledger Fabric, you additionally filter the logs by:
 
 * Peer — the logs of your Hyperledger Fabric [peer](/blockchains/fabric#peers).
-* Chaincode server — logs of your chaincode external builder and launcher. See also Hyperledger Fabric documentation: [External Builders and Launchers](https://hyperledger-fabric.readthedocs.io/en/release-2.0/cc_launcher.html) and [Chaincode as an external service](https://hyperledger-fabric.readthedocs.io/en/release-2.0/cc_service.html).
+* Chaincode server — logs of the service running your chaincode.
 
 For Quorum, you additionally filter the logs by:
 
@@ -29,7 +29,7 @@ For Quorum, you additionally filter the logs by:
 
 The timestamps in the log entries are displayed in your local time.
 
-The logs are stored for 7 days. Logs older than 7 days are automatically deleted.
+The logs are rotated daily and retained for 7 days before deletion.
 
 ::: tip See also
 

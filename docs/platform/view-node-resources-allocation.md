@@ -28,7 +28,7 @@ Hyperledger Fabric:
 
 * Node — the storage allocated to your peer to maintain the state and a copy of the ledger.
 * Peer — the CPU and memory allocated to your peer.
-* Chaincode server — the CPU and memory allocated to the chaincode external builder and launcher. See also Hyperledger Fabric documentation: [External Builders and Launchers](https://hyperledger-fabric.readthedocs.io/en/release-2.0/cc_launcher.html) and [Chaincode as an external service](https://hyperledger-fabric.readthedocs.io/en/release-2.0/cc_service.html).
+* Chaincode server — the CPU and memory allocated to the service running your chaincode.
 
 Quorum:
 
