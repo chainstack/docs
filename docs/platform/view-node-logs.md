@@ -29,7 +29,7 @@ For Quorum, you additionally filter the logs by:
 
 The timestamps in the log entries are displayed in your local time.
 
-The logs are rotated daily and retained for 7 days before deletion.
+The logs are retained for 7 days before deletion.
 
 ::: tip See also
 
