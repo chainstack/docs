@@ -8,6 +8,22 @@ meta:
 
 # Release notes
 
+## Chainstack 1.5.2
+
+*June 2, 2020*
+
+### What's new
+
+* **Logs**. You can now access the logs for your dedicated nodes in the new node log viewer, with the ability to browse by date and container. 
+* **Node resources**. You can now monitor the resources that have been dynamically allocated to each of your dedicated nodes.
+* **CorDapp notifications**. You will now receive notifications based on the successful or failed result of CorDapp installations/removals initiated through Chainstack's CorDapp management interface.
+* **Protocols**. [Corda 4.4](blockchains/corda) support.
+* **UI**. You can now view hosting information directly on the node list for each network.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 1.5.1
 
 *April 22, 2020*
