@@ -8,6 +8,24 @@ meta:
 
 # Release notes
 
+## Chainstack 1.5.2
+
+*June 2, 2020*
+
+### What's new
+
+* **Protocols**
+  * [Corda 4.4](/blockchains/corda) support.
+  * [Quorum](/blockchains/quorum) 2.6.0 support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.5 support.
+* **Node logs**. You can now [access the logs](/platform/view-node-logs) for your dedicated nodes in the new node log viewer, with the ability to browse by date and container.
+* **Node resources**. You can now [view the resources](/platform/view-node-resources-allocation) that have been dynamically allocated to each of your dedicated nodes.
+* **CorDapp notifications**. You will now receive notifications based on the successful or failed result of CorDapp installations or removals initiated through Chainstack's CorDapp management interface.
+* **UI**. You can now view hosting information directly on the node list for each network.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 1.5.1
 
 *April 22, 2020*
