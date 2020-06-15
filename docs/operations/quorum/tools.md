@@ -170,7 +170,7 @@ Example to get the latest block number:
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider('https://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com'));
+const web3 = new Web3(new Web3.providers.WebsocketProvider('https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com'));
 
 web3.eth.getBlockNumber().then(console.log);
 ```
