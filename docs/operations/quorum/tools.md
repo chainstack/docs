@@ -73,6 +73,8 @@ $ curl -H "Content-Type: application/json" \
 
 ## Developments tools
 
+### Truffle
+
 Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Quorum network.
 
 1. Install [Truffle Suite](https://truffleframework.com) and create a project.
@@ -143,6 +145,106 @@ module.exports = {
 ```
 
 3. Run `truffle migrate --network chainstack` and Truffle will deploy using Chainstack.
+
+### web3.js
+
+Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Quorum nodes deployed with Chainstack.
+
+1. Install [web3.js](https://web3js.readthedocs.io/).
+1. Use the `HttpProvider` object to connect to your node's RPC endpoint.
+
+``` js
+const Web3 = require('web3');
+
+const web3 = new Web3(new Web3.providers.HttpProvider('https://USERNAME:PASSWORD@RPC_ENDPOINT'));
+```
+
+where
+
+* USERNAME — your Quorum node access username.
+* PASSWORD — your Quorum node access password.
+* RPC_ENDPOINT — your Quorum node RPC endpoint.
+
+Example to get the latest block number:
+
+``` js
+const Web3 = require('web3');
+
+const web3 = new Web3(new Web3.providers.WebsocketProvider('https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com'));
+
+web3.eth.getBlockNumber().then(console.log);
+```
+
+### web3j
+
+Build DApps using [web3j](https://github.com/web3j/web3j) and Quorum nodes deployed with Chainstack.
+
+Use the `HttpService` object to connect to your node's RPC endpoint.
+
+Example to get the latest block number:
+
+``` java
+package getLatestBlock;
+
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.web3j.protocol.Web3j;
+import org.web3j.protocol.core.DefaultBlockParameterName;
+import org.web3j.protocol.core.methods.response.EthBlock;
+import org.web3j.protocol.exceptions.ClientConnectionException;
+import org.web3j.protocol.http.HttpService;
+
+import okhttp3.Authenticator;
+import okhttp3.Credentials;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.Route;
+
+public final class App {
+
+  private static final String USERNAME = "USERNAME";
+  private static final String PASSWORD = "PASSWORD";
+  private static final String RPC_ENDPOINT = "RPC_ENDPOINT";
+
+  public static void main(String[] args) {
+    try {
+
+      OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
+      clientBuilder.authenticator(new Authenticator() {
+          @Override public Request authenticate(Route route, Response response) throws IOException {
+              String credential = Credentials.basic(USERNAME, PASSWORD);
+              return response.request().newBuilder().header("Authorization", credential).build();
+          }
+      });
+
+      HttpService service = new HttpService(RPC_ENDPOINT, clientBuilder.build(), false);
+      Web3j web3 = Web3j.build(service);
+
+
+      EthBlock.Block latestBlock = web3.ethGetBlockByNumber(DefaultBlockParameterName.LATEST, false).send().getBlock();
+
+
+      System.out.println("Latest Block: #" + latestBlock.getNumber());
+
+    } catch (IOException | ClientConnectionException ex) {
+
+      Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+    }
+  }
+
+}
+```
+
+where
+
+* USERNAME — your Quorum node access username.
+* PASSWORD — your Quorum node access password.
+* RPC_ENDPOINT — your Quorum node RPC endpoint.
+
+See also [the full code on GitHub](https://github.com/chainstack/web3j-getLatestBlock).
 
 ::: tip See also
 
