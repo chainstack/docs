@@ -12,12 +12,13 @@ You can view the node and network status in the **Status** column of your nodes 
 
 [Consortium project](/glossary/consortium-project):
 
-| Node status | Network status | Description                              |
-|-------------|----------------|------------------------------------------|
-| Running     | Running        | All network nodes are running.           |
-| Maintenance | Running        | The node is in maintenance mode.         |
-| Failed      | Error          | The node has failed to deploy.           |
-| Error       | Error          | The node is deployed but malfunctioning. |
+| Node status | Network status | Description                                        |
+|-------------|----------------|----------------------------------------------------|
+| Running     | Running        | All network nodes are running.                     |
+| Maintenance | Running        | The node is in maintenance mode.                   |
+| Failed      | Failed         | The network has failed to deploy.                  |
+| Failed      | Error          | A node in the running network has failed to deploy.|
+| Error       | Error          | The node is deployed but malfunctioning.           |
 
 [Public chain project](/glossary/public-chain-project):
 
