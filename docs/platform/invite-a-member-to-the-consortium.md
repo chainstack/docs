@@ -1,14 +1,14 @@
 ---
 meta:
   - name: description
-    content: Learn how to invite a member to a project created on the Chainstack managed blockchain services.
+    content: Learn how to invite a member to a consortium project created on the Chainstack managed blockchain services.
   - name: keywords
     content: project member invite consortium blockchain
 ---
 
-# Invite a member to the project
+# Invite a member to the consortium
 
-In a [consortium project](/glossary/consortium-project), you can always invite a member who will:
+In a [consortium project](/glossary/consortium-project), you can always invite a [member](/glossary/member) who will:
 
 * Deploy nodes and networks as part of your project.
 * Access the project's nodes and networks details.

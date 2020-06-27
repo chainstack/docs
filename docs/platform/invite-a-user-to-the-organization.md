@@ -8,7 +8,7 @@ meta:
 
 # Invite a user to the organization
 
-You can invite a user to your organization who will:
+You can invite a [user](/glossary/user) to your [organization](/glossary/organization) who will:
 
 * Create both public and consortium projects.
 * Deploy nodes and networks.
@@ -25,7 +25,7 @@ This will send an email invitation to join the organization.
 
 ::: tip See also
 
-* [Invite a member to the project](/platform/invite-a-member-to-the-project)
+* [Invite a member to the consortium](/platform/invite-a-member-to-the-consortium)
 * [View node access and credentials](/platform/view-node-access-and-credentials)
 
 :::

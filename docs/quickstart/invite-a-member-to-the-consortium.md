@@ -6,7 +6,7 @@ meta:
     content: invite member project blockchain consortium
 ---
 
-# Invite a member to the project
+# Invite a member to the consortium
 
 In a [consortium project](/glossary/consortium-project), you can always invite a member who will:
 

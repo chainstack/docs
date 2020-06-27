@@ -23,6 +23,6 @@ This will deploy or join a network.
 
 ::: tip See next
 
-* [Invite a member to the project](/quickstart/invite-a-member-to-the-project)
+* [Invite a member to the consortium](/quickstart/invite-a-member-to-the-consortium)
 
 :::
