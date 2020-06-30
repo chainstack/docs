@@ -72,7 +72,7 @@ Having set up your MetaMask to interact through a Chainstack node, your Remix ID
 
 Create at least two accounts in MetaMask. You need two accounts to transfer the contract ownership from one to another.
 
-In your MetaMask, fund each account with Ropsten ether by clicking **Deposit** > **Test Faucet** > **Get Ether**.
+In your MetaMask, fund each account with <a href="https://support.chainstack.com/hc/en-us/articles/900001458966-Ethereum-Ropsten-faucets" target="_blank">Ropsten ether</a> by clicking **Deposit** > **Test Faucet** > **Get Ether**.
 
 ### Create and compile the Trust Fund smart contract
 
