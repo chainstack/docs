@@ -16,7 +16,7 @@ All users invited to the organization have non-admin roles. Think of organizatio
 
 * [Member](/glossary/member)
 * <a href="https://support.chainstack.com/hc/en-us/articles/900001563563" target="_blank">Organizations, users, and members</a>
-* [Invite a member to the consortium](/platform/invite-a-member-to-the-consortium)
+* [Invite a member to the project](/platform/invite-a-member-to-the-project)
 * [Invite a user to the organization](/platform/invite-a-user-to-the-organization)
 
 :::
