@@ -8,7 +8,7 @@ meta:
 
 # Join a public network
 
-You can currently join the Ethereum and Bitcoin networks.
+You can currently join the public Ethereum, Bitcoin, and Corda networks.
 
 To join the [Ethereum](/blockchains/ethereum) main or test network:
 
