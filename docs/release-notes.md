@@ -21,7 +21,7 @@ meta:
   * Reduced usage costs.
   * Uniform usage rates for all cloud providers.
 
-See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing plans</a> and a <a href="https://chainstack.com/and-gateway-for-all/" target="_blank">blog post introducing the new pricing</a>.
+See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing plans</a> and a <a href="https://chainstack.com/new-growth-tier-and-reduced-costs-for-all-plans/" target="_blank">blog post introducing the new pricing</a>.
 
 ### Bug fixes
 
