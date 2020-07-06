@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to deploy a fully synchronized Bitcoin node in minutes and interact with the node.
   - name: keywords
-    content: bitcoin mainnet node deploy sync
+    content: bitcoin mainnet testnet node deploy sync
 ---
 
 # Introduction
