@@ -116,7 +116,7 @@ meta:
 * **Protocols**
   * [Corda](/blockchains/corda) 4.1 support. You can now deploy a consortium network with [network map service](/blockchains/corda#network-map-service), doorman, and [notary](/blockchains/corda#notary-service). Dynamically add and remove participant nodes. Install and remove [CorDapps](/blockchains/corda#cordapp).
   * [Quorum](/blockchains/quorum) 2.3.0 support. Replaced Constellation transaction manager with Tessera.
-* **User management**. Invite users into the organization.
+* **User management**. Invite [users](/glossary/user) into the [organization](/glossary/organization).
 * **Billing**. View metered usage cost for the current billing period, updated hourly.
 * **Documentation**
   * [Corda general description](/blockchains/corda) and [Corda operations](/operations/corda).
@@ -238,8 +238,8 @@ meta:
 
 *March 17, 2019*
 
-* **Registration and sign in**. Signing up via email, password, and personal details. Signing up for a member invited to the project. Email confirmation on successful registration. Email verification.
-* [**Consortium project**](/glossary/consortium-project). Wizards to create a new network and add a node to the existing network. Invitation of other organizations as members to the project via email.
+* **Registration and sign in**. Signing up via email, password, and personal details. Signing up for a [member](/glossary/member) invited to the consortium project. Email confirmation on successful registration. Email verification.
+* [**Consortium project**](/glossary/consortium-project). Wizards to create a new network and add a node to the existing network. Invitation of other [organizations](/glossary/organization) as [members](/glossary/member) to the project via email.
 * [**Public chain project**](/glossary/public-chain-project). Wizards to join a public network and add another node.
 * **Protocols**
   * [MultiChain](/blockchains/multichain) 2.0-beta-1 support with blockchain explorer.

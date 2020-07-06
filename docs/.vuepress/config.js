@@ -206,9 +206,11 @@ module.exports = {
                     '/glossary/network',
                     '/glossary/node',
                     '/glossary/on-premises',
+                    '/glossary/organization',
                     '/glossary/project',
                     '/glossary/public-chain-project',
                     '/glossary/shared-node',
+                    '/glossary/user',
                     '/glossary/vault',
                     ]
             },

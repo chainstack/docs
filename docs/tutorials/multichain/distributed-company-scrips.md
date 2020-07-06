@@ -35,7 +35,7 @@ To get from zero to a running company scrip system, do the following:
 1. With Chainstack, create a [consortium project](/glossary/consortium-project).
 1. With Chainstack, deploy a MultiChain network.
 1. With Chainstack, get your MultiChain node access and credentials.
-1. With Chainstack, invite members to your project.
+1. With Chainstack, invite members to your consortium project.
 1. Ensure each member runs a node.
 1. With MultiChain, issue a token.
 1. Distribute the tokens to all members.
@@ -55,15 +55,15 @@ See [Deploy a consortium network](/platform/deploy-a-consortium-network).
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-### Invite members to your project
+### Invite members to your consortium project
 
 See [Invite a member to the project](/platform/invite-a-member-to-the-project).
 
 ### Ensure each member runs a node
 
-Everyone in your project can see all nodes running in a network.
+Everyone in your consortium project can see all nodes running in a network.
 
-By simply joining a project, new members do not automatically become system participants. Each member must add a node to the network.
+By simply joining a consortium project, new members do not automatically become system participants. Each member must add a node to the network.
 
 Ensure members know how to add a node:
 
