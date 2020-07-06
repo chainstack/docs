@@ -20,7 +20,9 @@ Public network:
 * [Ethereum](/blockchains/ethereum)
 	* Mainnet. [Full and archive nodes](/operations/ethereum/modes).
 	* Ropsten testnet
-* [Bitcoin](/blockchains/bitcoin) mainnet
+* [Bitcoin](/blockchains/bitcoin)
+	* Mainnet
+	* Testnet
 * [Corda](/blockchains/corda)
 	* [Corda Network](https://corda.network/)
 	* [Corda Pre-Production Network](https://corda.network/participation/preprod/).
