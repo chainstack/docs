@@ -86,6 +86,7 @@ module.exports = {
                             '/operations/quorum/',
                             '/operations/quorum/configuring-consensus',
                             '/operations/quorum/default-addresses',
+                            '/operations/quorum/default-network-id',
                             '/operations/quorum/key-management',
                             '/operations/quorum/tools',
                         ]
@@ -96,6 +97,7 @@ module.exports = {
                         children: [
                             '/operations/multichain/',
                             '/operations/multichain/default-addresses',
+                            '/operations/multichain/default-chain-name',
                             '/operations/multichain/node-permissions',
                             '/operations/multichain/external-key-management',
                             '/operations/multichain/cold-node-key-management',
@@ -206,9 +208,11 @@ module.exports = {
                     '/glossary/network',
                     '/glossary/node',
                     '/glossary/on-premises',
+                    '/glossary/organization',
                     '/glossary/project',
                     '/glossary/public-chain-project',
                     '/glossary/shared-node',
+                    '/glossary/user',
                     '/glossary/vault',
                     ]
             },

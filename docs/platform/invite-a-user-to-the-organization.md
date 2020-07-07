@@ -8,7 +8,7 @@ meta:
 
 # Invite a user to the organization
 
-You can invite a user to your organization who will:
+You can invite a [user](/glossary/user) to your [organization](/glossary/organization) who will:
 
 * Create both public and consortium projects.
 * Deploy nodes and networks.
@@ -27,5 +27,6 @@ This will send an email invitation to join the organization.
 
 * [Invite a member to the project](/platform/invite-a-member-to-the-project)
 * [View node access and credentials](/platform/view-node-access-and-credentials)
+* <a href="https://support.chainstack.com/hc/en-us/articles/900001563563" target="_blank">Organizations, users, and members</a>
 
 :::
