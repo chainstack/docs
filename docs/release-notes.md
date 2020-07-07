@@ -8,6 +8,25 @@ meta:
 
 # Release notes
 
+## Chainstack 1.6
+
+*July 7, 2020*
+
+### What's new
+
+* **Protocols**. [Bitcoin](/blockchains/bitcoin) testnet support.
+* **Pricing**
+  * New Growth pricing plan.
+  * Reduced fixed plan costs.
+  * Reduced usage costs.
+  * Uniform usage rates for all cloud providers.
+
+See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing plans</a> and a <a href="https://chainstack.com/new-growth-tier-and-reduced-costs-for-all-plans/" target="_blank">blog post introducing the new pricing</a>.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 1.5.2
 
 *June 2, 2020*
