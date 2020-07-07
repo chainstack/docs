@@ -8,7 +8,11 @@ meta:
 
 # Default chain name
 
-The default chain name of your MultiChain network deployed with Chainstack is `nw-123-456-7`.
+The default chain name of your MultiChain network deployed with Chainstack is the network ID. 
+
+The network ID is part of the link that you get when opening your deployed network in your browser.
+
+For example, in `https://chainstack.com/projects/PR-123-456/networks/NW-123-456-7` the network ID and the chain name is `NW-123-456-7`.
 
 ::: tip See also
 
