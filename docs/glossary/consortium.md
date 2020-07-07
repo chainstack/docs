@@ -8,7 +8,7 @@ meta:
 
 # Consortium
 
-Group of members that are part of a project; each member represents an organization.
+Group of [members](/glossary/member) that are part of a project; each member represents an [organization](/glossary/organization).
 
 ::: tip See also
 
