@@ -8,7 +8,7 @@ meta:
 
 # Default chain name
 
-The default chain name of your MultiChain network deployed with Chainstack is the network ID. 
+The default chain name of your MultiChain network deployed with Chainstack is the network ID in lower case. 
 
 The network ID is part of the link that you get when opening your deployed network in your browser.
 
