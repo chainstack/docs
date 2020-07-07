@@ -223,7 +223,7 @@ where
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
 * RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
-* `network_id` — your Quorum network ID. Available under **Access and credentials** > **Network ID**. You can set it to `*` for any.
+* `network_id` — your Quorum network ID. See [Default network ID](/operations/quorum/default-network-id). You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
 * `gas` — the setting must be the default `4500000` for the Quorum network.
 * `type` — the setting must be `quorum` to instruct Truffle for the Quorum network deployment.

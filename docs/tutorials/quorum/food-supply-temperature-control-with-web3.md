@@ -177,7 +177,7 @@ where
 * DEFAULT_WALLET_PRIVATE_KEY — a private key to your Quorum node default wallet address to sign the transaction. Available under **Access and credentials** > **Default wallet private key**.
 * TRANSACTION_MANAGER_PUBLIC_KEY — your Quorum node Tessera public key. The contract will use this key to make the contract private for the node that signs the contract transaction with the Tessera private key from this public-private key pair. Available under **Access and credentials** > **Transaction manager public key**.
 * TRANSACTION_MANAGER_ENDPOINT — an endpoint to the Tessera node deployed with your Quorum node. The format is `https://user-name:pass-word-pass-word-pass-word@tm-api-nd-123-456-789.p2pify.com`. Available under **Access and credentials** > **Transaction manager endpoint**.
-* NETWORK_ID — your Quorum network ID. Use the default ID `10001`.
+* NETWORK_ID — your Quorum network ID. See [Default network ID](/operations/quorum/default-network-id).
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -587,11 +587,11 @@ Retrieved contract Temperature 3
 
 The `private.js` file will:
 
-1. Compile and deploy the contract as private through Node 1.
-2. Set the temperature to `18` through Node 2.
-3. Retrieve the temperature through Node 2.
-4. Attempt to set the temperature through Node 3, pass the transaction, and fail to update the contract value.
-5. Attempt to retrieve the temperature through Node 3 and receive null instead of the contract value.
+1. Compile a contract that is private for Node 2; deploy the contract through Node 1.
+1. Attempt to set the temperature through Node 3, pass the transaction, and fail to update the contract value.
+1. Attempt to retrieve the temperature through Node 3 and receive null instead of the contract value.
+1. Set the temperature to 18 through Node 2.
+1. Retrieve the temperature through Node 2.
 
 ``` js
 const { compileContract } = require('./utils/compiler.js');
@@ -706,7 +706,7 @@ where
 node private.js
 ```
 
-This will deploy the contract, set the temperature value, and read the temperature value through an account in your `.env` file. This will also fail to set and read the temperature through the two other accounts in your `.env` file.
+This will deploy the contract, attempt and fail to set and read the temperature through the `Node 3` account defined in your `.env` file. Then the script will successfully set and read the temperature through the `Node 2` account.
 
 Example output:
 
@@ -853,11 +853,11 @@ Retrieved contract Temperature 3
 
 The `private-externalSign.js` file will:
 
-1. Compile and deploy the contract as private through Node 1.
-2. Set the temperature to `22` through Node 2.
-3. Retrieve the temperature through Node 2.
-4. Attempt to set the temperature through Node 3, pass the transaction, and fail to update the contract value.
-5. Attempt to retrieve the temperature through Node 3 and receive null instead of the contract value.
+1. Compile a contract that is private for Node 2; sign the deployment transaction externally and deploy the contract through Node 1.
+1. Attempt to set the temperature through Node 3, pass the transaction, and fail to update the contract value.
+1. Attempt to retrieve the temperature through Node 3 and receive null instead of the contract value.
+1. Set the temperature to 22 through Node 2.
+1. Retrieve the temperature through Node 2.
 
 ``` js
 const { compileContract } = require('./utils/compiler.js');
@@ -991,7 +991,7 @@ where
 node private-externalSign.js
 ```
 
-This will deploy the contract, set the temperature value, and read the temperature value through an account in your `.env` file. This will also fail to set and read the temperature through the two other accounts in your `.env` file.
+This will deploy the contract, attempt and fail to set and read the temperature through the `Node 3` account defined in your `.env` file. Then the script will successfully set and read the temperature through the `Node 2` account.
 
 Example output:
 

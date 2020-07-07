@@ -28,7 +28,7 @@ See [Download and Install MultiChain](https://www.multichain.com/download-instal
 
    1. Create a `~/.multichain-cold` directory on the server
 
-   1. In the `~/.multichain-cold` directory, create a subdirectory with the chain name. See [View node access and credentials](/platform/view-node-access-and-credentials) to get the chain name of your MultiChain network running with Chainstack.
+   1. In the `~/.multichain-cold` directory, create a subdirectory with the chain name. See [Default chain name](/operations/multichain/default-chain-name).
 
       Example: `~/.multichain-cold/nw-123-456-7`.
 
@@ -152,7 +152,7 @@ See [Download and Install MultiChain](https://www.multichain.com/download-instal
 
 where
 
-* CHAIN_NAME — your MultiChain network chain name. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* CHAIN_NAME — your MultiChain network chain name. See [Default chain name](/operations/multichain/default-chain-name).
 
 Example:
 
