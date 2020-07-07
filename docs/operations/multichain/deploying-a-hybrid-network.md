@@ -68,7 +68,7 @@ multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
 
 where
 
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
+* CHAIN_NAME — your cloud MultiChain network chain name. See [Default chain name](/operations/multichain/default-chain-name).
 * HOSTNAME — your cloud MultiChain node hostname.
   * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
   * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
@@ -176,7 +176,7 @@ multichaind CHAIN_NAME@HOSTNAME:PORT -daemon
 
 where
 
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
+* CHAIN_NAME — your cloud MultiChain network chain name. See [Default chain name](/operations/multichain/default-chain-name).
 * HOSTNAME — your cloud MultiChain node hostname.
   * Get your RPC hostname under **Access and credentials** as part of **RPC endpoint**.
   * Get your Organization ID on your [Organization Settings](https://console.chainstack.com/user/settings/organization) page.
@@ -205,7 +205,7 @@ multichain-cli CHAIN_NAME
 
 where
 
-* CHAIN_NAME — your cloud MultiChain network chain name. Available under **Access and credentials** > **Chain name**.
+* CHAIN_NAME — your cloud MultiChain network chain name. See [Default chain name](/operations/multichain/default-chain-name).
 
 Command example:
 
