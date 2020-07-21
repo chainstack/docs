@@ -25,17 +25,19 @@ Interact with your Hyperledger Fabric peer using [the fabric-tools Docker contai
 
 This will export the peer and the organization certificates and the user in a ZIP archive. Unarchive the exported file.
 
+Unarchiving the exported file will create a directory named after your organization's MSP ID. For example, `RG-123-456-MSP`.
+
 #### Export the orderer certificate of your network
 
 1. In the platform UI, navigate to your network.
 1. Click **Details** > **Export orderer TLS certificate**.
 
-This will export the orderer certificate. Place the certificate in the directory that was created at the previous step.
+This will export the orderer certificate. Place the certificate in the directory that was created at the previous step when you unarchived the exported organization identity file.
 
 #### Run the fabric-tools Docker container
 
 ``` sh
-docker run -v /host/path/to/IDENTITY_DIRECTORY/:/MOUNT_DIRECTORY -it hyperledger/fabric-tools:2.0.1 /bin/ash
+docker run -v /host/path/to/IDENTITY_DIRECTORY/:/MOUNT_DIRECTORY -it hyperledger/fabric-tools:2.2.0 /bin/ash
 ```
 
 where
@@ -46,7 +48,7 @@ where
 Example:
 
 ``` sh
-docker run -v /home/user/RG-123-456-MSP/:/data -it hyperledger/fabric-tools:2.0.1 /bin/ash
+docker run -v /home/user/RG-123-456-MSP/:/data -it hyperledger/fabric-tools:2.2.0 /bin/ash
 ```
 
 #### Provide connection details and certificate paths
@@ -262,7 +264,7 @@ Name: fabcar, Version: 1.0.0, Sequence: 1, Endorsement Plugin: escc, Validation 
 
 ## Development tools
 
-See [Hyperledger Fabric 2.0: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/release-2.0/developapps/developing_applications.html).
+See [Hyperledger Fabric v2: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/latest/developapps/developing_applications.html).
 
 ::: tip See also
 
