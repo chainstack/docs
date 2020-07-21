@@ -202,6 +202,25 @@ $ peer lifecycle chaincode approveformyorg --name fabcar --package-id fabcar:6ab
 2020-02-27 07:45:27.742 UTC [chaincodeCmd] ClientWait -> INFO 001 txid [817547cebd7dd66084e7ff852ca8cac35d0c505416a7787ddd81947558280dc7] committed with status (VALID)
 ```
 
+#### Query the approved chaincode
+
+``` sh
+$ peer lifecycle chaincode queryapproved --channelID CHANNEL_ID -n CHAINCODE_NAME
+```
+
+where
+
+* CHANNEL_ID — use `defaultchannel`.
+* CHAINCODE_NAME — name of your chaincode.
+
+Example:
+
+``` sh
+$ peer lifecycle chaincode queryapproved --channelID defaultchannel -n fabcar
+Approved chaincode definition for chaincode 'fabcar' on channel 'defaultchannel':
+sequence: 1, version: 1.0.0, init-required: true, package-id: fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb, endorsement plugin: escc, validation plugin: vscc
+```
+
 #### Check the chaincode commit readiness
 
 ``` sh
