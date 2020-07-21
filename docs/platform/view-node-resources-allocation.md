@@ -22,7 +22,7 @@ To view the resources allocated to your nodes:
 Corda:
 
 * Node — the CPU, memory, and storage allocated to your Corda node.
-* Database — the CPU, memory, and storage allocated to your [Corda node database](https://docs.corda.net/docs/corda-os/4.4/node-database.html).
+* Database — the CPU, memory, and storage allocated to your [Corda node database](https://docs.corda.net/docs/corda-os/node-database.html).
 
 Hyperledger Fabric:
 
