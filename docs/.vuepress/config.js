@@ -179,6 +179,16 @@ module.exports = {
                 ]
             },
             {
+                title: 'API',
+                collapsable: true,
+                children: [
+                    '/api/',
+                    '/api/create-api-keys',
+                    '/api/delete-api-keys',
+                    '/api/api-reference',
+                    ]
+            },
+            {
                 title: 'Blockchains',
                 collapsable: true,
                 children: [
