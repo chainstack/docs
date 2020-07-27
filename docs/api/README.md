@@ -12,9 +12,9 @@ Chainstack API allows you to manage:
 
 * your [organization](/glossary/organization);
 * your [projects](/glossary/project);
-* your [nodes](/glossary/node);
-* your [networks](/glossary/network).
+* your [networks](/glossary/network);
+* your [nodes](/glossary/node).
 
 To start with the API, you must [create API keys](/api/create-api-keys).
 
-For all available API operations, see <a href="https://api.chainstack.com/" target="_blank">API reference</a>.
+For all available API operations, see <a href="https://docs.chainstack.com/api/reference" target="_blank">API reference</a>.
