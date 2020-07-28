@@ -8,7 +8,7 @@ meta:
 
 # API reference
 
-See the API reference with examples at <a href="https://api.chainstack.com/" target="_blank">Chainstack API</a>.
+See the API reference with examples at [Chainstack API](/api/reference).
 
 ::: tip See also
 
