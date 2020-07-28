@@ -12,7 +12,7 @@ You must create API keys to authenticate your requests to the Chainstack API.
 
 To create an API key:
 
-1. Go to the <a href="https://chainstack.com/user/settings/api-keys" target="_blank">API keys</a> section.
+1. Go to the <a href="https://console.chainstack.com/user/settings/api-keys" target="_blank">API keys</a> section.
 1. Click **Create key**.
 1. Type in a name for the key and click **Next**.
 1. Copy or write down the created API key.
