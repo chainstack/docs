@@ -17,4 +17,4 @@ Chainstack API allows you to manage:
 
 To start with the API, you must [create API keys](/api/create-api-keys).
 
-For all available API operations, see <a href="https://docs.chainstack.com/api/reference" target="_blank">API reference</a>.
+For all available API operations, see [API reference](/api/reference).
