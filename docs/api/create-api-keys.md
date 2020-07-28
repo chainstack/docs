@@ -25,7 +25,7 @@ Make sure you keep the API key secure.
 
 ::: tip See also
 
-* [API reference](/api/api-reference)
+* [API reference](/api/reference)
 * [Delete API keys](/api/delete-api-keys)
 
 :::
