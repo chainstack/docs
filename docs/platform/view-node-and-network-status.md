@@ -10,28 +10,36 @@ meta:
 
 You can view the node and network status in the **Status** column of your nodes list or your networks list.
 
-[Consortium project](/glossary/consortium-project):
+## Node statuses
 
-| Node status | Network status | Description                                                                                                      |
-|-------------|----------------|------------------------------------------------------------------------------------------------------------------|
-| Running     | Running        | All nodes are running or at least one of the network nodes is running, while other nodes are stopped or stopping.|
-| Maintenance | Running        | At least one of the nodes is in maintenance mode, while other nodes are running, stopped, or stopping.           |
-| Stopped     | Stopped        | All nodes in the network are stopped.                                                                            |
-| Stopping    | Stopping       | At least one of the nodes is stopping. Other nodes are stopped.                                                  |
-| Failed      | Failed         | The network has failed to deploy.                                                                                |
-| Failed      | Warning        | A node in the running network has failed to deploy.                                                              |
-| Error       | Warning        | The node is deployed but malfunctioning.                                                                         |
+| Node status | Description                              |
+|-------------|------------------------------------------|
+| Running     | The node is running.                     |
+| Maintenance | The node is in maintenance mode.         |
+| Stopped     | The node is stopped.                     |
+| Stopping    | The node is stopping.                    |
+| Starting    | The node is starting.                    |
+| Failed      | The node has failed to deploy.           |
+| Error       | The node is deployed but malfunctioning. |
 
-[Public chain project](/glossary/public-chain-project):
+## Consortium network statuses
 
-| Node status | Network status | Description                              |
-|-------------|----------------|------------------------------------------|
-| Running     | OK             | Your nodes are running.                  |
-| Maintenance | OK             | The node is in maintenance mode.         |
-| Failed      | OK             | The node has failed to deploy.           |
-| Error       | OK             | The node is deployed but malfunctioning. |
+| Network status | Description                                                                                   |
+|----------------|-----------------------------------------------------------------------------------------------|
+| Running        | At least one of the nodes is `Running`. Other nodes can be `Stopped`, `Stopping`, `Starting`. |
+| Stopped        | All nodes are `Stopped`.                                                                      |
+| Stopping       | At least one of the nodes is `Stopping`. Other nodes are `Stopped`.                           |
+| Starting       | The network has only one node, which is `Starting`.                                           |
+| Warning        | At least one of the nodes is `Failed` or in `Error`.                                          |
+| Failed         | The network has failed to deploy.                                                             |
 
+## Public chain network status
+
+The public chain networks always report `OK`.
+
+::: tip
 In the unlikely case that a node enters a failed state or an error state, there is no action required on your part as the Chainstack team will be immediately alerted and resolve the issue.
+:::
 
 ::: tip See also
 
