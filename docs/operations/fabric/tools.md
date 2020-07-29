@@ -283,7 +283,7 @@ Name: fabcar, Version: 1.0.0, Sequence: 1, Endorsement Plugin: escc, Validation 
 
 ## Development tools
 
-See [Hyperledger Fabric v2: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/latest/developapps/developing_applications.html).
+See [Hyperledger Fabric: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/latest/developapps/developing_applications.html).
 
 ::: tip See also
 
