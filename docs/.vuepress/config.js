@@ -185,7 +185,7 @@ module.exports = {
                     '/api/',
                     '/api/create-api-keys',
                     '/api/delete-api-keys',
-                    '/api/api-reference',
+                    '/api/reference',
                     ]
             },
             {

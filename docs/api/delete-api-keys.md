@@ -12,13 +12,13 @@ You can delete your existing API keys.
 
 To delete an API key:
 
-1. Go to the <a href="https://chainstack.com/user/settings/api-keys" target="_blank">API keys</a> section.
+1. Go to the <a href="https://console.chainstack.com/user/settings/api-keys" target="_blank">API keys</a> section.
 1. Click the edit icon next to the key you want to delete.
 1. Click **Delete**.
 
 ::: tip See also
 
 * [Create API keys](/api/create-api-keys)
-* [API reference](/api/api-reference)
+* [API reference](/api/reference)
 
 :::
