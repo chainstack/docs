@@ -7,7 +7,7 @@
     "build": "vuepress build docs",
     "check-md": "vuepress check-md docs",
     "clean": "rm -rf docs/.vuepress/dist",
-    "dev": "vuepress dev docs"
+    "dev": "DOCS_HOSTNAME=docs.dev.chainstack.com vuepress dev docs"
   },
   "devDependencies": {
     "markdown-it-container": "^2.0.0",

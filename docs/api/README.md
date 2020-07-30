@@ -17,4 +17,4 @@ Chainstack API allows you to manage:
 
 To start with the API, you must [create API keys](/api/create-api-keys).
 
-For all available API operations, see [API reference](/api/reference/).
+For all available API operations, see <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>.

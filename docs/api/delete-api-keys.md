@@ -19,6 +19,6 @@ To delete an API key:
 ::: tip See also
 
 * [Create API keys](/api/create-api-keys)
-* [API reference](/api/reference/)
+* <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>
 
 :::
