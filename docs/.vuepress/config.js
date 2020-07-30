@@ -249,11 +249,11 @@ module.exports = {
             gtm: 'GTM-PXSGW6M'
         },
         'sitemap': {
-            hostname: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080')
+            hostname: `https://${process.env.DOCS_HOSTNAME}`,
         },
         '@limdongjin/vuepress-plugin-simple-seo': {
             default_image: '/img/social-image.png',
-            root_url: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080'),
+            root_url: `https://${process.env.DOCS_HOSTNAME}`,
             default_site_name: 'Chainstack documentation'
         },
         'check-md': {}
