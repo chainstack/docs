@@ -200,7 +200,7 @@ module.exports = {
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
-                    ]
+                ]
             },
             {
                 title: 'Glossary',
@@ -225,7 +225,7 @@ module.exports = {
                     '/glossary/shared-node',
                     '/glossary/user',
                     '/glossary/vault',
-                    ]
+                ]
             },
         '/release-notes',
         ],
