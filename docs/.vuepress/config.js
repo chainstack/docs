@@ -9,6 +9,7 @@ module.exports = {
     },
     themeConfig: {
         logo: '/img/docs-logo.svg',
+        apiDocsURL: `https://${process.env.DOCS_HOSTNAME}/api/reference/`,
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com' },
             { text: 'Log in', link: 'https://console.chainstack.com/user/login' },
@@ -185,8 +186,8 @@ module.exports = {
                     '/api/',
                     '/api/create-api-keys',
                     '/api/delete-api-keys',
-                    '/api/reference/',
-                    ]
+                    [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
+                ]
             },
             {
                 title: 'Blockchains',
