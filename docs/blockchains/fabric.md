@@ -25,7 +25,7 @@ Raft — a [CFT](/glossary/cft) consensus implementation in [etcd](https://etcd.
 
 Hyperledger Fabric uses [orderer nodes](#ordering-service) to form consensus.
 
-See [Hyperledger Fabric 2.0: Raft concepts](https://hyperledger-fabric.readthedocs.io/en/release-2.0/orderer/ordering_service.html#raft-concepts).
+See [Hyperledger Fabric: Raft concepts](https://hyperledger-fabric.readthedocs.io/en/latest/orderer/ordering_service.html#raft-concepts).
 
 ## Network structure
 
@@ -44,22 +44,22 @@ Peers host ledgers and [chaincodes](#chaincode).
 
 Each peer has two communication interfaces:
 
-* Peer to peer communication that implements [gossip data dissemination protocol](https://hyperledger-fabric.readthedocs.io/en/release-2.0/gossip.html) over [TLS](https://hyperledger-fabric.readthedocs.io/en/release-2.0/enable_tls.html).
+* Peer to peer communication that implements [gossip data dissemination protocol](https://hyperledger-fabric.readthedocs.io/en/latest/gossip.html) over [TLS](https://hyperledger-fabric.readthedocs.io/en/latest/enable_tls.html).
 * Node to owner communication implemented as gRPC.
 
-See [Hyperledger Fabric 2.0: Peers](https://hyperledger-fabric.readthedocs.io/en/release-2.0/peers/peers.html).
+See [Hyperledger Fabric: Peers](https://hyperledger-fabric.readthedocs.io/en/latest/peers/peers.html).
 
 ### Certificate Authority
 
 The Certificate Authority component manages the digital identities of the Hyperledger Fabric network participants.
 
-See [Hyperledger Fabric 2.0: Certificate Authorities](https://hyperledger-fabric.readthedocs.io/en/release-2.0/identity/identity.html#certificate-authorities).
+See [Hyperledger Fabric: Certificate Authorities](https://hyperledger-fabric.readthedocs.io/en/latest/identity/identity.html#certificate-authorities).
 
 ### Membership Service Provider
 
 The Membership Service Provider component identifies the network participants, their roles, and access privileges based on the Certificate Authority and by listing the participant identities.
 
-See [Hyperledger Fabric 2.0: Membership](https://hyperledger-fabric.readthedocs.io/en/release-2.0/membership/membership.html).
+See [Hyperledger Fabric: Membership](https://hyperledger-fabric.readthedocs.io/en/latest/membership/membership.html).
 
 ### Ordering service
 
@@ -67,13 +67,13 @@ Any transaction in a Hyperledger Fabric network goes through the ordering servic
 
 The ordering service consists of orderer nodes. The orderer nodes form the Raft consensus of the network.
 
-See [Hyperledger Fabric 2.0: The Ordering Service](https://hyperledger-fabric.readthedocs.io/en/release-2.0/orderer/ordering_service.html).
+See [Hyperledger Fabric: The Ordering Service](https://hyperledger-fabric.readthedocs.io/en/latest/orderer/ordering_service.html).
 
 ## Chaincode
 
 In Hyperledger Fabric terminology, a packaged and deployed smart contract is called a chaincode.
 
-See [Hyperledger Fabric 2.0: Smart Contracts and Chaincode](https://hyperledger-fabric.readthedocs.io/en/release-2.0/smartcontract/smartcontract.html).
+See [Hyperledger Fabric: Smart Contracts and Chaincode](https://hyperledger-fabric.readthedocs.io/en/latest/smartcontract/smartcontract.html).
 
 ::: tip See also
 
