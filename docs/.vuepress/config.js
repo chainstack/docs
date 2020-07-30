@@ -11,8 +11,8 @@ module.exports = {
         logo: '/img/docs-logo.svg',
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com' },
-            { text: 'Log in', link: (process.env.CONSOLE_HOSTNAME ? 'https://' + process.env.CONSOLE_HOSTNAME : 'http://localhost:3000') + '/user/login' },
-            { text: 'Start for free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
+            { text: 'Log in', link: 'https://console.chainstack.com/user/login' },
+            { text: 'Start for free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
             {
@@ -177,6 +177,16 @@ module.exports = {
                         ]
                     },
                 ]
+            },
+            {
+                title: 'API',
+                collapsable: true,
+                children: [
+                    '/api/',
+                    '/api/create-api-keys',
+                    '/api/delete-api-keys',
+                    '/api/reference/',
+                    ]
             },
             {
                 title: 'Blockchains',

@@ -198,6 +198,65 @@ const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass
 web3.eth.getBlockNumber().then(console.log);
 ```
 
+### web3.py
+
+Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Ethereum nodes deployed with Chainstack.
+
+1. Install [web3.py](https://web3py.readthedocs.io/).
+1. Use the `HTTPProvider` to connect to your node's RPC endpoint or the `WebsocketProvider` object to connect to your node's WSS endpoint.
+
+#### HTTPProvider
+
+``` py
+from web3 import Web3
+
+web3 = Web3(Web3.HTTPProvider('https://%s:%s@%s'% ("USERNAME", "PASSWORD", "RPC_ENDPOINT")))
+print(web3.eth.blockNumber)
+```
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* RPC_ENDPOINT — your Ethereum node RPC endpoint.
+
+Example to get the latest block number:
+
+``` py
+from web3 import Web3
+
+web3 = Web3(Web3.HTTPProvider('https://%s:%s@%s'% ("user-name", "pass-word-pass-word-pass-word", "nd-123-456-789.p2pify.com")))
+print(web3.eth.blockNumber)
+```
+
+#### WebsocketProvider
+
+``` py
+from web3 import Web3
+
+web3 = Web3(Web3.WebsocketProvider('wss://%s:%s@%s'% ("USERNAME", "PASSWORD", "WSS_ENDPOINT")))
+print(web3.eth.blockNumber)
+```
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* WSS_ENDPOINT — your Ethereum node WSS endpoint.
+
+Example to get the latest block number:
+
+``` py
+from web3 import Web3
+
+web3 = Web3(Web3.WebsocketProvider('wss://%s:%s@%s'% ("user-name", "pass-word-pass-word-pass-word", "ws-nd-123-456-789.p2pify.com")))
+print(web3.eth.blockNumber)
+```
+
+::: tip
+See also <a href="https://support.chainstack.com/hc/en-us/articles/900001918763-WebSocket-connection-to-an-Ethereum-node" target="_blank">WebSocket connection to an Ethereum node</a>.
+:::
+
 ### web3j
 
 Build DApps using [web3j](https://github.com/web3j/web3j) and Ethereum nodes deployed with Chainstack.
