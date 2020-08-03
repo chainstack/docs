@@ -14,7 +14,7 @@ You can view the node and network status in the **Status** column of your nodes 
 
 | Node status | Description                              |
 |-------------|------------------------------------------|
-| Running     | The node is running any issues.          |
+| Running     | The node is running without any issues.  |
 | Maintenance | The node is in maintenance mode.         |
 | Stopped     | The node is stopped.                     |
 | Stopping    | The node is stopping.                    |
