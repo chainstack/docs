@@ -14,7 +14,7 @@ You can view the node and network status in the **Status** column of your nodes 
 
 | Node status | Description                              |
 |-------------|------------------------------------------|
-| Running     | The node is running.                     |
+| Running     | The node is running any issues.          |
 | Maintenance | The node is in maintenance mode.         |
 | Stopped     | The node is stopped.                     |
 | Stopping    | The node is stopping.                    |
@@ -35,7 +35,7 @@ You can view the node and network status in the **Status** column of your nodes 
 
 ## Public chain network status
 
-The public chain networks always report `OK`.
+The public chain networks always report `Connected`.
 
 ::: tip
 In the unlikely case that a node enters a failed state or an error state, there is no action required on your part as the Chainstack team will be immediately alerted and resolve the issue.
