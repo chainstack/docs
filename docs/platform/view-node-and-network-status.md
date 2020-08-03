@@ -20,7 +20,7 @@ You can view the node and network status in the **Status** column of your nodes 
 | Stopping    | The node is stopping.                    |
 | Starting    | The node is starting.                    |
 | Failed      | The node has failed to deploy.           |
-| Error       | The node is deployed but malfunctioning. |
+| Error       | The node is running with issues.         |
 
 ## Consortium network statuses
 
