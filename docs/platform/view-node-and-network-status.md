@@ -25,22 +25,22 @@ You can view the node and network status in the **Status** column of your nodes 
 
 ## Consortium network statuses
 
-| Network status | Description                                                                                              |
-|----------------|----------------------------------------------------------------------------------------------------------|
-| OK             | At least one of the nodes is `Running`. Other nodes can be `Stopped`, `Stopping`, `Starting`, `Pending`. |
-| Pending        | The network is being deployed.                                                                           |
-| Stopped        | All nodes are `Stopped`.                                                                                 |
-| Stopping       | At least one of the nodes is `Stopping`. Other nodes are `Stopped`.                                      |
-| Starting       | The network has only one node, which is `Starting`.                                                      |
-| Warning        | At least one of the nodes is `Failed` or in `Error`.                                                     |
-| Failed         | The network has failed to deploy.                                                                        |
+| Network status | Description                                                                                                             |
+|----------------|-------------------------------------------------------------------------------------------------------------------------|
+| OK             | At least one of the nodes is `Running`. Other nodes can be `Stopped`, `Stopping`, `Starting`, `Pending`, `Maintenance`. |
+| Pending        | The network is being deployed.                                                                                          |
+| Stopped        | All nodes are `Stopped`.                                                                                                |
+| Stopping       | At least one of the nodes is `Stopping`. Other nodes are `Stopped`.                                                     |
+| Starting       | The network has only one node, which is `Starting`.                                                                     |
+| Warning        | At least one of the nodes is `Failed` or in `Error`.                                                                    |
+| Failed         | The network has failed to deploy.                                                                                       |
 
 ## Public chain network status
 
-| Network status | Description                                                                                              |
-|----------------|----------------------------------------------------------------------------------------------------------|
-| OK             | At least one of the nodes is `Running`. Other nodes can be `Stopped`, `Stopping`, `Starting`, `Pending`. |
-| Warning        | At least one of the nodes is `Failed` or in `Error`.                                                     |
+| Network status | Description                                                                                                             |
+|----------------|-------------------------------------------------------------------------------------------------------------------------|
+| OK             | At least one of the nodes is `Running`. Other nodes can be `Stopped`, `Stopping`, `Starting`, `Pending`, `Maintenance`. |
+| Warning        | At least one of the nodes is `Failed` or in `Error`.                                                                    |
 
 ::: tip
 In the unlikely case that a node enters a failed state or an error state, there is no action required on your part as the Chainstack team will be immediately alerted and resolve the issue.
