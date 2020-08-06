@@ -31,7 +31,7 @@ You can view the node and network status in the **Status** column of your nodes 
 | Pending        | The network is being deployed.                                                                                          |
 | Stopped        | All nodes are `Stopped`.                                                                                                |
 | Stopping       | At least one of the nodes is `Stopping`. Other nodes are `Stopped`.                                                     |
-| Starting       | The network has only one node, which is `Starting`.                                                                     |
+| Starting       | The first node of the stopped  network is `Starting`.                                                                   |
 | Warning        | At least one of the nodes is `Failed` or in `Error`.                                                                    |
 | Failed         | The network has failed to deploy.                                                                                       |
 
