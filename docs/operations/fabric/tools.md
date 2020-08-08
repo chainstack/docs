@@ -25,17 +25,19 @@ Interact with your Hyperledger Fabric peer using [the fabric-tools Docker contai
 
 This will export the peer and the organization certificates and the user in a ZIP archive. Unarchive the exported file.
 
+Unarchiving the exported file will create a directory named after your organization's MSP ID. For example, `RG-123-456-MSP`.
+
 #### Export the orderer certificate of your network
 
 1. In the platform UI, navigate to your network.
 1. Click **Details** > **Export orderer TLS certificate**.
 
-This will export the orderer certificate. Place the certificate in the directory that was created at the previous step.
+This will export the orderer certificate. Place the certificate in the directory that was created at the previous step when you unarchived the exported organization identity file.
 
 #### Run the fabric-tools Docker container
 
 ``` sh
-docker run -v /host/path/to/IDENTITY_DIRECTORY/:/MOUNT_DIRECTORY -it hyperledger/fabric-tools:2.0.1 /bin/ash
+docker run -v /host/path/to/IDENTITY_DIRECTORY/:/MOUNT_DIRECTORY -it hyperledger/fabric-tools:2.2.0 /bin/ash
 ```
 
 where
@@ -46,7 +48,7 @@ where
 Example:
 
 ``` sh
-docker run -v /home/user/RG-123-456-MSP/:/data -it hyperledger/fabric-tools:2.0.1 /bin/ash
+docker run -v /home/user/RG-123-456-MSP/:/data -it hyperledger/fabric-tools:2.2.0 /bin/ash
 ```
 
 #### Provide connection details and certificate paths
@@ -200,6 +202,25 @@ $ peer lifecycle chaincode approveformyorg --name fabcar --package-id fabcar:6ab
 2020-02-27 07:45:27.742 UTC [chaincodeCmd] ClientWait -> INFO 001 txid [817547cebd7dd66084e7ff852ca8cac35d0c505416a7787ddd81947558280dc7] committed with status (VALID)
 ```
 
+#### Query the approved chaincode
+
+``` sh
+$ peer lifecycle chaincode queryapproved --channelID CHANNEL_ID -n CHAINCODE_NAME
+```
+
+where
+
+* CHANNEL_ID — use `defaultchannel`.
+* CHAINCODE_NAME — name of your chaincode.
+
+Example:
+
+``` sh
+$ peer lifecycle chaincode queryapproved --channelID defaultchannel -n fabcar
+Approved chaincode definition for chaincode 'fabcar' on channel 'defaultchannel':
+sequence: 1, version: 1.0.0, init-required: true, package-id: fabcar:6ab145685b4602cf429f93536981ea3eab802369e6359fb841fb0a9bcd4a51fb, endorsement plugin: escc, validation plugin: vscc
+```
+
 #### Check the chaincode commit readiness
 
 ``` sh
@@ -262,7 +283,7 @@ Name: fabcar, Version: 1.0.0, Sequence: 1, Endorsement Plugin: escc, Validation 
 
 ## Development tools
 
-See [Hyperledger Fabric 2.0: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/release-2.0/developapps/developing_applications.html).
+See [Hyperledger Fabric: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/latest/developapps/developing_applications.html).
 
 ::: tip See also
 

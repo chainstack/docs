@@ -9,10 +9,11 @@ module.exports = {
     },
     themeConfig: {
         logo: '/img/docs-logo.svg',
+        apiDocsURL: `https://${process.env.DOCS_HOSTNAME}/api/reference/`,
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com' },
-            { text: 'Log in', link: (process.env.CONSOLE_HOSTNAME ? 'https://' + process.env.CONSOLE_HOSTNAME : 'http://localhost:3000') + '/user/login' },
-            { text: 'Start for free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
+            { text: 'Log in', link: 'https://console.chainstack.com/user/login' },
+            { text: 'Start for free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
             {
@@ -86,6 +87,7 @@ module.exports = {
                             '/operations/quorum/',
                             '/operations/quorum/configuring-consensus',
                             '/operations/quorum/default-addresses',
+                            '/operations/quorum/default-network-id',
                             '/operations/quorum/key-management',
                             '/operations/quorum/tools',
                         ]
@@ -96,6 +98,7 @@ module.exports = {
                         children: [
                             '/operations/multichain/',
                             '/operations/multichain/default-addresses',
+                            '/operations/multichain/default-chain-name',
                             '/operations/multichain/node-permissions',
                             '/operations/multichain/external-key-management',
                             '/operations/multichain/cold-node-key-management',
@@ -177,6 +180,16 @@ module.exports = {
                 ]
             },
             {
+                title: 'API',
+                collapsable: true,
+                children: [
+                    '/api/',
+                    '/api/create-api-keys',
+                    '/api/delete-api-keys',
+                    [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
+                ]
+            },
+            {
                 title: 'Blockchains',
                 collapsable: true,
                 children: [
@@ -187,7 +200,7 @@ module.exports = {
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
-                    ]
+                ]
             },
             {
                 title: 'Glossary',
@@ -206,11 +219,13 @@ module.exports = {
                     '/glossary/network',
                     '/glossary/node',
                     '/glossary/on-premises',
+                    '/glossary/organization',
                     '/glossary/project',
                     '/glossary/public-chain-project',
                     '/glossary/shared-node',
+                    '/glossary/user',
                     '/glossary/vault',
-                    ]
+                ]
             },
         '/release-notes',
         ],
@@ -234,11 +249,11 @@ module.exports = {
             gtm: 'GTM-PXSGW6M'
         },
         'sitemap': {
-            hostname: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080')
+            hostname: `https://${process.env.DOCS_HOSTNAME}`,
         },
         '@limdongjin/vuepress-plugin-simple-seo': {
             default_image: '/img/social-image.png',
-            root_url: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080'),
+            root_url: `https://${process.env.DOCS_HOSTNAME}`,
             default_site_name: 'Chainstack documentation'
         },
         'check-md': {}
