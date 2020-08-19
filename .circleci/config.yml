@@ -79,7 +79,7 @@ _job_deploy: &deploy
         set -x
         helm upgrade docs cs/chainstack-docs \
           --install --wait --timeout 180 \
-          --set image.tag=${CIRCLE_SHA1},ingress.host=${DOCS_HOSTNAME},project=${GOOGLE_PROJECT_ID}
+          --set image.tag=${CIRCLE_SHA1},ingress.host=${DOCS_HOSTNAME},project=${GOOGLE_PROJECT_ID},auth.enabled=${AUTH_ENABLED}
         sleep 10 # TODO: Implement k8s jobs for Post-deploy
         helm status docs
 
