@@ -30,7 +30,8 @@ Unarchiving the exported file will create a directory named after your organizat
 #### Export the orderer certificate of your network
 
 1. In the platform UI, navigate to your network.
-1. Click **Details** > **Export orderer TLS certificate**.
+1. Select **Service nodes** > **Orderer**.
+1. Click **Export TLS certificate**.
 
 This will export the orderer certificate. Place the certificate in the directory that was created at the previous step when you unarchived the exported organization identity file.
 
