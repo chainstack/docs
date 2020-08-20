@@ -22,7 +22,7 @@ To view service nodes:
 Corda service nodes:
 
 * Notary — a [notary node](/blockchains/corda#notary-service).
-* NMS — a [network map service node](/blockchains/corda#network-map-service).
+* Network Map Service — a [network map service node](/blockchains/corda#network-map-service).
 
 Hyperledger Fabric service nodes:
 
