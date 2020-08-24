@@ -34,7 +34,7 @@ See [Create API keys](/api/create-api-keys).
 To save the time when interacting with the API, export your API variables:
 
 ``` sh
-export APIURL="https://api.dev.chainstack.com/v1"
+export APIURL="https://api.chainstack.com/v1"
 export APIKEY="YOUR_API_KEY"
 export HDR_AUTH="Authorization: Bearer $APIKEY"
 export HDR_CT="Content-Type: application/json"
