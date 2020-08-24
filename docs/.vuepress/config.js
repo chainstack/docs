@@ -188,6 +188,7 @@ module.exports = {
                     '/api/',
                     '/api/create-api-keys',
                     '/api/delete-api-keys',
+                    '/api/walkthrough-to-create-a-consortium-network-through-API',
                     [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
                 ]
             },
