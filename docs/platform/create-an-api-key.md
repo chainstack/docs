@@ -6,9 +6,9 @@ meta:
     content: create api keys blockchain node network
 ---
 
-# Create API keys
+# Create an API key
 
-You must create API keys to authenticate your requests to the Chainstack API.
+You must create an API key to authenticate your requests to the Chainstack API.
 
 To create an API key:
 
@@ -26,6 +26,6 @@ Make sure you keep the API key secure.
 ::: tip See also
 
 * <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>
-* [Delete API keys](/api/delete-api-keys)
+* [Delete an API key](/platform/delete-an-api-key)
 
 :::

@@ -55,6 +55,8 @@ module.exports = {
                     '/platform/delete-a-project',
                     '/platform/manage-your-organization-identity',
                     '/platform/view-your-organization-vault',
+                    '/platform/create-an-api-key',
+                    '/platform/delete-an-api-key',
                     '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
                 ]
@@ -186,9 +188,7 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/api/',
-                    '/api/create-api-keys',
-                    '/api/delete-api-keys',
-                    '/api/overview',
+                    '/api/quick-tutorial',
                     [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
                 ]
             },

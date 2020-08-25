@@ -6,7 +6,7 @@ meta:
     content: create api consortium blockchain node network
 ---
 
-# Walkthrough to create a consortium network through API
+# Quick tutorial
 
 This tutorial will walk you through creating a consortium network through the Chainstack API.
 
@@ -27,7 +27,7 @@ To get from zero to a running consortium network through the Chainstack API, do 
 
 ### Get your API key
 
-See [Create API keys](/api/create-api-keys).
+See [Create an API key](/platform/create-an-api-key).
 
 ### Export your API variables
 
@@ -141,6 +141,6 @@ You have created a [consortium project](/glossary/consortium-project), deployed 
 ::: tip See also
 
 * <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>
-* [Delete API keys](/api/delete-api-keys)
+* [Delete an API key](/platform/delete-an-api-key)
 
 :::
