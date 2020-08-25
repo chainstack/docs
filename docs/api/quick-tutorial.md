@@ -84,7 +84,7 @@ where
 	* `aws` — Amazon Web Services.
 	* `gcloud` — Google Cloud Platform.
 	* `azure` — Microsoft Azure.
-* LOCATION — choose the location for your node:
+* LOCATION — choose the location for your network:
 	* `apac` — Asia-Pacific. Available only for Amazon Web Services and Google Cloud Platform.
 	* `us` — the United States. Available only for Amazon Web Services.
 	* `eu` — Europe. Available only for Microsoft Azure.
