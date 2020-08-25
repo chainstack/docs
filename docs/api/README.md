@@ -14,7 +14,7 @@ Chainstack API allows you to manage:
 * your [projects](/glossary/project);
 * your [networks](/glossary/network);
 * your [nodes](/glossary/node);
-* your [identities](/platform/manage-your-organization-identity).
+* your [identities](/glossary/identity).
 
 To start with the API, you must [create an API key](/platform/create-an-api-key).
 

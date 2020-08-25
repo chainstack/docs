@@ -55,10 +55,10 @@ module.exports = {
                     '/platform/delete-a-project',
                     '/platform/manage-your-organization-identity',
                     '/platform/view-your-organization-vault',
-                    '/platform/create-an-api-key',
-                    '/platform/delete-an-api-key',
                     '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
+                    '/platform/create-an-api-key',
+                    '/platform/delete-an-api-key',
                 ]
             },
             {
@@ -218,6 +218,7 @@ module.exports = {
                     '/glossary/consortium',
                     '/glossary/dedicated-node',
                     '/glossary/hybrid',
+                    '/glossary/identity',
                     '/glossary/member',
                     '/glossary/network',
                     '/glossary/node',

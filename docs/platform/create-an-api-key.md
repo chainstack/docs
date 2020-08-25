@@ -26,6 +26,7 @@ Make sure you keep the API key secure.
 ::: tip See also
 
 * <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>
+* [Quick API tutorial](/api/quick-tutorial)
 * [Delete an API key](/platform/delete-an-api-key)
 
 :::
