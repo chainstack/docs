@@ -97,7 +97,7 @@ curl -X POST "$APIURL/networks/" --header "$HDR_AUTH" --header "$HDR_CT" --data 
 
 See also API reference: <a :href="$themeConfig.apiDocsURL + '#operation/createNetwork'" target="_blank">Create Network</a>.
 
-### Add a node to the network
+### Add a peer node to the network
 
 ``` sh
 curl -X POST "$APIURL/nodes/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"NODE_NAME","network":"NETWORK_ID","type": "dedicated","role":"peer","provider":"PROVIDER","region":"LOCATION","configuration":{}}'
