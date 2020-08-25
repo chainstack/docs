@@ -78,7 +78,7 @@ where
 	* [Quorum Raft](/blockchains/quorum#raft) — `raft`.
 	* [Quorum IBFT](/blockchains/quorum#ibft) — `ibft`.
 	* [MultiChain round-robin](/blockchains/multichain#consensus) — `round-robin`.
-* NODE_NAME — any name you want to give to your first node deployed as part of the network.
+* NODE_NAME — any name you want to give to your first peer node deployed as part of the network.
 * NODE_TYPE — `dedicated` is the only available option for consortium networks.
 * PROVIDER — choose the cloud provider for your node:
 	* `aws` — Amazon Web Services.
