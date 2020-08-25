@@ -19,28 +19,11 @@ To view service nodes:
 1. Click **Service nodes**.
 1. Click the node name.
 
-Corda service nodes:
-
-* Notary — a [notary node](/blockchains/corda#notary-service).
-* Network Map Service — a [network map service node](/blockchains/corda#network-map-service).
-
-Hyperledger Fabric service nodes:
-
-* Explorer — an explorer node.
-* Orderer — an [ordering service node](/blockchains/fabric#ordering-service).
-
-Quorum service nodes:
-
-* Explorer — an explorer node.
-
-MultiChain service nodes:
-
-* Explorer — an explorer node.
-
 ::: tip See also
 
-* [View node and network status](/platform/view-node-and-network-status)
-* [View node resources allocation](/platform/view-node-resources-allocation)
-* [View activity log](/platform/view-activity-log)
+* [Corda service nodes](/operations/corda/service-nodes)
+* [Hyperledger Fabric service nodes](/operations/fabric/service-nodes)
+* [Quorum service nodes](/operations/quorum/service-nodes)
+* [MultiChain service nodes](/operations/multichain/service-nodes)
 
 :::
