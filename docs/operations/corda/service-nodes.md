@@ -11,9 +11,7 @@ meta:
 A Corda network is deployed with the following service nodes:
 
 * Notary — a [notary node](/blockchains/corda#notary-service).
-* Network Map Service — a [network map service node](/blockchains/corda#network-map-service).
-
-The service nodes are provided for free.
+* Network Map Service — a [network map service node](/blockchains/corda#network-map-service) using the [Cordite Network Map Service](https://gitlab.com/cordite/network-map-service) tool.
 
 ::: tip See also
 

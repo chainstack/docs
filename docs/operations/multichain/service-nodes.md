@@ -10,9 +10,7 @@ meta:
 
 A MultiChain network is deployed with the following service node:
 
-* Explorer — an explorer node.
-
-The service node is provided for free.
+* Explorer — an explorer node using the [MultiChain explorer](https://github.com/chainstack/multichain-explorer).
 
 ::: tip See also
 
