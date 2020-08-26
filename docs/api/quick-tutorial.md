@@ -59,7 +59,7 @@ See also API reference: <a :href="$themeConfig.apiDocsURL + '#operation/createPr
 
 ### Create a network
 
-You create a network with one peer node and free service nodes.
+You create a network with one peer node and service nodes.
 
 The service nodes are read-only and are created automatically with no input from you.
 
