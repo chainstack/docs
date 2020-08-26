@@ -10,7 +10,7 @@ meta:
 
 A Quorum network is deployed with the following service node:
 
-* Explorer — an explorer node using the [Epirus explorer](https://github.com/blk-io/epirus-free).
+* Explorer — a node running [Epirus explorer](https://github.com/blk-io/epirus-free).
 
 ::: tip See also
 
