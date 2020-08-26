@@ -8,7 +8,7 @@ meta:
 
 # View service nodes
 
-Consortium networks are deployed with peer nodes and service nodes.
+Consortium networks are deployed with [peer nodes](/glossary/peer-node) and [service nodes](/glossary/service-node).
 
 The service nodes are read-only and provide consortium network services.
 
