@@ -1,12 +1,12 @@
 ---
 meta:
   - name: description
-    content: Delete your Chainstack API keys.
+    content: Delete your Chainstack API key.
   - name: keywords
     content: delete api keys blockchain node network
 ---
 
-# Delete API keys
+# Delete an API key
 
 You can delete your existing API keys.
 
@@ -18,7 +18,7 @@ To delete an API key:
 
 ::: tip See also
 
-* [Create API keys](/api/create-api-keys)
+* [Create an API key](/platform/create-an-api-key)
 * <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>
 
 :::

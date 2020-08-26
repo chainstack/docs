@@ -57,6 +57,8 @@ module.exports = {
                     '/platform/view-your-organization-vault',
                     '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
+                    '/platform/create-an-api-key',
+                    '/platform/delete-an-api-key',
                 ]
             },
             {
@@ -190,8 +192,7 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/api/',
-                    '/api/create-api-keys',
-                    '/api/delete-api-keys',
+                    '/api/quick-tutorial',
                     [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
                 ]
             },
@@ -221,13 +222,16 @@ module.exports = {
                     '/glossary/consortium',
                     '/glossary/dedicated-node',
                     '/glossary/hybrid',
+                    '/glossary/identity',
                     '/glossary/member',
                     '/glossary/network',
                     '/glossary/node',
                     '/glossary/on-premises',
                     '/glossary/organization',
+                    '/glossary/peer-node',
                     '/glossary/project',
                     '/glossary/public-chain-project',
+                    '/glossary/service-node',
                     '/glossary/shared-node',
                     '/glossary/user',
                     '/glossary/vault',

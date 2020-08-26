@@ -18,7 +18,7 @@ To stop or start a node:
 1. Click a network in the project.
 1. Select the node to stop or start. Click **Stop** or **Start**.
 
-In a [consortium project](/glossary/consortium-project), stopping the first deployed node will stop the entire network, including the service nodes.
+In a [consortium project](/glossary/consortium-project), stopping the first deployed [peer node](/glossary/peer-node) will stop the entire network, including the [service nodes](/glossary/service-node).
 
 ::: tip See also
 
