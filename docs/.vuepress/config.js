@@ -72,6 +72,7 @@ module.exports = {
                         children: [
                             '/operations/corda/',
                             '/operations/corda/networks',
+                            '/operations/corda/service-nodes',
                             '/operations/corda/node-explorer',
                             '/operations/corda/installing-a-cordapp',
                             '/operations/corda/tools',
@@ -81,6 +82,7 @@ module.exports = {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
                         children: [
+                            '/operations/fabric/service-nodes',
                             '/operations/fabric/tools',
                         ]
                     },
@@ -93,6 +95,7 @@ module.exports = {
                             '/operations/quorum/default-addresses',
                             '/operations/quorum/default-network-id',
                             '/operations/quorum/key-management',
+                            '/operations/quorum/service-nodes',
                             '/operations/quorum/tools',
                         ]
                     },
@@ -107,6 +110,7 @@ module.exports = {
                             '/operations/multichain/external-key-management',
                             '/operations/multichain/cold-node-key-management',
                             '/operations/multichain/deploying-a-hybrid-network',
+                            '/operations/multichain/service-nodes',
                             '/operations/multichain/tools',
                         ]
                     },

@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Quorum is a permissioned consortium blockchain protocol and is a fork of Go Ethereum (Geth). Learn how the Raft and IBFT consensus algorithms work.
   - name: keywords
-    content: quorum geth blockchain ibft raft
+    content: quorum geth blockchain ibft raft goquorum
 ---
 
 # Quorum
@@ -111,6 +111,6 @@ Since IBFT is designed to run even in the presence of malicious actors, the bloc
 ::: tip See also
 
 * [Configuring Quorum consensus](/operations/quorum/configuring-consensus)
-* [Quorum for Developers](https://www.goquorum.com/developers)
+* [Quorum for Developers](https://consensys.net/quorum/developers)
 
 :::
