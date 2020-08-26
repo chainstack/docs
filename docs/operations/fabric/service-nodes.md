@@ -10,7 +10,7 @@ meta:
 
 A Hyperledger Fabric network is deployed with the following service nodes:
 
-* Explorer — an explorer node using the [Hyperledger Explorer](https://www.hyperledger.org/use/explorer) tool. Each organization participating in a Hyperledger Fabric network has its own explorer node deployed.
+* Explorer — a node using the [Hyperledger Explorer](https://www.hyperledger.org/use/explorer) tool to scan and view the network. Each organization participating in a Hyperledger Fabric network has its own explorer node deployed.
 * Orderer — an [ordering service node](/blockchains/fabric#ordering-service).
 
 ::: tip See also
