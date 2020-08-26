@@ -25,7 +25,7 @@ The premise of the Quorum network in this tutorial is the following:
 * There is a public contract that allows any party to read the temperature off the contract.
 * There is a private contract that allows only an explicitly set party to read the temperature off the contract.
 
-This tutorial uses [Quorum Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) for private contracts.
+This tutorial uses [Quorum Tessera](https://docs.tessera.consensys.net/) for private contracts.
 
 Sample code for this tutorial is in the [GitHub repository](https://github.com/chainstack/quorum-iot-tutorial).
 
@@ -105,7 +105,7 @@ npm install ethereumjs-tx
 
 #### Install Quorum.js
 
-[Quorum.js](https://github.com/jpmorganchase/quorum.js/) is an extension to [Ethereum JavaScript API](https://github.com/ethereum/web3.js) to support private transactions on Quorum.
+[Quorum.js](https://github.com/ConsenSys/quorum.js/) is an extension to [Ethereum JavaScript API](https://github.com/ethereum/web3.js) to support private transactions on Quorum.
 
 Install in your project directory:
 
@@ -188,7 +188,7 @@ In your project's `utils` directory, create the following scripts:
 * `compiler.js` — a script to compile the contract into the bytecode and interface formats.
 * `environment.js` — a script to set up the environment with a Web3 instance a Tessera transaction manager instance for the scripts executing the contract deployment and transactions.
 * `helper.js` — a script to serialize and sign transactions.
-* `jsonRPC.js` — a script to execute RPC calls to Geth directly.
+* `jsonRPC.js` — a script to execute RPC calls to GoQuorum directly.
 
 #### Create compiler.js
 
@@ -380,7 +380,7 @@ module.exports = {
 
 #### Create jsonRPC.js
 
-This script will execute RPC call to Geth directly.
+This script will execute RPC call to GoQuorum directly.
 
 In your project's `utils` directory, create `jsonRPC.js`:
 

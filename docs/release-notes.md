@@ -35,7 +35,7 @@ See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing pl
 
 * **Protocols**
   * [Corda 4.4](/blockchains/corda) support.
-  * [Quorum](/blockchains/quorum) 2.6.0 support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.5 support.
+  * [Quorum](/blockchains/quorum) 2.6.0 support. [Tessera](https://docs.tessera.consensys.net/) 0.10.5 support.
 * **Node logs**. You can now [access the logs](/platform/view-node-logs) for your dedicated nodes in the new node log viewer, with the ability to browse by date and container.
 * **Node resources**. You can now [view the resources](/platform/view-node-resources-allocation) that have been dynamically allocated to each of your dedicated nodes.
 * **CorDapp notifications**. You will now receive notifications based on the successful or failed result of CorDapp installations or removals initiated through Chainstack's CorDapp management interface.
@@ -100,7 +100,7 @@ See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing pl
 
 * **Protocols**
   * [Corda](/blockchains/corda) 4.3 support. You can also now install CorDapps containing workflows and contracts in a single JAR file.
-  * [Quorum](/blockchains/quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
+  * [Quorum](/blockchains/quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.tessera.consensys.net/) 0.10.2 support.
   * [MultiChain](/blockchains/multichain) 2.0.3 support.
   * [Bitcoin](/blockchains/bitcoin) 0.19.0.1 support. Bitcoin nodes now run with the `txindex` flag allowing to query any transaction on the blockchain.
 * **Documentation**. Context-sensitive documentation links in the platform UI.
