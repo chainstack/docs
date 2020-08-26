@@ -8,6 +8,6 @@ meta:
 
 # Peer node
 
-Your regular blockchain node that you deploy to interact with and be a part of a consortium network.
+A node that you deploy to interact with and be a part of a blockchain network.
 
 See also [Service node](/glossary/service-node).

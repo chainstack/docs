@@ -8,6 +8,6 @@ meta:
 
 # Service node
 
-A read-only node automatically deployed with your consortium network to provide consortium services.
+A node deployed with your consortium network to provide network services.
 
 See also [Peer node](/glossary/peer-node).
