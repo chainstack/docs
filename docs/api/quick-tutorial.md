@@ -61,7 +61,7 @@ See also API reference: <a :href="$themeConfig.apiDocsURL + '#operation/createPr
 
 You create a network with one peer node and service nodes.
 
-The service nodes are read-only and are created automatically with no input from you.
+The service nodes are created automatically with no input from you.
 
 You must provide the node details for your peer node.
 
