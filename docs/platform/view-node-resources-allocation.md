@@ -33,8 +33,8 @@ Hyperledger Fabric:
 Quorum:
 
 * Node — the storage allocated to your Quorum node to maintain the ledger.
-* Geth — the CPU and memory allocated to Quorum Geth.
-* Transaction manager — the CPU and memory allocated to the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/).
+* Geth — the CPU and memory allocated to GoQuorum.
+* Transaction manager — the CPU and memory allocated to the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.tessera.consensys.net/).
 
 MultiChain:
 
