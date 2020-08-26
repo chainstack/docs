@@ -86,7 +86,7 @@ where
 	* [MultiChain round-robin](/blockchains/multichain#consensus) — `round-robin`.
 * NODE_NAME — any name you want to give to your first peer node deployed as part of the network.
 * NODE_TYPE — `dedicated` is the only available option for consortium networks.
-* NODE_ROLE — use the `peer` value for the role since you are providing node details for your peer node. The service nodes are created automatically with no input from you.
+* NODE_ROLE — use the `peer` value for the role since you are providing node details for your peer node.
 * CLOUD_PROVIDER — choose the cloud provider for your node:
 	* `aws` — Amazon Web Services.
 	* `gcloud` — Google Cloud Platform.
