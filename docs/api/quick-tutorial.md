@@ -59,8 +59,14 @@ See also API reference: <a :href="$themeConfig.apiDocsURL + '#operation/createPr
 
 ### Create a network
 
+You create a network with one peer node and free service nodes.
+
+The service nodes are read-only and are created automatically with no input from you.
+
+You must provide the node details for your peer node.
+
 ``` sh
-curl -X POST "$APIURL/networks/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"NETWORK_NAME","project":"PROJECT_ID","protocol":"PROTOCOL","configuration":{"consensus":"CONSENSUS"},"nodes":[{"name":"NODE_NAME","type":"NODE_TYPE","role":"peer","provider":"CLOUD_PROVIDER","region":"LOCATION","configuration":{}}]}'
+curl -X POST "$APIURL/networks/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"NETWORK_NAME","project":"PROJECT_ID","protocol":"PROTOCOL","configuration":{"consensus":"CONSENSUS"},"nodes":[{"name":"NODE_NAME","type":"NODE_TYPE","role":"NODE_ROLE","provider":"CLOUD_PROVIDER","region":"LOCATION","configuration":{}}]}'
 ```
 
 where
@@ -80,7 +86,8 @@ where
 	* [MultiChain round-robin](/blockchains/multichain#consensus) — `round-robin`.
 * NODE_NAME — any name you want to give to your first peer node deployed as part of the network.
 * NODE_TYPE — `dedicated` is the only available option for consortium networks.
-* PROVIDER — choose the cloud provider for your node:
+* NODE_ROLE — use the `peer` value for the role since you are providing node details for your peer node. The service nodes are created automatically with no input from you.
+* CLOUD_PROVIDER — choose the cloud provider for your node:
 	* `aws` — Amazon Web Services.
 	* `gcloud` — Google Cloud Platform.
 	* `azure` — Microsoft Azure.
