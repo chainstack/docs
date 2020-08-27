@@ -14,11 +14,14 @@ To delete a node:
 
 1. Click your project.
 1. Click a network in the project.
-1. Select the node to delete. Click **Edit** > **Delete**.
+1. Select a [peer node](/glossary/peer-node) to delete. Click **Edit** > **Delete**.
 
 This will delete the node.
 
-When deleting nodes in a [consortium project](/glossary/consortium-project), you can only delete the first deployed node after deleting all other nodes in the network.
+When deleting nodes in a [consortium project](/glossary/consortium-project):
+
+* you can only delete the first deployed peer node after deleting all other peer nodes in the network.
+* deleting the first deployed peer node will delete the entire network, including the [service nodes](/glossary/service-node).
 
 ::: tip See also
 

@@ -11,3 +11,10 @@ meta:
 Any computer connected to other computers as part of the network protocol.
 
 Nodes comprise a [network](/glossary/network).
+
+::: tip See also
+
+* [Peer node](/glossary/peer-node)
+* [Service node](/glossary/service-node)
+
+:::
