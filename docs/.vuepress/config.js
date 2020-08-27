@@ -82,6 +82,7 @@ module.exports = {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
                         children: [
+                            '/operations/fabric/',
                             '/operations/fabric/service-nodes',
                             '/operations/fabric/tools',
                         ]

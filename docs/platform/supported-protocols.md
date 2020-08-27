@@ -25,7 +25,7 @@ Public network:
 	* Testnet
 * [Corda](/blockchains/corda)
 	* [Corda Network](https://corda.network/)
-	* [Corda Pre-Production Network](https://corda.network/participation/preprod/).
+	* [Corda Pre-Production Network](https://corda.network/participation/preprod/)
 
 ::: tip
 Chainstack is always working on introducing support for other protocols.
