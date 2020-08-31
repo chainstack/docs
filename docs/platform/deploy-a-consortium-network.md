@@ -10,17 +10,6 @@ meta:
 
 Chainstack supports [cloud](/glossary/cloud) and [hybrid](/glossary/hybrid) deployment of consortium blockchain networks.
 
-To deploy a [Corda](/blockchains/corda) network:
-
-1. Select a [consortium project](/glossary/consortium-project) and click **Get started** or **Create network**.
-1. Provide **Network name**.
-1. Under **Blockchain protocol**, select **Corda**.
-1. The consensus algorithm is [Single Notary](/blockchains/corda#consensus). Click **Next**.
-1. Under **Cloud provider**, select your preferred provider and location.
-1. Review your changes and click **Create network**.
-
-The network status will change from **Pending** to **Running** once deployed.
-
 To deploy a [Hyperledger Fabric](/blockchains/fabric) network:
 
 1. Select a [consortium project](/glossary/consortium-project) and click **Get started** or **Create network**.
@@ -30,7 +19,18 @@ To deploy a [Hyperledger Fabric](/blockchains/fabric) network:
 1. Under **Cloud provider**, select your preferred provider and location.
 1. Review your changes and click **Create network**.
 
-The network status will change from **Pending** to **Running** once deployed.
+The network status will change from **Pending** to **OK** once deployed.
+
+To deploy a [Corda](/blockchains/corda) network:
+
+1. Select a [consortium project](/glossary/consortium-project) and click **Get started** or **Create network**.
+1. Provide **Network name**.
+1. Under **Blockchain protocol**, select **Corda**.
+1. The consensus algorithm is [Single Notary](/blockchains/corda#consensus). Click **Next**.
+1. Under **Cloud provider**, select your preferred provider and location.
+1. Review your changes and click **Create network**.
+
+The network status will change from **Pending** to **OK** once deployed.
 
 To deploy a [Quorum](/blockchains/quorum) network:
 
@@ -41,7 +41,7 @@ To deploy a [Quorum](/blockchains/quorum) network:
 1. Under **Cloud provider**, select your preferred provider and location.
 1. Review your changes and click **Create network**.
 
-The network status will change from **Pending** to **Running** once deployed.
+The network status will change from **Pending** to **OK** once deployed.
 
 To deploy a [MultiChain](/blockchains/multichain) network:
 
@@ -52,15 +52,15 @@ To deploy a [MultiChain](/blockchains/multichain) network:
 1. Under **Cloud provider**, select your preferred provider and location.
 1. Review your changes and click **Create network**.
 
-The network status will change from **Pending** to **Running** once deployed.
+The network status will change from **Pending** to **OK** once deployed.
 
 ::: tip See also
 
 * [Supported cloud providers](/platform/supported-cloud-hosting-providers)
 * [Peer node](/glossary/peer-node)
 * [Service node](/glossary/service-node)
-* [Operations: Corda](/operations/corda/)
 * [Operations: Hyperledger Fabric](/operations/fabric/)
+* [Operations: Corda](/operations/corda/)
 * [Operations: Quorum](/operations/quorum/)
 * [Operations: MultiChain](/operations/multichain/)
 
