@@ -21,7 +21,7 @@ meta:
 * **Node management**. You can now [stop and start](/platform/stop-or-start-a-node) your nodes to save your usage costs.
 * **Service nodes**. You can now access in the UI the [service nodes](/glossary/service-node) deployed with your consortium networks.
 * **Clouds**. You can now deploy your nodes and networks in the <a href="https://support.chainstack.com/hc/en-us/articles/360024804711-Data-center-locations" target="_blank">Microsoft Azure UK South</a> region.
-* **Pricing**. No more user limit on all  <a href="https://chainstack.com/pricing/" target="_blank">pricing plans</a>.
+* **Pricing**. No more user limit on all <a href="https://chainstack.com/pricing/" target="_blank">pricing plans</a>.
 * **Marketplace**. Introducing a <a href="https://chainstack.com/marketplace/" target="_blank">marketplace of solutions</a> to greatly simplify and enhance your blockchain experience.
 
 ### Bug fixes
