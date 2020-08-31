@@ -8,6 +8,25 @@ meta:
 
 # Release notes
 
+## Chainstack 2.0
+
+*August 31, 2020*
+
+### What's new
+
+* **Public API**. You can now use the Chainstack API to manage your resources. See the [API documentation](/api/).
+* **Protocols**.
+  * [Corda 4.5](/blockchains/corda) support.
+  * [Hyperledger Fabric 2.2](/blockchains/fabric) support.
+* **Node management**. You can now [stop and start](/platform/stop-or-start-a-node) your nodes to save your usage costs.
+* **Service nodes**. You can now access in the UI the [service nodes](/glossary/service-node) deployed with your consortium networks.
+* **Clouds**. You can now deploy your nodes and networks in the <a href="https://support.chainstack.com/hc/en-us/articles/360024804711-Data-center-locations" target="_blank">Microsoft Azure UK South</a> region.
+* **Pricing**. No more user limit on all <a href="https://chainstack.com/pricing/" target="_blank">pricing plans</a>.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 1.6
 
 *July 7, 2020*
@@ -35,7 +54,7 @@ See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing pl
 
 * **Protocols**
   * [Corda 4.4](/blockchains/corda) support.
-  * [Quorum](/blockchains/quorum) 2.6.0 support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.5 support.
+  * [Quorum](/blockchains/quorum) 2.6.0 support. [Tessera](https://docs.tessera.consensys.net/) 0.10.5 support.
 * **Node logs**. You can now [access the logs](/platform/view-node-logs) for your dedicated nodes in the new node log viewer, with the ability to browse by date and container.
 * **Node resources**. You can now [view the resources](/platform/view-node-resources-allocation) that have been dynamically allocated to each of your dedicated nodes.
 * **CorDapp notifications**. You will now receive notifications based on the successful or failed result of CorDapp installations or removals initiated through Chainstack's CorDapp management interface.
@@ -100,7 +119,7 @@ See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing pl
 
 * **Protocols**
   * [Corda](/blockchains/corda) 4.3 support. You can also now install CorDapps containing workflows and contracts in a single JAR file.
-  * [Quorum](/blockchains/quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) 0.10.2 support.
+  * [Quorum](/blockchains/quorum) 2.4.0 support. Learner node role support. [Tessera](https://docs.tessera.consensys.net/) 0.10.2 support.
   * [MultiChain](/blockchains/multichain) 2.0.3 support.
   * [Bitcoin](/blockchains/bitcoin) 0.19.0.1 support. Bitcoin nodes now run with the `txindex` flag allowing to query any transaction on the blockchain.
 * **Documentation**. Context-sensitive documentation links in the platform UI.

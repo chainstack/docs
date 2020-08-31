@@ -9,10 +9,11 @@ module.exports = {
     },
     themeConfig: {
         logo: '/img/docs-logo.svg',
+        apiDocsURL: `https://${process.env.DOCS_HOSTNAME}/api/reference/`,
         nav: [
             { text: 'Support', link: 'https://support.chainstack.com' },
-            { text: 'Log in', link: (process.env.CONSOLE_HOSTNAME ? 'https://' + process.env.CONSOLE_HOSTNAME : 'http://localhost:3000') + '/user/login' },
-            { text: 'Start for free', link: (process.env.WEBSITE_HOSTNAME ? 'https://' + process.env.WEBSITE_HOSTNAME : 'http://localhost') + '/pricing/' }
+            { text: 'Log in', link: 'https://console.chainstack.com/user/login' },
+            { text: 'Start for free', link: 'https://chainstack.com/pricing/' }
         ],
         sidebar: [
             {
@@ -43,10 +44,12 @@ module.exports = {
                     '/platform/add-a-network-to-a-project',
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
+                    '/platform/view-service-nodes',
                     '/platform/view-node-and-network-status',
                     '/platform/view-node-resources-allocation',
                     '/platform/view-node-logs',
                     '/platform/explore-a-network',
+                    '/platform/stop-or-start-a-node',
                     '/platform/delete-a-node',
                     '/platform/delete-a-network',
                     '/platform/delete-a-project',
@@ -54,6 +57,8 @@ module.exports = {
                     '/platform/view-your-organization-vault',
                     '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
+                    '/platform/create-an-api-key',
+                    '/platform/delete-an-api-key',
                 ]
             },
             {
@@ -62,21 +67,24 @@ module.exports = {
                 children: [
                     '/operations/',
                     {
+                        title: 'Hyperledger Fabric',
+                        collapsable: true,
+                        children: [
+                            '/operations/fabric/',
+                            '/operations/fabric/service-nodes',
+                            '/operations/fabric/tools',
+                        ]
+                    },
+                    {
                         title: 'Corda',
                         collapsable: true,
                         children: [
                             '/operations/corda/',
                             '/operations/corda/networks',
+                            '/operations/corda/service-nodes',
                             '/operations/corda/node-explorer',
                             '/operations/corda/installing-a-cordapp',
                             '/operations/corda/tools',
-                        ]
-                    },
-                    {
-                        title: 'Hyperledger Fabric',
-                        collapsable: true,
-                        children: [
-                            '/operations/fabric/tools',
                         ]
                     },
                     {
@@ -88,6 +96,7 @@ module.exports = {
                             '/operations/quorum/default-addresses',
                             '/operations/quorum/default-network-id',
                             '/operations/quorum/key-management',
+                            '/operations/quorum/service-nodes',
                             '/operations/quorum/tools',
                         ]
                     },
@@ -102,6 +111,7 @@ module.exports = {
                             '/operations/multichain/external-key-management',
                             '/operations/multichain/cold-node-key-management',
                             '/operations/multichain/deploying-a-hybrid-network',
+                            '/operations/multichain/service-nodes',
                             '/operations/multichain/tools',
                         ]
                     },
@@ -134,19 +144,19 @@ module.exports = {
                 children: [
                     '/tutorials/',
                     {
-                        title: 'Corda',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/corda/',
-                            '/tutorials/corda/no-ticket-scalping-cordapp',
-                        ]
-                    },
-                    {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
                         children: [
                             '/tutorials/fabric/',
                             '/tutorials/fabric/universal-basic-income-opt-in-chaincode',
+                        ]
+                    },
+                    {
+                        title: 'Corda',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/corda/',
+                            '/tutorials/corda/no-ticket-scalping-cordapp',
                         ]
                     },
                     {
@@ -179,17 +189,26 @@ module.exports = {
                 ]
             },
             {
+                title: 'API',
+                collapsable: true,
+                children: [
+                    '/api/',
+                    '/api/quick-tutorial',
+                    [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
+                ]
+            },
+            {
                 title: 'Blockchains',
                 collapsable: true,
                 children: [
                     '/blockchains/',
-                    '/blockchains/corda',
                     '/blockchains/fabric',
+                    '/blockchains/corda',
                     '/blockchains/quorum',
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
-                    ]
+                ]
             },
             {
                 title: 'Glossary',
@@ -204,17 +223,20 @@ module.exports = {
                     '/glossary/consortium',
                     '/glossary/dedicated-node',
                     '/glossary/hybrid',
+                    '/glossary/identity',
                     '/glossary/member',
                     '/glossary/network',
                     '/glossary/node',
                     '/glossary/on-premises',
                     '/glossary/organization',
+                    '/glossary/peer-node',
                     '/glossary/project',
                     '/glossary/public-chain-project',
+                    '/glossary/service-node',
                     '/glossary/shared-node',
                     '/glossary/user',
                     '/glossary/vault',
-                    ]
+                ]
             },
         '/release-notes',
         ],
@@ -238,11 +260,11 @@ module.exports = {
             gtm: 'GTM-PXSGW6M'
         },
         'sitemap': {
-            hostname: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080')
+            hostname: `https://${process.env.DOCS_HOSTNAME}`,
         },
         '@limdongjin/vuepress-plugin-simple-seo': {
             default_image: '/img/social-image.png',
-            root_url: (process.env.DOCS_HOSTNAME ? 'https://' + process.env.DOCS_HOSTNAME : 'http://localhost:8080'),
+            root_url: `https://${process.env.DOCS_HOSTNAME}`,
             default_site_name: 'Chainstack documentation'
         },
         'check-md': {}

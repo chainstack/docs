@@ -264,7 +264,7 @@ You can view the deployed contract and the contract address on the Chainstack pl
 
 ## Interact with the contract
 
-The following contract interaction example is done with Quorum Geth. For Quorum Geth installation instructions, see [Tools](/operations/quorum/tools).
+The following contract interaction example is done with GoQuorum. For GoQuorum installation instructions, see [Tools](/operations/quorum/tools).
 
 ### Connect to a node in your Quorum network
 
@@ -284,7 +284,7 @@ Example:
 ./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 ```
 
-This will put you in the Geth console interactive mode.
+This will put you in the GoQuorum console interactive mode.
 
 ### Set the ABI variable for the contract
 

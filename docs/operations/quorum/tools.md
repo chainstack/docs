@@ -1,26 +1,26 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Quorum node using Geth client or JSON-RPC API and how to develop Quorum applications.
+    content: Learn how to interact with your Quorum node using GoQuorum client or JSON-RPC API and how to develop Quorum applications.
   - name: keywords
-    content: quorum geth truffle web3 develop
+    content: quorum geth truffle web3 develop goquorum
 ---
 
 # Tools
 
 ## Interaction tools
 
-### Geth
+### GoQuorum
 
-To interact with your Quorum network, you must install a Quorum Geth client.
+To interact with your Quorum network, you must install a GoQuorum client.
 
 ::: tip Install Go
-To be able to install Quorum Geth, you must install Go first. See [Go: Getting Started](https://golang.org/doc/install).
+To be able to install GoQuorum, you must install Go first. See [Go: Getting Started](https://golang.org/doc/install).
 :::
 
-Having installed Go, install Quorum Geth as described in [Quorum: Installing](https://docs.goquorum.com/en/latest/Getting%20Started/Installing/).
+Having installed Go, install GoQuorum as described in [Quorum: Installing](https://docs.goquorum.consensys.net/en/latest/HowTo/GetStarted/Install/).
 
-With Quorum Geth installed, you can connect to the Quorum nodes with the `geth attach` command:
+With GoQuorum installed, you can connect to the Quorum nodes with the `geth attach` command:
 
 ``` sh
 ./geth attach RPC_ENDPOINT
@@ -57,9 +57,14 @@ Example below demonstrates how to get the current block number:
 
 ### JSON-RPC API
 
-Interact with your Quorum network using [Geth JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) and [Quorum API](https://docs.goquorum.com/en/latest/Getting%20Started/api/).
+Interact with your Quorum network using:
 
-Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com) to invoke [Geth JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) and [Quorum API](https://docs.goquorum.com/en/latest/Getting%20Started/api/).
+* [Geth JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC).
+* [Quorum privacy API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/PrivacyAPI/).
+* [Quorum permissions API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/PermissioningAPIs/).
+* [Quorum contract extension API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/ContractExtensionAPIs/).
+
+Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com).
 
 Example below demonstrates how to get basic network information:
 

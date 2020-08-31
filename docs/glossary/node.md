@@ -1,13 +1,20 @@
 ---
 meta:
   - name: description
-    content: A blockchain node is any computer that has a copy of the ledger of a blockchain network.
+    content: A blockchain node is any computer that is connected to other computers and is a part of a blockchain network.
   - name: keywords
-    content: blockchain network node ledger computer
+    content: blockchain network node computer protocol
 ---
 
 # Node
 
-Any computer that maintains a copy of the shared ledger.
+Any computer connected to other computers as part of the network protocol.
 
 Nodes comprise a [network](/glossary/network).
+
+::: tip See also
+
+* [Peer node](/glossary/peer-node)
+* [Service node](/glossary/service-node)
+
+:::

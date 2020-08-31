@@ -19,22 +19,22 @@ To view the resources allocated to your nodes:
 
 ## Understand node resources allocation
 
-Corda:
-
-* Node — the CPU, memory, and storage allocated to your Corda node.
-* Database — the CPU, memory, and storage allocated to your [Corda node database](https://docs.corda.net/docs/corda-os/4.4/node-database.html).
-
 Hyperledger Fabric:
 
 * Node — the storage allocated to your peer to maintain the state and a copy of the ledger.
 * Peer — the CPU and memory allocated to your peer.
 * Chaincode server — the CPU and memory allocated to the service running your chaincode.
 
+Corda:
+
+* Node — the CPU, memory, and storage allocated to your Corda node.
+* Database — the CPU, memory, and storage allocated to your [Corda node database](https://docs.corda.net/docs/corda-os/node-database.html).
+
 Quorum:
 
 * Node — the storage allocated to your Quorum node to maintain the ledger.
-* Geth — the CPU and memory allocated to Quorum Geth.
-* Transaction manager — the CPU and memory allocated to the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/).
+* Geth — the CPU and memory allocated to GoQuorum.
+* Transaction manager — the CPU and memory allocated to the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.tessera.consensys.net/).
 
 MultiChain:
 

@@ -24,8 +24,8 @@ For Hyperledger Fabric, you additionally filter the logs by:
 
 For Quorum, you additionally filter the logs by:
 
-* Geth — the logs of your instance of Quorum Geth.
-* Transaction manager — the logs of your instance of the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/).
+* Geth — the logs of your instance of GoQuorum.
+* Transaction manager — the logs of your instance of the Tessera transaction manager. See also Quorum documentation: [What is Tessera](https://docs.tessera.consensys.net/).
 
 The timestamps in the log entries are displayed in your local time.
 

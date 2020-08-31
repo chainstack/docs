@@ -10,7 +10,7 @@ meta:
 
 For the Quorum consensus details, see [Quorum](/blockchains/quorum).
 
-Use [Quorum Geth](/operations/quorum/tools#geth) or [JSON-RPC API tools](/operations/quorum/tools#json-rpc-api) to interact with the nodes.
+Use [GoQuorum](/operations/quorum/tools#goquorum) or [JSON-RPC API tools](/operations/quorum/tools#json-rpc-api) to interact with the nodes.
 
 ## Raft
 
@@ -22,7 +22,7 @@ You can always [remove the existing](#remove-a-node) minter, verifier, or learne
 
 ### Get the list of current nodes and roles
 
-Geth:
+GoQuorum:
 
 ``` js
 raft.cluster
@@ -73,7 +73,7 @@ where
 
 ### Get the node ID of the minter node
 
-Geth:
+GoQuorum:
 
 ``` js
 raft.leader
@@ -94,7 +94,7 @@ Example:
 
 ### Get the role of the node you are connected to
 
-Geth:
+GoQuorum:
 
 ``` js
 raft.role
@@ -115,7 +115,7 @@ Example:
 
 ### Add a verifier node
 
-Geth:
+GoQuorum:
 
 ``` js
 raft.addPeer('enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT')
@@ -145,7 +145,7 @@ You can get all of the node information by running `raft.cluster`.
 
 ### Add a learner node
 
-Geth:
+GoQuorum:
 
 ``` js
 raft.addLearner('enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT')
@@ -173,7 +173,7 @@ Example:
 
 ### Promote a learner node to the verifier role
 
-Geth:
+GoQuorum:
 
 ``` js
 raft.promoteToPeer(RAFT_ID)
@@ -198,7 +198,7 @@ true
 
 ### Remove a node
 
-Geth:
+GoQuorum:
 
 ``` js
 raft.removePeer(RAFT_ID)
@@ -231,7 +231,7 @@ The group of validator nodes can always be changed on the network to ensure that
 
 ### Get the list of current validator nodes
 
-Geth:
+GoQuorum:
 
 ``` js
 istanbul.getValidators()
@@ -256,7 +256,7 @@ To add a new validator node, you must run a validator proposal command from the 
 
 Run the following command from a number of nodes in your network to make it a majority proposal.
 
-Geth:
+GoQuorum:
 
 ``` js
 istanbul.propose("VALIDATOR_ADDRESS", true)
@@ -280,7 +280,7 @@ Example:
 null
 ```
 
-You can also see the node's validator address when you connect to the node with Quorum Geth:
+You can also see the node's validator address when you connect to the node with GoQuorum:
 
 ``` js
 $ ./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
@@ -297,7 +297,7 @@ The `coinbase` parameter output is the validator address; `coinbase` has been re
 
 ### Remove a validator node
 
-Geth:
+GoQuorum:
 
 ``` js
 istanbul.propose("VALIDATOR_ADDRESS", false)
@@ -323,7 +323,7 @@ null
 
 ### Get the list of the latest validator candidate proposals
 
-Geth:
+GoQuorum:
 
 ``` js
 istanbul.candidates
@@ -349,7 +349,7 @@ In the example, node `0x1234be669c541e92f64d6c133ca497d61fc87d4a6` is proposed t
 
 ### Remove a validator candidate from running for the validator role
 
-Geth:
+GoQuorum:
 
 ``` js
 istanbul.discard("VALIDATOR_ADDRESS")
@@ -378,6 +378,6 @@ null
 
 ::: tip See also
 
-* [Istanbul RPC API](https://docs.goquorum.com/en/latest/Consensus/istanbul-rpc-api/)
+* [Istanbul RPC API](https://docs.goquorum.consensys.net/en/latest/Reference/Consensus/IBFT-RPC-API/)
 
 :::
