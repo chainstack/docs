@@ -10,8 +10,8 @@ meta:
 
 Consortium:
 
-* [Corda](/blockchains/corda)
 * [Hyperledger Fabric](/blockchains/fabric)
+* [Corda](/blockchains/corda)
 * [Quorum](/blockchains/quorum)
 * [MultiChain](/blockchains/multichain)
 

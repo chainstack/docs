@@ -19,16 +19,16 @@ To view the resources allocated to your nodes:
 
 ## Understand node resources allocation
 
-Corda:
-
-* Node — the CPU, memory, and storage allocated to your Corda node.
-* Database — the CPU, memory, and storage allocated to your [Corda node database](https://docs.corda.net/docs/corda-os/node-database.html).
-
 Hyperledger Fabric:
 
 * Node — the storage allocated to your peer to maintain the state and a copy of the ledger.
 * Peer — the CPU and memory allocated to your peer.
 * Chaincode server — the CPU and memory allocated to the service running your chaincode.
+
+Corda:
+
+* Node — the CPU, memory, and storage allocated to your Corda node.
+* Database — the CPU, memory, and storage allocated to your [Corda node database](https://docs.corda.net/docs/corda-os/node-database.html).
 
 Quorum:
 

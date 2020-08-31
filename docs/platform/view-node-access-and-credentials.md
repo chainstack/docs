@@ -21,8 +21,8 @@ If you are an invited [member](/glossary/member) of a [consortium project](/glos
 ::: tip See also
 
 * [Project](/glossary/project)
-* [Operations: Corda](/operations/corda/)
 * [Operations: Hyperledger Fabric](/operations/fabric/)
+* [Operations: Corda](/operations/corda/)
 * [Operations: Quorum](/operations/quorum/)
 * [Operations: MultiChain](/operations/multichain/)
 * [Operations: Ethereum](/operations/ethereum/)

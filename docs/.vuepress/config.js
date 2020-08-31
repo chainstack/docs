@@ -67,6 +67,15 @@ module.exports = {
                 children: [
                     '/operations/',
                     {
+                        title: 'Hyperledger Fabric',
+                        collapsable: true,
+                        children: [
+                            '/operations/fabric/',
+                            '/operations/fabric/service-nodes',
+                            '/operations/fabric/tools',
+                        ]
+                    },
+                    {
                         title: 'Corda',
                         collapsable: true,
                         children: [
@@ -76,15 +85,6 @@ module.exports = {
                             '/operations/corda/node-explorer',
                             '/operations/corda/installing-a-cordapp',
                             '/operations/corda/tools',
-                        ]
-                    },
-                    {
-                        title: 'Hyperledger Fabric',
-                        collapsable: true,
-                        children: [
-                            '/operations/fabric/',
-                            '/operations/fabric/service-nodes',
-                            '/operations/fabric/tools',
                         ]
                     },
                     {
@@ -144,19 +144,19 @@ module.exports = {
                 children: [
                     '/tutorials/',
                     {
-                        title: 'Corda',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/corda/',
-                            '/tutorials/corda/no-ticket-scalping-cordapp',
-                        ]
-                    },
-                    {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
                         children: [
                             '/tutorials/fabric/',
                             '/tutorials/fabric/universal-basic-income-opt-in-chaincode',
+                        ]
+                    },
+                    {
+                        title: 'Corda',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/corda/',
+                            '/tutorials/corda/no-ticket-scalping-cordapp',
                         ]
                     },
                     {
@@ -202,8 +202,8 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/blockchains/',
-                    '/blockchains/corda',
                     '/blockchains/fabric',
+                    '/blockchains/corda',
                     '/blockchains/quorum',
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
