@@ -234,7 +234,7 @@ where
 * CHAINCODE_NAME — name of your chaincode.
 * CHAINCODE_VERSION — the version of your chaincode as specified in the source files of the chaincode.
 * `--init-required` — an optional parameter if your chaincode requires initialization.
-* SEQUENCE_NUMBER — how many times the chaincode has been defined
+* SEQUENCE_NUMBER — the number of times your chaincode has been defined.
 
 Example:
 
