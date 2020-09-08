@@ -74,7 +74,7 @@ where
 * MSP_ID — the ID of your organization. In the platform UI, navigate to your peer; click **Organization identity** > **MSP ID**.
 * PEER_DIRECTORY — the directory of your peer that has the certificates. Exported at a previous step.
 * ORDERER_CERTIFICATE — name and path of the certificate file that you exported at a previous step.
-* ORDERER_RPC_ENDPOINT — the RPC endpoint of your orderer. In the platform UI, navigate to your network; click **Details** > **Orderer RPC endpoint**.
+* ORDERER_RPC_ENDPOINT — the RPC endpoint of your orderer. In the platform UI, navigate to your network; click **Service nodes** > **Orderer** > **RPC endpoint**.
 
 Example:
 
