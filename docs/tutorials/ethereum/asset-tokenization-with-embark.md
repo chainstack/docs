@@ -106,7 +106,7 @@ You will use this account to deploy the contract.
 
 1. In MetaMask, click **Import Account** > **JSON File**.
 1. Select the keystore file that you created earlier.
-1. Fund the account with <a href="https://support.chainstack.com/hc/en-us/articles/900001458966-Ethereum-Ropsten-faucets" target="_blank">Ropsten ether</a>.
+1. Fund the account with <a href="https://support.chainstack.com/hc/en-us/articles/900001458966-Ethereum-testnet-faucets" target="_blank">Ropsten ether</a>.
 
 ### Deploy the contract
 

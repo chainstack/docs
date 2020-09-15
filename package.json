@@ -11,14 +11,14 @@
   },
   "devDependencies": {
     "markdown-it-container": "^2.0.0",
-    "vuepress": "^1.5.3",
+    "vuepress": "^1.5.4",
     "vuepress-plugin-check-md": "0.0.2"
   },
   "dependencies": {
     "@limdongjin/vuepress-plugin-simple-seo": "^1.0.4-alpha.5",
     "clean": "^4.0.2",
     "esm": "^3.2.25",
-    "vuepress-plugin-clean-urls": "^1.1.1",
+    "vuepress-plugin-clean-urls": "^1.1.2",
     "vuepress-plugin-google-tag-manager": "^0.0.3",
     "vuepress-plugin-sitemap": "^2.3.1"
   }

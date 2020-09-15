@@ -20,6 +20,7 @@ Public network:
 * [Ethereum](/blockchains/ethereum)
 	* Mainnet. [Full and archive nodes](/operations/ethereum/modes).
 	* Ropsten testnet
+	* Rinkeby testnet
 * [Bitcoin](/blockchains/bitcoin)
 	* Mainnet
 	* Testnet
