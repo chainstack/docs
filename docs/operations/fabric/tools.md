@@ -74,7 +74,7 @@ where
 * MSP_ID — the ID of your organization. In the platform UI, navigate to your peer; click **Organization identity** > **MSP ID**.
 * PEER_DIRECTORY — the directory of your peer that has the certificates. Exported at a previous step.
 * ORDERER_CERTIFICATE — name and path of the certificate file that you exported at a previous step.
-* ORDERER_RPC_ENDPOINT — the RPC endpoint of your orderer. In the platform UI, navigate to your network; click **Details** > **Orderer RPC endpoint**.
+* ORDERER_RPC_ENDPOINT — the RPC endpoint of your orderer. In the platform UI, navigate to your network; click **Service nodes** > **Orderer** > **RPC endpoint**.
 
 Example:
 
@@ -225,7 +225,7 @@ sequence: 1, version: 1.0.0, init-required: true, package-id: fabcar:6ab145685b4
 #### Check the chaincode commit readiness
 
 ``` sh
-peer lifecycle chaincode checkcommitreadiness -o $ORDERER_ADDRESS --channelID CHANNEL_ID --tls --cafile $ORDERER_CA --name CHAINCODE_NAME --version CHAINCODE_VERSION --init-required
+peer lifecycle chaincode checkcommitreadiness -o $ORDERER_ADDRESS --channelID CHANNEL_ID --tls --cafile $ORDERER_CA --name CHAINCODE_NAME --version CHAINCODE_VERSION --init-required --sequence SEQUENCE_NUMBER
 ```
 
 where
@@ -234,11 +234,12 @@ where
 * CHAINCODE_NAME — name of your chaincode.
 * CHAINCODE_VERSION — the version of your chaincode as specified in the source files of the chaincode.
 * `--init-required` — an optional parameter if your chaincode requires initialization.
+* SEQUENCE_NUMBER — the number of times your chaincode has been defined.
 
 Example:
 
 ``` sh
-$ peer lifecycle chaincode checkcommitreadiness -o $ORDERER_ADDRESS --channelID defaultchannel --tls --cafile $ORDERER_CA --name fabcar --version 1.0.0 --init-required
+$ peer lifecycle chaincode checkcommitreadiness -o $ORDERER_ADDRESS --channelID defaultchannel --tls --cafile $ORDERER_CA --name fabcar --version 1.0.0 --init-required --sequence 1
 Chaincode definition for chaincode 'fabcar', version '1.0.0', sequence '1' on channel 'defaultchannel' approval status by org:
 RG-123-456-MSP: true
 ```
