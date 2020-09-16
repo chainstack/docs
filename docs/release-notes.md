@@ -8,6 +8,21 @@ meta:
 
 # Release notes
 
+## Chainstack 2.1
+
+*September 16, 2020*
+
+### What's new
+
+* **Protocols**.
+  * [Ethereum Rinkeby](/operations/ethereum/networks) support.
+  * [Quorum](/blockchains/quorum) 2.7.0 support.
+* **GraphQL**. You can now query dedicated Ethereum full nodes and archive nodes with GraphQL.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.0
 
 *August 31, 2020*
