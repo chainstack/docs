@@ -203,7 +203,7 @@ web3.eth.getBlockNumber().then(console.log);
 Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Ethereum nodes deployed with Chainstack.
 
 1. Install [web3.py](https://web3py.readthedocs.io/).
-1. Connect over HTTP or WebSocket. See also [Ethereum node connection: HTTP vs WebSocket](https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket).
+1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">Ethereum node connection: HTTP vs WebSocket</a>.
 
 #### HTTP
 
@@ -337,7 +337,7 @@ See also [the full code on GitHub](https://github.com/chainstack/web3j-getLatest
 Build DApps using [etheres.js](https://github.com/ethers-io/ethers.js/) and Ethereum nodes deployed with Chainstack.
 
 1. Install [etheres.js](https://www.npmjs.com/package/ethers).
-1. Connect over HTTP or WebSocket. See also [Ethereum node connection: HTTP vs WebSocket](https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket).
+1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">Ethereum node connection: HTTP vs WebSocket</a>.
 
 #### HTTP
 
