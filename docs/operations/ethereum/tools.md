@@ -334,9 +334,9 @@ See also [the full code on GitHub](https://github.com/chainstack/web3j-getLatest
 
 ### ethers.js
 
-Build DApps using [etheres.js](https://github.com/ethers-io/ethers.js/) and Ethereum nodes deployed with Chainstack.
+Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Ethereum nodes deployed with Chainstack.
 
-1. Install [etheres.js](https://www.npmjs.com/package/ethers).
+1. Install [ethers.js](https://www.npmjs.com/package/ethers).
 1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">Ethereum node connection: HTTP vs WebSocket</a>.
 
 #### HTTP
