@@ -85,7 +85,7 @@ contract loyaltyProgram {
     }
 
     /// Join a customer with the loyalty program
-    function join() public returns (uint){
+    function join() public view returns (uint){
         address user = msg.sender;
         return user.balance;
     }
@@ -293,7 +293,7 @@ Truffle creates the contract's ABI when you run `truffle compile` and saves it t
 Run:
 
 ``` js
-> var abi = JSON.parse('CONTRACT_ABI')
+var abi = JSON.parse('CONTRACT_ABI')
 ```
 
 where
@@ -303,7 +303,7 @@ where
 ABI for `loyaltyProgram.sol`:
 
 ``` js
-> var abi = JSON.parse('[{"constant":true,"inputs":[],"name": "owner","outputs":[{"name":"","type":"address"}],"payable": false,"stateMutability":"view","type":"function"},{"inputs":[],"payable": true,"stateMutability": "payable","type": "constructor"},{"constant":false,"inputs":[],"name": "join","outputs":[{"name":"","type": "uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs": [],"name":"balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]')'
+var abi = JSON.parse('[{"constant":true,"inputs":[],"name": "owner","outputs":[{"name":"","type":"address"}],"payable": false,"stateMutability":"view","type":"function"},{"inputs":[],"payable": true,"stateMutability": "payable","type": "constructor"},{"constant":false,"inputs":[],"name": "join","outputs":[{"name":"","type": "uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs": [],"name":"balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]')
 ```
 
 ### Set the contract address
@@ -313,7 +313,7 @@ Set the address of the deployed contract.
 Run:
 
 ``` js
-> eth.contract(abi).at('CONTRACT_ADDRESS')
+eth.contract(abi).at('CONTRACT_ADDRESS')
 ```
 
 where
@@ -323,7 +323,7 @@ where
 Example:
 
 ``` js
-> eth.contract(abi).at('0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5')
+eth.contract(abi).at('0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5')
 ```
 
 ### Set a variable to the contract at the address
@@ -331,7 +331,7 @@ Example:
 Run:
 
 ``` js
-> var CONTRACT_NAME = eth.contract(abi).at('CONTRACT_ADDRESS')
+var CONTRACT_NAME = eth.contract(abi).at('CONTRACT_ADDRESS')
 ```
 
 where
@@ -342,7 +342,7 @@ where
 Example:
 
 ``` js
-> var loyaltyProgram = eth.contract(abi).at('0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5')
+var loyaltyProgram = eth.contract(abi).at('0x1bF2345B6789BcC1234567aE89cedFE1Ef2E34B5')
 ```
 
 ### Set the default Quorum address to interact with the contract
@@ -350,17 +350,17 @@ Example:
 Run:
 
 ``` js
-> eth.defaultAccount = "QUORUM_ADDRESS"
+eth.defaultAccount = "QUORUM_ADDRESS"
 ```
 
 where
 
-* QUORUM_ADDRESS — an address created with one of the node deployments. Available on the Chainstack platform under **Access and credentials** > **Default wallet address**.
+* QUORUM_ADDRESS — an address created with one of the node deployments. Available on the Chainstack platform under **Access and credentials** > **Default wallet** > **Address**.
 
 Example:
 
 ``` js
-> eth.defaultAccount = "0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
+eth.defaultAccount = "0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
 ```
 
 ### Call the contract
@@ -368,7 +368,7 @@ Example:
 As the `loyaltyProgram.sol` contract has the `join` function, call `join`:
 
 ``` js
-> loyaltyProgram.join()
+loyaltyProgram.join()
 ```
 
 This will create a transaction and give you the transaction ID.
@@ -376,13 +376,13 @@ This will create a transaction and give you the transaction ID.
 Now check the balance:
 
 ``` js
-> loyaltyProgram.balance()
+loyaltyProgram.balance()
 ```
 
 This will display the balance:
 
 ``` js
-> 0
+0
 ```
 
 ::: tip See also
