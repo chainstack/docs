@@ -60,6 +60,79 @@ Example below demonstrates how to get the balance of an address in wei value and
 642538.078574759898951277
 ```
 
+### GraphQL
+
+You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Growth, Business, and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
+
+#### UI
+
+You can query data using the graphical interface.
+
+1. In the platform UI, navigate to your dedicated Ethereum node. See [View node access and credentials](/platform/view-node-access-and-credentials).
+1. Hover over **GraphQL IDE URL** and click **Open**.
+1. In the graphical interface that opens, run a GraphQL query.
+
+Example to get the latest block number:
+
+``` js
+{ block { number } }
+```
+
+#### Node.js
+
+You can build a web app to query data using Node.js and [axios](https://www.npmjs.com/package/axios):
+
+``` js
+const axios = require('axios');
+const main = async () => {
+  try {
+    const result = await axios.post(
+      'USERNAME:PASSWORD@RPC_ENDPOINT',
+      {
+        query: `
+          QUERY
+        `
+      }
+    );
+    console.log(result.data);
+  } catch(error) {
+    console.error(error);
+  }
+}
+main();
+```
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* GRAPHQL_ENDPOINT — the GraphQL endpoint of your dedicated Ethereum node.
+* QUERY — your GraphQL query.
+
+See [View node access and credentials](/platform/view-node-access-and-credentials).
+
+Example to get the latest block number:
+
+``` js
+const axios = require('axios');
+const main = async () => {
+  try {
+    const result = await axios.post(
+      'https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/graphql',
+      {
+        query: `
+          { block { number } }
+        `
+      }
+    );
+    console.log(result.data);
+  } catch(error) {
+    console.error(error);
+  }
+}
+main();
+```
+
 ### MetaMask
 
 You can set your [MetaMask](https://metamask.io/) to interact through your Ethereum nodes deployed with Chainstack.
@@ -203,9 +276,11 @@ web3.eth.getBlockNumber().then(console.log);
 Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Ethereum nodes deployed with Chainstack.
 
 1. Install [web3.py](https://web3py.readthedocs.io/).
-1. Use the `HTTPProvider` to connect to your node's RPC endpoint or the `WebsocketProvider` object to connect to your node's WSS endpoint.
+1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">Ethereum node connection: HTTP vs WebSocket</a>.
 
-#### HTTPProvider
+#### HTTP
+
+Use the `HTTPProvider` to connect to your node's RPC endpoint .
 
 ``` py
 from web3 import Web3
@@ -229,7 +304,9 @@ web3 = Web3(Web3.HTTPProvider('https://%s:%s@%s'% ("user-name", "pass-word-pass-
 print(web3.eth.blockNumber)
 ```
 
-#### WebsocketProvider
+#### WebSocket
+
+Use the `WebsocketProvider` object to connect to your node's WSS endpoint.
 
 ``` py
 from web3 import Web3
@@ -327,6 +404,83 @@ where
 * RPC_ENDPOINT — your Ethereum node RPC endpoint.
 
 See also [the full code on GitHub](https://github.com/chainstack/web3j-getLatestBlock).
+
+### ethers.js
+
+Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Ethereum nodes deployed with Chainstack.
+
+1. Install [ethers.js](https://www.npmjs.com/package/ethers).
+1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">Ethereum node connection: HTTP vs WebSocket</a>.
+
+#### HTTP
+
+Use the `JsonRpcProvider` object to connect to your node's RPC endpoint.
+
+``` js
+const { ethers } = require("ethers");
+
+var urlInfo = {
+    url: 'RPC_ENDPOINT',
+    user: 'USERNAME',
+    password: 'PASSWORD'
+};
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, NETWORK_ID);
+```
+
+where
+
+* RPC_ENDPOINT — your Ethereum node RPC endpoint.
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* NETWORK_ID — Ethereum network ID:
+  * Mainnet: `1`
+  * Ropsten: `3`
+  * Rinkeby: `4`
+
+Example to get the latest block number on mainnet:
+
+``` js
+const { ethers } = require("ethers");
+
+var urlInfo = {
+    url: 'https://nd-123-456-789.p2pify.com',
+    user: 'user-name',
+    password: 'pass-word-pass-word-pass-word'
+};
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 1);
+
+provider.getBlockNumber().then(console.log);
+```
+
+#### WebSocket
+
+Use the `WebSocketProvider` object to connect to your node's WSS endpoint.
+
+``` js
+const { ethers } = require("ethers");
+
+const provider = new ethers.providers.WebSocketProvider('wss://USERNAME:PASSWORD@WSS_ENDPOINT', NETWORK_ID);
+```
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* WSS_ENDPOINT — your Ethereum node WSS endpoint.
+* NETWORK_ID — Ethereum network ID:
+  * Mainnet: `1`
+  * Ropsten: `3`
+  * Rinkeby: `4`
+
+Example to get the latest block number on mainnet:
+
+``` js
+const { ethers } = require("ethers");
+
+const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 1);
+
+provider.getBlockNumber().then(console.log);
+```
 
 ::: tip See also
 
