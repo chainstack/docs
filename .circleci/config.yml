@@ -69,19 +69,19 @@ _job_deploy: &deploy
        name: Helming
        command: |
         set -x
-        helm repo add stable https://charts.helm.sh/stable
-        helm repo add cs ${HELM_REPO}
-        helm repo update
+        helm3 repo add stable https://charts.helm.sh/stable
+        helm3 repo add cs ${HELM_REPO}
+        helm3 repo update
 
     - run:
        name: Rolling out the service
        command: |
         set -x
-        helm upgrade docs cs/chainstack-docs \
+        helm3 upgrade docs cs/chainstack-docs \
           --install --wait --timeout 180s \
           --set image.tag=${CIRCLE_SHA1},ingress.host=${DOCS_HOSTNAME},project=${GOOGLE_PROJECT_ID},auth.enabled=${AUTH_ENABLED}
         sleep 10 # TODO: Implement k8s jobs for Post-deploy
-        helm status docs
+        helm3 status docs
 
 _job_build_image: &build_image
   docker:
