@@ -54,7 +54,7 @@ docker run -v /home/user/RG-123-456-MSP/:/data -it hyperledger/fabric-tools:2.2.
 
 #### Provide connection details and certificate paths
 
-In the running Docker containter, provide the following:
+In the running Docker container, provide the following:
 
 ``` sh
 export CORE_PEER_ADDRESS=PEER_RPC_ENDPOINT
