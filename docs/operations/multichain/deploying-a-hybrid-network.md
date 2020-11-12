@@ -124,7 +124,7 @@ curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"grant","params":["WA
 where
 
 * RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
-* RPC_USER — your cloud MultiChain node RPC username. Available under **Access and credentials** > **RPC user**.
+* RPC_USER — your cloud MultiChain node RPC username. Available under **Access and credentials** > **RPC username**.
 * RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
 * WALLET_ADDRESS — your on-premises MultiChain node's wallet address. You received the wallet address [when you initialized your on-premises node](#initialize-your-on-premises-multichain-node).
 
@@ -153,7 +153,7 @@ curl RPC_ENDPOINT -u "RPC_USER:RPC_PASSWORD" -d '{"method":"addnode","params":["
 where
 
 * RPC_ENDPOINT — your cloud MultiChain node RPC endpoint. Available under **Access and credentials** > **RPC endpoint**.
-* RPC_USER — your cloud MultiChain node RPC username. Available under **Access and credentials** > **RPC user**.
+* RPC_USER — your cloud MultiChain node RPC username. Available under **Access and credentials** > **RPC username**.
 * RPC_PASSWORD — your cloud MultiChain node RPC password. Available under **Access and credentials** > **RPC password**.
 * ON_PREM_IP — your on-premises MultiChain node machine's IP address.
 * PORT — your on-premises MultiChain node machine's port.
