@@ -14,7 +14,7 @@ meta:
 
 ### What's new
 
-* **Improved billing experience**. You can now reattempt past due payments through billing card change or directly in the activity log (where you can see more information attached to your billing events). 
+* **Billing**. You can now reattempt past due payments through billing card change or directly in the activity log. The activity log also provides more information on your billing events. 
 
 ### Bug fixes
 
