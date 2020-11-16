@@ -18,7 +18,7 @@ meta:
 
 ### Bug fixes
 
-* Resolved an issue with some Hyperledger Fabric Explorers being out of sync with the network state.
+* Resolved an issue with some Hyperledger Explorer instances in Fabric networks being out of sync with the blockchain state.
 * Numerous bug fixes and stability improvements.
 
 ## Chainstack 2.1
