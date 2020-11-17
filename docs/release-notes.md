@@ -8,6 +8,19 @@ meta:
 
 # Release notes
 
+## Chainstack 2.1.2
+
+*November 2, 2020*
+
+### What's new
+
+* **Billing**. You can now reattempt past due payments through billing card change or directly in the activity log. The activity log also provides more information on your billing events. 
+
+### Bug fixes
+
+* Resolved an issue with some Hyperledger Explorer instances in Fabric networks being out of sync with the blockchain state.
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.1
 
 *September 16, 2020*
