@@ -92,14 +92,15 @@ where
 	* `gcloud` — Google Cloud Platform.
 	* `azure` — Microsoft Azure.
 * LOCATION — choose the location for your network:
-	* `apac` — Asia-Pacific. Available only for Amazon Web Services and Google Cloud Platform.
-	* `us` — the United States. Available only for Amazon Web Services.
-	* `eu` — Europe. Available only for Microsoft Azure.
+	* `asia-southeast1` — Singapore. Available only for Google Cloud Platform (`gcloud`).
+	* `ap-southeast-1` — Singapore. Available only for Amazon Web Services (`aws`).
+	* `us-west-2` — the United States, Oregon. Available only for Amazon Web Services (`aws`).
+	* `uksouth` — the United Kingdom, London. Available only for Microsoft Azure (`azure`).
 
-Example to create a Corda network on Google Cloud Platform in Asia-Pacific:
+Example to create a Corda network on Google Cloud Platform in Singapore:
 
 ``` sh
-curl -X POST "$APIURL/networks/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"NETWORK_NAME","project":"PR-123-456","protocol":"corda","configuration":{"consensus":"single-notary"},"nodes":[{"name":"My node name","type":"dedicated","role":"peer","provider":"gcloud","region":"apac","configuration":{}}]}'
+curl -X POST "$APIURL/networks/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"NETWORK_NAME","project":"PR-123-456","protocol":"corda","configuration":{"consensus":"single-notary"},"nodes":[{"name":"My node name","type":"dedicated","role":"peer","provider":"gcloud","region":"asia-southeast1","configuration":{}}]}'
 ```
 
 See also API reference: <a :href="$themeConfig.apiDocsURL + '#operation/createNetwork'" target="_blank">Create Network</a>.
@@ -107,26 +108,27 @@ See also API reference: <a :href="$themeConfig.apiDocsURL + '#operation/createNe
 ### Add a peer node to the network
 
 ``` sh
-curl -X POST "$APIURL/nodes/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"NODE_NAME","network":"NETWORK_ID","type": "dedicated","role":"peer","provider":"PROVIDER","region":"LOCATION","configuration":{}}'
+curl -X POST "$APIURL/nodes/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"NODE_NAME","network":"NETWORK_ID","type": "dedicated","role":"peer","provider":"CLOUD_PROVIDER","region":"LOCATION","configuration":{}}'
 ```
 
 where
 
 * NODE_NAME — any name you want to give to your node.
 * NETWORK_ID — the ID of the network where the node will be deployed. You can get network IDs by running `curl -X GET "$APIURL/networks/" --header "$HDR_AUTH"`.
-* PROVIDER — choose the cloud provider for your node:
+* CLOUD_PROVIDER — choose the cloud provider for your node:
 	* `aws` — Amazon Web Services.
 	* `gcloud` — Google Cloud Platform.
 	* `azure` — Microsoft Azure.
-* LOCATION — choose the location for your node:
-	* `apac` — Asia-Pacific. Available only for Amazon Web Services and Google Cloud Platform.
-	* `us` — the United States. Available only for Amazon Web Services.
-	* `eu` — Europe. Available only for Microsoft Azure.
+* LOCATION — choose the location for your network:
+	* `asia-southeast1` — Singapore. Available only for Google Cloud Platform (`gcloud`).
+	* `ap-southeast-1` — Singapore. Available only for Amazon Web Services (`aws`).
+	* `us-west-2` — the United States, Oregon. Available only for Amazon Web Services (`aws`).
+	* `uksouth` — the United Kingdom, London. Available only for Microsoft Azure (`azure`).
 
-Example to add a node on Microsoft Azure in Europe:
+Example to add a node on Microsoft Azure in London:
 
 ``` sh
-curl -X POST "$APIURL/nodes/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"My node name","network":"NW-123-456-7","type": "dedicated","role":"peer","provider":"azure","region":"eu","configuration":{}}'
+curl -X POST "$APIURL/nodes/" --header "$HDR_AUTH" --header "$HDR_CT" --data '{"name":"My node name","network":"NW-123-456-7","type": "dedicated","role":"peer","provider":"azure","region":"uksouth","configuration":{}}'
 ```
 
 See also API reference: <a :href="$themeConfig.apiDocsURL + '#operation/createNode'" target="_blank">Create Node</a>.
