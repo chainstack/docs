@@ -89,13 +89,14 @@ where
 * NODE_ROLE — use the `peer` value for the role since you are providing node details for your peer node.
 * CLOUD_PROVIDER — choose the cloud provider for your node:
 	* `aws` — Amazon Web Services.
-	* `gcloud` — Google Cloud Platform.
 	* `azure` — Microsoft Azure.
+	* `gcloud` — Google Cloud Platform.
 * LOCATION — choose the location for your network:
-	* `asia-southeast1` — Singapore. Available only for Google Cloud Platform (`gcloud`).
 	* `ap-southeast-1` — Singapore. Available only for Amazon Web Services (`aws`).
+	* `us-east-1` — the United States, Northern Virginia. Available only for Amazon Web Services (`aws`).
 	* `us-west-2` — the United States, Oregon. Available only for Amazon Web Services (`aws`).
 	* `uksouth` — the United Kingdom, London. Available only for Microsoft Azure (`azure`).
+	* `asia-southeast1` — Singapore. Available only for Google Cloud Platform (`gcloud`).
 
 Example to create a Corda network on Google Cloud Platform in Singapore:
 
@@ -117,13 +118,14 @@ where
 * NETWORK_ID — the ID of the network where the node will be deployed. You can get network IDs by running `curl -X GET "$APIURL/networks/" --header "$HDR_AUTH"`.
 * CLOUD_PROVIDER — choose the cloud provider for your node:
 	* `aws` — Amazon Web Services.
-	* `gcloud` — Google Cloud Platform.
 	* `azure` — Microsoft Azure.
+	* `gcloud` — Google Cloud Platform.
 * LOCATION — choose the location for your network:
-	* `asia-southeast1` — Singapore. Available only for Google Cloud Platform (`gcloud`).
 	* `ap-southeast-1` — Singapore. Available only for Amazon Web Services (`aws`).
+	* `us-east-1` — the United States, Northern Virginia. Available only for Amazon Web Services (`aws`).
 	* `us-west-2` — the United States, Oregon. Available only for Amazon Web Services (`aws`).
 	* `uksouth` — the United Kingdom, London. Available only for Microsoft Azure (`azure`).
+	* `asia-southeast1` — Singapore. Available only for Google Cloud Platform (`gcloud`).
 
 Example to add a node on Microsoft Azure in London:
 
