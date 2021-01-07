@@ -141,13 +141,21 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Ether
 1. In the network selector, click **Custom RPC**.
 1. In the **New RPC URL** field, enter the URL in the following format:
 
-https://USERNAME:PASSWORD@RPC_ENDPOINT
+    https://USERNAME:PASSWORD@RPC_ENDPOINT
 
-where
+    where
 
-* USERNAME — your Ethereum node access username.
-* PASSWORD — your Ethereum node access password.
-* RPC_ENDPOINT — your Ethereum node RPC endpoint.
+    * USERNAME — your Ethereum node access username.
+    * PASSWORD — your Ethereum node access password.
+    * RPC_ENDPOINT — your Ethereum node RPC endpoint.
+
+1. In the **Chain ID** field, enter the ID of the network:
+
+    * Mainnet: `1`
+    * Ropsten: `3`
+    * Rinkeby: `4`
+
+1. Click **Save**.
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
