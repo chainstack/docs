@@ -41,14 +41,6 @@ This will export two files:
 
 Place the PEM certificate container in the directory that was created at the previous step when you unarchived the exported organization identity file.
 
-#### Export the peer connection profile
-
-1. On Chainstack, navigate to your network.
-1. Select your node.
-1. Click **Export**.
-
-This will export the peer connection profile in JSON.
-
 #### Run the fabric-tools Docker container
 
 ``` sh
@@ -84,7 +76,7 @@ where
 
 * PEER_RPC_ENDPOINT — the RPC endpoint of your peer. On Chainstack, navigate to your peer; click **Access and credentials** > **RPC endpoint**.
 * MOUNT_DIRECTORY — the name of the directory that you mounted at the previous step.
-* MSP_ID — the ID of your organization. To get the ID, open the peer connection profile you exported eariler and copy the `msp_id` value.
+* MSP_ID — the ID of your organization. To get the ID, click your deployed network and then **Details**.
 * IDENTITY_CERTIFICATE — the identity certificate container file that is in the `/msp/tlscacerts` directory.
 * ORDERER_CERTIFICATE — the orderer certificate container file that you exported at a previous step.
 * ORDERER_RPC_ENDPOINT — the RPC endpoint of your orderer. On Chainstack, navigate to your network; click **Service nodes** > **Orderer** > **RPC endpoint**.

@@ -27,7 +27,7 @@ A Corda identity consists of the following Java KeyStore (JKS) files:
 ### Add a new identity
 
 1. Complete steps 1 and 2 of the [Corda Network Foundation guide](https://corda.network/participation/index/).
-1. On Chainstack, navigate to [your vault](https://console.chainstack.com/vault). Click **Add identity**.
+1. On Chainstack, navigate to [your vault](https://console.chainstack.com/vault). Click **Identities** > **Add identity**.
 1. Under **Blockchain protocol**, select **Corda**.
 1. Under **Issuing network**, select **Corda Network** or **Corda Pre-Production Network**. Click **Next**.
 1. Under **Identification**, provide the email and X.500 name that you used to sign up with the Corda Network Foundation.
