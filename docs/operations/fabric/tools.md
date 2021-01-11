@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Learn how to connect to a Hyperledger Fabric peer, how to package, install, approve, and commit chaincodes.
+    content: Learn how to connect to a Hyperledger Fabric peer, package, install, approve, and commit chaincodes.
   - name: keywords
-    content: hyperledger fabric chaincode install commit
+    content: hyperledger fabric chaincode install commit vscode ibm
 ---
 
 # Tools
@@ -18,22 +18,36 @@ Interact with your Hyperledger Fabric peer using [the fabric-tools Docker contai
 
 ### Connect to your peer
 
-#### Export the organization identity of your network and the peer
+#### Export the organization identity of your network
 
-1. In the platform UI, navigate to your deployed peer.
-1. Next to **Organization identity**, click **Export**.
+1. On Chainstack, navigate to your [vault](/glossary/vault).
+1. Select your Hyperledger Fabric identity issued by [cryptogen](/glossary/cryptogen).
+1. Click **Export**.
 
-This will export the peer and the organization certificates and the user in a ZIP archive. Unarchive the exported file.
+This will export the organization certificates in a ZIP archive. Unarchive the exported file.
 
-Unarchiving the exported file will create a directory named after your organization's MSP ID. For example, `RG-123-456-MSP`.
+Unarchiving the exported file will create a directory named after your organization's identity. For example, `id-123-456-7`.
 
 #### Export the orderer certificate of your network
 
-1. In the platform UI, navigate to your network.
+1. On Chainstack, navigate to your network.
 1. Select **Service nodes** > **Orderer**.
-1. Click **Export TLS certificate**.
+1. Click **Export**.
 
-This will export the orderer certificate. Place the certificate in the directory that was created at the previous step when you unarchived the exported organization identity file.
+This will export two files:
+
+* The orderer certificate container in PEM.
+* The orderer connection profile in JSON.
+
+Place the PEM certificate container in the directory that was created at the previous step when you unarchived the exported organization identity file.
+
+#### Export the peer connection profile
+
+1. On Chainstack, navigate to your network.
+1. Select your node.
+1. Click **Export**.
+
+This will export the peer connection profile in JSON.
 
 #### Run the fabric-tools Docker container
 
@@ -49,7 +63,7 @@ where
 Example:
 
 ``` sh
-docker run -v /home/user/RG-123-456-MSP/:/data -it hyperledger/fabric-tools:2.2.0 /bin/ash
+docker run -v /home/user/id-123-456-7/:/data -it hyperledger/fabric-tools:2.2.0 /bin/ash
 ```
 
 #### Provide connection details and certificate paths
@@ -58,32 +72,31 @@ In the running Docker container, provide the following:
 
 ``` sh
 export CORE_PEER_ADDRESS=PEER_RPC_ENDPOINT
-export CORE_PEER_MSPCONFIGPATH=/MOUNT_DIRECTORY/users/ADMIN_USER_DIRECTORY/msp/
+export CORE_PEER_MSPCONFIGPATH=/MOUNT_DIRECTORY/msp/
 export CORE_PEER_LOCALMSPID="MSP_ID"
 export CORE_PEER_TLS_ENABLED=true
-export CORE_PEER_TLS_ROOTCERT_FILE=/MOUNT_DIRECTORY/peers/PEER_DIRECTORY/tls/ca.crt
+export CORE_PEER_TLS_ROOTCERT_FILE=/MOUNT_DIRECTORY/msp/tlscacerts/IDENTITY_CERTIFICATE
 export ORDERER_CA=/MOUNT_DIRECTORY/ORDERER_CERTIFICATE
 export ORDERER_ADDRESS=ORDERER_RPC_ENDPOINT
 ```
 
 where
 
-* PEER_RPC_ENDPOINT — the RPC endpoint of your peer. In the platform UI, navigate to your peer; click **Access and credentials** > **RPC endpoint**.
+* PEER_RPC_ENDPOINT — the RPC endpoint of your peer. On Chainstack, navigate to your peer; click **Access and credentials** > **RPC endpoint**.
 * MOUNT_DIRECTORY — the name of the directory that you mounted at the previous step.
-* ADMIN_USER_DIRECTORY — the directory of your admin user that has the certificates. Exported at a previous step.
-* MSP_ID — the ID of your organization. In the platform UI, navigate to your peer; click **Organization identity** > **MSP ID**.
-* PEER_DIRECTORY — the directory of your peer that has the certificates. Exported at a previous step.
-* ORDERER_CERTIFICATE — name and path of the certificate file that you exported at a previous step.
-* ORDERER_RPC_ENDPOINT — the RPC endpoint of your orderer. In the platform UI, navigate to your network; click **Service nodes** > **Orderer** > **RPC endpoint**.
+* MSP_ID — the ID of your organization. To get the ID, open the peer connection profile you exported eariler and copy the `msp_id` value.
+* IDENTITY_CERTIFICATE — the identity certificate container file that is in the `/msp/tlscacerts` directory.
+* ORDERER_CERTIFICATE — the orderer certificate container file that you exported at a previous step.
+* ORDERER_RPC_ENDPOINT — the RPC endpoint of your orderer. On Chainstack, navigate to your network; click **Service nodes** > **Orderer** > **RPC endpoint**.
 
 Example:
 
 ``` sh
 export CORE_PEER_ADDRESS=nd-123-456-789.rg-123-456.p2pify.com:7051
-export CORE_PEER_MSPCONFIGPATH=/data/users/Admin@rg-123-456.p2pify.com/msp/
+export CORE_PEER_MSPCONFIGPATH=/data/msp/
 export CORE_PEER_LOCALMSPID="RG-123-456-MSP"
 export CORE_PEER_TLS_ENABLED=true
-export CORE_PEER_TLS_ROOTCERT_FILE=/data/peers/nd-123-456-789.rg-123-456.p2pify.com/tls/ca.crt
+export CORE_PEER_TLS_ROOTCERT_FILE=/data/msp/tlscacerts/tlsca.rg-123-456.p2pify.com-cert.pem
 export ORDERER_CA=/data/nd-123-456-789-cert.pem
 export ORDERER_ADDRESS=nd-123-456-789.rg-123-456.p2pify.com:7050
 ```
@@ -206,7 +219,7 @@ $ peer lifecycle chaincode approveformyorg --name fabcar --package-id fabcar:6ab
 #### Query the approved chaincode
 
 ``` sh
-$ peer lifecycle chaincode queryapproved --channelID CHANNEL_ID -n CHAINCODE_NAME
+peer lifecycle chaincode queryapproved --channelID CHANNEL_ID -n CHAINCODE_NAME
 ```
 
 where
@@ -285,7 +298,62 @@ Name: fabcar, Version: 1.0.0, Sequence: 1, Endorsement Plugin: escc, Validation 
 
 ## Development tools
 
-See [Hyperledger Fabric: Developing Applications](https://hyperledger-fabric.readthedocs.io/en/latest/developapps/developing_applications.html).
+### Visual Studio Code
+
+You can use the [Hyperledger Fabric extension for VS Code](https://github.com/IBM-Blockchain/blockchain-vscode-extension) with a Chainstack-deployed Hyperledger Fabric network.
+
+#### Prerequisites
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [IBM Blockchain Platform Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform)
+
+#### Export the identity
+
+1. On Chainstack, click **Vault** > **Identities**.
+1. Select your identity issued by [cryptogen](/glossary/cryptogen).
+1. Click the identity and click **Export**.
+
+Unarchive the exported file.
+
+#### Export the peer connection profile
+
+1. On Chainstack, navigate to your network and click your peer node.
+1. Next to **Access and credentials**, click **Export**.
+
+This will export the peer connection profile in JSON.
+
+#### Export the orderer connection profile
+
+1. On Chainstack, navigate to your network.
+1. Select **Service nodes** > **Orderer**.
+1. Click **Export**.
+
+This will export two files:
+
+* The orderer certificate container in PEM.
+* The orderer connection profile in JSON.
+
+You only need the orderer connection profile in JSON.
+
+#### Connect to the network in VS Code
+
+1. In VS Code, under **Fabric environments**, click the plus sign (**+**).
+1. Select **Add any other Fabric network**.
+1. Give any name to the network.
+1. Browse to the JSON connection profile for your peer node that you exported earlier.
+1. Click **Add more JSON definitions**.
+1. Browse to the JSON connection profile for your orderer node that exported earlier.
+1. In VS code, click your network.
+1. Click any of the two nodes that you now have there and select **Add new wallet** > **Create new wallet**.
+1. Give any name to the wallet.
+1. Click **Add identity**.
+1. Click **Provide certificate and private key files**.
+1. Give any name to the identity.
+1. Browse for the certificate file. The certificate file is in the directory you unarchived when you exported the identity as the first step of this article. The path in directory is `/msp/singcerts/XXXX-cert.pem`.
+1. Browse for the private key file. The certificate file is in the directory you unarchived when you exported the identity as the first step of this article. The path in directory is `/msp/keystore/priv_sk`
+1. Once the identity is created, click **Yes** to associate it with the remaining node.
+
+You can now connect to your Hyperledger Fabric network from VS Code and deploy chaincodes to it.
 
 ::: tip See also
 
