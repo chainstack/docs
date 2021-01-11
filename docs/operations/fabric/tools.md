@@ -341,17 +341,16 @@ You only need the orderer connection profile in JSON.
 1. Select **Add any other Fabric network**.
 1. Give any name to the network.
 1. Browse to the JSON connection profile for your peer node that you exported earlier.
-1. Click **Add more JSON definitions**.
-1. Browse to the JSON connection profile for your orderer node that exported earlier.
-1. In VS code, click your network.
-1. Click any of the two nodes that you now have there and select **Add new wallet** > **Create new wallet**.
+1. Click **Done adding nodes**.
+1. Under **Any networks**, click the peer node that you added.
+1. Click **Add new wallet** > **Create new wallet**.
 1. Give any name to the wallet.
-1. Click **Add identity**.
-1. Click **Provide certificate and private key files**.
-1. Give any name to the identity.
-1. Browse for the certificate file. The certificate file is in the directory you unarchived when you exported the identity as the first step of this article. The path in directory is `/msp/singcerts/XXXX-cert.pem`.
-1. Browse for the private key file. The certificate file is in the directory you unarchived when you exported the identity as the first step of this article. The path in directory is `/msp/keystore/priv_sk`
-1. Once the identity is created, click **Yes** to associate it with the remaining node.
+1. Click **Add identity** > **Provide a JSON identity file from IBM Blockchain Platform**.
+1. Browse for the `identity.json` file that is in the directory you unarchived when you exported the identity.
+1. Click **Nodes** > **Import Nodes**.
+1. Browse to the JSON connection profile for your orderer node that exported earlier.
+1. Click **Done adding nodes**.
+1. Click the orderer node that you added and select the wallet and the identity that you created when setting up the peer node.
 
 You can now connect to your Hyperledger Fabric network from VS Code and deploy chaincodes to it.
 
