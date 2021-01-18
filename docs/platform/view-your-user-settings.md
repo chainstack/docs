@@ -8,9 +8,10 @@ meta:
 
 # View your user settings
 
-* [Personal settings](https://console.chainstack.com/user/settings/personal)
-* [Organization setting](https://console.chainstack.com/user/settings/organization)
+* [Personal](https://console.chainstack.com/user/settings/personal)
+* [Organization](https://console.chainstack.com/user/settings/organization)
 * [Billing](https://console.chainstack.com/user/settings/billing)
+* [API keys](https://console.chainstack.com/user/settings/api-keys)
 
 ::: tip See also
 
