@@ -8,6 +8,17 @@ meta:
 
 # Release notes
 
+## Chainstack 2.2
+
+*January 19, 2021*
+
+### What's new
+
+* **Private hosting**. Connect your Chainstack organization to Amazon Elastic Kubernetes Service (EKS), and use your EKS clusters to host your blockchain nodes and networks. 
+* **AWS US East region**. You can now deploy your nodes and networks in the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions" target="_blank">AWS US East, Northern Virginia</a> region.
+* **Identity issuers**. You can now manage services, capable of issuing and revoking digital identities for Hyperledger Fabric networks. You will be able to add, delete, and use cryptogen as an identity issuer for Hyperledger Fabric networks.
+
+
 ## Chainstack 2.1.2
 
 *November 2, 2020*
