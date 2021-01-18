@@ -24,7 +24,7 @@ A Corda identity consists of the following Java KeyStore (JKS) files:
 ## Add a new identity
 
 1. Complete steps 1 and 2 of the [Corda Network Foundation guide](https://corda.network/participation/index/).
-1. On Chainstack, navigate to [your vault](https://console.chainstack.com/vault). Click **Add identity**.
+1. On Chainstack, navigate to  <a href="https://console.chainstack.com/vault" target="_blank">your vault</a>. Click **Add identity**.
 1. Under **Blockchain protocol**, select **Corda**.
 1. Under **Issuing network**, select **Corda Network** or **Corda Pre-Production Network**. Click **Next**.
 1. Under **Identification**, provide the email and X.500 name that you used to sign up with the Corda Network Foundation.
@@ -38,14 +38,14 @@ You may want to export your existing identity from the vault to host a Corda nod
 
 To export an identity:
 
-1. Navigate to [your vault](https://console.chainstack.com/vault) and select the identity to export.
+1. Navigate to <a href="https://console.chainstack.com/vault" target="_blank">your vault</a> and select the identity to export.
 1. Click **Export**.
 
 This will download the identity keystore files.
 
 ## Delete an identity
 
-1. Navigate to [your vault](https://console.chainstack.com/vault) and select the identity to delete.
+1. Navigate to <a href="https://console.chainstack.com/vault" target="_blank">your vault</a> and select the identity to delete.
 1. Click **Edit** > **Delete**.
 
 This will irrevocably delete the identity keystore files.
