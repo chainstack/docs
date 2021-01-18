@@ -301,9 +301,10 @@ You can use the [Hyperledger Fabric extension for VS Code](https://github.com/IB
 
 #### Export the identity
 
-1. On Chainstack, click **Vault** > **Identities**.
-1. Select your identity issued by [cryptogen](/glossary/cryptogen).
-1. Click the identity and click **Export**.
+1. Navigate to your Hyperledger Fabric network.
+1. Click **Details**.
+1. Select the identity in **Admin identity**.
+1. Click **Export**.
 
 Unarchive the exported file.
 

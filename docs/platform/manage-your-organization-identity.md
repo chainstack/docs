@@ -56,13 +56,25 @@ This will irrevocably delete the identity keystore files.
 
 ## Manage your Hyperledger Fabric identity
 
-A Hyperledger Fabric identity is a private key and a collection of cerftificate containers. See Hyperledger Fabric documentation: [Identity](https://hyperledger-fabric.readthedocs.io/en/release-2.2/identity/identity.html).
+A Hyperledger Fabric identity is a private key and a cerftificate. See Hyperledger Fabric documentation: [Identity](https://hyperledger-fabric.readthedocs.io/en/release-2.2/identity/identity.html).
+
+A Hyperledger Fabric identity issuer is the entity issuing certificates. Chainstack supports [cryptogen](/glossary/cryptogen) or [Fabric CA](/glossary/fabric-ca) as an identity issuer.
 
 ### Add a new identity
 
-By default, your identity is issued automatically by [Cryptogen](/glossary/cryptogen).
+By default, your identity is issued automatically by [cryptogen](/glossary/cryptogen).
 
 If you would like to use [Fabric CA](/glossary/fabric-ca) as identity issuer, <a href="https://chainstack.com/contact/" target="_blank">contact Chainstack</a>.
+
+### Add a new identity issuer
+
+1. Navigate to [your vault](https://console.chainstack.com/vault)
+1. Click **Issuers** > **Add**.
+1. Select **Hyperledger Fabric**.
+1. Select [cryptogen](/glossary/cryptogen).
+1. Click **Add issuer**.
+
+This will generate an identity issuer.
 
 ### Export an identity
 
