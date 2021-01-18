@@ -19,6 +19,6 @@ You can also deploy your own Corda network. See [Deploy a consortium network](/p
 
 ::: tip See also
 
-* [Manage your organization's identity](/platform/manage-your-organization-identity)
+* [Manage your organization's identities](/platform/manage-your-organizations-identities)
 
 :::

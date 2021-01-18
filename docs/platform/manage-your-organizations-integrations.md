@@ -6,11 +6,16 @@ meta:
     content: private amazon aws cluster integration blockchain deploy kubernetes k8s
 ---
 
-# Manage your organization's integration
+# Manage your organization's integrations
 
-You can add [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/) or a self-managed Kubernetes cluster as an integration to deploy your nodes and networks to it.
+You can add the following Kubernetes clusters as an integration to deploy your nodes and networks to:
 
-While Chainstack supports Amazon EKS out of the box, to add a self-managed Kubernetes cluster, please <a href="https://chainstack.com/contact/" target="_blank">contact us</a>.
+* [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)
+* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/)
+* [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine)
+* Self-managed Kubernetes cluster.
+
+While Chainstack supports Amazon EKS out of the box, to add other Kubernetes clusters, please <a href="https://chainstack.com/contact/" target="_blank">contact us</a>.
 
 For instructions on how to set up your Amazon EKS cluster for Chainstack integration, see <a href="https://support.chainstack.com/hc/en-us/articles/900004174426" target="_blank">Setting up an Amazon EKS cluster to integrate with Chainstack</a>.
 

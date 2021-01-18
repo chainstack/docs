@@ -14,7 +14,7 @@ The identity keystore files are stored using AES-256 encryption.
 
 ::: tip See also
 
-* [Manage your organization's identity](/platform/manage-your-organization-identity)
+* [Manage your organization's identities](/platform/manage-your-organizations-identities)
 * [Join a public network](/platform/join-a-public-network)
 * [Vault](/glossary/vault)
 

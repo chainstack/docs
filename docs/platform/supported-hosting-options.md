@@ -3,15 +3,15 @@ meta:
   - name: description
     content: Deploy your blockchain nodes and networks to your own Kubernetes cluster.
   - name: keywords
-    content: amazon eks blockchain hosting cluster kubernetes k8s
+    content: amazon eks blockchain hosting cluster infrastructure
 ---
 
 # Supported hosting options
 
 Chainstack supports the following hosting options:
 
-* Chainstack-provided — deployment to cloud providers. See [Supported cloud providers](/platform/supported-cloud-hosting-providers).
-* Private — deployment to a Kubernetes cluster. See [Manage your organization's integration](/platform/manage-your-organization-integration).
+* Chainstack-provided — deployment to the Chainstack-managed cloud infrastructure. See [Supported cloud providers](/platform/supported-cloud-hosting-providers). Requires no additional setup.
+* Private — deployment to a self-managed infrastructure. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations). Requires infrastructure setup.
 
 ::: tip See also
 
