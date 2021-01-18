@@ -6,7 +6,7 @@ meta:
     content: key identity vault secure certificate corda hyperledger fabric
 ---
 
-# Manage your organization's identity
+# Manage your organization's identities
 
 You can add and delete new identities in your organization's [vault](https://console.chainstack.com/vault).
 
@@ -140,7 +140,7 @@ This will irrevocably delete the both the identity and the identity issuer priva
 ::: tip See also
 
 * [Join a public network](/platform/join-a-public-network)
-* [View your organization's vault](/platform/view-your-organization-vault)
+* [View your organization's vault](/platform/view-your-organizations-vault)
 * [Vault](/glossary/vault)
 
 :::

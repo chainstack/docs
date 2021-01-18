@@ -18,6 +18,6 @@ The key encryption keys are stored in a key management service—a service built
 
 ::: tip See also
 
-* [Manage your organization's identity](/platform/manage-your-organization-identity)
+* [Manage your organization's identities](/platform/manage-your-organizations-identities)
 
 :::
