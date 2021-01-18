@@ -38,6 +38,8 @@ Once the integration is validated, you can use it to deploy your nodes and netwo
 1. Select an integration.
 1. Click **Edit** > **Delete**.
 
+This will delete Chainstack-added Pods from the cluster. This will not delete the cert-manager.
+
 ::: tip See also
 
 * [Deploy a consortium network](/platform/deploy-a-consortium-network)
