@@ -34,7 +34,7 @@ Unarchiving the exported file will create a directory named after your organizat
 1. Select **Service nodes** > **Orderer**.
 1. Click **Export**.
 
-This will export two files:
+This will export a ZIP with the following files:
 
 * The orderer certificate container in PEM.
 * The orderer connection profile in JSON.

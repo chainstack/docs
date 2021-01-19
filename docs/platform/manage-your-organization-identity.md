@@ -35,6 +35,15 @@ A Corda identity consists of the following Java KeyStore (JKS) files:
 
 This will send the new certificate signing request to the Corda Network Foundation. Once the Corda Network Foundation approves your request, you will be able to deploy your nodes in Corda Network or Corda Pre-Production Network using this identity.
 
+### View an identity
+
+To view an identity:
+
+1. Navigate to [your vault](https://console.chainstack.com/vault)
+1. Click **Identities** and select the identity to view.
+
+This will show the details of the identity.
+
 ### Export an identity
 
 You may want to export your existing identity from the vault to host a Corda node elsewhere as part of Corda Network or Corda Pre-Production Network.
@@ -60,11 +69,22 @@ A Hyperledger Fabric identity is a private key and a cerftificate. See Hyperledg
 
 A Hyperledger Fabric identity issuer is the entity issuing certificates. Chainstack supports [cryptogen](/glossary/cryptogen) or [Fabric CA](/glossary/fabric-ca) as an identity issuer.
 
+Each organization on Chainstack must have an identity and an identity issuer to deploy a Hyperledger Fabric network or add a node to an existing network.
+
 ### Add a new identity
 
 By default, your identity is issued automatically by [cryptogen](/glossary/cryptogen).
 
 If you would like to use [Fabric CA](/glossary/fabric-ca) as identity issuer, <a href="https://chainstack.com/contact/" target="_blank">contact Chainstack</a>.
+
+### View an identity
+
+To view an identity:
+
+1. Navigate to [your vault](https://console.chainstack.com/vault)
+1. Click **Identities** and select the identity to view.
+
+This will show the details of the identity.
 
 ### Add a new identity issuer
 
@@ -74,7 +94,16 @@ If you would like to use [Fabric CA](/glossary/fabric-ca) as identity issuer, <a
 1. Select [cryptogen](/glossary/cryptogen).
 1. Click **Add issuer**.
 
-This will generate an identity issuer.
+This will add an identity issuer and create an admin identity.
+
+### View an identity issuer
+
+To view an identity issuer:
+
+1. Navigate to [your vault](https://console.chainstack.com/vault)
+1. Click **Issuers** and select the identity issuer to view.
+
+This will show the details of the identity issuer.
 
 ### Export an identity
 
@@ -98,12 +127,7 @@ This will download the identity issuer private key and certficate files.
 
 ### Delete an identity
 
-You can only delete an identity after deleting its identity issuer.
-
-1. Navigate to [your vault](https://console.chainstack.com/vault) and select the identity to delete.
-1. Click **Edit** > **Delete**.
-
-This will irrevocably delete the identity private key and certificate files.
+You can only delete an identity by deleting its issuer.
 
 ### Delete an identity issuer
 
@@ -112,7 +136,7 @@ You can only delete an identity issuer after deleting the associated network.
 1. Navigate to [your vault](https://console.chainstack.com/vault) and select the identity issuer to delete.
 1. Click trash icon next to the identity issuer.
 
-This will irrevocably delete the identity issuer private key and certificate files.
+This will irrevocably delete the both the identity and the identity issuer private keys and certificate files.
 
 ::: tip See also
 

@@ -226,6 +226,7 @@ module.exports = {
                     '/glossary/fabric-ca',
                     '/glossary/hybrid',
                     '/glossary/identity',
+                    '/glossary/identity-issuer',
                     '/glossary/member',
                     '/glossary/network',
                     '/glossary/node',
