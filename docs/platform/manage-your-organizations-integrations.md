@@ -17,7 +17,9 @@ You can add the following Kubernetes clusters as an integration to deploy your n
 
 While Chainstack supports Amazon EKS out of the box, to add other Kubernetes clusters, please <a href="https://chainstack.com/contact/" target="_blank">contact us</a>.
 
-For instructions on how to set up your Amazon EKS cluster for Chainstack integration, see <a href="https://support.chainstack.com/hc/en-us/articles/900004174426" target="_blank">Setting up an Amazon EKS cluster to integrate with Chainstack</a>.
+The integrations feature is available on the Business and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
+
+For instructions on how to create an IAM user with programmatic access, node group size requirements, and how to set up your Amazon EKS cluster for Chainstack integration, see <a href="https://support.chainstack.com/hc/en-us/articles/900004174426" target="_blank">Setting up an Amazon EKS cluster to integrate with Chainstack</a>.
 
 ## Add Amazon EKS as an integration
 
