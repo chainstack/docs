@@ -19,7 +19,7 @@ You can currently join the public Ethereum, Bitcoin, and Corda networks.
 1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/ethereum/modes).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
 	* For Chainstack hosting, select a cloud provider.
-	* For private hosting, select an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
+	* For private hosting, select or add an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
 1. Provide a node name. Click **Next**.
 1. Review your changes and click **Join network**.
 
