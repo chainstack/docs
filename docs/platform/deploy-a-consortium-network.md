@@ -10,7 +10,7 @@ meta:
 
 Chainstack supports [cloud](/glossary/cloud) and [hybrid](/glossary/hybrid) deployment of consortium blockchain networks.
 
-Deployment of multicloud and hybrid hosting networks is available starting from the Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plan</a>.
+Deployment of cross-cloud, cross-region and hybrid networks is available starting from the Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plan</a>.
 
 ## Deploy a Hyperledger Fabric network
 
