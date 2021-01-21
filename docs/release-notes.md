@@ -15,8 +15,8 @@ meta:
 ### What's new
 
 * **Private hosting**. Connect your Chainstack organization to Amazon Elastic Kubernetes Service (EKS), and use your EKS clusters to host your blockchain nodes and networks. 
-* **Amazon Web Services US East region**. You can now deploy your nodes and networks in the [AWS US East, Northern Virginia](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions) region.
-* **Identity issuers**. You can now manage services, capable of issuing and revoking digital identities for Hyperledger Fabric networks. You will be able to add, delete, and use cryptogen as an identity issuer for Hyperledger Fabric networks.
+* **Clouds**. You can now deploy your nodes and networks in the <a href="https://support.chainstack.com/hc/en-us/articles/360024804711-Data-center-locations" target="_blank">Amazon Web Services US East</a> region.
+ **Identity management**. You can now securely manage your organization's identity for Hyperledger Fabric networks. See also [Manage your organization's identity](/platform/manage-your-organization-identity).
 
 
 ## Chainstack 2.1.2
