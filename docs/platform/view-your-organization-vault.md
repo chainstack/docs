@@ -6,15 +6,15 @@ meta:
     content: blockchain vault key certificate identity
 ---
 
-# View your organization's vault
+# View your organization vault
 
-[Vault](https://console.chainstack.com/vault) is a secure encrypted storage for your organization's identities.
+[Vault](https://console.chainstack.com/vault) is a secure encrypted storage for your organization identities.
 
 The identity keystore files are stored using AES-256 encryption.
 
 ::: tip See also
 
-* [Manage your organization's identities](/platform/manage-your-organizations-identities)
+* [Manage your organization identities](/platform/manage-your-organization-identities)
 * [Join a public network](/platform/join-a-public-network)
 * [Vault](/glossary/vault)
 

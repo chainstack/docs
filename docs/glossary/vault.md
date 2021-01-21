@@ -1,14 +1,14 @@
 ---
 meta:
   - name: description
-    content: A vault is a a secure encrypted storage for your organization's identities on the Chainstack managed blockchain services platform.
+    content: A vault is a a secure encrypted storage for your organization identities on the Chainstack managed blockchain services platform.
   - name: keywords
     content: vault identity encryption store keys
 ---
 
 # Vault
 
-[Vault](https://console.chainstack.com/vault) is a secure storage for your organization's identities.
+[Vault](https://console.chainstack.com/vault) is a secure storage for your organization identities.
 
 All identity key material in the vault is split into data chunks. Each chunk is AES-256 encrypted with a unique key.
 
@@ -18,6 +18,6 @@ The key encryption keys are stored in a key management service—a service built
 
 ::: tip See also
 
-* [Manage your organization's identities](/platform/manage-your-organizations-identities)
+* [Manage your organization identities](/platform/manage-your-organization-identities)
 
 :::
