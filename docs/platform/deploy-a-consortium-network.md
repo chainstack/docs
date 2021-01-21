@@ -20,7 +20,7 @@ Deployment of cross-cloud, cross-region and hybrid networks is available startin
 1. The consensus algorithm is [Raft](/blockchains/fabric#consensus). Click **Next**.
 1. Under **Identity issuer**, select or add an identity issuer. See [Manage your organization's identities](/platform/manage-your-organizations-identities).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
-	* For Chainstack hosting, select a cloud provider.
+	* For Chainstack hosting, select a cloud provider and a region.
 	* For private hosting, select or add an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
 1. Review your changes and click **Create network**.
 
