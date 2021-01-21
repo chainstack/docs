@@ -10,7 +10,7 @@ meta:
 
 ## Chainstack 2.2
 
-*January 25, 2021*
+*January 22, 2021*
 
 ### What's new
 
