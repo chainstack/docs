@@ -68,7 +68,7 @@ You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Growth
 
 You can query data using the graphical interface.
 
-1. In the platform UI, navigate to your dedicated Ethereum node. See [View node access and credentials](/platform/view-node-access-and-credentials).
+1. On Chainstack, navigate to your dedicated Ethereum node. See [View node access and credentials](/platform/view-node-access-and-credentials).
 1. Hover over **GraphQL IDE URL** and click **Open**.
 1. In the graphical interface that opens, run a GraphQL query.
 
