@@ -306,7 +306,15 @@ You can use the [Hyperledger Fabric extension for VS Code](https://github.com/IB
 1. Select the identity in **Admin identity**.
 1. Click **Export**.
 
-Unarchive the exported file.
+This will export the organization certificates in a ZIP archive. Unarchive the exported file.
+
+#### Export the network connection profile
+
+1. Navigate to your Hyperledger Fabric network.
+1. Click **Details**.
+1. Click **Export connection profile**.
+
+This will export the network connection profile in JSON.
 
 #### Export the peer connection profile
 
@@ -335,17 +343,34 @@ You only need the orderer connection profile in JSON.
 1. Give any name to the network.
 1. Browse to the JSON connection profile for your peer node that you exported earlier.
 1. Click **Done adding nodes**.
-1. Under **Any networks**, click the peer node that you added.
+1. Under **Other networks**, click the peer node that you added.
 1. Click **Add new wallet** > **Create new wallet**.
 1. Give any name to the wallet.
 1. Click **Add identity** > **Provide a JSON identity file from IBM Blockchain Platform**.
 1. Browse for the `identity.json` file that is in the directory you unarchived when you exported the identity.
-1. Click **Nodes** > **Import Nodes**.
+1. Click **Nodes** > **Import nodes**.
 1. Browse to the JSON connection profile for your orderer node that exported earlier.
 1. Click **Done adding nodes**.
 1. Click the orderer node that you added and select the wallet and the identity that you created when setting up the peer node.
 
 You can now connect to your Hyperledger Fabric network from VS Code and deploy chaincodes to it.
+
+#### Create a gateway to the network in VS Code
+
+1. In VS Code, under **Fabric gateways**, click the plus sign (**+**).
+1. Select one of the following options:
+   * **Create a gateway from a connection profile** — select this option if you have not connected to the network as described in the previous section.
+   * **Create a gateway from a Fabric environment** — select this option if you have connected to the network as described in the previous section. Then select the network. This will create the gateway.
+1. If you are creating the gateway from a connection profile, type in a name for the gateway and select the network connection profile that you exported previously.
+1. If you have a wallet created, associate an existing wallet with the gateway.
+1. If you do not have a wallet, under **Fabric wallets**, click the plus sign (**+**).
+1. Click **Create a new wallet and add an identity**. Give the wallet any name.
+1. Provide the MSP ID. To find the MSP ID, navigate to your Hyperledger Fabric network on Chainstack, click **Details**, copy the **MSP ID** value.
+1. Click **Provide a JSON identity file from IBM Blockchain Platform**.
+1. Browse for the `identity.json` file that is in the directory you unarchived when you exported the identity.
+1. Under **Fabric gateways**, right-click the gateway and select **Associate a wallet**. Associate the wallet that you created.
+
+This will create the Hyperledger Fabric network gateway.
 
 ::: tip See also
 
