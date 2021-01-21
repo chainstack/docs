@@ -21,7 +21,7 @@ Deployment of multicloud and hybrid hosting networks is available starting from 
 1. Under **Identity issuer**, select or add an identity issuer. See [Manage your organization's identities](/platform/manage-your-organizations-identities).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
 	* For Chainstack hosting, select a cloud provider.
-	* For private hosting, select an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
+	* For private hosting, select or add an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
 1. Review your changes and click **Create network**.
 
 The network status will change from **Pending** to **OK** once deployed.
