@@ -6,7 +6,7 @@ meta:
     content: private amazon aws cluster integration blockchain deploy kubernetes k8s
 ---
 
-# Manage your organization's integrations
+# Manage your organization integrations
 
 You can add the following Kubernetes clusters as an integration to deploy your nodes and networks to:
 

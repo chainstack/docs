@@ -11,7 +11,7 @@ meta:
 Chainstack supports the following hosting options:
 
 * Chainstack-provided — deployment to the Chainstack-managed cloud infrastructure. See [Supported cloud providers](/platform/supported-cloud-hosting-providers). Requires no additional setup.
-* Private — deployment to a self-managed infrastructure. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations). Requires infrastructure setup.
+* Private — deployment to a self-managed infrastructure. See [Manage your organization integrations](/platform/manage-your-organization-integrations). Requires infrastructure setup.
 
 ::: tip See also
 

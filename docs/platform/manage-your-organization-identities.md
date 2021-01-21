@@ -1,14 +1,14 @@
 ---
 meta:
   - name: description
-    content: Manage your organization's identities consisting of key pairs and certificates securely with the Chainstack vault.
+    content: Manage your organization identities consisting of key pairs and certificates securely with the Chainstack vault.
   - name: keywords
     content: key identity vault secure certificate corda hyperledger fabric
 ---
 
-# Manage your organization's identities
+# Manage your organization identities
 
-You can add and delete new identities in your organization's [vault](https://console.chainstack.com/vault).
+You can add and delete new identities in your organization [vault](https://console.chainstack.com/vault).
 
 Chainstack currently supports identity management for the following networks:
 
@@ -140,7 +140,7 @@ This will irrevocably delete the both the identity and the identity issuer priva
 ::: tip See also
 
 * [Join a public network](/platform/join-a-public-network)
-* [View your organization's vault](/platform/view-your-organizations-vault)
+* [View your organization vault](/platform/view-your-organization-vault)
 * [Vault](/glossary/vault)
 
 :::

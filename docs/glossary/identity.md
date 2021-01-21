@@ -14,6 +14,6 @@ All identity key material is stored in the [vault](/glossary/vault).
 
 ::: tip See also
 
-* [Manage your organization's identities](/platform/manage-your-organizations-identities)
+* [Manage your organization identities](/platform/manage-your-organization-identities)
 
 :::

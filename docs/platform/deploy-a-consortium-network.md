@@ -18,10 +18,10 @@ Deployment of multicloud and hybrid hosting networks is available starting from 
 1. Provide **Network name**.
 1. Under **Blockchain protocol**, select **Hyperledger Fabric**.
 1. The consensus algorithm is [Raft](/blockchains/fabric#consensus). Click **Next**.
-1. Under **Identity issuer**, select or add an identity issuer. See [Manage your organization's identities](/platform/manage-your-organizations-identities).
+1. Under **Identity issuer**, select or add an identity issuer. See [Manage your organization identities](/platform/manage-your-organization-identities).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
-	* For Chainstack hosting, select a cloud provider.
-	* For private hosting, select or add an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
+	* For Chainstack hosting, select a cloud provider and a region.
+	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
 1. Review your changes and click **Create network**.
 
 The network status will change from **Pending** to **OK** once deployed.
@@ -33,8 +33,8 @@ The network status will change from **Pending** to **OK** once deployed.
 1. Under **Blockchain protocol**, select **Corda**.
 1. The consensus algorithm is [Single Notary](/blockchains/corda#consensus). Click **Next**.
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
-	* For Chainstack hosting, select a cloud provider.
-	* For private hosting, select or add an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
+	* For Chainstack hosting, select a cloud provider and a region.
+	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
 1. Review your changes and click **Create network**.
 
 The network status will change from **Pending** to **OK** once deployed.
@@ -46,8 +46,8 @@ The network status will change from **Pending** to **OK** once deployed.
 1. Under **Blockchain protocol**, select **Quorum**.
 1. Under **Consensus algorithm**, select [Raft or IBFT](/blockchains/quorum#consensus). Click **Next**.
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
-	* For Chainstack hosting, select a cloud provider.
-	* For private hosting, select or add an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
+	* For Chainstack hosting, select a cloud provider and a region.
+	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
 1. Review your changes and click **Create network**.
 
 The network status will change from **Pending** to **OK** once deployed.
@@ -59,8 +59,8 @@ The network status will change from **Pending** to **OK** once deployed.
 1. Under **Blockchain protocol**, select **MultiChain**.
 1. The consensus algorithm is [Round-robin](/blockchains/multichain#consensus). Click **Next**.
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
-	* For Chainstack hosting, select a cloud provider.
-	* For private hosting, select or add an integration. See [Manage your organization's integrations](/platform/manage-your-organizations-integrations).
+	* For Chainstack hosting, select a cloud provider and a region.
+	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
 1. Review your changes and click **Create network**.
 
 The network status will change from **Pending** to **OK** once deployed.
