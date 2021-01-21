@@ -322,14 +322,14 @@ This will export the network connection profile in JSON.
 1. Next to **Access and credentials**, click **Export**.
 
 This will export the peer connection profile in JSON.
-
+ 
 #### Export the orderer connection profile
 
 1. On Chainstack, navigate to your network.
 1. Select **Service nodes** > **Orderer**.
 1. Click **Export**.
 
-This will export two files:
+This will export a ZIP archive with the following files:
 
 * The orderer certificate container in PEM.
 * The orderer connection profile in JSON.
