@@ -21,6 +21,6 @@ Chainstack supports the following identity issuers:
 
 ::: tip See also
 
-* [Manage your organization's identity](/platform/manage-your-organization-identity)
+* [Manage your organization identities](/platform/manage-your-organization-identities)
 
 :::
