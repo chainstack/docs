@@ -16,7 +16,7 @@ meta:
 
 * **Private hosting**. You can now use your own Amazon Elastic Kubernetes Service (EKS) infrastructure to deploy blockchain nodes and networks on Chainstack.
 * **Clouds**. You can now deploy your nodes and networks in the <a href="https://support.chainstack.com/hc/en-us/articles/360024804711-Data-center-locations" target="_blank">Amazon Web Services US East</a> region.
- **Identity management**. You can now securely manage your organization's identity for Hyperledger Fabric networks. See also [Manage your organization's identity](/platform/manage-your-organization-identity).
+ **Identity management**. You can now securely manage your organization's identity for Hyperledger Fabric networks. See also [Manage your organization identities](/platform/manage-your-organization-identities).
 
 ### Bug fixes
 
