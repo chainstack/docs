@@ -15,7 +15,7 @@ meta:
 1. Provide **Project name** and optionally **Description**.
 1. Click **Create**.
 
-## Public chain project
+## Create a public chain project
 
 1. Click **Create project**.
 1. Click **Public chain**.
