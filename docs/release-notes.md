@@ -116,8 +116,8 @@ See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing pl
   * [Corda Network](https://corda.network/) and [Corda Pre-Production Network](https://corda.network/participation/preprod/) support. You can now join the Corda production and pre-production networks. See also [Join a public network](/platform/join-a-public-network).
   * [Hyperledger Fabric 2.1.0](/blockchains/fabric) support.
 * **Clouds**. You can now deploy your nodes and networks in the Amazon Web Services US West region.
-* **Vault**. You can now store your Corda identity key material in a [secure vault](/glossary/vault). See also [View your organization's vault](/platform/view-your-organization-vault).
-* **Identity management**. You can now securely manage your organization's identity for the [Corda networks](/operations/corda/networks). See also [Manage your organization's identity](/platform/manage-your-organization-identity).
+* **Vault**. You can now store your Corda identity key material in a [secure vault](/glossary/vault). See also [View your organization vault](/platform/view-your-organization-vault).
+* **Identity management**. You can now securely manage your organization identity for the [Corda networks](/operations/corda/networks). See also [Manage your organization identities](/platform/manage-your-organization-identities).
 
 ### Bug fixes
 

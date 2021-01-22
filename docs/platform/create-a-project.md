@@ -8,14 +8,14 @@ meta:
 
 # Create a project
 
-To create a [consortium project](/glossary/consortium-project):
+## Create a consortium project
 
 1. Click **Create project**.
 1. Click **Consortium**.
 1. Provide **Project name** and optionally **Description**.
 1. Click **Create**.
 
-To create a [public chain project](/glossary/public-chain-project):
+## Create a public chain project
 
 1. Click **Create project**.
 1. Click **Public chain**.
@@ -25,5 +25,7 @@ To create a [public chain project](/glossary/public-chain-project):
 ::: tip See also
 
 * [Project](/glossary/project)
+* [Consortium project](/glossary/consortium-project)
+* [Public chain project](/glossary/public-chain-project)
 
 :::
