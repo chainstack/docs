@@ -10,7 +10,9 @@ meta:
 
 You can stop and start your deployed nodes.
 
-A stopped node retains its states and does not incur metered compute costs. A stopped node does incur storage costs.
+A stopped node in Chainstack-provided hosting retains its state and does not incur metered compute costs but does incur storage costs.
+
+A stopped node in private hosting does not incur maintenance costs.
 
 To stop or start a node:
 

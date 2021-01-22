@@ -8,6 +8,33 @@ meta:
 
 # Release notes
 
+## Chainstack 2.2
+
+*January 22, 2021*
+
+### What's new
+
+* **Private hosting**. You can now use your own Amazon Elastic Kubernetes Service (EKS) infrastructure to deploy blockchain nodes and networks on Chainstack.
+* **Clouds**. You can now deploy your nodes and networks in the <a href="https://support.chainstack.com/hc/en-us/articles/360024804711-Data-center-locations" target="_blank">Amazon Web Services US East</a> region.
+* **Identity management**. You can now securely manage your organization's identity for Hyperledger Fabric networks. See also [Manage your organization identities](/platform/manage-your-organization-identities).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
+## Chainstack 2.1.2
+
+*November 2, 2020*
+
+### What's new
+
+* **Billing**. You can now reattempt past due payments through billing card change or directly in the activity log. The activity log also provides more information on your billing events. 
+
+### Bug fixes
+
+* Resolved an issue with some Hyperledger Explorer instances in Fabric networks being out of sync with the blockchain state.
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.1
 
 *September 16, 2020*
@@ -89,8 +116,8 @@ See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing pl
   * [Corda Network](https://corda.network/) and [Corda Pre-Production Network](https://corda.network/participation/preprod/) support. You can now join the Corda production and pre-production networks. See also [Join a public network](/platform/join-a-public-network).
   * [Hyperledger Fabric 2.1.0](/blockchains/fabric) support.
 * **Clouds**. You can now deploy your nodes and networks in the Amazon Web Services US West region.
-* **Vault**. You can now store your Corda identity key material in a [secure vault](/glossary/vault). See also [View your organization's vault](/platform/view-your-organization-vault).
-* **Identity management**. You can now securely manage your organization's identity for the [Corda networks](/operations/corda/networks). See also [Manage your organization's identity](/platform/manage-your-organization-identity).
+* **Vault**. You can now store your Corda identity key material in a [secure vault](/glossary/vault). See also [View your organization vault](/platform/view-your-organization-vault).
+* **Identity management**. You can now securely manage your organization identity for the [Corda networks](/operations/corda/networks). See also [Manage your organization identities](/platform/manage-your-organization-identities).
 
 ### Bug fixes
 
