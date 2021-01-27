@@ -223,6 +223,8 @@ module.exports = {
                     '/glossary/cloud',
                     '/glossary/consortium-project',
                     '/glossary/consortium',
+                    '/glossary/cross-cloud',
+                    '/glossary/cross-region',
                     '/glossary/cryptogen',
                     '/glossary/dedicated-node',
                     '/glossary/fabric-ca',

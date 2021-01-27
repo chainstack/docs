@@ -184,7 +184,38 @@ module.exports = {
 };
 ```
 
-3. Run `truffle migrate --network chainstack` and Truffle will deploy using Chainstack.
+### Hardhat
+
+Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Ethereum nodes.
+
+1. Install [Hardhat](https://hardhat.org/) and create a project.
+
+2. Create a new environment in `hardhat.config.js`:
+
+``` js
+require("@nomiclabs/hardhat-waffle");
+...
+module.exports = {
+  solidity: "0.7.3",
+  networks: {
+    chainstack: {
+        url: "https://USERNAME:PASSWORD@RPC_ENDPOINT",
+        accounts: ["PRIVATE_KEY"]
+    },
+   }
+};
+```
+
+where
+
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* RPC_ENDPOINT — your Ethereum node RPC endpoint.
+* PRIVATE_KEY — the private key of the account that you use to deploy the contract.
+
+3. Run `npx hardhat run scripts/deploy.js --network chainstack` and Hardhat will deploy using Chainstack.
+
+See also <a href="https://support.chainstack.com/hc/en-us/articles/900004242406" target="_blank">Forking Ethereum mainnet with Hardhat</a>.
 
 ### OpenZeppelin
 
