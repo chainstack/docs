@@ -10,7 +10,7 @@ meta:
 
 Once you have [deployed a consortium network](/platform/deploy-a-consortium-network) or [joined a public network](/platform/join-a-public-network), you can add more nodes to the network.
 
-For consortium networks, you can add a node to run in [cloud](/glossary/cloud) or [on-premises](/glossary/on-premises). On-premises nodes can only be deployed in [hybrid](/glossary/hybrid) networks. 
+For consortium networks, you can add a node to run in [cross-cloud](/glossary/cross-cloud), [cross-region](/glossary/cross-region), and [hybrid](/glossary/hybrid) networks starting from the Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plan</a>.
 
 For public networks, you can add a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
 
