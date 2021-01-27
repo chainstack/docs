@@ -8,7 +8,7 @@ meta:
 
 # Hybrid
 
-Deployment of nodes of the same network in Chainstack-provided cloud hosting providers and private hosting.
+Deployment of nodes of the same network in Chainstack-provided cloud hosting providers and private hosting, or a combination of private hostings.
 
 ::: tip See also
 
