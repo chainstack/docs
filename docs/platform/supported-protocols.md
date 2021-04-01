@@ -24,7 +24,7 @@ Public network:
 * [Bitcoin](/blockchains/bitcoin)
 	* Mainnet
 	* Testnet
-* [Binance Smart Chain](/blockchains/binance)
+* [Binance Smart Chain](/blockchains/bsc)
 	* Mainnet
 	* Testnet
 * [Corda](/blockchains/corda)

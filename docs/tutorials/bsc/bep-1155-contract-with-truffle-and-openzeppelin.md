@@ -242,6 +242,6 @@ This tutorial uses testnet, however the exact same instructions and sequence wil
 
 ::: tip See also
 
-* [Operations: Binance Smart Chain](/operations/binance/)
+* [Operations: Binance Smart Chain](/operations/bsc/)
 
 :::

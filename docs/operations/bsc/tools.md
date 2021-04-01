@@ -311,6 +311,6 @@ provider.getBlockNumber().then(console.log);
 
 ::: tip See also
 
-* [BEP-1155 contract with Truffle and OpenZeppelin](/tutorials/binance/bep-1155-contract-with-truffle-and-openzeppelin)
+* [BEP-1155 contract with Truffle and OpenZeppelin](/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin)
 
 :::

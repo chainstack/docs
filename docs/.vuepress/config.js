@@ -142,11 +142,11 @@ module.exports = {
                         title: 'Binance Smart Chain',
                         collapsable: true,
                         children: [
-                            '/operations/binance/',
-                            '/operations/binance/networks',
-                            '/operations/binance/types',
-                            '/operations/binance/modes',
-                            '/operations/binance/tools',
+                            '/operations/bsc/',
+                            '/operations/bsc/networks',
+                            '/operations/bsc/types',
+                            '/operations/bsc/modes',
+                            '/operations/bsc/tools',
                         ]
                     },
                 ]
@@ -203,8 +203,8 @@ module.exports = {
                         title: 'Binance Smart Chain',
                         collapsable: true,
                         children: [
-                            '/tutorials/binance/',
-                            '/tutorials/binance/bep-1155-contract-with-truffle-and-openzeppelin',
+                            '/tutorials/bsc/',
+                            '/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin',
                         ]
                     },
                 ]
@@ -229,7 +229,7 @@ module.exports = {
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
-                    '/blockchains/binance',
+                    '/blockchains/bsc',
                 ]
             },
             {

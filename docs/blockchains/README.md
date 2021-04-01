@@ -18,7 +18,7 @@ This section covers the blockchain essentials for the protocols supported by Cha
 * [Operations: MultiChain](/operations/multichain/)
 * [Operations: Ethereum](/operations/ethereum/)
 * [Operations: Bitcoin](/operations/bitcoin/)
-* [Operations: Binance Smart Chain](/operations/binance/)
+* [Operations: Binance Smart Chain](/operations/bsc/)
 
 
 :::

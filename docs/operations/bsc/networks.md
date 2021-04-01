@@ -17,8 +17,8 @@ For development purposes on the testnet, fund your accounts with [testnet BNB](h
 
 ::: tip See also
 
-* [Modes](/operations/binance/modes)
-* [Tools](/operations/binance/tools)
-* [Tutorials](/tutorials/binance/)
+* [Modes](/operations/bsc/modes)
+* [Tools](/operations/bsc/tools)
+* [Tutorials](/tutorials/bsc/)
 
 :::

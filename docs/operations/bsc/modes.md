@@ -32,8 +32,8 @@ Query example to get the balance of an address at different block numbers throug
 
 ::: tip See also
 
-* [Networks](/operations/binance/networks)
-* [Tools](/operations/binance/tools)
-* [Tutorials](/tutorials/binance/)
+* [Networks](/operations/bsc/networks)
+* [Tools](/operations/bsc/tools)
+* [Tutorials](/tutorials/bsc/)
 
 :::

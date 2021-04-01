@@ -10,4 +10,4 @@ meta:
 
 This section guides you through developing applications on Binance Smart Chain from scratch.
 
-Learn how to develop, deploy, and interact with smart contracts to [issue fungible and non-fungible tokens](/tutorials/binance/bep-1155-contract-with-truffle-and-openzeppelin).
+Learn how to develop, deploy, and interact with smart contracts to [issue fungible and non-fungible tokens](/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin).

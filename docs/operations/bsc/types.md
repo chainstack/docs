@@ -19,8 +19,8 @@ You can also invite other [users](/glossary/user) to your [organization](/glossa
 
 ::: tip See also
 
-* [Modes](/operations/binance/modes)
-* [Tools](/operations/binance/tools)
-* [Tutorials](/tutorials/binance/)
+* [Modes](/operations/bsc/modes)
+* [Tools](/operations/bsc/tools)
+* [Tutorials](/tutorials/bsc/)
 
 :::
