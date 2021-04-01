@@ -138,6 +138,17 @@ module.exports = {
                             '/operations/bitcoin/tools',
                         ]
                     },
+                    {
+                        title: 'Binance Smart Chain',
+                        collapsable: true,
+                        children: [
+                            '/operations/binance/',
+                            '/operations/binance/networks',
+                            '/operations/binance/types',
+                            '/operations/binance/modes',
+                            '/operations/binance/tools',
+                        ]
+                    },
                 ]
             },
             {
@@ -188,6 +199,14 @@ module.exports = {
                             '/tutorials/ethereum/trust-fund-account-with-remix',
                         ]
                     },
+                    {
+                        title: 'Binance Smart Chain',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/binance/',
+                            '/tutorials/binance/bep-1155-contract-with-truffle-and-openzeppelin',
+                        ]
+                    },
                 ]
             },
             {
@@ -210,6 +229,7 @@ module.exports = {
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
+                    '/blockchains/binance',
                 ]
             },
             {
