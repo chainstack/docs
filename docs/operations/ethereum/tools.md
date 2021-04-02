@@ -291,7 +291,22 @@ Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Ethereum n
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://USERNAME:PASSWORD@WSS_ENDPOINT'));
+const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://USERNAME:PASSWORD@WSS_ENDPOINT',{
+ headers: { authorization: `Basic ${Buffer.from("USERNAME:PASSWORD").toString('base64')}`}
+}));
+```
+
+You can also use the `HttpProvider` object to connect to your node's RPC endpoint.
+
+``` js
+const Web3 = require('web3');
+
+const web3 = new Web3(new Web3.providers.HttpProvider('wss://USERNAME:PASSWORD@RPC_ENDPOINT',{
+ headers: [{
+   name: 'Authorization',
+   value: `Basic ${Buffer.from("USERNAME:PASSWORD").toString('base64')}`
+ }]
+}));
 ```
 
 where
@@ -299,14 +314,11 @@ where
 * USERNAME — your Ethereum node access username.
 * PASSWORD — your Ethereum node access password.
 * WSS_ENDPOINT — your Ethereum node WSS endpoint.
+* RPC_ENDPOINT - your Ethereum node RPC endpoint
 
-Example to get the latest block number:
+Example to get the latest block number using above `web3` object:
 
 ``` js
-const Web3 = require('web3');
-
-const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com'));
-
 web3.eth.getBlockNumber().then(console.log);
 ```
 
