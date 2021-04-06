@@ -274,6 +274,7 @@ module.exports = {
             root_url: `https://${process.env.DOCS_HOSTNAME}`,
             default_site_name: 'Chainstack documentation'
         },
-        'check-md': {}
+        'check-md': {},
+        '@dovyp/vuepress-plugin-clipboard-copy': true
     }
 }
