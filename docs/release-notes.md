@@ -16,6 +16,7 @@ meta:
 
 * **Pricing**. Flexible pay-per-request pricing for shared nodes on all <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
 * **Billing**. Payments in cryptocurrency for customers on the <a href="https://chainstack.com/pricing/" target="_blank">Enterprise plan</a>.
+* **Public API**. You can now use the Chainstack API to manage your Corda applications. See <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>.
 
 See also <a href="https://chainstack.com/chainstack-2-3-faster-and-better-public-blockchain-apis/" target="_blank">Chainstack 2.3: Faster and better public blockchain APIs</a>.
 
