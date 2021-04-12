@@ -216,6 +216,7 @@ module.exports = {
                 title: 'Glossary',
                 collapsable: true,
                 children: [
+                    '/glossary/application',
                     '/glossary/bft',
                     '/glossary/blockchain-protocol',
                     '/glossary/bolt',
