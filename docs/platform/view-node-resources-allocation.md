@@ -48,6 +48,10 @@ Bitcoin:
 
 * Node — the CPU, memory, and storage allocated to your Bitcoin node.
 
+Binance Smart Chain:
+
+* Node — the CPU, memory, and storage allocated to your Binance Smart Chain node.
+
 ::: tip See also
 
 * [View node logs](/platform/view-node-logs)
