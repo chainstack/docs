@@ -95,12 +95,12 @@ npm install solc@0.5.11
 
 #### Install ethereumjs-tx
 
-[Ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-tx) is a module to create and sign transactions.
+[Ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/tx) is a module to create and sign transactions.
 
 Install in your project directory:
 
 ``` sh
-npm install ethereumjs-tx
+npm install @ethereumjs/tx
 ```
 
 #### Install Quorum.js
