@@ -10,7 +10,7 @@ meta:
 
 ## Interaction tools
 
-### Geth
+### Binance Smart Chain client
 
 Interact with your Binance Smart Chain node using [Binance Smart Chain client](https://docs.binance.org/smart-chain/developer/fullnode.html).
 

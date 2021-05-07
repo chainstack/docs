@@ -10,7 +10,7 @@ meta:
 
 ## Interaction tools
 
-### Geth
+### Bor client
 
 Interact with your Polygon PoS node using the [Bor client](https://github.com/maticnetwork/bor).
 
