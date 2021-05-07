@@ -15,6 +15,6 @@ Chainstack supports the following hosting options:
 
 ::: tip See also
 
-* <a href="https://support.chainstack.com/hc/en-us/articles/900004174426" target="_blank">Setting up an Amazon EKS cluster to integrate with Chainstack.</a>
+* <a href="https://support.chainstack.com/hc/en-us/articles/900004174426" target="_blank">Setting up an Amazon EKS cluster to integrate with Chainstack</a>
 
 :::

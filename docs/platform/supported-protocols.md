@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Deploy Corda, Hyperledger Fabric, Quorum, MultiChan, Ethereum, Bitcoin, Binance Smart Chain nodes and networks in minutes.
+    content: Deploy Hyperledger Fabric, Corda, Quorum, MultiChain, Ethereum, Bitcoin, Binance Smart Chain, Polygon PoS nodes and networks in minutes.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin deploy binance
+    content: corda hyperledger quorum multichain ethereum bitcoin deploy binance polygon matic
 ---
 
 # Supported protocols
@@ -27,6 +27,9 @@ Public network:
 * [Binance Smart Chain](/blockchains/bsc)
 	* Mainnet
 	* Testnet
+* [Polygon PoS](/blockchains/polygon)
+	* Mainnet
+	* Mumbai testnet
 * [Corda](/blockchains/corda)
 	* [Corda Network](https://corda.network/)
 	* [Corda Pre-Production Network](https://corda.network/participation/preprod/)

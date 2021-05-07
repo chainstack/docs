@@ -149,6 +149,17 @@ module.exports = {
                             '/operations/bsc/tools',
                         ]
                     },
+                    {
+                        title: 'Polygon PoS',
+                        collapsable: true,
+                        children: [
+                            '/operations/polygon/',
+                            '/operations/polygon/networks',
+                            '/operations/polygon/types',
+                            '/operations/polygon/modes',
+                            '/operations/polygon/tools',
+                        ]
+                    },
                 ]
             },
             {
@@ -207,6 +218,14 @@ module.exports = {
                             '/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin',
                         ]
                     },
+                    {
+                        title: 'Polygon PoS',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/polygon/',
+                            '/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon',
+                        ]
+                    },
                 ]
             },
             {
@@ -230,6 +249,7 @@ module.exports = {
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
                     '/blockchains/bsc',
+                    '/blockchains/polygon',
                 ]
             },
             {
