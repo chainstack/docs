@@ -12,11 +12,69 @@ meta:
 
 ### Bor client
 
+#### Build from source
+
 Interact with your Polygon PoS node using the [Bor client](https://github.com/maticnetwork/bor).
 
 1. Install [Bor](https://github.com/maticnetwork/bor).
 
 2. Use `bor attach` command with the node's endpoint.
+
+RPC:
+
+``` sh
+bor attach https://USERNAME:PASSWORD@RPC_ENDPOINT
+```
+
+WSS:
+
+``` sh
+bor attach wss://USERNAME:PASSWORD@WSS_ENDPOINT
+```
+
+where
+
+* USERNAME — your Polygon PoS node access username.
+* PASSWORD — your Polygon PoS node access password.
+* RPC_ENDPOINT — your Polygon PoS node RPC endpoint.
+* WSS_ENDPOINT — your Polygon PoS node WSS endpoint.
+
+See [View node access and credentials](/platform/view-node-access-and-credentials).
+
+RPC example:
+
+``` sh
+bor attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+```
+
+WSS example:
+
+``` sh
+bor attach wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com
+```
+
+3. Invoke any methods from [Web3 JavaScript API](https://web3js.readthedocs.io/).
+
+Example below demonstrates how to get the balance of an address in wei value and convert it to ether value:
+
+``` js
+> web3.fromWei(web3.eth.getBalance("0xc94770007dda54cF92009BFF0dE90c06F603a09f"))
+0.1
+```
+
+#### Use Docker
+
+Interact with your Polygon PoS node using the [Bor client Docker container](https://hub.docker.com/r/maticnetwork/bor).
+
+1. [Install and run Docker](https://www.docker.com/get-started).
+
+2. Download and run the Bor client image:
+
+``` sh
+docker run -it maticnetwork/bor:master
+```
+
+3. Use `bor attach` command with the node's endpoint.
 
 RPC:
 

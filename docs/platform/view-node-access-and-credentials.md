@@ -27,7 +27,7 @@ If you are an invited [member](/glossary/member) of a [consortium project](/glos
 * [Operations: MultiChain](/operations/multichain/)
 * [Operations: Ethereum](/operations/ethereum/)
 * [Operations: Bitcoin](/operations/bitcoin/)
-* [Operations: Binance Smart Chain](/operations/bsc/)
 * [Operations: Polygon PoS](/operations/polygon/)
+* [Operations: Binance Smart Chain](/operations/bsc/)
 
 :::

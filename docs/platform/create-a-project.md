@@ -18,8 +18,8 @@ To create a project:
    * Select **Public chain** to deploy:
      * [Ethereum](/blockchains/ethereum)
      * [Bitcoin](/blockchains/bitcoin)
-     * [Binance Smart Chain](/blockchains/bsc)
      * [Polygon PoS](/blockchains/polygon)
+     * [Binance Smart Chain](/blockchains/bsc)
      * [Corda](/blockchains/corda)
    * Select **Consortium** to deploy:
      * [Hyperledger Fabric](/blockchains/fabric)

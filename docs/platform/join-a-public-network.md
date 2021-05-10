@@ -39,13 +39,13 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
-## Join a Binance Smart Chain network
+## Join a Polygon PoS network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
-1. Under **Blockchain protocol**, select **Binance Smart Chain**.
+1. Under **Blockchain protocol**, select **Polygon PoS**.
 1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
 1. Under **Type**, select whether to run a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
-1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/bsc/modes).
+1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/polygon/modes).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
 	* For Chainstack hosting, select a cloud provider and a region.
 	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
@@ -54,13 +54,13 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
-## Join a Polygon PoS network
+## Join a Binance Smart Chain network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
-1. Under **Blockchain protocol**, select **Polygon PoS**.
+1. Under **Blockchain protocol**, select **Binance Smart Chain**.
 1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
 1. Under **Type**, select whether to run a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
-1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/polygon/modes).
+1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/bsc/modes).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
 	* For Chainstack hosting, select a cloud provider and a region.
 	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).

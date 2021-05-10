@@ -138,18 +138,7 @@ module.exports = {
                             '/operations/bitcoin/tools',
                         ]
                     },
-                    {
-                        title: 'Binance Smart Chain',
-                        collapsable: true,
-                        children: [
-                            '/operations/bsc/',
-                            '/operations/bsc/networks',
-                            '/operations/bsc/types',
-                            '/operations/bsc/modes',
-                            '/operations/bsc/tools',
-                        ]
-                    },
-                    {
+                     {
                         title: 'Polygon PoS',
                         collapsable: true,
                         children: [
@@ -160,6 +149,17 @@ module.exports = {
                             '/operations/polygon/tools',
                         ]
                     },
+                    {
+                        title: 'Binance Smart Chain',
+                        collapsable: true,
+                        children: [
+                            '/operations/bsc/',
+                            '/operations/bsc/networks',
+                            '/operations/bsc/types',
+                            '/operations/bsc/modes',
+                            '/operations/bsc/tools',
+                        ]
+                    },                   
                 ]
             },
             {
@@ -211,19 +211,19 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Binance Smart Chain',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/bsc/',
-                            '/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin',
-                        ]
-                    },
-                    {
                         title: 'Polygon PoS',
                         collapsable: true,
                         children: [
                             '/tutorials/polygon/',
                             '/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon',
+                        ]
+                    },
+                    {
+                        title: 'Binance Smart Chain',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/bsc/',
+                            '/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin',
                         ]
                     },
                 ]
@@ -248,8 +248,8 @@ module.exports = {
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
-                    '/blockchains/bsc',
                     '/blockchains/polygon',
+                    '/blockchains/bsc',
                 ]
             },
             {
