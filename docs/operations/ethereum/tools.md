@@ -12,7 +12,7 @@ meta:
 
 ### Geth
 
-Interact with your Ethereum node using [Geth](https://github.com/ethereum/go-ethereum/wiki/geth).
+Interact with your Ethereum node using [Geth](https://geth.ethereum.org/docs/getting-started).
 
 1. Install [Geth](https://github.com/ethereum/go-ethereum).
 
@@ -51,7 +51,7 @@ WSS example:
 geth attach wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com
 ```
 
-3. Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
+3. Invoke any methods from [Web3 JavaScript API](https://web3js.readthedocs.io/).
 
 Example below demonstrates how to get the balance of an address in wei value and convert it to ether value:
 
