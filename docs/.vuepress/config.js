@@ -138,6 +138,28 @@ module.exports = {
                             '/operations/bitcoin/tools',
                         ]
                     },
+                     {
+                        title: 'Polygon PoS',
+                        collapsable: true,
+                        children: [
+                            '/operations/polygon/',
+                            '/operations/polygon/networks',
+                            '/operations/polygon/types',
+                            '/operations/polygon/modes',
+                            '/operations/polygon/tools',
+                        ]
+                    },
+                    {
+                        title: 'Binance Smart Chain',
+                        collapsable: true,
+                        children: [
+                            '/operations/bsc/',
+                            '/operations/bsc/networks',
+                            '/operations/bsc/types',
+                            '/operations/bsc/modes',
+                            '/operations/bsc/tools',
+                        ]
+                    },
                 ]
             },
             {
@@ -188,6 +210,22 @@ module.exports = {
                             '/tutorials/ethereum/trust-fund-account-with-remix',
                         ]
                     },
+                    {
+                        title: 'Polygon PoS',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/polygon/',
+                            '/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon',
+                        ]
+                    },
+                    {
+                        title: 'Binance Smart Chain',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/bsc/',
+                            '/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin',
+                        ]
+                    },
                 ]
             },
             {
@@ -210,12 +248,15 @@ module.exports = {
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
+                    '/blockchains/polygon',
+                    '/blockchains/bsc',
                 ]
             },
             {
                 title: 'Glossary',
                 collapsable: true,
                 children: [
+                    '/glossary/application',
                     '/glossary/bft',
                     '/glossary/blockchain-protocol',
                     '/glossary/bolt',

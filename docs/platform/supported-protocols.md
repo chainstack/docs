@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Deploy Corda, Hyperledger Fabric, Quorum, MultiChan, Ethereum, Bitcoin nodes and networks in minutes.
+    content: Deploy Hyperledger Fabric, Corda, Quorum, MultiChain, Ethereum, Bitcoin, Polygon PoS, Binance Smart Chain nodes and networks in minutes.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin deploy
+    content: corda hyperledger quorum multichain ethereum bitcoin deploy binance polygon matic
 ---
 
 # Supported protocols
@@ -22,6 +22,12 @@ Public network:
 	* Ropsten testnet
 	* Rinkeby testnet
 * [Bitcoin](/blockchains/bitcoin)
+	* Mainnet
+	* Testnet
+* [Polygon PoS](/blockchains/polygon)
+	* Mainnet
+	* Mumbai testnet
+* [Binance Smart Chain](/blockchains/bsc)
 	* Mainnet
 	* Testnet
 * [Corda](/blockchains/corda)

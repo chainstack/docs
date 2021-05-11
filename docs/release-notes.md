@@ -8,6 +8,35 @@ meta:
 
 # Release notes
 
+## Chainstack 2.4
+
+*May 10, 2021*
+
+### What's new
+
+* **Protocols**. [Polygon PoS](/blockchains/polygon) support. You can now deploy full and archive Polygon PoS nodes on mainnet and testnet.
+* **Documentation**. Polygon [general description](/blockchains/polygon), [operations](/operations/polygon), [smart contract bridging tutorial](/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon.md).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
+## Chainstack 2.3
+
+*April 6, 2021*
+
+### What's new
+
+* **Pricing**. Flexible pay-per-request pricing for shared nodes on all <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
+* **Billing**. Payments in cryptocurrency for customers on the <a href="https://chainstack.com/pricing/" target="_blank">Enterprise plan</a>.
+* **Public API**. You can now use the Chainstack API to manage your Corda applications. See <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>.
+
+See also <a href="https://chainstack.com/chainstack-2-3-faster-and-better-public-blockchain-apis/" target="_blank">Chainstack 2.3: Faster and better public blockchain APIs</a>.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.2
 
 *January 22, 2021*
