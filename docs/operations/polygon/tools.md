@@ -1,54 +1,54 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Binance Smart Chain node, deploy smart contracts through your node, and develop dapps.
+    content: Learn how to interact with your Polygon PoS node, deploy smart contracts through your node, and develop dapps.
   - name: keywords
-    content: bsc truffle web3 dapp geth binance
+    content: polygon truffle web3 dapp geth matic hardhat
 ---
 
 # Tools
 
 ## Interaction tools
 
-### Binance Smart Chain client
+### Bor client
 
-Interact with your Binance Smart Chain node using [Binance Smart Chain client](https://docs.binance.org/smart-chain/developer/fullnode.html).
+Interact with your Polygon PoS node using the [Bor client](https://github.com/maticnetwork/bor).
 
-1. Install [Binance Smart Chain client](https://github.com/binance-chain/bsc).
+1. Install [Bor](https://github.com/maticnetwork/bor).
 
-2. Use `geth attach` command with the node's endpoint.
+2. Use `bor attach` command with the node's endpoint.
 
 RPC:
 
 ``` sh
-geth attach https://USERNAME:PASSWORD@RPC_ENDPOINT
+bor attach https://USERNAME:PASSWORD@RPC_ENDPOINT
 ```
 
 WSS:
 
 ``` sh
-geth attach wss://USERNAME:PASSWORD@WSS_ENDPOINT
+bor attach wss://USERNAME:PASSWORD@WSS_ENDPOINT
 ```
 
 where
 
-* USERNAME — your Binance Smart Chain node access username.
-* PASSWORD — your Binance Smart Chain node access password.
-* RPC_ENDPOINT — your Binance Smart Chain node RPC endpoint.
-* WSS_ENDPOINT — your Binance Smart Chain node WSS endpoint.
+* USERNAME — your Polygon PoS node access username.
+* PASSWORD — your Polygon PoS node access password.
+* RPC_ENDPOINT — your Polygon PoS node RPC endpoint.
+* WSS_ENDPOINT — your Polygon PoS node WSS endpoint.
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 RPC example:
 
 ``` sh
-geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+bor attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 ```
 
 WSS example:
 
 ``` sh
-geth attach wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com
+bor attach wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com
 ```
 
 3. Invoke any methods from [Web3 JavaScript API](https://web3js.readthedocs.io/).
@@ -56,13 +56,19 @@ geth attach wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pi
 Example below demonstrates how to get the balance of an address in wei value and convert it to ether value:
 
 ``` js
-> web3.fromWei(web3.eth.getBalance("0x2d4c407bbe49438ed859fe965b140dcf1aab71a9"))
-6.248866
+> web3.fromWei(web3.eth.getBalance("0xc94770007dda54cF92009BFF0dE90c06F603a09f"))
+0.1
 ```
+
+::: tip Docker
+
+You can also use the [Bor client Docker container](https://hub.docker.com/r/maticnetwork/bor).
+
+:::
 
 ### MetaMask
 
-You can set your [MetaMask](https://metamask.io/) to interact through your Binance Smart Chain nodes deployed with Chainstack.
+You can set your [MetaMask](https://metamask.io/) to interact through your Polygon PoS nodes deployed with Chainstack.
 
 1. Open your MetaMask and click the network selector.
 1. In the network selector, click **Custom RPC**.
@@ -72,14 +78,14 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Binan
 
     where
 
-    * USERNAME — your Binance Smart Chain node access username.
-    * PASSWORD — your Binance Smart Chain node access password.
-    * RPC_ENDPOINT — your Binance Smart Chain node RPC endpoint.
+    * USERNAME — your Polygon PoS node access username.
+    * PASSWORD — your Polygon PoS node access password.
+    * RPC_ENDPOINT — your Polygon PoS node RPC endpoint.
 
 1. In the **Chain ID** field, enter the ID of the network:
 
-    * Mainnet: `56`
-    * Testnet: `97`
+    * Mainnet: `137`
+    * Mumbai testnet: `80001`
 
 1. Click **Save**.
 
@@ -89,7 +95,7 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 
 ### Truffle
 
-Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Binance Smart Chain nodes.
+Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Polygon PoS nodes.
 
 1. Install [Truffle Suite](https://truffleframework.com), [HD Wallet-enabled Web3 provider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider), and create a project.
 
@@ -103,7 +109,7 @@ module.exports = {
  networks: {
     mainnet: {
         provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
-        network_id: 56,
+        network_id: 137,
         confirmations: 3,
         timeoutBlocks: 200,
         skipDryRun: true
@@ -115,7 +121,7 @@ module.exports = {
 
 ### Hardhat
 
-Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Binance Smart Chain nodes.
+Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Polygon PoS nodes.
 
 1. Install [Hardhat](https://hardhat.org/) and create a project.
 
@@ -129,7 +135,7 @@ module.exports = {
   networks: {
     chainstack: {
         url: "https://USERNAME:PASSWORD@RPC_ENDPOINT",
-        chainId: 56,
+        chainId: 137,
         gasPrice: 20000000000,
         accounts: ["PRIVATE_KEY"]
     },
@@ -139,16 +145,16 @@ module.exports = {
 
 where
 
-* USERNAME — your Binance Smart Chain node access username.
-* PASSWORD — your Binance Smart Chain node access password.
-* RPC_ENDPOINT — your Binance Smart Chain node RPC endpoint.
+* USERNAME — your Polygon PoS node access username.
+* PASSWORD — your Polygon PoS node access password.
+* RPC_ENDPOINT — your Polygon PoS node RPC endpoint.
 * PRIVATE_KEY — the private key of the account that you use to deploy the contract.
 
 3. Run `npx hardhat run scripts/deploy.js --network chainstack` and Hardhat will deploy using Chainstack.
 
 ### web3.js
 
-Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Polygon PoS nodes deployed with Chainstack.
 
 1. Install [web3.js](https://web3js.readthedocs.io/).
 1. Use the `WebsocketProvider` object to connect to your node's WSS endpoint.
@@ -161,9 +167,9 @@ const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://USERNAME:PASSW
 
 where
 
-* USERNAME — your Binance Smart Chain node access username.
-* PASSWORD — your Binance Smart Chain node access password.
-* WSS_ENDPOINT — your Binance Smart Chain node WSS endpoint.
+* USERNAME — your Polygon PoS node access username.
+* PASSWORD — your Polygon PoS node access password.
+* WSS_ENDPOINT — your Polygon PoS node WSS endpoint.
 
 Example to get the latest block number:
 
@@ -177,7 +183,7 @@ web3.eth.getBlockNumber().then(console.log);
 
 ### web3.py
 
-Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Polygon PoS nodes deployed with Chainstack.
 
 1. Install [web3.py](https://web3py.readthedocs.io/).
 1. Connect over HTTP or WebSocket.
@@ -195,9 +201,9 @@ print(web3.eth.blockNumber)
 
 where
 
-* USERNAME — your Binance Smart Chain node access username.
-* PASSWORD — your Binance Smart Chain node access password.
-* RPC_ENDPOINT — your Binance Smart Chain node RPC endpoint.
+* USERNAME — your Polygon PoS node access username.
+* PASSWORD — your Polygon PoS node access password.
+* RPC_ENDPOINT — your Polygon PoS node RPC endpoint.
 
 Example to get the latest block number:
 
@@ -221,9 +227,9 @@ print(web3.eth.blockNumber)
 
 where
 
-* USERNAME — your Binance Smart Chain node access username.
-* PASSWORD — your Binance Smart Chain node access password.
-* WSS_ENDPOINT — your Binance Smart Chain node WSS endpoint.
+* USERNAME — your Polygon PoS node access username.
+* PASSWORD — your Polygon PoS node access password.
+* WSS_ENDPOINT — your Polygon PoS node WSS endpoint.
 
 Example to get the latest block number:
 
@@ -236,7 +242,7 @@ print(web3.eth.blockNumber)
 
 ### ethers.js
 
-Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Polygon PoS nodes deployed with Chainstack.
 
 1. Install [ethers.js](https://www.npmjs.com/package/ethers).
 1. Connect over HTTP or WebSocket.
@@ -258,12 +264,12 @@ var provider = new ethers.providers.JsonRpcProvider(urlInfo, NETWORK_ID);
 
 where
 
-* RPC_ENDPOINT — your Binance Smart Chain node RPC endpoint.
-* USERNAME — your Binance Smart Chain node access username.
-* PASSWORD — your Binance Smart Chain node access password.
-* NETWORK_ID — Binance Smart Chain network ID:
-  * Mainnet: `56`
-  * Testnet: `97`
+* RPC_ENDPOINT — your Polygon PoS node RPC endpoint.
+* USERNAME — your Polygon PoS node access username.
+* PASSWORD — your Polygon PoS node access password.
+* NETWORK_ID — Polygon PoS network ID:
+  * Mainnet: `137`
+  * Mumbai testnet: `80001`
 
 Example to get the latest block number on mainnet:
 
@@ -275,7 +281,7 @@ var urlInfo = {
     user: 'user-name',
     password: 'pass-word-pass-word-pass-word'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 56);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 137);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -292,25 +298,25 @@ const provider = new ethers.providers.WebSocketProvider('wss://USERNAME:PASSWORD
 
 where
 
-* USERNAME — your Binance Smart Chain node access username.
-* PASSWORD — your Binance Smart Chain node access password.
-* WSS_ENDPOINT — your Binance Smart Chain node WSS endpoint.
-* NETWORK_ID — Binance Smart Chain network ID:
-  * Mainnet: `56`
-  * Testnet: `97`
+* USERNAME — your Polygon PoS node access username.
+* PASSWORD — your Polygon PoS node access password.
+* WSS_ENDPOINT — your Polygon PoS node WSS endpoint.
+* NETWORK_ID — Polygon PoS network ID:
+  * Mainnet: `137`
+  * Testnet: `80001`
 
 Example to get the latest block number on mainnet:
 
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 56);
+const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 137);
 
 provider.getBlockNumber().then(console.log);
 ```
 
 ::: tip See also
 
-* [BEP-1155 contract with Truffle and OpenZeppelin](/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin)
+* [Bridging ERC-20 from Ethereum to Polygon PoS](/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon)
 
 :::

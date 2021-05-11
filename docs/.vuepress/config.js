@@ -138,6 +138,17 @@ module.exports = {
                             '/operations/bitcoin/tools',
                         ]
                     },
+                     {
+                        title: 'Polygon PoS',
+                        collapsable: true,
+                        children: [
+                            '/operations/polygon/',
+                            '/operations/polygon/networks',
+                            '/operations/polygon/types',
+                            '/operations/polygon/modes',
+                            '/operations/polygon/tools',
+                        ]
+                    },
                     {
                         title: 'Binance Smart Chain',
                         collapsable: true,
@@ -200,6 +211,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Polygon PoS',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/polygon/',
+                            '/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon',
+                        ]
+                    },
+                    {
                         title: 'Binance Smart Chain',
                         collapsable: true,
                         children: [
@@ -229,6 +248,7 @@ module.exports = {
                     '/blockchains/multichain',
                     '/blockchains/ethereum',
                     '/blockchains/bitcoin',
+                    '/blockchains/polygon',
                     '/blockchains/bsc',
                 ]
             },

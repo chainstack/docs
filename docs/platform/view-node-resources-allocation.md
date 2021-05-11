@@ -52,6 +52,10 @@ Binance Smart Chain:
 
 * Node — the CPU, memory, and storage allocated to your Binance Smart Chain node.
 
+Polygon PoS:
+
+* Node — the CPU, memory, and storage allocated to your Polygon PoS node.
+
 ::: tip See also
 
 * [View node logs](/platform/view-node-logs)
