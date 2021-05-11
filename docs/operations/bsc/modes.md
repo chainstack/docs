@@ -19,7 +19,7 @@ With a full node, you can query the historical state of the Binance Smart Chain 
 
 To be able to query the historical state of the Binance Smart Chain mainnet at any block, you need an archive node.
 
-See [Geth JSON-RPC methods](https://github.com/ethereum/wiki/wiki/JSON-RPC#the-default-block-parameter) that support querying at a block number.
+See [Geth JSON-RPC methods](https://eth.wiki/json-rpc/API#the-default-block-parameter) that support querying at a block number.
 
 Query example to get the balance of an address at different block numbers through an archive node:
 

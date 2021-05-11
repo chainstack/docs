@@ -46,7 +46,7 @@ at block: 0 (Thu, 01 Jan 1970 00:00:00 UTC)
 >
 ```
 
-Invoke any methods from [Web3 JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
+Invoke any methods from [Web3 JavaScript API](https://web3js.readthedocs.io/).
 
 Example below demonstrates how to get the current block number:
 
@@ -59,7 +59,7 @@ Example below demonstrates how to get the current block number:
 
 Interact with your Quorum network using:
 
-* [Geth JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC).
+* [Geth JSON-RPC](https://eth.wiki/json-rpc/API).
 * [Quorum privacy API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/PrivacyAPI/).
 * [Quorum permissions API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/PermissioningAPIs/).
 * [Quorum contract extension API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/ContractExtensionAPIs/).
