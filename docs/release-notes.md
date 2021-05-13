@@ -14,7 +14,7 @@ meta:
 
 ### What's new
 
-* **Protocols**. [Polygon PoS](/blockchains/polygon) support. You can deploy Polygon PoS full and archive [Bor](https://docs.matic.network/docs/home/architecture/matic-architecture#bor-block-producer-layer) mainnet node, or full Mumbai testnet node as a shared node, or dedicated node, powered by [Bolt](/glossary/bolt) rapid sync mechanism. On Polygon [Mainnet Explorer](https://polygon-explorer-mainnet.chainstacklabs.com) and [Mumbai Explorer](https://polygon-explorer-mumbai.chainstacklabs.com) pages, hosted and maintained by Chainstack, you can track the state of transactions in the Polygon commit chains. 
+* **Protocols**. [Polygon PoS](/blockchains/polygon) support. You can now deploy full and archive Polygon PoS nodes on mainnet and testnet.
 * **Documentation**. Polygon [general description](/blockchains/polygon), [operations](/operations/polygon), [smart contract bridging tutorial](/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon.md).
 
 ### Bug fixes
