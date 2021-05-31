@@ -28,6 +28,7 @@ Make sure you keep the recovery codes secure.
 
 ::: tip See also
 
+* [Disable two-factor authentication](/platform/disable-two-factor-authentication)
 * [View your user settings](/platform/view-your-user-settings)
 
 :::
