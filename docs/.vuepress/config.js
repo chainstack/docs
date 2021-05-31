@@ -59,6 +59,7 @@ module.exports = {
                     '/platform/view-your-organization-vault',
                     '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
+                    '/platform/enable-two-factor-authentication',
                     '/platform/create-an-api-key',
                     '/platform/delete-an-api-key',
                 ]
