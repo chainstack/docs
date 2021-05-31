@@ -13,7 +13,7 @@ You can use apps like Authy, Google Authenticator, or Microsoft Authenticator.
 
 To enable 2FA:
 
-1. Go to the <a href="https://dev.chainstack.com/user/settings/personal" target="_blank">personal settings</a> page.
+1. Go to the <a href="https://console.chainstack.com/user/settings/personal" target="_blank">personal settings</a> page.
 1. In **Security**, click **Enable two-factor authentication**.
 1. Provide your current password. Click **Next**.
 1. Download, print, or copy your 2FA recovery codes. These are the backup codes that you will need to restore your 2FA access if you lose it.
@@ -29,6 +29,6 @@ Make sure you keep the recovery codes secure.
 ::: tip See also
 
 * [Disable two-factor authentication](/platform/disable-two-factor-authentication)
-* [View your user settings](/platform/view-your-user-settings)
+* [Recover your account protected with two-factor authentication](/platform/recover-your-account-protected-with-two-factor-authentication)
 
 :::

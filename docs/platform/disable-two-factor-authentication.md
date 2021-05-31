@@ -11,13 +11,13 @@ Two-factor authentication (2FA) adds an extra layer of security to your Chainsta
 
 To disable 2FA:
 
-1. Go to the <a href="https://dev.chainstack.com/user/settings/personal" target="_blank">personal settings</a> page.
+1. Go to the <a href="https://console.chainstack.com/user/settings/personal" target="_blank">personal settings</a> page.
 1. In **Security**, click **Disable two-factor authentication**.
 1. Provide your current password. Click **Disable 2FA**.
 
 ::: tip See also
 
 * [Enable two-factor authentication](/platform/enable-two-factor-authentication)
-* [View your user settings](/platform/view-your-user-settings)
+* [Recover your account protected with two-factor authentication](/platform/recover-your-account-protected-with-two-factor-authentication)
 
 :::
