@@ -60,6 +60,79 @@ Example below demonstrates how to get the balance of an address in wei value and
 6.248866
 ```
 
+### GraphQL
+
+You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the <a href="https://chainstack.com/pricing/" target="_blank">Enterprise subscription plan</a>.
+
+#### UI
+
+You can query data using the graphical interface.
+
+1. On Chainstack, navigate to your dedicated Binance Smart Chain node. See [View node access and credentials](/platform/view-node-access-and-credentials).
+1. Hover over **GraphQL IDE URL** and click **Open**.
+1. In the graphical interface that opens, run a GraphQL query.
+
+Example to get the latest block number:
+
+``` js
+{ block { number } }
+```
+
+#### Node.js
+
+You can build a web app to query data using Node.js and [axios](https://www.npmjs.com/package/axios):
+
+``` js
+const axios = require('axios');
+const main = async () => {
+  try {
+    const result = await axios.post(
+      'USERNAME:PASSWORD@RPC_ENDPOINT',
+      {
+        query: `
+          QUERY
+        `
+      }
+    );
+    console.log(result.data);
+  } catch(error) {
+    console.error(error);
+  }
+}
+main();
+```
+
+where
+
+* USERNAME — your Binance Smart Chain node access username.
+* PASSWORD — your Binance Smart Chain node access password.
+* GRAPHQL_ENDPOINT — the GraphQL endpoint of your dedicated Binance Smart Chain node.
+* QUERY — your GraphQL query.
+
+See [View node access and credentials](/platform/view-node-access-and-credentials).
+
+Example to get the latest block number:
+
+``` js
+const axios = require('axios');
+const main = async () => {
+  try {
+    const result = await axios.post(
+      'https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/graphql',
+      {
+        query: `
+          { block { number } }
+        `
+      }
+    );
+    console.log(result.data);
+  } catch(error) {
+    console.error(error);
+  }
+}
+main();
+```
+
 ### MetaMask
 
 You can set your [MetaMask](https://metamask.io/) to interact through your Binance Smart Chain nodes deployed with Chainstack.
