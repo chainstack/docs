@@ -68,7 +68,7 @@ You can also use the [Bor client Docker container](https://hub.docker.com/r/mati
 
 ### GraphQL
 
-You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Growth, Business, and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
+You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Business and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
 
 #### UI
 
