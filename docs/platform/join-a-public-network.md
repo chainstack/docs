@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to deploy a node on Ethereum, Polygon PoS, Binance Smart Chain, Bitcoin, or Corda in minutes with the Chainstack managed blockchain services.
   - name: keywords
-    content: ethereum corda bitcoin deploy node
+    content: ethereum corda bitcoin deploy node matic polygon bsc binance
 ---
 
 # Join a public network
@@ -29,7 +29,7 @@ The node status will change from **Pending** to **Running** once deployed.
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
 1. Under **Blockchain protocol**, select **Polygon PoS**.
-1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
+1. Under **Blockchain network**, select **Mainnet** or **Mumbai testnet**. Click **Next**.
 1. Under **Type**, select whether to run a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
 1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/polygon/modes).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
