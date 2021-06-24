@@ -494,6 +494,39 @@ const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-wo
 provider.getBlockNumber().then(console.log);
 ```
 
+### Brownie
+
+1. Install [Brownie](https://eth-brownie.readthedocs.io/en/stable/install.html).
+1. Use the `brownie networks add` command with the node's endpoint:
+
+``` sh
+brownie networks add Ethereum ID name="NETWORK_NAME" host=https://USERNAME:PASSWORD@RPC_ENDPOINT chainid=NETWORK_ID
+```
+
+where
+
+* ID — any name that you will use as the network tag to run a deployment. For example, `chainstack-mainnet`.
+* NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
+* USERNAME — your Ethereum node access username.
+* PASSWORD — your Ethereum node access password.
+* RPC_ENDPOINT — your Ethereum node RPC endpoint.
+* NETWORK_ID — Ethereum network ID:
+  * Mainnet: `1`
+  * Ropsten: `3`
+  * Rinkeby: `4`
+
+Example to add an Ethereum mainnet node to the list of Brownie networks:
+
+``` sh
+brownie networks add Ethereum chainstack-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=1
+```
+
+Example to run the deployment script:
+
+``` sh
+brownie run deploy.py --network chainstack-mainnet
+```
+
 ::: tip See also
 
 * [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)

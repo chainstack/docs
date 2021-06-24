@@ -376,7 +376,7 @@ where
 * WSS_ENDPOINT — your Polygon PoS node WSS endpoint.
 * NETWORK_ID — Polygon PoS network ID:
   * Mainnet: `137`
-  * Testnet: `80001`
+  * Mumbai testnet: `80001`
 
 Example to get the latest block number on mainnet:
 
@@ -386,6 +386,38 @@ const { ethers } = require("ethers");
 const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 137);
 
 provider.getBlockNumber().then(console.log);
+```
+
+### Brownie
+
+1. Install [Brownie](https://eth-brownie.readthedocs.io/en/stable/install.html).
+1. Use the `brownie networks add` command with the node's endpoint:
+
+``` sh
+brownie networks add Polygon ID name="NETWORK_NAME" host=https://USERNAME:PASSWORD@RPC_ENDPOINT chainid=NETWORK_ID
+```
+
+where
+
+* ID — any name that you will use as the network tag to run a deployment. For example, `polygon-mainnet`.
+* NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
+* USERNAME — your Polygon node access username.
+* PASSWORD — your Polygon node access password.
+* RPC_ENDPOINT — your Polygon node RPC endpoint.
+* NETWORK_ID — Polygon network ID:
+  * Mainnet: `137`
+  * Mumbai testnet: `80001`
+
+Example to add a Polygon mainnet node to the list of Brownie networks:
+
+``` sh
+brownie networks add Polygon polygon-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=137
+```
+
+Example to run the deployment script:
+
+``` sh
+brownie run deploy.py --network polygon-mainnet
 ```
 
 ::: tip See also
