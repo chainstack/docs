@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to deploy blockchain nodes and networks in minutes and how to build blockchain applications.
   - name: keywords
-    content: corda hyperledger fabric quorum multichain ethereum bitcoin
+    content: ethereum polygon matic binance bsc fabric corda bitcoin quorum multichain
 ---
 
 # Chainstack documentation
@@ -18,6 +18,7 @@ Follow us:
 
 Contact us:
 
-* [Gitter](https://gitter.im/chainstack/Lobby)
+* [Discord](https://discord.gg/Cymtg2f7pX)
+* [Telegram](https://t.me/chainstack)
 * <a href="https://support.chainstack.com" target="_blank">Support</a>
 * <a href="https://chainstack.com/contact/" target="_blank">Other enquiries</a>
