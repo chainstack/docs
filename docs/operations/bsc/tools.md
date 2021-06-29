@@ -382,6 +382,38 @@ const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-wo
 provider.getBlockNumber().then(console.log);
 ```
 
+### Brownie
+
+1. Install [Brownie](https://eth-brownie.readthedocs.io/en/stable/install.html).
+1. Use the `brownie networks add` command with the node's endpoint:
+
+``` sh
+brownie networks add "Binance Smart Chain" ID name="NETWORK_NAME" host=hhttps://USERNAME:PASSWORD@RPC_ENDPOINT chainid=NETWORK_ID
+```
+
+where
+
+* ID — any name that you will use as the network tag to run a deployment. For example, `bsc-mainnet`.
+* NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
+* USERNAME — your Binance Smart Chain node access username.
+* PASSWORD — your Binance Smart Chain node access password.
+* RPC_ENDPOINT — your Binance Smart Chain node RPC endpoint.
+* NETWORK_ID — Binance Smart Chain network ID:
+  * Mainnet: `97`
+  * Testnet: `56`
+
+Example to add a Binance Smart Chain mainnet node to the list of Brownie networks:
+
+``` sh
+brownie networks add "Binance Smart Chain" bsc-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=56
+```
+
+Example to run the deployment script:
+
+``` sh
+brownie run deploy.py --network bsc-mainnet
+```
+
 ::: tip See also
 
 * [BEP-1155 contract with Truffle and OpenZeppelin](/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin)
