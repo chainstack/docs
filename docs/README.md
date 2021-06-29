@@ -20,6 +20,5 @@ Contact us:
 
 * [Discord](https://discord.gg/Cymtg2f7pX)
 * [Telegram](https://t.me/chainstack)
-* [Gitter](https://gitter.im/chainstack/Lobby)
 * <a href="https://support.chainstack.com" target="_blank">Support</a>
 * <a href="https://chainstack.com/contact/" target="_blank">Other enquiries</a>
