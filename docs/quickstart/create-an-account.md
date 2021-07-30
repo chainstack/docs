@@ -10,7 +10,7 @@ meta:
 
 <a href="https://console.chainstack.com/user/account/create" target="_blank">Create an account</a> with Chainstack.
 
-You can start with the free 14-day trial or pick a different subscription option.
+You can start with the free 7-day trial or pick a different subscription option.
 
 For subscription plan details, see <a href="https://chainstack.com/pricing/" target="_blank">Pricing</a>.
 
