@@ -89,9 +89,9 @@ The node status will change from **Pending** to **Running** once deployed.
 * [Supported cloud providers](/platform/supported-cloud-hosting-providers)
 * [Support hosting options](/platform/supported-hosting-options)
 * [Operations: Ethereum](/operations/ethereum/)
-* [Operations: Bitcoin](/operations/bitcoin/)
-* [Operations: Binance Smart Chain](/operations/bsc/)
 * [Operations: Polygon PoS](/operations/polygon/)
+* [Operations: Binance Smart Chain](/operations/bsc/)
+* [Operations: Bitcoin](/operations/bitcoin/)
 * [Operations: Corda](/operations/corda/)
 * [Manage your organization identities](/platform/manage-your-organization-identities)
 

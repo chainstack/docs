@@ -31,7 +31,7 @@ raft.cluster
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_cluster","params":[],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"raft_cluster","params":[],"id":1}'
 ```
 
 Example of a 3 node Quorum Raft:
@@ -82,7 +82,7 @@ raft.leader
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_leader","params":[],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"raft_leader","params":[],"id":1}'
 ```
 
 Example:
@@ -103,7 +103,7 @@ raft.role
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_role","params":[],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"raft_role","params":[],"id":1}'
 ```
 
 Example:
@@ -124,7 +124,7 @@ raft.addPeer('enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT')
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_addPeer","params":["enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT"],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"raft_addPeer","params":["enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT"],"id":1}'
 ```
 
 where
@@ -154,7 +154,7 @@ raft.addLearner('enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT')
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_addLearner","params":["enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT"],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"raft_addLearner","params":["enode://NODE_ID@NODE_IP:P2P_PORT?raftport=RAFT_PORT"],"id":1}'
 ```
 
 where
@@ -182,7 +182,7 @@ raft.promoteToPeer(RAFT_ID)
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"promoteToPeer","params":[RAFT_ID],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"promoteToPeer","params":[RAFT_ID],"id":1}'
 ```
 
 where
@@ -207,7 +207,7 @@ raft.removePeer(RAFT_ID)
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"raft_removePeer","params":[RAFT_ID],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"raft_removePeer","params":[RAFT_ID],"id":1}'
 ```
 
 where
@@ -240,7 +240,7 @@ istanbul.getValidators()
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_getValidators","params":[],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"istanbul_getValidators","params":[],"id":1}'
 ```
 
 Example:
@@ -265,7 +265,7 @@ istanbul.propose("VALIDATOR_ADDRESS", true)
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_propose","params":["VALIDATOR_ADDRESS", true],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"istanbul_propose","params":["VALIDATOR_ADDRESS", true],"id":1}'
 ```
 
 where
@@ -283,7 +283,7 @@ null
 You can also see the node's validator address when you connect to the node with GoQuorum:
 
 ``` js
-$ ./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+$ ./geth attach https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
 WARNING: call to admin.getNodeInfo() failed, unable to determine consensus mechanism
 Welcome to the Geth JavaScript console!
 
@@ -306,7 +306,7 @@ istanbul.propose("VALIDATOR_ADDRESS", false)
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_propose","params":["VALIDATOR_ADDRESS", true],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"istanbul_propose","params":["VALIDATOR_ADDRESS", true],"id":1}'
 ```
 
 where
@@ -332,7 +332,7 @@ istanbul.candidates
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_candidates","params":[],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"istanbul_candidates","params":[],"id":1}'
 ```
 
 Example:
@@ -358,7 +358,7 @@ istanbul.discard("VALIDATOR_ADDRESS")
 Curl:
 
 ``` sh
-curl -H "Content-Type: application/json" https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"istanbul_discard","params":["VALIDATOR_ADDRESS"],"id":1}'
+curl -H "Content-Type: application/json" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"istanbul_discard","params":["VALIDATOR_ADDRESS"],"id":1}'
 ```
 
 where

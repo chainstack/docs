@@ -122,7 +122,7 @@ You will use this account to deploy the contract.
                 password:"PASSWORD"
               }
           ],
-          host:"RPC_ENDPOINT",
+          host:"ENDPOINT",
           port:false,
           protocol:"https",
           type:"rpc"
@@ -140,7 +140,7 @@ You will use this account to deploy the contract.
 
     * PATH_TO_KEYSTORE — the location of the keystore file.
     * PASSWORD — the password you provided when creating the Ethereum account with Geth.
-    * RPC_ENDPOINT — your Ropsten node RPC endpoint with username and password. The format is `user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+    * ENDPOINT — your Ropsten node endpoint. The format is `nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
     Contract example:
 
@@ -153,7 +153,7 @@ You will use this account to deploy the contract.
                 password:"123456"
               }
           ],
-          host: "user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com",
+          host: "nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d",
           port:false,
           protocol:"https",
           type:"rpc"

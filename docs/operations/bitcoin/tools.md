@@ -14,11 +14,24 @@ Interact with your Bitcoin nodes using [JSON-RPC API](https://en.bitcoin.it/wiki
 
 Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com) to invoke [Bitcoin API methods](https://bitcoin.org/en/developer-reference#bitcoin-core-apis).
 
-Example below demonstrates how to get basic network information:
+Example below demonstrates how to get basic network information from your Bitcoin node HTTPS endpoint:
+
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
+``` sh
+curl https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"getblockchaininfo","params":[],"id":1}'
+```
+
+</template>
+<template v-slot:pp>
 
 ``` sh
 curl https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com -d '{"method":"getblockchaininfo","params":[],"id":1}'
 ```
+
+</template>
+</CodeSwitcher>
 
 ## Development tools
 
@@ -28,7 +41,7 @@ Work with Bitcoin from your Python application.
 
 1. Install [bitcoincli](https://github.com/chainstack/bitcoincli).
 
-2. Configure the client to use `host` and `port` of the node RPC endpoint, the corresponding RPC `username`, and `password`:
+2. Configure the client to use `host` and `port` of the node HTTPS endpoint, the corresponding node `username`, and `password`:
 
 ``` python
 from bitcoincli import Bitcoin

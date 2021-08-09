@@ -46,7 +46,7 @@ This will delete Chainstack-added Pods from the cluster. This will not delete th
 
 * [Deploy a consortium network](/platform/deploy-a-consortium-network)
 * [Join a public network](/platform/join-a-public-network)
-* <a href="https://support.chainstack.com/hc/en-us/articles/900004174426" target="_blank">Setting up an Amazon EKS cluster to integrate with Chainstack.</a>
+* <a href="https://support.chainstack.com/hc/en-us/articles/900004174426" target="_blank">Setting up an Amazon EKS cluster to integrate with Chainstack</a>
 * [Stop or start a node](/platform/stop-or-start-a-node)
 
 :::
