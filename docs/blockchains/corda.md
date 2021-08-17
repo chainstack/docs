@@ -46,7 +46,7 @@ Each node has a unique identity on the network in the form of:
 
 Each node has two communication interfaces:
 
-* Node to node communication implemented as [AMQP 1.0](http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-overview-v1.0-os.html) over TLS using [Apache ActiveMQ Artemis](https://activemq.apache.org/components/artemis/).
+* Node to node communication implemented as [AMQP 1.0](https://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-overview-v1.0-os.html) over TLS using [Apache ActiveMQ Artemis](https://activemq.apache.org/components/artemis/).
 * Node to owner communication implemented as RPC.
 
 Each node keeps historic (consumed) and current (unconsumed) states of on-ledger facts shared between nodes participating in transactions. No node on the network has read access to the entirety of the [ledger](#ledger). Two or more nodes participating in a transaction always have the same read access to the subset of the ledger relevant to the transaction.

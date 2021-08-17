@@ -17,9 +17,9 @@ To create a project:
 1. Click **Public chain** or **Consortium**:
    * Select **Public chain** to deploy:
      * [Ethereum](/blockchains/ethereum)
-     * [Bitcoin](/blockchains/bitcoin)
      * [Polygon PoS](/blockchains/polygon)
      * [Binance Smart Chain](/blockchains/bsc)
+     * [Bitcoin](/blockchains/bitcoin)
      * [Corda](/blockchains/corda)
    * Select **Consortium** to deploy:
      * [Hyperledger Fabric](/blockchains/fabric)

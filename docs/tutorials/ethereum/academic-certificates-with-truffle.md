@@ -387,7 +387,7 @@ module.exports = {
         network_id: "5777"
     },
     mainnet: {
-        provider: () => new HDWalletProvider(mnemonic, "RPC_ENDPOINT"),
+        provider: () => new HDWalletProvider(mnemonic, "ENDPOINT"),
         network_id: 1,
         gas: 4500000,
         gasPrice: 10000000000
@@ -401,7 +401,7 @@ where
 * `mainnet` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
-* RPC_ENDPOINT — your Ethereum node RPC endpoint with username and password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* ENDPOINT — your Ethereum node endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/ethereum/tools).
 * `network_id` — the Ethereum mainnet network ID: `1`.
 
 Example:
@@ -418,7 +418,7 @@ module.exports = {
         network_id: "5777"
     },
     mainnet: {
-        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
+        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
         network_id: 1,
         gas: 4500000,
         gasPrice: 10000000000

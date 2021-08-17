@@ -44,7 +44,7 @@ let multichain = require("multinodejs")({
 });
 ```
 
-3. Invoke any methods from the [MultiChain API specification](http://www.multichain.com/developers/json-rpc-api/):
+3. Invoke any methods from the [MultiChain API specification](https://www.multichain.com/developers/json-rpc-api/):
 
 ``` js
 multichain.getInfo((err, info) => {
@@ -85,7 +85,7 @@ chainname = "nw-123-456-7"
 multichain = Multichain(username, password, host, port, chainname)
 ```
 
-3. Invoke any methods from the [MultiChain API specification](http://www.multichain.com/developers/json-rpc-api/):
+3. Invoke any methods from the [MultiChain API specification](https://www.multichain.com/developers/json-rpc-api/):
 
 ``` python
 info = multichain.getinfo()
