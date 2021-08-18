@@ -23,13 +23,19 @@ Ethereum:
 
 * Node — the CPU, memory, storage, and ancient storage allocated to your Ethereum node. The ancient storage is for the Geth freezer database to separately keep the ledger data older than three epochs. See also [an Ethereum blog post](https://blog.ethereum.org/2019/07/10/geth-v1-9-0/) for the detailed freezer explanation.
 
+Note that you are not charged for the ancient storage.
+
 Polygon PoS:
 
-* Node — the CPU, memory, and storage allocated to your Polygon PoS node.
+* Node — the CPU, memory, storage, and ancient storage allocated to your Polygon PoS node.
+
+Note that you are not charged for the ancient storage.
 
 Binance Smart Chain:
 
-* Node — the CPU, memory, and storage allocated to your Binance Smart Chain node.
+* Node — the CPU, memory, storage, and ancient storage allocated to your Binance Smart Chain node.
+
+Note that you are not charged for the ancient storage.
 
 Tezos:
 

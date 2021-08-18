@@ -15,7 +15,7 @@ Chainstack supports deploying a Tezos node on the mainnet in the following modes
 
 To be a part of the Tezos mainnet, you can deploy either a full node or an archive node.
 
-With a full node, you can query any block information or operation but you cannot query the balances or staking rights before the current checkpoint.
+With a full node, you can query any block information or operation but you cannot query the balances or staking rights before the current checkpoint. A checkpoint is automatically done every 4096 blocks. This means that with a full node you can only query the balances and staking rights from when the last checkpoint happened until the latest block within the current 4096 block cycle.
 
 With an archive node, you can query any information stored on the chain since the genesis.
 
