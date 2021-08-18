@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Deploy Hyperledger Fabric, Corda, Quorum, MultiChain, Ethereum, Bitcoin, Polygon PoS, Binance Smart Chain nodes and networks in minutes.
+    content: Deploy Ethereum, Polygon PoS, Binance Smart Chain, Tezos, Bitcoin, Hyperledger Fabric, Corda, Quorum, MultiChain nodes and networks in minutes.
   - name: keywords
     content: corda hyperledger quorum multichain ethereum bitcoin deploy binance polygon matic
 ---
@@ -20,6 +20,9 @@ Public network:
 * [Binance Smart Chain](/blockchains/bsc)
 	* Mainnet. [Full and archive nodes](/operations/bsc/modes).
 	* Testnet
+* [Tezos](/blockchains/tezos)
+	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
+	* Florencenet testnet.
 * [Bitcoin](/blockchains/bitcoin)
 	* Mainnet
 	* Testnet

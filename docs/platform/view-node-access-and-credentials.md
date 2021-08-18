@@ -79,6 +79,7 @@ If you are an invited [member](/glossary/member) of a [consortium project](/glos
 * [Operations: Ethereum](/operations/ethereum/)
 * [Operations: Polygon PoS](/operations/polygon/)
 * [Operations: Binance Smart Chain](/operations/bsc/)
+* [Operations: Tezos](/operations/tezos/)
 * [Operations: Bitcoin](/operations/bitcoin/)
 * [Operations: Hyperledger Fabric](/operations/fabric/)
 * [Operations: Corda](/operations/corda/)
