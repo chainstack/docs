@@ -78,7 +78,7 @@ tezos-client --endpoint https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9
 
 ### Fund your account with testnet tez
 
-The [Tezos faucet](https://faucet.tzalpha.net/) generates one account a time with test tez on all testnets at once, including Florencenet.
+The [Tezos faucet](https://faucet.tzalpha.net/) generates one account at a time with test tez on all testnets at once, including Florencenet.
 
 1. Go to the [faucet](https://faucet.tzalpha.net/).
 1. Click **Get Testnet tez**.
