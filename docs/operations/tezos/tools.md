@@ -142,7 +142,7 @@ Example:
 
 ``` sh
 SmartPy.sh originate-contract --code contract.tz --storage storage.tz --rpc https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531
-````
+```
 
 </template>
 <template v-slot:pp>
