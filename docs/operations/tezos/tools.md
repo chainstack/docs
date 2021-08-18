@@ -21,7 +21,7 @@ where
 
 * ENDPOINT — your node HTTPS endpoint.
 
-See also [View node access and credentials](platform/view-node-access-and-credentials).
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -73,7 +73,7 @@ where
 
 * ENDPOINT — your node HTTPS endpoint.
 
-See [View node access and credentials](platform/view-node-access-and-credentials).
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -118,7 +118,7 @@ async function main() {
 1. In the wallet, click **Settings** > **Networks**.
 1. Under **Add network**, in the **RPC base URL** field, provide your Tezos node endpoint.
 
-See also [View node access and credentials](platform/view-node-access-and-credentials).
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 ## SmartPy
 
