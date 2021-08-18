@@ -10,7 +10,7 @@ meta:
 
 This tutorial guides you through developing, originating, and interacting with a simple decentralized fund smart contract on Tezos.
 
-The originating and the interaction with the contract for tutorial purposes is done on Florencenet, which is a testnet.
+The origination and the interaction with the contract for tutorial purposes is done on Florencenet, which is a testnet.
 
 The simple fund contract does the following:
 
