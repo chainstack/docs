@@ -44,7 +44,7 @@ tezos-client --endpoint https://user-name:pass-word-pass-word-pass-word@nd-123-4
 
 3. Run the Tezos [client commands](https://tezos.gitlab.io/shell/cli-commands.html).
 
-Example below demonstrates how to get the balance of an address in tez:
+Example to get the balance of an address in tez:
 
 ``` sh
 $ tezos-client get balance for tz1bEQQxao8bEbvuXgh8vnSQkPJaoUvyomMP
@@ -75,7 +75,7 @@ where
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-Example:
+Example to get the latest block information:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
