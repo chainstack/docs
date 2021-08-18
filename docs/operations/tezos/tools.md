@@ -132,7 +132,7 @@ SmartPy.sh originate-contract --code CONTRACT --storage STORAGE --rpc ENDPOINT
 where
 
 * ENDPOINT — your node HTTPS endpoint.
-* CONTRACT — your complied contract.
+* CONTRACT — your compiled contract.
 * STORAGE — your compiled contract storage.
 
 Example:
