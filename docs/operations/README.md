@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Learn how to deploy, operate, and develop on Corda, Hyperledger Fabric, Quorum, MultiChain, Ethereum, Bitcoin.
+    content: Learn how to deploy, operate, and develop on Ethereum, Polygon, Binance Smart Chain, Tezos, Bitcoin, Hyperledger Fabric, Corda, Quorum, MultiChain.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin
+    content: corda hyperledger quorum multichain ethereum bitcoin polygon tezos bsc binance
 ---
 
 # Introduction

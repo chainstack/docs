@@ -19,6 +19,7 @@ To create a project:
      * [Ethereum](/blockchains/ethereum)
      * [Polygon PoS](/blockchains/polygon)
      * [Binance Smart Chain](/blockchains/bsc)
+     * [Tezos](/blockchains/tezos)
      * [Bitcoin](/blockchains/bitcoin)
      * [Corda](/blockchains/corda)
    * Select **Consortium** to deploy:
@@ -33,6 +34,7 @@ This will create a project.
 
 ::: tip See next
 
-* [Deploy a network or a node](/quickstart/deploy-a-network-or-a-node)
+* [Join a public network](/platform/join-a-public-network)
+* [Deploy a consortium network](/platform/deploy-a-consortium-network)
 
 :::

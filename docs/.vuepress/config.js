@@ -105,6 +105,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Tezos',
+                        collapsable: true,
+                        children: [
+                            '/operations/tezos/',
+                            '/operations/tezos/networks',
+                            '/operations/tezos/types',
+                            '/operations/tezos/modes',
+                            '/operations/tezos/tools',
+                        ]
+                    },
+                    {
                         title: 'Bitcoin',
                         collapsable: true,
                         children: [
@@ -197,6 +208,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Tezos',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/tezos/',
+                            '/tutorials/tezos/simple-fund-contract-in-ligo',
+                        ]
+                    },
+                    {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
                         children: [
@@ -248,6 +267,7 @@ module.exports = {
                     '/blockchains/ethereum',
                     '/blockchains/polygon',
                     '/blockchains/bsc',
+                    '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',
                     '/blockchains/corda',
