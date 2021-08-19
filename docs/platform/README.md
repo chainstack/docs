@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Learn how to deploy Corda, Hyperledger Fabric, Quorum, MultiChain, Ethereum, Bitcoin nodes and networks with the Chainstack managed blockchain services.
+    content: Learn how to deploy Ethereum, Polygon, Binance Smart Chain, Tezos, Bitcoin, Hyperledger Fabric, Corda, Quorum, MultiChain nodes and networks with the Chainstack managed blockchain services.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin
+    content: corda hyperledger quorum multichain ethereum bitcoin polygon binance bsc tezos
 ---
 
 # Introduction

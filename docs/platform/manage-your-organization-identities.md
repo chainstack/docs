@@ -12,55 +12,9 @@ You can add and delete new identities in your organization [vault](https://conso
 
 Chainstack currently supports identity management for the following networks:
 
+* Hyperledger Fabric networks
 * [Corda Network](https://corda.network/)
 * [Corda Pre-Production Network](https://corda.network/participation/preprod)
-* Hyperledger Fabric networks
-
-## Manage your Corda identity
-
-A Corda identity consists of the following Java KeyStore (JKS) files:
-
-* `nodekeystore.jks` — a keystore with the node's identity key pairs and certificates; protected by **Keystore password**.
-* `sslkeystore.jks` — a keystore with the node's TLS key pair and certificate; protected by **Keystore password**.
-* `truststore.jks` — a keystore with the network operator's root certificate; protected by **Truststore password**.
-
-### Add a new identity
-
-1. Complete steps 1 and 2 of the [Corda Network Foundation guide](https://corda.network/participation/index/).
-1. On Chainstack, navigate to  <a href="https://console.chainstack.com/vault" target="_blank">your vault</a>. Click **Add identity**.
-1. Under **Blockchain protocol**, select **Corda**.
-1. Under **Issuing network**, select **Corda Network** or **Corda Pre-Production Network**. Click **Next**.
-1. Under **Identification**, provide the email and X.500 name that you used to sign up with the Corda Network Foundation.
-1. Review the summary and click **Add identity**.
-
-This will send the new certificate signing request to the Corda Network Foundation. Once the Corda Network Foundation approves your request, you will be able to deploy your nodes in Corda Network or Corda Pre-Production Network using this identity.
-
-### View an identity
-
-To view an identity:
-
-1. Navigate to [your vault](https://console.chainstack.com/vault)
-1. Click **Identities** and select the identity to view.
-
-This will show the details of the identity.
-
-### Export an identity
-
-You may want to export your existing identity from the vault to host a Corda node elsewhere as part of Corda Network or Corda Pre-Production Network.
-
-To export an identity:
-
-1. Navigate to <a href="https://console.chainstack.com/vault" target="_blank">your vault</a> and select the identity to export.
-1. Click **Export**.
-
-This will download the identity keystore files.
-
-### Delete an identity
-
-1. Navigate to <a href="https://console.chainstack.com/vault" target="_blank">your vault</a> and select the identity to delete.
-1. Click **Edit** > **Delete**.
-
-This will irrevocably delete the identity keystore files.
 
 ## Manage your Hyperledger Fabric identity
 
@@ -136,6 +90,52 @@ You can only delete an identity issuer after deleting the associated network.
 1. Click trash icon next to the identity issuer.
 
 This will irrevocably delete the both the identity and the identity issuer private keys and certificate files.
+
+## Manage your Corda identity
+
+A Corda identity consists of the following Java KeyStore (JKS) files:
+
+* `nodekeystore.jks` — a keystore with the node's identity key pairs and certificates; protected by **Keystore password**.
+* `sslkeystore.jks` — a keystore with the node's TLS key pair and certificate; protected by **Keystore password**.
+* `truststore.jks` — a keystore with the network operator's root certificate; protected by **Truststore password**.
+
+### Add a new identity
+
+1. Complete steps 1 and 2 of the [Corda Network Foundation guide](https://corda.network/participation/index/).
+1. On Chainstack, navigate to  <a href="https://console.chainstack.com/vault" target="_blank">your vault</a>. Click **Add identity**.
+1. Under **Blockchain protocol**, select **Corda**.
+1. Under **Issuing network**, select **Corda Network** or **Corda Pre-Production Network**. Click **Next**.
+1. Under **Identification**, provide the email and X.500 name that you used to sign up with the Corda Network Foundation.
+1. Review the summary and click **Add identity**.
+
+This will send the new certificate signing request to the Corda Network Foundation. Once the Corda Network Foundation approves your request, you will be able to deploy your nodes in Corda Network or Corda Pre-Production Network using this identity.
+
+### View an identity
+
+To view an identity:
+
+1. Navigate to [your vault](https://console.chainstack.com/vault)
+1. Click **Identities** and select the identity to view.
+
+This will show the details of the identity.
+
+### Export an identity
+
+You may want to export your existing identity from the vault to host a Corda node elsewhere as part of Corda Network or Corda Pre-Production Network.
+
+To export an identity:
+
+1. Navigate to <a href="https://console.chainstack.com/vault" target="_blank">your vault</a> and select the identity to export.
+1. Click **Export**.
+
+This will download the identity keystore files.
+
+### Delete an identity
+
+1. Navigate to <a href="https://console.chainstack.com/vault" target="_blank">your vault</a> and select the identity to delete.
+1. Click **Edit** > **Delete**.
+
+This will irrevocably delete the identity keystore files.
 
 ::: tip See also
 

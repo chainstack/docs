@@ -207,7 +207,7 @@ module.exports = {
         network_id: "5777"
     },
     quorum: {
-        provider: () => new HDWalletProvider(mnemonic, "RPC_ENDPOINT"),
+        provider: () => new HDWalletProvider(mnemonic, "ENDPOINT"),
         network_id: "*",
         gasPrice: 0,
         gas: 4500000,
@@ -222,7 +222,7 @@ where
 * `quorum` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
-* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* ENDPOINT — your Quorum node HTTPS endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See [View node access and credentials](/platform/view-node-access-and-credentials).
 * `network_id` — your Quorum network ID. See [Default network ID](/operations/quorum/default-network-id). You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
 * `gas` — the setting must be the default `4500000` for the Quorum network.
@@ -242,7 +242,7 @@ module.exports = {
         network_id: "5777"
     },
     quorum: {
-        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
+        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
         network_id: "*",
         gasPrice: 0,
         gas: 4500000,
@@ -271,17 +271,17 @@ The following contract interaction example is done with GoQuorum. For GoQuorum i
 Run:
 
 ``` sh
-./geth attach RPC_ENDPOINT
+./geth attach ENDPOINT
 ```
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint with the RPC username and RPC password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`.
+* ENDPOINT — your Quorum node HTTPS endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`.
 
 Example:
 
 ``` sh
-./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+./geth attach https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
 ```
 
 This will put you in the GoQuorum console interactive mode.

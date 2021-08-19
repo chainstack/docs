@@ -38,8 +38,8 @@ module.exports = {
                     '/platform/supported-cloud-hosting-providers',
                     '/platform/supported-hosting-options',
                     '/platform/create-a-project',
-                    '/platform/deploy-a-consortium-network',
                     '/platform/join-a-public-network',
+                    '/platform/deploy-a-consortium-network',
                     '/platform/invite-a-member-to-the-project',
                     '/platform/invite-a-user-to-the-organization',
                     '/platform/add-a-network-to-a-project',
@@ -71,6 +71,60 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/operations/',
+                    {
+                        title: 'Ethereum',
+                        collapsable: true,
+                        children: [
+                            '/operations/ethereum/',
+                            '/operations/ethereum/networks',
+                            '/operations/ethereum/types',
+                            '/operations/ethereum/modes',
+                            '/operations/ethereum/tools',
+                        ]
+                    },
+                     {
+                        title: 'Polygon PoS',
+                        collapsable: true,
+                        children: [
+                            '/operations/polygon/',
+                            '/operations/polygon/networks',
+                            '/operations/polygon/types',
+                            '/operations/polygon/modes',
+                            '/operations/polygon/tools',
+                        ]
+                    },
+                    {
+                        title: 'Binance Smart Chain',
+                        collapsable: true,
+                        children: [
+                            '/operations/bsc/',
+                            '/operations/bsc/networks',
+                            '/operations/bsc/types',
+                            '/operations/bsc/modes',
+                            '/operations/bsc/tools',
+                        ]
+                    },
+                    {
+                        title: 'Tezos',
+                        collapsable: true,
+                        children: [
+                            '/operations/tezos/',
+                            '/operations/tezos/networks',
+                            '/operations/tezos/types',
+                            '/operations/tezos/modes',
+                            '/operations/tezos/tools',
+                        ]
+                    },
+                    {
+                        title: 'Bitcoin',
+                        collapsable: true,
+                        children: [
+                            '/operations/bitcoin/',
+                            '/operations/bitcoin/networks',
+                            '/operations/bitcoin/types',
+                            '/operations/bitcoin/tools',
+                        ]
+                    },
                     {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
@@ -120,49 +174,6 @@ module.exports = {
                             '/operations/multichain/tools',
                         ]
                     },
-                    {
-                        title: 'Ethereum',
-                        collapsable: true,
-                        children: [
-                            '/operations/ethereum/',
-                            '/operations/ethereum/networks',
-                            '/operations/ethereum/types',
-                            '/operations/ethereum/modes',
-                            '/operations/ethereum/tools',
-                        ]
-                    },
-                    {
-                        title: 'Bitcoin',
-                        collapsable: true,
-                        children: [
-                            '/operations/bitcoin/',
-                            '/operations/bitcoin/networks',
-                            '/operations/bitcoin/types',
-                            '/operations/bitcoin/tools',
-                        ]
-                    },
-                     {
-                        title: 'Polygon PoS',
-                        collapsable: true,
-                        children: [
-                            '/operations/polygon/',
-                            '/operations/polygon/networks',
-                            '/operations/polygon/types',
-                            '/operations/polygon/modes',
-                            '/operations/polygon/tools',
-                        ]
-                    },
-                    {
-                        title: 'Binance Smart Chain',
-                        collapsable: true,
-                        children: [
-                            '/operations/bsc/',
-                            '/operations/bsc/networks',
-                            '/operations/bsc/types',
-                            '/operations/bsc/modes',
-                            '/operations/bsc/tools',
-                        ]
-                    },
                 ]
             },
             {
@@ -170,6 +181,40 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/tutorials/',
+                    {
+                        title: 'Ethereum',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/ethereum/',
+                            '/tutorials/ethereum/academic-certificates-with-truffle',
+                            '/tutorials/ethereum/asset-tokenization-with-embark',
+                            '/tutorials/ethereum/trust-fund-account-with-remix',
+                        ]
+                    },
+                    {
+                        title: 'Polygon PoS',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/polygon/',
+                            '/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon',
+                        ]
+                    },
+                    {
+                        title: 'Binance Smart Chain',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/bsc/',
+                            '/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin',
+                        ]
+                    },
+                    {
+                        title: 'Tezos',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/tezos/',
+                            '/tutorials/tezos/simple-fund-contract-in-ligo',
+                        ]
+                    },
                     {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
@@ -203,32 +248,6 @@ module.exports = {
                             '/tutorials/multichain/distributed-company-scrips',
                         ]
                     },
-                    {
-                        title: 'Ethereum',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/ethereum/',
-                            '/tutorials/ethereum/academic-certificates-with-truffle',
-                            '/tutorials/ethereum/asset-tokenization-with-embark',
-                            '/tutorials/ethereum/trust-fund-account-with-remix',
-                        ]
-                    },
-                    {
-                        title: 'Polygon PoS',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/polygon/',
-                            '/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon',
-                        ]
-                    },
-                    {
-                        title: 'Binance Smart Chain',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/bsc/',
-                            '/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin',
-                        ]
-                    },
                 ]
             },
             {
@@ -245,14 +264,15 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/blockchains/',
+                    '/blockchains/ethereum',
+                    '/blockchains/polygon',
+                    '/blockchains/bsc',
+                    '/blockchains/tezos',
+                    '/blockchains/bitcoin',
                     '/blockchains/fabric',
                     '/blockchains/corda',
                     '/blockchains/quorum',
                     '/blockchains/multichain',
-                    '/blockchains/ethereum',
-                    '/blockchains/bitcoin',
-                    '/blockchains/polygon',
-                    '/blockchains/bsc',
                 ]
             },
             {
@@ -319,6 +339,7 @@ module.exports = {
             default_site_name: 'Chainstack documentation'
         },
         'check-md': {},
-        '@dovyp/vuepress-plugin-clipboard-copy': true
+        '@dovyp/vuepress-plugin-clipboard-copy': true,
+        'code-switcher': true
     }
 }

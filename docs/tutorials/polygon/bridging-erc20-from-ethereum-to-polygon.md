@@ -134,7 +134,7 @@ const private_key = 'PRIVATE_KEY';
 module.exports = {
  networks: {
     mainnet: {
-        provider: () => new HDWalletProvider(private_key, "RPC_ENDPOINT"),
+        provider: () => new HDWalletProvider(private_key, "ENDPOINT"),
         network_id: 1,
         confirmations: 3,
         timeoutBlocks: 200,
@@ -155,7 +155,7 @@ where
 * `mainnet` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * PRIVATE_KEY — the private key of your Ethereum account that will deploy the contract.
-* RPC_ENDPOINT — your Ethereum node RPC endpoint with username and password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* ENDPOINT — your Ethereum node endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/ethereum/tools).
 * `network_id` — the network ID of the Ethereum mainnet: `1`.
 * `solc` — the Solidity compiler version that Truffle must use. OpenZeppelin contracts have a higher version Solidity compiler requirement than the default Truffle installation, hence you must provide a specific compiler version.
 
@@ -246,7 +246,7 @@ const private_key = 'PRIVATE_KEY';
 module.exports = {
  networks: {
     polygon: {
-        provider: () => new HDWalletProvider(private_key, "RPC_ENDPOINT"),
+        provider: () => new HDWalletProvider(private_key, "ENDPOINT"),
         network_id: 137,
         confirmations: 3,
         timeoutBlocks: 200,
@@ -267,7 +267,7 @@ where
 * `polygon` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * PRIVATE_KEY — the private key of your Polygon PoS account that will deploy the contract.
-* RPC_ENDPOINT — your Polygon PoS node RPC endpoint with username and password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* ENDPOINT — your Polygon PoS node endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/polygon/tools).
 * `network_id` — the network ID of the Polygon PoS network: mainnet is `137`, testnet is `80001`.
 * `solc` — the Solidity compiler version that Truffle must use. OpenZeppelin contracts have a higher version Solidity compiler requirement than the default Truffle installation, hence you must provide a specific compiler version.
 

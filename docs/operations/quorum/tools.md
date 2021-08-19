@@ -23,28 +23,33 @@ Having installed Go, install GoQuorum as described in [Quorum: Installing](https
 With GoQuorum installed, you can connect to the Quorum nodes with the `geth attach` command:
 
 ``` sh
-./geth attach RPC_ENDPOINT
+geth attach ENDPOINT
 ```
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint with the RPC username and RPC password. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* ENDPOINT — your node HTTPS endpoint.
+
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
 ``` sh
-$ ./geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
-
-Welcome to the Geth JavaScript console!
-
-instance: Geth/v1.8.12-stable-c6f0ae4e/linux-amd64/go1.9.7
-coinbase: 0xd3c0093b308f4de81d5dc636996b62adee8f66ca
-at block: 0 (Thu, 01 Jan 1970 00:00:00 UTC)
- datadir: /run-quorum/blockchain/qdata/dd
- modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 raft:1.0 rpc:1.0 txpool:1.0 web3:1.0
-
->
+geth attach https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
 ```
+
+</template>
+<template v-slot:pp>
+
+``` sh
+geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+```
+
+</template>
+</CodeSwitcher>
 
 Invoke any methods from [Web3 JavaScript API](https://web3js.readthedocs.io/).
 
@@ -68,6 +73,20 @@ Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com).
 
 Example below demonstrates how to get basic network information:
 
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
+``` sh
+$ curl -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":2}' \
+  https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+
+{"jsonrpc":"2.0","id":2,"result":"0x4"}
+```
+
+</template>
+<template v-slot:pp>
+
 ``` sh
 $ curl -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":2}' \
@@ -75,6 +94,9 @@ $ curl -H "Content-Type: application/json" \
 
 {"jsonrpc":"2.0","id":2,"result":"0x4"}
 ```
+
+</template>
+</CodeSwitcher>
 
 ## Developments tools
 
@@ -109,7 +131,7 @@ const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 w
 
 module.exports = {
     chainstack: {
-        provider: () => new HDWalletProvider(mnemonic, "RPC_ENDPOINT"),
+        provider: () => new HDWalletProvider(mnemonic, "ENDPOINT"),
         network_id: "*",
         gasPrice: 0,
         gas: 4500000,
@@ -124,13 +146,36 @@ where
 * `chainstack` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
-* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. See [View node access and credentials](/platform/view-node-access-and-credentials).
+* ENDPOINT — your Quorum node HTTPS endpoint. See [View node access and credentials](/platform/view-node-access-and-credentials).
 * `network_id` — your Quorum network ID. See [Default network ID](/operations/quorum/default-network-id). You can set it to `*` for any.
 * `gasPrice` — the setting must be `0` for the Quorum network.
 * `gas` — the setting must be the default `4500000` for the Quorum network.
 * `type` — the setting must be `quorum` to instruct Truffle for the Quorum network deployment.
 
 Example:
+
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
+``` js
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 word11 word12 word13 word14 word15";
+
+module.exports = {
+  networks: {
+    chainstack: {
+        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
+        network_id: "*",
+        gasPrice: 0,
+        gas: 4500000,
+        type: "quorum"
+    }
+   }
+};
+```
+
+</template>
+<template v-slot:pp>
 
 ``` js
 const HDWalletProvider = require("@truffle/hdwallet-provider");
@@ -149,6 +194,9 @@ module.exports = {
 };
 ```
 
+</template>
+</CodeSwitcher>
+
 3. Run `truffle migrate --network chainstack` and Truffle will deploy using Chainstack.
 
 ### web3.js
@@ -156,21 +204,35 @@ module.exports = {
 Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Quorum nodes deployed with Chainstack.
 
 1. Install [web3.js](https://web3js.readthedocs.io/).
-1. Use the `HttpProvider` object to connect to your node's RPC endpoint.
+1. Use the `HttpProvider` object to connect to your node HTTPS endpoint.
 
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.HttpProvider('https://USERNAME:PASSWORD@RPC_ENDPOINT'));
+const web3 = new Web3(new Web3.providers.HttpProvider('ENDPOINT'));
 ```
 
 where
 
+* ENDPOINT — your node HTTPS endpoint.
 * USERNAME — your Quorum node access username.
 * PASSWORD — your Quorum node access password.
-* RPC_ENDPOINT — your Quorum node RPC endpoint.
 
 Example to get the latest block number:
+
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
+``` js
+const Web3 = require('web3');
+
+const web3 = new Web3(new Web3.providers.WebsocketProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'));
+
+web3.eth.getBlockNumber().then(console.log);
+```
+
+</template>
+<template v-slot:pp>
 
 ``` js
 const Web3 = require('web3');
@@ -180,11 +242,14 @@ const web3 = new Web3(new Web3.providers.WebsocketProvider('https://user-name:pa
 web3.eth.getBlockNumber().then(console.log);
 ```
 
+</template>
+</CodeSwitcher>
+
 ### web3j
 
 Build DApps using [web3j](https://github.com/web3j/web3j) and Quorum nodes deployed with Chainstack.
 
-Use the `HttpService` object to connect to your node's RPC endpoint.
+Use the `HttpService` object to connect to your node HTTPS endpoint.
 
 Example to get the latest block number:
 
@@ -212,7 +277,7 @@ public final class App {
 
   private static final String USERNAME = "USERNAME";
   private static final String PASSWORD = "PASSWORD";
-  private static final String RPC_ENDPOINT = "RPC_ENDPOINT";
+  private static final String ENDPOINT = "ENDPOINT";
 
   public static void main(String[] args) {
     try {
@@ -225,7 +290,7 @@ public final class App {
           }
       });
 
-      HttpService service = new HttpService(RPC_ENDPOINT, clientBuilder.build(), false);
+      HttpService service = new HttpService(ENDPOINT, clientBuilder.build(), false);
       Web3j web3 = Web3j.build(service);
 
 
@@ -245,9 +310,9 @@ public final class App {
 
 where
 
-* USERNAME — your Quorum node access username.
-* PASSWORD — your Quorum node access password.
-* RPC_ENDPOINT — your Quorum node RPC endpoint.
+* ENDPOINT — your node HTTPS endpoint.
+* USERNAME — your node access username.
+* PASSWORD — your node access password.
 
 See also [the full code on GitHub](https://github.com/chainstack/web3j-getLatestBlock).
 

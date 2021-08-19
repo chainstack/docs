@@ -137,7 +137,7 @@ In your project directory, create a `.env` file:
 
 ``` js
 // Node 1
-RPC1='RPC_ENDPOINT'
+RPC1='ENDPOINT'
 
 WALLET_ADDRESS1='DEFAULT_WALLET_ADDRESS'
 WALLET_KEY1='DEFAULT_WALLET_PRIVATE_KEY'
@@ -148,7 +148,7 @@ TM1='TRANSACTION_MANAGER_ENDPOINT'
 NETWORK_ID1=NETWORK_ID
 
 // Node 2
-RPC2='RPC_ENDPOINT'
+RPC2='ENDPOINT'
 
 WALLET_ADDRESS2='DEFAULT_WALLET_ADDRESS'
 WALLET_KEY2='DEFAULT_WALLET_PRIVATE_KEY'
@@ -159,7 +159,7 @@ TM2='TRANSACTION_MANAGER_ENDPOINT'
 NETWORK_ID2=NETWORK_ID
 
 // Node 3
-RPC3='RPC_ENDPOINT'
+RPC3='ENDPOINT'
 
 WALLET_ADDRESS3='DEFAULT_WALLET_ADDRESS'
 WALLET_KEY3='DEFAULT_WALLET_PRIVATE_KEY'
@@ -172,11 +172,11 @@ NETWORK_ID3=NETWORK_ID
 
 where
 
-* RPC_ENDPOINT — your Quorum node RPC endpoint. The format is `https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com`. Available under **Access and credentials** > **RPC endpoint**.
-* DEFAULT_WALLET_ADDRESS — your Quorum node default wallet address to deploy the contract. Available under **Access and credentials** > **Default wallet address**.
-* DEFAULT_WALLET_PRIVATE_KEY — a private key to your Quorum node default wallet address to sign the transaction. Available under **Access and credentials** > **Default wallet private key**.
-* TRANSACTION_MANAGER_PUBLIC_KEY — your Quorum node Tessera public key. The contract will use this key to make the contract private for the node that signs the contract transaction with the Tessera private key from this public-private key pair. Available under **Access and credentials** > **Transaction manager public key**.
-* TRANSACTION_MANAGER_ENDPOINT — an endpoint to the Tessera node deployed with your Quorum node. The format is `https://user-name:pass-word-pass-word-pass-word@tm-api-nd-123-456-789.p2pify.com`. Available under **Access and credentials** > **Transaction manager endpoint**.
+* ENDPOINT — your Quorum node HTTPS endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. Available under **Access and credentials** > **HTTPS endpoint**.
+* DEFAULT_WALLET_ADDRESS — your Quorum node default wallet address to deploy the contract. Available under **Default wallet** > **Address**.
+* DEFAULT_WALLET_PRIVATE_KEY — a private key to your Quorum node default wallet address to sign the transaction. Available under **Default wallet** > **Private key**.
+* TRANSACTION_MANAGER_PUBLIC_KEY — your Quorum node Tessera public key. The contract will use this key to make the contract private for the node that signs the contract transaction with the Tessera private key from this public-private key pair. Available under **Transaction manager enclave** > **Public key**.
+* TRANSACTION_MANAGER_ENDPOINT — an endpoint to the Tessera node deployed with your Quorum node. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. Available under **Access and credentials** > **TM endpoint**.
 * NETWORK_ID — your Quorum network ID. See [Default network ID](/operations/quorum/default-network-id).
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).

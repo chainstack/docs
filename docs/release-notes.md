@@ -8,6 +8,23 @@ meta:
 
 # Release notes
 
+## Chainstack 2.6
+
+*August 18, 2021*
+
+### What's new
+
+* **Protocols**. [Tezos](/blockchains/tezos) support. You can now deploy full and archive Tezos nodes on mainnet and Florence testnet.
+* **Node details**. Node [access and credentials](/platform/view-node-access-and-credentials) for public chain and Quorum nodes now include key-protected endpoints.
+* **Clouds**. You can now send requests for dedicated public chain node deployment in the Amazon Web Services.
+* **Billing**. You can now upgrade to the Enterprise plan from your billing settings.
+* **Pricing**. Free usage period on the Developer plan reduced from 14 to 7 days.
+* **Documentation**. Tezos [general description](/blockchains/tezos), [operations](/operations/tezos), [fund contract tutorial](/tutorials/tezos/simple-fund-contract-in-ligo).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.5
 
 *June 1, 2021*

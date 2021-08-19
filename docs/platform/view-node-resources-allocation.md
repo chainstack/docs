@@ -19,6 +19,32 @@ To view the resources allocated to your nodes:
 
 ## Understand node resources allocation
 
+Ethereum:
+
+* Node — the CPU, memory, storage, and ancient storage allocated to your Ethereum node. The ancient storage is for the Geth freezer database to separately keep the ledger data older than three epochs. See also [an Ethereum blog post](https://blog.ethereum.org/2019/07/10/geth-v1-9-0/) for the detailed freezer explanation.
+
+Note that you are not charged for the ancient storage.
+
+Polygon PoS:
+
+* Node — the CPU, memory, storage, and ancient storage allocated to your Polygon PoS node.
+
+Note that you are not charged for the ancient storage.
+
+Binance Smart Chain:
+
+* Node — the CPU, memory, storage, and ancient storage allocated to your Binance Smart Chain node.
+
+Note that you are not charged for the ancient storage.
+
+Tezos:
+
+* Node — the CPU, memory, and storage allocated to your Tezos node.
+
+Bitcoin:
+
+* Node — the CPU, memory, and storage allocated to your Bitcoin node.
+
 Hyperledger Fabric:
 
 * Node — the storage allocated to your peer to maintain the state and a copy of the ledger.
@@ -39,22 +65,6 @@ Quorum:
 MultiChain:
 
 * Node — the CPU, memory, and storage allocated to your MultiChain node.
-
-Ethereum:
-
-* Node — the CPU, memory, storage, and ancient storage allocated to your Ethereum node. The ancient storage is for the Geth freezer database to separately keep the ledger data older than three epochs. See also [an Ethereum blog post](https://blog.ethereum.org/2019/07/10/geth-v1-9-0/) for the detailed freezer explanation.
-
-Bitcoin:
-
-* Node — the CPU, memory, and storage allocated to your Bitcoin node.
-
-Binance Smart Chain:
-
-* Node — the CPU, memory, and storage allocated to your Binance Smart Chain node.
-
-Polygon PoS:
-
-* Node — the CPU, memory, and storage allocated to your Polygon PoS node.
 
 ::: tip See also
 
