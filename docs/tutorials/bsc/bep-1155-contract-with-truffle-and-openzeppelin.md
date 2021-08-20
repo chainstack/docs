@@ -119,12 +119,10 @@ This will create the contract deployment instructions for Truffle.
 
 [HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider) is Truffle's separate npm package used to sign transactions.
 
-For compatibility considerations, you must install version `1.2.3`.
-
 Run:
 
 ``` sh
-npm install @truffle/hdwallet-provider@1.2.3
+npm install @truffle/hdwallet-provider
 ```
 
 2. Edit `truffle-config.js` to add:
