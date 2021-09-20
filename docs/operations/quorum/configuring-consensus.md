@@ -378,6 +378,7 @@ null
 
 ::: tip See also
 
-* [Istanbul RPC API](https://docs.goquorum.consensys.net/en/latest/Reference/Consensus/IBFT-RPC-API/)
+* [Istanbul RPC API](https://docs.goquorum.consensys.net/en/stable/Reference/Consensus/IBFT-RPC-API/)
+* [Raft RPC API](https://docs.goquorum.consensys.net/en/stable/Reference/Consensus/Raft-RPC-API/)
 
 :::

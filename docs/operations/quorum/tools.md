@@ -65,9 +65,9 @@ Example below demonstrates how to get the current block number:
 Interact with your Quorum network using:
 
 * [Geth JSON-RPC](https://eth.wiki/json-rpc/API).
-* [Quorum privacy API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/PrivacyAPI/).
-* [Quorum permissions API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/PermissioningAPIs/).
-* [Quorum contract extension API](https://docs.goquorum.consensys.net/en/latest/Reference/APIs/ContractExtensionAPIs/).
+* [Quorum privacy API](https://docs.goquorum.consensys.net/en/stable/Reference/APIs/PrivacyAPI/).
+* [Quorum permissions API](https://docs.goquorum.consensys.net/en/stable/Reference/APIs/PermissioningAPIs/).
+* [Quorum contract extension API](https://docs.goquorum.consensys.net/en/stable/Reference/APIs/ContractExtensionAPIs/).
 
 Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com).
 
