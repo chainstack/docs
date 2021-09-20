@@ -13,6 +13,10 @@ Chainstack currently supports the following cloud providers:
 * Amazon Web Services
 * Microsoft Azure
 * Google Cloud Platform
+* Virtuozzo for:
+  * Shared Polygon PoS archive nodes
+  * Dedicated Polygon PoS full nodes
+  * Dedicated Polygon PoS archive nodes
 
 Chainstack also supports private hosting options. See [Supported hosting options](/platform/supported-hosting-options).
 
