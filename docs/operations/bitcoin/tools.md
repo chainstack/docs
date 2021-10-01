@@ -20,7 +20,7 @@ Example below demonstrates how to get basic network information from your Bitcoi
 <template v-slot:kp>
 
 ``` sh
-curl https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d -d '{"method":"getblockchaininfo","params":[],"id":1}'
+curl https://nd-111-639-677.p2pify.com/a5a80713a6036780d64fed1f52fe33cc -d '{"method":"getblockchaininfo","params":[],"id":1}'
 ```
 
 </template>
@@ -46,10 +46,10 @@ Work with Bitcoin from your Python application.
 ``` python
 from bitcoincli import Bitcoin
 
-host = "nd-123-456-789.p2pify.com"
+host = "nd-111-639-677.p2pify.com"
 port = "80"
-username = "user-name"
-password = "pass-word-pass-word-pass-word"
+username = "hardcore-booth"
+password = "fling-uptake-daily-ankle-citrus-maggot"
 
 bitcoin = Bitcoin(username, password, host, port)
 ```
@@ -61,14 +61,3 @@ info = bitcoin.getblockchaininfo()
 print(info)
 ```
 
-The example code above should output basic network information:
-
-``` python
-{u'pruned': False, u'blocks': 603580, u'chainwork': u'00000000000000000000000000000000000000000a0baf330c67a89653c67005', u'chain': u'main', u'difficulty': 12720005267390.51, u'bip9_softforks': {u'csv': {u'status': u'active', u'since': 419328, u'timeout': 1493596800, u'startTime': 1462060800}, u'segwit': {u'status': u'active', u'since': 481824, u'timeout': 1510704000, u'startTime': 1479168000}}, u'warnings': u'', u'softforks': [{u'version': 2, u'id': u'bip34', u'reject': {u'status': True}}, {u'version': 3, u'id': u'bip66', u'reject': {u'status': True}}, {u'version': 4, u'id': u'bip65', u'reject': {u'status': True}}], u'initialblockdownload': False, u'headers': 603580, u'mediantime': 1573647950, u'verificationprogress': 0.9999919488385801, u'bestblockhash': u'000000000000000000068b536474a44f9e0a0a0ab6be75d9afdaddc8c513bcea', u'size_on_disk': 282597514457}
-```
-
-::: tip See also
-
-* [Supported protocols](/platform/supported-protocols)
-
-:::
