@@ -105,6 +105,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Fantom',
+                        collapsable: true,
+                        children: [
+                            '/operations/fantom/',
+                            '/operations/fantom/networks',
+                            '/operations/fantom/types',
+                            '/operations/fantom/modes',
+                            '/operations/fantom/tools',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -208,6 +219,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Fantom',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/fantom/',
+                            '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -267,6 +286,7 @@ module.exports = {
                     '/blockchains/ethereum',
                     '/blockchains/polygon',
                     '/blockchains/bsc',
+                    '/blockchains/fantom',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',

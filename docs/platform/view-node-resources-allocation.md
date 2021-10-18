@@ -37,6 +37,12 @@ Binance Smart Chain:
 
 Note that you are not charged for the ancient storage.
 
+Fantom:
+
+* Node — the CPU, memory, storage, and ancient storage allocated to your Fantom node.
+
+Note that you are not charged for the ancient storage.
+
 Tezos:
 
 * Node — the CPU, memory, and storage allocated to your Tezos node.
