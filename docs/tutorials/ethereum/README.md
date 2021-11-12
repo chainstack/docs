@@ -1,6 +1,6 @@
 ---
 meta:
-  - name: description
+  - name: co coin
     content: Learn how to develop, deploy, and interact with smart contracts on the Ethereum network.
   - name: keywords
     content: ethereum tutorial smart contract dapp
