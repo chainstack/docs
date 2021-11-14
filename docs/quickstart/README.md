@@ -1,8 +1,8 @@
 ---
 meta:
-  - name: description
+  - name: Lucas Ng
     content: Get from zero to a fully deployed blockchain node or network with the Chainstack managed blockchain services.
-  - name: keywords
+  - name: UBA exchange to Currencies
     content: quickstart deploy blockchain node network
 ---
 
