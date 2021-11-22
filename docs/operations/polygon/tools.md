@@ -162,6 +162,8 @@ main();
 </template>
 </CodeSwitcher>
 
+See also  <a href="https://support.chainstack.com/hc/en-us/articles/4409604331161-Using-GraphQL-with-EVM-compatible-nodes" target="_blank">Using GraphQL with EVM-compatible nodes</a>.
+
 ### MetaMask
 
 You can set your [MetaMask](https://metamask.io/) to interact through your Polygon PoS nodes deployed with Chainstack.
@@ -528,6 +530,79 @@ print(web3.eth.blockNumber)
 ::: tip
 See also <a href="https://support.chainstack.com/hc/en-us/articles/900001918763-WebSocket-connection-to-an-Ethereum-node" target="_blank">WebSocket connection to an EVM node</a>.
 :::
+
+### web3.php
+
+Build DApps using [web3.php](https://github.com/web3p/web3.php) and Polygon PoS nodes deployed with Chainstack.
+
+1. Install [web3.php](https://github.com/web3p/web3.php).
+2. Connect over HTTP:
+
+``` php
+<?php
+
+require_once "vendor/autoload.php";
+
+use Web3\Web3;
+use Web3\Providers\HttpProvider;
+use Web3\RequestManagers\HttpRequestManager;
+
+$web3 = new Web3(new HttpProvider(new HttpRequestManager("ENDPOINT", 5)));
+?>
+```
+
+where ENDPOINT is your node HTTPS endpoint.
+
+3. Use [JSON-RPC methods](https://eth.wiki/json-rpc/API) to interact with the node.
+
+Example to get the latest block number:
+
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
+``` php
+<?php
+
+require_once "vendor/autoload.php";
+
+use Web3\Web3;
+use Web3\Providers\HttpProvider;
+use Web3\RequestManagers\HttpRequestManager;
+
+$web3 = new Web3(new HttpProvider(new HttpRequestManager("https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d", 5)));
+
+$eth = $web3->eth;
+
+$eth->blockNumber(function ($err, $data) {
+        print "$data \n";
+});
+?>
+```
+
+</template>
+<template v-slot:pp>
+
+``` php
+<?php
+
+require_once "vendor/autoload.php";
+
+use Web3\Web3;
+use Web3\Providers\HttpProvider;
+use Web3\RequestManagers\HttpRequestManager;
+
+$web3 = new Web3(new HttpProvider(new HttpRequestManager("https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com", 5)));
+
+$eth = $web3->eth;
+
+$eth->blockNumber(function ($err, $data) {
+        print "$data \n";
+});
+?>
+```
+
+</template>
+</CodeSwitcher>
 
 ### ethers.js
 
