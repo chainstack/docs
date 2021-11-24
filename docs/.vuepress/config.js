@@ -45,6 +45,7 @@ module.exports = {
                     '/platform/add-a-network-to-a-project',
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
+                    '/platform/view-node-requests-metrics',
                     '/platform/view-service-nodes',
                     '/platform/view-node-and-network-status',
                     '/platform/view-node-resources-allocation',
