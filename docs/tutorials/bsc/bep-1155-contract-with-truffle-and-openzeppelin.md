@@ -103,8 +103,6 @@ The contract implementation is the following:
 3. Create `2_deploy_contracts.js` in the `migrations` directory.
 
 ``` js
-var BinanceSmartChain1155 = artifacts.require("./BinanceSmartChain1155.sol");
-
 module.exports = function(deployer) {
 var BinanceSmartChain1155 = artifacts.require("./BinanceSmartChain1155.sol");
   deployer.deploy(BinanceSmartChain1155);
