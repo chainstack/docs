@@ -8,6 +8,22 @@ meta:
 
 # Release notes
 
+## Chainstack 2.7
+
+*December 1, 2021*
+
+### What's new
+
+* **Protocols**.
+  * [Fantom](/blockchains/fantom) support. You can now deploy full and archive Fantom nodes on mainnet and testnet.
+  * [Tezos](/blockchains/tezos) dedicated node support. You can now deploy dedicated full and archive Tezos nodes.
+* **Documentation**. Fantom [general description](/blockchains/fantom), [operations](/operations/fantom), [ERC-721 contract tutorial](/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin).
+* **Node metrics**. Added [node requests metrics](/platform/view-node-requests-metrics) for public chain protocols.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.6
 
 *August 18, 2021*
