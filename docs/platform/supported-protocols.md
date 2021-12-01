@@ -23,6 +23,9 @@ Public network:
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
 	* Florencenet testnet.
+* [Fantom](/blockchains/fantom)
+	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
+	* Testnet
 * [Bitcoin](/blockchains/bitcoin)
 	* Mainnet
 	* Testnet

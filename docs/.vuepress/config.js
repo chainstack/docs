@@ -45,6 +45,7 @@ module.exports = {
                     '/platform/add-a-network-to-a-project',
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
+                    '/platform/view-node-requests-metrics',
                     '/platform/view-service-nodes',
                     '/platform/view-node-and-network-status',
                     '/platform/view-node-resources-allocation',
@@ -102,6 +103,17 @@ module.exports = {
                             '/operations/bsc/types',
                             '/operations/bsc/modes',
                             '/operations/bsc/tools',
+                        ]
+                    },
+                    {
+                        title: 'Fantom',
+                        collapsable: true,
+                        children: [
+                            '/operations/fantom/',
+                            '/operations/fantom/networks',
+                            '/operations/fantom/types',
+                            '/operations/fantom/modes',
+                            '/operations/fantom/tools',
                         ]
                     },
                     {
@@ -208,6 +220,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Fantom',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/fantom/',
+                            '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -267,6 +287,7 @@ module.exports = {
                     '/blockchains/ethereum',
                     '/blockchains/polygon',
                     '/blockchains/bsc',
+                    '/blockchains/fantom',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',

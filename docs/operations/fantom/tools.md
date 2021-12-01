@@ -1,32 +1,32 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Ethereum node, deploy smart contracts through your node, and develop dapps.
+    content: Learn how to interact with your Fantom node, deploy smart contracts through your node, and develop dapps.
   - name: keywords
-    content: ethereum truffle web3 dapp geth
+    content: fantom ftm truffle web3 dapp geth opera hardhat
 ---
 
 # Tools
 
 ## Interaction tools
 
-### Geth
+### Opera client
 
-Interact with your Ethereum node using [Geth](https://geth.ethereum.org/docs/getting-started).
+Interact with your Fantom node using the [Opera client](https://github.com/Fantom-foundation/go-opera).
 
-1. Install [Geth](https://github.com/ethereum/go-ethereum).
+1. Install [Opera](https://docs.fantom.foundation/staking/run-a-read-only-node#install-required-tools).
 
-2. Use `geth attach` command with the node endpoint.
+2. Use `opera attach` command with the node endpoint.
 
 ``` sh
-geth attach ENDPOINT
+opera attach ENDPOINT
 ```
 
 where
 
 * ENDPOINT — your node HTTPS or WSS endpoint.
 
-See [View node access and credentials](/platform/view-node-access-and-credentials).
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -34,37 +34,45 @@ Example:
 <template v-slot:kp>
 
 ``` sh
-geth attach https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+opera attach https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+opera attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 ```
 
 </template>
 </CodeSwitcher>
 
-3. Invoke any methods from [Web3 JavaScript API](https://web3js.readthedocs.io/).
+3. Invoke any methods from [Web3 JavaScript API](https://web3js.readthedocs.io/). Make sure you replace the `eth` namespace with `ftm`.
 
 Example below demonstrates how to get the balance of an address in wei value and convert it to ether value:
 
 ``` js
-> web3.fromWei(web3.eth.getBalance("0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae"))
-642538.078574759898951277
+> web3.fromWei(web3.ftm.getBalance("0x663f6ab861014056274128C69ff80caDCf048603"))
+660.387405873826933931
 ```
 
 ### GraphQL
 
-You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Growth, Business, and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
+You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Business and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
+
+::: tip GraphQL schema
+
+The Fantom GraphQL schema is different from the standard Geth implementation.
+
+See Fantom GraphQL documentation: [Schema Structure](https://docs.fantom.foundation/api/schema-structure).
+
+:::
 
 #### UI
 
 You can query data using the graphical interface.
 
-1. On Chainstack, navigate to your dedicated Ethereum node. See [View node access and credentials](/platform/view-node-access-and-credentials).
+1. On Chainstack, navigate to your dedicated Fantom node. See [View node access and credentials](/platform/view-node-access-and-credentials).
 1. Hover over **GraphQL IDE URL** and click **Open**.
 1. In the graphical interface that opens, run a GraphQL query.
 
@@ -103,7 +111,7 @@ where
 * ENDPOINT — your node GraphQL endpoint.
 * QUERY — your GraphQL query.
 
-See [View node access and credentials](/platform/view-node-access-and-credentials).
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example to get the latest block number:
 
@@ -160,7 +168,7 @@ See also  <a href="https://support.chainstack.com/hc/en-us/articles/440960433116
 
 ### MetaMask
 
-You can set your [MetaMask](https://metamask.io/) to interact through your Ethereum nodes deployed with Chainstack.
+You can set your [MetaMask](https://metamask.io/) to interact through your Fantom nodes deployed with Chainstack.
 
 1. Open your MetaMask and click the network selector.
 1. In the network selector, click **Custom RPC**.
@@ -187,9 +195,8 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Ether
 
 1. In the **Chain ID** field, enter the ID of the network:
 
-    * Mainnet: `1`
-    * Ropsten: `3`
-    * Rinkeby: `4`
+    * Mainnet: `250`
+    * Testnet: `4002`
 
 1. Click **Save**.
 
@@ -199,7 +206,7 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 
 ### Truffle
 
-Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Ethereum nodes.
+Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Fantom nodes.
 
 1. Install [Truffle Suite](https://truffleframework.com), [HD Wallet-enabled Web3 provider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider), and create a project.
 
@@ -209,13 +216,13 @@ Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to y
 <template v-slot:kp>
 
 ``` js
-onst HDWalletProvider = require("@truffle/hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 const mnemonic = 'pattern enroll upgrade ...';
 ...
 module.exports = {
  networks: {
     chainstack: {
-        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
+        provider: () => new HDWalletProvider(mnemonic, "https://nd-868-290-632.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
         network_id: "*"
     },
    }
@@ -246,7 +253,7 @@ module.exports = {
 
 ### Hardhat
 
-Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Ethereum nodes.
+Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Fantom nodes.
 
 1. Install [Hardhat](https://hardhat.org/) and create a project.
 
@@ -314,97 +321,9 @@ module.exports = {
 
 3. Run `npx hardhat run scripts/deploy.js --network chainstack` and Hardhat will deploy using Chainstack.
 
-See also <a href="https://support.chainstack.com/hc/en-us/articles/900004242406" target="_blank">Forking EVM-compatible mainnet with Hardhat</a>.
-
-### Embark
-
-Configure [Embark](https://embark.status.im) to deploy contracts to your Ethereum nodes.
-
-1. Install [Embark](https://embark.status.im) and create a project.
-
-2. Create a new environment in `config/contracts.js`, add your mnemonic phrase generated by [a wallet](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) and the node hostname:
-
-``` js
-chainstack: {
-  deployment:{
-    accounts: [
-      {
-        mnemonic: 'pattern enroll upgrade ...'
-      }
-    ],
-    host: "HOSTNAME",
-    port: false,
-    protocol: "https",
-    type: "rpc"
-  }
-}
-```
-
-where
-
-* HOSTNAME — your node HTTPS endpoint hostname with credentials.
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
-
-Example:
-
-<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
-<template v-slot:kp>
-
-``` js
-chainstack: {
-  deployment:{
-    accounts: [
-      {
-        mnemonic: 'pattern enroll upgrade ...'
-      }
-    ],
-    host: "nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d",
-    port: false,
-    protocol: "https",
-    type: "rpc"
-  }
-}
-```
-
-</template>
-<template v-slot:pp>
-
-``` js
-chainstack: {
-  deployment:{
-    accounts: [
-      {
-        mnemonic: 'pattern enroll upgrade ...'
-      }
-    ],
-    host: "user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com",
-    port: false,
-    protocol: "https",
-    type: "rpc"
-  }
-}
-```
-
-</template>
-</CodeSwitcher>
-
-3. Run `embark run chainstack` and Embark will deploy using Chainstack.
-
-### Remix IDE
-
-To make Remix IDE interact with the network through a Chainstack node:
-
-1. Get [MetaMask](https://metamask.io/) and set it to interact through a Chainstack node. See [Interacting through MetaMask](#metamask).
-1. In Remix IDE, navigate to the **Deploy** tab. Select **Injected Web3** in **Environment**.
-
-This will engage MetaMask and make Remix IDE interact with the network through a Chainstack node.
-
-For a detailed tutorial with Remix IDE, see [Trust Fund account on Ethereum](/tutorials/ethereum/trust-fund-account-with-remix).
-
 ### web3.js
 
-Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Ethereum nodes deployed with Chainstack.
+Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Fantom nodes deployed with Chainstack.
 
 #### HTTP
 
@@ -491,14 +410,14 @@ web3.eth.getBlockNumber().then(console.log);
 
 ### web3.py
 
-Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Ethereum nodes deployed with Chainstack.
+Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Fantom nodes deployed with Chainstack.
 
 1. Install [web3.py](https://web3py.readthedocs.io/).
 1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">EVM node connection: HTTP vs WebSocket</a>.
 
 #### HTTP
 
-Use the `HTTPProvider` to connect to your node endpoint.
+Use the `HTTPProvider` to connect to your node HTTPS endpoint.
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
@@ -528,8 +447,6 @@ where
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
 
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
-
 Example to get the latest block number:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
@@ -538,7 +455,7 @@ Example to get the latest block number:
 ``` py
 from web3 import Web3
 
-web3 = Web3(Web3.HTTPProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'))
+web3 = Web3(Web3.HTTPProvider('https://nd-868-290-632.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'))
 print(web3.eth.blockNumber)
 ```
 
@@ -587,8 +504,6 @@ where
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
 
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
-
 Example to get the latest block number:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
@@ -620,7 +535,7 @@ See also <a href="https://support.chainstack.com/hc/en-us/articles/900001918763-
 
 ### web3.php
 
-Build DApps using [web3.php](https://github.com/web3p/web3.php) and Ethereum nodes deployed with Chainstack.
+Build DApps using [web3.php](https://github.com/web3p/web3.php) and Fantom nodes deployed with Chainstack.
 
 1. Install [web3.php](https://github.com/web3p/web3.php).
 2. Connect over HTTP:
@@ -639,6 +554,7 @@ $web3 = new Web3(new HttpProvider(new HttpRequestManager("ENDPOINT", 5)));
 ```
 
 where ENDPOINT is your node HTTPS endpoint.
+
 
 3. Use [JSON-RPC methods](https://eth.wiki/json-rpc/API) to interact with the node.
 
@@ -691,87 +607,16 @@ $eth->blockNumber(function ($err, $data) {
 </template>
 </CodeSwitcher>
 
-### web3j
-
-Build DApps using [web3j](https://github.com/web3j/web3j) and Ethereum nodes deployed with Chainstack.
-
-Use the `HttpService` object to connect to your node endpoint.
-
-Example to get the latest block number:
-
-``` java
-package getLatestBlock;
-
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.methods.response.EthBlock;
-import org.web3j.protocol.exceptions.ClientConnectionException;
-import org.web3j.protocol.http.HttpService;
-
-import okhttp3.Authenticator;
-import okhttp3.Credentials;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import okhttp3.Route;
-
-public final class App {
-
-  private static final String USERNAME = "USERNAME";
-  private static final String PASSWORD = "PASSWORD";
-  private static final String ENDPOINT = "ENDPOINT";
-
-  public static void main(String[] args) {
-    try {
-
-      OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
-      clientBuilder.authenticator(new Authenticator() {
-          @Override public Request authenticate(Route route, Response response) throws IOException {
-              String credential = Credentials.basic(USERNAME, PASSWORD);
-              return response.request().newBuilder().header("Authorization", credential).build();
-          }
-      });
-
-      HttpService service = new HttpService(RPC_ENDPOINT, clientBuilder.build(), false);
-      Web3j web3 = Web3j.build(service);
-
-
-      EthBlock.Block latestBlock = web3.ethGetBlockByNumber(DefaultBlockParameterName.LATEST, false).send().getBlock();
-
-
-      System.out.println("Latest Block: #" + latestBlock.getNumber());
-
-    } catch (IOException | ClientConnectionException ex) {
-
-      Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
-    }
-  }
-
-}
-```
-
-where
-
-* ENDPOINT — your node HTTPS endpoint.
-* USERNAME — your node access username.
-* PASSWORD — your node access password.
-
-See also [the full code on GitHub](https://github.com/chainstack/web3j-getLatestBlock).
-
 ### ethers.js
 
-Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Ethereum nodes deployed with Chainstack.
+Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Fantom nodes deployed with Chainstack.
 
 1. Install [ethers.js](https://www.npmjs.com/package/ethers).
-1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">EVM node connection: HTTP vs WebSocket</a>.
+1. Connect over HTTP or WebSocket.
 
 #### HTTP
 
-Use the `JsonRpcProvider` object to connect to your node endpoint.
+Use the `JsonRpcProvider` object to connect to your node HTTPS endpoint.
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
@@ -807,12 +652,9 @@ where
 * ENDPOINT — your node HTTPS endpoint.
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
-* NETWORK_ID — Ethereum network ID:
-  * Mainnet: `1`
-  * Ropsten: `3`
-  * Rinkeby: `4`
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* NETWORK_ID — Fantom network ID:
+  * Mainnet: `250`
+  * Testnet: `4002`
 
 Example to get the latest block number on mainnet:
 
@@ -825,7 +667,7 @@ const { ethers } = require("ethers");
 var urlInfo = {
     url: 'https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 1);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 250);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -841,7 +683,7 @@ var urlInfo = {
     user: 'user-name',
     password: 'pass-word-pass-word-pass-word'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 1);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 250);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -862,12 +704,9 @@ const provider = new ethers.providers.WebSocketProvider('ENDPOINT', NETWORK_ID);
 where
 
 * ENDPOINT — your node WSS endpoint.
-* NETWORK_ID — Ethereum network ID:
-  * Mainnet: `1`
-  * Ropsten: `3`
-  * Rinkeby: `4`
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* NETWORK_ID — Fantom network ID:
+  * Mainnet: `250`
+  * Testnet: `4002`
 
 Example to get the latest block number on mainnet:
 
@@ -877,7 +716,7 @@ Example to get the latest block number on mainnet:
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d', 1);
+const provider = new ethers.providers.WebSocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d', 250);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -888,7 +727,7 @@ provider.getBlockNumber().then(console.log);
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 1);
+const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 250);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -902,33 +741,32 @@ provider.getBlockNumber().then(console.log);
 1. Use the `brownie networks add` command with the node endpoint:
 
 ``` sh
-brownie networks add Ethereum ID name="NETWORK_NAME" host=ENDPOINT chainid=NETWORK_ID
+brownie networks add Fantom ID name="NETWORK_NAME" host=KEY_ENDPOINT chainid=NETWORK_ID
 ```
 
 where
 
-* ID — any name that you will use as the network tag to run a deployment. For example, `bsc-mainnet`.
+* ID — any name that you will use as the network tag to run a deployment. For example, `chainstack-mainnet`.
 * NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
 * ENDPOINT — your node HTTPS or WSS endpoint.
-* NETWORK_ID — Ethereum network ID:
-  * Mainnet: `1`
-  * Ropsten: `3`
-  * Rinkeby: `4`
+* NETWORK_ID — Fantom network ID:
+  * Mainnet: `250`
+  * Testnet: `4002`
 
-Example to add an Ethereum mainnet node to the list of Brownie networks:
+Example to add a Fantom mainnet node to the list of Brownie networks:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
 
 ``` sh
-brownie networks add Ethereum chainstack-mainnet name="Mainnet (Chainstack)" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=1
+brownie networks add Fantom fantom-mainnet name="Mainnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=250
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-brownie networks add Ethereum chainstack-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=1
+brownie networks add Fantom fantom-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=250
 ```
 
 </template>
@@ -937,13 +775,11 @@ brownie networks add Ethereum chainstack-mainnet name="Mainnet (Chainstack)" hos
 Example to run the deployment script:
 
 ``` sh
-brownie run deploy.py --network chainstack-mainnet
+brownie run deploy.py --network fanton-mainnet
 ```
 
 ::: tip See also
 
-* [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)
-* [Asset tokenization with Embark](/tutorials/ethereum/asset-tokenization-with-embark)
-* [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix)
+* [ERC-721 collection contract with Truffle and OpenZeppelin](/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin#prerequisites)
 
 :::

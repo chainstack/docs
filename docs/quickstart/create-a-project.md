@@ -20,6 +20,7 @@ To create a project:
      * [Polygon PoS](/blockchains/polygon)
      * [Binance Smart Chain](/blockchains/bsc)
      * [Tezos](/blockchains/tezos)
+     * [Fantom](/blockchains/fantom)
      * [Bitcoin](/blockchains/bitcoin)
      * [Corda](/blockchains/corda)
    * Select **Consortium** to deploy:

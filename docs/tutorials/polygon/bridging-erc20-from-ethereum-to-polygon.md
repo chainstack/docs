@@ -18,6 +18,14 @@ In this tutorial, you will:
 * Deploy a compatible smart contract on the Polygon PoS commit chain.
 * Map the Ethereum smart contract to the Polygon PoS smart contract.
 
+::: tip Testnet
+
+You can run this tutorial on the testnet as well.
+
+For the testnet, you will need to deploy the ERC-20 contract on the Ethereum [Görli testnet](https://goerli.net/) and the Polygon PoS contract on the [Mumbai testnet](/operations/polygon/networks).
+
+:::
+
 ## Prerequisites
 
 * <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy an Ethereum node and a Polygon PoS node.
@@ -307,7 +315,14 @@ The explorer will take a few seconds to compile your contract, verify, and publi
 1. Select **ERC20** and **Ethereum - Matic Mainnet**.
 1. Provide the address of your contract on the Ethereum mainnet and on the Polygon PoS mainnet.
 1. Provide and email address to be notified of when the mapping is done.
-1. Clikc **Submit**.
+1. Click **Submit**.
+
+### Bridge the mapped token
+
+When your token is mapped, bridge your token from Ethereum to Polygon and back:
+
+* [Polygon mainnet bridge](https://wallet.polygon.technology/bridge)
+* [Polygon testnet bridge](https://wallet-dev.polygon.technology/bridge)
 
 ## Conclusion
 
