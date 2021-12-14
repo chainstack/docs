@@ -87,8 +87,8 @@ peer lifecycle chaincode install CHAINCODE_NAME.tar.gz
 Example:
 
 ``` sh
-$ peer lifecycle chaincode install freedom.tar.gz
-2020-02-27 07:53:19.529 UTC [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001 Installed remotely: response:<status:200 payload:"\nHfreedomDividend:6bf3538844b3756d2305968e5b51e3a1a2f80f8c12dcb5631c73893e927b2389\022\007freedom" >
+$ peer lifecycle chaincode install freedomDividend.tar.gz
+2020-02-27 07:53:19.529 UTC [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001 Installed remotely: response:<status:200 payload:"\nHfreedomDividend:6bf3538844b3756d2305968e5b51e3a1a2f80f8c12dcb5631c73893e927b2389\022\007freedomDividend" >
 2020-02-27 07:53:19.530 UTC [cli.lifecycle.chaincode] submitInstallProposal -> INFO 002 Chaincode code package identifier: freedomDividend:6bf3538844b3756d2305968e5b51e3a1a2f80f8c12dcb5631c73893e927b2389
 ```
 
