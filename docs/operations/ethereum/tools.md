@@ -921,7 +921,7 @@ Example to add an Ethereum mainnet node to the list of Brownie networks:
 <template v-slot:kp>
 
 ``` sh
-brownie networks add Ethereum chainstack-mainnet name="Mainnet (Chainstack)" https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=1
+brownie networks add Ethereum chainstack-mainnet name="Mainnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=1
 ```
 
 </template>
