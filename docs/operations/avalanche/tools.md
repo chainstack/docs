@@ -679,28 +679,30 @@ Use [forge](https://github.com/gakonst/foundry/tree/master/forge) to develop, te
 To deploy a contract:
 
 ``` sh
-forge create --contracts CONTRACT_PATH --rpc-url ENDPOINT
+forge create CONTRACT_NAME --contracts CONTRACT_PATH --private-key PRIVATE_KEY --rpc-url ENDPOINT
 ```
 
 where
 
+* CONTRACT_NAME — name of the contract in the Solidity source code.
 * CONTRACT_PATH — path to your smart contract.
+* PRIVATE_KEY — the private to your funded account that you will use to deploy the contract.
 * ENDPOINT — your node HTTPS endpoint.
 
-Example to deploy the [Trust fund account](/tutorials/ethereum/trust-fund-account-with-remix) contract on C-Chain:
+Example to deploy the [simple storage](/https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html) contract on C-Chain:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
 
 ``` sh
-forge create --contracts /root/foundry/contract/trustfund.sol --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+forge create SimpleStorage --contracts /root/foundry/contracts/simplestorage.sol --private-key 9c4b7f4ad48f977dbcdb2323249fd738cc9ff283a7514f3350d344e22c5b923d --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-forge create --contracts /root/foundry/contract/trustfund.sol --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+forge create --contracts /root/foundry/contract/trustfund.sol --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc
 ```
 
 </template>
@@ -724,14 +726,14 @@ Example:
 <template v-slot:kp>
 
 ``` sh
-cast block-number --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+cast block-number --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc
 ```
 
 </template>
