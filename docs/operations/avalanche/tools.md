@@ -702,7 +702,7 @@ forge create SimpleStorage --contracts /root/foundry/contracts/simplestorage.sol
 <template v-slot:pp>
 
 ``` sh
-forge create --contracts /root/foundry/contract/trustfund.sol --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc
+forge create --contracts /root/foundry/contracts/simplestorage.sol --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc
 ```
 
 </template>
