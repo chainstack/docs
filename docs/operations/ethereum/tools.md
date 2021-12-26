@@ -962,7 +962,7 @@ where
 * PRIVATE_KEY — the private to your funded account that you will use to deploy the contract.
 * ENDPOINT — your node HTTPS endpoint.
 
-Example to deploy the [simple storage](/https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html) contract:
+Example to deploy the [simple storage](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html) contract:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
