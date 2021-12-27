@@ -783,7 +783,7 @@ brownie run deploy.py --network bsc-mainnet
 
 #### Forge
 
-Use [forge](https://github.com/gakonst/foundry/tree/master/forge) to develop, test, and deploy your smart contracts on C-Chain.
+Use [forge](https://github.com/gakonst/foundry/tree/master/forge) to develop, test, and deploy your smart contracts.
 
 To deploy a contract:
 

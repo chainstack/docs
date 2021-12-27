@@ -220,7 +220,7 @@ const mnemonic = 'pattern enroll upgrade ...';
 module.exports = {
  networks: {
     chainstack: {
-        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-678932.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
+        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
         network_id: "*"
     },
    }
@@ -782,7 +782,7 @@ brownie run deploy.py --network polygon-mainnet
 
 #### Forge
 
-Use [forge](https://github.com/gakonst/foundry/tree/master/forge) to develop, test, and deploy your smart contracts on C-Chain.
+Use [forge](https://github.com/gakonst/foundry/tree/master/forge) to develop, test, and deploy your smart contracts.
 
 To deploy a contract:
 
