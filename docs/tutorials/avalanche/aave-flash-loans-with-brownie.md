@@ -27,7 +27,7 @@ Specifically, in this tutorial, you will:
 
 ## Overview
 
-To get from zero to an executed Aave flash loan the Avalanche Fuji C-Chain testnet, do the following:
+To get from zero to an executed Aave flash loan on the Avalanche Fuji C-Chain testnet, do the following:
 
 1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
 1. With Chainstack, join the Avalanche Fuji testnet.
