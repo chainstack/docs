@@ -20,6 +20,9 @@ Public network:
 * [Binance Smart Chain](/blockchains/bsc)
 	* Mainnet. [Full and archive nodes](/operations/bsc/modes).
 	* Testnet
+* [Avalanche](/blockchains/avalanche)
+	* Mainnet. [Full and archive nodes](/operations/avalanche/modes).
+	* Fuji testnet
 * [Fantom](/blockchains/fantom)
 	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
 	* Testnet

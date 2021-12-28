@@ -19,6 +19,7 @@ To create a project:
      * [Ethereum](/blockchains/ethereum)
      * [Polygon PoS](/blockchains/polygon)
      * [Binance Smart Chain](/blockchains/bsc)
+     * [Avalanche](/blockchains/avalanche)
      * [Fantom](/blockchains/fantom)
      * [Tezos](/blockchains/tezos)
      * [Bitcoin](/blockchains/bitcoin)
