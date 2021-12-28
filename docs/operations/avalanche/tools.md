@@ -789,9 +789,10 @@ curl -X POST --data '{
 
 ``` js
 const ip: string = "BASE_ENDPOINT"
-const port: number = 443
+// const port: number = 9650
 const protocol: string = "https"
 const networkID: number = CHAIN_ID
+const avalanche: Avalanche = new Avalanche(ip, null, protocol, networkID)
 ```
 
 where
@@ -801,6 +802,8 @@ where
   * Mainnet: `1`
   * Fuji testnet: `5`
 
+Make sure you remove `const port` and change `port` to `null` in the default example.
+
 Example to get AVAX balance of an address through your Avalanche node HTTPS endpoint on the X-Chain mainnet:
 
 ``` js
@@ -808,10 +811,10 @@ import { Avalanche } from "../../dist"
 import { AVMAPI } from "../../dist/apis/avm"
 
 const ip: string = "nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"
-const port: number = 443
+// const port: number = 9650
 const protocol: string = "https"
 const networkID: number = 1
-const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
+const avalanche: Avalanche = new Avalanche(ip, null, protocol, networkID)
 const xchain: AVMAPI = avalanche.XChain()
 
 const main = async (): Promise<any> => {
