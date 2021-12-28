@@ -222,7 +222,7 @@ const mnemonic = 'pattern enroll upgrade ...';
 module.exports = {
  networks: {
     chainstack: {
-        provider: () => new HDWalletProvider(mnemonic, "https://nd-868-290-632.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
+        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
         network_id: "*"
     },
    }
@@ -455,7 +455,7 @@ Example to get the latest block number:
 ``` py
 from web3 import Web3
 
-web3 = Web3(Web3.HTTPProvider('https://nd-868-290-632.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'))
+web3 = Web3(Web3.HTTPProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'))
 print(web3.eth.blockNumber)
 ```
 
@@ -777,6 +777,78 @@ Example to run the deployment script:
 ``` sh
 brownie run deploy.py --network fanton-mainnet
 ```
+
+### Foundry
+
+1. Install [Foundry](https://github.com/gakonst/foundry/).
+1. Use `--rpc-url` to run the operation through your Chainstack node.
+
+#### Forge
+
+Use [forge](https://github.com/gakonst/foundry/tree/master/forge) to develop, test, and deploy your smart contracts.
+
+To deploy a contract:
+
+``` sh
+forge create CONTRACT_NAME --contracts CONTRACT_PATH --private-key PRIVATE_KEY --rpc-url ENDPOINT
+```
+
+where
+
+* CONTRACT_NAME — name of the contract in the Solidity source code.
+* CONTRACT_PATH — path to your smart contract.
+* PRIVATE_KEY — the private to your funded account that you will use to deploy the contract.
+* ENDPOINT — your node HTTPS endpoint.
+
+Example to deploy the [simple storage](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html) contract:
+
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
+``` sh
+forge create SimpleStorage --contracts /root/foundry/contracts/simplestorage.sol --private-key 9c4b7f4ad48f977dbcdb2323249fd738cc9ff283a7514f3350d344e22c5b923d --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+```
+
+</template>
+<template v-slot:pp>
+
+``` sh
+forge create --contracts /root/foundry/contracts/simplestorage.sol --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+```
+
+</template>
+</CodeSwitcher>
+
+#### Cast
+
+Use [cast](https://github.com/gakonst/foundry/tree/master/cast) to interact with the network and the deployed contracts.
+
+To get the latest block number:
+
+``` sh
+cast block-number --rpc-url ENDPOINT
+```
+
+where ENDPOINT is your node HTTPS endpoint.
+
+Example:
+
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
+``` sh
+cast block-number --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+```
+
+</template>
+<template v-slot:pp>
+
+``` sh
+cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+```
+
+</template>
+</CodeSwitcher>
 
 ::: tip See also
 

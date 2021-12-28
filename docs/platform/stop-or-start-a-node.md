@@ -14,6 +14,8 @@ A stopped node in Chainstack-provided hosting retains its state and does not inc
 
 A stopped node in private hosting does not incur maintenance costs.
 
+A stopped node does not sync. When you start a stopped node, the node will start syncing again and will take some time to fully sync.
+
 To stop or start a node:
 
 1. Click your project.

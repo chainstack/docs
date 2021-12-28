@@ -55,13 +55,13 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
-## Join a Tezos network
+## Join a Fantom network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
-1. Under **Blockchain protocol**, select **Tezos**.
-1. Under **Blockchain network**, select **Mainnet** or **Florencenet testnet**. Click **Next**.
+1. Under **Blockchain protocol**, select **Fantom**.
+1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
 1. Under **Type**, select whether to run a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
-1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/tezos/modes).
+1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/fantom/modes).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
 	* For Chainstack hosting, select a cloud provider and a region.
 	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
@@ -70,13 +70,13 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
-## Join a Fantom network
+## Join a Tezos network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
-1. Under **Blockchain protocol**, select **Fantom**.
+1. Under **Blockchain protocol**, select **Tezos**.
 1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
 1. Under **Type**, select whether to run a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
-1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/bsc/modes).
+1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/tezos/modes).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
 	* For Chainstack hosting, select a cloud provider and a region.
 	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).

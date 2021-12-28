@@ -19,8 +19,8 @@ To create a project:
      * [Ethereum](/blockchains/ethereum)
      * [Polygon PoS](/blockchains/polygon)
      * [Binance Smart Chain](/blockchains/bsc)
-     * [Tezos](/blockchains/tezos)
      * [Fantom](/blockchains/fantom)
+     * [Tezos](/blockchains/tezos)
      * [Bitcoin](/blockchains/bitcoin)
      * [Corda](/blockchains/corda)
    * Select **Consortium** to deploy:
