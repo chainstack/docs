@@ -14,7 +14,9 @@ meta:
 
 ### What's new
 
-* **Protocols**. [Avalanche](/blockchains/avalanche) support. You can now deploy full and archive Avalanche nodes with X-Chain and C-Chain endpoints on mainnet and Fuji testnet.
+* **Protocols**.
+  * [Avalanche](/blockchains/avalanche) support. You can now deploy full and archive Avalanche nodes with X-Chain and C-Chain endpoints on mainnet and Fuji testnet.
+  * [Tezos](/blockchains/tezos) Hangzhounet testnet support. The Florencenet testnet support is deprecated.
 * **Documentation**. Avalanche [general description](/blockchains/avalanche), [operations](/operations/avalanche), [flash loan tutorial](/tutorials/avalanche/aave-flash-loans-with-brownie).
 * **Billing**. Removed free usage period on the Developer plan. The Developer plan keeps other usage features, including the free 3M requests.
 
