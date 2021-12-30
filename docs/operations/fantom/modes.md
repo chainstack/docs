@@ -3,17 +3,14 @@ meta:
   - name: description
     content: Learn the difference between a Fantom full node and an archive node.
   - name: keywords
-    content: fantom geth opera ftm node full archive difference
+    content: fantom geth opera ftm node full archive difference prune
 ---
 
 # Modes
 
-Chainstack supports deploying a Fantom node on the mainnet in the following modes:
+Chainstack supports deploying a Fantom node on the mainnet in the full mode and archive mode.
 
-* Full node — a node that stores full blockchain data.
-* Archive node — a node that stores full blockchain data and an archive of historical states.
-
-To be a part of the Fantom mainnet, you can deploy either a full node or an archive node.
+As [Go Opera](https://github.com/Fantom-foundation/go-opera/), the Fantom client, does not have automatic state pruning implemented, there is currently no difference between a full node and an archive node.
 
 ::: tip See also
 
