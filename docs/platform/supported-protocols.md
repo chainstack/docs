@@ -20,12 +20,15 @@ Public network:
 * [Binance Smart Chain](/blockchains/bsc)
 	* Mainnet. [Full and archive nodes](/operations/bsc/modes).
 	* Testnet
-* [Tezos](/blockchains/tezos)
-	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
-	* Florencenet testnet.
+* [Avalanche](/blockchains/avalanche)
+	* Mainnet. [Full and archive nodes](/operations/avalanche/modes).
+	* Fuji testnet
 * [Fantom](/blockchains/fantom)
 	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
 	* Testnet
+* [Tezos](/blockchains/tezos)
+	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
+	* Hangzhounet testnet.
 * [Bitcoin](/blockchains/bitcoin)
 	* Mainnet
 	* Testnet

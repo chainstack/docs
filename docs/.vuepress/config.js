@@ -106,6 +106,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Avalanche',
+                        collapsable: true,
+                        children: [
+                            '/operations/avalanche/',
+                            '/operations/avalanche/networks',
+                            '/operations/avalanche/types',
+                            '/operations/avalanche/modes',
+                            '/operations/avalanche/tools',
+                        ]
+                    },
+                    {
                         title: 'Fantom',
                         collapsable: true,
                         children: [
@@ -220,6 +231,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Avalanche',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/avalanche/',
+                            '/tutorials/avalanche/aave-flash-loans-with-brownie',
+                        ]
+                    },
+                    {
                         title: 'Fantom',
                         collapsable: true,
                         children: [
@@ -287,6 +306,7 @@ module.exports = {
                     '/blockchains/ethereum',
                     '/blockchains/polygon',
                     '/blockchains/bsc',
+                    '/blockchains/avalanche',
                     '/blockchains/fantom',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',

@@ -1,25 +1,25 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Polygon PoS node, deploy smart contracts through your node, and develop dapps.
+    content: Learn how to interact with your Avalanche node, deploy smart contracts through your node, and develop dapps.
   - name: keywords
-    content: polygon truffle web3 dapp geth matic hardhat
+    content: avalanche truffle web3 dapp geth avax hardhat foundry brownie
 ---
 
 # Tools
 
-## Interaction tools
+## C-Chain interaction tools
 
-### Bor client
+### Geth client
 
-Interact with your Polygon PoS node using the [Bor client](https://github.com/maticnetwork/bor).
+Interact with your Avalanche nodes using [Geth](https://geth.ethereum.org/docs/getting-started).
 
-1. Install [Bor](https://github.com/maticnetwork/bor).
+1. Install [Geth](https://github.com/ethereum/go-ethereum).
 
-2. Use `bor attach` command with the node endpoint.
+2. Use the `geth attach` command with the node endpoint.
 
 ``` sh
-bor attach ENDPOINT
+geth attach ENDPOINT
 ```
 
 where
@@ -34,14 +34,14 @@ Example:
 <template v-slot:kp>
 
 ``` sh
-bor attach https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+geth attach https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-bor attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc
 ```
 
 </template>
@@ -52,121 +52,13 @@ bor attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify
 Example below demonstrates how to get the balance of an address in wei value and convert it to ether value:
 
 ``` js
-> web3.fromWei(web3.eth.getBalance("0xc94770007dda54cF92009BFF0dE90c06F603a09f"))
-0.1
+> web3.fromWei(web3.eth.getBalance("0x68c307d5155f7f5e55c5150238ef7051ecf8fd25"))
+0.51
 ```
-
-::: tip Docker
-
-You can also use the [Bor client Docker container](https://hub.docker.com/r/maticnetwork/bor).
-
-:::
-
-### GraphQL
-
-You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Business and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
-
-#### UI
-
-You can query data using the graphical interface.
-
-1. On Chainstack, navigate to your dedicated Polygon PoS node. See [View node access and credentials](/platform/view-node-access-and-credentials).
-1. Hover over **GraphQL IDE URL** and click **Open**.
-1. In the graphical interface that opens, run a GraphQL query.
-
-Example to get the latest block number:
-
-``` js
-{ block { number } }
-```
-
-#### Node.js
-
-You can build a web app to query data using Node.js and [axios](https://www.npmjs.com/package/axios):
-
-``` js
-const axios = require('axios');
-const main = async () => {
-  try {
-    const result = await axios.post(
-      'ENDPOINT',
-      {
-        query: `
-          QUERY
-        `
-      }
-    );
-    console.log(result.data);
-  } catch(error) {
-    console.error(error);
-  }
-}
-main();
-```
-
-where
-
-* ENDPOINT — your node GraphQL endpoint.
-* QUERY — your GraphQL query.
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
-
-Example to get the latest block number:
-
-<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
-<template v-slot:kp>
-
-``` js
-const axios = require('axios');
-const main = async () => {
-  try {
-    const result = await axios.post(
-      'https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/graphql',
-      {
-        query: `
-          { block { number } }
-        `
-      }
-    );
-    console.log(result.data);
-  } catch(error) {
-    console.error(error);
-  }
-}
-main();
-```
-
-</template>
-<template v-slot:pp>
-
-``` js
-const axios = require('axios');
-const main = async () => {
-  try {
-    const result = await axios.post(
-      'https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/graphql',
-      {
-        query: `
-          { block { number } }
-        `
-      }
-    );
-    console.log(result.data);
-  } catch(error) {
-    console.error(error);
-  }
-}
-main();
-```
-
-</template>
-</CodeSwitcher>
-
-See also  <a href="https://support.chainstack.com/hc/en-us/articles/4409604331161-Using-GraphQL-with-EVM-compatible-nodes" target="_blank">Using GraphQL with EVM-compatible nodes</a>.
 
 ### MetaMask
 
-You can set your [MetaMask](https://metamask.io/) to interact through your Polygon PoS nodes deployed with Chainstack.
+You can set your [MetaMask](https://metamask.io/) to interact through your Avalanche nodes on C-Chain.
 
 1. Open your MetaMask and click the network selector.
 1. In the network selector, click **Custom RPC**.
@@ -178,14 +70,14 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Polyg
     <template v-slot:kp>
 
     ```
-    https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+    https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc
     ```
 
     </template>
     <template v-slot:pp>
 
     ```
-    https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+    https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc
     ```
 
     </template>
@@ -193,18 +85,18 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Polyg
 
 1. In the **Chain ID** field, enter the ID of the network:
 
-    * Mainnet: `137`
-    * Mumbai testnet: `80001`
+    * Mainnet: `43114`
+    * Fuji testnet: `43113`
 
 1. Click **Save**.
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
-## Development tools
+## C-Chain development tools
 
 ### Truffle
 
-Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Polygon PoS nodes.
+Configure [Truffle Suite](https://truffleframework.com) to deploy contracts on C-Chain through your Avalanche nodes.
 
 1. Install [Truffle Suite](https://truffleframework.com), [HD Wallet-enabled Web3 provider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider), and create a project.
 
@@ -220,7 +112,7 @@ const mnemonic = 'pattern enroll upgrade ...';
 module.exports = {
  networks: {
     chainstack: {
-        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"),
+        provider: () => new HDWalletProvider(mnemonic, "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc"),
         network_id: "*"
     },
    }
@@ -238,7 +130,7 @@ const mnemonic = 'pattern enroll upgrade ...';
 module.exports = {
  networks: {
     chainstack: {
-        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com"),
+        provider: () => new HDWalletProvider(mnemonic, "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc"),
         network_id: "*"
     },
    }
@@ -251,7 +143,7 @@ module.exports = {
 
 ### Hardhat
 
-Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Polygon PoS nodes.
+Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact on C-Chain through your Avalanche nodes.
 
 1. Install [Hardhat](https://hardhat.org/) and create a project.
 
@@ -290,7 +182,7 @@ module.exports = {
   solidity: "0.7.3",
   networks: {
     chainstack: {
-        url: "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d",
+        url: "https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc",
         accounts: ["ee5dda7d38d194783d32adcfc961401108b8fdde27e8fee115553959d434e68b"]
     },
    }
@@ -307,7 +199,7 @@ module.exports = {
   solidity: "0.7.3",
   networks: {
     chainstack: {
-        url: "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com",
+        url: "https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc",
         accounts: ["ee5dda7d38d194783d32adcfc961401108b8fdde27e8fee115553959d434e68b"]
     },
    }
@@ -321,7 +213,7 @@ module.exports = {
 
 ### web3.js
 
-Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Polygon PoS nodes deployed with Chainstack.
+Build DApps on C-Chain using [web3.js](https://github.com/ethereum/web3.js/) and Avalanche nodes deployed with Chainstack.
 
 #### HTTP
 
@@ -346,7 +238,7 @@ Example to get the latest block number:
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.HttpProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'));
+const web3 = new Web3(new Web3.providers.HttpProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc'));
 
 web3.eth.getBlockNumber().then(console.log);
 ```
@@ -357,7 +249,7 @@ web3.eth.getBlockNumber().then(console.log);
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.HttpProvider('https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com'));
+const web3 = new Web3(new Web3.providers.HttpProvider('https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc'));
 
 web3.eth.getBlockNumber().then(console.log);
 ```
@@ -387,7 +279,7 @@ Example to get the latest block number:
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'));
+const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/ws'));
 
 web3.eth.getBlockNumber().then(console.log);
 ```
@@ -398,7 +290,7 @@ web3.eth.getBlockNumber().then(console.log);
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com'));
+const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com/ext/bc/C/ws'));
 
 web3.eth.getBlockNumber().then(console.log);
 ```
@@ -408,7 +300,7 @@ web3.eth.getBlockNumber().then(console.log);
 
 ### web3.py
 
-Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Polygon PoS nodes deployed with Chainstack.
+Build DApps on C-Chain using [web3.py](https://github.com/ethereum/web3.py) and Avalanche nodes deployed with Chainstack.
 
 1. Install [web3.py](https://web3py.readthedocs.io/).
 1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">EVM node connection: HTTP vs WebSocket</a>.
@@ -453,7 +345,7 @@ Example to get the latest block number:
 ``` py
 from web3 import Web3
 
-web3 = Web3(Web3.HTTPProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'))
+web3 = Web3(Web3.HTTPProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc'))
 print(web3.eth.blockNumber)
 ```
 
@@ -463,7 +355,7 @@ print(web3.eth.blockNumber)
 ``` py
 from web3 import Web3
 
-web3 = Web3(Web3.HTTPProvider('https://%s:%s@%s'% ("user-name", "pass-word-pass-word-pass-word", "nd-123-456-789.p2pify.com")))
+web3 = Web3(Web3.HTTPProvider('https://%s:%s@%s'% ("user-name", "pass-word-pass-word-pass-word", "nd-123-456-789.p2pify.com/ext/bc/C/rpc")))
 print(web3.eth.blockNumber)
 ```
 
@@ -510,7 +402,7 @@ Example to get the latest block number:
 ``` py
 from web3 import Web3
 
-web3 = Web3(Web3.WebsocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'))
+web3 = Web3(Web3.WebsocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/ws'))
 print(web3.eth.blockNumber)
 ```
 
@@ -520,7 +412,7 @@ print(web3.eth.blockNumber)
 ``` py
 from web3 import Web3
 
-web3 = Web3(Web3.WebsocketProvider('wss://%s:%s@%s'% ("user-name", "pass-word-pass-word-pass-word", "ws-nd-123-456-789.p2pify.com")))
+web3 = Web3(Web3.WebsocketProvider('wss://%s:%s@%s'% ("user-name", "pass-word-pass-word-pass-word", "ws-nd-123-456-789.p2pify.com/ext/bc/C/ws")))
 print(web3.eth.blockNumber)
 ```
 
@@ -533,7 +425,7 @@ See also <a href="https://support.chainstack.com/hc/en-us/articles/900001918763-
 
 ### web3.php
 
-Build DApps using [web3.php](https://github.com/web3p/web3.php) and Polygon PoS nodes deployed with Chainstack.
+Build DApps on C-Chain using [web3.php](https://github.com/web3p/web3.php) and Avalanche nodes deployed with Chainstack.
 
 1. Install [web3.php](https://github.com/web3p/web3.php).
 2. Connect over HTTP:
@@ -569,7 +461,7 @@ use Web3\Web3;
 use Web3\Providers\HttpProvider;
 use Web3\RequestManagers\HttpRequestManager;
 
-$web3 = new Web3(new HttpProvider(new HttpRequestManager("https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d", 5)));
+$web3 = new Web3(new HttpProvider(new HttpRequestManager("https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc", 5)));
 
 $eth = $web3->eth;
 
@@ -591,7 +483,7 @@ use Web3\Web3;
 use Web3\Providers\HttpProvider;
 use Web3\RequestManagers\HttpRequestManager;
 
-$web3 = new Web3(new HttpProvider(new HttpRequestManager("https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com", 5)));
+$web3 = new Web3(new HttpProvider(new HttpRequestManager("https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc", 5)));
 
 $eth = $web3->eth;
 
@@ -606,7 +498,7 @@ $eth->blockNumber(function ($err, $data) {
 
 ### ethers.js
 
-Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Polygon PoS nodes deployed with Chainstack.
+Build DApps on C-Chain using [ethers.js](https://github.com/ethers-io/ethers.js/) and Avalanche nodes deployed with Chainstack.
 
 1. Install [ethers.js](https://www.npmjs.com/package/ethers).
 1. Connect over HTTP or WebSocket.
@@ -649,9 +541,9 @@ where
 * ENDPOINT — your node HTTPS endpoint.
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
-* NETWORK_ID — Polygon PoS network ID:
-  * Mainnet: `137`
-  * Mumbai testnet: `80001`
+* NETWORK_ID — Avalanche C-Chain network ID:
+  * Mainnet: `43114`
+  * Fuji testnet: `43113`
 
 Example to get the latest block number on mainnet:
 
@@ -662,9 +554,9 @@ Example to get the latest block number on mainnet:
 const { ethers } = require("ethers");
 
 var urlInfo = {
-    url: 'https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'
+    url: 'https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 137);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 43114);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -676,11 +568,11 @@ provider.getBlockNumber().then(console.log);
 const { ethers } = require("ethers");
 
 var urlInfo = {
-    url: 'https://nd-123-456-789.p2pify.com',
+    url: 'https://nd-123-456-789.p2pify.com/ext/bc/C/rpc',
     user: 'user-name',
     password: 'pass-word-pass-word-pass-word'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 137);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 43114);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -701,9 +593,9 @@ const provider = new ethers.providers.WebSocketProvider('ENDPOINT', NETWORK_ID);
 where
 
 * ENDPOINT — your node WSS endpoint.
-* NETWORK_ID — Polygon PoS network ID:
-  * Mainnet: `137`
-  * Mumbai testnet: `80001`
+* NETWORK_ID — Avalanche C-Chain network ID:
+  * Mainnet: `43114`
+  * Fuji testnet: `43113`
 
 Example to get the latest block number on mainnet:
 
@@ -713,7 +605,7 @@ Example to get the latest block number on mainnet:
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d', 137);
+const provider = new ethers.providers.WebSocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/ws', 43114);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -724,7 +616,7 @@ provider.getBlockNumber().then(console.log);
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 137);
+const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 43114);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -738,32 +630,32 @@ provider.getBlockNumber().then(console.log);
 1. Use the `brownie networks add` command with the node endpoint:
 
 ``` sh
-brownie networks add Polygon ID name="NETWORK_NAME" host=KEY_ENDPOINT chainid=NETWORK_ID
+brownie networks add Avalanche ID name="NETWORK_NAME" host=ENDPOINT chainid=NETWORK_ID
 ```
 
 where
 
 * ID — any name that you will use as the network tag to run a deployment. For example, `chainstack-mainnet`.
-* NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
+* NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **avalanche-mainnet**.
 * ENDPOINT — your node HTTPS or WSS endpoint.
-* NETWORK_ID — Polygon network ID:
-  * Mainnet: `137`
-  * Mumbai testnet: `80001`
+* NETWORK_ID — Avalanche C-Chain network ID:
+  * Mainnet: `43114`
+  * Fuji testnet: `43113`
 
-Example to add a Polygon mainnet node to the list of Brownie networks:
+Example to add an Avalanche C-Chain testnet node to the list of Brownie networks:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
 
 ``` sh
-brownie networks add Polygon polygon-mainnet name="Mainnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=137
+brownie networks add Avalanche avalanche-testnet name="Avalanche Fuji testnet" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc chainid=43113
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-brownie networks add Polygon polygon-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=137
+brownie networks add Avalanche avalanche-testnet name="Avalanche Fuji testnet" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc chainid=43113
 ```
 
 </template>
@@ -772,7 +664,7 @@ brownie networks add Polygon polygon-mainnet name="Mainnet (Chainstack)" host=ht
 Example to run the deployment script:
 
 ``` sh
-brownie run deploy.py --network polygon-mainnet
+brownie run deploy.py --network avalanche-testnet
 ```
 
 ### Foundry
@@ -782,7 +674,7 @@ brownie run deploy.py --network polygon-mainnet
 
 #### Forge
 
-Use [forge](https://github.com/gakonst/foundry/tree/master/forge) to develop, test, and deploy your smart contracts.
+Use [forge](https://github.com/gakonst/foundry/tree/master/forge) to develop, test, and deploy your smart contracts on C-Chain.
 
 To deploy a contract:
 
@@ -797,20 +689,20 @@ where
 * PRIVATE_KEY — the private to your funded account that you will use to deploy the contract.
 * ENDPOINT — your node HTTPS endpoint.
 
-Example to deploy the [simple storage](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html) contract:
+Example to deploy the [simple storage](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html) contract on C-Chain:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
 
 ``` sh
-forge create SimpleStorage --contracts /root/foundry/contracts/simplestorage.sol --private-key 9c4b7f4ad48f977dbcdb2323249fd738cc9ff283a7514f3350d344e22c5b923d --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+forge create SimpleStorage --contracts /root/foundry/contracts/simplestorage.sol --private-key 9c4b7f4ad48f977dbcdb2323249fd738cc9ff283a7514f3350d344e22c5b923d --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-forge create --contracts /root/foundry/contracts/simplestorage.sol --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+forge create --contracts /root/foundry/contracts/simplestorage.sol --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc
 ```
 
 </template>
@@ -818,7 +710,7 @@ forge create --contracts /root/foundry/contracts/simplestorage.sol --rpc-url htt
 
 #### Cast
 
-Use [cast](https://github.com/gakonst/foundry/tree/master/cast) to interact with the network and the deployed contracts.
+Use [cast](https://github.com/gakonst/foundry/tree/master/cast) to interact with the network and the deployed contracts on C-Chain.
 
 To get the latest block number:
 
@@ -834,21 +726,207 @@ Example:
 <template v-slot:kp>
 
 ``` sh
-cast block-number --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+cast block-number --rpc-url https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/C/rpc
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
+cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/C/rpc
 ```
 
 </template>
 </CodeSwitcher>
 
+## X-Chain interaction tools
+
+Interact with the X-Chain through your Avalanche nodes using [JSON-RPC API](https://docs.avax.network/build/avalanchego-apis/exchange-chain-x-chain-api/).
+
+Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com) to invoke [Avalanche X-Chain API methods](https://docs.avax.network/build/avalanchego-apis/exchange-chain-x-chain-api/#methods).
+
+Example below demonstrates how to get AVAX balance of an address through your Avalanche node HTTPS endpoint on the X-Chain mainnet:
+
+<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
+<template v-slot:kp>
+
+``` sh
+curl -X POST --data '{
+  "jsonrpc":"2.0",
+  "id"     : 1,
+  "method" :"avm.getBalance",
+  "params" :{
+      "address":"X-avax1slt2dhfu6a6qezcn5sgtagumq8ag8we75f84sw",
+      "assetID": "FvwEAhmxKfeiG8SnEvq42hc6whRyY3EFYAvebMqDNDGCgxN5Z"
+  }
+}' -H 'content-type:application/json;' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/X
+```
+
+</template>
+<template v-slot:pp>
+
+``` sh
+curl -X POST --data '{
+  "jsonrpc":"2.0",
+  "id"     : 1,
+  "method" :"avm.getBalance",
+  "params" :{
+      "address":"X-avax1slt2dhfu6a6qezcn5sgtagumq8ag8we75f84sw",
+      "assetID": "FvwEAhmxKfeiG8SnEvq42hc6whRyY3EFYAvebMqDNDGCgxN5Z"
+  }
+}' -H 'content-type:application/json;' https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/ext/bc/X
+```
+
+</template>
+</CodeSwitcher>
+
+## X-Chain development tools
+
+### AvalancheJS
+
+1. Install [AvalancheJS](https://github.com/ava-labs/avalanchejs).
+1. Use [AvalancheJS AVM examples](https://github.com/ava-labs/avalanchejs/tree/master/examples/avm) to interact with the X-Chain through your Avalanche node with the following settings:
+
+``` js
+const ip: string = "BASE_ENDPOINT"
+// const port: number = 9650
+const protocol: string = "https"
+const networkID: number = CHAIN_ID
+const avalanche: Avalanche = new Avalanche(ip, null, protocol, networkID)
+```
+
+where
+
+* BASE_ENDPOINT — your node key-protected endpoint without the `https` prefix and the `ext` postfix. For example, `nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`.
+* CHAIN_ID — the chain ID of the network you are connecting to:
+  * Mainnet: `1`
+  * Fuji testnet: `5`
+
+Make sure you remove `const port` and change `port` to `null` in the default example.
+
+Example to get AVAX balance of an address through your Avalanche node HTTPS endpoint on the X-Chain mainnet:
+
+``` js
+import { Avalanche } from "../../dist"
+import { AVMAPI } from "../../dist/apis/avm"
+
+const ip: string = "nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d"
+// const port: number = 9650
+const protocol: string = "https"
+const networkID: number = 1
+const avalanche: Avalanche = new Avalanche(ip, null, protocol, networkID)
+const xchain: AVMAPI = avalanche.XChain()
+
+const main = async (): Promise<any> => {
+  const address: string = "X-avax1k30tskunzxr2tmapy8p4y0ujn2802yr3743679"
+  const balance: object = await xchain.getBalance(address, "AVAX")
+  console.log(balance)
+}
+
+main()
+```
+
+### AvalancheGo
+
+Subscribe to events over WebSocket to an X-Chain address.
+
+1. Install [AvalancheGo](https://github.com/ava-labs/avalanchego).
+1. Use the [Go example](https://docs.avax.network/build/avalanchego-apis/exchange-chain-x-chain-api#events) to listen to events on an X-Chain address through your Avalanche node with the following settings:
+
+``` go
+...
+ httpHeader := http.Header{}
+    conn, _, err := dialer.Dial("EVENTS_ENDPOINT", httpHeader)
+    if err != nil {
+        panic(err)
+    }
+...
+```
+
+where EVENTS_ENDPOINT is your Avalanche node X-Chain events WebSocket endpoint. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+
+Example to get all transactions to the [Binance hot wallet](https://avascan.info/blockchain/x/address/X-avax1slt2dhfu6a6qezcn5sgtagumq8ag8we75f84sw) on the X-Chain mainnet:
+
+``` go
+package main
+
+import (
+    "encoding/json"
+    "log"
+    "net"
+    "net/http"
+    "sync"
+
+    "github.com/ava-labs/avalanchego/api"
+    "github.com/ava-labs/avalanchego/pubsub"
+    "github.com/gorilla/websocket"
+)
+
+func main() {
+    dialer := websocket.Dialer{
+        NetDial: func(netw, addr string) (net.Conn, error) {
+            return net.Dial(netw, addr)
+        },
+    }
+
+    httpHeader := http.Header{}
+    conn, _, err := dialer.Dial("wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ext/bc/X/events", httpHeader)
+    if err != nil {
+        panic(err)
+    }
+
+    waitGroup := &sync.WaitGroup{}
+    waitGroup.Add(1)
+
+    readMsg := func() {
+        defer waitGroup.Done()
+
+        for {
+            mt, msg, err := conn.ReadMessage()
+            if err != nil {
+                log.Println(err)
+                return
+            }
+            switch mt {
+            case websocket.TextMessage:
+                log.Println(string(msg))
+            default:
+                log.Println(mt, string(msg))
+            }
+        }
+    }
+
+    go readMsg()
+
+    cmd := &pubsub.Command{NewSet: &pubsub.NewSet{}}
+    cmdmsg, err := json.Marshal(cmd)
+    if err != nil {
+        panic(err)
+    }
+    err = conn.WriteMessage(websocket.TextMessage, cmdmsg)
+    if err != nil {
+        panic(err)
+    }
+
+    var addresses []string
+    addresses = append(addresses, "X-avax1slt2dhfu6a6qezcn5sgtagumq8ag8we75f84sw")
+    cmd = &pubsub.Command{AddAddresses: &pubsub.AddAddresses{JSONAddresses: api.JSONAddresses{Addresses: addresses}}}
+    cmdmsg, err = json.Marshal(cmd)
+    if err != nil {
+        panic(err)
+    }
+
+    err = conn.WriteMessage(websocket.TextMessage, cmdmsg)
+    if err != nil {
+        panic(err)
+    }
+
+    waitGroup.Wait()
+}
+```
+
 ::: tip See also
 
-* [Bridging ERC-20 from Ethereum to Polygon PoS](/tutorials/polygon/bridging-erc20-from-ethereum-to-polygon)
+* [Aave flash loans with Brownie](/tutorials/avalanche/aave-flash-loans-with-brownie)
 
 :::

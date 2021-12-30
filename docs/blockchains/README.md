@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Learn the blockchain essentials of Corda, Hyperledger Fabric, Quorum, MultiChain, Ethereum, Bitcoin, and Binance Smart Chain. Learn how the networks operate and reach consensus.
+    content: Learn the blockchain essentials of public and consortium networks. Learn how the networks operate and reach consensus.
   - name: keywords
-    content: corda hyperledger fabric quorum multichain ethereum bitcoin binance
+    content: ethereum polygon bsc binance avax avalanche fantom tezos bitcoin hlf hyperledger fabric corda quorum multichain
 ---
 
 # Introduction
@@ -12,13 +12,16 @@ This section covers the blockchain essentials for the protocols supported by Cha
 
 ::: tip See also
 
-* [Operations: Corda](/operations/corda/)
+* [Operations: Ethereum](/operations/ethereum/)
+* [Operations: Polygon PoS](/operations/polygon/)
+* [Operations: Binance Smart Chain](/operations/bsc/)
+* [Operations: Avalanche](/operations/avalanche/)
+* [Operations: Fantom](/operations/fantom/)
+* [Operations: Tezos](/operations/tezos/)
+* [Operations: Bitcoin](/operations/bitcoin/)
 * [Operations: Hyperledger Fabric](/operations/fabric/)
+* [Operations: Corda](/operations/corda/)
 * [Operations: Quorum](/operations/quorum/)
 * [Operations: MultiChain](/operations/multichain/)
-* [Operations: Ethereum](/operations/ethereum/)
-* [Operations: Bitcoin](/operations/bitcoin/)
-* [Operations: Binance Smart Chain](/operations/bsc/)
-
 
 :::

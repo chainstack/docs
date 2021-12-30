@@ -10,7 +10,7 @@ meta:
 
 This tutorial guides you through developing, originating, and interacting with a simple decentralized fund smart contract on Tezos.
 
-The origination and the interaction with the contract for tutorial purposes is done on Florencenet, which is a testnet.
+The origination and the interaction with the contract for tutorial purposes is done on Hangzhounet, which is a testnet.
 
 The simple fund contract does the following:
 
@@ -26,12 +26,12 @@ The simple fund contract does the following:
 
 ## Overview
 
-To get from zero to a deployed contract on Florencenet, do the following:
+To get from zero to a deployed contract on Hangzhounet, do the following:
 
 1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
-1. With Chainstack, [join Florencenet](/platform/join-a-public-network#join-a-tezos-network).
+1. With Chainstack, [join Hangzhounet](/platform/join-a-public-network#join-a-tezos-network).
 1. With Chainstack, access your [Tezos node credentials](/platform/view-node-access-and-credentials).
-1. Fund your developer Tezos account through a [faucet](https://faucet.tzalpha.net/).
+1. Fund your developer Tezos account through a [faucet](https://teztnets.xyz/hangzhounet-faucet).
 1. With LIGO, create the contract.
 1. With the Tezos client, compile and originate the contract through your Tezos node.
 1. With the Tezos client, fund the contract.
@@ -44,7 +44,7 @@ To get from zero to a deployed contract on Florencenet, do the following:
 
 See [Create a project](/platform/create-a-project).
 
-### Join Florencenet
+### Join Hangzhounet
 
 See [Join a public network](/platform/join-a-public-network).
 
@@ -60,7 +60,7 @@ See [LIGO: Installation](https://ligolang.org/docs/intro/installation).
 
 To install the client, see [Tezos Client Installation and Setup](https://assets.tqtezos.com/docs/setup/1-tezos-client/).
 
-Once installed, configure the client to the Chainstack-deployed Florencenet node:
+Once installed, configure the client to the Chainstack-deployed Hangzhounet node:
 
 ``` sh
 tezos-client --endpoint ENDPOINT config update
@@ -78,13 +78,13 @@ tezos-client --endpoint https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9
 
 ### Fund your account with testnet tez
 
-The [Tezos faucet](https://faucet.tzalpha.net/) generates one account at a time with test tez on all testnets at once, including Florencenet.
+The [Tezos faucet](https://teztnets.xyz/hangzhounet-faucet) generates an account on Hangzhounet with test tez.
 
-1. Go to the [faucet](https://faucet.tzalpha.net/).
-1. Click **Get Testnet tez**.
+1. Go to the [faucet](https://teztnets.xyz/hangzhounet-faucet).
+1. Click **Get Hangzhounet tez**.
 1. Download the generated JSON file.
 1. Place the generated JSON file in your project directory where the Tezos client is installed.
-1. Activate the funded account on Florencenet:
+1. Activate the funded account on Hangzhounet:
 
 ``` sh
 tezos-client activate account ALIAS with "ACCOUNT_JSON"
@@ -98,7 +98,7 @@ where
 Example:
 
 ``` sh
-tezos-client activate account trent with "tz1bEQQxao8bEbvuXgh8vnSQkPJaoUvyomMP.json"
+tezos-client activate account trent with "hangzhounet.json"
 ```
 
 Check the account balance:
@@ -176,14 +176,14 @@ Before compiling the contract, you can test it using the LIGO CLI.
 Deposit 10 tez:
 
 ``` sh
-$ ligo dry-run simplefund.ligo --syntax pascaligo --amount 10 main "Deposit(unit)" "record liquidity = 0mutez; end"
+$ ligo run dry-run simplefund.ligo --syntax pascaligo --amount 10 --entry-point  main "Deposit(unit)" "record liquidity = 0mutez; end"
 ( LIST_EMPTY() , record[balance -> 10000000mutez] )
 ```
 
 Withdraw 1 tez:
 
 ``` sh
-$ ligo dry-run simplefund.ligo --syntax pascaligo main "Withdraw(unit)" "record liquidity = 10000000mutez; end"
+$ ligo run dry-run simplefund.ligo --syntax pascaligo --entry-point main "Withdraw(unit)" "record liquidity = 10000000mutez; end"
 ( CONS(Operation(0135a1ec49145785df89178dcb6e96c9a9e1e71e0a00000001c0843d0000d8276b0b00b177a2543b17e8799d31b94252c97300) ,
        LIST_EMPTY()) ,
   record[balance -> 9000000mutez] )
@@ -194,10 +194,10 @@ $ ligo dry-run simplefund.ligo --syntax pascaligo main "Withdraw(unit)" "record 
 Compile the contract and save the compiled code in a `.tz` file:
 
 ``` sh
-ligo compile-contract simplefund.ligo main > simplefund.tz
+ligo compile contract simplefund.ligo --entry-point main > simplefund.tz
 ```
 
-You are now ready to originate the compiled contract on Florencenet.
+You are now ready to originate the compiled contract on Hangzhounet.
 
 ### Originate the contract
 
@@ -222,11 +222,10 @@ Once the contract is originated, you will see the contract address in `Originate
 Example:
 
 ``` sh
-Originated contracts:
-KT1K9maqFN8Kbh9wWmPPX2uoQH1vHuEzoQ4p
+New contract KT1RqWGvFewTyaSaho5c5oimhDRYrW3ZXRQu originated.
 ```
 
-You now have a working contract on Florencenet.
+You now have a working contract on Hangzhounet.
 
 Write down the contract address as you will need it later to interact with it through a web app and the Temple wallet.
 
@@ -239,7 +238,7 @@ Get the contract parameter for the deposit function to pass to the Tezos client.
 Get the parameter for `Deposit`:
 
 ``` sh
-$ ligo compile-parameter simplefund.ligo -s pascaligo main "Deposit(unit)"
+$ ligo compile parameter simplefund.ligo --syntax pascaligo --entry-point main "Deposit(unit)"
 (Left Unit)
 ```
 
@@ -268,22 +267,22 @@ $ tezos-client get contract storage for simplefund
 
 ### Get a Temple wallet account with test tez
 
-You need an account in the Temple wallet with some test tez to execute operations on Florencenet.
+You need an account in the Temple wallet with some test tez to execute operations on Hangzhounet.
 
 1. Install the [Temple wallet](https://templewallet.com/).
 1. Go to the [faucet](https://faucet.tzalpha.net/).
-1. Click **Get Testnet tez**.
+1. Click **Get Hangzhounet tez**.
 1. Download the generated JSON file.
 1. In your Temple wallet instance, click **Import account**.
 1. Select **Faucet File**.
-1. Provide the JSON file you gave downloaded.
+1. Provide the JSON file you have downloaded.
 
 The Temple wallet will activate your account with test tez.
 
 ### Interact with the contract using the Temple wallet
 
 1. Navigate to the [BCD explorer](https://better-call.dev/).
-1. Click **Florencenet**.
+1. Click **Hangzhou2net**.
 1. In the search field, provide your originated contract address.
 1. On the contract page, click **Interact**.
 1. Click **withdraw** > **Execute** > **Temple - Tezos Wallet**.

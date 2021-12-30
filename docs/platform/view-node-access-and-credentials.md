@@ -24,8 +24,8 @@ Your node connection endpoints.
 
 Examples:
 
-* HTTPS: `https://nd-868-290-632.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`
-* WSS: `wss://ws-nd-868-290-632.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`
+* HTTPS: `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`
+* WSS: `wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`
 
 ### Password-protected access and credentials
 
@@ -79,8 +79,9 @@ If you are an invited [member](/glossary/member) of a [consortium project](/glos
 * [Operations: Ethereum](/operations/ethereum/)
 * [Operations: Polygon PoS](/operations/polygon/)
 * [Operations: Binance Smart Chain](/operations/bsc/)
-* [Operations: Tezos](/operations/tezos/)
+* [Operations: Avalanche](/operations/avalanche/)
 * [Operations: Fantom](/operations/fantom/)
+* [Operations: Tezos](/operations/tezos/)
 * [Operations: Bitcoin](/operations/bitcoin/)
 * [Operations: Hyperledger Fabric](/operations/fabric/)
 * [Operations: Corda](/operations/corda/)
