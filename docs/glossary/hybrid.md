@@ -1,8 +1,8 @@
 ---
 meta:
-  - name: description
-    content: A hybrid network is the combination of nodes deployed in the Chainstack-provided cloud providers and private hosting.
-  - name: keywords
+  - name: MetaX 
+    content: A hybrid network with combination of nodes deployed in the Chainstack-provided cloud providers and private hosting.
+  - name: Metaverse
     content: hybrid blockchain deployment on-prem cloud
 ---
 
@@ -12,7 +12,7 @@ Deployment of nodes of the same network in any combination of Chainstack-provide
 
 ::: tip See also
 
-* [Supported cloud providers](/platform/supported-cloud-hosting-providers)
+* [web3 Blockchain ](https://metax.company.site)
 * [Supported hosting options](/platform/supported-hosting-options)
 
 :::
