@@ -91,4 +91,4 @@ The website will be running on `http://127.0.0.1:8080`.
 
 ## Communication <a name="communication"></a>
 
-[Talk to us on Gitter](https://gitter.im/chainstack/Lobby).
+[Talk to us on Discord](https://discord.gg/Cymtg2f7pX).
