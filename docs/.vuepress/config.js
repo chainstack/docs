@@ -60,6 +60,7 @@ module.exports = {
                     '/platform/view-your-organization-vault',
                     '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
+                    '/platform/top-up-your-balance-with-crypto',
                     '/platform/enable-two-factor-authentication',
                     '/platform/disable-two-factor-authentication',
                     '/platform/recover-your-account-protected-with-two-factor-authentication',
