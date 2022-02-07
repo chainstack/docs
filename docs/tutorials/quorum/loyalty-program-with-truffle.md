@@ -202,23 +202,29 @@ const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 w
 module.exports = {
   networks: {
     development: {
-        host: "127.0.0.1",
-        port: 9545,
-        network_id: "5777"
+      host: '127.0.0.1',
+      port: 9545,
+      network_id: '5777',
+    },
+    compilers: {
+      solc: {
+        version: '0.5.9',
+      },
     },
     quorum: {
-        provider: () => new HDWalletProvider(mnemonic, "ENDPOINT"),
-        network_id: "*",
-        gasPrice: 0,
-        gas: 4500000,
-        type: "quorum"
-    }
-   }
+      provider: () => new HDWalletProvider(mnemonic, 'ENDPOINT'),
+      network_id: '*',
+      gasPrice: 0,
+      gas: 4500000,
+      type: 'quorum',
+    },
+  },
 };
 ```
 
 where
 
+* `compilers` — explicit Solidity version for Truffle to compile the contract.
 * `quorum` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
