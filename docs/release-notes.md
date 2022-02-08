@@ -8,6 +8,22 @@ meta:
 
 # Release notes
 
+## Chainstack 2.9
+
+*February 8, 2022*
+
+### What's new
+
+* **Protocols**. [Solana](/blockchains/solana) support. You can now use Solana nodes on mainnet and devnet.
+* **Documentation**. Solana [general description](/blockchains/solana), [operations](/operations/solana), [token vesting tutorial](/tutorials/solana/creating-a-token-and-vesting-the-token-in-your-program).
+* **Public API**. You can now use the Chainstack API to manage your [Solana](/blockchains/solana) nodes. See <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>.
+* **Crypto payments**. You can now [top up your balance with crypto](/platform/top-up-your-balance-with-crypto) and Chainstack will automatically deduct all costs from your balance.
+
+### Bug fixes
+
+* Response codes chart on the node details page shows all types of codes.
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.8
 
 *December 30, 2021*
