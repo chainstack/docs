@@ -18,7 +18,7 @@ To interact with your Quorum network, you must install a GoQuorum client.
 To be able to install GoQuorum, you must install Go first. See [Go: Getting Started](https://golang.org/doc/install).
 :::
 
-Having installed Go, install GoQuorum as described in [Quorum: Installing](https://docs.goquorum.consensys.net/en/latest/HowTo/GetStarted/Install/).
+Having installed Go, [install GoQuorum](https://github.com/ConsenSys/quorum).
 
 With GoQuorum installed, you can connect to the Quorum nodes with the `geth attach` command:
 

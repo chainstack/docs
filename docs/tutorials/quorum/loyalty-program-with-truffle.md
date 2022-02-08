@@ -15,7 +15,7 @@ The loyalty program does the following:
 * Joins each account that calls the contract.
 * Lets each account check their loyalty program balance.
 
-This tutorial uses Truffle as [Truffle officially supports Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum).
+This tutorial uses Truffle as [Truffle officially supports Quorum](https://trufflesuite.com/docs/truffle/distributed-ledger-support/working-with-quorum.html).
 
 The contract and the Truffle configuration are in the [GitHub repository](https://github.com/chainstack/quorum-loyalty-program-tutorial).
 
@@ -202,23 +202,29 @@ const mnemonic = "word1 word2 word3 word4 word5 word6 word7 word8 word9 word10 w
 module.exports = {
   networks: {
     development: {
-        host: "127.0.0.1",
-        port: 9545,
-        network_id: "5777"
+      host: '127.0.0.1',
+      port: 9545,
+      network_id: '5777',
+    },
+    compilers: {
+      solc: {
+        version: '0.5.9',
+      },
     },
     quorum: {
-        provider: () => new HDWalletProvider(mnemonic, "ENDPOINT"),
-        network_id: "*",
-        gasPrice: 0,
-        gas: 4500000,
-        type: "quorum"
-    }
-   }
+      provider: () => new HDWalletProvider(mnemonic, 'ENDPOINT'),
+      network_id: '*',
+      gasPrice: 0,
+      gas: 4500000,
+      type: 'quorum',
+    },
+  },
 };
 ```
 
 where
 
+* `compilers` — explicit Solidity version for Truffle to compile the contract.
 * `quorum` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
 * `mnemonic` — your mnemonic that generates your accounts. You can also generate a mnemonic online with [Mnemonic Code Converter](https://iancoleman.io/bip39/). Make sure you generate a 15 word mnemonic.
@@ -363,6 +369,12 @@ Example:
 eth.defaultAccount = "0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
 ```
 
+Make sure the account is unlocked by running:
+
+``` js
+web3.personal.unlockAccount(web3.personal.listAccounts[0],"", 15000)
+```
+
 ### Call the contract
 
 As the `loyaltyProgram.sol` contract has the `join` function, call `join`:
@@ -388,7 +400,7 @@ This will display the balance:
 ::: tip See also
 
 * [Operations: Quorum](/operations/quorum/)
-* [Truffle: Working with Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum)
+* [Truffle: Working with Quorum](https://trufflesuite.com/docs/truffle/distributed-ledger-support/working-with-quorum.html)
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
 
 :::

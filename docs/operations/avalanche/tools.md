@@ -741,9 +741,9 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 
 ## X-Chain interaction tools
 
-Interact with the X-Chain through your Avalanche nodes using [JSON-RPC API](https://docs.avax.network/build/avalanchego-apis/exchange-chain-x-chain-api/).
+Interact with the X-Chain through your Avalanche nodes using [JSON-RPC API](https://docs.avax.network/build/avalanchego-apis/x-chain).
 
-Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com) to invoke [Avalanche X-Chain API methods](https://docs.avax.network/build/avalanchego-apis/exchange-chain-x-chain-api/#methods).
+Use [curl](https://curl.haxx.se) or [Postman](https://www.getpostman.com) to invoke [Avalanche X-Chain API methods](https://docs.avax.network/build/avalanchego-apis/x-chain#methods).
 
 Example below demonstrates how to get AVAX balance of an address through your Avalanche node HTTPS endpoint on the X-Chain mainnet:
 
@@ -831,7 +831,7 @@ main()
 Subscribe to events over WebSocket to an X-Chain address.
 
 1. Install [AvalancheGo](https://github.com/ava-labs/avalanchego).
-1. Use the [Go example](https://docs.avax.network/build/avalanchego-apis/exchange-chain-x-chain-api#events) to listen to events on an X-Chain address through your Avalanche node with the following settings:
+1. Use the [Go example](https://docs.avax.network/build/avalanchego-apis/x-chain#events) to listen to events on an X-Chain address through your Avalanche node with the following settings:
 
 ``` go
 ...
