@@ -14,14 +14,10 @@ meta:
 2. Connect the Solana tool suite to the Chainstack-deployed Solana node:
 
 ``` sh
-solana config set --url ENDPOINT
+solana config set --url HTTPS_ENDPOINT
 ```
 
-where
-
-* ENDPOINT — your node HTTPS endpoint.
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
+where HTTPS_ENDPOINT is your node HTTPS endpoint. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example:
 
@@ -50,6 +46,19 @@ Example to get the block height:
 $ solana block-height
 106318062
 ```
+
+::: tip
+
+When you set the HTTPS endpoint with `solana config set`, the tool will also set a computed WebSocket endpoint, which is incorrect.
+To use WebSocket, you must set the WebSocket explicitly with `--ws`.
+Example:
+
+``` sh
+solana config set --ws wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+```
+
+:::
+
 ## JSON-RPC API
 
 Interact with your Solana network using [JSON-RPC API](https://docs.solana.com/developing/clients/jsonrpc-api).
