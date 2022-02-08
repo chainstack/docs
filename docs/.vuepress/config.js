@@ -129,6 +129,16 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Solana',
+                        collapsable: true,
+                        children: [
+                            '/operations/solana/',
+                            '/operations/solana/networks',
+                            '/operations/solana/types',
+                            '/operations/solana/tools',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -248,6 +258,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Solana',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/solana/',
+                            '/tutorials/solana/creating-a-token-and-vesting-the-token-in-your-program',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -309,6 +327,7 @@ module.exports = {
                     '/blockchains/bsc',
                     '/blockchains/avalanche',
                     '/blockchains/fantom',
+                    '/blockchains/solana',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',

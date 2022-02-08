@@ -37,11 +37,17 @@ Binance Smart Chain:
 
 Note that you are not charged for the ancient storage.
 
+Avalanche:
+
+* Node — the CPU, memory, and storage allocated to your Avalanche node.
+
 Fantom:
 
-* Node — the CPU, memory, storage, and ancient storage allocated to your Fantom node.
+* Node — the CPU, memory, and storage allocated to your Fantom node.
 
-Note that you are not charged for the ancient storage.
+Solana:
+
+* Node — the CPU, memory, and storage allocated to your Solana node.
 
 Tezos:
 
