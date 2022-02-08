@@ -15,7 +15,7 @@ The loyalty program does the following:
 * Joins each account that calls the contract.
 * Lets each account check their loyalty program balance.
 
-This tutorial uses Truffle as [Truffle officially supports Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum).
+This tutorial uses Truffle as [Truffle officially supports Quorum](https://trufflesuite.com/docs/truffle/distributed-ledger-support/working-with-quorum.html).
 
 The contract and the Truffle configuration are in the [GitHub repository](https://github.com/chainstack/quorum-loyalty-program-tutorial).
 
@@ -369,6 +369,12 @@ Example:
 eth.defaultAccount = "0x12d34fe5f67ff89f1c23456c78d9123df45cb67a"
 ```
 
+Make sure the account is unlocked by running:
+
+``` js
+web3.personal.unlockAccount(web3.personal.listAccounts[0],"", 15000)
+```
+
 ### Call the contract
 
 As the `loyaltyProgram.sol` contract has the `join` function, call `join`:
@@ -394,7 +400,7 @@ This will display the balance:
 ::: tip See also
 
 * [Operations: Quorum](/operations/quorum/)
-* [Truffle: Working with Quorum](https://www.trufflesuite.com/docs/truffle/getting-started/working-with-quorum)
+* [Truffle: Working with Quorum](https://trufflesuite.com/docs/truffle/distributed-ledger-support/working-with-quorum.html)
 * [Truffle: Writing Tests in JavaScript](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript)
 
 :::
