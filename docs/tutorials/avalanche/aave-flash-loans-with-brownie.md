@@ -99,11 +99,11 @@ dependencies:
 
 You need to add the wrapped AVAX address and the Aave lending pool address to the configuration file for the scripts to run.
 
-For the addresses, see Aave Developers: [Avalanche market](https://docs.aave.com/developers/deployed-contracts/avalanche-market).
+For the addresses, see Aave Developers: [Avalanche market](https://docs.aave.com/developers/v/2.0/deployed-contracts/avalanche-market).
 
 The addresses on the Fuji testnet that you need are:
 
-* [LendingPoolAddressesProvider](https://docs.aave.com/developers/the-core-protocol/addresses-provider): 0x7fdC1FdF79BE3309bf82f4abdAD9f111A6590C0f
+* [LendingPoolAddressesProvider](https://docs.aave.com/developers/v/2.0/the-core-protocol/addresses-provider): 0x7fdC1FdF79BE3309bf82f4abdAD9f111A6590C0f
 * WAVAX: 0xd00ae08403B9bbb9124bB305C09058E32C39A48c
 
 In your baked `aave-flashloan` project directory, open for editing `brownie-config.yaml`.
