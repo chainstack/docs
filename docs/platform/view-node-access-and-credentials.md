@@ -75,17 +75,6 @@ If you are an invited [member](/glossary/member) of a [consortium project](/glos
 
 ::: tip See also
 
-* [Project](/glossary/project)
-* [Operations: Ethereum](/operations/ethereum/)
-* [Operations: Polygon PoS](/operations/polygon/)
-* [Operations: Binance Smart Chain](/operations/bsc/)
-* [Operations: Avalanche](/operations/avalanche/)
-* [Operations: Fantom](/operations/fantom/)
-* [Operations: Tezos](/operations/tezos/)
-* [Operations: Bitcoin](/operations/bitcoin/)
-* [Operations: Hyperledger Fabric](/operations/fabric/)
-* [Operations: Corda](/operations/corda/)
-* [Operations: Quorum](/operations/quorum/)
-* [Operations: MultiChain](/operations/multichain/)
+* [Operations](/operations)
 
 :::

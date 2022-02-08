@@ -17,9 +17,9 @@ To deploy a network or a node:
 1. Under **Blockchain protocol**, select the protocol.
 1. Under **Hosting**, select **Chainstack**.
 1. Under **Cloud provider**, select your preferred provider and location.
-1. Review your changes and click **Create network** if you are deploying a consortium network, or **Join network** if you are joining a public network.
+1. Review your changes and click **Join network** if you are joining a public network, or **Create network** if you are deploying a consortium network.
 
-This will deploy or join a network.
+This will join a public network or deploy a consortium network.
 
 ::: tip See next
 

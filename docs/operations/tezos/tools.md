@@ -147,7 +147,7 @@ SmartPy.sh originate-contract --code contract.tz --storage storage.tz --rpc http
 </template>
 <template v-slot:pp>
 
-``` js
+``` sh
 SmartPy.sh originate-contract --code contract.tz --storage storage.tz --rpc https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 ```
 
