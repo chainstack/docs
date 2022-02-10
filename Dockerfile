@@ -1,4 +1,4 @@
-FROM node:11 as builder
+FROM node:16 as builder
 
 ARG CONSOLE_HOSTNAME
 ARG WEBSITE_HOSTNAME

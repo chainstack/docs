@@ -122,7 +122,7 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 
 ## SmartPy
 
-1. Install [SmartPy](https://docs.smartpy.io/introduction/start_project).
+1. Install [SmartPy](https://smartpy.io).
 1. Originate your contract through a Chainstack-deployed Tezos node:
 
 ``` sh
@@ -147,7 +147,7 @@ SmartPy.sh originate-contract --code contract.tz --storage storage.tz --rpc http
 </template>
 <template v-slot:pp>
 
-``` js
+``` sh
 SmartPy.sh originate-contract --code contract.tz --storage storage.tz --rpc https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
 ```
 

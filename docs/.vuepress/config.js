@@ -60,6 +60,7 @@ module.exports = {
                     '/platform/view-your-organization-vault',
                     '/platform/view-activity-log',
                     '/platform/view-your-user-settings',
+                    '/platform/top-up-your-balance-with-crypto',
                     '/platform/enable-two-factor-authentication',
                     '/platform/disable-two-factor-authentication',
                     '/platform/recover-your-account-protected-with-two-factor-authentication',
@@ -125,6 +126,16 @@ module.exports = {
                             '/operations/fantom/types',
                             '/operations/fantom/modes',
                             '/operations/fantom/tools',
+                        ]
+                    },
+                    {
+                        title: 'Solana',
+                        collapsable: true,
+                        children: [
+                            '/operations/solana/',
+                            '/operations/solana/networks',
+                            '/operations/solana/types',
+                            '/operations/solana/tools',
                         ]
                     },
                     {
@@ -247,6 +258,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Solana',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/solana/',
+                            '/tutorials/solana/creating-a-token-and-vesting-the-token-in-your-program',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -308,6 +327,7 @@ module.exports = {
                     '/blockchains/bsc',
                     '/blockchains/avalanche',
                     '/blockchains/fantom',
+                    '/blockchains/solana',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',

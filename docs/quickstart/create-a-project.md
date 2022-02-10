@@ -21,6 +21,7 @@ To create a project:
      * [Binance Smart Chain](/blockchains/bsc)
      * [Avalanche](/blockchains/avalanche)
      * [Fantom](/blockchains/fantom)
+     * [Solana](/blockchains/solana)
      * [Tezos](/blockchains/tezos)
      * [Bitcoin](/blockchains/bitcoin)
      * [Corda](/blockchains/corda)

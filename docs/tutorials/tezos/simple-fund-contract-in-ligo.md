@@ -270,7 +270,7 @@ $ tezos-client get contract storage for simplefund
 You need an account in the Temple wallet with some test tez to execute operations on Hangzhounet.
 
 1. Install the [Temple wallet](https://templewallet.com/).
-1. Go to the [faucet](https://faucet.tzalpha.net/).
+1. Go to the [faucet](https://teztnets.xyz/hangzhounet-faucet).
 1. Click **Get Hangzhounet tez**.
 1. Download the generated JSON file.
 1. In your Temple wallet instance, click **Import account**.
