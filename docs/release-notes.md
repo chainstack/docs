@@ -10,7 +10,7 @@ meta:
 
 ## Chainstack 2.9
 
-*February 8, 2022*
+*February 10, 2022*
 
 ### What's new
 
