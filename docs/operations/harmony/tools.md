@@ -876,6 +876,6 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 
 ::: tip See also
 
-* [A simple metaverse contract with Foundry](/tutorials/harmony/esimple-metaverse-contract-with-foundry)
+* [A simple metaverse contract with Foundry](/tutorials/harmony/simple-metaverse-contract-with-foundry)
 
 :::
