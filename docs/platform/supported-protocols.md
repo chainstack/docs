@@ -29,6 +29,9 @@ Public network:
 * [Solana](/blockchains/solana)
 	* Mainnet
 	* Devnet
+* [Harmony](/blockchains/harmony)
+	* Mainnet
+	* Testnet
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
 	* Hangzhounet testnet.

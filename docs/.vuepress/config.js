@@ -139,6 +139,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Harmony',
+                        collapsable: true,
+                        children: [
+                            '/operations/harmony/',
+                            '/operations/harmony/networks',
+                            '/operations/harmony/types',
+                            '/operations/harmony/modes',
+                            '/operations/harmony/tools',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -266,6 +277,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Harmony',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/harmony/',
+                            '/tutorials/harmony/simple-metaverse-contract-with-foundry',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -328,6 +347,7 @@ module.exports = {
                     '/blockchains/avalanche',
                     '/blockchains/fantom',
                     '/blockchains/solana',
+                    '/blockchains/harmony',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',
