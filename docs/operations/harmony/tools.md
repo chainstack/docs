@@ -187,16 +187,8 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Harmo
 
 1. In the **Chain ID** field, enter the ID of the network:
 
-    * Mainnet:
-      * Shard 0: `1666600000`
-      * Shard 1: `1666600001`
-      * Shard 2: `1666600002`
-      * Shard 3: `1666600003`
-    * Testnet:
-      * Shard 0: `1666700000`
-      * Shard 1: `1666700001`
-      * Shard 2: `1666700002`
-      * Shard 3: `1666700003`
+    * Mainnet Shard 0: `1666600000`
+    * Testnet Shard 0: `1666700000`
 
 1. Click **Save**.
 
@@ -653,16 +645,8 @@ where
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
 * NETWORK_ID — Harmony network ID:
-  * Mainnet:
-    * Shard 0: `1666600000`
-    * Shard 1: `1666600001`
-    * Shard 2: `1666600002`
-    * Shard 3: `1666600003`
-  * Testnet:
-    * Shard 0: `1666700000`
-    * Shard 1: `1666700001`
-    * Shard 2: `1666700002`
-    * Shard 3: `1666700003`
+  * Mainnet Shard 0: `1666600000`
+  * Testnet Shard 0: `1666700000`
 
 Example to get the latest block number on mainnet:
 
@@ -713,16 +697,8 @@ where
 
 * ENDPOINT — your node WSS endpoint.
 * NETWORK_ID — Harmony network ID:
-  * Mainnet:
-    * Shard 0: `1666600000`
-    * Shard 1: `1666600001`
-    * Shard 2: `1666600002`
-    * Shard 3: `1666600003`
-  * Testnet:
-    * Shard 0: `1666700000`
-    * Shard 1: `1666700001`
-    * Shard 2: `1666700002`
-    * Shard 3: `1666700003`
+  * Mainnet Shard 0: `1666600000`
+  * Testnet Shard 0: `1666700000`
 
 Example to get the latest block number on mainnet:
 
@@ -766,16 +742,8 @@ where
 * NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
 * ENDPOINT — your node HTTPS or WSS endpoint.
 * NETWORK_ID — Harmony network ID:
- * Mainnet:
-   * Shard 0: `1666600000`
-   * Shard 1: `1666600001`
-   * Shard 2: `1666600002`
-   * Shard 3: `1666600003`
-  * Testnet:
-   * Shard 0: `1666700000`
-   * Shard 1: `1666700001`
-   * Shard 2: `1666700002`
-   * Shard 3: `1666700003`
+  * Mainnet Shard 0: `1666600000`
+  * Testnet Shard 0: `1666700000`
 
 Example to add a Harmony mainnet node to the list of Brownie networks:
 
