@@ -209,7 +209,7 @@ Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to y
 <template v-slot:kp>
 
 ``` js
-onst HDWalletProvider = require("@truffle/hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 const mnemonic = 'pattern enroll upgrade ...';
 ...
 module.exports = {
