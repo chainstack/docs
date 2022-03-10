@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Learn how to develop and deploy an ERC-721 smart contract the Fantom network.
+    content: Learn how to develop and deploy an ERC-721 smart contract on the Fantom network.
   - name: keywords
     content: tutorial fantom ftm erc 721 nft truffle openzeppelin artion
 ---

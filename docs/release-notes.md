@@ -8,6 +8,20 @@ meta:
 
 # Release notes
 
+## Chainstack 2.10
+
+*March 10, 2022*
+
+### What’s new
+
+* **Protocols**. [Harmony](/blockchains/harmony) support. You can now use shared and dedicated Harmony Shard 0 nodes on mainnet and testnet.
+* **Documentation**. Harmony [general description](/blockchains/harmony), [operations](/operations/harmony), [simple metaverse tutorial](/tutorials/harmony/simple-metaverse-contract-with-foundry).
+* **Subscription downgrading**. You have now the ability to downgrade your plan on the **Settings** > **Billing** page.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.9
 
 *February 10, 2022*

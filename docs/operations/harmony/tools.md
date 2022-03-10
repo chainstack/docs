@@ -1,22 +1,22 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Binance Smart Chain node, deploy smart contracts through your node, and develop dapps.
+    content: Learn how to interact with your Harmony node, deploy smart contracts through your node, and develop dapps.
   - name: keywords
-    content: bsc truffle web3 dapp geth binance
+    content: harmony one truffle web3 dapp geth hardhat foundry
 ---
 
 # Tools
 
 ## Interaction tools
 
-### Binance Smart Chain client
+### Geth client
 
-Interact with your Binance Smart Chain node using [Binance Smart Chain client](https://docs.binance.org/smart-chain/developer/fullnode.html).
+Interact with your Harmony nodes using [Geth](https://geth.ethereum.org/docs/getting-started).
 
-1. Install [Binance Smart Chain client](https://github.com/binance-chain/bsc).
+1. Install [Geth](https://github.com/ethereum/go-ethereum).
 
-2. Use `geth attach` command with the node endpoint.
+2. Use the `geth attach` command with the node endpoint.
 
 ``` sh
 geth attach ENDPOINT
@@ -47,121 +47,18 @@ geth attach https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pif
 </template>
 </CodeSwitcher>
 
-3. Invoke any methods from [Web3 JavaScript API](https://web3js.readthedocs.io/).
+3. Invoke methods from [Web3 JavaScript API](https://web3js.readthedocs.io/).
 
 Example below demonstrates how to get the balance of an address in wei value and convert it to ether value:
 
 ``` js
-> web3.fromWei(web3.eth.getBalance("0x2d4c407bbe49438ed859fe965b140dcf1aab71a9"))
-6.248866
+> web3.fromWei(web3.eth.getBalance("0x6b3595068778dd592e39a122f4f5a5cf09c90fe2"))
+1234
 ```
-
-### GraphQL
-
-You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Business and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
-
-#### UI
-
-You can query data using the graphical interface.
-
-1. On Chainstack, navigate to your dedicated Binance Smart Chain node. See [View node access and credentials](/platform/view-node-access-and-credentials).
-1. Hover over **GraphQL IDE URL** and click **Open**.
-1. In the graphical interface that opens, run a GraphQL query.
-
-Example to get the latest block number:
-
-``` js
-{ block { number } }
-```
-
-#### Node.js
-
-You can build a web app to query data using Node.js and [axios](https://www.npmjs.com/package/axios):
-
-
-``` js
-const axios = require('axios');
-const main = async () => {
-  try {
-    const result = await axios.post(
-      'ENDPOINT',
-      {
-        query: `
-          QUERY
-        `
-      }
-    );
-    console.log(result.data);
-  } catch(error) {
-    console.error(error);
-  }
-}
-main();
-```
-
-where
-
-* ENDPOINT — your node GraphQL endpoint.
-* QUERY — your GraphQL query.
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
-
-Example to get the latest block number:
-
-<CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
-<template v-slot:kp>
-
-``` js
-const axios = require('axios');
-const main = async () => {
-  try {
-    const result = await axios.post(
-      'https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/graphql',
-      {
-        query: `
-          { block { number } }
-        `
-      }
-    );
-    console.log(result.data);
-  } catch(error) {
-    console.error(error);
-  }
-}
-main();
-```
-
-</template>
-<template v-slot:pp>
-
-``` js
-const axios = require('axios');
-const main = async () => {
-  try {
-    const result = await axios.post(
-      'https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com/graphql',
-      {
-        query: `
-          { block { number } }
-        `
-      }
-    );
-    console.log(result.data);
-  } catch(error) {
-    console.error(error);
-  }
-}
-main();
-```
-
-</template>
-</CodeSwitcher>
-
-See also  <a href="https://support.chainstack.com/hc/en-us/articles/4409604331161-Using-GraphQL-with-EVM-compatible-nodes" target="_blank">Using GraphQL with EVM-compatible nodes</a>.
 
 ### MetaMask
 
-You can set your [MetaMask](https://metamask.io/) to interact through your Binance Smart Chain nodes deployed with Chainstack.
+You can set your [MetaMask](https://metamask.io/) to interact through your Harmony nodes deployed with Chainstack.
 
 1. Open your MetaMask and click the network selector.
 1. In the network selector, click **Custom RPC**.
@@ -188,16 +85,18 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Binan
 
 1. In the **Chain ID** field, enter the ID of the network:
 
-    * Mainnet: `56`
-    * Testnet: `97`
+    * Mainnet Shard 0: `1666600000`
+    * Testnet Shard 0: `1666700000`
 
 1. Click **Save**.
+
+See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 ## Development tools
 
 ### Truffle
 
-Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Binance Smart Chain nodes.
+Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Harmony nodes.
 
 1. Install [Truffle Suite](https://truffleframework.com), [HD Wallet-enabled Web3 provider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider), and create a project.
 
@@ -244,7 +143,7 @@ module.exports = {
 
 ### Hardhat
 
-Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Binance Smart Chain nodes.
+Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Harmony nodes.
 
 1. Install [Hardhat](https://hardhat.org/) and create a project.
 
@@ -314,7 +213,7 @@ module.exports = {
 
 ### web3.js
 
-Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Harmony nodes deployed with Chainstack.
 
 #### HTTP
 
@@ -401,14 +300,14 @@ web3.eth.getBlockNumber().then(console.log);
 
 ### web3.py
 
-Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Harmony nodes deployed with Chainstack.
 
 1. Install [web3.py](https://web3py.readthedocs.io/).
 1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">EVM node connection: HTTP vs WebSocket</a>.
 
 #### HTTP
 
-Use the `HTTPProvider` to connect to your node endpoint.
+Use the `HTTPProvider` to connect to your node HTTPS endpoint.
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
@@ -437,8 +336,6 @@ where
 * HOSTNAME — your node HTTPS endpoint hostname.
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
 Example to get the latest block number:
 
@@ -497,8 +394,6 @@ where
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
 
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
-
 Example to get the latest block number:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
@@ -530,7 +425,7 @@ See also <a href="https://support.chainstack.com/hc/en-us/articles/900001918763-
 
 ### web3.php
 
-Build DApps using [web3.php](https://github.com/web3p/web3.php) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [web3.php](https://github.com/web3p/web3.php) and Harmony nodes deployed with Chainstack.
 
 1. Install [web3.php](https://github.com/web3p/web3.php).
 2. Connect over HTTP:
@@ -549,6 +444,7 @@ $web3 = new Web3(new HttpProvider(new HttpRequestManager("ENDPOINT", 5)));
 ```
 
 where ENDPOINT is your node HTTPS endpoint.
+
 
 3. Use [JSON-RPC methods](https://eth.wiki/json-rpc/API) to interact with the node.
 
@@ -603,14 +499,14 @@ $eth->blockNumber(function ($err, $data) {
 
 ### ethers.js
 
-Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Harmony nodes deployed with Chainstack.
 
 1. Install [ethers.js](https://www.npmjs.com/package/ethers).
 1. Connect over HTTP or WebSocket.
 
 #### HTTP
 
-Use the `JsonRpcProvider` object to connect to your node endpoint.
+Use the `JsonRpcProvider` object to connect to your node HTTPS endpoint.
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
@@ -646,11 +542,9 @@ where
 * ENDPOINT — your node HTTPS endpoint.
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
-* NETWORK_ID — Binance Smart Chain network ID:
-  * Mainnet: `56`
-  * Testnet: `97`
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* NETWORK_ID — Harmony network ID:
+  * Mainnet Shard 0: `1666600000`
+  * Testnet Shard 0: `1666700000`
 
 Example to get the latest block number on mainnet:
 
@@ -663,7 +557,7 @@ const { ethers } = require("ethers");
 var urlInfo = {
     url: 'https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 56);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 1666600000);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -679,7 +573,7 @@ var urlInfo = {
     user: 'user-name',
     password: 'pass-word-pass-word-pass-word'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 56);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 1666600000);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -700,11 +594,9 @@ const provider = new ethers.providers.WebSocketProvider('ENDPOINT', NETWORK_ID);
 where
 
 * ENDPOINT — your node WSS endpoint.
-* NETWORK_ID — Binance Smart Chain network ID:
-  * Mainnet: `56`
-  * Testnet: `97`
-
-See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* NETWORK_ID — Harmony network ID:
+  * Mainnet Shard 0: `1666600000`
+  * Testnet Shard 0: `1666700000`
 
 Example to get the latest block number on mainnet:
 
@@ -714,7 +606,7 @@ Example to get the latest block number on mainnet:
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d', 56);
+const provider = new ethers.providers.WebSocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d', 1666600000);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -725,7 +617,7 @@ provider.getBlockNumber().then(console.log);
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 56);
+const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 1666600000);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -739,32 +631,32 @@ provider.getBlockNumber().then(console.log);
 1. Use the `brownie networks add` command with the node endpoint:
 
 ``` sh
-brownie networks add "Binance Smart Chain" ID name="NETWORK_NAME" host=ENDPOINT chainid=NETWORK_ID
+brownie networks add Harmony ID name="NETWORK_NAME" host=KEY_ENDPOINT chainid=NETWORK_ID
 ```
 
 where
 
-* ID — any name that you will use as the network tag to run a deployment. For example, `bsc-mainnet`.
+* ID — any name that you will use as the network tag to run a deployment. For example, `chainstack-mainnet`.
 * NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
 * ENDPOINT — your node HTTPS or WSS endpoint.
-* NETWORK_ID — Binance Smart Chain network ID:
-  * Mainnet: `56`
-  * Testnet: `97`
+* NETWORK_ID — Harmony network ID:
+  * Mainnet Shard 0: `1666600000`
+  * Testnet Shard 0: `1666700000`
 
-Example to add a Binance Smart Chain mainnet node to the list of Brownie networks:
+Example to add a Harmony mainnet node to the list of Brownie networks:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
 
 ``` sh
-brownie networks add "Binance Smart Chain" bsc-mainnet name="Mainnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=56
+brownie networks add Harmony harmony-mainnet name="Mainnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=1666600000
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-brownie networks add "Binance Smart Chain" bsc-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=56
+brownie networks add Harmony harmony-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=1666600000
 ```
 
 </template>
@@ -773,7 +665,7 @@ brownie networks add "Binance Smart Chain" bsc-mainnet name="Mainnet (Chainstack
 Example to run the deployment script:
 
 ``` sh
-brownie run deploy.py --network bsc-mainnet
+brownie run deploy.py --network harmony-mainnet
 ```
 
 ### Foundry
@@ -850,6 +742,6 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 
 ::: tip See also
 
-* [BEP-1155 contract with Truffle and OpenZeppelin](/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin)
+* [A simple metaverse contract with Foundry](/tutorials/harmony/simple-metaverse-contract-with-foundry)
 
 :::

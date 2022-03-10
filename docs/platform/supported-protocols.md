@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Deploy Ethereum, Polygon PoS, Binance Smart Chain, Avalanche, Fantom, Solana, Tezos, Bitcoin, Hyperledger Fabric, Corda, Quorum, MultiChain nodes and networks in minutes.
+    content: Deploy Ethereum, Polygon PoS, Binance Smart Chain, Avalanche, Fantom, Solana, Harmony, Tezos, Bitcoin, Hyperledger Fabric, Corda, Quorum, MultiChain nodes and networks in minutes.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin deploy binance polygon matic avax avalanche fantom ftm tezos xtz solana
+    content: corda hyperledger quorum multichain ethereum bitcoin deploy binance polygon matic avax avalanche fantom ftm tezos xtz solana, harmony
 ---
 
 # Supported protocols
@@ -29,6 +29,9 @@ Public network:
 * [Solana](/blockchains/solana)
 	* Mainnet
 	* Devnet
+* [Harmony](/blockchains/harmony)
+	* Mainnet
+	* Testnet
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
 	* Hangzhounet testnet.
