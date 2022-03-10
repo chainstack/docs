@@ -58,7 +58,7 @@ Example below demonstrates how to get the balance of an address in wei value and
 
 ### GraphQL
 
-You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the <a href="https://chainstack.com/pricing/" target="_blank">Enterprise subscription plan</a>.
+You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Business and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
 
 #### UI
 
