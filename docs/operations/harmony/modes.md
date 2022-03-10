@@ -8,12 +8,20 @@ meta:
 
 # Modes
 
-Chainstack supports deploying a Harmony node on the mainnet in the following modes:
+::: tip
+
+Harmony archive nodes will be available in a future release of Chainstack.
+
+Please subscribe to and vote on the feature request: [Harmony archive nodes](https://ideas.chainstack.com/feature-requests/p/harmony-archive-nodes).
+
+:::
+
+Harmony nodes on the mainnet can be one the two following modes:
 
 * Full node — a node that stores full blockchain data.
 * Archive node — a node that stores full blockchain data and an archive of historical states.
 
-To be a part of the Harmony mainnet, you can deploy either a full node or an archive node.
+To be a part of the Harmony mainnet, you can run either a full node or an archive node.
 
 With a full node, you can query the historical state of the Harmony mainnet at only the latest 128 blocks.
 
