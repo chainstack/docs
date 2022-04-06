@@ -322,7 +322,9 @@ When your token is mapped, bridge your token from Ethereum to Polygon and back:
 
 ## Conclusion
 
-This tutorial guided you through the basics of bridging an ERC-20 contract from the Ethereum mainnet to the Polygon PoS mainnet.
+This tutorial guided you through the basics of bridging an ERC-20 contract from the Ethereum Goerli testnet to the Polygon Mumbai testnet.
+
+The same instructions will work for the Ethereum mainnet and the Polygon mainnet.
 
 Polygon PoS has public L2 contract templates and a network of deployed contracts monitored by [Heimdall nodes](/blockchains/polygon), all of which makes it easy to bridge assets from the Ethereum mainnet to the Polygon PoS commit chain.
 
