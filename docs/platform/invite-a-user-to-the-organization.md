@@ -3,14 +3,14 @@ meta:
   - name: description
     content: Learn how to invite a user to your organization registered with the Chainstack managed blockchain services.
   - name: keywords
-    content: invite user organization blockchain identity
+    content: invite user organization blockchain identity role acl
 ---
 
 # Invite a user to the organization
 
 You can invite a [user](/glossary/user) to your [organization](/glossary/organization) and assign one of the following roles:
 
-* Admin — the role can invite users, create and delete projects, deploy and delete nodes and networks, change user roles.
+* Admin — the role can access and change the organization's billing settings, invite users, create and delete projects, deploy and delete nodes and networks, change user roles.
 * Editor — the role can create and delete projects, deploy and delete nodes and networks.
 * Viewer — the role can view existing projects, nodes, and networks.
 
