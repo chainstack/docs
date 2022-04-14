@@ -24,6 +24,6 @@ A three-layer proof-of-stake consensus algorithm.
 
 ::: tip See also
 
-* [Matic architecture](https://docs.matic.network/docs/home/architecture/matic-architecture)
+* [Polygon architecture](https://docs.polygon.technology/docs/home/architecture/polygon-architecture)
 
 :::

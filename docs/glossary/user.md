@@ -10,12 +10,13 @@ meta:
 
 A user is a user account invited to become a part of an [organization](/glossary/organization).
 
-All users invited to the organization have non-admin roles. Think of organization users as team collaborators.
+All users invited to the organization have an admin role, an editor role, or a viewer role.
+
+For role details, see <a href="https://support.chainstack.com/hc/en-us/articles/900001563563" target="_blank">Organizations, users, and members</a>.
 
 ::: tip See also
 
 * [Member](/glossary/member)
-* <a href="https://support.chainstack.com/hc/en-us/articles/900001563563" target="_blank">Organizations, users, and members</a>
 * [Invite a member to the project](/platform/invite-a-member-to-the-project)
 * [Invite a user to the organization](/platform/invite-a-user-to-the-organization)
 
