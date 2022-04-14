@@ -3,23 +3,26 @@ meta:
   - name: description
     content: Learn how to invite a user to your organization registered with the Chainstack managed blockchain services.
   - name: keywords
-    content: invite user organization blockchain identity
+    content: invite user organization blockchain identity role acl
 ---
 
 # Invite a user to the organization
 
-You can invite a [user](/glossary/user) to your [organization](/glossary/organization) who will:
+You can invite a [user](/glossary/user) to your [organization](/glossary/organization) and assign one of the following roles:
 
-* Create both public and consortium projects.
-* Deploy nodes and networks.
-* Access all existing projects, networks, nodes, identities and their access and credentials.
+* Admin — the role can access and change the organization's billing settings, invite users, create and delete projects, deploy and delete nodes and networks, change user roles.
+* Editor — the role can create and delete projects, deploy and delete nodes and networks.
+* Viewer — the role can view existing projects, nodes, and networks.
 
-The invited user will not be able to invite new users, change the organization name, or the billing settings.
+For full role details, see <a href="https://support.chainstack.com/hc/en-us/articles/900001563563" target="_blank">Organizations, users, and members</a>.
 
 To invite a user to your organization:
 
 1. Click **Settings** > **Organization**.
 1. Click **Invite user**.
+1. Provide the user email address.
+1. Select the role **Admin**, **Editor**, or **Viewer**.
+1. Click **Invite**.
 
 This will send an email invitation to join the organization.
 

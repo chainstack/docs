@@ -8,6 +8,21 @@ meta:
 
 # Release notes
 
+## Chainstack 2.11
+
+*April 14, 2022*
+
+### What’s new
+
+* **Protocols**. [Ethereum Goerli](/operations/ethereum/networks) support.
+* **Role management**
+  * You can now [assign roles](/platform/invite-a-user-to-the-organization) to your organization's users.
+  * There are now three roles: <a href="https://support.chainstack.com/hc/en-us/articles/900001563563-Organizations-users-and-members" target="_blank">Admin, Editor, Viewer</a>.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.10
 
 *March 10, 2022*
@@ -180,7 +195,7 @@ See also <a href="https://chainstack.com/chainstack-2-3-faster-and-better-public
 ### What's new
 
 * **Public API**. You can now use the Chainstack API to manage your resources. See the [API documentation](/api/).
-* **Protocols**.
+* **Protocols**
   * [Corda 4.5](/blockchains/corda) support.
   * [Hyperledger Fabric 2.2](/blockchains/fabric) support.
 * **Node management**. You can now [stop and start](/platform/stop-or-start-a-node) your nodes to save your usage costs.
