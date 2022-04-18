@@ -15,7 +15,7 @@ Chainstack supports deploying an Avalanche node on the mainnet in the following 
 
 To be a part of the Avalanche mainnet, you can deploy either a full node or an archive node.
 
-With a full node, you can query the historical state of the Avalanche mainnet on C-Chain at only the latest 128 blocks.
+With a full node, you can query the historical state of the Avalanche mainnet on C-Chain at only the latest 16 blocks.
 
 To be able to query the historical state of the Avalanche mainnet on C-Chain at any block, you need an archive node.
 
