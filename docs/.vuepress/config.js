@@ -42,6 +42,7 @@ module.exports = {
                     '/platform/deploy-a-consortium-network',
                     '/platform/invite-a-member-to-the-project',
                     '/platform/invite-a-user-to-the-organization',
+                    '/platform/change-a-user-role-in-the-organization',
                     '/platform/add-a-network-to-a-project',
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
