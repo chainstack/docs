@@ -23,6 +23,7 @@ To create a project:
      * [Fantom](/blockchains/fantom)
      * [Solana](/blockchains/solana)
      * [Harmony](/blockchains/harmony)
+     * [StarkNet](/blockchains/starknet)
      * [Tezos](/blockchains/tezos)
      * [Bitcoin](/blockchains/bitcoin)
      * [Corda](/blockchains/corda)

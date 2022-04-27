@@ -33,6 +33,9 @@ Public network:
 * [Harmony](/blockchains/harmony)
 	* Mainnet
 	* Testnet
+* [StarkNet](/blockchains/starknet)
+	* Mainnet
+	* Testnet
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
 	* Hangzhounet testnet.

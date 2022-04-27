@@ -49,6 +49,14 @@ Solana:
 
 * Node — the CPU, memory, and storage allocated to your Solana node.
 
+Harmony:
+
+* Node — the CPU, memory, and storage allocated to your Harmony node.
+
+StarkNet:
+
+* Node — the CPU, memory, and storage allocated to your StarkNet node.
+
 Tezos:
 
 * Node — the CPU, memory, and storage allocated to your Tezos node.

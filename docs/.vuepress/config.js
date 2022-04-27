@@ -103,6 +103,7 @@ module.exports = {
                             '/operations/bsc/networks',
                             '/operations/bsc/types',
                             '/operations/bsc/modes',
+                            '/operations/bsc/clients',
                             '/operations/bsc/tools',
                         ]
                     },
@@ -147,6 +148,16 @@ module.exports = {
                             '/operations/harmony/types',
                             '/operations/harmony/modes',
                             '/operations/harmony/tools',
+                        ]
+                    },
+                    {
+                        title: 'StarkNet',
+                        collapsable: true,
+                        children: [
+                            '/operations/starknet/',
+                            '/operations/starknet/networks',
+                            '/operations/starknet/types',
+                            '/operations/starknet/tools',
                         ]
                     },
                     {
@@ -285,6 +296,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'StarkNet',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/starknet/',
+                            '/tutorials/starknet/nft-contract-with-nile-and-l1-l2-reputation-messaging',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -348,6 +367,7 @@ module.exports = {
                     '/blockchains/fantom',
                     '/blockchains/solana',
                     '/blockchains/harmony',
+                    '/blockchains/starknet',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',
