@@ -16,7 +16,7 @@ meta:
 
 * **Protocols**. [Ethereum Goerli](/operations/ethereum/networks) support.
 * **Role management**
-  * You can now [assign roles](/platform/invite-a-user-to-the-organization) to your organization's users.
+  * You can now [assign roles](/platform/invite-a-user-to-the-organization) to your organization's users and [change roles](/platform/change-a-user-role-in-the-organization) of the existing users.
   * There are now three roles: <a href="https://support.chainstack.com/hc/en-us/articles/900001563563-Organizations-users-and-members" target="_blank">Admin, Editor, Viewer</a>.
 
 ### Bug fixes
