@@ -17,6 +17,7 @@ You can currently join the public Ethereum, Polygon PoS, Binance Smart Chain, Bi
 1. Under **Blockchain network**, select **Mainnet**, **Ropsten testnet**, **Rinkeby testnet**, or **Goerli testnet**. Click **Next**.
 1. Under **Type**, select whether to run a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
 1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/ethereum/modes).
+1. If you are deploying a dedicated archive node, under **Client**, select whether to run a Geth node or an Erigon node. See [Clients](/operations/ethereum/clients).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
 	* For Chainstack hosting, select a cloud provider and a region.
 	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
@@ -47,7 +48,6 @@ The node status will change from **Pending** to **Running** once deployed.
 1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
 1. Under **Type**, select whether to run a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
 1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/bsc/modes).
-1. If you are deploying a dedicated archive node, under **Client**, select whether to run a Geth node or an Erigon node. See [Clients](/operations/bsc/clients).
 1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
 	* For Chainstack hosting, select a cloud provider and a region.
 	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).

@@ -81,6 +81,7 @@ module.exports = {
                             '/operations/ethereum/networks',
                             '/operations/ethereum/types',
                             '/operations/ethereum/modes',
+                            '/operations/ethereum/clients',
                             '/operations/ethereum/tools',
                         ]
                     },
@@ -103,7 +104,6 @@ module.exports = {
                             '/operations/bsc/networks',
                             '/operations/bsc/types',
                             '/operations/bsc/modes',
-                            '/operations/bsc/clients',
                             '/operations/bsc/tools',
                         ]
                     },
