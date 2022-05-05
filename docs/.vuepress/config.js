@@ -42,6 +42,7 @@ module.exports = {
                     '/platform/deploy-a-consortium-network',
                     '/platform/invite-a-member-to-the-project',
                     '/platform/invite-a-user-to-the-organization',
+                    '/platform/change-a-user-role-in-the-organization',
                     '/platform/add-a-network-to-a-project',
                     '/platform/add-a-node-to-a-network',
                     '/platform/view-node-access-and-credentials',
@@ -81,6 +82,7 @@ module.exports = {
                             '/operations/ethereum/networks',
                             '/operations/ethereum/types',
                             '/operations/ethereum/modes',
+                            '/operations/ethereum/clients',
                             '/operations/ethereum/tools',
                         ]
                     },
@@ -147,6 +149,16 @@ module.exports = {
                             '/operations/harmony/types',
                             '/operations/harmony/modes',
                             '/operations/harmony/tools',
+                        ]
+                    },
+                    {
+                        title: 'StarkNet',
+                        collapsable: true,
+                        children: [
+                            '/operations/starknet/',
+                            '/operations/starknet/networks',
+                            '/operations/starknet/types',
+                            '/operations/starknet/tools',
                         ]
                     },
                     {
@@ -285,6 +297,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'StarkNet',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/starknet/',
+                            '/tutorials/starknet/nft-contract-with-nile-and-l1-l2-reputation-messaging',
+                        ]
+                    },
+                    {
                         title: 'Tezos',
                         collapsable: true,
                         children: [
@@ -348,6 +368,7 @@ module.exports = {
                     '/blockchains/fantom',
                     '/blockchains/solana',
                     '/blockchains/harmony',
+                    '/blockchains/starknet',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',
