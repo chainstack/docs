@@ -8,6 +8,21 @@ meta:
 
 # Release notes
 
+## Chainstack 2.12
+
+*May 5, 2022*
+
+### What’s new
+
+* **Protocols**. [StarkNet](/operations/starknet/networks) support.
+* **Documentation**. StarkNet [general description](/blockchains/starknet), [operations](/operations/starknet), [simple L1L2 messaging tutorial](/tutorials/starknet/nft-contract-with-nile-and-l1-l2-reputation-messaging).
+* **Clouds**. You can now deploy your nodes in the <a href="https://support.chainstack.com/hc/en-us/articles/360024804711-Data-center-locations" target="_blank">Amazon Web Services Tokyo</a> region.
+* **Clients**. Dedicated Binance Smart Chain nodes are now deployed as [Erigon clients](https://github.com/ledgerwatch/erigon).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.11
 
 *April 14, 2022*
