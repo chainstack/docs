@@ -58,7 +58,7 @@ Example below demonstrates how to get the balance of an address in wei value and
 
 ::: tip Docker
 
-You can also use the [Bor client Docker container](https://hub.docker.com/r/maticnetwork/bor).
+You can also use the [Bor client Docker container](https://hub.docker.com/r/0xpolygon/bor).
 
 :::
 
