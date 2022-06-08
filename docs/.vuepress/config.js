@@ -353,6 +353,7 @@ module.exports = {
                 children: [
                     '/api/',
                     '/api/quick-tutorial',
+                    '/api/json-rpc-methods',
                     [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
                 ]
             },
