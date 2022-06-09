@@ -1768,8 +1768,7 @@ Returns the current version of the Ethereum protocol.
 
 ``` py
 web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-newFilterId = web3.eth.filter('pending') 
+node_url = "CHAINSTACK_NODE_URL"  
 print (web3.eth.protocol_version) 
 ```
 
