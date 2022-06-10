@@ -679,7 +679,7 @@ Polling method for a filter, which returns an array of logs which occurred since
 
 **Parameters:**
 
-* `quantity` - The filter id that is returned from [eth_newFilter](#eth-newfilter), [eth_newBlockFilter](#eth_newblockfilter), or [eth_newPendingTransactionFilter](#eth-newpendingtransactionfilter).
+* `quantity` - The filter id that is returned from [eth_newFilter](#eth-newfilter), [eth_newBlockFilter](#eth-newblockfilter), or [eth_newPendingTransactionFilter](#eth-newpendingtransactionfilter).
 
 **Returns:**
 
@@ -1736,7 +1736,7 @@ newBlocks.unsubscribe(function(error, success) {
 
 ### subscribe("pendingTransactions")
 
-Subscribes to incoming pending transactions. Similar to [eth_newPendingTransactionFilter](#eth-newpendingtransactionFilter).
+Subscribes to incoming pending transactions. Similar to [eth_newPendingTransactionFilter](#eth-newpendingtransactionfilter).
 
 **Parameters:**  
 
