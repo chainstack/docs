@@ -679,7 +679,7 @@ Polling method for a filter, which returns an array of logs which occurred since
 
 **Parameters:**
 
-* `quantity` - The filter id that is returned from [eth_newFilter](#eth-newfilter), [eth_newBlockFilter](#eth_newBlockFilter), or [eth_newPendingTransactionFilter](#eth_newPendingTransactionFilter).
+* `quantity` - The filter id that is returned from [eth_newFilter](#eth-newfilter), [eth_newBlockFilter](#eth_newblockfilter), or [eth_newPendingTransactionFilter](#eth-newpendingtransactionfilter).
 
 **Returns:**
 
@@ -1354,7 +1354,7 @@ curl -X POST 'CHAINSTACK_NODE_URL' \
 
 ### eth_newBlockFilter
 
-Creates a filter object to notify the arrival of a new block. To check if the state has changed, call [eth_getFilterChanges](#eth_getFilterChanges).
+Creates a filter object to notify the arrival of a new block. To check if the state has changed, call [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parameters:**
 
@@ -1362,7 +1362,7 @@ Creates a filter object to notify the arrival of a new block. To check if the st
 
 **Returns:** 
 
-* `result` - Returns a filter ID to be used when calling [eth_getFilterChanges](#eth_getFilterChanges).
+* `result` - Returns a filter ID to be used when calling [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Example:**
 
@@ -1411,7 +1411,7 @@ Creates a filter object based on the filter options to notify when the state cha
 
 **Returns:**
 
-* `result` - Returns a filter ID to be used when calling [eth_getFilterChanges](#eth_getFilterChanges).
+* `result` - Returns a filter ID to be used when calling [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Example:**
 
@@ -1456,7 +1456,7 @@ curl -X POST 'CHAINSTACK_NODE_URL' \
 
 ### eth_newPendingTransactionFilter
 
-Creates a filter object to notify when new pending transactions are detected. To check if the state has changed, call [eth_getFilterChanges](#eth_getFilterChanges).
+Creates a filter object to notify when new pending transactions are detected. To check if the state has changed, call [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parameters:**  
 
@@ -1464,7 +1464,7 @@ Creates a filter object to notify when new pending transactions are detected. To
 
 **Returns:** 
 
-* `result` - Returns a filter ID to be used when calling [eth_getFilterChanges](#eth_getFilterChanges).
+* `result` - Returns a filter ID to be used when calling [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Example:**
 
@@ -1736,7 +1736,7 @@ newBlocks.unsubscribe(function(error, success) {
 
 ### subscribe("pendingTransactions")
 
-Subscribes to incoming pending transactions. Similar to [eth_newPendingTransactionFilter](#eth_newPendingTransactionFilter).
+Subscribes to incoming pending transactions. Similar to [eth_newPendingTransactionFilter](#eth-newpendingtransactionFilter).
 
 **Parameters:**  
 
