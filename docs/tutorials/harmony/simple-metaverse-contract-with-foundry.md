@@ -155,7 +155,7 @@ In the project directory, create a `remappings.txt` file with the following cont
 
 4. Flatten the contract
 
-Flatten the contract to make it easier to verify on the [Harmony devnet explorer](https://explorer.pops.one/).
+Flatten the contract to make it easier to verify on the [Harmony devnet explorer](https://explorer.ps.hmny.io/).
 
 Run:
 
