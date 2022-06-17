@@ -39,7 +39,7 @@ You will lose your funds if you send anything other than ETH or USDC on the Ethe
 
 ## Top up with a non-custodial wallet
 
-You can top up the balance using you preferred non-custodial wallet. For example, [MetaMask](https://metamask.io/), [Coinbase wallet](https://www.coinbase.com/wallet), and others.
+You can top up the balance using your preferred non-custodial wallet. For example, [MetaMask](https://metamask.io/), [Coinbase Wallet](https://www.coinbase.com/wallet), and others.
 
 To top up the balance with BTC, ETH, or USDC:
 
