@@ -200,7 +200,7 @@ This will verify the contract. You can now use the explorer as a web app to inte
 
 ### Distribute the patches of land
 
-1. On the contract page in the [Harmony devnet explorer](https://explorer.pops.one/), click **Write Contract**
+1. On the contract page in the [Harmony devnet explorer](https://explorer.ps.hmny.io/), click **Write Contract**
 1. In `mintTriangle`, provide an address to distribute a patch of land to. Distribute the patches to different addresses until you hit the cap with the `All patches minted` message.
 1. On the **Read Contract** tab, query the `ownerOf` field by putting in the `tokenId` values representing each of the patches of land: `1`, `2`, `3`, `4`.
 1. In the `triangles` field, put in the same `tokenId` values to get the data on each of the patches: name and the size of each of the three edges.
