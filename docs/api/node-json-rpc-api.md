@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Collection of JSON-RPC methods available with examples in cURL, web3.py, web3.js.
   - name: keywords
-    content: json rpc methods evm web3.py web3.js
+    content: json rpc methods curl api web3.py web3.js
 ---
 
 # JSON-RPC API reference
