@@ -38,7 +38,7 @@ Public network:
 	* Testnet
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
-	* Hangzhounet testnet.
+	* Ithacanet testnet.
 * [Bitcoin](/blockchains/bitcoin)
 	* Mainnet
 	* Testnet

@@ -10,7 +10,7 @@ meta:
 
 This tutorial guides you through developing, originating, and interacting with a simple decentralized fund smart contract on Tezos.
 
-The origination and the interaction with the contract for tutorial purposes is done on Hangzhounet, which is a testnet.
+The origination and the interaction with the contract for tutorial purposes is done on Ithacanet, which is a testnet.
 
 The simple fund contract does the following:
 
@@ -26,12 +26,12 @@ The simple fund contract does the following:
 
 ## Overview
 
-To get from zero to a deployed contract on Hangzhounet, do the following:
+To get from zero to a deployed contract on Ithacanet, do the following:
 
 1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
-1. With Chainstack, [join Hangzhounet](/platform/join-a-public-network#join-a-tezos-network).
+1. With Chainstack, [join Ithacanet](/platform/join-a-public-network#join-a-tezos-network).
 1. With Chainstack, access your [Tezos node credentials](/platform/view-node-access-and-credentials).
-1. Fund your developer Tezos account through a [faucet](https://teztnets.xyz/hangzhounet-faucet).
+1. Fund your developer Tezos account through a [faucet](https://teztnets.xyz/ithacanet-faucet).
 1. With LIGO, create the contract.
 1. With the Tezos client, compile and originate the contract through your Tezos node.
 1. With the Tezos client, fund the contract.
@@ -44,7 +44,7 @@ To get from zero to a deployed contract on Hangzhounet, do the following:
 
 See [Create a project](/platform/create-a-project).
 
-### Join Hangzhounet
+### Join Ithacanet
 
 See [Join a public network](/platform/join-a-public-network).
 
@@ -60,7 +60,7 @@ See [LIGO: Installation](https://ligolang.org/docs/intro/installation).
 
 To install the client, see [Tezos Client Installation and Setup](https://assets.tqtezos.com/docs/setup/1-tezos-client/).
 
-Once installed, configure the client to the Chainstack-deployed Hangzhounet node:
+Once installed, configure the client to the Chainstack-deployed Ithacanet node:
 
 ``` sh
 tezos-client --endpoint ENDPOINT config update
@@ -78,13 +78,13 @@ tezos-client --endpoint https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9
 
 ### Fund your account with testnet tez
 
-The [Tezos faucet](https://teztnets.xyz/hangzhounet-faucet) generates an account on Hangzhounet with test tez.
+The [Tezos faucet](https://teztnets.xyz/ithacanet-faucet) generates an account on Ithacanet with test tez.
 
-1. Go to the [faucet](https://teztnets.xyz/hangzhounet-faucet).
-1. Click **Get Hangzhounet tez**.
+1. Go to the [faucet](https://teztnets.xyz/ithacanet-faucet).
+1. Click **Get Ithacanet tez**.
 1. Download the generated JSON file.
 1. Place the generated JSON file in your project directory where the Tezos client is installed.
-1. Activate the funded account on Hangzhounet:
+1. Activate the funded account on Ithacanet:
 
 ``` sh
 tezos-client activate account ALIAS with "ACCOUNT_JSON"
@@ -98,7 +98,7 @@ where
 Example:
 
 ``` sh
-tezos-client activate account trent with "hangzhounet.json"
+tezos-client activate account trent with "ithacanet.json"
 ```
 
 Check the account balance:
@@ -128,45 +128,42 @@ Create a file called `simplefund.ligo`:
 
 ```
 // Two entrypoints: deposit any, withdraw 1 tez.
-type entry is
+type entry is 
 | Deposit
 | Withdraw
 
 // Simple storage in tez.
 type storage is record  
-  balance: tez;    
-end
+ [balance: tez;    
+]
 
 const noOperations: list(operation) = nil;
+const withdrawAmount : tez = 1tez;
+const receiver: contract(unit) = Tezos.get_contract(Tezos.get_sender());
+const payoutOperation: operation = Tezos.transaction(unit, withdrawAmount, receiver);
+const operations : list (operation) = list [payoutOperation];
 
 // Amend the storage balance with the deposited amount.
 function depositAny(var storage: storage): (list(operation) * storage) is
   block {
-        storage.balance := storage.balance + amount;       
+        storage.balance := storage.balance + Tezos.get_amount();       
       }
   with(noOperations, storage)
 
-// Withdraw 1 tez at a time denominated in mutez, the smallest tez unit.
+// Withdraw 1 tez at a time.
 // 1 tez is sent to the sender calling the withdraw function.
 function withdrawFixed(var storage: storage): (list(operation) * storage) is
-  block {
-    const withdrawAmount: tez = 1000000mutez;  
-    var _operations: list(operation) := nil;
-    const receiver: contract(unit) = get_contract(sender);
-    const payoutOperation: operation = transaction(unit, withdrawAmount, receiver);
-    operations:= list 
-      payoutOperation 
-        end;       
-    storage.balance := storage.balance - withdrawAmount;              
+  block {     
+    storage.balance := Option.unopt(storage.balance - withdrawAmount);              
   } with(operations, storage)
 
 function main(const action: entry; var storage: storage): (list(operation) * storage) is
   block {
     skip
-  } with case action of
+  } with case action of [
     | Deposit(_param) -> depositAny(storage)
     | Withdraw(_param) -> withdrawFixed(storage)
-end;
+];
 ```
 
 ### Test the contract
@@ -176,15 +173,15 @@ Before compiling the contract, you can test it using the LIGO CLI.
 Deposit 10 tez:
 
 ``` sh
-$ ligo run dry-run simplefund.ligo --syntax pascaligo --amount 10 --entry-point  main "Deposit(unit)" "record liquidity = 0mutez; end"
+$ ligo run dry-run simplefund.ligo --syntax pascaligo --amount 10 --entry-point  main "Deposit(unit)" "0"
 ( LIST_EMPTY() , record[balance -> 10000000mutez] )
 ```
 
 Withdraw 1 tez:
 
 ``` sh
-$ ligo run dry-run simplefund.ligo --syntax pascaligo --entry-point main "Withdraw(unit)" "record liquidity = 10000000mutez; end"
-( CONS(Operation(0135a1ec49145785df89178dcb6e96c9a9e1e71e0a00000001c0843d0000d8276b0b00b177a2543b17e8799d31b94252c97300) ,
+$ ligo run dry-run simplefund.ligo --syntax pascaligo --entry-point main "Withdraw(unit)" "10000000mutez"
+( CONS(Operation(0135a1ec49145785df89178dcb6e96c9a9e1e71e0a00000001c0843d0000663549d0f7c76252056ed0600da097a3e713237a00) ,
        LIST_EMPTY()) ,
   record[balance -> 9000000mutez] )
 ```
@@ -197,7 +194,7 @@ Compile the contract and save the compiled code in a `.tz` file:
 ligo compile contract simplefund.ligo --entry-point main > simplefund.tz
 ```
 
-You are now ready to originate the compiled contract on Hangzhounet.
+You are now ready to originate the compiled contract on Ithacanet.
 
 ### Originate the contract
 
@@ -222,10 +219,10 @@ Once the contract is originated, you will see the contract address in `Originate
 Example:
 
 ``` sh
-New contract KT1RqWGvFewTyaSaho5c5oimhDRYrW3ZXRQu originated.
+New contract KT1Nf431i6NKV9exNaxSNvKNcMA63F6VC3P4 originated.
 ```
 
-You now have a working contract on Hangzhounet.
+You now have a working contract on Ithacanet.
 
 Write down the contract address as you will need it later to interact with it through a web app and the Temple wallet.
 
@@ -267,11 +264,11 @@ $ tezos-client get contract storage for simplefund
 
 ### Get a Temple wallet account with test tez
 
-You need an account in the Temple wallet with some test tez to execute operations on Hangzhounet.
+You need an account in the Temple wallet with some test tez to execute operations on Ithacanet.
 
 1. Install the [Temple wallet](https://templewallet.com/).
-1. Go to the [faucet](https://teztnets.xyz/hangzhounet-faucet).
-1. Click **Get Hangzhounet tez**.
+1. Go to the [faucet](https://teztnets.xyz/ithacanet-faucet).
+1. Click **Get Ithacanet tez**.
 1. Download the generated JSON file.
 1. In your Temple wallet instance, click **Import account**.
 1. Select **Faucet File**.
@@ -282,7 +279,7 @@ The Temple wallet will activate your account with test tez.
 ### Interact with the contract using the Temple wallet
 
 1. Navigate to the [BCD explorer](https://better-call.dev/).
-1. Click **Hangzhou2net**.
+1. Click **Ithacanet**.
 1. In the search field, provide your originated contract address.
 1. On the contract page, click **Interact**.
 1. Click **withdraw** > **Execute** > **Temple - Tezos Wallet**.

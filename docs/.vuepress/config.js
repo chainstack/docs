@@ -82,6 +82,8 @@ module.exports = {
                             '/operations/ethereum/networks',
                             '/operations/ethereum/types',
                             '/operations/ethereum/modes',
+                            '/operations/ethereum/mev-api',
+                            '/operations/ethereum/debug-and-trace-api',
                             '/operations/ethereum/clients',
                             '/operations/ethereum/tools',
                         ]
@@ -94,6 +96,7 @@ module.exports = {
                             '/operations/polygon/networks',
                             '/operations/polygon/types',
                             '/operations/polygon/modes',
+                            '/operations/polygon/warp-transactions',
                             '/operations/polygon/tools',
                         ]
                     },
@@ -105,6 +108,7 @@ module.exports = {
                             '/operations/bsc/networks',
                             '/operations/bsc/types',
                             '/operations/bsc/modes',
+                            '/operations/bsc/warp-transactions',
                             '/operations/bsc/tools',
                         ]
                     },
@@ -406,7 +410,7 @@ module.exports = {
                     '/glossary/project',
                     '/glossary/public-chain-project',
                     '/glossary/service-node',
-                    '/glossary/shared-node',
+                    '/glossary/elastic-node',
                     '/glossary/user',
                     '/glossary/vault',
                 ]

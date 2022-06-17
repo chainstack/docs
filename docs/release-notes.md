@@ -8,6 +8,40 @@ meta:
 
 # Release notes
 
+## Chainstack 3.0
+
+*June 30, 2022*
+
+### What’s new
+
+* **Protocols**.
+  * Harmony migrated from testnet to [devnet](/operations/harmony/networks) for better experience.
+  * Tezos migrated from Hangzhounet to [Ithacanet](/operations/tezos/networks).
+* **Pricing**. An updated pricing model with new features and increased included requests. See  <a href="https://chainstack.com/pricing-update" target="_blank">Introducing a new pricing plan, with MEV support, warp transactions, and affordable debugging and tracing API</a>.
+* **Node naming**. Shared nodes are now [elastic nodes](/glossary/elastic-node) to reflect the underlying architecture and scalable infrastructure.
+* **API**.
+  * [Debug and trace API](/operations/ethereum/debug-and-trace-api) for elastic Ethereum archive nodes.
+  * [Miner Extractable Value (MEV) API](/operations/ethereum/mev-api) support for elastic Ethereum nodes for mainnet and Goerli testnet.
+* **Mempool**. You can now get fast transaction propagation with the **Warp transactions** feature on [Polygon](/operations/polygon/warp-transactions) and [Binance Smart Chain](/operations/bsc/warp-transactions).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
+## Chainstack 2.13
+
+*June 1, 2022*
+
+### What’s new
+
+* **Protocols**.
+  * Ethereum [Erigon support](/operations/ethereum/clients) for dedicated archive nodes.
+  * StarkNet [testnet](/operations/starknet/networks) support.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.12
 
 *May 5, 2022*
@@ -329,7 +363,7 @@ See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing pl
 
 ### What's new
 
-* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. You can now deploy [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/shared-node) nodes on the mainnet.
+* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. You can now deploy [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/elastic-node) nodes on the mainnet.
 * **Network and node statuses**. You can now see network and node statuses to when operations are occurring on any network resource.
 * **Node details**. Node [access and credentials](/platform/view-node-access-and-credentials) are now grouped into sections, so it's easier to read.
 * **Billing**. View individual metered usage cost line items for the current billing period, updated hourly.
