@@ -173,7 +173,7 @@ where
 
 * CONTRACT_NAME — the name of the contract as provided in the contract code `contract Polyland is ERC721, Ownable`.
 * CONTRACT_PATH — full path to the flattened contract.
-* PRIVATE_KEY — the private key to the account that deploys the contract. Must be used without the `0x` prefix. Fund the account with devnet ONE using the [devnet faucet](https://faucet.pops.one/).
+* PRIVATE_KEY — the private key to the account that deploys the contract. Must be used without the `0x` prefix. Fund the account with devnet ONE using the [devnet faucet](http://dev.faucet.easynode.one/).
 * HTTPS_ENDPOINT — your Harmony node HTTPS endpoint. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/harmony/tools).
 * `--legacy` — the Foundry flag to work with the EVM-based networks that are not [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) activated.
 
@@ -187,7 +187,7 @@ Once the contract deploys, note the `solc` and the `Deployed to` values in the o
 
 ### Verify the contract
 
-1. Open the [Harmony devnet explorer](https://explorer.pops.one/).
+1. Open the [Harmony devnet explorer](https://explorer.ps.hmny.io/).
 1. Put in the contract address. Click the **Contract** tab.
 1. Click **Verify and Publish**.
 1. In the `Contract Name` field, put `Polyland`.
