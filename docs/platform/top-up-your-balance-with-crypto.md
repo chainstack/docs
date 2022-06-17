@@ -14,6 +14,8 @@ If your account balance is not sufficient, your credit card will be charged for 
 
 You can top up your balance with your Coinbase account, BTC, ETH, or USDC.
 
+## Top up with a Coinbase account
+
 To top up the balance with your Coinbase account:
 
 1. Go to [Billing](https://console.chainstack.com/user/settings/billing).
@@ -34,6 +36,10 @@ No other coins or tokens are accepted. No other networks are supported.
 You will lose your funds if you send anything other than ETH or USDC on the Ethereum mainnet or BTC on the Bitcoin mainnet.
 
 :::
+
+## Top up with a non-custodial wallet
+
+You can top up the balance using your preferred non-custodial wallet. For example, [MetaMask](https://metamask.io/), [Coinbase Wallet](https://www.coinbase.com/wallet), and others.
 
 To top up the balance with BTC, ETH, or USDC:
 
