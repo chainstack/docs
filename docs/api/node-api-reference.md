@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Collection of JSON-RPC methods available with examples in web3.js, web3.py, eth.rb, and cURL.
+    content: Collection of JSON-RPC methods for EVM nodes available with examples in web3.js, web3.py, eth.rb, and cURL.
   - name: keywords
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby
 ---
