@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Learn what the warp transactions are on Chainstack.
+    content: Learn what Warp transactions are on Chainstack.
   - name: keywords
     content: polygon matic mempool node warp speed transactions bloxroute
 ---
