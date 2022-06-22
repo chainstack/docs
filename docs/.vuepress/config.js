@@ -353,7 +353,8 @@ module.exports = {
                 children: [
                     '/api/',
                     '/api/quick-tutorial',
-                    [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
+                    [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'Platform API reference'],
+                    '/api/node-api-reference',
                 ]
             },
             {
