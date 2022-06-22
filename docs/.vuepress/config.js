@@ -83,7 +83,7 @@ module.exports = {
                             '/operations/ethereum/types',
                             '/operations/ethereum/modes',
                             '/operations/ethereum/mev-api',
-                            '/operations/ethereum/debug-and-trace-api',
+                            '/operations/ethereum/debug-and-trace-apis',
                             '/operations/ethereum/clients',
                             '/operations/ethereum/tools',
                         ]
