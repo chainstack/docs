@@ -354,7 +354,7 @@ module.exports = {
                     '/api/',
                     '/api/quick-tutorial',
                     [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'Platform API reference'],
-                    '/api/node-json-rpc-api',
+                    '/api/node-api-reference',
                 ]
             },
             {

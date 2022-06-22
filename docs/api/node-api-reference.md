@@ -1,16 +1,16 @@
 ---
 meta:
   - name: description
-    content: Collection of JSON-RPC methods available with examples in cURL, web3.py, web3.js.
+    content: Collection of JSON-RPC methods available with examples in web3.js, web3.py, eth.rb, and cURL.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby
 ---
 
-# JSON-RPC API reference
+# Node API reference
 
-This page is a collection of JSON-RPC API call examples for Ethereum-based nodes with [web3.js](https://web3js.readthedocs.io/), [web3.py](https://web3py.readthedocs.io/), and [cURL](https://curl.se/).
+This page is a collection of JSON-RPC API call examples for EVM nodes with [web3.js](https://web3js.readthedocs.io/), [web3.py](https://web3py.readthedocs.io/), [eth.rb](https://github.com/q9f/eth.rb/), and [cURL](https://curl.se/).
 
-For a detailed description of all the available JSON-RPC methods, see [Ethereum Wiki](https://eth.wiki/json-rpc/API) 
+For a detailed description of all the available JSON-RPC methods, see [Ethereum JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/).
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ You will need to install the web3 libraries to be able to use them.
 
 #### Web3.js
 
-[Web3.js](https://web3js.readthedocs.io/) is a JavaScript library that allows you to communicate with an Ethereun-based node through HTTP and WebSocket.
+[Web3.js](https://web3js.readthedocs.io/) is a JavaScript library that allows you to communicate with an EVM node through HTTP and WebSocket.
 
 To install, run:
 
@@ -38,7 +38,7 @@ npm install web3
 
 #### Web3.py
 
-[Web3.py](https://web3py.readthedocs.io/) is a Python library that allows you to communicate with an Ethereun-based node through HTTP and WebSocket.
+[Web3.py](https://web3py.readthedocs.io/) is a Python library that allows you to communicate with an EVM node through HTTP and WebSocket.
 
 To install, run:
 
@@ -46,7 +46,17 @@ To install, run:
 pip install web3
 ```
 
-## JSON-RPC API methods
+#### Eth.rb
+
+[Eth.rb](https://github.com/q9f/eth.rb/) is a Ruby gem that allows you to communicate with an EVM node through HTTP.
+
+To install, run:
+
+``` sh
+gem install eth
+```
+
+## Node JSON-RPC API methods
 
 ### eth_blockNumber 
 
@@ -62,7 +72,7 @@ Returns the latest block number of the blockchain.
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -82,6 +92,16 @@ from web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print (web3.eth.blockNumber) 
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+block_number = client.eth_block_number
+puts block_number["result"].to_i(16)
 ```
 
 </template>
@@ -124,7 +144,7 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -156,6 +176,22 @@ print(web3.fromWei(balance, 'ether'))
 ```
 
 </template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+require 'forwardable'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+chainlink_abi = '[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"transferAndCall","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_subtractedValue","type":"uint256"}],"name":"decreaseApproval","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_addedValue","type":"uint256"}],"name":"increaseApproval","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"},{"indexed":false,"name":"data","type":"bytes"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"}]'
+chainlink_address = "0x514910771AF9Ca656af840dff83E8264EcF986CA"
+chainlink_name = "LinkToken"
+chainlink_contract = Eth::Contract.from_abi(name: chainlink_name, address: chainlink_address, abi: chainlink_abi)
+chainlink_contract.address
+response = client.call(chainlink_contract, "balanceOf", "0x271682DEB8C4E0901D1a1550aD2e64D568E69909")
+puts response
+```
+
+</template>
 <template v-slot:cr>
 
 ``` sh
@@ -181,12 +217,12 @@ Returns the current chain ID. Chain ID is used to sign replay-protected transact
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getChainId((err, chain) => {
     console.log(chain)
@@ -201,6 +237,16 @@ from web3 import Web3
 node_url = "CHAINSTACK_NODE_URL"  
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.chain_id)  
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.chain_id
+puts response
 ```
 
 </template>
@@ -230,7 +276,7 @@ Returns an estimation of gas units needed for a given transaction.
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -238,8 +284,8 @@ var Web3 = require('web3');
 var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.estimateGas({
-        from: "0x8D97689C9818892B700e27F316cc3E41e17fBeb9",
-        to: "0xd3CdA913deB6f67967B99D67aCDFa1712C293601",
+        from: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        to: "0xbe0eb53f46cd790cd13851d5eff43d12404d33e8",
         // web3.js only uses the latest block.
     })
     .then(gas => {
@@ -254,8 +300,17 @@ web3.eth.estimateGas({
 web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
-# In this case the block number ("value") is the hex encoded value of the string 'latest'.
-print(web3.eth.estimate_gas({"from":"0x8D97689C9818892B700e27F316cc3E41e17fBeb9","to":"0xd3CdA913deB6f67967B99D67aCDFa1712C293601","value":"0x6c6174657374"}))  
+print(web3.eth.estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8","value":"0x1BC16D674EC800000"}))  
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8","value":"0x1BC16D674EC800000"})
+puts response
 ```
 
 </template>
@@ -264,8 +319,7 @@ print(web3.eth.estimate_gas({"from":"0x8D97689C9818892B700e27F316cc3E41e17fBeb9"
 ``` sh
 curl -X POST 'CHAINSTACK_NODE_URL' \
   -H "Content-Type: application/json" \
-  # In this case the block number ("value") is the hex encoded value of the string 'latest'.
-  --data '{"method":"eth_estimateGas","params":[{"from":"0x8D97689C9818892B700e27F316cc3E41e17fBeb9","to":"0xd3CdA913deB6f67967B99D67aCDFa1712C293601","value":"0x6c6174657374"}],"id":1,"jsonrpc":"2.0"}'
+  --data '{"method":"eth_estimateGas","params":[{"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8","value":"0x1BC16D674EC800000"}],"id":1,"jsonrpc":"2.0"}'
 ```
 
 </template>
@@ -285,12 +339,12 @@ Returns the current gas base fee of the network. The value returned is in Wei.
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getGasPrice((err, gasPrice) => {
     console.log(gasPrice)
@@ -305,6 +359,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.gas_price) 
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_gas_price
+puts response["result"].to_i(16)
 ```
 
 </template>
@@ -339,7 +403,7 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -360,6 +424,16 @@ node_url = "CHAINSTACK_NODE_URL"
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 balance = web3.eth.get_balance("0x9D00f1630b5B18a74231477B7d7244f47138ab47", "latest") 
 print(balance) 
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.get_balance('0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045')
+puts response
 ```
 
 </template>
@@ -403,17 +477,17 @@ Returns information about the block matching the given block hash.
   * `gaslimit` - The maximum gas allowed in this block, encoded as hexadecimal.
   * `gasused` - The total used gas by all transactions in this block. Encoded as hexadecimal. 
   * `timestamp` - The UNIX timestamp for when the block was collated. 
-  * `transactions` - Array of transaction objects - please see eth_getTransactionByHash for exact shape. 
+  * `transactions` - Array of transaction objects - please see [eth_getTransactionByHash](#eth-gettransactionbyhash) for exact shape. 
   * `uncles` - Array of uncle hashes. 
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getBlock('0xaafff6dbabc20c5c2d58f5a8f336575f22681fd23a9e53bf81e69d8130a29b9c', "False", (err, block) => {
     console.log(block)
@@ -428,6 +502,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_block('0xaafff6dbabc20c5c2d58f5a8f336575f22681fd23a9e53bf81e69d8130a29b9c', False)) 
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_block_by_hash('0xaafff6dbabc20c5c2d58f5a8f336575f22681fd23a9e53bf81e69d8130a29b9c',false)
+puts response["result"]
 ```
 
 </template>
@@ -471,7 +555,7 @@ Returns information about the block matching the given block number.
   * `gaslimit` - The maximum gas allowed in this block, encoded as hexadecimal.
   * `gasused` - The total used gas by all transactions in this block. Encoded as hexadecimal.
   * `timestamp` - The UNIX timestamp for when the block was collated.
-  * `transactions` - Array of transaction objects - please see eth_getTransactionByHash for exact shape.
+  * `transactions` - Array of transaction objects - please see [eth_getTransactionByHash](#eth-gettransactionbyhash) for exact shape.
   * `uncles` - Array of uncle hashes. 
 
 **Example:**
@@ -481,12 +565,12 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getBlock('latest', 'False', (err, block) => {
     console.log(block)
@@ -501,6 +585,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_block('latest', False))
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_block_by_number('latest',false)
+puts response["result"]
 ```
 
 </template>
@@ -529,14 +623,14 @@ Returns the number of transactions in the block matching the given block hash.
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
-web3.eth.getBlockTransactionCount('0x829df9bb801fc0494abf2f443423a49ffa32964554db71b098d332d87b70a48b', (err, block) => {
+web3.eth.getBlockTransactionCount('0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86f4c0c74239e6ae20d9446', (err, block) => {
     console.log(block)
 })
 ```
@@ -548,7 +642,17 @@ web3.eth.getBlockTransactionCount('0x829df9bb801fc0494abf2f443423a49ffa32964554d
 web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
-print(web3.eth.get_block_transaction_count('0x829df9bb801fc0494abf2f443423a49ffa32964554db71b098d332d87b70a48b'))
+print(web3.eth.get_block_transaction_count('0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86f4c0c74239e6ae20d9446'))
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_block_transaction_count_by_hash('0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86f4c0c74239e6ae20d9446')
+puts response["result"].to_i(16)
 ```
 
 </template>
@@ -557,7 +661,7 @@ print(web3.eth.get_block_transaction_count('0x829df9bb801fc0494abf2f443423a49ffa
 ``` sh
 curl -X POST 'CHAINSTACK_NODE_URL' \
   -H "Content-Type: application/json" \
-  --data '{"method":"eth_getBlockTransactionCountByHash","params":["0x829df9bb801fc0494abf2f443423a49ffa32964554db71b098d332d87b70a48b"],"id":1,"jsonrpc":"2.0"}'
+  --data '{"method":"eth_getBlockTransactionCountByHash","params":["0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86f4c0c74239e6ae20d9446"],"id":1,"jsonrpc":"2.0"}'
 ```
 
 </template>
@@ -582,7 +686,7 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -602,6 +706,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print (web3.eth.get_block_transaction_count(14897720)) # A hex value starting with "0x" is accepted as well.
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_block_transaction_count_by_number('0xE35238')
+puts response["result"].to_i(16)
 ```
 
 </template>
@@ -638,12 +752,12 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getCode('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', "latest", (err, byte) => {
     console.log(byte)
@@ -659,6 +773,16 @@ node_url = "CHAINSTACK_NODE_URL"
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 code = web3.eth.get_code("0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984", "latest") 
 print(code)
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_code('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', 'latest')
+puts response["result"]
 ```
 
 </template>
@@ -701,7 +825,7 @@ Polling method for a filter, which returns an array of logs which occurred since
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -719,6 +843,23 @@ web3 = Web3(Web3.HTTPProvider(node_url))
 # Using eth_newPendingTransactionFilter in this example
 put_filter = web3.eth.filter('pending')
 print(web3.eth.get_filter_changes(put_filter.filter_id))
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+filterId = client.eth_new_filter({
+  fromBlock: '0xE4E7B1',
+  toBlock: 'latest',
+  address: '0x514910771af9ca656af840dff83e8264ecf986ca',
+  topics: ["0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"]
+})
+puts filterId["result"]
+response = client.eth_get_filter_changes(filterId["result"].to_s)
+puts response["result"]
 ```
 
 </template>
@@ -761,7 +902,7 @@ Returns an array of all logs matching a given filter object.
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -781,6 +922,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_logs({'address': '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'})) 
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_logs({address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'})
+puts response["result"]
 ```
 
 </template>
@@ -820,12 +971,12 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getStorageAt('0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64', 0, 7500943).then(result => {
     console.log(web3.utils.hexToAscii(result));
@@ -841,6 +992,16 @@ node_url = "CHAINSTACK_NODE_URL"
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 storage = web3.eth.get_storage_at("0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64", 0, 7500943)
 print(storage.decode("ASCII"))
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_storage_at('0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64', 0, 7500943)
+puts response["result"]
 ```
 
 </template>
@@ -892,7 +1053,7 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `207` will be `0xCF`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -912,6 +1073,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_by_block('0xc05b2e16a1643d0aa15d098a408b28aa9109322087d2f2730bb2a8fa6bb699b0', 207))
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_transaction_by_block_hash_and_index('0xc05b2e16a1643d0aa15d098a408b28aa9109322087d2f2730bb2a8fa6bb699b0', 207)
+puts response["result"]
 ```
 
 </template>
@@ -964,12 +1135,12 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getTransactionFromBlock(14806883, 214, (err, block) => {
     console.log(block)
@@ -984,6 +1155,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_by_block(14806883, 214)) # Hex encoded parameters starting with "0x" are accepted as well.
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_transaction_by_block_number_and_index('0xE1EF63', 214)
+puts response["result"]
 ```
 
 </template>
@@ -1030,7 +1211,7 @@ Returns the information about a transaction from the transaction hash.
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -1050,6 +1231,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction('0xf915903ecc67ab20a5162ae13eec36e3a68ca558765ada1779847e0a0c35479c')) 
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_transaction_by_hash('0xf915903ecc67ab20a5162ae13eec36e3a68ca558765ada1779847e0a0c35479c')
+puts response["result"]
 ```
 
 </template>
@@ -1084,12 +1275,12 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getTransactionCount('0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C', 'latest', (err, nonce) => {
     console.log(nonce)
@@ -1104,6 +1295,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.getTransactionCount('0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C', 'latest')) 
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_transaction_count('0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C', 'latest')
+puts response["result"].to_i(16)
 ```
 
 </template>
@@ -1151,12 +1352,12 @@ It also returns either:
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getTransactionReceipt('0xa43e601a9b6c2daefab83c5e3521ba7764e31481079ca356ad8949f9daf0259f', (err, receipt) => {
   console.log(receipt)
@@ -1171,6 +1372,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_receipt('0xa43e601a9b6c2daefab83c5e3521ba7764e31481079ca356ad8949f9daf0259f'))  
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_transaction_receipt('0xa43e601a9b6c2daefab83c5e3521ba7764e31481079ca356ad8949f9daf0259f')
+puts response["result"]
 ```
 
 </template>
@@ -1199,7 +1410,7 @@ Returns the number of uncles for the block matching the given block hash.
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -1219,6 +1430,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_uncle_count('0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a033b023d7367b845'))   
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_uncle_count_by_block_hash('0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a033b023d7367b845')
+puts response["result"].to_i(16)
 ```
 
 </template>
@@ -1271,12 +1492,12 @@ Returns information about an uncle of a block by number and uncle index position
 Web3.js requires the block number identifier to be an integer **not encoded** as hexadecimal.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.getUncle('12911679', 0, (err, uncle) => {
     console.log(uncle)
@@ -1291,6 +1512,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_uncle_by_block('0xDB60', 0))    
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_get_uncle_count_by_block_number('0xDB60')
+puts response["result"].to_i(16)   
 ```
 
 </template>
@@ -1319,12 +1550,12 @@ curl -X POST 'CHAINSTACK_NODE_URL' \
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
 var Web3 = require('web3');
-var node_URL = ' CHAINSTACK_NODE_URL ';
+var node_URL = 'CHAINSTACK_NODE_URL';
 var web3 = new Web3(node_URL);
 web3.eth.isMining()
     .then(console.log);
@@ -1338,6 +1569,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.mining)  
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_mining
+puts response["result"]
 ```
 
 </template>
@@ -1366,7 +1607,7 @@ Creates a filter object to notify the arrival of a new block. To check if the st
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -1383,6 +1624,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 newBlockFilterId = web3.eth.filter('latest') 
 print(newBlockFilterId)   
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_new_block_filter
+puts response["result"]
 ```
 
 </template>
@@ -1420,7 +1671,7 @@ cURL needs a `HEX String` starting with `0x` to identify the block if you want t
 For example, block number `14000000` will be `0xD59F80`.
 :::
 
-<CodeSwitcher :languages="{py:'web3.py',js:'web3.js', cr:'cURL'}">
+<CodeSwitcher :languages="{py:'web3.py',js:'web3.js', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -1440,6 +1691,21 @@ newFilterId = web3.eth.filter({
   'address': '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
 })
 print(newFilterId)
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+filter = {
+  fromBlock: "0xE3975A",
+  toBlock: "latest",
+  address: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"
+}
+response = client.eth_new_filter(filter)
+puts response["result"]
 ```
 
 </template>
@@ -1468,7 +1734,7 @@ Creates a filter object to notify when new pending transactions are detected. To
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -1483,6 +1749,16 @@ web3 import Web3
 node_url = "CHAINSTACK_NODE_URL" 
 newFilterId = web3.eth.filter('pending') 
 print(newFilterId) 
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_new_pending_transaction_filter
+puts response["result"]
 ```
 
 </template>
@@ -1517,7 +1793,7 @@ Web3.js Requires the [ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-mo
 Install with `npm install ethereumjs-tx`.
 :::
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -1532,9 +1808,9 @@ var Tx = require('ethereumjs-tx').Transaction;
     // Sign and send the transaction 
 
 // Addresses and private key
-const sender = "SENDER ADDRESS";
-const receiver = "RECEIVER ADDRESS";
-const private_key = Buffer.from('PRIVATE KEY', "hex"); 
+const sender = "SENDER_ADDRESS";
+const receiver = "RECEIVER_ADDRESS";
+const private_key = Buffer.from('PRIVATE_KEY', "hex"); 
 
 // Build the transaction
 web3.eth.getTransactionCount(sender, (err, transactionCount) => {
@@ -1606,6 +1882,22 @@ print('Transaction hash:', web3.toHex(tx_hash))
 ```
 
 </template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+key = Eth::Key.new priv:"PRIVATE_KEY"
+destination = Eth::Address.new "DESTINATION_ADDRESS"
+amount = 10000000000000000 # in Wei
+client.gas_limit=21000
+client.max_priority_fee_per_gas=0.3e11
+client.max_fee_per_gas=0.31e11
+response = client.transfer_and_wait(destination, amount, sender_key = key, legacy = false)
+puts response
+```
+
+</template>
 <template v-slot:cr>
 
 ``` sh
@@ -1638,7 +1930,7 @@ Returns an object with the sync status of the node when the node is out-of-sync 
 
 **Example:**
 
-<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', cr:'cURL'}">
+<CodeSwitcher :languages="{js:'web3.js', py:'web3.py', rb:'eth.rb', cr:'cURL'}">
 <template v-slot:js>
 
 ``` js
@@ -1657,6 +1949,16 @@ web3.eth.isSyncing((err, sync) => {
 web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 print (web3.eth.syncing)  
+```
+
+</template>
+<template v-slot:rb>
+
+``` rb
+require 'eth'
+client = Eth::Client.create 'CHAINSTACK_NODE_URL'
+response = client.eth_syncing
+puts response["result"] 
 ```
 
 </template>
