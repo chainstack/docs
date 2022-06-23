@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Learn what the debug and tracing API is and how to trace transactions on Ethereum.
+    content: Learn what the debug and trace APIs are and how to trace transactions on Ethereum.
   - name: keywords
     content: ethereum debug trace namespace transaction api geth erigon
 ---
