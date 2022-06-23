@@ -29,100 +29,80 @@ For the full list of the available debug and trace API methods, see:
 * [Geth: debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug)
 * [Erigon: RPC implementation status](https://github.com/ledgerwatch/erigon/blob/stable/cmd/rpcdaemon/README.md#rpc-implementation-status)
 
-## Usage example
+## Usage examples
 
 You can debug and trace transactions by replaying them in the Ethereum Virtual Machine to get the execution details in the exact same way as they happened on the chain.
 
-### debug_traceTransaction
+### debug_traceBlockByNumber
 
-Trace a transaction with [debug_traceTransaction](https://geth.ethereum.org/docs/rpc/ns-debug#debug_tracetransaction):
+Trace all transactions included in a block with [debug_traceBlockByNumber](https://geth.ethereum.org/docs/rpc/ns-debug#debug_traceblockbynumber):
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceTransaction", "params": ["TRANSACTION_HASH"]}' ENDPOINT
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER"]}' ENDPOINT
 ```
 
 where
 
-* TRANSACTION_HASH — the hash of the transaction your are tracing.
+* BLOCK_NUMBER — the number of the block to get the traces of included transactions.
 * ENDPOINT — your node HTTPS endpoint.
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-For example, trace a [reverted MEV bot transaction](https://etherscan.io/tx/0x4fb839363cb2d823b889386314ae3940378f3b4566112709259f9cc986e4493d):
+For example, trace all smart contract interactions in [block 14976695](https://etherscan.io/txsInternal?block=14976695):
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceTransaction", "params": ["0x4fb839363cb2d823b889386314ae3940378f3b4566112709259f9cc986e4493d"]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["14976695", {"tracer": "callTracer"}]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
 ```
 
-See the [revert opcode](https://eips.ethereum.org/EIPS/eip-140) in the output:
+See a reverted transaction in the output:
 
 ``` js
-...
-{
-         "pc":1048,
-         "op":"REVERT",
-         "gas":865305,
-         "gasCost":0,
-         "depth":1,
-         "stack":[
-            "0x1cff79cd",
-            "0x253",
-            "0xd4b6cb2331045c9f37c6768111773e3442731bab",
-            "0x80",
-            "0x0",
-            "0x1",
-            "0x0",
-            "0x0"
-         ]
-      }
+"calls": [
+        {
+          "type": "DELEGATECALL",
+          "from": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+          "to": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+          "gas": "0x38ed0",
+          "gasUsed": "0x31147",
+          "input": "0x472b43f30000000000000000000000000000000000000000000000000429d069189e00000000000000000000000000000000000000000000000000160d962fcdfd0bb02400000000000000000000000000000000000000000000000000000000000000800000000000000000000000000b5ec97d9a8a9941a28a88084a1f670c62bd8bf40000000000000000000000000000000000000000000000000000000000000002000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000b00b2e950d7ef8bdc49377c49676d1550deab982",
+          "error": "execution reverted"
 ```
 
-### trace_transaction
+### trace_block
 
-Trace a transaction with [trace_transaction](https://openethereum.github.io/JSONRPC-trace-module#trace_transaction):
+Trace all transactions included in a block with [trace_block](https://openethereum.github.io/JSONRPC-trace-module#trace_block):
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "trace_transaction", "params": ["TRANSACTION_HASH"]}' ENDPOINT
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "trace_block", "params": ["BLOCK_NUMBER"]}' ENDPOINT
 ```
 
 where
 
-* TRANSACTION_HASH — the hash of the transaction your are tracing.
+* BLOCK_NUMBER — the number of the block to get the traces of included transactions.
 * ENDPOINT — your node HTTPS endpoint.
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-For example, trace a [reverted MEV bot transaction](https://etherscan.io/tx/0x4fb839363cb2d823b889386314ae3940378f3b4566112709259f9cc986e4493d):
+For example, trace all smart contract interactions in [block 14976695](https://etherscan.io/txsInternal?block=14976695):
 
 ``` sh
 curl -H "Content-Type: application/json" -d '{"id": 1, "method": "trace_transaction", "params": ["0x4fb839363cb2d823b889386314ae3940378f3b4566112709259f9cc986e4493d"]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
 ```
 
-See the [revert opcode](https://eips.ethereum.org/EIPS/eip-140) in the output:
+See a reverted transaction in the output:
 
 ``` js
-...
- {
-    "action": {
-      "from": "0x4cb18386e5d1f34dc6eea834bf3534a970a3f8e7",
-      "callType": "delegatecall",
-      "gas": "0xd153c",
-      "input": "0xfcaf671c00000000000000000000000000000000000000000000033d96a473f23aa29f4d000000000000000000000000000000000000000ddc06976a3420c92748c60000000000000000000000000000000000000000000007ba39328ab11bff8f8525c10000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000062abe5200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007bb7d1de6ab30738d221a62",
-      "to": "0xd4b6cb2331045c9f37c6768111773e3442731bab",
-      "value": "0xae07"
-    },
-    "blockHash": "0x03a83bf066e81498804f26caf5d49e47820f6a0e92fd1c9cb7dc3b87bf46cf0f",
-    "blockNumber": 14976695,
-    "error": "Reverted",
-    "result": null,
-    "subtraces": 1,
-    "traceAddress": [
-      0
-    ],
-    "transactionHash": "0x4fb839363cb2d823b889386314ae3940378f3b4566112709259f9cc986e4493d",
-    "transactionPosition": 43,
-    "type": "call"
-  }
+ "action": {
+        "from": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+        "callType": "delegatecall",
+        "gas": "0x38ed0",
+        "input": "0x472b43f30000000000000000000000000000000000000000000000000429d069189e00000000000000000000000000000000000000000000000000160d962fcdfd0bb02400000000000000000000000000000000000000000000000000000000000000800000000000000000000000000b5ec97d9a8a9941a28a88084a1f670c62bd8bf40000000000000000000000000000000000000000000000000000000000000002000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000b00b2e950d7ef8bdc49377c49676d1550deab982",
+        "to": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+        "value": "0x429d069189e0000"
+      },
+      "blockHash": "0x03a83bf066e81498804f26caf5d49e47820f6a0e92fd1c9cb7dc3b87bf46cf0f",
+      "blockNumber": 14976695,
+      "error": "Reverted"
 ```
 
 ::: tip See also

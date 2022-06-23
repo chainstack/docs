@@ -20,9 +20,9 @@ meta:
 * **Pricing**. An update to the pricing plans with new features and increased included requests. See <a href="https://chainstack.com/pricing-update-june-2022" target="_blank">Introducing updated pricing plans, with Warp transactions, MEV API, and debug and trace APIs on elastic Ethereum archive nodes</a>.
 * **Node naming**. Shared nodes are now [elastic nodes](/glossary/elastic-node) to reflect the underlying architecture and scalable infrastructure.
 * **APIs**.
-  * [Debug and trace API](/operations/ethereum/debug-and-trace-apis) for elastic Ethereum archive nodes.
-  * [Miner Extractable Value (MEV) API](/operations/ethereum/mev-api) support for elastic Ethereum nodes for mainnet and Goerli testnet.
   * Fast transaction propagation with the **Warp transactions** feature on [Ethereum](/operations/ethereum/warp-transactions), [Polygon](/operations/polygon/warp-transactions), and [Binance Smart Chain](/operations/bsc/warp-transactions).
+  * [Miner Extractable Value (MEV) API](/operations/ethereum/mev-api) for elastic Ethereum nodes for mainnet and Goerli testnet.
+  * [Debug and trace APIs](/operations/ethereum/debug-and-trace-apis) for elastic Ethereum archive nodes.
 
 ### Bug fixes
 
