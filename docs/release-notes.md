@@ -17,7 +17,7 @@ meta:
 * **Protocols**.
   * Harmony migrated from testnet to [devnet](/operations/harmony/networks) for better experience.
   * Tezos migrated from Hangzhounet to [Ithacanet](/operations/tezos/networks).
-* **Pricing**. An update to the pricing plans with new features and increased included requests. See <a href="https://chainstack.com/pricing-update-june-2022" target="_blank">Introducing updated pricing plans, with MEV API, Warp transactions, and affordable debug and trace APIs</a>.
+* **Pricing**. An update to the pricing plans with new features and increased included requests. See <a href="https://chainstack.com/pricing-update-june-2022" target="_blank">Introducing updated pricing plans, with Warp transactions, MEV API, and debug and trace APIs on elastic Ethereum archive nodes</a>.
 * **Node naming**. Shared nodes are now [elastic nodes](/glossary/elastic-node) to reflect the underlying architecture and scalable infrastructure.
 * **API**.
   * [Debug and trace API](/operations/ethereum/debug-and-trace-apis) for elastic Ethereum archive nodes.
