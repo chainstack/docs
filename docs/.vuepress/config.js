@@ -82,6 +82,9 @@ module.exports = {
                             '/operations/ethereum/networks',
                             '/operations/ethereum/types',
                             '/operations/ethereum/modes',
+                            '/operations/ethereum/warp-transactions',
+                            '/operations/ethereum/mev-api',
+                            '/operations/ethereum/debug-and-trace-apis',
                             '/operations/ethereum/clients',
                             '/operations/ethereum/tools',
                         ]
@@ -94,17 +97,19 @@ module.exports = {
                             '/operations/polygon/networks',
                             '/operations/polygon/types',
                             '/operations/polygon/modes',
+                            '/operations/polygon/warp-transactions',
                             '/operations/polygon/tools',
                         ]
                     },
                     {
-                        title: 'Binance Smart Chain',
+                        title: 'BNB Smart Chain',
                         collapsable: true,
                         children: [
                             '/operations/bsc/',
                             '/operations/bsc/networks',
                             '/operations/bsc/types',
                             '/operations/bsc/modes',
+                            '/operations/bsc/warp-transactions',
                             '/operations/bsc/tools',
                         ]
                     },
@@ -257,7 +262,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Binance Smart Chain',
+                        title: 'BNB Smart Chain',
                         collapsable: true,
                         children: [
                             '/tutorials/bsc/',
@@ -407,7 +412,7 @@ module.exports = {
                     '/glossary/project',
                     '/glossary/public-chain-project',
                     '/glossary/service-node',
-                    '/glossary/shared-node',
+                    '/glossary/elastic-node',
                     '/glossary/user',
                     '/glossary/vault',
                 ]
