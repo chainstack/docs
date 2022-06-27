@@ -1,14 +1,14 @@
 ---
 meta:
   - name: description
-    content: Learn the difference between an elastic and a dedicated Binance Smart Chain node deployed with the Chainstack managed blockchain services.
+    content: Learn the difference between an elastic and a dedicated BNB Smart Chain node deployed with the Chainstack managed blockchain services.
   - name: keywords
     content: bsc binance node elastic dedicated blockchain
 ---
 
 # Types
 
-Chainstack supports deploying a Binance Smart Chain node of the following types:
+Chainstack supports deploying a BNB Smart Chain node of the following types:
 
 * Elastic — a highly scalable public network node infrastructure accessed through your exclusive endpoint.
 * Dedicated — a dedicated node that is exclusive to you.

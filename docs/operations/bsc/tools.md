@@ -1,20 +1,20 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Binance Smart Chain node, deploy smart contracts through your node, and develop dapps.
+    content: Learn how to interact with your BNB Smart Chain node, deploy smart contracts through your node, and develop dapps.
   - name: keywords
-    content: bsc truffle web3 dapp geth binance
+    content: bsc truffle web3 dapp geth erigon binance bnb
 ---
 
 # Tools
 
 ## Interaction tools
 
-### Binance Smart Chain client
+### BNB Smart Chain client
 
-Interact with your Binance Smart Chain node using [Binance Smart Chain client](https://docs.binance.org/smart-chain/developer/fullnode.html).
+Interact with your BNB Smart Chain node using [BNB Smart Chain client](https://docs.binance.org/smart-chain/developer/fullnode.html).
 
-1. Install [Binance Smart Chain client](https://github.com/binance-chain/bsc).
+1. Install [BNB Smart Chain client](https://github.com/binance-chain/bsc).
 
 2. Use `geth attach` command with the node endpoint.
 
@@ -64,7 +64,7 @@ You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Busine
 
 You can query data using the graphical interface.
 
-1. On Chainstack, navigate to your dedicated Binance Smart Chain node. See [View node access and credentials](/platform/view-node-access-and-credentials).
+1. On Chainstack, navigate to your dedicated BNB Smart Chain node. See [View node access and credentials](/platform/view-node-access-and-credentials).
 1. Hover over **GraphQL IDE URL** and click **Open**.
 1. In the graphical interface that opens, run a GraphQL query.
 
@@ -161,7 +161,7 @@ See also  <a href="https://support.chainstack.com/hc/en-us/articles/440960433116
 
 ### MetaMask
 
-You can set your [MetaMask](https://metamask.io/) to interact through your Binance Smart Chain nodes deployed with Chainstack.
+You can set your [MetaMask](https://metamask.io/) to interact through your BNB Smart Chain nodes deployed with Chainstack.
 
 1. Open your MetaMask and click the network selector.
 1. In the network selector, click **Custom RPC**.
@@ -197,7 +197,7 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Binan
 
 ### Truffle
 
-Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Binance Smart Chain nodes.
+Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your BNB Smart Chain nodes.
 
 1. Install [Truffle Suite](https://truffleframework.com), [HD Wallet-enabled Web3 provider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider), and create a project.
 
@@ -244,7 +244,7 @@ module.exports = {
 
 ### Hardhat
 
-Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Binance Smart Chain nodes.
+Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your BNB Smart Chain nodes.
 
 1. Install [Hardhat](https://hardhat.org/) and create a project.
 
@@ -314,7 +314,7 @@ module.exports = {
 
 ### web3.js
 
-Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and BNB Smart Chain nodes deployed with Chainstack.
 
 #### HTTP
 
@@ -401,7 +401,7 @@ web3.eth.getBlockNumber().then(console.log);
 
 ### web3.py
 
-Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [web3.py](https://github.com/ethereum/web3.py) and BNB Smart Chain nodes deployed with Chainstack.
 
 1. Install [web3.py](https://web3py.readthedocs.io/).
 1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">EVM node connection: HTTP vs WebSocket</a>.
@@ -530,7 +530,7 @@ See also <a href="https://support.chainstack.com/hc/en-us/articles/900001918763-
 
 ### web3.php
 
-Build DApps using [web3.php](https://github.com/web3p/web3.php) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [web3.php](https://github.com/web3p/web3.php) and BNB Smart Chain nodes deployed with Chainstack.
 
 1. Install [web3.php](https://github.com/web3p/web3.php).
 2. Connect over HTTP:
@@ -603,7 +603,7 @@ $eth->blockNumber(function ($err, $data) {
 
 ### ethers.js
 
-Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Binance Smart Chain nodes deployed with Chainstack.
+Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and BNB Smart Chain nodes deployed with Chainstack.
 
 1. Install [ethers.js](https://www.npmjs.com/package/ethers).
 1. Connect over HTTP or WebSocket.
@@ -646,7 +646,7 @@ where
 * ENDPOINT — your node HTTPS endpoint.
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
-* NETWORK_ID — Binance Smart Chain network ID:
+* NETWORK_ID — BNB Smart Chain network ID:
   * Mainnet: `56`
   * Testnet: `97`
 
@@ -700,7 +700,7 @@ const provider = new ethers.providers.WebSocketProvider('ENDPOINT', NETWORK_ID);
 where
 
 * ENDPOINT — your node WSS endpoint.
-* NETWORK_ID — Binance Smart Chain network ID:
+* NETWORK_ID — BNB Smart Chain network ID:
   * Mainnet: `56`
   * Testnet: `97`
 
@@ -739,7 +739,7 @@ provider.getBlockNumber().then(console.log);
 1. Use the `brownie networks add` command with the node endpoint:
 
 ``` sh
-brownie networks add "Binance Smart Chain" ID name="NETWORK_NAME" host=ENDPOINT chainid=NETWORK_ID
+brownie networks add "BNB Smart Chain" ID name="NETWORK_NAME" host=ENDPOINT chainid=NETWORK_ID
 ```
 
 where
@@ -747,24 +747,24 @@ where
 * ID — any name that you will use as the network tag to run a deployment. For example, `bsc-mainnet`.
 * NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
 * ENDPOINT — your node HTTPS or WSS endpoint.
-* NETWORK_ID — Binance Smart Chain network ID:
+* NETWORK_ID — BNB Smart Chain network ID:
   * Mainnet: `56`
   * Testnet: `97`
 
-Example to add a Binance Smart Chain mainnet node to the list of Brownie networks:
+Example to add a BNB Smart Chain mainnet node to the list of Brownie networks:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
 
 ``` sh
-brownie networks add "Binance Smart Chain" bsc-mainnet name="Mainnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=56
+brownie networks add "BNB Smart Chain" bsc-mainnet name="Mainnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=56
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-brownie networks add "Binance Smart Chain" bsc-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=56
+brownie networks add "BNB Smart Chain" bsc-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=56
 ```
 
 </template>

@@ -102,7 +102,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Binance Smart Chain',
+                        title: 'BNB Smart Chain',
                         collapsable: true,
                         children: [
                             '/operations/bsc/',
@@ -262,7 +262,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Binance Smart Chain',
+                        title: 'BNB Smart Chain',
                         collapsable: true,
                         children: [
                             '/tutorials/bsc/',

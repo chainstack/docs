@@ -1,14 +1,12 @@
 ---
 meta:
   - name: description
-    content: Learn how to deploy a node on Ethereum, Polygon PoS, Binance Smart Chain, Avalanche, Fantom, Solana, Tezos, Bitcoin, or Corda in minutes with the Chainstack managed blockchain services.
+    content: Learn how to deploy a fully synchronized node in minutes with the Chainstack managed blockchain services.
   - name: keywords
     content: ethereum corda bitcoin deploy node matic polygon bsc binance tezos avax avalanche fantom ftm solana bnb harmony starknet 
 ---
 
 # Join a public network
-
-You can currently join the public Ethereum, Polygon PoS, Binance Smart Chain, Bitcoin, and Corda networks.
 
 ## Join an Ethereum network
 
@@ -41,10 +39,10 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
-## Join a Binance Smart Chain network
+## Join a BNB Smart Chain network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
-1. Under **Blockchain protocol**, select **Binance Smart Chain**.
+1. Under **Blockchain protocol**, select **BNB Smart Chain**.
 1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
 1. Under **Type**, select whether to run an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
 1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/bsc/modes).
@@ -176,7 +174,7 @@ The node status will change from **Pending** to **Running** once deployed.
 
 * [Operations: Ethereum](/operations/ethereum/)
 * [Operations: Polygon PoS](/operations/polygon/)
-* [Operations: Binance Smart Chain](/operations/bsc/)
+* [Operations: BNB Smart Chain](/operations/bsc/)
 * [Operations: Avalanche](/operations/avalanche/)
 * [Operations: Fantom](/operations/fantom/)
 * [Operations: Solana](/operations/solana/)

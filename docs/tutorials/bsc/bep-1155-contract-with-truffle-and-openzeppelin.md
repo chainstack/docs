@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Learn how to develop and deploy a BEP-1155 smart contract with both fungible and non-fungible tokens on the Binance Smart Chain network.
+    content: Learn how to develop and deploy a BEP-1155 smart contract with both fungible and non-fungible tokens on the BNB Smart Chain network.
   - name: keywords
-    content: tutorial binance bsc bep 1155 nft truffle openzeppelin
+    content: tutorial binance bsc bep 1155 nft truffle openzeppelin bnb
 ---
 
 # BEP-1155 contract with Truffle and OpenZeppelin
@@ -15,24 +15,24 @@ With a single BEP-1155 contract, you can deploy an ecosystem that has both fungi
 In this tutorial, you will:
 
 * Create a BEP-1155 contract that has a supply of fungible tokens and one non-fungible token.
-* Deploy the contract on the Binance Smart Chain testnet through a node deployed with Chainstack.
+* Deploy the contract on the BNB Smart Chain testnet through a node deployed with Chainstack.
 * Interact with the deployed contract.
 
 ## Prerequisites
 
-* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Binance Smart Chain node.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a BNB Smart Chain node.
 * [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
 * [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts) to use the audited [ERC-1155 libraries](https://docs.openzeppelin.com/contracts/erc1155) to create your BEP-1155 contract.
 
 ## Overview
 
-To get from zero to a deployed BEP-1155 contract on the Binance Smart Chain testnet, do the following:
+To get from zero to a deployed BEP-1155 contract on the BNB Smart Chain testnet, do the following:
 
 1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
-1. With Chainstack, join the Binance Smart Chain testnet.
-1. With Chainstack, access your Binance Smart Chain node credentials.
+1. With Chainstack, join the BNB Smart Chain testnet.
+1. With Chainstack, access your BNB Smart Chain node credentials.
 1. With OpenZeppelin, create a BEP-1155 contract.
-1. With Truffle, compile and deploy the contract through your Binance Smart Chain node.
+1. With Truffle, compile and deploy the contract through your BNB Smart Chain node.
 
 ## Step-by-step
 
@@ -40,11 +40,11 @@ To get from zero to a deployed BEP-1155 contract on the Binance Smart Chain test
 
 See [Create a project](/platform/create-a-project).
 
-### Join the Binance Smart Chain testnet
+### Join the BNB Smart Chain testnet
 
 See [Join a public network](/platform/join-a-public-network).
 
-### Get your Binance Smart Chain node access and credentials
+### Get your BNB Smart Chain node access and credentials
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -76,14 +76,14 @@ This will generate the Truffle boilerplate structure:
 └── truffle-config.js
 ```
 
-2. Go to the `contracts` directory. In the directory, create your BEP-1155 contract: `BinanceSmartChain1155.sol`.
+2. Go to the `contracts` directory. In the directory, create your BEP-1155 contract: `BNBSmartChain1155.sol`.
 
 ``` js
 pragma solidity ^0.8;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 
-contract BinanceSmartChain1155 is ERC1155 {
+contract BNBSmartChain1155 is ERC1155 {
     uint256 public constant FUNGIBLE = 0;
     uint256 public constant NON_FUNGIBLE = 1;
 
@@ -104,8 +104,8 @@ The contract implementation is the following:
 
 ``` js
 module.exports = function(deployer) {
-var BinanceSmartChain1155 = artifacts.require("./BinanceSmartChain1155.sol");
-  deployer.deploy(BinanceSmartChain1155);
+var BNBSmartChain1155 = artifacts.require("./BNBSmartChain1155.sol");
+  deployer.deploy(BNBSmartChain1155);
 };
 ```
 
@@ -126,8 +126,8 @@ npm install @truffle/hdwallet-provider
 2. Edit `truffle-config.js` to add:
 
 * `HDWalletProvider`
-* Your Binance Smart Chain node access and credentials
-* Your Binance Smart Chain account that you will use to deploy the contract
+* Your BNB Smart Chain node access and credentials
+* Your BNB Smart Chain account that you will use to deploy the contract
 
 ``` js
 const HDWalletProvider = require("@truffle/hdwallet-provider");
@@ -156,9 +156,9 @@ where
 
 * `testnet` — any network name that you will pass to the `truffle migrate --network` command.
 * `HDWalletProvider` — Truffle's custom provider to sign transactions.
-* PRIVATE_KEY — the private key of your Binance Smart Chain account that will deploy the contract. The account must have enough BNB funds to run the deployment. See also [Binance Smart Chain Faucet](https://testnet.binance.org/faucet-smart).
-* ENDPOINT — your Binance Smart Chain node HTTPS endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/bsc/tools).
-* `network_id` — the network ID of the Binance Smart Chain network: mainnet is `56`, testnet is `97`.
+* PRIVATE_KEY — the private key of your BNB Smart Chain account that will deploy the contract. The account must have enough BNB funds to run the deployment. See also [BNB Smart Chain Faucet](https://testnet.binance.org/faucet-smart).
+* ENDPOINT — your BNB Smart Chain node HTTPS endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/bsc/tools).
+* `network_id` — the network ID of the BNB Smart Chain network: mainnet is `56`, testnet is `97`.
 * `solc` — the Solidity compiler version that Truffle must use. OpenZeppelin contracts have a higher version Solidity compiler requirement than the default Truffle installation, hence you must provide a specific compiler version.
 
 3. Run:
@@ -167,7 +167,7 @@ where
 truffle migrate --network testnet
 ```
 
-This will engage `2_deploy_contracts.js` and deploy the contract to the Binance Smart Chain testnet as specified in `truffle-config.js`.
+This will engage `2_deploy_contracts.js` and deploy the contract to the BNB Smart Chain testnet as specified in `truffle-config.js`.
 
 ## Interact with the contract
 
@@ -192,7 +192,7 @@ npm install truffle-flattener
 In the `contracts` directory, run:
 
 ``` sh
-npx truffle-flattener BinanceSmartChain1155.sol > FlatBinanceSmartChain1155.sol
+npx truffle-flattener BNBSmartChain1155.sol > FlatBNBSmartChain1155.sol
 ```
 
 3. Clean up the licensing information.
@@ -238,6 +238,6 @@ This tutorial uses testnet, however the exact same instructions and sequence wil
 
 ::: tip See also
 
-* [Operations: Binance Smart Chain](/operations/bsc/)
+* [Operations: BNB Smart Chain](/operations/bsc/)
 
 :::
