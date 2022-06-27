@@ -16,6 +16,6 @@ BNB Smart Chain has the Proof of Staked Authority (PoSA) consensus with 21 valid
 
 ::: tip See also
 
-* [BNB Smart Chain documentation](https://docs.binance.org/smart-chain/guides/bsc-intro.html)
+* [BNB Smart Chain documentation](https://docs.bnbchain.org/docs/learn/intro)
 
 :::

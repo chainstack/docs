@@ -12,7 +12,7 @@ meta:
 
 ### BNB Smart Chain client
 
-Interact with your BNB Smart Chain node using [BNB Smart Chain client](https://docs.binance.org/smart-chain/developer/fullnode.html).
+Interact with your BNB Smart Chain node using [BNB Smart Chain client](https://docs.bnbchain.org/docs/validator/fullnode).
 
 1. Install [BNB Smart Chain client](https://github.com/binance-chain/bsc).
 
