@@ -293,7 +293,7 @@ If on the verification attempt you get a message that the explorer cannot get th
 1. Go to the [online ABI encoding service](https://abi.hashex.org/).
 1. In the service, provide the [ChildERC20.json](https://github.com/maticnetwork/pos-portal/blob/master/artifacts/ChildERC20.json) ABI data as ([abi]) .
 1. Click **Parse**.
-1. Put your constructor data by adding arguements with the data type:
+1. Put your constructor data by adding arguments with the data type:
    * name_: `myL2tokenChild`
    * symbol_: `ML2T`
    * decimals_: `18`
