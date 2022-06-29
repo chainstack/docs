@@ -10,9 +10,9 @@ meta:
 
 ## Elastic nodes
 
-You can deploy an [elastic](/glossary/elastic-node) Ethereum archive node starting from the <a href="https://chainstack.com/pricing/" target="_blank">Business plan</a> as the Erigon [client implementation](/operations/ethereum/clients).
+You can deploy an [elastic](/glossary/elastic-node) Ethereum archive node with the enabled debug and trace APIs starting from the <a href="https://chainstack.com/pricing/" target="_blank">Business plan</a> as the Erigon [client implementation](/operations/ethereum/clients).
 
-An elastic Ethereum archive node deployed as Erigon exposes the `debug_*` and `trace_*` API methods.
+An elastic Ethereum archive node deployed as Erigon with the enabled debug and trace APIs exposes the `debug_*` and `trace_*` methods.
 
 For the full list of the available debug and trace API methods, see [Erigon: RPC implementation status](https://github.com/ledgerwatch/erigon/blob/stable/cmd/rpcdaemon/README.md#rpc-implementation-status).
 
