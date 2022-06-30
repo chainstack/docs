@@ -273,9 +273,9 @@ truffle migrate --network mumbai
 
 ### Verify your child Polygon PoS ERC-20 contract on the Polygon PoS explorer
 
-Once your contract is deployed, you can view it online at the [Polygon PoS mainnet explorer](https://mumbai.polygonscan.com/).
+Once your contract is deployed, you can view it online at the [Polygon PoS Mumbai explorer](https://mumbai.polygonscan.com/).
 
-1. Go to the [Polygon PoS mainnet explorer](https://mumbai.polygonscan.com/).
+1. Go to the [Polygon PoS Mumbai explorer](https://mumbai.polygonscan.com/).
 1. Find your deployed contract. The address of your contract should have been printed by Truffle at the end of the deployment in the `contract address` field.
 1. On the contract page on the explorer, click **Contract** > **Verify and Publish**.
 1. In **Compiler Type**, select **Solidity (Single file)**.
@@ -291,9 +291,9 @@ Once your contract is deployed, you can view it online at the [Polygon PoS mainn
 If on the verification attempt you get a message that the explorer cannot get the ABI data for the contract verification, do the following:
 
 1. Go to the [online ABI encoding service](https://abi.hashex.org/).
-1. In the service, provide the [ChildERC20.json](https://github.com/maticnetwork/pos-portal/blob/master/artifacts/ChildERC20.json) ABI data.
+1. In the service, provide the [ChildERC20.json](https://github.com/maticnetwork/pos-portal/blob/master/artifacts/ChildERC20.json) ABI data as ([abi]) .
 1. Click **Parse**.
-1. Put your constructor data:
+1. Put your constructor data by adding arguments with the data type:
    * name_: `myL2tokenChild`
    * symbol_: `ML2T`
    * decimals_: `18`
@@ -307,7 +307,7 @@ The explorer will take a few seconds to compile your contract, verify, and publi
 
 ### Map your Ethereum ERC-20 contract to the Polygon PoS contract
 
-1. Go go the [token mapper](https://mapper.matic.today/map).
+1. Go go the [token mapper](https://mapper.polygon.technology/map).
 1. Select **ERC20** and **Goerli Testnet - Mumbai Testnet**.
 1. Provide the address of your contract on the Ethereum Goerli testnet and on the Polygon PoS Mumbai testnet.
 1. Provide an email address to be notified of when the mapping is done.
