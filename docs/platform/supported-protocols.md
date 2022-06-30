@@ -32,7 +32,7 @@ Public network:
 	* Devnet
 * [Harmony](/blockchains/harmony)
 	* Mainnet
-	* Testnet
+	* Devnet
 * [StarkNet](/blockchains/starknet)
 	* Mainnet
 	* Testnet
