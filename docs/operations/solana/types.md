@@ -1,16 +1,14 @@
 ---
 meta:
   - name: description
-    content: Learn what a shared Solana node is when deployed with the Chainstack managed blockchain services.
+    content: Deploy a highly scalable elastic Solana node with the Chainstack managed blockchain services.
   - name: keywords
-    content: solana node shared blockchain
+    content: solana node elastic blockchain
 ---
 
 # Types
 
-Chainstack currently supports deploying a Solana node of the [shared type](/glossary/shared-node).
-
-While a shared node's resources are not exclusive to you, the shared node's access and credentials are exclusive to each user.
+Chainstack currently supports deploying a Solana node of the [elastic type](/glossary/elastic-node).
 
 ::: tip See also
 

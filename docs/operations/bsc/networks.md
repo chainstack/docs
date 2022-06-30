@@ -1,17 +1,17 @@
 ---
 meta:
   - name: description
-    content: Deploy a public Binance Smart Chain mainnet node or a testnet node with the Chainstack managed blockchain services in minutes.
+    content: Deploy a public BNB Smart Chain mainnet node or a testnet node with the Chainstack managed blockchain services in minutes.
   - name: keywords
     content: bsc mainnet binance testnet node bnb
 ---
 
 # Networks
 
-Chainstack supports joining the following Binance Smart Chain networks:
+Chainstack supports joining the following BNB Smart Chain networks:
 
-* Mainnet — public Binance Smart Chain mainnet.
-* Testnet — public Binance Smart Chain testnet.
+* Mainnet — public BNB Smart Chain mainnet.
+* Testnet — public BNB Smart Chain testnet.
 
 For development purposes on the testnet, fund your accounts with [testnet BNB](https://testnet.binance.org/faucet-smart).
 

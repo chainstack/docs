@@ -16,7 +16,7 @@ With a dedicated node, you pay for the compute and storage resources used by the
 
 ::: tip See also
 
-* [Shared node](/glossary/shared-node)
+* [Elastic node](/glossary/elastic-node)
 * <a href="https://chainstack.com/pricing/" target="_blank">Pricing</a>
 
 :::
