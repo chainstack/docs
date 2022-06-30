@@ -77,7 +77,7 @@ meta:
 
 ### What’s new
 
-* **Protocols**. [Harmony](/blockchains/harmony) support. You can now use shared and dedicated Harmony Shard 0 nodes on mainnet and testnet.
+* **Protocols**. [Harmony](/blockchains/harmony) support. You can now use shared and dedicated Harmony Shard 0 nodes on mainnet and devnet.
 * **Documentation**. Harmony [general description](/blockchains/harmony), [operations](/operations/harmony), [simple metaverse tutorial](/tutorials/harmony/simple-metaverse-contract-with-foundry).
 * **Subscription downgrading**. You have now the ability to downgrade your plan on the **Settings** > **Billing** page.
 
