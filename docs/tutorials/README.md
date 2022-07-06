@@ -22,4 +22,4 @@ If you have questions or need some help, [talk to us on Discord](https://discord
 
 Make sure to check out more tutorials from Chainstack developer advocates regularly published at the <a href="https://chainstack.com/category/tutorials/" target="_blank">Chainstack blog</a>.
 
-You can also follow the Chainstack developer advocates [on Twitter](https://twitter.com/i/lists/1544610911402557440) to stay up tp date with the latest Web3 tutorials.
+You can also follow the Chainstack developer advocates [on Twitter](https://twitter.com/i/lists/1544610911402557440) to stay up to date with the latest Web3 tutorials.
