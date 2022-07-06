@@ -851,5 +851,6 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 ::: tip See also
 
 * [BEP-1155 contract with Truffle and OpenZeppelin](/tutorials/bsc/bep-1155-contract-with-truffle-and-openzeppelin)
+* [Node API reference](/api/node-api-reference)
 
 :::

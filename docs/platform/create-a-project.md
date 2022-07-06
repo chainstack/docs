@@ -18,7 +18,7 @@ To create a project:
    * Select **Public chain** to deploy:
      * [Ethereum](/blockchains/ethereum)
      * [Polygon PoS](/blockchains/polygon)
-     * [Binance Smart Chain](/blockchains/bsc)
+     * [BNB Smart Chain](/blockchains/bsc)
      * [Avalanche](/blockchains/avalanche)
      * [Fantom](/blockchains/fantom)
      * [Solana](/blockchains/solana)

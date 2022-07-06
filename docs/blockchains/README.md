@@ -14,7 +14,7 @@ This section covers the blockchain essentials for the protocols supported by Cha
 
 * [Operations: Ethereum](/operations/ethereum/)
 * [Operations: Polygon PoS](/operations/polygon/)
-* [Operations: Binance Smart Chain](/operations/bsc/)
+* [Operations: BNB Smart Chain](/operations/bsc/)
 * [Operations: Avalanche](/operations/avalanche/)
 * [Operations: Fantom](/operations/fantom/)
 * [Operations: Tezos](/operations/tezos/)

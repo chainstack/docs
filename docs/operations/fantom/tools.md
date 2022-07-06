@@ -14,7 +14,7 @@ meta:
 
 Interact with your Fantom node using the [Opera client](https://github.com/Fantom-foundation/go-opera).
 
-1. Install [Opera](https://docs.fantom.foundation/staking/run-a-read-only-node#install-required-tools).
+1. Install [Opera](https://docs.fantom.foundation/node/run-a-read-only-node).
 
 2. Use `opera attach` command with the node endpoint.
 
@@ -64,7 +64,7 @@ You can use GraphQL on [dedicated nodes](/glossary/dedicated-node) on the Busine
 
 The Fantom GraphQL schema is different from the standard Geth implementation.
 
-See Fantom GraphQL documentation: [Schema Structure](https://docs.fantom.foundation/api/schema-structure).
+See Fantom GraphQL documentation: [Schema Structure](https://docs.fantom.foundation/graphql/graphql-schema-basics).
 
 :::
 
@@ -853,5 +853,6 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 ::: tip See also
 
 * [ERC-721 collection contract with Truffle and OpenZeppelin](/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin#prerequisites)
+* [Node API reference](/api/node-api-reference)
 
 :::

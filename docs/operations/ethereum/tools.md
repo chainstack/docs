@@ -1018,8 +1018,7 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 
 ::: tip See also
 
-* [Academic certificates with Truffle](/tutorials/ethereum/academic-certificates-with-truffle)
-* [Asset tokenization with Embark](/tutorials/ethereum/asset-tokenization-with-embark)
-* [Trust fund account with Remix](/tutorials/ethereum/trust-fund-account-with-remix)
+* [Tutorials](/tutorials/ethereum)
+* [Node API reference](/api/node-api-reference)
 
 :::
