@@ -226,7 +226,7 @@ Example to get the latest block number:
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'));
+const web3 = new Web3(new Web3.providers.HttpProvider('https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'));
 
 web3.eth.getBlockNumber().then(console.log);
 ```
@@ -237,7 +237,7 @@ web3.eth.getBlockNumber().then(console.log);
 ``` js
 const Web3 = require('web3');
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider('https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com'));
+const web3 = new Web3(new Web3.providers.HttpProvider('https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com'));
 
 web3.eth.getBlockNumber().then(console.log);
 ```
