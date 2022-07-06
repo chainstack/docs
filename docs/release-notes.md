@@ -17,7 +17,7 @@ meta:
 * **Protocols**.
   * Harmony migrated from testnet to [devnet](/operations/harmony/networks) for better experience.
   * Tezos migrated from Hangzhounet to [Ithacanet](/operations/tezos/networks).
-* **Pricing**. An update to the pricing plans with new features and increased included requests. See <a href="https://chainstack.com/pricing-update-2022" target="_blank">the blog post with an overview</a>.
+* **Pricing**. An update to the pricing plans with new features and increased included requests. See <a href="https://chainstack.com/pricing-update-2022/" target="_blank">the blog post with an overview</a>.
 * **Node naming**. Shared nodes are now [elastic nodes](/glossary/elastic-node) to reflect the underlying architecture and scalable infrastructure.
 * **APIs**.
   * Fast transaction propagation with the **Warp transactions** feature on [Ethereum](/operations/ethereum/warp-transactions), [Polygon](/operations/polygon/warp-transactions), and [BNB Smart Chain](/operations/bsc/warp-transactions).
