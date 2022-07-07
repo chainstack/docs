@@ -399,6 +399,7 @@ module.exports = {
                     '/glossary/cross-region',
                     '/glossary/cryptogen',
                     '/glossary/dedicated-node',
+                    '/glossary/elastic-node',
                     '/glossary/fabric-ca',
                     '/glossary/hybrid',
                     '/glossary/identity',
@@ -412,7 +413,6 @@ module.exports = {
                     '/glossary/project',
                     '/glossary/public-chain-project',
                     '/glossary/service-node',
-                    '/glossary/elastic-node',
                     '/glossary/user',
                     '/glossary/vault',
                 ]
