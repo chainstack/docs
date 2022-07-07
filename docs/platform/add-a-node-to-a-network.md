@@ -12,7 +12,7 @@ Once you have [deployed a consortium network](/platform/deploy-a-consortium-netw
 
 For consortium networks, you can add a node to run in [cross-cloud](/glossary/cross-cloud), [cross-region](/glossary/cross-region), and [hybrid](/glossary/hybrid) networks starting from the Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plan</a>.
 
-For public networks, you can add a [shared](/glossary/shared-node) or a [dedicated](/glossary/dedicated-node) node.
+For public networks, you can add an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
 
 To add a node:
 

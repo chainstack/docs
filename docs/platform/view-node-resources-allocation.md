@@ -31,9 +31,9 @@ Polygon PoS:
 
 Note that you are not charged for the ancient storage.
 
-Binance Smart Chain:
+BNB Smart Chain:
 
-* Node — the CPU, memory, storage, and ancient storage allocated to your Binance Smart Chain node.
+* Node — the CPU, memory, storage, and ancient storage allocated to your BNB Smart Chain node.
 
 Note that you are not charged for the ancient storage.
 

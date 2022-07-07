@@ -159,7 +159,7 @@ The task progress for the webserver start printed in the output will never reach
 
 You can access the server locally via `localhost:SERVER_PORT` or from a remote machine via `IP_ADDRESS:SERVER_PORT`.
 
-The Corda Spring webserver implementation builds with the default RPC commands mapped to HTTP requests. See [StandardController.kt](https://raw.githubusercontent.com/corda/samples/release-V4/spring-webserver/src/main/kotlin/net/corda/server/controllers/StandardController.kt).
+The Corda Spring webserver implementation builds with the default RPC commands mapped to HTTP requests. See [StandardController.kt](https://github.com/corda/samples/blob/release-V4/spring-webserver/server-kotlin/src/main/kotlin/net/corda/server/controllers/StandardController.kt).
 
 Example:
 

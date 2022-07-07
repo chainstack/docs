@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Deploy a public Harmony mainnet node or a testnet node with the Chainstack managed blockchain services in minutes.
+    content: Deploy a public Harmony mainnet node or a devnet node with the Chainstack managed blockchain services in minutes.
   - name: keywords
-    content: harmony geth one archive full mainnet testnet node
+    content: harmony geth one archive full mainnet devnet node
 ---
 
 # Networks
@@ -11,9 +11,9 @@ meta:
 Chainstack supports joining the following Harmony networks:
 
 * Mainnet — public Harmony mainnet.
-* Testnet — public Harmony testnet.
+* Devnet — public Harmony devnet.
 
-For development purposes on the testnet, fund your accounts with [testnet Harmony tokens](https://faucet.pops.one/).
+For development purposes on the devnet, fund your accounts with [devnet Harmony tokens](http://dev.faucet.easynode.one/).
 
 ::: tip See also
 

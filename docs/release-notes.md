@@ -8,6 +8,40 @@ meta:
 
 # Release notes
 
+## Chainstack 3.0
+
+*July 7, 2022*
+
+### What’s new
+
+* **Protocols**.
+  * Harmony migrated from testnet to [devnet](/operations/harmony/networks) for better experience.
+  * Tezos migrated from Hangzhounet to [Ithacanet](/operations/tezos/networks).
+* **Pricing**. An update to the pricing plans with new features and increased included requests. See <a href="https://chainstack.com/pricing-update-2022/" target="_blank">the blog post with an overview</a>.
+* **Node naming**. Shared nodes are now [elastic nodes](/glossary/elastic-node) to reflect the underlying architecture and scalable infrastructure.
+* **APIs**.
+  * Fast transaction propagation with the **Warp transactions** feature on [Ethereum](/operations/ethereum/warp-transactions), [Polygon](/operations/polygon/warp-transactions), and [BNB Smart Chain](/operations/bsc/warp-transactions).
+  * [Miner Extractable Value (MEV) API](/operations/ethereum/mev-api) for elastic Ethereum nodes for mainnet and Goerli testnet.
+  * [Debug and trace APIs](/operations/ethereum/debug-and-trace-apis) for elastic Ethereum archive nodes.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
+## Chainstack 2.13
+
+*June 1, 2022*
+
+### What’s new
+
+* **Protocols**.
+  * Ethereum [Erigon support](/operations/ethereum/clients) for dedicated archive nodes.
+  * StarkNet [testnet](/operations/starknet/networks) support.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 2.12
 
 *May 5, 2022*
@@ -43,7 +77,7 @@ meta:
 
 ### What’s new
 
-* **Protocols**. [Harmony](/blockchains/harmony) support. You can now use shared and dedicated Harmony Shard 0 nodes on mainnet and testnet.
+* **Protocols**. [Harmony](/blockchains/harmony) support. You can now use shared and dedicated Harmony Shard 0 nodes on mainnet and devnet.
 * **Documentation**. Harmony [general description](/blockchains/harmony), [operations](/operations/harmony), [simple metaverse tutorial](/tutorials/harmony/simple-metaverse-contract-with-foundry).
 * **Subscription downgrading**. You have now the ability to downgrade your plan on the **Settings** > **Billing** page.
 
@@ -329,7 +363,7 @@ See the <a href="https://chainstack.com/pricing/" target="_blank">new pricing pl
 
 ### What's new
 
-* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. You can now deploy [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/shared-node) nodes on the mainnet.
+* **Protocols**. [Bitcoin](/blockchains/bitcoin) 0.18 support. You can now deploy [dedicated](/glossary/dedicated-node) nodes with [Bolt](/glossary/bolt) synchronization and free access to [shared](/glossary/elastic-node) nodes on the mainnet.
 * **Network and node statuses**. You can now see network and node statuses to when operations are occurring on any network resource.
 * **Node details**. Node [access and credentials](/platform/view-node-access-and-credentials) are now grouped into sections, so it's easier to read.
 * **Billing**. View individual metered usage cost line items for the current billing period, updated hourly.

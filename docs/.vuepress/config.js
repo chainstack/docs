@@ -82,6 +82,9 @@ module.exports = {
                             '/operations/ethereum/networks',
                             '/operations/ethereum/types',
                             '/operations/ethereum/modes',
+                            '/operations/ethereum/warp-transactions',
+                            '/operations/ethereum/mev-api',
+                            '/operations/ethereum/debug-and-trace-apis',
                             '/operations/ethereum/clients',
                             '/operations/ethereum/tools',
                         ]
@@ -94,17 +97,19 @@ module.exports = {
                             '/operations/polygon/networks',
                             '/operations/polygon/types',
                             '/operations/polygon/modes',
+                            '/operations/polygon/warp-transactions',
                             '/operations/polygon/tools',
                         ]
                     },
                     {
-                        title: 'Binance Smart Chain',
+                        title: 'BNB Smart Chain',
                         collapsable: true,
                         children: [
                             '/operations/bsc/',
                             '/operations/bsc/networks',
                             '/operations/bsc/types',
                             '/operations/bsc/modes',
+                            '/operations/bsc/warp-transactions',
                             '/operations/bsc/tools',
                         ]
                     },
@@ -257,7 +262,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Binance Smart Chain',
+                        title: 'BNB Smart Chain',
                         collapsable: true,
                         children: [
                             '/tutorials/bsc/',
@@ -353,7 +358,8 @@ module.exports = {
                 children: [
                     '/api/',
                     '/api/quick-tutorial',
-                    [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'API reference'],
+                    [`https://${process.env.DOCS_HOSTNAME}/api/reference/`, 'Platform API reference'],
+                    '/api/node-api-reference',
                 ]
             },
             {
@@ -393,6 +399,7 @@ module.exports = {
                     '/glossary/cross-region',
                     '/glossary/cryptogen',
                     '/glossary/dedicated-node',
+                    '/glossary/elastic-node',
                     '/glossary/fabric-ca',
                     '/glossary/hybrid',
                     '/glossary/identity',
@@ -406,7 +413,6 @@ module.exports = {
                     '/glossary/project',
                     '/glossary/public-chain-project',
                     '/glossary/service-node',
-                    '/glossary/shared-node',
                     '/glossary/user',
                     '/glossary/vault',
                 ]

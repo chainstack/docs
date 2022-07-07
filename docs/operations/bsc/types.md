@@ -1,21 +1,21 @@
 ---
 meta:
   - name: description
-    content: Learn the difference between a shared and a dedicated Binance Smart Chain node deployed with the Chainstack managed blockchain services.
+    content: Learn the difference between an elastic and a dedicated BNB Smart Chain node deployed with the Chainstack managed blockchain services.
   - name: keywords
-    content: bsc binance node shared dedicated blockchain
+    content: bsc binance node elastic dedicated blockchain
 ---
 
 # Types
 
-Chainstack supports deploying a Binance Smart Chain node of the following types:
+Chainstack supports deploying a BNB Smart Chain node of the following types:
 
-* Shared — the node resources are shared with other platform users.
-* Dedicated — the node resources are exclusive to you.
+* Elastic — a highly scalable public network node infrastructure accessed through your exclusive endpoint.
+* Dedicated — a dedicated node that is exclusive to you.
 
-While a shared node's resources are not exclusive to you, the shared node's access and credentials are exclusive to each user.
+With an elastic node, you pay for JSON-RPC requests to the node and do not pay for the compute and storage resources used by the node.
 
-You can also invite other [users](/glossary/user) to your [organization](/glossary/organization) to share the access and credentials of a dedicated or a shared node. See [Invite a user to the organization](/platform/invite-a-user-to-the-organization).
+With a dedicated node, you pay for the compute and storage resources used by the node and do not pay for JSON-RPC requests to the node.
 
 ::: tip See also
 

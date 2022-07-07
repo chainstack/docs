@@ -1,14 +1,16 @@
 ---
 meta:
   - name: description
-    content: Interact with the Chainstack managed blockchain services through the Chainstack API.
+    content: Interact with the Chainstack platform and the blockchain nodes through powerful API.
   - name: keywords
-    content: api blockchain node network manage
+    content: api blockchain node network manage rpc
 ---
 
 # Introduction
 
-Chainstack API allows you to manage:
+## Platform API
+
+The Chainstack platform API allows you to manage:
 
 * your [organization](/glossary/organization);
 * your [projects](/glossary/project);
@@ -19,3 +21,9 @@ Chainstack API allows you to manage:
 To start with the API, you must [create an API key](/platform/create-an-api-key).
 
 For all available API operations, see <a :href="$themeConfig.apiDocsURL" target="_blank">API reference</a>.
+
+## Node API
+
+A collection of JSON-RPC API call examples to the nodes deployed with Chainstack.
+
+See [Node API reference](/api/node-api-reference).

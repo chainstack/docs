@@ -10,10 +10,10 @@ meta:
 
 Chainstack supports joining the following Polygon PoS networks:
 
-* [Mainnet](https://polygon-explorer-mainnet.chainstacklabs.com/) — public Polygon PoS mainnet.
-* [Mumbai testnet](https://polygon-explorer-mumbai.chainstacklabs.com/) — public Polygon PoS testnet.
+* Mainnet — public Polygon PoS mainnet.
+* Mumbai testnet — public Polygon PoS testnet.
 
-For development purposes on the testnet, fund your accounts with [testnet Polygon tokens](https://faucet.matic.network/).
+For development purposes on the testnet, fund your accounts with [testnet Polygon tokens](https://faucet.polygon.technology/).
 
 ::: tip See also
 

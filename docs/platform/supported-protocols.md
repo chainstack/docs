@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Deploy Ethereum, Polygon PoS, Binance Smart Chain, Avalanche, Fantom, Solana, Harmony, Tezos, Bitcoin, Hyperledger Fabric, Corda, Quorum, MultiChain nodes and networks in minutes.
+    content: Deploy blockchain nodes and networks in minutes.
   - name: keywords
     content: corda hyperledger quorum multichain ethereum bitcoin deploy binance polygon matic avax avalanche fantom ftm tezos xtz solana, harmony
 ---
@@ -18,7 +18,7 @@ Public network:
 * [Polygon PoS](/blockchains/polygon)
 	* Mainnet. [Full and archive nodes](/operations/polygon/modes).
 	* Mumbai testnet
-* [Binance Smart Chain](/blockchains/bsc)
+* [BNB Smart Chain](/blockchains/bsc)
 	* Mainnet. [Full and archive nodes](/operations/bsc/modes).
 	* Testnet
 * [Avalanche](/blockchains/avalanche)
@@ -32,13 +32,13 @@ Public network:
 	* Devnet
 * [Harmony](/blockchains/harmony)
 	* Mainnet
-	* Testnet
+	* Devnet
 * [StarkNet](/blockchains/starknet)
 	* Mainnet
 	* Testnet
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
-	* Hangzhounet testnet.
+	* Ithacanet testnet.
 * [Bitcoin](/blockchains/bitcoin)
 	* Mainnet
 	* Testnet

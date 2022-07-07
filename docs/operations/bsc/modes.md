@@ -1,23 +1,23 @@
 ---
 meta:
   - name: description
-    content: Learn the difference between a Binance Smart Chain full node and an archive node. Run sample commands to see the difference.
+    content: Learn the difference between a BNB Smart Chain full node and an archive node. Run sample commands to see the difference.
   - name: keywords
     content: bsc binance node full archive difference
 ---
 
 # Modes
 
-Chainstack supports deploying a Binance Smart Chain node on the mainnet in the following modes:
+Chainstack supports deploying a BNB Smart Chain node on the mainnet in the following modes:
 
 * Full node — a node that stores full blockchain data.
 * Archive node — a node that stores full blockchain data and an archive of historical states.
 
-To be a part of the Binance Smart Chain mainnet, you can deploy either a full node or an archive node.
+To be a part of the BNB Smart Chain mainnet, you can deploy either a full node or an archive node.
 
-With a full node, you can query the historical state of the Binance Smart Chain mainnet at only the latest 128 blocks.
+With a full node, you can query the historical state of the BNB Smart Chain mainnet at only the latest 128 blocks.
 
-To be able to query the historical state of the Binance Smart Chain mainnet at any block, you need an archive node.
+To be able to query the historical state of the BNB Smart Chain mainnet at any block, you need an archive node.
 
 See [Geth JSON-RPC methods](https://eth.wiki/json-rpc/API#the-default-block-parameter) that support querying at a block number.
 
