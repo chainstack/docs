@@ -1,4 +1,4 @@
----
+#
 meta:
   - name: description
     content: View the access and credentials of your nodes deployed with the Chainstack managed blockchain services.
