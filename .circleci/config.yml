@@ -120,9 +120,9 @@ jobs:
       - image: circleci/node:16
     steps:
       - checkout
-      - run: npm install
-      - run: npm run build
-      - run: npm run check-md
+      - run: yarn install
+      - run: yarn run build
+      - run: yarn run check-md
 
   build_dev_image:
     <<: *build_image
