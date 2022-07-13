@@ -421,8 +421,9 @@ module.exports = {
         ],
         sidebarDepth: 2,
         algolia: {
-            apiKey: '1194997ecec7d141de5c746bc3463e9c',
-            indexName: 'chainstack'
+            apiKey: `${process.env.ALGOLIA_KEY}`,
+            indexName: 'chainstack',
+            appId: 'XNMMO9QAGN'
         },
         docsRepo: 'chainstack/docs',
         docsDir: 'docs',
@@ -432,22 +433,24 @@ module.exports = {
         prevLinks: false
     },
     plugins: {
+        '@vuepress/active-header-links': true,
+        '@vuepress/back-to-top': true,
+        '@vuepress/google-analytics': {
+            'ga': `${process.env.GA_ID}`
+        },
         'clean-urls': {
             normalSuffix: ''
-        },
-        'google-tag-manager': {
-            gtm: 'GTM-PXSGW6M'
         },
         'sitemap': {
             hostname: `https://${process.env.DOCS_HOSTNAME}`,
         },
+        'check-md': true,
+        'code-switcher': true,
+        '@dovyp/vuepress-plugin-clipboard-copy': true,
         '@limdongjin/vuepress-plugin-simple-seo': {
             default_image: '/img/social-image.png',
             root_url: `https://${process.env.DOCS_HOSTNAME}`,
             default_site_name: 'Chainstack documentation'
         },
-        'check-md': {},
-        '@dovyp/vuepress-plugin-clipboard-copy': true,
-        'code-switcher': true
     }
 }
