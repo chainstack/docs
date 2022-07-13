@@ -422,7 +422,8 @@ module.exports = {
         sidebarDepth: 2,
         algolia: {
             apiKey: `${process.env.ALGOLIA_KEY}`,
-            indexName: 'chainstack'
+            indexName: 'chainstack',
+            appId: 'XNMMO9QAGN'
         },
         docsRepo: 'chainstack/docs',
         docsDir: 'docs',
