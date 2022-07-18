@@ -98,6 +98,7 @@ module.exports = {
                             '/operations/polygon/types',
                             '/operations/polygon/modes',
                             '/operations/polygon/warp-transactions',
+                            '/operations/polygon/debug-and-trace-apis',
                             '/operations/polygon/tools',
                         ]
                     },
@@ -110,6 +111,8 @@ module.exports = {
                             '/operations/bsc/types',
                             '/operations/bsc/modes',
                             '/operations/bsc/warp-transactions',
+                            '/operations/bsc/debug-and-trace-apis',
+                            '/operations/bsc/clients',
                             '/operations/bsc/tools',
                         ]
                     },
@@ -121,6 +124,7 @@ module.exports = {
                             '/operations/avalanche/networks',
                             '/operations/avalanche/types',
                             '/operations/avalanche/modes',
+                            '/operations/avalanche/debug-and-trace-apis',
                             '/operations/avalanche/tools',
                         ]
                     },
@@ -132,6 +136,7 @@ module.exports = {
                             '/operations/fantom/networks',
                             '/operations/fantom/types',
                             '/operations/fantom/modes',
+                            '/operations/fantom/debug-and-trace-apis',
                             '/operations/fantom/tools',
                         ]
                     },
@@ -153,6 +158,7 @@ module.exports = {
                             '/operations/harmony/networks',
                             '/operations/harmony/types',
                             '/operations/harmony/modes',
+                            '/operations/harmony/debug-and-trace-apis',
                             '/operations/harmony/tools',
                         ]
                     },
