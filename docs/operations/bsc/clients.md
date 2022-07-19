@@ -10,8 +10,8 @@ meta:
 
 Chainstack supports deploying BNB Smart Chain nodes in the following client implementations:
 
-* Geth — dedicated BNB Smart Chain full nodes are deployed as the [Go Ethereum](https://github.com/ethereum/go-ethereum) implementation.
-* Erigon — elastic and dedicated BNB Smart Chain archive nodes are deployed the [Erigon](https://github.com/ledgerwatch/erigon) implementation.
+* Geth — elastic and dedicated BNB Smart Chain full nodes are deployed as the [Go Ethereum](https://github.com/bnb-chain/bsc) implementation.
+* Erigon — elastic and dedicated BNB Smart Chain archive nodes are deployed as the [Erigon](https://github.com/ledgerwatch/erigon) implementation.
 
 The key differences are in size and the RPC methods available:
 
