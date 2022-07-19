@@ -8,13 +8,13 @@ meta:
 
 # Debug and trace APIs
 
-A dedicated Harmony full or archive node has the `debug_*` API methods enabled. For the full list of the available debug and trace API methods, see [Debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug).
+A dedicated Harmony node has the `debug_*` API methods enabled. For the full list of the available debug and trace API methods, see [Debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug).
 
 ## Usage examples
 
 You can debug and trace transactions on Harmony by replaying them in the Ethereum Virtual Machine to get the execution details in the exact same way as they happened on the chain.
 
-Note that to debug and trace transactions, you need to have historical states on the node. Harmony full nodes keep historical states for the immediately previous 128 blocks. Harmony archive nodes keep historical states for the entire chain.
+Note that to debug and trace transactions, you need to have historical states on the node. Harmony full nodes keep historical states for the immediately previous 128 blocks.
 
 ### debug_traceBlockByNumber
 
@@ -43,6 +43,5 @@ curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlo
 * [Geth: debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug)
 * [Modes](/operations/harmony/modes)
 * <a href="https://support.chainstack.com/hc/en-us/articles/900003400806-Tracing-EVM-transactions" target="_blank">Tracing EVM transactions</a>
-* <a href="https://chainstack.com/evm-nodes-a-dive-into-the-full-vs-archive-mode/" target="_blank">EVM nodes: A dive into the full vs. archive mode </a>
 
 :::
