@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Deploy blockchain nodes and networks in minutes.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin deploy binance polygon matic avax avalanche fantom ftm tezos xtz solana, harmony
+    content: corda hyperledger quorum multichain ethereum bitcoin deploy binance polygon matic avax avalanche fantom ftm tezos xtz solana harmony near
 ---
 
 # Supported protocols
@@ -24,6 +24,9 @@ Public network:
 * [Avalanche](/blockchains/avalanche)
 	* Mainnet. [Full and archive nodes](/operations/avalanche/modes).
 	* Fuji testnet
+* [NEAR](/blockchains/near)
+	* Mainnet. [Full and archive nodes](/operations/near/modes).
+	* Testnet
 * [Fantom](/blockchains/fantom)
 	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
 	* Testnet
