@@ -129,6 +129,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'NEAR',
+                        collapsable: true,
+                        children: [
+                            '/operations/near/',
+                            '/operations/near/networks',
+                            '/operations/near/types',
+                            '/operations/near/modes',
+                            '/operations/near/tools',
+                        ]
+                    },
+                    {
                         title: 'Fantom',
                         collapsable: true,
                         children: [
@@ -284,6 +295,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'NEAR',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/near/',
+                            '/tutorials/near/creating-and-upgrading-a-simple-message-contract',
+                        ]
+                    },
+                    {
                         title: 'Fantom',
                         collapsable: true,
                         children: [
@@ -377,6 +396,7 @@ module.exports = {
                     '/blockchains/polygon',
                     '/blockchains/bsc',
                     '/blockchains/avalanche',
+                    '/blockchains/near',
                     '/blockchains/fantom',
                     '/blockchains/solana',
                     '/blockchains/harmony',
