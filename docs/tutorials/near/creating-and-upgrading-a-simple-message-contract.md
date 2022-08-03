@@ -55,6 +55,29 @@ See [Join a public network](/platform/join-a-public-network).
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
+TTK ### Set up the NEAR CLI with the Chainstack node
+
+In your project directory, run:
+
+``` sh
+near set-api-key ENDPOINT KEY
+```
+
+where
+
+* ENDPOINT — your node HTTPS endpoint.
+* KEY — your node HTTPS endpoint key.
+
+See [View node access and credentials](/platform/view-node-access-and-credentials).
+
+Example to set the HTTPS endpoint `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d` with the NEAR CLI:
+
+``` sh
+near set-api-key https://nd-123-456-789.p2pify.com 3c6e0b8a9c15224a8228b9a98ca1531d
+```
+
+You are now on the testnet, interacting with the network through your Chainstack node.
+
 ### Create an account on the NEAR testnet
 
 1. Go to the [NEAR testnet wallet](https://wallet.testnet.near.org).
