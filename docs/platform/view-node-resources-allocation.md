@@ -69,6 +69,10 @@ Tezos:
 
 * Node — the CPU, memory, and storage allocated to your Tezos node.
 
+Fuse:
+
+* Node — the CPU, memory, and storage allocated to your Fuse node.
+
 Bitcoin:
 
 * Node — the CPU, memory, and storage allocated to your Bitcoin node.

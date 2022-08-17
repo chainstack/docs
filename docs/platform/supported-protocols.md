@@ -45,6 +45,9 @@ Public network:
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
 	* Ithacanet testnet.
+* [Fuse](/blockchains/fuse)
+	* Mainnet. [Full and archive nodes](/operations/fuse/modes).
+	* Spark testnet.
 * [Bitcoin](/blockchains/bitcoin)
 	* Mainnet
 	* Testnet
