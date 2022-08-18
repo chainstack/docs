@@ -8,6 +8,14 @@ meta:
 
 # Release notes
 
+## Chainstack 3.1
+
+*August 17, 2022*
+
+### What’s new
+
+* **Protocols**. [NEAR](/operations/near/networks) support. 
+
 ## Chainstack 3.0
 
 *July 7, 2022*
