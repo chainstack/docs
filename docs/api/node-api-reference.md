@@ -319,7 +319,7 @@ puts response
 ``` sh
 curl -X POST 'CHAINSTACK_NODE_URL' \
   -H "Content-Type: application/json" \
-  --data '{"method":"eth_estimateGas","params":[{"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8","value":"0x1BC16D674EC800000"}],"id":1,"jsonrpc":"2.0"}'
+  --data '{"method":"eth_estimateGas","params":[{"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8"}, "0xEA8DC5"],"id":1,"jsonrpc":"2.0"}'
 ```
 
 </template>
