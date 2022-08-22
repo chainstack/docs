@@ -297,7 +297,7 @@ web3.eth.estimateGas({
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0x90335eE2286315185a0ff7108B5f7809ce6332F9"}, "latest" ))  
