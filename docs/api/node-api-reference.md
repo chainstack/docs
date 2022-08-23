@@ -355,7 +355,7 @@ web3.eth.getGasPrice((err, gasPrice) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.gas_price) 
@@ -419,7 +419,7 @@ web3.eth.getBalance('0x9D00f1630b5B18a74231477B7d7244f47138ab47', "latest", (err
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 balance = web3.eth.get_balance("0x9D00f1630b5B18a74231477B7d7244f47138ab47", "latest") 
@@ -498,7 +498,7 @@ web3.eth.getBlock('0xaafff6dbabc20c5c2d58f5a8f336575f22681fd23a9e53bf81e69d8130a
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_block('0xaafff6dbabc20c5c2d58f5a8f336575f22681fd23a9e53bf81e69d8130a29b9c', False)) 
@@ -581,7 +581,7 @@ web3.eth.getBlock('latest', 'False', (err, block) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_block('latest', False))
@@ -639,7 +639,7 @@ web3.eth.getBlockTransactionCount('0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_block_transaction_count('0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86f4c0c74239e6ae20d9446'))
@@ -702,7 +702,7 @@ web3.eth.getBlockTransactionCount(14897720, (err, block) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print (web3.eth.get_block_transaction_count(14897720)) # A hex value starting with "0x" is accepted as well.
@@ -768,7 +768,7 @@ web3.eth.getCode('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', "latest", (err, b
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 code = web3.eth.get_code("0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984", "latest") 
@@ -836,7 +836,7 @@ Polling method for a filter, which returns an array of logs which occurred since
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 
@@ -918,7 +918,7 @@ web3.eth.getPastLogs('0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', (err, logs) =
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_logs({'address': '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'})) 
@@ -987,7 +987,7 @@ web3.eth.getStorageAt('0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64', 0, 7500943).
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 storage = web3.eth.get_storage_at("0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64", 0, 7500943)
@@ -1069,7 +1069,7 @@ web3.eth.getTransactionFromBlock('0xc05b2e16a1643d0aa15d098a408b28aa9109322087d2
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_by_block('0xc05b2e16a1643d0aa15d098a408b28aa9109322087d2f2730bb2a8fa6bb699b0', 207))
@@ -1151,7 +1151,7 @@ web3.eth.getTransactionFromBlock(14806883, 214, (err, block) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_by_block(14806883, 214)) # Hex encoded parameters starting with "0x" are accepted as well.
@@ -1227,7 +1227,7 @@ web3.eth.getTransaction('0xf915903ecc67ab20a5162ae13eec36e3a68ca558765ada1779847
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction('0xf915903ecc67ab20a5162ae13eec36e3a68ca558765ada1779847e0a0c35479c')) 
@@ -1291,7 +1291,7 @@ web3.eth.getTransactionCount('0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C', 'late
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.getTransactionCount('0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C', 'latest')) 
@@ -1368,7 +1368,7 @@ web3.eth.getTransactionReceipt('0xa43e601a9b6c2daefab83c5e3521ba7764e31481079ca3
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_receipt('0xa43e601a9b6c2daefab83c5e3521ba7764e31481079ca356ad8949f9daf0259f'))  
@@ -1426,7 +1426,7 @@ web3.eth.getBlockUncleCount('0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a0
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_uncle_count('0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a033b023d7367b845'))   
@@ -1508,7 +1508,7 @@ web3.eth.getUncle('12911679', 0, (err, uncle) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_uncle_by_block('0xDB60', 0))    
@@ -1565,7 +1565,7 @@ web3.eth.isMining()
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.mining)  
@@ -1620,7 +1620,7 @@ Creates a filter object to notify the arrival of a new block. To check if the st
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 newBlockFilterId = web3.eth.filter('latest') 
 print(newBlockFilterId)   
@@ -1682,7 +1682,7 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 newBlockFilterId = web3.eth.filter('latest') 
 newFilterId = web3.eth.filter({
@@ -1745,7 +1745,7 @@ Creates a filter object to notify when new pending transactions are detected. To
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 newFilterId = web3.eth.filter('pending') 
 print(newFilterId) 
@@ -1847,7 +1847,7 @@ web3.eth.getTransactionCount(sender, (err, transactionCount) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 
 # Logic of this code:
@@ -1946,7 +1946,7 @@ web3.eth.isSyncing((err, sync) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 print (web3.eth.syncing)  
 ```
