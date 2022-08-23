@@ -88,7 +88,7 @@ See [View node access and credentials](/platform/view-node-access-and-credential
 For example, trace all smart contract interactions in [block 14976695](https://etherscan.io/txsInternal?block=14976695):
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "trace_transaction", "params": ["0x4fb839363cb2d823b889386314ae3940378f3b4566112709259f9cc986e4493d"]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "trace_block", "params": ["14976695"]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
 ```
 
 See a reverted transaction in the output:
