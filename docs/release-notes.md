@@ -8,6 +8,15 @@ meta:
 
 # Release notes
 
+## Chainstack 3.2
+
+*August 23, 2022*
+
+### What’s new
+
+* **Protocols**. [Gnosis Chain](/operations/gnosis/networks) support.
+* **Documentation**. Gnosis Chain [operations](/operations/gnosis), [simple soulbound token tutorial](/tutorials/gnosis/simple-soulbound-token-with-remix-and-openzeppelin).
+
 ## Chainstack 3.1
 
 *August 17, 2022*
