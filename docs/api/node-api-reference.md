@@ -309,7 +309,7 @@ print(web3.eth.estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
 ``` rb
 require 'eth'
 client = Eth::Client.create 'CHAINSTACK_NODE_URL'
-response = response = client.eth_estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8"}, "latest")
+response = client.eth_estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8"}, "latest")
 puts response
 ```
 
