@@ -41,6 +41,10 @@ Avalanche:
 
 * Node — the CPU, memory, and storage allocated to your Avalanche node.
 
+NEAR:
+
+* Node — the CPU, memory, and storage allocated to your NEAR node.
+
 Fantom:
 
 * Node — the CPU, memory, and storage allocated to your Fantom node.
@@ -49,13 +53,17 @@ Solana:
 
 * Node — the CPU, memory, and storage allocated to your Solana node.
 
-Harmony:
+Gnosis Chain:
 
-* Node — the CPU, memory, and storage allocated to your Harmony node.
+* Node — the CPU, memory, and storage allocated to your Gnosis Chain node.
 
 StarkNet:
 
 * Node — the CPU, memory, and storage allocated to your StarkNet node.
+
+Harmony:
+
+* Node — the CPU, memory, and storage allocated to your Harmony node.
 
 Tezos:
 

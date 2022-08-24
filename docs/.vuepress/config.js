@@ -140,6 +140,28 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Solana',
+                        collapsable: true,
+                        children: [
+                            '/operations/solana/',
+                            '/operations/solana/networks',
+                            '/operations/solana/types',
+                            '/operations/solana/tools',
+                        ]
+                    },
+                    {
+                        title: 'Gnosis Chain',
+                        collapsable: true,
+                        children: [
+                            '/operations/gnosis/',
+                            '/operations/gnosis/networks',
+                            '/operations/gnosis/types',
+                            '/operations/gnosis/modes',
+                            '/operations/gnosis/debug-and-trace-apis',
+                            '/operations/gnosis/tools',
+                        ]
+                    },
+                    {
                         title: 'Fantom',
                         collapsable: true,
                         children: [
@@ -152,13 +174,13 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Solana',
+                        title: 'StarkNet',
                         collapsable: true,
                         children: [
-                            '/operations/solana/',
-                            '/operations/solana/networks',
-                            '/operations/solana/types',
-                            '/operations/solana/tools',
+                            '/operations/starknet/',
+                            '/operations/starknet/networks',
+                            '/operations/starknet/types',
+                            '/operations/starknet/tools',
                         ]
                     },
                     {
@@ -171,16 +193,6 @@ module.exports = {
                             '/operations/harmony/modes',
                             '/operations/harmony/debug-and-trace-apis',
                             '/operations/harmony/tools',
-                        ]
-                    },
-                    {
-                        title: 'StarkNet',
-                        collapsable: true,
-                        children: [
-                            '/operations/starknet/',
-                            '/operations/starknet/networks',
-                            '/operations/starknet/types',
-                            '/operations/starknet/tools',
                         ]
                     },
                     {
@@ -303,14 +315,6 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Fantom',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/fantom/',
-                            '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
-                        ]
-                    },
-                    {
                         title: 'Solana',
                         collapsable: true,
                         children: [
@@ -319,11 +323,19 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Harmony',
+                        title: 'Gnosis Chain',
                         collapsable: true,
                         children: [
-                            '/tutorials/harmony/',
-                            '/tutorials/harmony/simple-metaverse-contract-with-foundry',
+                            '/tutorials/gnosis/',
+                            '/tutorials/gnosis/simple-soulbound-token-with-remix-and-openzeppelin',
+                        ]
+                    },
+                    {
+                        title: 'Fantom',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/fantom/',
+                            '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
                         ]
                     },
                     {
@@ -332,6 +344,14 @@ module.exports = {
                         children: [
                             '/tutorials/starknet/',
                             '/tutorials/starknet/nft-contract-with-nile-and-l1-l2-reputation-messaging',
+                        ]
+                    },
+                    {
+                        title: 'Harmony',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/harmony/',
+                            '/tutorials/harmony/simple-metaverse-contract-with-foundry',
                         ]
                     },
                     {
@@ -397,10 +417,11 @@ module.exports = {
                     '/blockchains/bsc',
                     '/blockchains/avalanche',
                     '/blockchains/near',
-                    '/blockchains/fantom',
                     '/blockchains/solana',
-                    '/blockchains/harmony',
+                    '/blockchains/gnosis',
+                    '/blockchains/fantom',
                     '/blockchains/starknet',
+                    '/blockchains/harmony',
                     '/blockchains/tezos',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',

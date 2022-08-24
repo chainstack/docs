@@ -27,18 +27,21 @@ Public network:
 * [NEAR](/blockchains/near)
 	* Mainnet. [Full and archive nodes](/operations/near/modes).
 	* Testnet
-* [Fantom](/blockchains/fantom)
-	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
-	* Testnet
 * [Solana](/blockchains/solana)
 	* Mainnet
 	* Devnet
-* [Harmony](/blockchains/harmony)
-	* Mainnet
-	* Devnet
+* [Gnosis Chain](/blockchains/gnosis)
+	* Mainnet. [Full and archive nodes](/operations/gnosis/modes).
+	* Sokol testnet
+* [Fantom](/blockchains/fantom)
+	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
+	* Testnet
 * [StarkNet](/blockchains/starknet)
 	* Mainnet
 	* Testnet
+* [Harmony](/blockchains/harmony)
+	* Mainnet
+	* Devnet
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
 	* Ithacanet testnet.
