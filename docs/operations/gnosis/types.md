@@ -1,14 +1,14 @@
 ---
 meta:
   - name: description
-    content: Learn the difference between an elastic and a dedicated Gnosis node deployed with the Chainstack managed blockchain services.
+    content: Learn the difference between an elastic and a dedicated Gnosis Chain node deployed with the Chainstack managed blockchain services.
   - name: keywords
     content: gnosis xdai node elastic dedicated blockchain
 ---
 
 # Types
 
-Chainstack supports deploying a Gnosis node of the following types:
+Chainstack supports deploying a Gnosis Chain node of the following types:
 
 * Elastic — a highly scalable public network node infrastructure accessed through your exclusive endpoint.
 * Dedicated — a dedicated node that is exclusive to you.

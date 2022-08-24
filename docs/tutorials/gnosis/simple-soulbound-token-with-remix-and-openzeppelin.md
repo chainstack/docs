@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Learn how to develop and deploy a simple soulbound contract and issue soulbound tokens on Gnosis.
+    content: Learn how to develop and deploy a simple soulbound contract and issue soulbound tokens on Gnosis Chain.
   - name: keywords
     content: tutorial gnosis xdai soulbound remix openzeppelin nft
 ---
@@ -13,25 +13,25 @@ Soulbound tokens, [originally proposed by Vitalik Buterin](https://vitalik.ca/ge
 In this tutorial, you will:
 
 * Create an ERC-721 contract that has a transfer override to make the token soulbound.
-* Deploy the contract on the Gnosis mainnet through a node deployed with Chainstack.
+* Deploy the contract on the Gnosis Chain mainnet through a node deployed with Chainstack.
 * Interact with the deployed contract.
 
 ## Prerequisites
 
-* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Gnosis node.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Gnosis Chain node.
 * [Remix IDE](https://remix.ethereum.org/) to compile the contract and deploy through MetaMask.
 * [MetaMask](https://metamask.io/) to deploy the contract through your Chainstack node and interact with the contract.
 
 ## Overview
 
-To get from zero to a deployed soulbound token contract on the Gnosis mainnet, do the following:
+To get from zero to a deployed soulbound token contract on the Gnosis Chain mainnet, do the following:
 
 1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
-1. With Chainstack, join the Gnosis.
-1. With Chainstack, access your Gnosis node credentials.
+1. With Chainstack, join Gnosis Chain.
+1. With Chainstack, access your Gnosis Chain node credentials.
 1. Set up your MetaMask to work through a Chainstack node.
 1. With Remix IDE, create and compile the soulbound contract.
-1. With Remix IDE, deploy the contract on the Gnosis mainnet.
+1. With Remix IDE, deploy the contract on the Gnosis Chain mainnet.
 1. Issue a soulbound token and burn it.
 
 ## Step-by-step
@@ -40,17 +40,17 @@ To get from zero to a deployed soulbound token contract on the Gnosis mainnet, d
 
 See [Create a project](/platform/create-a-project).
 
-### Join the Gnosis mainnet
+### Join the Gnosis Chain mainnet
 
 See [Join a public network](/platform/join-a-public-network).
 
-### Get your Gnosis node access and credentials
+### Get your Gnosis Chain node access and credentials
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 ### Set up MetaMask
 
-See [Gnosis tools: MetaMask](/operations/gnosis/tools).
+See [Gnosis Chain tools: MetaMask](/operations/gnosis/tools).
 
 ### Create and compile the soulbound contract
 
@@ -122,11 +122,11 @@ On the left pane:
 1. In contract, select **contracts/soulbound.sol**.
 1. Click **Deploy**.
 
-This will engage your MetaMask to deploy the contract to the Gnosis mainnet through your currently selected MetaMask account. Click **Confirm** in the MetaMask modal.
+This will engage your MetaMask to deploy the contract to the Gnosis Chain mainnet through your currently selected MetaMask account. Click **Confirm** in the MetaMask modal.
 
 ## Interact with the contract
 
-Once your contract is deployed, you can view it online at [Blockscout Gnosis mainnet explorer](https://blockscout.com/xdai/mainnet).
+Once your contract is deployed, you can view it online at [Blockscout Gnosis Chain mainnet explorer](https://blockscout.com/xdai/mainnet).
 
 You are now going to verify the contract in the Blockscout explorer to be able to use the explorer as a web app and easily interact with the contract online.
 
@@ -141,7 +141,7 @@ The flattened contract is now in your clipboard.
 
 ### Verify the deployed contract on Blockscout
 
-1. Go to [Blockscout Gnosis mainnet explorer](https://blockscout.com/xdai/mainnet).
+1. Go to [Blockscout Gnosis Chain mainnet explorer](https://blockscout.com/xdai/mainnet).
 1. Find your deployed contract. The address of your contract on the left pane of Remix IDE under **Deployed Contracts**.
 1. On the contract page on Blockscout, click **Code** > **Verify & Publish**.
 1. Select **Via flattened source code**.
@@ -181,12 +181,12 @@ This will send the soulbound token from the current owner to the address `0x0000
 
 ## Conclusion
 
-This tutorial guided you through the basics of creating and deploying a simple soulbound contract on the Gnosis mainnet through your Chainstack-deployed node.
+This tutorial guided you through the basics of creating and deploying a simple soulbound contract on the Gnosis Chain mainnet through your Chainstack-deployed node.
 
-You have also interacted with the contract, issued, and burned the token using Blockscout as a web app and MetaMask as your interaction tool that works through your Chainstack-deployed Gnosis node.
+You have also interacted with the contract, issued, and burned the token using Blockscout as a web app and MetaMask as your interaction tool that works through your Chainstack-deployed Gnosis Chain node.
 
 ::: tip See also
 
-* [Operations: Gnosis](/operations/gnosis/)
+* [Operations: Gnosis Chain](/operations/gnosis/)
 
 :::
