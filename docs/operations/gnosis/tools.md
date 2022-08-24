@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Gnosis node, deploy smart contracts through your node, and develop dapps.
+    content: Learn how to interact with your Gnosis Chain node, deploy smart contracts through your node, and develop dapps.
   - name: keywords
     content: gnosis web3 dapp nethermind xdai tooling
 ---
@@ -12,7 +12,7 @@ meta:
 
 ### MetaMask
 
-You can set your [MetaMask](https://metamask.io/) to interact through your Gnosis nodes deployed with Chainstack.
+You can set your [MetaMask](https://metamask.io/) to interact through your Gnosis Chain nodes deployed with Chainstack.
 
 1. Open your MetaMask and click the network selector.
 1. In the network selector, click **Custom RPC**.
@@ -50,7 +50,7 @@ See also [View node access and credentials](/platform/view-node-access-and-crede
 
 ### Truffle
 
-Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Gnosis nodes.
+Configure [Truffle Suite](https://truffleframework.com) to deploy contracts to your Gnosis Chain nodes.
 
 1. Install [Truffle Suite](https://truffleframework.com), [HD Wallet-enabled Web3 provider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider), and create a project.
 
@@ -97,7 +97,7 @@ module.exports = {
 
 ### Hardhat
 
-Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Gnosis nodes.
+Configure [Hardhat](https://hardhat.org/) to deploy contracts and interact through your Gnosis Chain nodes.
 
 1. Install [Hardhat](https://hardhat.org/) and create a project.
 
@@ -167,7 +167,7 @@ module.exports = {
 
 ### web3.js
 
-Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Gnosis nodes deployed with Chainstack.
+Build DApps using [web3.js](https://github.com/ethereum/web3.js/) and Gnosis Chain nodes deployed with Chainstack.
 
 #### HTTP
 
@@ -254,7 +254,7 @@ web3.eth.getBlockNumber().then(console.log);
 
 ### web3.py
 
-Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Gnosis nodes deployed with Chainstack.
+Build DApps using [web3.py](https://github.com/ethereum/web3.py) and Gnosis Chain nodes deployed with Chainstack.
 
 1. Install [web3.py](https://web3py.readthedocs.io/).
 1. Connect over HTTP or WebSocket. See also <a href="https://support.chainstack.com/hc/en-us/articles/900002187586-Ethereum-node-connection-HTTP-vs-WebSocket" target="_blank">EVM node connection: HTTP vs WebSocket</a>.
@@ -379,7 +379,7 @@ See also <a href="https://support.chainstack.com/hc/en-us/articles/900001918763-
 
 ### web3.php
 
-Build DApps using [web3.php](https://github.com/web3p/web3.php) and Gnosis nodes deployed with Chainstack.
+Build DApps using [web3.php](https://github.com/web3p/web3.php) and Gnosis Chain nodes deployed with Chainstack.
 
 1. Install [web3.php](https://github.com/web3p/web3.php).
 2. Connect over HTTP:
@@ -452,7 +452,7 @@ $eth->blockNumber(function ($err, $data) {
 
 ### ethers.js
 
-Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Gnosis nodes deployed with Chainstack.
+Build DApps using [ethers.js](https://github.com/ethers-io/ethers.js/) and Gnosis Chain nodes deployed with Chainstack.
 
 1. Install [ethers.js](https://www.npmjs.com/package/ethers).
 1. Connect over HTTP or WebSocket.
@@ -495,7 +495,7 @@ where
 * ENDPOINT — your node HTTPS endpoint.
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
-* NETWORK_ID — Gnosis network ID:
+* NETWORK_ID — Gnosis Chain network ID:
   * Mainnet: `100`
   * Sokol testnet: `77`
 
@@ -547,7 +547,7 @@ const provider = new ethers.providers.WebSocketProvider('ENDPOINT', NETWORK_ID);
 where
 
 * ENDPOINT — your node WSS endpoint.
-* NETWORK_ID — Gnosis network ID:
+* NETWORK_ID — Gnosis Chain network ID:
   * Mainnet: `100`
   * Sokol testnet: `77`
 
@@ -592,11 +592,11 @@ where
 * ID — any name that you will use as the network tag to run a deployment. For example, `chainstack-mainnet`.
 * NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
 * ENDPOINT — your node HTTPS or WSS endpoint.
-* NETWORK_ID — Gnosis network ID:
+* NETWORK_ID — Gnosis Chain network ID:
   * Mainnet: `100`
   * Sokol testnet: `77`
 
-Example to add a Gnosis mainnet node to the list of Brownie networks:
+Example to add a Gnosis Chain mainnet node to the list of Brownie networks:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
