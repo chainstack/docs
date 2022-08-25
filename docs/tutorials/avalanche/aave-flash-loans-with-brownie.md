@@ -175,17 +175,30 @@ This will send 1 AVAX from your account to the [wrapped AVAX contract](https://t
 
 ### Deploy the flash loan contract
 
-You will now deploy your flash loan contract that is configured to borrow 1 wrapped AVAX from the Aave lending pool and pay it back with a loan fee.
+The flash loan contract is pre-configured to borrow 1 wrapped AVAX from the Aave lending pool and pay it back with a loan fee. However, for this tutorial on the Fuji testnet, you will need to lower that amount since the Aave contract does not allow you to borrow that much in this case. 
 
 The contract that you will deploy is `aave-flashloan/contracts/v2/FlashloanV2.sol`.
 
-The 1 wrapped AVAX loan value is set in the contract code:
+The 1 wrapped AVAX loan value is set in the contract with the following code:
 
 ``` sol
 ...
 function flashloan(address _asset) public onlyOwner {
         bytes memory data = "";
         uint amount = 1 ether;
+...
+```
+
+We recommend lowering the amount to 0.01 or lower. However, remember that you will need to [convert it to Wei](https://eth-converter.com/) since Solidity does not work with decimals.
+
+``` sol
+
+// Flash loan 10000000000000000 wei (0.01) worth of `_asset`
+
+...
+function flashloan(address _asset) public onlyOwner {
+        bytes memory data = "";
+        uint amount = 10000000000000000;
 ...
 ```
 
