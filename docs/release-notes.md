@@ -8,6 +8,19 @@ meta:
 
 # Release notes
 
+## Chainstack 3.3
+
+*August 29, 2022*
+
+### What’s new
+
+* **Protocols**. [Fuse](/operations/fuse/networks) support.
+* **Documentation**. Fuse [operations](/operations/fuse), [simple multisig contract with hardhat](/tutorials/fuse/simple-multisig-contract-with-hardhat).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 3.2
 
 *August 23, 2022*
