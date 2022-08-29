@@ -207,6 +207,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Fuse',
+                        collapsable: true,
+                        children: [
+                            '/operations/fuse/',
+                            '/operations/fuse/networks',
+                            '/operations/fuse/types',
+                            '/operations/fuse/modes',
+                            '/operations/fuse/tools',
+                        ]
+                    },
+                    {
                         title: 'Bitcoin',
                         collapsable: true,
                         children: [
@@ -362,6 +373,14 @@ module.exports = {
                             '/tutorials/tezos/simple-fund-contract-in-ligo',
                         ]
                     },
+                     {
+                        title: 'Fuse',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/fuse/',
+                            '/tutorials/fuse/simple-multisig-contract-with-hardhat',
+                        ]
+                    },
                     {
                         title: 'Hyperledger Fabric',
                         collapsable: true,
@@ -423,6 +442,7 @@ module.exports = {
                     '/blockchains/starknet',
                     '/blockchains/harmony',
                     '/blockchains/tezos',
+                    '/blockchains/fuse',
                     '/blockchains/bitcoin',
                     '/blockchains/fabric',
                     '/blockchains/corda',
