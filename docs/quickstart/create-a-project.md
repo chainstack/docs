@@ -27,6 +27,7 @@ To create a project:
      * [StarkNet](/blockchains/starknet)
      * [Harmony](/blockchains/harmony)
      * [Tezos](/blockchains/tezos)
+     * [Fuse](/blockchains/fuse)
      * [Bitcoin](/blockchains/bitcoin)
      * [Corda](/blockchains/corda)
    * Select **Consortium** to deploy:

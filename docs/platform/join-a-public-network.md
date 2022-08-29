@@ -161,6 +161,19 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
+## Join a Fuse network
+
+1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
+1. Under **Blockchain protocol**, select **Fuse**.
+1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
+1. Under **Type**, select whether to run an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
+1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/fuse/modes).
+1. Under **Cloud provider**, select a cloud provider and a region.
+1. Provide a node name. Click **Next**.
+1. Review your changes and click **Join network**.
+
+The node status will change from **Pending** to **Running** once deployed.
+
 ## Join a Bitcoin network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
@@ -203,6 +216,7 @@ The node status will change from **Pending** to **Running** once deployed.
 * [Operations: StarkNet](/operations/starknet/)
 * [Operations: Harmony](/operations/harmony/)
 * [Operations: Tezos](/operations/tezos/)
+* [Operations: Fuse](/operations/fuse/)
 * [Operations: Bitcoin](/operations/bitcoin/)
 * [Operations: Corda](/operations/corda/)
 * [Manage your organization identities](/platform/manage-your-organization-identities)
