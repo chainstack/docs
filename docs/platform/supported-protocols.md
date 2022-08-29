@@ -30,7 +30,7 @@ Public network:
 * [Solana](/blockchains/solana)
 	* Mainnet
 	* Devnet
-* [Gnosis](/blockchains/gnosis)
+* [Gnosis Chain](/blockchains/gnosis)
 	* Mainnet. [Full and archive nodes](/operations/gnosis/modes).
 	* Sokol testnet
 * [Fantom](/blockchains/fantom)

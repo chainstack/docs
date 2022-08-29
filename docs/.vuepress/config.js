@@ -150,7 +150,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Gnosis',
+                        title: 'Gnosis Chain',
                         collapsable: true,
                         children: [
                             '/operations/gnosis/',
@@ -334,7 +334,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Gnosis',
+                        title: 'Gnosis Chain',
                         collapsable: true,
                         children: [
                             '/tutorials/gnosis/',

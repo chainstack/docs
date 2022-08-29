@@ -53,9 +53,9 @@ Solana:
 
 * Node — the CPU, memory, and storage allocated to your Solana node.
 
-Gnosis:
+Gnosis Chain:
 
-* Node — the CPU, memory, and storage allocated to your Gnosis node.
+* Node — the CPU, memory, and storage allocated to your Gnosis Chain node.
 
 StarkNet:
 

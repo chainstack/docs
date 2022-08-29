@@ -1,20 +1,20 @@
 ---
 meta:
   - name: description
-    content: Learn what the debug and trace APIs are and how to trace transactions on Gnosis.
+    content: Learn what the debug and trace APIs are and how to trace transactions on Gnosis Chain.
   - name: keywords
     content: gnosis xdai debug trace namespace transaction api nethermind
 ---
 
 # Debug and trace APIs
 
-A dedicated Gnosis full or archive node has the `debug_*` and `trace_*` API methods enabled. For the full list of the available debug and trace API methods, see [Nethermind documentation](https://docs.nethermind.io/nethermind/ethereum-client/json-rpc).
+A dedicated Gnosis Chain full or archive node has the `debug_*` and `trace_*` API methods enabled. For the full list of the available debug and trace API methods, see [Nethermind documentation](https://docs.nethermind.io/nethermind/ethereum-client/json-rpc).
 
 ## Usage examples
 
 You can debug and trace transactions by replaying them in the Ethereum Virtual Machine to get the execution details in the exact same way as they happened on the chain.
 
-Note that to debug and trace transactions, you need to have historical states on the node. Gnosis full nodes keep historical states for about 10 hours worth of immediately previous blocks. Gnosis archive nodes keep historical states for the entire chain. See also [Gnosis modes](/operations/gnosis/modes).
+Note that to debug and trace transactions, you need to have historical states on the node. Gnosis Chain full nodes keep historical states for about 10 hours worth of immediately previous blocks. Gnosis archive nodes keep historical states for the entire chain. See also [Gnosis Chain modes](/operations/gnosis/modes).
 
 ### debug_traceBlockByNumber
 
