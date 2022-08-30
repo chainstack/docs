@@ -55,7 +55,7 @@ See [Installing Brownie](https://eth-brownie.readthedocs.io/en/stable/install.ht
 
 ### Point Brownie to your Avalanche node
 
-See [Avalanche tools: Brownie](https://docs.chainstack.com/operations/avalanche/tools#brownie).
+See [Avalanche tools: Brownie](/operations/avalanche/tools#brownie).
 
 ### Scaffold an Aave flash loan project
 
@@ -110,7 +110,7 @@ In your baked `aave-flashloan` project directory, open for editing `brownie-conf
 
 In `brownie-config.yaml`, under `networks`, append the networks with the Brownie Avalanche network ID and Aave Avalanche Fuji testnet addresses:
 
-* Brownie Avalanche network ID — the same Brownie network ID you assigned when pointing Brownie to your Avalanche node. See also [Avalanche tools: Brownie](https://docs.chainstack.com/operations/avalanche/tools#brownie).
+* Brownie Avalanche network ID — the same Brownie network ID you assigned when pointing Brownie to your Avalanche node. See also [Avalanche tools: Brownie](/operations/avalanche/tools#brownie).
 * `aave_lending_pool_v2` — the Aave LendingPoolAddressesProvider on the Avalanche Fuji testnet. See also Aave Developers: [Avalanche market](https://docs.aave.com/developers/v/2.0/deployed-contracts/avalanche-market).
 * `weth` — the wrapped AVAX contract used by Aave on the Avalanche Fuji testnet. See also Aave Developers: [Avalanche market](https://docs.aave.com/developers/v/2.0/deployed-contracts/avalanche-market).
 
