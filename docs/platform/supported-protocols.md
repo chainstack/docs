@@ -24,6 +24,9 @@ Public network:
 * [Avalanche](/blockchains/avalanche)
 	* Mainnet. [Full and archive nodes](/operations/avalanche/modes).
 	* Fuji testnet
+* [Arbitrum](/blockchains/arbitrum)
+	* Arbitrum One mainnet. [Full and archive nodes](/operations/arbitrum/modes).
+	* Arbitrum Goerlu testnet
 * [NEAR](/blockchains/near)
 	* Mainnet. [Full and archive nodes](/operations/near/modes).
 	* Testnet
