@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to interact with your Arbitrum node, deploy smart contracts through your node, and develop dapps.
   - name: keywords
-    content: arbitrum web3 dapp geth ntitro one tooling
+    content: arbitrum web3 dapp geth nitro one tooling
 ---
 
 # Tools
