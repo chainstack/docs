@@ -12,7 +12,7 @@ meta:
 
 ### MetaMask
 
-You can set your [MetaMask](https://metamask.io/) to interact through your Abitrum nodes deployed with Chainstack.
+You can set your [MetaMask](https://metamask.io/) to interact through your Arbitrum nodes deployed with Chainstack.
 
 1. Open your MetaMask and click the network selector.
 1. In the network selector, click **Custom RPC**.
