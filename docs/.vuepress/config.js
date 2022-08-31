@@ -129,6 +129,18 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Arbitrum',
+                        collapsable: true,
+                        children: [
+                            '/operations/arbitrum/',
+                            '/operations/arbitrum/networks',
+                            '/operations/arbitrum/types',
+                            '/operations/arbitrum/modes',
+                            '/operations/arbitrum/debug-and-trace-apis',
+                            '/operations/arbitrum/tools',
+                        ]
+                    },
+                    {
                         title: 'NEAR',
                         collapsable: true,
                         children: [
@@ -317,6 +329,14 @@ module.exports = {
                             '/tutorials/avalanche/aave-flash-loans-with-brownie',
                         ]
                     },
+                     {
+                        title: 'Arbitrum',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/arbitrum/',
+                            '/tutorials/arbitrum/simple-l1-to-l2-messaging',
+                        ]
+                    },
                     {
                         title: 'NEAR',
                         collapsable: true,
@@ -435,6 +455,7 @@ module.exports = {
                     '/blockchains/polygon',
                     '/blockchains/bsc',
                     '/blockchains/avalanche',
+                    '/blockchains/arbitrum',
                     '/blockchains/near',
                     '/blockchains/solana',
                     '/blockchains/gnosis',
