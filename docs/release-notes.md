@@ -8,6 +8,20 @@ meta:
 
 # Release notes
 
+## Chainstack 3.4
+
+*August 31, 2022*
+
+### What’s new
+
+* **Protocols**. [Arbitrum](/operations/arbitrum/networks) support.
+* **Documentation**. Arbitrum [operations](/operations/arbitrum), [simple L1 to L2 messaging tutorial](/tutorials/arbitrum/simple-l1-to-l2-messaging).
+* **Crypto payments**. In addition to the previously available BTC, ETH, and USDC, you can now [top up your balance](/platform/top-up-your-balance-with-crypto) with Dogecoin, Litecoin, Dai, Bitcoin Cash, ApeCoin, SHIBA INU, and USDT.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 3.3
 
 *August 29, 2022*
@@ -15,7 +29,7 @@ meta:
 ### What’s new
 
 * **Protocols**. [Fuse](/operations/fuse/networks) support.
-* **Documentation**. Fuse [operations](/operations/fuse), [simple multisig contract with hardhat](/tutorials/fuse/simple-multisig-contract-with-hardhat).
+* **Documentation**. Fuse [operations](/operations/fuse), [simple multi-signature contract tutorial with hardhat](/tutorials/fuse/simple-multisig-contract-with-hardhat).
 
 ### Bug fixes
 
@@ -29,6 +43,10 @@ meta:
 
 * **Protocols**. [Gnosis Chain](/operations/gnosis/networks) support.
 * **Documentation**. Gnosis Chain [operations](/operations/gnosis), [simple soulbound token tutorial](/tutorials/gnosis/simple-soulbound-token-with-remix-and-openzeppelin).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
 
 ## Chainstack 3.1
 
