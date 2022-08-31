@@ -20,6 +20,7 @@ To create a project:
      * [Polygon PoS](/blockchains/polygon)
      * [BNB Smart Chain](/blockchains/bsc)
      * [Avalanche](/blockchains/avalanche)
+     * [Arbitrum](/blockchains/arbitrum)
      * [NEAR](/blockchains/near)
      * [Solana](/blockchains/solana)
      * [Gnosis Chain](/blockchains/gnosis)
