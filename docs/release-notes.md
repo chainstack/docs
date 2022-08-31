@@ -30,10 +30,6 @@ meta:
 * **Protocols**. [Gnosis Chain](/operations/gnosis/networks) support.
 * **Documentation**. Gnosis Chain [operations](/operations/gnosis), [simple soulbound token tutorial](/tutorials/gnosis/simple-soulbound-token-with-remix-and-openzeppelin).
 
-### Bug fixes
-
-* Numerous bug fixes and stability improvements.
-
 ## Chainstack 3.1
 
 *August 17, 2022*
