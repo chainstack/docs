@@ -1,9 +1,9 @@
 ---
 meta:
   - name: description
-    content: Top up your Chainstack balance with your Coinbase balance, BTC, ETH, or USDC.
+    content: Top up your Chainstack balance with your Coinbase balance or directly with cryptocurrency.
   - name: keywords
-    content: btc eth usdc crypto coinbase ltc usdt
+    content: btc eth usdc doge shiba crypto coinbase ltc usdt
 ---
 
 # Top up your balance with crypto
@@ -12,7 +12,7 @@ Chainstack deducts your subscription and node usage costs from your account bala
 
 If your account balance is not sufficient, your credit card will be charged for the outstanding amount.
 
-You can top up your balance with your Coinbase account, BTC, ETH, or USDC.
+You can top up your balance with your Coinbase account or directly with cryptocurrency.
 
 ## Top up with a Coinbase account
 
