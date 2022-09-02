@@ -152,6 +152,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Aurora',
+                        collapsable: true,
+                        children: [
+                            '/operations/aurora/',
+                            '/operations/aurora/networks',
+                            '/operations/aurora/types',
+                            '/operations/aurora/modes',
+                            '/operations/aurora/tools',
+                        ]
+                    },
+                    {
                         title: 'Solana',
                         collapsable: true,
                         children: [
@@ -345,6 +356,14 @@ module.exports = {
                             '/tutorials/near/creating-and-upgrading-a-simple-message-contract',
                         ]
                     },
+                     {
+                        title: 'Aurora',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/aurora/',
+                            '/tutorials/aurora/simple-on-chain-governance-with-remix-and-openzeppelin-wizard',
+                        ]
+                    },
                     {
                         title: 'Solana',
                         collapsable: true,
@@ -457,6 +476,7 @@ module.exports = {
                     '/blockchains/avalanche',
                     '/blockchains/arbitrum',
                     '/blockchains/near',
+                    '/blockchains/aurora',
                     '/blockchains/solana',
                     '/blockchains/gnosis',
                     '/blockchains/fantom',
