@@ -21,6 +21,7 @@ To create a project:
      * [BNB Smart Chain](/blockchains/bsc)
      * [Avalanche](/blockchains/avalanche)
      * [NEAR](/blockchains/near)
+     * [Aurora](/blockchains/aurora)
      * [Solana](/blockchains/solana)
      * [Gnosis Chain](/blockchains/gnosis)
      * [Fantom](/blockchains/fantom)

@@ -27,6 +27,9 @@ Public network:
 * [NEAR](/blockchains/near)
 	* Mainnet. [Full and archive nodes](/operations/near/modes).
 	* Testnet
+* [Aurora](/blockchains/aurora)
+	* Mainnet. [Full and archive nodes](/operations/aurora/modes).
+	* Testnet
 * [Solana](/blockchains/solana)
 	* Mainnet
 	* Devnet
