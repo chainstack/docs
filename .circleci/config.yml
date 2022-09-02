@@ -88,7 +88,7 @@ _job_build_image: &build_image
     - image: chainstack/builder:latest
   steps:
     - setup_remote_docker:
-       version: stable
+       version: 20.10.14
 
     - checkout
 
@@ -113,7 +113,7 @@ _job_build_image: &build_image
            -t ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} .
          docker tag ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
          docker tag ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:latest
-         docker push ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}
+         docker push -a ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}
 
 jobs:
 
