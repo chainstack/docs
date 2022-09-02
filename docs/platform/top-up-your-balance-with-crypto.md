@@ -39,6 +39,6 @@ To top up the balance with crypto:
 
 ::: tip See also
 
-* [View your user settings](/platform/view-your-user-settings)
+* [List of accepted cryptocurrencies](https://commerce.coinbase.com/)
 
 :::
