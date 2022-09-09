@@ -695,7 +695,6 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 
 ::: tip See also
 
-* [Simple soulbound token with Remix and OpenZeppelin](/tutorials/aurora/simple-on-chain-governance-with-remix-and-openzeppelin-wizard)
 * [Node API reference](/api/node-api-reference)
 
 :::

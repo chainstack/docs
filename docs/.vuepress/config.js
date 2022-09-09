@@ -356,14 +356,6 @@ module.exports = {
                             '/tutorials/near/creating-and-upgrading-a-simple-message-contract',
                         ]
                     },
-                     {
-                        title: 'Aurora',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/aurora/',
-                            '/tutorials/aurora/simple-on-chain-governance-with-remix-and-openzeppelin-wizard',
-                        ]
-                    },
                     {
                         title: 'Solana',
                         collapsable: true,
