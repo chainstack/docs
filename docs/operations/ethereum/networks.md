@@ -11,9 +11,9 @@ meta:
 Chainstack supports joining the following Ethereum networks:
 
 * Mainnet — public Ethereum mainnet.
-* Ropsten testnet — a proof-of-work public Ethereum testnet.
+* Ropsten testnet — a proof-of-stake public Ethereum testnet.
 * Rinkeby testnet — a proof-of-authority public Ethereum testnet.
-* Goerli testnet — a cross-client proof-of-authority public Ethereum testnet.
+* Goerli testnet — a proof-of-stake public Ethereum testnet.
 
 For development purposes on Ethereum testnets, fund your accounts with <a href="https://support.chainstack.com/hc/en-us/articles/900001458966-Ethereum-testnet-faucets" target="_blank">testnet ether</a>.
 
