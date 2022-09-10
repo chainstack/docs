@@ -76,9 +76,9 @@ Returns the latest block number of the blockchain.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3'); 
-var node_URL = 'CHAINSTACK_NODE_URL'; 
-var web3 = new Web3(node_URL) 
+const Web3 = require('web3'); 
+const node_url = 'CHAINSTACK_NODE_URL'; 
+const web3 = new Web3(node_url) 
 web3.eth.getBlockNumber((err,block) => { 
     console.log("latest block", block) 
 })
@@ -221,9 +221,9 @@ Returns the current chain ID. Chain ID is used to sign replay-protected transact
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getChainId((err, chain) => {
     console.log(chain)
 })
@@ -280,9 +280,9 @@ Returns an estimation of gas units needed for a given transaction.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.estimateGas({
         from: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
         to: "0xbe0eb53f46cd790cd13851d5eff43d12404d33e8",
@@ -297,10 +297,10 @@ web3.eth.estimateGas({
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
-print(web3.eth.estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8","value":"0x1BC16D674EC800000"}))  
+print(web3.eth.estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0x90335eE2286315185a0ff7108B5f7809ce6332F9"}, "latest" ))  
 ```
 
 </template>
@@ -309,7 +309,7 @@ print(web3.eth.estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
 ``` rb
 require 'eth'
 client = Eth::Client.create 'CHAINSTACK_NODE_URL'
-response = client.eth_estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8","value":"0x1BC16D674EC800000"})
+response = client.eth_estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8"}, "latest")
 puts response
 ```
 
@@ -319,7 +319,7 @@ puts response
 ``` sh
 curl -X POST 'CHAINSTACK_NODE_URL' \
   -H "Content-Type: application/json" \
-  --data '{"method":"eth_estimateGas","params":[{"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8","value":"0x1BC16D674EC800000"}],"id":1,"jsonrpc":"2.0"}'
+  --data '{"method":"eth_estimateGas","params":[{"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0xbe0eb53f46cd790cd13851d5eff43d12404d33e8"}, "0xEA8DC5"],"id":1,"jsonrpc":"2.0"}'
 ```
 
 </template>
@@ -343,9 +343,9 @@ Returns the current gas base fee of the network. The value returned is in Wei.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getGasPrice((err, gasPrice) => {
     console.log(gasPrice)
 })
@@ -355,7 +355,7 @@ web3.eth.getGasPrice((err, gasPrice) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.gas_price) 
@@ -407,9 +407,9 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getBalance('0x9D00f1630b5B18a74231477B7d7244f47138ab47', "latest", (err, balance) => {
     console.log(balance)
 })
@@ -419,7 +419,7 @@ web3.eth.getBalance('0x9D00f1630b5B18a74231477B7d7244f47138ab47', "latest", (err
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 balance = web3.eth.get_balance("0x9D00f1630b5B18a74231477B7d7244f47138ab47", "latest") 
@@ -486,9 +486,9 @@ Returns information about the block matching the given block hash.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getBlock('0xaafff6dbabc20c5c2d58f5a8f336575f22681fd23a9e53bf81e69d8130a29b9c', "False", (err, block) => {
     console.log(block)
 })
@@ -498,7 +498,7 @@ web3.eth.getBlock('0xaafff6dbabc20c5c2d58f5a8f336575f22681fd23a9e53bf81e69d8130a
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_block('0xaafff6dbabc20c5c2d58f5a8f336575f22681fd23a9e53bf81e69d8130a29b9c', False)) 
@@ -569,9 +569,9 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getBlock('latest', 'False', (err, block) => {
     console.log(block)
 })
@@ -581,7 +581,7 @@ web3.eth.getBlock('latest', 'False', (err, block) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_block('latest', False))
@@ -627,9 +627,9 @@ Returns the number of transactions in the block matching the given block hash.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getBlockTransactionCount('0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86f4c0c74239e6ae20d9446', (err, block) => {
     console.log(block)
 })
@@ -639,7 +639,7 @@ web3.eth.getBlockTransactionCount('0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_block_transaction_count('0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86f4c0c74239e6ae20d9446'))
@@ -690,9 +690,9 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getBlockTransactionCount(14897720, (err, block) => {
     console.log(block)
 })
@@ -702,7 +702,7 @@ web3.eth.getBlockTransactionCount(14897720, (err, block) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print (web3.eth.get_block_transaction_count(14897720)) # A hex value starting with "0x" is accepted as well.
@@ -756,9 +756,9 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getCode('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', "latest", (err, byte) => {
     console.log(byte)
 })
@@ -768,7 +768,7 @@ web3.eth.getCode('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', "latest", (err, b
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 code = web3.eth.get_code("0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984", "latest") 
@@ -836,7 +836,7 @@ Polling method for a filter, which returns an array of logs which occurred since
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 
@@ -906,9 +906,9 @@ Returns an array of all logs matching a given filter object.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getPastLogs('0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', (err, logs) => {
     console.log(logs)
 })
@@ -918,7 +918,7 @@ web3.eth.getPastLogs('0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', (err, logs) =
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_logs({'address': '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'})) 
@@ -975,9 +975,9 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getStorageAt('0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64', 0, 7500943).then(result => {
     console.log(web3.utils.hexToAscii(result));
 })
@@ -987,7 +987,7 @@ web3.eth.getStorageAt('0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64', 0, 7500943).
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 storage = web3.eth.get_storage_at("0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64", 0, 7500943)
@@ -1057,9 +1057,9 @@ For example, block number `207` will be `0xCF`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getTransactionFromBlock('0xc05b2e16a1643d0aa15d098a408b28aa9109322087d2f2730bb2a8fa6bb699b0', 207, (err, block) => {
     console.log(block)
 })
@@ -1069,7 +1069,7 @@ web3.eth.getTransactionFromBlock('0xc05b2e16a1643d0aa15d098a408b28aa9109322087d2
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_by_block('0xc05b2e16a1643d0aa15d098a408b28aa9109322087d2f2730bb2a8fa6bb699b0', 207))
@@ -1139,9 +1139,9 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getTransactionFromBlock(14806883, 214, (err, block) => {
     console.log(block)
 })
@@ -1151,7 +1151,7 @@ web3.eth.getTransactionFromBlock(14806883, 214, (err, block) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_by_block(14806883, 214)) # Hex encoded parameters starting with "0x" are accepted as well.
@@ -1215,9 +1215,9 @@ Returns the information about a transaction from the transaction hash.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getTransaction('0xf915903ecc67ab20a5162ae13eec36e3a68ca558765ada1779847e0a0c35479c', (err, tx) => {
     console.log(tx)
 })
@@ -1227,7 +1227,7 @@ web3.eth.getTransaction('0xf915903ecc67ab20a5162ae13eec36e3a68ca558765ada1779847
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction('0xf915903ecc67ab20a5162ae13eec36e3a68ca558765ada1779847e0a0c35479c')) 
@@ -1279,9 +1279,9 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getTransactionCount('0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C', 'latest', (err, nonce) => {
     console.log(nonce)
 })
@@ -1291,7 +1291,7 @@ web3.eth.getTransactionCount('0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C', 'late
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.getTransactionCount('0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C', 'latest')) 
@@ -1356,9 +1356,9 @@ It also returns either:
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getTransactionReceipt('0xa43e601a9b6c2daefab83c5e3521ba7764e31481079ca356ad8949f9daf0259f', (err, receipt) => {
   console.log(receipt)
 })
@@ -1368,7 +1368,7 @@ web3.eth.getTransactionReceipt('0xa43e601a9b6c2daefab83c5e3521ba7764e31481079ca3
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_transaction_receipt('0xa43e601a9b6c2daefab83c5e3521ba7764e31481079ca356ad8949f9daf0259f'))  
@@ -1414,9 +1414,9 @@ Returns the number of uncles for the block matching the given block hash.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getBlockUncleCount('0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a033b023d7367b845', (err, uncle) => {
     console.log(uncle)
 })
@@ -1426,7 +1426,7 @@ web3.eth.getBlockUncleCount('0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a0
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_uncle_count('0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a033b023d7367b845'))   
@@ -1496,9 +1496,9 @@ Web3.js requires the block number identifier to be an integer **not encoded** as
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.getUncle('12911679', 0, (err, uncle) => {
     console.log(uncle)
 })
@@ -1508,7 +1508,7 @@ web3.eth.getUncle('12911679', 0, (err, uncle) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.get_uncle_by_block('0xDB60', 0))    
@@ -1554,9 +1554,9 @@ curl -X POST 'CHAINSTACK_NODE_URL' \
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.isMining()
     .then(console.log);
 ```
@@ -1565,7 +1565,7 @@ web3.eth.isMining()
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 web3 = Web3(Web3.HTTPProvider(node_url)) 
 print(web3.eth.mining)  
@@ -1620,7 +1620,7 @@ Creates a filter object to notify the arrival of a new block. To check if the st
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 newBlockFilterId = web3.eth.filter('latest') 
 print(newBlockFilterId)   
@@ -1682,7 +1682,7 @@ For example, block number `14000000` will be `0xD59F80`.
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 newBlockFilterId = web3.eth.filter('latest') 
 newFilterId = web3.eth.filter({
@@ -1745,7 +1745,7 @@ Creates a filter object to notify when new pending transactions are detected. To
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 newFilterId = web3.eth.filter('pending') 
 print(newFilterId) 
@@ -1797,9 +1797,9 @@ Install with `npm install ethereumjs-tx`.
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 var Tx = require('ethereumjs-tx').Transaction;
 
 // Logic of this code:
@@ -1847,7 +1847,7 @@ web3.eth.getTransactionCount(sender, (err, transactionCount) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 
 # Logic of this code:
@@ -1934,9 +1934,9 @@ Returns an object with the sync status of the node when the node is out-of-sync 
 <template v-slot:js>
 
 ``` js
-var Web3 = require('web3');
-var node_URL = 'CHAINSTACK_NODE_URL';
-var web3 = new Web3(node_URL);
+const Web3 = require('web3');
+const node_url = 'CHAINSTACK_NODE_URL';
+const web3 = new Web3(node_url);
 web3.eth.isSyncing((err, sync) => {
     console.log(sync)
 })
@@ -1946,7 +1946,7 @@ web3.eth.isSyncing((err, sync) => {
 <template v-slot:py>
 
 ``` py
-web3 import Web3  
+from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL" 
 print (web3.eth.syncing)  
 ```
@@ -2006,10 +2006,10 @@ Subscribes to incoming block headers. Similar to ```eth_newBlockFilter```.
 **Example:**
 
 ```js
-var Web3 = require('web3');
+const Web3 = require('web3');
 
-var node_URL = 'CHAINSTACK_WSS_URL';
-var web3 = new Web3(node_URL)
+const node_url = 'CHAINSTACK_WSS_URL';
+const web3 = new Web3(node_url)
 
 var newBlocks = web3.eth.subscribe('newBlockHeaders', function(error, result) {
         if (!error) {
@@ -2054,10 +2054,10 @@ Subscribes to incoming pending transactions. Similar to [eth_newPendingTransacti
 **Example:**
 
 ```js
-var Web3 = require('web3');
+const Web3 = require('web3');
 
-var node_URL = 'CHAINSTACK_WSS_URL';
-var web3 = new Web3(node_URL)
+const node_url = 'CHAINSTACK_WSS_URL';
+const web3 = new Web3(node_url)
 
 var pendingTx = web3.eth.subscribe('pendingTransactions', function(error, result) {
         if (!error)
@@ -2098,10 +2098,10 @@ Subscribes to incoming logs, filtered by the given options. If a valid numerical
 **Example:**
 
 ```js
-var Web3 = require('web3');
+const Web3 = require('web3');
 
-var node_URL = 'CHAINSTACK_WSS_URL';
-var web3 = new Web3(node_URL)
+const node_url = 'CHAINSTACK_WSS_URL';
+const web3 = new Web3(node_url)
 
 var logs = web3.eth.subscribe('logs', {
         address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
