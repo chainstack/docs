@@ -1019,6 +1019,6 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 ::: tip See also
 
 * [Tutorials](/tutorials/ethereum)
-* [Node API reference](/api/node-api-reference)
+* [Ethereum API reference](/api/ethereum/ethereum-api-reference)
 
 :::
