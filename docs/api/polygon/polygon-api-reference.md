@@ -82,5 +82,7 @@ gem install eth
 ```
 
 ::: tip See also
-- <a href="https://chainstack.com/build-better-with-polygon/" target="_blank">Build better with Polygon</a>
-  :::
+
+* <a href="https://chainstack.com/build-better-with-polygon/" target="_blank">Build better with Polygon</a>
+
+:::
