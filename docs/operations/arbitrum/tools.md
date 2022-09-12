@@ -696,6 +696,6 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 ::: tip See also
 
 * [Simple soulbound token with Remix and OpenZeppelin](/tutorials/arbitrum/simple-l1-to-l2-messaging)
-* [Node API reference](/api/node-api-reference)
+* [Arbitrum API reference](/api/arbitrum/arbitrum-api-reference)
 
 :::
