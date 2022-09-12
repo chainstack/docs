@@ -88,5 +88,7 @@ gem install eth
 ```
 
 ::: tip See also
-- <a href="https://chainstack.com/build-better-with-avalanche/" target="_blank">Build better with Avalanche</a>
-  :::
+
+* <a href="https://chainstack.com/build-better-with-avalanche/" target="_blank">Build better with Avalanche</a>
+
+:::
