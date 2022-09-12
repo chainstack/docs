@@ -22,6 +22,7 @@ To create a project:
      * [Avalanche](/blockchains/avalanche)
      * [Arbitrum](/blockchains/arbitrum)
      * [NEAR](/blockchains/near)
+     * [Aurora](/blockchains/aurora)
      * [Solana](/blockchains/solana)
      * [Gnosis Chain](/blockchains/gnosis)
      * [Fantom](/blockchains/fantom)

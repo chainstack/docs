@@ -152,6 +152,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Aurora',
+                        collapsable: true,
+                        children: [
+                            '/operations/aurora/',
+                            '/operations/aurora/networks',
+                            '/operations/aurora/types',
+                            '/operations/aurora/modes',
+                            '/operations/aurora/tools',
+                        ]
+                    },
+                    {
                         title: 'Solana',
                         collapsable: true,
                         children: [
@@ -457,6 +468,7 @@ module.exports = {
                     '/blockchains/avalanche',
                     '/blockchains/arbitrum',
                     '/blockchains/near',
+                    '/blockchains/aurora',
                     '/blockchains/solana',
                     '/blockchains/gnosis',
                     '/blockchains/fantom',
