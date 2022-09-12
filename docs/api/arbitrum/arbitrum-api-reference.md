@@ -90,5 +90,7 @@ gem install eth
 ```
 
 ::: tip See also
-- <a href="https://chainstack.com/build-better-with-arbitrum/" target="_blank">Build better with Arbitrum</a>
-  :::
+
+* <a href="https://chainstack.com/build-better-with-arbitrum/" target="_blank">Build better with Arbitrum</a>
+
+:::
