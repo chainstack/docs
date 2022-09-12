@@ -26,4 +26,9 @@ For all available API operations, see <a :href="$themeConfig.apiDocsURL" target=
 
 A collection of JSON-RPC API call examples to the nodes deployed with Chainstack.
 
-See [Node API reference](/api/node-api-reference).
+See:
+
+* [Ethereum API reference](/api/ethereum/ethereum-api-reference).
+* [Polygon API reference](/api/polygon/polygon-api-reference).
+* [Avalanche API reference](/api/avalanche/avalanche-api-reference).
+* [Arbitrum API reference](/api/arbitrum/arbitrum-api-reference).
