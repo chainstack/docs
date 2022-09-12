@@ -11,7 +11,7 @@ meta:
 Chainstack supports joining the following Arbitrum networks:
 
 * Arbitrum One mainnet — an L2 optimistic rollup to the Ethereum mainnet.
-* Arbitrum Goerli testnet testnet — an L2 optimistic rollup to the Ethereum Goerli testnet.
+* Arbitrum Goerli testnet — an L2 optimistic rollup to the Ethereum Goerli testnet.
 
 ::: tip See also
 

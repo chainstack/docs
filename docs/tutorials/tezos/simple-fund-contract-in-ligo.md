@@ -10,7 +10,7 @@ meta:
 
 This tutorial guides you through developing, originating, and interacting with a simple decentralized fund smart contract on Tezos.
 
-The origination and the interaction with the contract for tutorial purposes is done on Ithacanet, which is a testnet.
+The origination and the interaction with the contract for tutorial purposes is done on Jakartanet, which is a testnet.
 
 The simple fund contract does the following:
 
@@ -26,16 +26,16 @@ The simple fund contract does the following:
 
 ## Overview
 
-To get from zero to a deployed contract on Ithacanet, do the following:
+To get from zero to a deployed contract on Jakartanet, do the following:
 
 1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
-1. With Chainstack, [join Ithacanet](/platform/join-a-public-network#join-a-tezos-network).
+1. With Chainstack, [join Jakartanet](/platform/join-a-public-network#join-a-tezos-network).
 1. With Chainstack, access your [Tezos node credentials](/platform/view-node-access-and-credentials).
-1. Fund your developer Tezos account through a [faucet](https://teztnets.xyz/ithacanet-faucet).
+1. Fund your developer Tezos account through a [faucet](https://faucet.jakartanet.teztnets.xyz/).
 1. With LIGO, create the contract.
 1. With the Tezos client, compile and originate the contract through your Tezos node.
 1. With the Tezos client, fund the contract.
-1. Fund your user Tezos account through a faucet and add the account to your Temple wallet.
+1. Fund your user Tezos account through a faucet and your Temple wallet.
 1. With Temple wallet, interact with the contract.
 
 ## Step-by-step
@@ -44,7 +44,7 @@ To get from zero to a deployed contract on Ithacanet, do the following:
 
 See [Create a project](/platform/create-a-project).
 
-### Join Ithacanet
+### Join Jakartanet
 
 See [Join a public network](/platform/join-a-public-network).
 
@@ -60,7 +60,7 @@ See [LIGO: Installation](https://ligolang.org/docs/intro/installation).
 
 To install the client, see [Tezos Client Installation and Setup](https://assets.tqtezos.com/docs/setup/1-tezos-client/).
 
-Once installed, configure the client to the Chainstack-deployed Ithacanet node:
+Once installed, configure the client to the Chainstack-deployed Jakartanet node:
 
 ``` sh
 tezos-client --endpoint ENDPOINT config update
@@ -76,46 +76,25 @@ Example:
 tezos-client --endpoint https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d config update
 ```
 
+### Generate an account
+
+Run:
+
+``` sh
+tezos-client gen keys new
+```
+
+Get the generated account address:
+
+``` sh
+tezos-client list known addresses
+```
+
 ### Fund your account with testnet tez
 
-The [Tezos faucet](https://teztnets.xyz/ithacanet-faucet) generates an account on Ithacanet with test tez.
-
-1. Go to the [faucet](https://teztnets.xyz/ithacanet-faucet).
-1. Click **Get Ithacanet tez**.
-1. Download the generated JSON file.
-1. Place the generated JSON file in your project directory where the Tezos client is installed.
-1. Activate the funded account on Ithacanet:
-
-``` sh
-tezos-client activate account ALIAS with "ACCOUNT_JSON"
-```
-
-where
-
-* ALIAS — any alias to call your account.
-* ACCOUNT_JSON — the account details in a JSON file that you downloaded from the faucet.
-
-Example:
-
-``` sh
-tezos-client activate account trent with "ithacanet.json"
-```
-
-Check the account balance:
-
-``` sh
-tezos-client get balance for ALIAS
-```
-
-where
-
-* ALIAS — the alias you provided when activating the account.
-
-Example:
-
-``` sh
-tezos-client get balance for trent
-```
+1. Go to the [faucet](https://faucet.jakartanet.teztnets.xyz/).
+1. In **fund any address**, paste your generated address.
+1. Click **Request 6001 tz**.
 
 ### Create the contract
 
@@ -194,24 +173,24 @@ Compile the contract and save the compiled code in a `.tz` file:
 ligo compile contract simplefund.ligo --entry-point main > simplefund.tz
 ```
 
-You are now ready to originate the compiled contract on Ithacanet.
+You are now ready to originate the compiled contract on Jakartanet.
 
 ### Originate the contract
 
-Originate the contract using your alias account, initiate the contract with `0` tez and provide the origination fee with `--burn-cap`:
+Originate the contract using your account, initiate the contract with `0` tez and provide the origination fee with `--burn-cap`:
 
 ``` sh
-tezos-client originate contract simplefund transferring 0 from ALIAS running simplefund.tz --init 0 --burn-cap 3
+tezos-client originate contract simplefund transferring 0 from ACCOUNT_ADDRESS running simplefund.tz --init 0 --burn-cap 3
 ```
 
 where
 
-* ALIAS — the account alias you activated previously.
+* ACCOUNT_ADDRESS — the account you generated and funded previously.
 
 Example:
 
 ``` sh
-tezos-client originate contract simplefund transferring 0 from trent running simplefund.tz --init 0 --burn-cap 3
+tezos-client originate contract simplefund transferring 0 from tz1aDV3xqEavGzrnRaa3BWCUjP1K7sQfcsQM running simplefund.tz --init 0 --burn-cap 3
 ```
 
 Once the contract is originated, you will see the contract address in `Originated contracts`.
@@ -219,10 +198,10 @@ Once the contract is originated, you will see the contract address in `Originate
 Example:
 
 ``` sh
-New contract KT1Nf431i6NKV9exNaxSNvKNcMA63F6VC3P4 originated.
+New contract KT1NSJSJjV5HHi3dgvwDNNs72hjCe9DsYvYV originated.
 ```
 
-You now have a working contract on Ithacanet.
+You now have a working contract on Jakartanet.
 
 Write down the contract address as you will need it later to interact with it through a web app and the Temple wallet.
 
@@ -239,20 +218,20 @@ $ ligo compile parameter simplefund.ligo --syntax pascaligo --entry-point main "
 (Left Unit)
 ```
 
-Deposit 10 tez from your alias account to the contract:
+Deposit 10 tez from your account to the contract:
 
 ``` sh
-tezos-client transfer 10 from ALIAS to simplefund --arg "(Left Unit)" --burn-cap 1
+tezos-client transfer 10 from ACCOUNT_ADDRESS to simplefund --arg "(Left Unit)" --burn-cap 1
 ```
 
 where
 
-* ALIAS — the account alias you activated previously.
+* ACCOUNT_ADDRESS — the account you generated and funded previously.
 
 Example:
 
 ``` sh
-tezos-client transfer 10 from trent to simplefund --arg "(Left Unit)" --burn-cap 1
+tezos-client transfer 10 from tz1aDV3xqEavGzrnRaa3BWCUjP1K7sQfcsQM to simplefund --arg "(Left Unit)" --burn-cap 1
 ```
 
 Once the operation is included in a block, check the contract balance by querying the storage:
@@ -264,22 +243,17 @@ $ tezos-client get contract storage for simplefund
 
 ### Get a Temple wallet account with test tez
 
-You need an account in the Temple wallet with some test tez to execute operations on Ithacanet.
+You need an account in the Temple wallet with some test tez to execute operations on Jakartanet.
 
 1. Install the [Temple wallet](https://templewallet.com/).
-1. Go to the [faucet](https://teztnets.xyz/ithacanet-faucet).
-1. Click **Get Ithacanet tez**.
-1. Download the generated JSON file.
-1. In your Temple wallet instance, click **Import account**.
-1. Select **Faucet File**.
-1. Provide the JSON file you have downloaded.
-
-The Temple wallet will activate your account with test tez.
+1. Go to the [faucet](https://faucet.jakartanet.teztnets.xyz/).
+1. Connect with yout Temple wallet.
+1. Once connected, click **Request 6001 tz**.
 
 ### Interact with the contract using the Temple wallet
 
 1. Navigate to the [BCD explorer](https://better-call.dev/).
-1. Click **Ithacanet**.
+1. Click **Jakartanet**.
 1. In the search field, provide your originated contract address.
 1. On the contract page, click **Interact**.
 1. Click **withdraw** > **Execute** > **Temple - Tezos Wallet**.
