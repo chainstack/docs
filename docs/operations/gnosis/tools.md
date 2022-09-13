@@ -696,6 +696,5 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 ::: tip See also
 
 * [Simple soulbound token with Remix and OpenZeppelin](/tutorials/gnosis/simple-soulbound-token-with-remix-and-openzeppelin)
-* [Node API reference](/api/node-api-reference)
 
 :::
