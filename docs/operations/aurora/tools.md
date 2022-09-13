@@ -693,8 +693,4 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 </template>
 </CodeSwitcher>
 
-::: tip See also
 
-* [Node API reference](/api/node-api-reference)
-
-:::

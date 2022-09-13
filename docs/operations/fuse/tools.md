@@ -696,6 +696,5 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 ::: tip See also
 
 * [Simple multisig contract with Hardhat](/tutorials/fuse/simple-multisig-contract-with-hardhat)
-* [Node API reference](/api/node-api-reference)
 
 :::
