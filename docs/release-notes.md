@@ -8,6 +8,19 @@ meta:
 
 # Release notes
 
+## Chainstack 3.5
+
+*September 12, 2022*
+
+### What’s new
+
+* **Protocols**. [Aurora](/operations/aurora/networks) support.
+* **Documentation**. Aurora [operations](/operations/aurora).
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 3.4
 
 *August 31, 2022*
