@@ -22,6 +22,5 @@ The key differences are in size and the RPC methods available:
 
 * [Networks](/operations/bsc/networks)
 * [Tools](/operations/bsc/tools)
-* [Node API reference](/api/node-api-reference)
 
 :::

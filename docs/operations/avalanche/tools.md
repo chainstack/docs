@@ -928,6 +928,6 @@ func main() {
 ::: tip See also
 
 * [Aave flash loans with Brownie](/tutorials/avalanche/aave-flash-loans-with-brownie)
-* [Node API reference](/api/node-api-reference)
+* [Avalanche API reference](/api/avalanche/avalanche-api-reference)
 
 :::

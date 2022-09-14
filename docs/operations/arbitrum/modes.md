@@ -26,6 +26,6 @@ See [Geth JSON-RPC methods](https://eth.wiki/json-rpc/API#the-default-block-para
 * [Networks](/operations/arbitrum/networks)
 * [Tools](/operations/arbitrum/tools)
 * [Tutorials](/tutorials/arbitrum/)
-* [Node API reference](/api/node-api-reference)
+* [Arbitrum API reference](/api/arbitrum/arbitrum-api-reference)
 
 :::
