@@ -853,6 +853,5 @@ cast block-number --rpc-url https://user-name:pass-word-pass-word-pass-word@nd-1
 ::: tip See also
 
 * [ERC-721 collection contract with Truffle and OpenZeppelin](/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin#prerequisites)
-* [Node API reference](/api/node-api-reference)
 
 :::
