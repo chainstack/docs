@@ -13,8 +13,18 @@ Ethereum API method that returns an array of all logs matching a given filter ob
 **Parameters:**  
 
 * `object` - The filter options:
-  * `fromBlock` - (optional, default: `"latest"`) Integer block number encoded as hexadecimal, `"latest"`,`"pending"`, or `"earliest"` tags.
-  * `toBlock` - (optional, default: `"latest"`) Integer block number encoded as hexadecimal, `"latest"`,`"pending"`, or `"earliest"` tags.
+  * `fromBlock` - (optional, default: `"latest"`) Integer block number encoded as hexadecimal, or the string:
+    * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
+    * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
+    * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
+    * `earliest` — the genesis block.
+    * `pending` — the pending state and transactions block.
+  * `toBlock` - (optional, default: `"latest"`) Integer block number encoded as hexadecimal, or the string:
+    * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
+    * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
+    * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
+    * `earliest` — the genesis block.
+    * `pending` — the pending state and transactions block.
   * `address` - (optional) Contract address, or a list of addresses from which logs should originate.
   * `topics` - (optional) Array of `DATA` topics. Topics are order-dependent. Go here to learn more about topics.
   * `blockhash` - (optional) With the addition of EIP-234, `blockHash` will be a new filter option that restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using blockHash is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` is allowed.

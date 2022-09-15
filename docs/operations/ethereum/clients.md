@@ -1,14 +1,20 @@
 ---
 meta:
   - name: description
-    content: Learn the difference between a Geth node and an Erigon node.
+    content: Deploy Nimbus for the consensus layer and Geth or Erigon for the execution layer on Ethereum.
   - name: keywords
-    content: ethereum turbo node geth erigon difference
+    content: ethereum nimbus node geth erigon difference
 ---
 
 # Clients
 
-Chainstack supports deploying a dedicated Ethereum archive node on the mainnet in the following client implementations:
+Chainstack supports deploying Ethereum nodes in the following client implementations:
+
+## Consensus layer
+
+* Nimbus — the [Nim implementation](https://github.com/status-im/nimbus-eth2) of the Ethereum Beacon Chain client.
+
+## Execution layer
 
 * Geth — the [Go Ethereum](https://github.com/ethereum/go-ethereum) implementation.
 * Erigon — the [Erigon](https://github.com/ledgerwatch/erigon) implementation.
@@ -22,6 +28,7 @@ The key differences are in size and the RPC methods available:
 
 ::: tip See also
 
+* [Ethereum API reference](/api/ethereum/ethereum-api-reference)
 * [Networks](/operations/ethereum/networks)
 * [Tools](/operations/ethereum/tools)
 * [Tutorials](/tutorials/ethereum/)

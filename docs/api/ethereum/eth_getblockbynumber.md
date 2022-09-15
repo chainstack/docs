@@ -12,31 +12,36 @@ Ethereum API method that returns information about the block matching the given 
 
 **Parameters:**
 
-- `quantity or tag` - Integer block number, or the string `latest`, `earliest`, or `pending`. See the [default block parameter](https://eth.wiki/json-rpc/API#the-default-block-parameter).
-- `boolean` - If `True`, it returns the full transaction objects. If `False`, only the hashes of the transactions.
+* `quantity or tag` - Integer block number, or the string:
+    * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
+    * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
+    * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
+    * `earliest` — the genesis block.
+    * `pending` — the pending state and transactions block.
+* `boolean` - If `True`, it returns the full transaction objects. If `False`, only the hashes of the transactions.
 
 **Returns:**
 
-- `object` - A block object, or `null` when no block was found.
-  - `number` - The block number of the requested block. Encoded as hexadecimal. `null` if pending.
-  - `hash` - The block hash of the requested block. `null` if pending.
-  - `parenthash` - Hash of the parent block.
-  - `nonce` - Hash of the generated proof-of-work. `null` if pending.
-  - `sha3uncles` - SHA3 of the uncles' data in the block.
-  - `logsbloom` - The bloom filter for the logs of the block. `null` if pending.
-  - `transactionsroot` - The root of the transaction trie of the block.
-  - `stateroot` - The root of the final state trie of the block.
-  - `receiptsroot` - The root of the receipts trie of the block.
-  - `miner` - The address to whom the mining rewards were given.
-  - `difficulty` - Integer of the difficulty for this block, encoded as hexadecimal.
-  - `totaldifficulty` - Integer of the total difficulty of the chain until this block, encoded as hexadecimal.
-  - `extradata` - The “extra data” field of this block.
-  - `size` - The size of this block in bytes as an Integer value, encoded as hexadecimal.
-  - `gaslimit` - The maximum gas allowed in this block, encoded as hexadecimal.
-  - `gasused` - The total used gas by all transactions in this block. Encoded as hexadecimal.
-  - `timestamp` - The UNIX timestamp for when the block was collated.
-  - `transactions` - Array of transaction objects - please see [eth_getTransactionByHash](/api/ethereum/eth_gettransactionbyhash) for exact shape.
-  - `uncles` - Array of uncle hashes.
+* `object` - A block object, or `null` when no block was found.
+  * `number` - The block number of the requested block. Encoded as hexadecimal. `null` if pending.
+  * `hash` - The block hash of the requested block. `null` if pending.
+  * `parenthash` - Hash of the parent block.
+  * `nonce` - Hash of the generated proof-of-work. `null` if pending.
+  * `sha3uncles` - SHA3 of the uncles' data in the block.
+  * `logsbloom` - The bloom filter for the logs of the block. `null` if pending.
+  * `transactionsroot` - The root of the transaction trie of the block.
+  * `stateroot` - The root of the final state trie of the block.
+  * `receiptsroot` - The root of the receipts trie of the block.
+  * `miner` - The address to whom the mining rewards were given.
+  * `difficulty` - Integer of the difficulty for this block, encoded as hexadecimal.
+  * `totaldifficulty` - Integer of the total difficulty of the chain until this block, encoded as hexadecimal.
+  * `extradata` - The “extra data” field of this block.
+  * `size` - The size of this block in bytes as an Integer value, encoded as hexadecimal.
+  * `gaslimit` - The maximum gas allowed in this block, encoded as hexadecimal.
+  * `gasused` - The total used gas by all transactions in this block. Encoded as hexadecimal.
+  * `timestamp` - The UNIX timestamp for when the block was collated.
+  * `transactions` - Array of transaction objects - please see [eth_getTransactionByHash](/api/ethereum/eth_gettransactionbyhash) for exact shape.
+  * `uncles` - Array of uncle hashes.
 
 **Example:**
 
