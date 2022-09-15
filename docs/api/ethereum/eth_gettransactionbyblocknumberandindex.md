@@ -12,7 +12,12 @@ Ethereum API method that returns information about a transaction given a block n
 
 **Parameters:**  
 
-* `quantity or tag` - Integer block number, or the string `latest`, `earliest`, or `pending`. See the [default block parameter](https://eth.wiki/json-rpc/API#the-default-block-parameter).
+* `quantity or tag` - Integer block number, or the string:
+  * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
+  * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
+  * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
+  * `earliest` — the genesis block.
+  * `pending` — the pending state and transactions block.
 * `quantity` - A hex of the integer representing the position in the block.
 
 **Returns:** 
