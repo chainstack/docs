@@ -14,7 +14,12 @@ Ethereum API method that returns the value from a storage position at a given ad
 
 * `address` - The address to check for storage.
 * `quantity` - Integer of the position in storage.
-* `quantity or tag` - Integer block number, or the string `'latest'`, `'earliest'` or `'pending'`. See the [default block parameter](https://eth.wiki/json-rpc/API#the-default-block-parameter).
+* `quantity or tag` - Integer block number encoded as hexadecimal, or the string:
+  * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
+  * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
+  * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
+  * `earliest` — the genesis block.
+  * `pending` — the pending state and transactions block.
 
 **Returns:**
 

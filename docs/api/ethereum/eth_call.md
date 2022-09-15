@@ -19,7 +19,12 @@ Ethereum API method that executes a new message call immediately without creatin
   * `gasprice` - (optional) Integer of the gasPrice used for each paid gas encoded as hexadecimal.
   * `value` - (optional) Integer of the value sent with this transaction encoded as hexadecimal.
   * `data` - (optional) String of the hash of the method signature and encoded parameters, see the [Ethereum Contract ABI](https://solidity.readthedocs.io/en/latest/abi-spec.html).
-  * `quantity or tag` - Integer block number, or the string 'latest', 'earliest' or 'pending', see the [default block parameter](https://eth.wiki/json-rpc/API#the-default-block-parameter).
+  * `quantity or tag` - Integer block number, or the string:
+    * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
+    * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
+    * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
+    * `earliest` — the genesis block.
+    * `pending` — the pending state and transactions block.
 
 **Returns:** 
 
