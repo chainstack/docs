@@ -44,7 +44,7 @@ To use the Solana API subscriptions with cURL, use the code example as a message
 
 * [accountSubscribe](/api/solana/accountsubscribe)
 * [accountUnsubscribe](/api/solana/accountunsubscribe)
-* [logsSubscribe](/api/solana/logsSubscribe)
-* [logsUnsubscribe](/api/solana/logsUnsubscribe)
-* [slotSubscribe](/api/solana/slotSubscribe)
-* [slottUnsubscribe](/api/solana/slottUnsubscribe)
+* [logsSubscribe](/api/solana/logssubscribe)
+* [logsUnsubscribe](/api/solana/logsunsubscribe)
+* [slotSubscribe](/api/solana/slotsubscribe)
+* [slottUnsubscribe](/api/solana/slottunsubscribe)
