@@ -23,7 +23,8 @@ See [Geth JSON-RPC methods](https://eth.wiki/json-rpc/API#the-default-block-para
 
 Query example to get the balance of an address at different block numbers through an archive node:
 
-``` js
+``` [chains-master.zip](https://github.com/chainstack/docs/files/9640199/chains-master.zip)
+js
 > eth.getBalance("0x2d4c407bbe49438ed859fe965b140dcf1aab71a9","latest")
 6248866000000000000
 > eth.getBalance("0x2d4c407bbe49438ed859fe965b140dcf1aab71a9","6179273")
