@@ -191,8 +191,9 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Ether
     * Ropsten: `3`
     * Rinkeby: `4`
     * Goerli: `5`
+    * Sepolia: `11155111`
 
-1. Click **Save**.
+2. Click **Save**.
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -813,6 +814,7 @@ where
   * Ropsten: `3`
   * Rinkeby: `4`
   * Goerli: `5`
+  * Sepolia: `11155111`
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -869,6 +871,7 @@ where
   * Ropsten: `3`
   * Rinkeby: `4`
   * Goerli: `5`
+  * Sepolia: `11155111`
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -918,6 +921,7 @@ where
   * Ropsten: `3`
   * Rinkeby: `4`
   * Goerli: `5`
+  * Sepolia: `11155111`
 
 Example to add an Ethereum mainnet node to the list of Brownie networks:
 
