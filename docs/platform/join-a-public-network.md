@@ -12,7 +12,7 @@ meta:
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
 1. Under **Blockchain protocol**, select **Ethereum**.
-1. Under **Blockchain network**, select **Mainnet**, **Ropsten testnet**, **Rinkeby testnet**, or **Goerli testnet**. Click **Next**.
+1. Under **Blockchain network**, select **Mainnet**, **Ropsten testnet**, **Rinkeby testnet**, **Goerli testnet**, or **Sepolia testnet**. Click **Next**.
 1. Under **Type**, select whether to run an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
 1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/ethereum/modes).
 1. If you are deploying a dedicated archive node, under **Client**, select whether to run a Geth node or an Erigon node. See [Clients](/operations/ethereum/clients).

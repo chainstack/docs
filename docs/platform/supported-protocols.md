@@ -15,6 +15,7 @@ Public network:
 	* Ropsten testnet
 	* Rinkeby testnet
 	* Goerli testnet
+	* Sepolia testnet
 * [Polygon PoS](/blockchains/polygon)
 	* Mainnet. [Full and archive nodes](/operations/polygon/modes).
 	* Mumbai testnet
