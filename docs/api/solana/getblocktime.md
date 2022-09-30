@@ -12,18 +12,18 @@ Solana API method that returns the estimated production time of a block.
 
 ::: tip
 
-Each validator regularly reports its UTC time to the ledger by intermittently adding a timestamp to a Vote for a particular block. A requested block's time is calculated from the stake-weighted mean of the Vote timestamps in a set of recent blocks recorded on the ledger.
+Each validator regularly reports its UTC time to the ledger by intermittently adding a timestamp to a vote for a particular block. A requested block's time is calculated from the stake-weighted mean of the vote timestamps in a set of recent blocks recorded on the ledger.
 
 :::
 
 **Parameters:** 
 
-* `<u64>` - block, identified by Slot.
+* `<u64>` — the block, identified by the slot.
 
 **Returns:** 
 
-* `<i64>` - Estimated production time, as a Unix timestamp (seconds since the [Unix epoch](https://www.unixtimestamp.com/)).
-* `<null>` - If the timestamp is not available for this block.
+* `<i64>` — the estimated production time, as a Unix timestamp, seconds since the [Unix epoch](https://www.unixtimestamp.com/).
+* `<null>` — if the timestamp is not available for this block.
 
 **Example:**
 

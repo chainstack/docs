@@ -12,13 +12,13 @@ Solana API method that returns the current slot leader.
 
 **Parameters:** 
 
-* `(optional) <object>` - Configuration object containing the following fields:
-    * `(optional) commitment: <string>` - Commitment.
-    * `(optional) minContextSlot: <number>` - set the minimum slot that the request can be evaluated at.
+* `(optional) <object>` — the configuration object containing the following fields:
+    * `(optional) commitment: <string>` — the commitment.
+    * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
 
 **Returns:** 
 
-* `string` -  Node identity Pubkey as base-58 encoded string.
+* `string` —  the node identity public key as base-58 encoded string.
 
 **Example:**
 

@@ -23,16 +23,16 @@ To use the Solana API subscriptions with cURL, use the code example as a message
 
 **Parameters:**
 
-* `filter: <string>|<object>` - filter criteria for the logs to receive results by account type; currently supported:
-  * `"all"` - subscribe to all transactions except for simple vote transactions
-  * `"allWithVotes"` - subscribe to all transactions including simple vote transactions
-  * `{ "mentions": [ <string> ] }` - subscribe to all transactions that mention the provided Pubkey (as base-58 encoded string)
-* `(optional) <object>` - Configuration object containing the following optional fields:
-  * `(optional) commitment: <string>` - Commitment
+* `filter: <string>|<object>` — the filter criteria for the logs to receive results by account type; currently supported:
+  * `all` — subscribe to all transactions except for simple vote transactions.
+  * `allWithVotes` — subscribe to all transactions including simple vote transactions.
+  * `{ mentions: [ <string> ] }` — subscribe to all transactions that mention the provided public key, as base-58 encoded string.
+* `(optional) <object>` — the configuration object containing the following optional fields:
+  * `(optional) commitment: <string>` — the commitment.
 
 **Returns:**
 
-* `<integer>` - Subscription id (needed to unsubscribe).
+* `<integer>` — Subscription id (needed to unsubscribe).
 
 **Example:**
 

@@ -12,18 +12,18 @@ Solana API method that returns information about the current epoch.
 
 **Parameters:** 
 
-* `(optional) <object>` - Configuration object containing the following fields:
-  * `(optional) commitment: <string>` - Commitment
-  * `(optional) minContextSlot: <number>` - set the minimum slot that the request can be evaluated at.
+* `(optional) <object>` — the configuration object containing the following fields:
+  * `(optional) commitment: <string>` — the ommitment.
+  * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
 
 **Returns:** 
 
-* `absoluteSlot: <u64>`, the current slot
-* `blockHeight: <u64>`, the current block height
-* `epoch: <u64>`, the current epoch
-* `slotIndex: <u64>`, the current slot relative to the start of the current epoch
-* `slotsInEpoch: <u64>`, the number of slots in this epoch
-* `transactionCount: <u64 | null>`, total number of transactions processed without error since genesis
+* `absoluteSlot: <u64>` — the current slot.
+* `blockHeight: <u64>` — the current block height.
+* `epoch: <u64>` — the current epoch.
+* `slotIndex: <u64>` — the current slot relative to the start of the current epoch.
+* `slotsInEpoch: <u64>` — the number of slots in this epoch.
+* `transactionCount: <u64 | null>` — the total number of transactions processed without error since genesis.
 
 **Example:**
 

@@ -8,7 +8,7 @@ meta:
 
 ## accountSubscribe
 
-Solana API method to subscribe to an account to receive notifications when the lamports or data for a given account public key changes.
+Solana API method that subscribes to an account to receive notifications when the lamports or data for a given account public key changes.
 
 ### Solana.py
 
@@ -23,14 +23,14 @@ To use the Solana API subscriptions with cURL, use the code example as a message
 
 **Parameters:**
 
-* `<string>` - account Pubkey, as base-58 encoded string
-* `(optional) <object>` - Configuration object containing the following optional fields:
-  * `(optional) commitment: <string>` - Commitment.
-  * `encoding: <string>` - encoding for Account data, either "base58" (slow), "base64", "base64+zstd" or "jsonParsed". "jsonParsed" encoding attempts to use program-specific state parsers to return more human-readable and explicit account state data. If "jsonParsed" is requested, but a parser cannot be found, the field falls back to binary encoding, detectable when the data field is type <string>.
+* `<string>` — the account public key as base-58 encoded string.
+* `(optional) <object>` — a configuration object containing the following optional fields:
+  * `(optional) commitment: <string>` — the commitment.
+  * `encoding: <string>` — the encoding for account data, either `base58` (slow), `base64`, `base64+zstd` or `jsonParsed`. `jsonParsed` encoding attempts to use program-specific state parsers to return more human-readable and explicit account state data. If `jsonParsed` is requested, but a parser cannot be found, the field falls back to binary encoding, detectable when the data field is type `<string>`.
 
 **Returns:**
 
-* `<number>` - Subscription id (needed to unsubscribe).
+* `<number>` — the subscription id which is needed to unsubscribe.
 
 **Example:**
 

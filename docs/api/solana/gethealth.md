@@ -18,7 +18,7 @@ If one or more `--known-validator` arguments are provided to `solana-validator`,
 
 **Returns:** 
 
-* `response` - If the node is healthy: "ok" If the node is unhealthy, a JSON RPC error response is returned. The specifics of the error response are UNSTABLE and may change in the future
+* `response` — if the node is healthy, `ok`. If the node is unhealthy, a JSON RPC error response is returned. The specifics of the error response are UNSTABLE and may change in the future
 
 **Example:**
 

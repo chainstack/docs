@@ -8,7 +8,7 @@ meta:
 
 # getLatestBlockhash
 
-Solana API method that returns the identity and transaction information about a confirmed block in the ledger. 
+Solana API method that returns the latest blockhash. 
 
 ::: tip
 
@@ -20,15 +20,15 @@ Chainstack runs v1.10.
 
 **Parameters:** 
 
-* `(optional) <object>` - Configuration object containing the following fields:
-    * `(optional) commitment: <string>` - Commitment (used for retrieving blockhash)
-    * `(optional) minContextSlot: <number>` - Set the minimum slot that the request can be evaluated at.
+* `(optional) <object>` — the configuration object containing the following fields:
+    * `(optional) commitment: <string>` — the commitment used for retrieving blockhash.
+    * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
 
 **Returns:** 
 
-* `RpcResponse<object>` - RpcResponse JSON object with value field set to a JSON object including:
-* `blockhash: <string>` - A Hash as base-58 encoded string.
-* `lastValidBlockHeight: <u64>` - Last block height at which the blockhash will be valid.
+* `RpcResponse <object>` — the RpcResponse JSON object with value field set to a JSON object including:
+* `blockhash: <string>` — a Hash as base-58 encoded string.
+* `lastValidBlockHeight: <u64>` — the last block height at which the blockhash will be valid.
       
 **Example:**
 
