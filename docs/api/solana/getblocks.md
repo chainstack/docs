@@ -18,14 +18,14 @@ The maximum range allowed is 500,000 slots.
 
 **Parameters:** 
 
-* `<u64>` - start_slot, as u64 integer.
-  * `(optional) <u64>` - end_slot, as u64 integer (must be no more than 500,000 blocks higher than the start_slot).
-  * `(optional) <object>` - Configuration object containing the following field:
-    * `(optional) commitment: <string>` - Commitment; "processed" is not supported. If the parameter is not provided, the default is "finalized".
+* `<u64>` — the `start_slot`, as u64 integer.
+  * `(optional) <u64>` — the `end_slot`, as a u64 integer, must be no more than 500,000 blocks higher than the `start_slot`.
+  * `(optional) <object>` — the configuration object containing the following field:
+    * `(optional) commitment: <string>` — the commitment; `processed` is not supported. If the parameter is not provided, the default is `finalized`.
 
 **Returns:** 
 
-* `array` - The result field will be an array of u64 integers listing confirmed blocks between the `start_slot` and either `end_slot` if provided or the latest confirmed block, inclusive. 
+* `array` — The result field will be an array of u64 integers listing confirmed blocks between the `start_slot` and either `end_slot` if provided or the latest confirmed block, inclusive. 
 
 **Example:**
 

@@ -12,13 +12,13 @@ Solana API method that returns the current block height of the node.
 
 **Parameters:** 
 
-* `(optional) <object>` - Configuration object containing the following fields:
-    * `(optional) commitment: <string>` - Commitment.
-    * `(optional) minContextSlot: <number>` - Set the minimum slot that the request can be evaluated at.
+* `(optional) <object>` — the configuration object containing the following fields:
+    * `(optional) commitment: <string>` — the commitment.
+    * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
 
 **Returns:** 
 
-* `u64` - Current block height.
+* `u64` — the current block height.
  
 **Example:**
 

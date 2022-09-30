@@ -8,7 +8,7 @@ meta:
 
 # getIdentity
 
-Solana API method that returns the identity pubkey for the current node. 
+Solana API method that returns the identity public key for the current node. 
 
 **Parameters:** 
 
@@ -16,7 +16,7 @@ Solana API method that returns the identity pubkey for the current node.
 
 **Returns:** 
 
-* `identity` - The identity pubkey of the current node (as a base-58 encoded string).
+* `identity` — the public key of the current node as a base-58 encoded string.
  
 **Example:**
 

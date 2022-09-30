@@ -8,15 +8,21 @@ meta:
 
 # getBalance
 
-Solana API method that returns the balance of the account of the provided Public key. The value is returned in Gwei. 
+Solana API method that returns the balance of the account of the provided Public key. 
 
 **Parameters:** 
 
-* `address` - Pubkey of the account to query, as base-58 encoded string.
+* `address` — the public key of the account to query as base-58 encoded string.
 
 **Returns:** 
 
-* `quantity` - The integer value of the current balance in Gwei.
+* `quantity` — the integer value of the current balance with 9 decimals.
+
+::: tip
+
+Divide the value returned by 1000000000 to convert to the whole Solana measure unit.
+
+:::
 
 **Example:**
 
@@ -28,8 +34,8 @@ import { PublicKey, Connection } from "@solana/web3.js"
 
 const nodeUrl = "CHAINSTACK_NODE_URL"
 const publicKey = new PublicKey(
-    'HSH3LftAhgNEQmpNRuE1ghnbqVHsxt8edvid1zdLxH5C'
-  )
+  "HSH3LftAhgNEQmpNRuE1ghnbqVHsxt8edvid1zdLxH5C"
+);
 
 (async () => {  
   const connect = new Connection(nodeUrl);
