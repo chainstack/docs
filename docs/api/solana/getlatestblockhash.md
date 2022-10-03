@@ -10,14 +10,6 @@ meta:
 
 Solana API method that returns the latest blockhash. 
 
-::: tip
-
-This method is only available in solana-core v1.9 or newer. Please use [getRecentBlockhash](https://docs.solana.com/developing/clients/jsonrpc-api#getrecentblockhash) for solana-core v1.8
-
-Chainstack runs v1.10.
-
-:::
-
 **Parameters:** 
 
 * `(optional) <object>` — the configuration object containing the following fields:

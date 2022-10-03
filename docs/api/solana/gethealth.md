@@ -10,7 +10,9 @@ meta:
 
 Solana API method that returns the current health of the node.
 
-If one or more `--known-validator` arguments are provided to `solana-validator`, "ok" is returned when the node has within `HEALTH_CHECK_SLOT_DISTANCE` slots of the highest known validator, otherwise an error is returned. "ok" is always returned if no known validators are provided.
+If one or more `--known-validator` arguments are provided to `solana-validator`, `ok` is returned if the node is in sync with the validator. Otherwise, an error is returned. 
+
+`ok` is always returned if no known validators are provided.
 
 **Parameters:** 
 
