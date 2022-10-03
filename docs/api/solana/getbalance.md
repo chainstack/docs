@@ -16,13 +16,7 @@ Solana API method that returns the balance of the account of the provided Public
 
 **Returns:** 
 
-* `quantity` — the integer value of the current balance with 9 decimals.
-
-::: tip
-
-Divide the value returned by 1000000000 to convert to the whole Solana measure unit.
-
-:::
+* `quantity` — the integer value of the current balance in [lamports](https://docs.solana.com/introduction#what-are-sols).
 
 **Example:**
 
