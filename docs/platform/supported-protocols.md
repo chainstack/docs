@@ -12,9 +12,10 @@ Public network:
 
 * [Ethereum](/blockchains/ethereum)
 	* Mainnet. [Full and archive nodes](/operations/ethereum/modes).
+	* Goerli testnet
+	* Sepolia testnet
 	* Ropsten testnet
 	* Rinkeby testnet
-	* Goerli testnet
 * [Polygon PoS](/blockchains/polygon)
 	* Mainnet. [Full and archive nodes](/operations/polygon/modes).
 	* Mumbai testnet
