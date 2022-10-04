@@ -8,7 +8,7 @@ meta:
 
 # getBalance
 
-Solana API method that returns the balance of the account of the provided Public key. 
+Solana API method that returns the balance of the account of the provided public key. 
 
 **Parameters:** 
 
