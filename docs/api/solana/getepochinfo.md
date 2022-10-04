@@ -13,7 +13,7 @@ Solana API method that returns information about the current epoch.
 **Parameters:** 
 
 * `(optional) <object>` — the configuration object containing the following fields:
-  * `(optional) commitment: <string>` — the ommitment.
+  * `(optional) commitment: <string>` — the commitment.
   * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
 
 **Returns:** 
