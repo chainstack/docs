@@ -38,7 +38,7 @@ Follow these steps to sign up on Chainstack, deploy a Solana RPC node, and find 
 
 Now you are ready to connect to the Solana blockchain and use the Solana API to build.
 
-Find useful [Solana tools](/operations/solana/tools#tools) in the Chainstack docs.
+Find useful [Solana tools](/operations/solana/tools) in the Chainstack docs.
 
 The best way to use the Solana API is to use a web3 library such as [Solana web3.js](https://solana-labs.github.io/solana-web3.js/) if using JavaScript or [Solana.py](https://michaelhly.github.io/solana-py/) using Python.
 
