@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py Solana web3.js eth.rb javascript python
 ---
 
-# Solana API websocket subscriptions
+# Solana API WebSocket subscriptions
 
 The Solana API subscriptions allow subscribing to specific events in the blockchain.
 

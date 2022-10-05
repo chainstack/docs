@@ -27,7 +27,7 @@ To use the Solana API subscriptions with cURL, use the code example as a message
 
 **Returns:**
 
-* `<integer>` — the subscription (id needed to unsubscribe).
+* `<integer>` — the subscription ID (needed to unsubscribe).
 
 **Example:**
 
