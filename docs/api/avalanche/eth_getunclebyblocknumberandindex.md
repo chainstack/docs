@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_getUncleByBlockNumberAndIndex 
+# Avalanche eth_getUncleByBlockNumberAndIndex  RPC method
 
 Avalanche API method that returns information about an uncle of a block by number and uncle index position.   
 

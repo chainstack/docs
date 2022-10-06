@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_blockNumber 
+# Avalanche eth_blockNumber RPC method
 
 Avalanche API method that returns the latest block number of the blockchain. 
 
