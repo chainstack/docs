@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/states/{state_id}/validators/{validator_id}
+# eth/v1/beacon/states/{state_id}/validators/{validator_id} RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the validator specified by `state_id` and `validator_id` or public key along with status and balance.
 

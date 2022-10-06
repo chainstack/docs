@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v2/beacon/blocks/{block_id}
+# Ethereum eth/v2/beacon/blocks/{block_id} RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns block details for the given `block_id`. Depending on the `Accept` header, it can be returned either as JSON or as bytes serialized by SSZ.
 

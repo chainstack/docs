@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/headers/{block_id}
+# eth/v1/beacon/headers/{block_id} RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns block header for given block id.
 

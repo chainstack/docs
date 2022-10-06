@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
 ---
 
-# eth_getBalance
+# Ethereum eth_getBalance RPC method
 
 Ethereum API method that returns the balance of a given account address. The value is returned in Wei. 
 

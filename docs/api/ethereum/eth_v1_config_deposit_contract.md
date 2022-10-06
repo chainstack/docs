@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/config/deposit_contract
+# Ethereum eth/v1/config/deposit_contract RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the execution layer deposit contract address and chain ID..
 

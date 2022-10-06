@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
 ---
 
-# eth_getCode
+# Ethereum eth_getCode RPC method
 
 Ethereum API method that returns the compiled bytecode of a smart contract.
 
