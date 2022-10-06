@@ -197,6 +197,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Cronos',
+                        collapsable: true,
+                        children: [
+                            '/operations/cronos/',
+                            '/operations/cronos/networks',
+                            '/operations/cronos/types',
+                            '/operations/cronos/modes',
+                            '/operations/cronos/tools',
+                        ]
+                    },
+                    {
                         title: 'StarkNet',
                         collapsable: true,
                         children: [

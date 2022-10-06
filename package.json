@@ -10,16 +10,16 @@
     "dev": "DOCS_HOSTNAME=docs.dev.chainstack.com vuepress dev docs"
   },
   "devDependencies": {
-    "vuepress": "^1.9.2",
+    "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
+    "@limdongjin/vuepress-plugin-simple-seo": "^1.0.4-alpha.5",
     "@vuepress/plugin-active-header-links": "^1.9.7",
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "@vuepress/plugin-google-analytics": "^1.9.7",
-    "vuepress-plugin-clean-urls": "^1.1.2",
-    "vuepress-plugin-sitemap": "^2.3.1",
-    "vuepress-plugin-check-md": "0.0.2",
-    "vuepress-plugin-code-switcher": "^1.1.0",
     "markdown-it-container": "^2.0.0",
-    "@limdongjin/vuepress-plugin-simple-seo": "^1.0.4-alpha.5",
-    "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7"
+    "vuepress": "^1.9.2",
+    "vuepress-plugin-check-md": "0.0.2",
+    "vuepress-plugin-clean-urls": "^1.1.2",
+    "vuepress-plugin-code-switcher": "^1.1.0",
+    "vuepress-plugin-sitemap": "^2.3.1"
   }
 }
