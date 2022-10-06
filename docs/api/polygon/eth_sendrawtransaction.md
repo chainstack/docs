@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon 
 ---
 
-# eth_sendRawTransaction
+# Polygon eth_sendRawTransaction RPC method
 
 Polygon API method that creates a new message call transaction. Or contract creation for signed transactions. 
 

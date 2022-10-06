@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon
 ---
 
-# eth_newFilter
+# Polygon eth_newFilter RPC method
 
 Polygon API method that creates a filter object based on the filter options to notify when the state changes (logs). To check if the state has changed, call eth_getFilterChanges.
 

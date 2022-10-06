@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon 
 ---
 
-# eth_getUncleCountByBlockHash
+# Polygon eth_getUncleCountByBlockHash RPC method
 
 Polygon API method that returns the number of uncles for the block matching the given block hash.    
 

@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon
 ---
 
-# eth_getBlockByNumber
+# Polygon eth_getBlockByNumber RPC method
 
 Polygon API method that returns information about the block matching the given block number.
 
