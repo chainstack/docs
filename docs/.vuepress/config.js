@@ -392,6 +392,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Cronos',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/cronos/',
+                            '/tutorials/cronos/nft-dutch-auction-contract-with-hardhat',
+                        ]
+                    },
+                    {
                         title: 'StarkNet',
                         collapsable: true,
                         children: [

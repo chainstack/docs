@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to deploy and run a simple Dutch auction smart contract on Cronos with Hardhat.
   - name: keywords
-    content: tutorial cronos smart contract hardhat
+    content: tutorial cronos smart contract hardhat dutch auction
 ---
 
 # Dutch auction smart contracts on Cronos with Hardhat
@@ -69,19 +69,19 @@ The [OpenZeppelin Contract library](https://docs.openzeppelin.com) allows to inh
 npm i @openzeppelin/contracts
 ```
 
-The [dotenv library](https://github.com/motdotla/dotenv) allows to export and keep sensitive data securely. To install, run:
+The [dotenv library](https://github.com/motdotla/dotenv) allows to export and keep sensitive data securely. To install it, run:
 
 ``` sh
 npm i dotenv
 ```
 
-The [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-etherscan) and [hardhat-cronoscan](https://docs.cronos.org/for-dapp-developers/cronos-smart-contract/contract-verification) plugins allow to verify our contracts on the Cronos testnet. To install them, run:
+The [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-etherscan) and [hardhat-cronoscan](https://docs.cronos.org/for-dapp-developers/cronos-smart-contract/contract-verification) plugins allow to verify your contracts on the Cronos testnet. To install them, run:
 
 ``` sh
 npm i --save-dev @nomiclabs/hardhat-etherscan@^3.1.0 @cronos-labs/hardhat-cronoscan
 ```
 
-You need to create a .env file to store your sensitive data with the project. To create it, in your project directory, run:
+You need to create an environment file to store your sensitive data with the project. To create it, in your project directory, run:
 
 ``` sh
 touch .env
@@ -149,12 +149,12 @@ contract MyToken is ERC721, Ownable {
 The contract implementation is the following:
 
 * The price of an NFT starts at 10 Ether and decreases to 5 Ether over 500 minutes. A maximum of 100 NFTs can be minted.
-* The contract uses the `onlyOne` mapping to ensure that each address can only own one NFT from our collection.  
+* The contract uses the `onlyOne` mapping to ensure that each address can only own one NFT from your collection.  
 * The contract sets the values of the start and end price, which cannot be changed later on.
 * The function `price()` uses `block.timestamp` to calculate the price of an NFT each time the `safeMint` function is called.  
 * If all the required conditions are satisfied, the wallet address gets an NFT minted.
 
-2. To compile the contract, in your project directory run:
+2. To compile the contract, in your project directory, run:
 
 ```js
 npx hardhat compile
@@ -168,9 +168,17 @@ To deploy your smart contract on the Cronos testnet, you will need some Test CRO
 
 1. In your project directory, navigate to a previously created environment file and edit it to add the following data:
 
-* `RPC_URL` - your Cronos node HTTPS endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
-* `PRIVATE_KEY` – the private key of your MetaMask wallet that has a sufficient amount of TCRO tokens. See also the [Cronos faucet](https://cronos.org/faucet).
-* `API_KEY` – a Cronos API key to verify the deployed smart contract using the cronoscan and etherscan plugins. Create an API key in the [Cronos blockchain explorer](https://docs.cronos.org/block-explorers/block-explorer-and-api-keys#creating-api-keys-on-cronoscan).
+* `RPC_URL` — your Cronos node HTTPS endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
+* `PRIVATE_KEY` — the private key of your MetaMask wallet that has a sufficient amount of TCRO tokens. See also the [Cronos faucet](https://cronos.org/faucet).
+* `API_KEY` — a Cronos API key to verify the deployed smart contract using the cronoscan and etherscan plugins. Create an API key in the [Cronos blockchain explorer](https://docs.cronos.org/block-explorers/block-explorer-and-api-keys#creating-api-keys-on-cronoscan).
+
+Example of the environment file data:
+
+```sh
+RPC_URL=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+PRIVATE_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXu7
+API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXG5
+```
 
 2. In your project directory, navigate to the Hardhat configuration file and replace the current data with the following data:
 

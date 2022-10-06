@@ -10,4 +10,4 @@ meta:
 
 This section guides you through developing applications on Cronos from scratch.
 
-Learn how to develop, deploy, and interact with Dutch auction smart contracts to [sell your NFTs](/tutorials/cronos/cronos-nft-selling-with-hardhat).
+Learn how to develop, deploy, and interact with Dutch auction smart contracts to [sell your NFTs](/tutorials/cronos/nft-dutch-auction-contract-with-hardhat).
