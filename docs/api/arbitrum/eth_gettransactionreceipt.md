@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum 
 ---
 
-# eth_getTransactionReceipt
+# Arbitrum eth_getTransactionReceipt RPC method
 
 Arbitrum API method that returns a receipt object given a transaction hash.   
 
