@@ -8,6 +8,42 @@ meta:
 
 # Release notes
 
+## Chainstack 3.5.6
+
+*October 3, 2022*
+
+### What's new
+
+**Protocols**. Ethereum [Sepolia testnet support](/operations/ethereum/networks) for full nodes.
+
+## Chainstack 3.5.5
+
+*October 3, 2022*
+
+### What's new
+
+**APIs**.
+  * [Debug and trace APIs](/operations/polygon/debug-and-trace-apis) for elastic Polygon archive nodes.
+  * [Debug and trace APIs](/operations/avalanche/debug-and-trace-apis) for elastic Avalanche archive nodes.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
+## Chainstack 3.5.1
+
+*September 15, 2022*
+
+### What's new
+
+**Protocols**. [Ethereum](/operations/ethereum/networks) consensus layer Beacon Chain support due to the Merge.
+**API**. [Ethereum consensus layer Beacon Chain API](/api/ethereum).
+**Documentation**. Beacon Chain API [reference](/api/ethereum) added to Ethereum API reference.
+
+### Bug fixes
+
+* Numerous bug fixes and stability improvements.
+
 ## Chainstack 3.5
 
 *September 12, 2022*
@@ -280,7 +316,7 @@ See also <a href="https://chainstack.com/chainstack-2-3-faster-and-better-public
 
 ### What's new
 
-* **Billing**. You can now reattempt past due payments through billing card change or directly in the activity log. The activity log also provides more information on your billing events. 
+* **Billing**. You can now reattempt past due payments through billing card change or directly in the activity log. The activity log also provides more information on your billing events.
 
 ### Bug fixes
 
