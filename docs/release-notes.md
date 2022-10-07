@@ -37,8 +37,8 @@ meta:
 ### What's new
 
 * **Protocols**. [Ethereum](/operations/ethereum/networks) consensus layer Beacon Chain support due to the Merge.
-* **APIs**. [Ethereum consensus layer Beacon Chain API](/api/ethereum).
-* **Documentation**. Beacon Chain API [reference](/api/ethereum) added to Ethereum API reference.
+* **APIs**. [Ethereum consensus layer Beacon Chain API](/api/ethereum/ethereum-api-reference).
+* **Documentation**. Beacon Chain API [reference](/api/ethereum/ethereum-api-reference) added to Ethereum API reference.
 
 ### Bug fixes
 
