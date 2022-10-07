@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_syncing
+# Avalanche eth_syncing RPC method
 
 Avalanche API method that returns an object with the sync status of the node when the node is out-of-sync and is syncing. Returns `false` when the node is already in sync.
 

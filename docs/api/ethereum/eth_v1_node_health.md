@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/node/health
+# Ethereum eth/v1/node/health RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the node health status in HTTP status codes.
 

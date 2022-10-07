@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_getStorageAt
+# Avalanche eth_getStorageAt RPC method
 
 Avalanche API method that returns the value from a storage position at a given address. 
 

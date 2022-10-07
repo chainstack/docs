@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
-# Ethereum API reference
+# Ethereum API reference guide
 
 ## Start building on Ethereum using the JSON-RPC Ethereum API
 
@@ -19,7 +19,7 @@ This page is a collection of JSON-RPC API call examples for the Ethereum API usi
 
 For a detailed description of all the available Ethereum API JSON-RPC methods, see [Ethereum JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/).
 
-## What is the Ethereum API
+## What is the Ethereum protocol API?
 
 The Ethereum API allows developers to communicate with the Ethereum blockchain to build applications.
 

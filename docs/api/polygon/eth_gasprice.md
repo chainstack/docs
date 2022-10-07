@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon 
 ---
 
-# eth_gasPrice
+# Polygon eth_gasPrice RPC method
 
 Polygon API method that returns the current gas base fee of the network. The value returned is in Wei. 
 

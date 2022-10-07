@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
-# eth_newPendingTransactionFilter
+# Ethereum eth_newPendingTransactionFilter RPC method
 
 Ethereum API method that creates a filter object to notify when new pending transactions are detected. To check if the state has changed, call [eth_getFilterChanges](/api/ethereum/eth_getfilterchanges).
 

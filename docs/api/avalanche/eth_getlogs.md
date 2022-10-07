@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_getLogs
+# Avalanche eth_getLogs RPC method
 
 Avalanche API method that returns an array of all logs matching a given filter object.
 

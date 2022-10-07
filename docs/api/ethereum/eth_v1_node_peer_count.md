@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/node/peer_count
+# Ethereum eth/v1/node/peer_count RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the number of the peers connected to the node.
 

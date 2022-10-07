@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
 ---
 
-# eth_call
+# Ethereum eth_call RPC method
 
 Ethereum API method that executes a new message call immediately without creating a transaction on the blockchain. 
 

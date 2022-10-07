@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/node/identity
+# Ethereum eth/v1/node/identity RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the data about the node's network presence.
 

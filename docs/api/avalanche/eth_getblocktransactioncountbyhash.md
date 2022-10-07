@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_getBlockTransactionCountByHash
+# Avalanche eth_getBlockTransactionCountByHash RPC method
 
 Avalanche API method that returns the number of transactions in the block matching the given block hash.  
 

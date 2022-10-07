@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum 
 ---
 
-# eth_getUncleCountByBlockHash
+# Arbitrum eth_getUncleCountByBlockHash RPC method
 
 Arbitrum API method that returns the number of uncles for the block matching the given block hash.    
 

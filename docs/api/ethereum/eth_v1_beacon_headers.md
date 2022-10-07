@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/headers
+# eth/v1/beacon/headers RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the block headers matching the given query. By default, it will fetch current head slot blocks.
 
