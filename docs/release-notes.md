@@ -14,7 +14,7 @@ meta:
 
 ### What's new
 
-**Protocols**. Ethereum [Sepolia testnet support](/operations/ethereum/networks) for full nodes.
+* **Protocols**. Ethereum [Sepolia testnet support](/operations/ethereum/networks) for full nodes.
 
 ## Chainstack 3.5.5
 
@@ -22,7 +22,7 @@ meta:
 
 ### What's new
 
-**APIs**.
+* **APIs**.
   * [Debug and trace APIs](/operations/polygon/debug-and-trace-apis) for elastic Polygon archive nodes.
   * [Debug and trace APIs](/operations/avalanche/debug-and-trace-apis) for elastic Avalanche archive nodes.
 
@@ -36,9 +36,9 @@ meta:
 
 ### What's new
 
-**Protocols**. [Ethereum](/operations/ethereum/networks) consensus layer Beacon Chain support due to the Merge.
-**API**. [Ethereum consensus layer Beacon Chain API](/api/ethereum).
-**Documentation**. Beacon Chain API [reference](/api/ethereum) added to Ethereum API reference.
+* **Protocols**. [Ethereum](/operations/ethereum/networks) consensus layer Beacon Chain support due to the Merge.
+* **APIs**. [Ethereum consensus layer Beacon Chain API](/api/ethereum).
+* **Documentation**. Beacon Chain API [reference](/api/ethereum) added to Ethereum API reference.
 
 ### Bug fixes
 

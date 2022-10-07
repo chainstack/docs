@@ -659,6 +659,7 @@ module.exports = {
                     '/blockchains/solana',
                     '/blockchains/gnosis',
                     '/blockchains/fantom',
+                    '/blockchains/cronos',
                     '/blockchains/starknet',
                     '/blockchains/harmony',
                     '/blockchains/tezos',
