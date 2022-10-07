@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon 
 ---
 
-# eth_getTransactionReceipt
+# Polygon eth_getTransactionReceipt RPC method
 
 Polygon API method that returns a receipt object given a transaction hash.   
 

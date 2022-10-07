@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_sendRawTransaction
+# Avalanche eth_sendRawTransaction RPC method
 
 Avalanche API method that creates a new message call transaction. Or contract creation for signed transactions. 
 

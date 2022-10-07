@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
 ---
 
-# eth_getUncleByBlockNumberAndIndex 
+# Ethereum eth_getUncleByBlockNumberAndIndex RPC method
 
 Ethereum API method that returns information about an uncle of a block by number and uncle index position.   
 

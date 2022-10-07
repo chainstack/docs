@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby avalanche
 ---
 
-# Avalanche API reference
+# Avalanche API reference guide
 
 ## Start building on Avalanche using the JSON-RPC Avalanche API
 
@@ -17,7 +17,7 @@ This page is a collection of JSON-RPC API call examples for the Avalanche API us
 - [eth.rb](https://github.com/q9f/eth.rb/)
 - [cURL](https://curl.se/)
 
-## What is Avalanche
+## What is Avalanche protocol?
 
 [Avalanche](https://www.avax.network/) is an EVM-compatible protocol focused on speed and scalability.
 

@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum 
 ---
 
-# eth_getBalance
+# Arbitrum eth_getBalance RPC method
 
 Arbitrum API method that returns the balance of a given account address. The value is returned in Wei. 
 

@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon 
 ---
 
-# eth_getTransactionCount
+# Polygon eth_getTransactionCount RPC method
 
 Polygon API method that returns the number of transactions sent from an address (nonce).   
 

@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/node/syncing
+# Ethereum eth/v1/node/syncing RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns if the node is synced or not and the latest slot.
 

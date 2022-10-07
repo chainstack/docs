@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon 
 ---
 
-# eth_blockNumber 
+# Polygon eth_blockNumber RPC method
 
 Polygon API method that returns the latest block number of the blockchain. 
 
