@@ -43,6 +43,9 @@ Public network:
 * [Fantom](/blockchains/fantom)
 	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
 	* Testnet
+* [Cronos](/blockchains/cronos)
+	* Mainnet. [Full and archive nodes](/operations/cronos/modes).
+	* Testnet
 * [StarkNet](/blockchains/starknet)
 	* Mainnet
 	* Testnet
