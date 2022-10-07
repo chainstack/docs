@@ -26,6 +26,7 @@ To create a project:
      * [Solana](/blockchains/solana)
      * [Gnosis Chain](/blockchains/gnosis)
      * [Fantom](/blockchains/fantom)
+     * [Cronos](/blockchains/cronos)
      * [StarkNet](/blockchains/starknet)
      * [Harmony](/blockchains/harmony)
      * [Tezos](/blockchains/tezos)
