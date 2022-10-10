@@ -8,15 +8,15 @@ meta:
 
 # Dutch auction smart contracts on Cronos with Hardhat
 
-Dutch auction is a type of an auction in which the initial price of an NFT starts at its ceiling and lowers by a small amount at set intervals. Buyers make bids at reduced prices until the end of an auction. A Dutch auction continues until either all assets are sold out or the auction time ends.
+A Dutch auction is a type of an auction in which the initial price of an NFT starts at its ceiling and lowers by a small amount at set intervals. Buyers make bids at reduced prices until the end of an auction. A Dutch auction continues until either all assets are sold out or the auction time ends.
 
-The objective of this tutorial is to make you familiar with the Cronos network, Hardhat, and the Dutch auction smart contracts. In the end of the tutorial, you can create a simple Dutch auction smart contract that help you sell your NFTs to the highest bidder.
+The objective of this tutorial is to familiarize you with the Cronos network, Hardhat, and Dutch auction smart contracts. In the end of the tutorial, you will be able to create a simple Dutch auction smart contract to help you sell your NFTs to the highest bidder.
 
 Specifically, in this tutorial, you will:
 
 * Create a Dutch auction smart contract.
 * Deploy and verify the contract on the Cronos testnet through a node deployed with Chainstack.
-* Interact with the deployed contract
+* Interact with the deployed contract.
 
 ## Prerequisites
 
@@ -63,19 +63,19 @@ In your project directory, run `npx hardhat`. Select Create a JavaScript project
 
 To complete the project, we need to install several additional dependencies.
 
-The [OpenZeppelin Contract library](https://docs.openzeppelin.com) allows to inherit smart contracts. To install it, run:
+The [OpenZeppelin Contract library](https://docs.openzeppelin.com) allows you to inherit smart contracts. To install it, run:
 
 ``` sh
 npm i @openzeppelin/contracts
 ```
 
-The [dotenv library](https://github.com/motdotla/dotenv) allows to export and keep sensitive data securely. To install it, run:
+The [dotenv library](https://github.com/motdotla/dotenv) allows you to export and keep sensitive data securely. To install it, run:
 
 ``` sh
 npm i dotenv
 ```
 
-The [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-etherscan) and [hardhat-cronoscan](https://docs.cronos.org/for-dapp-developers/cronos-smart-contract/contract-verification) plugins allow to verify your contracts on the Cronos testnet. To install them, run:
+The [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-etherscan) and [hardhat-cronoscan](https://docs.cronos.org/for-dapp-developers/cronos-smart-contract/contract-verification) plugins allow you to verify your contracts on the Cronos testnet. To install them, run:
 
 ``` sh
 npm i --save-dev @nomiclabs/hardhat-etherscan@^3.1.0 @cronos-labs/hardhat-cronoscan
@@ -170,7 +170,7 @@ To deploy your smart contract on the Cronos testnet, you will need some Test CRO
 
 * `RPC_URL` — your Cronos node HTTPS endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials).
 * `PRIVATE_KEY` — the private key of your MetaMask wallet that has a sufficient amount of TCRO tokens. See also the [Cronos faucet](https://cronos.org/faucet).
-* `API_KEY` — a Cronos API key to verify the deployed smart contract using the cronoscan and etherscan plugins. Create an API key in the [Cronos blockchain explorer](https://docs.cronos.org/block-explorers/block-explorer-and-api-keys#creating-api-keys-on-cronoscan).
+* `API_KEY` — a Cronos API key to verify the deployed smart contract using the Cronoscan and Etherscan plugins. Create an API key in the [Cronos blockchain explorer](https://docs.cronos.org/block-explorers/block-explorer-and-api-keys#creating-api-keys-on-cronoscan).
 
 Example of the environment file data:
 
@@ -245,7 +245,7 @@ main()
 npx hardhat run scripts/DeployDutch.js --network Cronos_testnet
 ```
 
-The contract will deploy and the terminal will return you the contract address. Use this address to verify and interact with your contract.
+The contract will deploy and the terminal will return the contract address. Use this address to verify and interact with your contract.
 
 ### Verify your contract on the Cronos testnet
 
@@ -257,7 +257,7 @@ npx hardhat verify --network Cronos_testnet CONTRACT_ADDRESS
 
 ### Interact with the contract
 
-Now that your contract is verified, CronoScan is effectively a front end instance for your contract.
+Now that your contract is verified, Cronoscan is effectively a front end instance for your contract.
 
 ## Conclusion
 
