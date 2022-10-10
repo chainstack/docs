@@ -38,10 +38,10 @@ where
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-For example, trace all smart contract interactions in block 30848230:
+For example, trace all smart contract interactions in block 33957809:
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["30848230", {"tracer": "callTracer"}]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["33957809", {"tracer": "callTracer"}]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
 ```
 
 ### trace_block
@@ -59,8 +59,7 @@ where
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-For example, trace all smart contract interactions in block 33957809,
-:
+For example, trace all smart contract interactions in block 33957809:
 
 ``` sh
 curl -H "Content-Type: application/json" -d '{"id": 1, "method": "trace_block", "params": ["33957809"]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
@@ -69,8 +68,7 @@ curl -H "Content-Type: application/json" -d '{"id": 1, "method": "trace_block", 
 See a reverted transaction in the output:
 
 ``` js
-{
-  "action": {
+"action": {
     "from": "0x032f37307eb1ab1f43be3408f92103c4bcfeaef7",
     "callType": "call",
     "gas": "0x2b35c",
@@ -81,8 +79,6 @@ See a reverted transaction in the output:
   "blockHash": "0x2752a9a60df086ef5bde3b07a677f4d583f337c15d8839c7596182fee036db6f",
   "blockNumber": 33957809,
   "error": "Reverted"
-}
-
 ```
 
 ::: tip See also
