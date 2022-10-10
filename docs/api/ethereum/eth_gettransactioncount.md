@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
 ---
 
-# eth_getTransactionCount
+# Ethereum eth_getTransactionCount RPC method
 
 Ethereum API method that returns the number of transactions sent from an address (nonce).   
 

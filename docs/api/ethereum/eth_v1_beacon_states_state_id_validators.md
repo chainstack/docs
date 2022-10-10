@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/states/{state_id}/validators
+# eth/v1/beacon/states/{state_id}/validators RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns a filterable list of validators with their balance, status, and index. The information is returned for all indices or public key that match known validators. If an index or public key does not match any known validator, no information will be returned but this will not cause an error. There are no guarantees for the returned data in terms of ordering; both the index and public key are returned for each validator, and can be used to confirm for which inputs a response has been returned.
 

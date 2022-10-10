@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon
 ---
 
-# eth_newPendingTransactionFilter
+# Polygon eth_newPendingTransactionFilter RPC method
 
 Polygon API method that creates a filter object to notify when new pending transactions are detected. To check if the state has changed, call [eth_getFilterChanges](/api/polygon/eth_getfilterchanges).
 

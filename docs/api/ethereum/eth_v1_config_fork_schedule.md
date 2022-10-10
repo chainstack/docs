@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/config/fork_schedule
+# Ethereum eth/v1/config/fork_schedule RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns all forks, past present and future, of which this node is aware.
 

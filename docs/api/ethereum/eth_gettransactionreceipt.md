@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
 ---
 
-# eth_getTransactionReceipt
+# Ethereum eth_getTransactionReceipt RPC method
 
 Ethereum API method that returns a receipt object given a transaction hash.   
 

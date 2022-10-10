@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/node/peers
+# Ethereum eth/v1/node/peers RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the data about the node's network peers. By default this returns all peers. Multiple query params are combined using AND conditions.
 

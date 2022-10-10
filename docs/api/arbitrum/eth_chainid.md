@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum 
 ---
 
-# eth_chainId
+# Arbitrum eth_chainId RPC method
 
 Arbitrum API method that returns the current chain ID. Chain ID is used to sign replay-protected transactions. It was introduced in [EIP-155](https://eips.ethereum.org/EIPS/eip-155). 
 

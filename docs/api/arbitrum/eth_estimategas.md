@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum 
 ---
 
-# eth_estimateGas
+# Arbitrum eth_estimateGas RPC method
 
 Arbitrum API method that returns an estimation of gas units needed for a given transaction. 
 

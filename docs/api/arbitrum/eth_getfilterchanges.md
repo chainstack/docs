@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum
 ---
 
-# eth_getFilterChanges
+# Arbitrum eth_getFilterChanges RPC method
 
 Arbitrum API polling method for a filter, which returns an array of logs which occurred since last poll.
 

@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/states/{state_id}/sync_committees
+# eth/v1/beacon/states/{state_id}/sync_committees RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given state.
 

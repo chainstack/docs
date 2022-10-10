@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/events
+# Ethereum eth/v1/events RPC method
 
 Provides endpoint to subscribe to beacon node Server-Sent-Events stream. Consumers should use the [eventsource](https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface) implementation to listen on those events.
 

@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon 
 ---
 
-# eth_estimateGas
+# Polygon eth_estimateGas RPC method
 
 Polygon API method that returns an estimation of gas units needed for a given transaction. 
 
