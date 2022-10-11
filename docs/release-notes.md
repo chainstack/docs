@@ -15,7 +15,7 @@ meta:
 ### What's new
 
 * **Protocols**. Ethereum [Sepolia testnet support](/operations/ethereum/networks) for full nodes.
-* **Documentation**. Solana API [reference](/api/solana).
+* **Documentation**. Solana API [reference](/api/solana-api-reference).
 
 ## Chainstack 3.5.5
 

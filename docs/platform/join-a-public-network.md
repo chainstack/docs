@@ -256,6 +256,7 @@ The node status will change from **Pending** to **Running** once deployed.
 * [Operations: Solana](/operations/solana/)
 * [Operations: Gnosis Chain](/operations/gnosis/)
 * [Operations: Fantom](/operations/fantom/)
+* [Operations: Cronos](/operations/cronos)
 * [Operations: StarkNet](/operations/starknet/)
 * [Operations: Harmony](/operations/harmony/)
 * [Operations: Tezos](/operations/tezos/)

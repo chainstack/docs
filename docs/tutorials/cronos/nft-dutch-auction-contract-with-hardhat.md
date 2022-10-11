@@ -20,7 +20,7 @@ Specifically, in this tutorial, you will:
 
 ## Prerequisites
 
-* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Cronos Testnet node.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Cronos testnet node.
 * [Hardhat](https://hardhat.org/docs) to compile and deploy the contract.
 * [MetaMask](https://docs.metamask.io/guide/) to interact with the contract through your Chainstack node.
 
@@ -33,7 +33,7 @@ To get from zero to deploying your own Dutch auction smart contract on the Crono
 1. With Chainstack, access your Cronos node endpoint.
 1. With Hardhat, set up your development environment.
 1. With Hardhat, create and compile your Dutch auction contract.
-1. With Metamask, fund your wallet with test CRO tokens from the [Cronos official faucet](https://cronos.org/faucet).
+1. With MetaMask, fund your wallet with test CRO tokens from the [Cronos official faucet](https://cronos.org/faucet).
 1. With Hardhat, deploy your Dutch auction contract.
 1. With [Cronos testnet explorer](https://testnet.cronoscan.com), interact with your Dutch auction contract.
 
@@ -57,7 +57,7 @@ See [Hardhat documentation](https://hardhat.org/hardhat-runner/docs/getting-star
 
 ### Initialize a Hardhat project
 
-In your project directory, run `npx hardhat`. Select Create a JavaScript project and agree to install the sample project's dependencies. This will create a sample project directory with a smart contract draft.
+In your project directory, run `npx hardhat`. Select **Create a JavaScript project** and agree to install the sample project's dependencies. This will create a sample project directory with a smart contract draft.
 
 ### Install additional dependencies
 
@@ -162,7 +162,7 @@ npx hardhat compile
 
 ### Fund your account
 
-To deploy your smart contract on the Cronos testnet, you will need some Test CRO tokens. See the [Cronos faucet](https://cronos.org/faucet).
+To deploy your smart contract on the Cronos testnet, you will need some test CRO tokens. See the [Cronos faucet](https://cronos.org/faucet).
 
 ### Set up the environment and configuration files
 
