@@ -40,7 +40,7 @@ You can debug and trace transactions by replaying them in the Ethereum Virtual M
 Trace all transactions included in a block with [debug_traceBlockByNumber](https://geth.ethereum.org/docs/rpc/ns-debug#debug_traceblockbynumber):
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER"]}' ENDPOINT
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER", {"tracer": "callTracer"}]}' ENDPOINT
 ```
 
 where

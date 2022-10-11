@@ -28,7 +28,7 @@ Note that to debug and trace transactions, you need to have historical states on
 Trace all transactions included in a block with [debug_traceBlockByNumber](https://geth.ethereum.org/docs/rpc/ns-debug#debug_traceblockbynumber):
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER"]}' ENDPOINT
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER", {"tracer": "callTracer"}]}' ENDPOINT
 ```
 
 where
@@ -38,10 +38,34 @@ where
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-For example, trace all smart contract interactions in block 33957809:
+For example, trace all smart contract interactions in block 34203213:
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["33957809", {"tracer": "callTracer"}]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["34203213", {"tracer": "callTracer"}]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+```
+See a reverted transaction in the output:
+
+``` js
+"calls": [{
+    "type": "DELEGATECALL",
+    "from": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+    "to": "0x490e379c9cff64944be82b849f8fd5972c7999a7",
+    "gas": "0x338a",
+    "gasUsed": "0x338a",
+    "input": "0xa9059cbb000000000000000000000000103e408505ddb4fcd04af781e9202749bdf5be63000000000000000000000000000000000000000000000002fb474098f67c0000",
+    "output": "0x"
+}]
+, {
+    "type": "CALL",
+    "from": "0x103872786cf534c9da5e39e432b4018fab8011aa",
+    "to": "0xc8f87f00206469c15dd9b4f1608c0845ccac9d6a",
+    "value": "0x0",
+    "gas": "0x2d6d7c",
+    "gasUsed": "0x107be",
+    "input": "0x9ddecbf6021401002710271004537f43f6add7b1b60cab199c7a910024ee05947ceb23fd6bc0add59e62ac25578270cff1b9f619150001271027100387dbd5e8504938edf4b38eacbf77a1d0394a1b2791bca1f2de4661ed88a30c99a7a9449aa8417406034724b2e0d70770bf3e2a4c694063452fe5",
+    "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023a28000000000000000000000000000000000000000000000000000000000000",
+    "error": "execution reverted"
+    }
 ```
 
 ### trace_block
