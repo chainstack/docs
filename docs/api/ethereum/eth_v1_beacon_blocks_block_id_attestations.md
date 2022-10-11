@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/blocks/{block_id}/attestations
+# eth/v1/beacon/blocks/{block_id}/attestations RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) included in requested block.
 

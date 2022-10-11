@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
 ---
 
-# eth_getLogs
+# Ethereum eth_getLogs RPC method
 
 Ethereum API method that returns an array of all logs matching a given filter object.
 

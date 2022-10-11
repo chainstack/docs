@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/states/{state_id}/finality_checkpoints
+# eth/v1/beacon/states/{state_id}/finality_checkpoints RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns [finality checkpoints](https://ethereum.org/en/glossary/#checkpoint) for the state with the given `state_id`. If the finality for the state in the call is not yet achieved, the checkpoint returns epoch 0 and ZERO_HASH as root.
 

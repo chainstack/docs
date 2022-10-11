@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum 
 ---
 
-# eth_sendRawTransaction
+# Arbitrum eth_sendRawTransaction RPC method
 
 Arbitrum API method that creates a new message call transaction. Or contract creation for signed transactions. 
 

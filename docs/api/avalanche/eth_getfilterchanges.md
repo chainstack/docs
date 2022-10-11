@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche
 ---
 
-# eth_getFilterChanges
+# Avalanche eth_getFilterChanges RPC method
 
 Avalanche API polling method for a filter, which returns an array of logs which occurred since last poll.
 

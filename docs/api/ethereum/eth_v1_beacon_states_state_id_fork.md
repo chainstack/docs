@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/states/{state_id}/fork
+# eth/v1/beacon/states/{state_id}/fork RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the Fork object for the state with the given `state_id`. See also [Fork object](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#fork) and [fork choice](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice).
 

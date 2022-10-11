@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum 
 ---
 
-# eth_getLogs
+# Arbitrum eth_getLogs RPC method
 
 Arbitrum API method that returns an array of all logs matching a given filter object.
 
