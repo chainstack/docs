@@ -26,7 +26,7 @@ Note that to debug and trace transactions, you need to have historical states on
 Trace all transactions included in a block with [debug_traceBlockByNumber](https://geth.ethereum.org/docs/rpc/ns-debug#debug_traceblockbynumber):
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER"]}' ENDPOINT
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER", {"tracer": "callTracer"}]}' ENDPOINT
 ```
 
 where
@@ -36,10 +36,10 @@ where
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-For example, trace all smart contract interactions in block 17473827:
+For example, trace all smart contract interactions in block 20922538 on the C-Chain:
 
 ``` sh
-curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["0x10AA123", {"tracer": "callTracer"}]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
+curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["0x13F40AA", {"tracer": "callTracer"}]}' https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531dext/bc/C/rpc
 ```
 
 ::: tip See also
