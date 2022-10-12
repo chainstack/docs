@@ -169,6 +169,7 @@ module.exports = {
                             '/operations/solana/',
                             '/operations/solana/networks',
                             '/operations/solana/types',
+                            '/operations/solana/modes',
                             '/operations/solana/tools',
                         ]
                     },
@@ -709,6 +710,7 @@ module.exports = {
                     '/glossary/blockchain-protocol',
                     '/glossary/bolt',
                     '/glossary/cft',
+                    '/glossary/chainstack-cloud',
                     '/glossary/cloud',
                     '/glossary/consortium-project',
                     '/glossary/consortium',
