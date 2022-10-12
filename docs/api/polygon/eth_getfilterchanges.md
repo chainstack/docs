@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon
 ---
 
-# eth_getFilterChanges
+# Polygon eth_getFilterChanges RPC method
 
 Polygon API polling method for a filter, which returns an array of logs which occurred since last poll.
 

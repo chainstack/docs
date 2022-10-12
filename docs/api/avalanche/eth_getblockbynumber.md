@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche
 ---
 
-# eth_getBlockByNumber
+# Avalanche eth_getBlockByNumber RPC method
 
 Avalanche API method that returns information about the block matching the given block number.
 

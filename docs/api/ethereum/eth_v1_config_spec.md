@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/config/spec
+# Ethereum eth/v1/config/spec RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the specification configuration used on this node.
 

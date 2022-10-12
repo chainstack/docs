@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_getTransactionByBlockNumberAndIndex
+# Avalanche eth_getTransactionByBlockNumberAndIndex RPC method
 
 Avalanche API method that returns information about a transaction given a block number and a transaction's index position.  
 

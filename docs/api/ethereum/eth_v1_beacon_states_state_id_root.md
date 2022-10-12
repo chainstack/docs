@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/states/{state_id}/root
+# eth/v1/beacon/states/{state_id}/root RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns a calculated HashTreeRoot for the state with given `state_id`. If the `state_id` value is root, the same value will be returned.
 

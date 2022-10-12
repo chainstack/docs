@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby polygon
 ---
 
-# Polygon API reference
+# Polygon API reference guide
 
 ## Start building on Polygon using the JSON-RPC Polygon API
 
@@ -17,7 +17,7 @@ This page is a collection of JSON-RPC API call examples for the Polygon API usin
 - [eth.rb](https://github.com/q9f/eth.rb/)
 - [cURL](https://curl.se/)
 
-## What is Polygon
+## What is Polygon protocol?
 
 [Polygon](https://docs.polygon.technology/docs/develop/getting-started) is an EVM-compatible sidechain, and one of Ethereum's [scaling solutions](https://chainstack.com/solving-the-blockchain-trilemma-scaling-solutions-for-ethereum/) to help reduce costs and increase efficiency.
 

@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Avalanche 
 ---
 
-# eth_gasPrice
+# Avalanche eth_gasPrice RPC method
 
 Avalanche API method that returns the current gas base fee of the network. The value returned is in Wei. 
 

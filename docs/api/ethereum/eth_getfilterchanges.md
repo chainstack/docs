@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
-# eth_getFilterChanges
+# Ethereum eth_getFilterChanges RPC method
 
 Ethereum API polling method for a filter, which returns an array of logs which occurred since last poll.
 

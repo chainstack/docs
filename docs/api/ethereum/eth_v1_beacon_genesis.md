@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/genesis
+# eth/v1/beacon/genesis RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the current chain's genesis details. This call can also be used to easily identify the chain. 
 

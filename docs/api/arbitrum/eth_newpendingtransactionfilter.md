@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum
 ---
 
-# eth_newPendingTransactionFilter
+# Arbitrum eth_newPendingTransactionFilter RPC method
 
 Arbitrum API method that creates a filter object to notify when new pending transactions are detected. To check if the state has changed, call [eth_getFilterChanges](/api/arbitrum/eth_getfilterchanges).
 

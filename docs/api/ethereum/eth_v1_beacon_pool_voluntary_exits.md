@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/pool/voluntary_exits
+# eth/v1/beacon/pool/voluntary_exits RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns voluntary exits known by the node but not necessarily incorporated into any block.
 

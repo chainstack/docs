@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/beacon/blocks/{block_id}/root
+# eth/v1/beacon/blocks/{block_id}/root RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns hashTreeRoot of [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock) and [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader).
 

@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum 
 ---
 
-# eth_mining
+# Arbitrum eth_mining RPC method
 
 Arbitrum API method that returns a boolean value referring to the node mining activity. Will return `True` if the node is actively mining new blocks. 
 

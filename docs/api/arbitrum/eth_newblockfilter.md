@@ -6,7 +6,7 @@ meta:
     content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby Arbitrum
 ---
 
-# eth_newBlockFilter
+# Arbitrum eth_newBlockFilter RPC method
 
 Arbitrum API method that creates a filter object to notify the arrival of a new block. To check if the state has changed, call [eth_getFilterChanges](/api/arbitrum/eth_getfilterchanges).
 

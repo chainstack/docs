@@ -6,7 +6,7 @@ meta:
     content: curl rest api beacon chain nimbus eth2
 ---
 
-# eth/v1/node/version
+# Ethereum eth/v1/node/version RPC method
 
 Ethereum consensus layer Beacon Chain API call that returns the version of the consensus layer node.
 
