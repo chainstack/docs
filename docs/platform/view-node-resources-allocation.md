@@ -61,13 +61,13 @@ Gnosis Chain:
 
 * Node — the CPU, memory, and storage allocated to your Gnosis Chain node.
 
-Fantom:
-
-* Node — the CPU, memory, and storage allocated to your Fantom node.
-
 Cronos:
 
 * Node — the CPU, memory, and storage allocated to your Cronos node.
+
+Fantom:
+
+* Node — the CPU, memory, and storage allocated to your Fantom node.
 
 StarkNet:
 

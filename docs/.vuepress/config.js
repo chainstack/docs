@@ -185,6 +185,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Cronos',
+                        collapsable: true,
+                        children: [
+                            '/operations/cronos/',
+                            '/operations/cronos/networks',
+                            '/operations/cronos/types',
+                            '/operations/cronos/modes',
+                            '/operations/cronos/tools',
+                        ]
+                    },
+                    {
                         title: 'Fantom',
                         collapsable: true,
                         children: [
@@ -194,17 +205,6 @@ module.exports = {
                             '/operations/fantom/modes',
                             '/operations/fantom/debug-and-trace-apis',
                             '/operations/fantom/tools',
-                        ]
-                    },
-                    {
-                        title: 'Cronos',
-                        collapsable: true,
-                        children: [
-                            '/operations/cronos/',
-                            '/operations/cronos/networks',
-                            '/operations/cronos/types',
-                            '/operations/cronos/modes',
-                            '/operations/cronos/tools',
                         ]
                     },
                     {
@@ -384,19 +384,19 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Fantom',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/fantom/',
-                            '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
-                        ]
-                    },
-                    {
                         title: 'Cronos',
                         collapsable: true,
                         children: [
                             '/tutorials/cronos/',
                             '/tutorials/cronos/nft-dutch-auction-contract-with-hardhat',
+                        ]
+                    },
+                    {
+                        title: 'Fantom',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/fantom/',
+                            '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
                         ]
                     },
                     {
@@ -687,8 +687,8 @@ module.exports = {
                     '/blockchains/aurora',
                     '/blockchains/solana',
                     '/blockchains/gnosis',
-                    '/blockchains/fantom',
                     '/blockchains/cronos',
+                    '/blockchains/fantom',
                     '/blockchains/starknet',
                     '/blockchains/harmony',
                     '/blockchains/tezos',

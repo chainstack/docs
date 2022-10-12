@@ -40,11 +40,11 @@ Public network:
 * [Gnosis Chain](/blockchains/gnosis)
 	* Mainnet. [Full and archive nodes](/operations/gnosis/modes).
 	* Sokol testnet
+* [Cronos](/blockchains/cronos)
+  * Mainnet. [Full and archive nodes](/operations/cronos/modes).
+  * Testnet
 * [Fantom](/blockchains/fantom)
 	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
-	* Testnet
-* [Cronos](/blockchains/cronos)
-	* Mainnet. [Full and archive nodes](/operations/cronos/modes).
 	* Testnet
 * [StarkNet](/blockchains/starknet)
 	* Mainnet

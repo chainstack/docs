@@ -18,7 +18,7 @@ Chainstack currently supports identity management for the following networks:
 
 ## Manage your Hyperledger Fabric identity
 
-A Hyperledger Fabric identity is a private key and a cerftificate. See Hyperledger Fabric documentation: [Identity](https://hyperledger-fabric.readthedocs.io/en/release-2.2/identity/identity.html).
+A Hyperledger Fabric identity is a private key and a certificate. See Hyperledger Fabric documentation: [Identity](https://hyperledger-fabric.readthedocs.io/en/release-2.2/identity/identity.html).
 
 A Hyperledger Fabric identity issuer is the entity issuing certificates. Chainstack supports [cryptogen](/glossary/cryptogen) or [Fabric CA](/glossary/fabric-ca) as an identity issuer.
 
@@ -66,7 +66,7 @@ To export an identity:
 1. Click **Identities** and select the identity to export.
 1. Click **Export**.
 
-This will download the identity private key and certficate files.
+This will download the identity private key and certificate files.
 
 ### Export an identity issuer
 
@@ -76,7 +76,7 @@ To export an identity issuer:
 1. Click **Issuers** and select the identity issuer to export.
 1. Click **Export**.
 
-This will download the identity issuer private key and certficate files.
+This will download the identity issuer private key and certificate files.
 
 ### Delete an identity
 

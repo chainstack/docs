@@ -137,19 +137,6 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
-## Join a Fantom network
-
-1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
-1. Under **Blockchain protocol**, select **Fantom**.
-1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
-1. Under **Type**, select whether to run an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
-1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/fantom/modes).
-1. Under **Cloud provider**, select a cloud provider and a region.
-1. Provide a node name. Click **Next**.
-1. Review your changes and click **Join network**.
-
-The node status will change from **Pending** to **Running** once deployed.
-
 ## Join a Cronos network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
@@ -157,6 +144,19 @@ The node status will change from **Pending** to **Running** once deployed.
 1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
 1. Under **Type**, select whether to run an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
 1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/cronos/modes).
+1. Under **Cloud provider**, select a cloud provider and a region.
+1. Provide a node name. Click **Next**.
+1. Review your changes and click **Join network**.
+
+The node status will change from **Pending** to **Running** once deployed.
+
+## Join a Fantom network
+
+1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
+1. Under **Blockchain protocol**, select **Fantom**.
+1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
+1. Under **Type**, select whether to run an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
+1. Under **Mode**, select whether to run a full node or an archive node. See [Modes](/operations/fantom/modes).
 1. Under **Cloud provider**, select a cloud provider and a region.
 1. Provide a node name. Click **Next**.
 1. Review your changes and click **Join network**.
@@ -255,8 +255,8 @@ The node status will change from **Pending** to **Running** once deployed.
 * [Operations: Aurora](/operations/aurora/)
 * [Operations: Solana](/operations/solana/)
 * [Operations: Gnosis Chain](/operations/gnosis/)
-* [Operations: Fantom](/operations/fantom/)
 * [Operations: Cronos](/operations/cronos)
+* [Operations: Fantom](/operations/fantom/)
 * [Operations: StarkNet](/operations/starknet/)
 * [Operations: Harmony](/operations/harmony/)
 * [Operations: Tezos](/operations/tezos/)
