@@ -185,6 +185,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Cronos',
+                        collapsable: true,
+                        children: [
+                            '/operations/cronos/',
+                            '/operations/cronos/networks',
+                            '/operations/cronos/types',
+                            '/operations/cronos/modes',
+                            '/operations/cronos/tools',
+                        ]
+                    },
+                    {
                         title: 'Fantom',
                         collapsable: true,
                         children: [
@@ -370,6 +381,14 @@ module.exports = {
                         children: [
                             '/tutorials/gnosis/',
                             '/tutorials/gnosis/simple-soulbound-token-with-remix-and-openzeppelin',
+                        ]
+                    },
+                    {
+                        title: 'Cronos',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/cronos/',
+                            '/tutorials/cronos/nft-dutch-auction-contract-with-hardhat',
                         ]
                     },
                     {
@@ -668,6 +687,7 @@ module.exports = {
                     '/blockchains/aurora',
                     '/blockchains/solana',
                     '/blockchains/gnosis',
+                    '/blockchains/cronos',
                     '/blockchains/fantom',
                     '/blockchains/starknet',
                     '/blockchains/harmony',

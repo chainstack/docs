@@ -745,7 +745,7 @@ brownie networks add "BNB Smart Chain" ID name="NETWORK_NAME" host=ENDPOINT chai
 where
 
 * ID — any name that you will use as the network tag to run a deployment. For example, `bsc-mainnet`.
-* NETWORK_NAME — any name that you want to identify the network by in the list if networks. For example, **Mainnet (Chainstack)**.
+* NETWORK_NAME — any name that you want to identify the network by in the list of networks. For example, **Mainnet (Chainstack)**.
 * ENDPOINT — your node HTTPS or WSS endpoint.
 * NETWORK_ID — BNB Smart Chain network ID:
   * Mainnet: `56`
@@ -795,7 +795,7 @@ where
 
 * CONTRACT_NAME — name of the contract in the Solidity source code.
 * CONTRACT_PATH — path to your smart contract.
-* PRIVATE_KEY — the private to your funded account that you will use to deploy the contract.
+* PRIVATE_KEY — the private key to your funded account that you will use to deploy the contract.
 * ENDPOINT — your node HTTPS endpoint.
 
 Example to deploy the [simple storage](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html) contract:

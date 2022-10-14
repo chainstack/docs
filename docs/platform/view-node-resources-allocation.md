@@ -41,13 +41,17 @@ Avalanche:
 
 * Node — the CPU, memory, and storage allocated to your Avalanche node.
 
+Arbitrum:
+
+* Node — the CPU, memory, and storage allocated to your Arbitrum node.
+
 NEAR:
 
 * Node — the CPU, memory, and storage allocated to your NEAR node.
 
-Fantom:
+Aurora:
 
-* Node — the CPU, memory, and storage allocated to your Fantom node.
+* Node — the CPU, memory, and storage allocated to your Aurora node.
 
 Solana:
 
@@ -56,6 +60,14 @@ Solana:
 Gnosis Chain:
 
 * Node — the CPU, memory, and storage allocated to your Gnosis Chain node.
+
+Cronos:
+
+* Node — the CPU, memory, and storage allocated to your Cronos node.
+
+Fantom:
+
+* Node — the CPU, memory, and storage allocated to your Fantom node.
 
 StarkNet:
 
