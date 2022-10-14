@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to deploy, operate, and develop on Ethereum, Polygon, BNB Smart Chain, Avalanche, Fantom, Solana, Harmony, StarkNet, Tezos, Bitcoin, Hyperledger Fabric, Corda, Quorum, MultiChain.
   - name: keywords
-    content: corda hyperledger quorum multichain ethereum bitcoin polygon tezos bsc binance fantom ftm avax avalanche solana harmony starknet
+    content: corda hyperledger quorum multichain ethereum bitcoin polygon tezos bsc binance cronos fantom ftm avax avalanche solana harmony starknet
 ---
 
 # Introduction
