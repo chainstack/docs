@@ -19,7 +19,7 @@ With a full node, you can query the historical state of the NEAR mainnet at only
 
 To be able to query the historical state of the NEAR mainnet at any block, you need an archive node.
 
-See [Aurora JSON-RPC methods](https://doc.aurora.dev/compat/rpc/) that support querying at a block number.
+See [Aurora JSON-RPC methods](https://doc.aurora.dev/evm/rpc) that support querying at a block number.
 
 ::: tip See also
 
