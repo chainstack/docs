@@ -1,0 +1,4 @@
+exclude:
+  - master
+  - prod
+delete_closed_pr: true
