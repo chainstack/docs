@@ -10,9 +10,16 @@ workflows:
             branches:
               only:
                 - /(feature|bug|hotfix|release)\/.*/
+      - check_release_notes_updated:
+          context: "dev.chainstack | GCP"
+          filters:
+            branches:
+              only:
+                - /(feature|bug|hotfix|release)\/.*/
       - test:
           requires:
             - check_if_version_updated
+            - check_release_notes_updated
           filters:
             branches:
               only:
@@ -169,6 +176,17 @@ jobs:
           name: Check if VERSION was updated
           command: |
             git diff --quiet master..${CIRCLE_BRANCH} VERSION && exit 99 || echo "Seems updated"
+
+  check_release_notes_updated:
+    working_directory: /home/circleci/project
+    docker:
+      - image: circleci/node:16
+    steps:
+      - checkout
+      - run:
+          name: Check if Release Notes was updated
+          command: |
+            git diff --quiet master..${CIRCLE_BRANCH} docs/release-notes.md && exit 99 || echo "Seems updated"
 
   build_dev_image:
     <<: *build_image
