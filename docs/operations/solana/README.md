@@ -10,4 +10,4 @@ meta:
 
 This section outlines the fundamentals of and operations for Solana.
 
-Learn about [the supported networks](/operations/solana/networks) and how to [interact with your node](/operations/solana/tools).
+Learn about [the supported networks](/operations/solana/networks), [difference between full and archive node modes](/operations/solana/modes), and how to [interact with your node](/operations/solana/tools).

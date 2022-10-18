@@ -13,6 +13,7 @@ Deployment of the node on a public cloud such as Amazon Web Services, Microsoft 
 ::: tip See also
 
 * [Supported cloud providers](/platform/supported-cloud-hosting-providers)
+* [Chainstack Cloud](/glossary/chainstack-cloud)
 * [Cross cloud](/glossary/cross-cloud)
 
 :::

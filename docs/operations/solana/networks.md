@@ -17,6 +17,7 @@ For development purposes on the devnet, use [the Solana faucet](https://solfauce
 
 ::: tip See also
 
+* [Modes](/operations/solana/modes)
 * [Tools](/operations/solana/tools)
 * [Tutorials](/tutorials/solana/)
 

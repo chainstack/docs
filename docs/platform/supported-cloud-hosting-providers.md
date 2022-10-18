@@ -12,6 +12,7 @@ Chainstack currently supports the following cloud providers:
 
 * Amazon Web Services
 * Microsoft Azure
+* [Chainstack Cloud](/glossary/chainstack-cloud) (currently, for the [Solana mainnet](/operations/solana) only)
 * Google Cloud Platform
 * Virtuozzo
 

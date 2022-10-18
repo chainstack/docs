@@ -12,6 +12,7 @@ Deployment of nodes of the same network in multiple Chainstack-provided cloud ho
 
 ::: tip See also
 
+* [Chainstack Cloud](/glossary/chainstack-cloud)
 * [Supported cloud providers](/platform/supported-cloud-hosting-providers)
 
 :::

@@ -9,6 +9,32 @@ meta:
 
 # Release notes
 
+## Chainstack 3.5.8
+
+ *October 14, 2022*
+
+### What's new
+
+* **Protocols**. [Cronos](/operations/cronos/networks) support.
+* **Documentation**. [Cronos](/operations/cronos).
+
+## Chainstack 3.5.7
+
+*October 12, 2022*
+
+### What's new
+
+* **Clouds**. You can now deploy your elastics Solana nodes using the new hosting option—[Chainstack Cloud](/glossary/chainstack-cloud) in the Netherlands region.
+
+## Chainstack 3.5.6
+
+*October 3, 2022*
+
+### What's new
+
+* **Protocols**. Ethereum [Sepolia testnet support](/operations/ethereum/networks) for full nodes.
+* **Documentation**. Solana API [reference](/api/solana/solana-api-reference).
+
 ## Chainstack 3.5.5
 
 *October 3, 2022*

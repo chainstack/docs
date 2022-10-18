@@ -12,6 +12,7 @@ Chainstack currently supports deploying a Solana node of the [elastic type](/glo
 
 ::: tip See also
 
+* [Modes](/operations/solana/modes)
 * [Tools](/operations/solana/tools)
 * [Tutorials](/tutorials/solana/)
 
