@@ -50,5 +50,8 @@ curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlo
 * [Modes](/operations/avalanche/modes)
 * <a href="https://support.chainstack.com/hc/en-us/articles/900003400806-Tracing-EVM-transactions" target="_blank">Tracing EVM transactions</a>
 * <a href="https://chainstack.com/evm-nodes-a-dive-into-the-full-vs-archive-mode/" target="_blank">EVM nodes: A dive into the full vs. archive mode </a>
+* <a href="https://docs.avax.network/apis/avalanchego/apis" target="_blank">AvalancheGo API documentation</a>
+
+
 
 :::
