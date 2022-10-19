@@ -8,9 +8,10 @@ meta:
 
 # Debug and trace APIs
 
-You can deploy an [elastic](/glossary/elastic-node) Avalanche archive node with the enabled debug and trace APIs starting from the <a href="https://chainstack.com/pricing/" target="_blank">Business plan</a> as the Geth [client implementation](/operations/ethereum/clients).
+You can deploy an [elastic](/glossary/elastic-node) Avalanche archive node with debug and trace APIs enabled as an AvalancheGo client, which is the Go language implementation of an Avalanche node. Avalanche offers an identical API interface to [Geth's API](https://geth.ethereum.org/docs/rpc/server), but with a limited set of services that include `debug_trace*`. 
 
-For the full list of the available debug and trace API methods, see [Debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug).
+For a full list of the Geth debug API methods, see the [Debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug) section of the Geth documentation.
+
 
 You can deploy [dedicated](/glossary/dedicated-node) Avalanche nodes starting from the <a href="https://chainstack.com/pricing/" target="_blank">Business plan</a>.
 
