@@ -58,7 +58,7 @@ workflows:
           context: "CITool"
           requires:
             - build_prod_image
-  
+
   deploy_after_create_release:
     jobs:
       - hold_deploy_prod:
@@ -116,9 +116,11 @@ _job_deploy: &deploy
        name: Rolling out the service
        command: |
         set -x
+        IMAGE_TAG_SALT=`printf '%s\n' "${!IMAGE_TAG_SALT}"`
+        IMAGE_TAG="`printf '%s\n' "${!IMAGE_TAG}" | sed -e "s:/:_:g"`${IMAGE_TAG_SALT}"
         helm3 upgrade docs cs/chainstack-docs \
           --install --wait --timeout 180s \
-          --set image.tag=${CIRCLE_SHA1},ingress.host=${DOCS_HOSTNAME},project=${GOOGLE_PROJECT_ID},auth.enabled=${AUTH_ENABLED}
+          --set image.tag=${IMAGE_TAG},ingress.host=${DOCS_HOSTNAME},project=${GOOGLE_PROJECT_ID},auth.enabled=${AUTH_ENABLED}
         sleep 10 # TODO: Implement k8s jobs for Post-deploy
         helm3 status docs
 
@@ -140,6 +142,9 @@ _job_build_image: &build_image
        name: Build image
        command: |
          set -x
+         IMAGE_NAME=${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}
+         IMAGE_TAG_SALT=`printf '%s\n' "${!IMAGE_TAG_SALT}"`
+         IMAGE_TAG="`printf '%s\n' "${!IMAGE_TAG}" | sed -e "s:/:_:g"`${IMAGE_TAG_SALT}"
          docker build \
            --build-arg CONSOLE_HOSTNAME=${HOSTNAME} \
            --build-arg WEBSITE_HOSTNAME=${WEBSITE_HOSTNAME} \
@@ -147,9 +152,8 @@ _job_build_image: &build_image
            --build-arg ALGOLIA_KEY=${ALGOLIA_KEY} \
            --build-arg GA_ID=${GA_ID} \
            -t ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} .
-         docker tag ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
-         docker tag ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:latest
-         docker push -a ${GOOGLE_GCR_HOSTNAME}/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}
+         docker tag ${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1} ${IMAGE_NAME}:${IMAGE_TAG}
+         docker push ${IMAGE_NAME} -a
     - persist_to_workspace: # We need to store build tag from this job
         root: workflow_context
         paths:
@@ -159,6 +163,9 @@ jobs:
   test:
     docker:
       - image: circleci/node:16
+    environment:
+      IMAGE_TAG: "CIRCLE_BRANCH"
+      IMAGE_TAG_SALT: "CIRCLE_SHA1"
     steps:
       - checkout
       - run:
@@ -186,6 +193,9 @@ jobs:
     working_directory: /home/circleci/project
     docker:
       - image: circleci/node:16
+    environment:
+      IMAGE_TAG: "CIRCLE_BRANCH"
+      IMAGE_TAG_SALT: "CIRCLE_SHA1"
     steps:
       - checkout
       - run:
@@ -194,9 +204,15 @@ jobs:
             git diff --quiet master..${CIRCLE_BRANCH} docs/release-notes.md && exit 99 || echo "Seems updated"
 
   build_dev_image:
+    environment:
+      IMAGE_TAG: "CIRCLE_BRANCH"
+      IMAGE_TAG_SALT: "CIRCLE_SHA1"
     <<: *build_image
   
   deploy_dev:
+    environment:
+      IMAGE_TAG: "CIRCLE_BRANCH"
+      IMAGE_TAG_SALT: "CIRCLE_SHA1"
     <<: *deploy
   
   rerun_related_workflows:
@@ -213,6 +229,9 @@ jobs:
             /root/.poetry/bin/poetry run python -m citool webhook rerun-related-workflows --git-repo chainstack/docs --git-target-branch master --ci-project ${CIRCLE_PROJECT_REPONAME} --ci-username ${CIRCLE_PROJECT_USERNAME}
 
   build_prod_image:
+    environment:
+      IMAGE_TAG: "CIRCLE_BUILD_NUM"
+      IMAGE_TAG_SALT: "EMPTY"
     <<: *build_image
   
   create_release_tag:
@@ -232,4 +251,7 @@ jobs:
             /root/.poetry/bin/poetry run python -m citool release create --git-repo chainstack/docs --git-target-branch master --build-num ${BUILD_TAG}
 
   deploy_prod:
+    environment:
+      IMAGE_TAG: "CIRCLE_TAG"
+      IMAGE_TAG_SALT: "EMPTY"
     <<: *deploy
