@@ -32,3 +32,4 @@ See:
 * [Polygon API reference](/api/polygon/polygon-api-reference).
 * [Avalanche API reference](/api/avalanche/avalanche-api-reference).
 * [Arbitrum API reference](/api/arbitrum/arbitrum-api-reference).
+* [Solana API reference](/api/solana/solana-api-reference).

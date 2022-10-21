@@ -24,7 +24,7 @@ meta:
 
 ### What's new
 
-* **Clouds**. You can now deploy your elastics Solana nodes using the new hosting option—[Chainstack Cloud](/glossary/chainstack-cloud) in the Netherlands region.
+* **Clouds**. You can now deploy your elastic Solana nodes using the new hosting option, [Chainstack Cloud](/glossary/chainstack-cloud), in the Netherlands region.
 
 ## Chainstack 3.5.6
 
