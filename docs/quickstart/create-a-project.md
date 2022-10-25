@@ -24,6 +24,7 @@ To create a project:
      * [NEAR](/blockchains/near)
      * [Aurora](/blockchains/aurora)
      * [Solana](/blockchains/solana)
+     * [Aptos](/blockchains/aptos)
      * [Gnosis Chain](/blockchains/gnosis)
      * [Cronos](/blockchains/cronos)
      * [Fantom](/blockchains/fantom)

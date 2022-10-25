@@ -174,6 +174,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Aptos',
+                        collapsable: true,
+                        children: [
+                            '/operations/aptos/',
+                            '/operations/aptos/networks',
+                            '/operations/aptos/types',
+                            '/operations/aptos/modes',
+                            '/operations/aptos/tools',
+                        ]
+                    },
+                    {
                         title: 'Gnosis Chain',
                         collapsable: true,
                         children: [
@@ -687,6 +698,7 @@ module.exports = {
                     '/blockchains/near',
                     '/blockchains/aurora',
                     '/blockchains/solana',
+                    '/blockchains/aptos',
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
                     '/blockchains/fantom',
