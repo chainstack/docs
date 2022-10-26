@@ -20,6 +20,7 @@ This section covers the blockchain essentials for the protocols supported by Cha
 * [Operations: NEAR](/operations/near/)
 * [Operations: Aurora](/operations/aurora/)
 * [Operations: Solana](/operations/solana/)
+* [Operations: Aptos](/operations/aptos/)
 * [Operations: Gnosis Chain](/operations/gnosis/)
 * [Operations: Cronos](/operations/cronos/)
 * [Operations: Fantom](/operations/fantom/)
