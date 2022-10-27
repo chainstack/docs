@@ -218,7 +218,7 @@ jobs:
   rerun_related_workflows:
     working_directory: /app
     docker:
-      - image: chainstack/citool:v2.1.1
+      - image: chainstack/citool:v2.2.0
     steps:
       - setup_remote_docker:
           version: 20.10.14
@@ -237,7 +237,7 @@ jobs:
   create_release_tag:
     working_directory: /app
     docker:
-      - image: chainstack/citool:v2.1.1
+      - image: chainstack/citool:v2.2.0
     steps:
       - attach_workspace:
           at: /tmp/workflow_context  # we need to get build tag from previous job
