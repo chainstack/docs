@@ -15,8 +15,8 @@ Chainstack supports joining the following Aptos networks:
 
 ::: tip See also
 
-* [Modes](/operations/cronos/modes)
-* [Tools](/operations/cronos/tools)
-* [Tutorials](/tutorials/cronos/)
+* [Modes](/operations/aptos/modes)
+* [Tools](/operations/aptos/tools)
+* [Tutorials](/tutorials/aptos/)
 
 :::

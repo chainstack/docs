@@ -388,6 +388,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Aptos',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/aptos/',
+                            '/tutorials/aptos/publish-module-to-save-and-retrieve-message-on-aptos',
+                        ]
+                    },
+                    {
                         title: 'Gnosis Chain',
                         collapsable: true,
                         children: [

@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn the blockchain essentials of public and consortium networks. Learn how the networks operate and reach consensus.
   - name: keywords
-    content: ethereum polygon bsc binance avax avalanche fantom tezos bitcoin hlf hyperledger fabric corda quorum multichain
+    content: ethereum polygon bsc binance avax avalanche fantom tezos bitcoin hlf hyperledger fabric corda quorum multichain solana aptos cronos near
 ---
 
 # Introduction
