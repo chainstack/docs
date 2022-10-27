@@ -396,6 +396,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Aurora',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/aurora/',
+                            '/tutorials/aurora/simple-on-chain-governance-with-remix-and-openzeppelin-wizard',
+                        ]
+                    },
+                    {
                         title: 'Gnosis Chain',
                         collapsable: true,
                         children: [
