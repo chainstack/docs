@@ -8,7 +8,7 @@ meta:
 
 # Publish a module to save and retrieve a message on Aptos
 
-Aptos uses its own terminology for wide-known web3 entities. Smart contracts are called *Modules* and are written in the [Move language](https://move-language.github.io/move/). Modules are also not deployed but *published* on the Aptos chain.
+Aptos uses its own terminology for widely-known web3 entities. Smart contracts are called *Modules* and are written in the [Move language](https://move-language.github.io/move/). Modules are also not deployed but *published* on the Aptos chain.
 
 The objective of this tutorial is to familiarize you with the Aptos network, the Move language and modules written in it. In the end of this tutorial, you will be able to publish, test, and interact with Move modules in Aptos.
 
@@ -22,7 +22,7 @@ Specifically, in this tutorial, you will:
 ##  Prerequisites
 
 * [Chainstack account](https://console.chainstack.com/) to deploy an Aptos node.
-* [Martian Aptos wallet](https://martianwallet.xyz/) to receive testnet APT.
+* [Martian Aptos wallet](https://martianwallet.xyz/) to receive testnet Aptos token (APT).
 * [Aptos CLI](https://github.com/aptos-labs/aptos-core) to compile, publish, and interact with the Move module.
 
 ## Overview
