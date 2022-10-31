@@ -1,14 +1,14 @@
 ---
 meta:
   - name: description
-    content: Aptos is a layer 1 novel chain created using Move, which is a Rust-based computer programming language.
+    content: Aptos is a layer 1 chain that uses Move, which is a Rust-based programming language.
   - name: keywords
     content: aptos blockchain move pos
 ---
 
 # Aptos
 
-Aptos is a permissionless non-EVM compatible layer 1 novel chain created using [Move](https://move-language.github.io/move/), which is a Rust-based computer programming language.
+Aptos is a permissionless non-EVM compatible layer 1 chain that uses [Move](https://move-language.github.io/move/), which is a Rust-based programming language.
 
 ## Consensus
 

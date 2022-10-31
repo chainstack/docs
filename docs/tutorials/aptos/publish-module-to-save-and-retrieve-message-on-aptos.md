@@ -8,7 +8,7 @@ meta:
 
 # Publish a module to save and retrieve a message on Aptos
 
-Aptos uses its own terminology for widely-known web3 entities. Smart contracts are called *Modules* and are written in the [Move language](https://move-language.github.io/move/). Modules are also not deployed but *published* on the Aptos chain.
+Aptos uses its own terminology for widely-known Web3 entities. Smart contracts are called *Modules* and are written in the [Move language](https://move-language.github.io/move/). Modules are also not deployed but *published* on the Aptos chain.
 
 The objective of this tutorial is to familiarize you with the Aptos network, the Move language and modules written in it. In the end of this tutorial, you will be able to publish, test, and interact with Move modules in Aptos.
 
@@ -40,7 +40,7 @@ To get from zero to publishing your string via the module to Aptos testnet, do t
 1. Create a module in the Move language.
 1. Compile and test the Move module.
 1. Publish the Move module.
-1. Save and retrieve a message on the Aptos chain
+1. Save and retrieve a message on the Aptos chain.
 
 ## Step-by-step
 
@@ -72,7 +72,7 @@ You need the Aptos CLI to interact with your Move module. Set up the [Aptos CLI]
 
 1. In your project directory, run `aptos init` > `custom`.
    This will start a configuration process, during which you need to set up your Chainstack endpoint and Martian wallet private key. Adding the private key will retrieve your Aptos public address automatically.
-1. Add your [Chainstack endpoint](/platform/view-node-access-and-credentials). Paste your Aptos node endpoint deployed with Chainstack, for example: `https://nd-123-456-789.int.chainstack.com/`.
+1. Add your [Chainstack endpoint](/platform/view-node-access-and-credentials). Paste your Aptos node endpoint deployed with Chainstack, for example: `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`.
 1. At the faucet URL request, type `skip` since you have already funded your account on the previous step.
 1. Paste your Martian wallet private key to finish configuring your project.
    The key is used to send transactions and retrieve your public address. Example of a successful result:
