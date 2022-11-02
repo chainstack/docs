@@ -35,8 +35,8 @@ To get from zero to publishing your string via the module to Aptos testnet, do t
 1. Set up your Martian wallet to work through the Chainstack Aptos node.
 1. Fund your account through the [Aptos testnet faucet](https://aptoslabs.com/testnet-faucet).
 1. Install the [Aptos CLI](https://aptos.dev/cli-tools/aptos-cli-tool/install-aptos-cli).
+1. Create a Move project.
 1. Create and configure your Aptos project.
-1. Create a Move project inside your Aptos project.
 1. Create a module in the Move language.
 1. Compile and test the Move module.
 1. Publish the Move module.
@@ -68,27 +68,9 @@ Your account needs to pay fees in testnet APT to publish the module and interact
 
 You need the Aptos CLI to interact with your Move module. Set up the [Aptos CLI](https://aptos.dev/cli-tools/aptos-cli-tool/install-aptos-cli).
 
-### Create and configure an Aptos project
-
-1. In your project directory, run `aptos init` > `custom`.
-   This will start a configuration process, during which you need to set up your Chainstack endpoint and Martian wallet private key. Adding the private key will retrieve your Aptos public address automatically.
-1. Add your [Chainstack endpoint](/platform/view-node-access-and-credentials). Paste your Aptos node endpoint deployed with Chainstack, for example: `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`.
-1. At the faucet URL request, type `skip` since you have already funded your account on the previous step.
-1. Paste your Martian wallet private key to finish configuring your project.
-   The key is used to send transactions and retrieve your public address. Example of a successful result:
-
-```sh
-Aptos CLI is now set up for account ...4474 as profile default!  Run `aptos --help` for more information about commands
-{
-  "Result": "Success"
-}
-```
-
-As a result, you get a `.aptos` directory with a `config.yaml` file inside it. In `config.yaml`, you will find your project setup.
-
 ### Create a Move project
 
-1. In your `.aptos` directory, create a Move module:
+1. In your project directory, create a Move project:
 
    ```sh
    aptos move init --name save-message
@@ -129,9 +111,27 @@ Note that packages have one-time names. If you want to re-publish the package, y
 
 :::
 
+### Create and configure an Aptos project
+
+1. In your project directory, run `aptos init` > `custom`.
+   This will start a configuration process, during which you need to set up your Chainstack endpoint and Martian wallet private key. Adding the private key will retrieve your Aptos public address automatically.
+1. Add your [Chainstack endpoint](/platform/view-node-access-and-credentials). Paste your Aptos node endpoint deployed with Chainstack, for example: `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`.
+1. At the faucet URL request, type `skip` since you have already funded your account on the previous step.
+1. Paste your Martian wallet private key to finish configuring your project.
+   The key is used to send transactions and retrieve your public address. Example of a successful result:
+
+```sh
+Aptos CLI is now set up for account ...4474 as profile default!  Run `aptos --help` for more information about commands
+{
+  "Result": "Success"
+}
+```
+
+As a result, you get a `.aptos` directory with a `config.yaml` file inside it. In `config.yaml`, you will find your project setup.
+
 ### Create a Move module
 
-Navigate to your Move project directory and go to the `sources` directory. Create your Move module file `message.move` which allows you to call the `set_message` function and save a string on-chain:
+In your Move project directory, navigate to the `sources` directory. Create your Move module file `message.move` which allows you to call the `set_message` function and save a string on-chain:
 
 ```javascript
 module dev::message {

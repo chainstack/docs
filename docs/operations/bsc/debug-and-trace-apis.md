@@ -8,11 +8,13 @@ meta:
 
 # Debug and trace APIs
 
+An elastic BNB Smart Chain archive node is deployed as the Erigon [client implementation](/operations/ethereum/clients) and has the  `debug_*` and `trace_*` API methods enabled.
+
 A dedicated BNB Smart Chain full node is deployed as the Geth [client implementation](/operations/ethereum/clients) and has the `debug_*` API methods enabled.
 
 A dedicated BNB Smart Chain archive node is deployed as the Erigon [client implementation](/operations/ethereum/clients) and has the  `debug_*` and `trace_*` API methods enabled.
 
-You can deploy [dedicated](/glossary/dedicated-node) BNB Smart Chain nodes starting from the <a href="https://chainstack.com/pricing/" target="_blank">Business plan</a>.
+You can deploy [elastic](/glossary/elastic-node) and [dedicated](/glossary/dedicated-node) BNB Smart Chain nodes starting from the <a href="https://chainstack.com/pricing/" target="_blank">Business plan</a>.
 
 ## Usage examples
 
