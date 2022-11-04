@@ -8,7 +8,15 @@ meta:
 
 # Release notes
 
-## Chainstack 3.5.8
+## Chainstack 3.6.1
+
+ *November 3, 2022*
+
+### What's new
+
+* **Protocols**. [Solana](/operations/solana/networks) elastic and dedicated full nodes now supported on both mainnet and devnet when using Chainstack Cloud in the Ashburn, USA region.
+
+## Chainstack 3.6
 
  *October 14, 2022*
 
