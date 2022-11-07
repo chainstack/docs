@@ -8,6 +8,16 @@ meta:
 
 # Release notes
 
+## Chainstack 3.7
+
+ *November 7, 2022*
+
+### What's new
+- **Protocols**. [Aurora](/operations/aurora/types) support for dedicated nodes.
+- **Documentation**. A simple on-chain governance tutorial for [Aurora](/tutorials/aurora).
+
+
+
 ## Chainstack 3.6.1
 
  *November 3, 2022*
