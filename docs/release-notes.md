@@ -13,8 +13,8 @@ meta:
  *November 7, 2022*
 
 ### What's new
-- **Aurora**. Support for dedicated nodes and for writing transactions.
-- **Documentation**. [Aurora tutorial](/tutorials/aurora).
+- **Protocols**. [Aurora](/operations/aurora/types) support for dedicated nodes.
+- **Documentation**. A simple on-chain governance tutorial for [Aurora](/tutorials/aurora).
 
 
 
