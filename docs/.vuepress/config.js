@@ -57,6 +57,7 @@ module.exports = {
                     '/platform/delete-a-network',
                     '/platform/delete-a-project',
                     '/platform/manage-your-organization-identities',
+                    '/platform/manage-your-organization-subscription-and-support-plan',
                     '/platform/manage-your-organization-integrations',
                     '/platform/view-your-organization-vault',
                     '/platform/view-activity-log',
