@@ -8,6 +8,16 @@ meta:
 
 # Release notes
 
+## Chainstack 3.7
+
+ *November 7, 2022*
+
+### What's new
+- **Aurora**. Support for dedicated nodes and for writing transactions.
+- **Documentation**. [Aurora tutorial](/tutorials/aurora).
+
+
+
 ## Chainstack 3.6.1
 
  *November 3, 2022*
