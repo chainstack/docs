@@ -26,7 +26,7 @@ Currently, Chainstack support levels are distributed between subscription plans 
 | Business     | Standard         | Professional or Premium for an extra charge | Standard or Professional |
 | Enterprise   | Standard         | Professional or Premium for an extra charge | Standard or Professional |
 
-## Changing your subscription plan level
+## Changing your subscription plan
 
 To change your subscription plan:
 
