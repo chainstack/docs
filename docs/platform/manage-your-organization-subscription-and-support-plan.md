@@ -1,21 +1,21 @@
 ---
 meta:
   - name: description
-    content: Change your organization's subscription and support plans
+    content: Change your organization's subscription plan and support level
   - name: keywords
     content: subscription support manage downgrade upgrade
 ---
 
-# Manage your organization subscription and support plan
+# Manage your organization subscription plan and support level
 
 You can manage two major options of your organization billing:
 
 *	Your subscription plan
-*	Your support plan
+*	Your support level
 
-Chainstack offers 4 types of [subscription plans](https://chainstack.com/pricing/) which differ depending on your Web3 objectives. The final price of each subscription is made up of a base charge for the features included and the number of API requests made through your deployed nodes.
+Chainstack offers four types of <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a> which differ depending on your Web3 objectives. The final price of each subscription plan is made up of a base charge for the features included and the number of API requests made to your deployed nodes.
 
-Each subscription level also has a default support plan option included into it. You can change your subscription plan any time, while the support plan can be changed only for paid subscriptions. Switching between subscription and support plans occurs independently from each other.
+Each subscription plan also has a default support level included into it. You can change your subscription plan any time, while the support level can be changed only for paid subscriptions. Switching between subscription plans and support levels occurs independently from each other.
 
 Currently, Chainstack support levels are distributed between subscription plans as follows:
 
@@ -37,13 +37,13 @@ To change your subscription plan:
 
 Your subscription plan changes immediately. Funds for the unused period of your previous subscription will be automatically returned to your balance. You will also be billed for any uninvoiced metered usage during the used period of your previous subscription.
 
-## Changing your support plan level
+## Changing your support level
 
-To change your support plan:
+To change your support level:
 
 1.	Navigate to your account **Settings** > **Billing**.
 2.	Next to **Support level**, click **Change**.
-3.	Select a new support plan and click **Next**.
-4.	Check the details of your new support plan and click **Confirm**.
+3.	Select a new support level and click **Next**.
+4.	Check the details of your new support level and click **Confirm**.
 
-Your support plan changes immediately. Funds that you haven’t spent during your previous upgrade option will be automatically used as a part of your new subscription plan charge if it’s Professional or returned to your balance if you have switched to Standard.
+Your support level changes immediately. Funds that you haven’t spent during your previous upgrade option will be automatically used as a part of your new support level charge if it’s Professional or returned to your balance if you have switched to Standard.
