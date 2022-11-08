@@ -15,7 +15,7 @@ meta:
 ### What's new
 
 * **Support levels management**. You can now change a support level for your organization on the **Settings** > **Billing** page.
-* **Documentation**. Learn how to [change your support level or subscription plan](/platform/manage-your-organization-subscription-and-support-plan).
+* **Documentation**. Learn how to [change your support level or subscription plan](/platform/manage-your-organization-subscription-plan-and-support-level).
 
 ## Chainstack 3.7
 
