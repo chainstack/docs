@@ -13,18 +13,18 @@ You can manage two major options of your organization billing:
 *	Your subscription plan
 *	Your support level
 
-Chainstack offers four types of <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a> which differ depending on your Web3 objectives. The final price of each subscription plan is made up of a base charge for the features included and the number of API requests made to your deployed nodes.
+Chainstack offers four types of subscription plans which differ depending on your Web3 objectives. The final price of each subscription plan is made up of a base charge for the features included and the number of API requests made to your deployed nodes.
 
-Each subscription plan also has a default support level included into it. You can change your subscription plan any time, while the support level can be changed only for paid subscriptions. Switching between subscription plans and support levels occurs independently from each other.
+<a href="https://chainstack.com/pricing/" target="_blank">Each subscription plan also has a default support level</a> included into it. You can change your subscription plan any time, while the support level can be changed only for paid subscriptions. Switching between subscription plans and support levels occurs independently from each other.
 
 Currently, Chainstack support levels are distributed between subscription plans as follows:
 
 | Subscription | Included support | Upgrade option | Downgrade option |
 | ------------ | ---------------- | -------------- | ---------------- |
 | Developer    | Community        | Not available  | Not available    |
-| Growth       | Standard         | Professional or Premium for an extra charge | Standard or Professional |
-| Business     | Standard         | Professional or Premium for an extra charge | Standard or Professional |
-| Enterprise   | Standard         | Professional or Premium for an extra charge | Standard or Professional |
+| Growth       | Standard         | Professional or Premium for an extra charge | No lower than Standard |
+| Business     | Standard         | Professional or Premium for an extra charge | No lower than Standard |
+| Enterprise   | Standard         | Professional or Premium for an extra charge | No lower than Standard |
 
 ## Changing your subscription plan
 

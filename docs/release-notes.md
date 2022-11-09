@@ -19,7 +19,7 @@ meta:
 
 ## Chainstack 3.7
 
- *November 7, 2022*
+*November 7, 2022*
 
 ### What's new
 - **Protocols**. [Aurora](/operations/aurora/types) support for dedicated nodes.
