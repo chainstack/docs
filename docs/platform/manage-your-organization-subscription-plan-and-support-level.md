@@ -19,12 +19,12 @@ Chainstack offers four types of subscription plans which differ depending on you
 
 Currently, Chainstack support levels are distributed between subscription plans as follows:
 
-| Subscription | Included support | Upgrade option | Downgrade option |
-| ------------ | ---------------- | -------------- | ---------------- |
-| Developer    | Community        | Not available  | Not available    |
-| Growth       | Standard         | Professional or Premium for an extra charge | No lower than Standard |
-| Business     | Standard         | Professional or Premium for an extra charge | No lower than Standard |
-| Enterprise   | Standard         | Professional or Premium for an extra charge | No lower than Standard |
+| Subscription | Included support | Upgrade option |
+| ------------ | ---------------- | -------------- |
+| Developer    | Community        | Not available  |
+| Growth       | Standard         | Professional or Premium for an extra charge |
+| Business     | Standard         | Professional or Premium for an extra charge |
+| Enterprise   | Standard         | Professional or Premium for an extra charge |
 
 ## Changing your subscription plan
 
