@@ -26,7 +26,7 @@ Ethereum API method that returns an array of all logs matching a given filter ob
     * `earliest` — the genesis block.
     * `pending` — the pending state and transactions block.
   * `address` - (optional) Contract address, or a list of addresses from which logs should originate.
-  * `topics` - (optional) Array of `DATA` topics. Topics are order-dependent. [See Ethereum official documentation](https://ethereum.org/en/developers/docs/apis/json-rpc/#ops-deployments-custom) to learn more about topics.
+  * `topics` - (optional) Array of `DATA` topics. Topics are order-dependent. See [Ethereum official documentation](https://ethereum.org/en/developers/docs/apis/json-rpc/#ops-deployments-custom) to learn more about topics.
   * `blockhash` - (optional) With the addition of EIP-234, `blockHash` will be a new filter option that restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using blockHash is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` is allowed.
 
 **Returns:**
