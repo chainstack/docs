@@ -12,8 +12,9 @@ Chainstack supports joining the following StarkNet networks:
 
 * Mainnet — public StarkNet mainnet. L2 to the Ethereum mainnet.
 * Testnet — public StarkNet testnet. L2 to the Ethereum Goerli testnet.
+* Testnet2 — alternative public StarkNet testnet. L2 to the Ethereum Goerli testnet.
 
-For development purposes on the testnet, fund your accounts with [L2 Goerli ETH](https://faucet.goerli.starknet.io/).
+For development purposes on the testnet and testnet2, fund your accounts with [L2 Goerli ETH](https://faucet.goerli.starknet.io/).
 
 ::: tip See also
 

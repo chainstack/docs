@@ -8,6 +8,14 @@ meta:
 
 # Release notes
 
+## Chainstack 3.8.1
+
+*November 14*
+
+### What's new
+
+* **Protocols**. [StarkNet](/operations/starknet/network) testnet2 support for elastic and dedicated nodes.
+
 ## Chainstack 3.8
 
 *November 8, 2022*

@@ -12,4 +12,4 @@ Access the Chainstack platform at <a href="https://console.chainstack.com" targe
 
 For assistance, reach out to <a href="https://support.chainstack.com" target="_blank">Chainstack support</a>.
 
-For other enquiries, use the <a href="https://chainstack.com/contact/" target="_blank">contact form</a>.
+To request a new feature, cloud provider, or region support, <a href="https://ideas.chainstack.com/feature-requests" target="_blank">submit the form</a>.
