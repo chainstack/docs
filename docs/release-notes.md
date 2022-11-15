@@ -14,7 +14,7 @@ meta:
 
 ### What's new
 
-* **Protocols**. [StarkNet](/operations/starknet/network) testnet2 support for elastic and dedicated nodes.
+* **Protocols**. [StarkNet](/operations/starknet/networks) testnet2 support for elastic and dedicated nodes.
 
 ## Chainstack 3.8
 
