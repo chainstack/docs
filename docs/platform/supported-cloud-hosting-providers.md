@@ -21,5 +21,5 @@ Chainstack also supports private hosting options. See [Supported hosting options
 ::: tip
 Chainstack is always working on introducing support for other regions for cloud deployment.
 
-Want to request a cloud provider or region support? <a href="https://ideas.chainstack.com/feature-requests" target="_blank">Contact us</a>.
+Want to request a cloud provider or region support? <a href="https://ideas.chainstack.com/feature-requests" target="_blank">Check existing feature requests and upvote</a> or submit a new one.
 :::
