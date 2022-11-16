@@ -75,5 +75,5 @@ Consortium:
 ::: tip
 Chainstack is always working on introducing support for other protocols.
 
-Want to request protocol support? <a href="https://chainstack.com/contact/" target="_blank">Contact us</a>.
+Want to request protocol support or have another feature idea? <a href="https://ideas.chainstack.com/feature-requests" target="_blank">Check existing feature requests and upvote</a> or submit a new one.
 :::
