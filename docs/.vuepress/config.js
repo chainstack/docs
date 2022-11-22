@@ -746,6 +746,7 @@ module.exports = {
                 ]
             },
         '/release-notes',
+        '/marketplace'
         ],
         sidebarDepth: 2,
         algolia: {
