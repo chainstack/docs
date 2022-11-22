@@ -14,7 +14,7 @@ meta:
 
 ### What's new
 
-* **Documentation**. [Chainstack Marketplace listing guidelines](/marketplace/starknet/networks).
+* **Documentation**. [Chainstack Marketplace listing guidelines](/marketplace).
 
 
 ## Chainstack 3.8.1
