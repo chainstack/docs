@@ -8,9 +8,18 @@ meta:
 
 # Release notes
 
+## Chainstack 3.8.2
+
+*November 23, 2022*
+
+### What's new
+
+* **Documentation**. [Chainstack Marketplace listing guidelines](/marketplace/starknet/networks).
+
+
 ## Chainstack 3.8.1
 
-*November 16*
+*November 16, 2022*
 
 ### What's new
 
