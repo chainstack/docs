@@ -683,6 +683,7 @@ module.exports = {
           },
         ],
       },
+      '/marketplace',
             {
                 title: 'Blockchains',
                 collapsable: true,
@@ -746,7 +747,6 @@ module.exports = {
                 ]
             },
         '/release-notes',
-        '/marketplace'
         ],
         sidebarDepth: 2,
         algolia: {
