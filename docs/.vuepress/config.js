@@ -683,6 +683,7 @@ module.exports = {
           },
         ],
       },
+      '/marketplace',
             {
                 title: 'Blockchains',
                 collapsable: true,
