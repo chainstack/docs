@@ -3,22 +3,22 @@ meta:
   - name: description
     content: getSlotLeader JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana
 ---
 
 # getSlotLeader
 
-Solana API method that returns the current slot leader. 
+Solana API method that returns the current slot leader.
 
-**Parameters:** 
+**Parameters:**
 
-* `(optional) <object>` — the configuration object containing the following fields:
-    * `(optional) commitment: <string>` — the commitment.
-    * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
+* `<object>` — (optional) the configuration object containing the following fields:
+    * `commitment: <string>` — (optional) the commitment.
+    * `minContextSlot: <number>` — (optional) the minimum slot that the request can be evaluated at.
 
-**Returns:** 
+**Returns:**
 
-* `string` —  the node identity public key as base-58 encoded string.
+* `string` —  the node identity public key as a base-58 encoded string.
 
 **Example:**
 

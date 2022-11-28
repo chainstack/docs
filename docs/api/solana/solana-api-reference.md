@@ -26,6 +26,14 @@ To read data from and send transactions to the Solana blockchain, an application
 
 When communicating with a Solana RPC node, the Solana client implements a JSON-RPC specification, a communication protocol allowing one to make remote calls and execute them as if they were made locally.
 
+## Disabled indexes
+
+Currently, the following indexes are disabled for Solana devnet elastic nodes:
+
+* `program-id`
+* `spl-token-owner`
+* `spl-token-mint`
+
 ## How to start using the Solana API
 
 To use the Solana API, you need access to a Solana RPC node.
