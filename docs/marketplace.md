@@ -6,7 +6,7 @@ meta:
     content: dapp marketplace decentralized application request listing guidelines requirements
 ---
 
-# Chainstack Marketplace
+# Marketplace
 
 ## Introduction
 The <a href="https://chainstack.com/marketplace/" target="_blank">Chainstack Marketplace</a> is designed to meet the needs of developers and connect tools to the Web3 infrastructure to build high quality apps and services. In addition to marketing and promotion, Chainstack Marketplace handles billing and integration with the infrastructure layer. This enables app developers to focus on bringing valuable enhancements and new features to Web3 services.  
