@@ -22,7 +22,7 @@ For a detailed description of all the available Solana API JSON-RPC methods, see
 
 The Solana API allows developers to communicate with the Solana blockchain to build applications.
 
-To read data from and send transactions to the Solana blockchain, an application must connect to an Solana RPC node.
+To read data from and send transactions to the Solana blockchain, an application must connect to a Solana RPC node.
 
 When communicating with a Solana RPC node, the Solana client implements a JSON-RPC specification, a communication protocol allowing one to make remote calls and execute them as if they were made locally.
 
