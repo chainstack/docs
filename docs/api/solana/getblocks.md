@@ -10,7 +10,7 @@ meta:
 
 Solana API method that returns a list of confirmed blocks between two slots.
 
-::: tip
+::: tip Information
 
 The maximum range allowed is 500,000 slots.
 
