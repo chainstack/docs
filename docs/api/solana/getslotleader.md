@@ -18,7 +18,7 @@ Solana API method that returns the current slot leader.
 
 **Returns:**
 
-* `string` —  the node identity public key as a base-58 encoded string.
+* `string` —  the node identity public key as a base58 encoded string.
 
 **Example:**
 

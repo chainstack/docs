@@ -18,7 +18,7 @@ Solana API method that returns the 20 largest accounts of a particular SPL token
 
 **Parameters:**
 
-* `<string>` — the public key of the NFT collection, as a base-58 encoded string.
+* `<string>` — the public key of the NFT collection, as a base58 encoded string.
 * `<object>` — (optional) configuration object containing the following field:
   * `commitment: <string>` — (optional) commitment.
 
@@ -29,7 +29,7 @@ The result will be an RPC response JSON object with `value` equal to an array of
 * `address: <string>` — the address of the token account.
 * `amount: <string>` — the raw token account balance without decimals, a string representation of u64.
 * `decimals: <u8>` — number of base 10 digits to the right of the decimal place.
-* `uiAmount: <number|null>` — the token account balance, using mint-prescribed decimals (DEPRECATED).
+* `uiAmount: <number|null>` — the token account balance, using mint-prescribed decimals.
 * `uiAmountString: <string>` — the token account balance as a string, using mint-prescribed decimals.
 
 **Example:**

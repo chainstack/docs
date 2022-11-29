@@ -33,7 +33,7 @@ On elastic Solana mainnet nodes, `getProgramAccounts` method has a rate limit of
 
 **Parameters:**
 
-* `<string>` — the program's public key, as a base-58 encoded string.
+* `<string>` — the program's public key, as a base58 encoded string.
 * `<object>` — (optional) configuration object containing the following fields:
   * `commitment: <string>` — (optional) commitment.
   * `encoding: <string>` — (optional) encoding for account data, either `base58` (slow), `base64`, `base64+zstd`, or `jsonParsed`. `base58` is limited to account data of less than 128 bytes. `base64` will return base64 encoded data for account data of any size. `base64+zstd` compresses account data using Zstandard and base64 encodes the result. `jsonParsed` encoding attempts to use program-specific state parsers to return more human-readable and explicit account state data. If `jsonParsed` is requested, but a parser cannot be found, the field falls back to base64 encoding, detectable when the data field is `<string>` type.
@@ -45,8 +45,8 @@ On elastic Solana mainnet nodes, `getProgramAccounts` method has a rate limit of
 **Filters:** (optional)
 
 * `memcmp: <object>` — compare a provided series of bytes with program account data at a particular offset. Fields:
-  * `offset: <usize>` — offset into program account data to start the comparison
-  * `bytes: <string>` — data to match as an encoded string
+  * `offset: <usize>` — offset into program account data to start the comparison.
+  * `bytes: <string>` — data to match as an encoded string.
   * `encoding: <string>` — encoding for filter bytes data, either `base58` or `base64`. Data is limited in size to 128 or fewer decoded bytes.
 * `dataSize: <u64>` — compare the program account data length with the provided data size.
 
@@ -58,9 +58,9 @@ By default the result will be an array of JSON objects. If `withContext` flag is
   * `data: <object>` — token state data associated with the account, either as encoded binary data or in JSON format `{<program>: <state>}`.
   * `executable: <bool>` — boolean indicating if the account contains a program (and is strictly read-only).
   * `lamports: <u64>` — number of lamports assigned to this account, as u64.
-  * `owner: <string>` — the base-58 encoded public key of the program this account has been assigned to.
+  * `owner: <string>` — the base58 encoded public key of the program this account has been assigned to.
   * `rentEpoch: <u64>` — the epoch at which this account will next owe rent, as u64.
-* `pubkey: <string>` — the account public key as a base-58 encoded string.
+* `pubkey: <string>` — the account public key as a base58 encoded string.
 
 **Example:**
 

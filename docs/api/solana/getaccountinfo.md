@@ -12,7 +12,7 @@ Solana API method that returns all information associated with the account of th
 
 **Parameters:**
 
-* `address` — the public key of the account to query as base-58 encoded string.
+* `address` — the public key of the account to query as a base58 encoded string.
 
 **Returns:**
 
@@ -21,7 +21,7 @@ The result will be an RPC response JSON object with `value` equal to one of the 
 * `<null>` — if the requested account doesn't exist.
 *  `<object>` — a JSON object containing:
   * `lamports: <u64>` — the number of lamports assigned to this account, as `u64`.
-  * `owner: <string>` — the base-58 encoded public key of the program this account has been assigned to.
+  * `owner: <string>` — the base58 encoded public key of the program this account has been assigned to.
   * `data: <[string encoding]|object>` — the data associated with the account, either as encoded binary data or JSON format `{<program>: <state>}`, depending on encoding parameter.
   * `executable: <bool>` — a boolean indicating if the account contains a program and is strictly read-only.
   * `rentEpoch: <u64>` — the epoch at which this account will next owe rent, as `u64`.

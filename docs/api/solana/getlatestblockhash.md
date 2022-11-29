@@ -19,7 +19,7 @@ Solana API method that returns the latest blockhash.
 **Returns:**
 
 * `RpcResponse <object>` — the RPC response JSON object with value field set to a JSON object including:
-  * `blockhash: <string>` — a hash as base-58 encoded string.
+  * `blockhash: <string>` — a hash as a base58 encoded string.
   * `lastValidBlockHeight: <u64>` — the last block height at which the blockhash will be valid.
 
 **Example:**

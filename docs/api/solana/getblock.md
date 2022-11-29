@@ -26,8 +26,8 @@ The result will be an RPC response JSON object with `value` equal to one of the 
 
 * `<null>` — if the specified block is not confirmed.
 *  `<object>` — an object containing:
-  * `blockhash: <string>` — the blockhash of this block, as a base-58 encoded string.
-  * `previousBlockhash: <string>` — the blockhash of this block's parent, as a base-58 encoded string; if the parent block is not available due to ledger cleanup, this field will return `11111111111111111111111111111111`.
+  * `blockhash: <string>` — the blockhash of this block, as a base58 encoded string.
+  * `previousBlockhash: <string>` — the blockhash of this block's parent, as a base58 encoded string; if the parent block is not available due to ledger cleanup, this field will return `11111111111111111111111111111111`.
   * `parentSlot: <u64>` — the slot index of this block's parent.
   * `transactions: <array>` — present if `full` transaction details are requested.
 

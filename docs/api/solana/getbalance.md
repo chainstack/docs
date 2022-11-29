@@ -12,7 +12,7 @@ Solana API method that returns the balance of the account of the provided public
 
 **Parameters:**
 
-* `address` — the public key of the account to query as a base-58 encoded string.
+* `address` — the public key of the account to query as a base58 encoded string.
 
 **Returns:**
 

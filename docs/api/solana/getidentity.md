@@ -3,21 +3,21 @@ meta:
   - name: description
     content: getIdentity JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana
 ---
 
 # getIdentity
 
-Solana API method that returns the identity public key for the current node. 
+Solana API method that returns the identity public key for the current node.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `identity` — the public key of the current node as a base-58 encoded string.
- 
+* `identity` — the public key of the current node as a base58 encoded string.
+
 **Example:**
 
 <CodeSwitcher :languages="{js:'Solana web3.js', py:'Solana.py', cr:'cURL'}">

@@ -12,7 +12,7 @@ Solana API method that returns the transaction details for a confirmed transacti
 
 **Parameters:**
 
-* `<string>` — the transaction signature as a base-58 encoded string.
+* `<string>` — the transaction signature as a base58 encoded string.
   * `<object>` — (optional) the configuration object containing the following optional fields:
     * `encoding: <string>` — (optional) the encoding for each returned transaction, either `json`, `jsonParsed`, `base58` (slow), `base64`. If the parameter is not provided, the default encoding is `json`. `jsonParsed` encoding attempts to use program-specific instruction parsers to return more human-readable and explicit data in the transaction.message.instructions list. If `jsonParsed` is requested, but a parser cannot be found, the instruction falls back to standard JSON encoding (accounts, data, and programIdIndex fields).
     * `commitment: <string>` — (optional) the commitment; `processed` is not supported. If the parameter is not provided, the default is `finalized`.
