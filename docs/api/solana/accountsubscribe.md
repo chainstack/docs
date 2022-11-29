@@ -3,7 +3,7 @@ meta:
   - name: description
     content: accountSubscribe JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana subscription 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana subscription
 ---
 
 ## accountSubscribe
@@ -23,10 +23,10 @@ To use the Solana API subscriptions with cURL, use the code example as a message
 
 **Parameters:**
 
-* `<string>` — the account public key as base-58 encoded string.
-* `(optional) <object>` — a configuration object containing the following optional fields:
-  * `(optional) commitment: <string>` — the commitment.
-  * `encoding: <string>` — the encoding for account data, either `base58` (slow), `base64`, `base64+zstd` or `jsonParsed`. `jsonParsed` encoding attempts to use program-specific state parsers to return more human-readable and explicit account state data. If `jsonParsed` is requested, but a parser cannot be found, the field falls back to binary encoding, detectable when the data field is type `<string>`.
+* `<string>` — the account public key as a base58 encoded string.
+* `<object>` — (optional) a configuration object containing the following optional fields:
+  * `commitment: <string>` — (optional) the commitment.
+  * `encoding: <string>` — the encoding for account data, either `base58` (slow), `base64`, `base64+zstd`, or `jsonParsed`. `base58` is limited to account data of less than 128 bytes. `base64` will return base64 encoded data for account data of any size. `base64+zstd` compresses the account data using Zstandard and base64 encodes the result. `jsonParsed` encoding attempts to use program-specific state parsers to return more human-readable and explicit account state data. If `jsonParsed` is requested, but a parser cannot be found, the field falls back to base64 encoding, detectable when the data field is `<string>` type.
 
 **Returns:**
 
@@ -48,7 +48,7 @@ const web3 = new Connection("CHAINSTACK_HTTPS_URL", {
   const publicKey = new PublicKey(
     "HSH3LftAhgNEQmpNRuE1ghnbqVHsxt8edvid1zdLxH5C"
   );
-  
+
   web3.onAccountChange(
     publicKey,
     (updatedAccountInfo) =>

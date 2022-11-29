@@ -3,12 +3,12 @@ meta:
   - name: description
     content: slotSubscribe JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana subscription 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana subscription
 ---
 
 ## slotSubscribe
 
-Solana API method to subscribe to receive notification anytime a slot is processed by the validator.
+Solana API method to subscribe to receive notification each time a slot is processed by the validator.
 
 ### Solana.py
 
@@ -40,7 +40,7 @@ import { Connection } from "@solana/web3.js";
 const web3 = new Connection("CHAINSTACK_HTTPS_URL", {
     wsEndpoint: "CHAINSTACK_WSS_URL",
   });
-  
+
   (async () => {    
     web3.onSlotChange((slotInfo) =>
     console.log("Updated slot info: ", slotInfo)

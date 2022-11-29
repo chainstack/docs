@@ -8,6 +8,14 @@ meta:
 
 # Release notes
 
+## Chainstack 3.8.3
+
+*November 29, 2022*
+
+### What's new
+
+* **Documentation**. Solana API [reference](/api/solana/solana-api-reference) update.
+
 ## Chainstack 3.8.2
 
 *November 23, 2022*
@@ -15,7 +23,6 @@ meta:
 ### What's new
 
 * **Documentation**. [Chainstack Marketplace listing guidelines](/marketplace).
-
 
 ## Chainstack 3.8.1
 

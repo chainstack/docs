@@ -3,7 +3,7 @@ meta:
   - name: description
     content: logsSubscribe JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana subscription 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana subscription
 ---
 
 ## logsSubscribe
@@ -26,7 +26,7 @@ To use the Solana API subscriptions with cURL, use the code example as a message
 * `filter: <string>|<object>` — the filter criteria for the logs to receive results by account type; currently supported:
   * `all` — subscribe to all transactions except for simple vote transactions.
   * `allWithVotes` — subscribe to all transactions including simple vote transactions.
-  * `{ mentions: [ <string> ] }` — subscribe to all transactions that mention the provided public key, as base-58 encoded string.
+  * `{ mentions: [ <string> ] }` — subscribe to all transactions that mention the provided public key, as a base58 encoded string.
 * `(optional) <object>` — the configuration object containing the following optional fields:
   * `(optional) commitment: <string>` — the commitment.
 
@@ -45,12 +45,12 @@ import { Connection } from "@solana/web3.js";
 const web3 = new Connection("CHAINSTACK_HTTPS_URL", {
     wsEndpoint: "CHAINSTACK_WSS_URL",
   });
-  
+
 (async () => {
     const publicKey = new PublicKey(
       "5sQ5AuSxmX2avcS99p8ECcvQAAKV3pKL5s6AoAccwuww"
     );
-    
+
     web3.onLogs(
       publicKey,
       (logs) => console.log("Updated account info: ", logs),
