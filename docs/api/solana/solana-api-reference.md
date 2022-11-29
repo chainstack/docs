@@ -28,7 +28,7 @@ When communicating with a Solana RPC node, the Solana client implements a JSON-R
 
 ## Disabled indexes
 
-Currently, the following indexes are disabled for Solana devnet elastic nodes:
+Currently, the following indexes are disabled for elastic Solana devnet nodes:
 
 * `program-id`
 * `spl-token-owner`
@@ -48,13 +48,13 @@ Now you are ready to connect to the Solana blockchain and use the Solana API to 
 
 Find useful [Solana tools](/operations/solana/tools) in the Chainstack docs.
 
-The best way to use the Solana API is to use a web3 library such as [Solana web3.js](https://solana-labs.github.io/solana-web3.js/) if using JavaScript or [Solana.py](https://michaelhly.github.io/solana-py/) using Python.
+The best way to use the Solana API is to use a Web3 library such as [Solana web3.js](https://solana-labs.github.io/solana-web3.js/) if using JavaScript or [Solana.py](https://michaelhly.github.io/solana-py/) using Python.
 
-A web3 library makes using the Solana API to communicate with the Solana blockchain easy and efficient.
+A Web3 library makes using the Solana API to communicate with the Solana blockchain easy and efficient.
 
-### Install web3 libraries
+### Install Web3 libraries
 
-You will need to install the web3 libraries to be able to use them.
+You will need to install the Web3 libraries to be able to use them.
 
 #### Install Solana Web3.js
 

@@ -10,7 +10,7 @@ meta:
 
 ::: tip Information
 
-This method is currently disabled for Solana devnet elastic nodes.
+This method is currently disabled for elastic Solana devnet nodes.
 
 :::
 
