@@ -10,15 +10,15 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns the node health status in HTTP status codes.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `200` — The node is ready.
-* `206` — Node is syncing but can serve incomplete data.
-* `503` — Node not initialized or having issues.
+* `200` — the node is ready.
+* `206` — the node is syncing but can serve incomplete data.
+* `503` — the node is not initialized or having issues.
 
 **Example:**
 

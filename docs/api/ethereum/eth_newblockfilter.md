@@ -16,7 +16,7 @@ Ethereum API method that creates a filter object to notify the arrival of a new 
 
 **Returns:**
 
-- `result` - Returns a filter ID to be used when calling [eth_getFilterChanges](/api/ethereum/eth_getfilterchanges).
+- `result` — returns a filter ID to be used when calling [eth_getFilterChanges](/api/ethereum/eth_getfilterchanges).
 
 **Example:**
 

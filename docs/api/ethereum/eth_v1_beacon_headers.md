@@ -10,25 +10,25 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns the block headers matching the given query. By default, it will fetch current head slot blocks.
 
-**Parameters:** 
+**Parameters:**
 
-* `slot` - `string` - Fetch [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given epoch. If not present then the sync committees for the epoch of the state will be obtained.
-* `parent_root` - `string` - Fetch [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given epoch. If not present then the sync committees for the epoch of the state will be obtained.
+* `slot` — `string` — fetches [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given epoch. If not present, then the sync committees for the epoch of the state will be obtained.
+* `parent_root` — `string` — fetches [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given epoch. If not present, then the sync committees for the epoch of the state will be obtained.
 
-**Returns:** 
+**Returns:**
 
-* `execution_optimistic` - `boolean` - `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
-* `data` - `array` — `objects`:
-  * `root` - `string` - The corresponding root.
-  * `canonical` - `boolean`.
-  * `header` - `object` - The [SignedBeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#signedbeaconblockheader).
-  * `message` - `object` - The [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader) object.
- * `slot` - `string` - The slot to which this block corresponds.
- * `proposer_index` - `string` - Index of validator in validator registry.
- * `parent_root` - `string` - The signing merkle root of the parent [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock).
- * `state_root` - `string` - The tree hash merkle root of the [BeaconState](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconstate) for the [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock).
- * `body_root` - `string` - The tree hash merkle root of the [BeaconBlockBody](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockbody) for the [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock).
- * `signature` - `string` - The signature.
+* `execution_optimistic` — `boolean` — `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
+* `data` — `array` — `objects` with:
+  * `root` — `string` — the corresponding root.
+  * `canonical` — `boolean`.
+  * `header` — `object` — the [SignedBeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#signedbeaconblockheader) object.
+  * `message` — `object` — the [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader) object.
+ * `slot` — `string` — the slot to which this block corresponds.
+ * `proposer_index` — `string` — the index of the validator in the validator registry.
+ * `parent_root` — `string` — the signing merkle root of the parent [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock).
+ * `state_root` — `string` — the tree hash merkle root of the [BeaconState](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconstate) for the [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock).
+ * `body_root` — `string` — the tree hash merkle root of the [BeaconBlockBody](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockbody) for the [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock).
+ * `signature` — `string` — the signature.
 
 **Example:**
 

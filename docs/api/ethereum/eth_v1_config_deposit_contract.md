@@ -8,17 +8,17 @@ meta:
 
 # Ethereum eth/v1/config/deposit_contract RPC method
 
-Ethereum consensus layer Beacon Chain API call that returns the execution layer deposit contract address and chain ID..
+Ethereum consensus layer Beacon Chain API call that returns the execution layer deposit contract address and chain ID.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data`:
-  * `chain_id` — The ID for the chain.
-  * `address` — The execution layer deposit contract. For example, on the [Ethereum Mainnet](https://etherscan.io/address/0x1Db3439a222C519ab44bb1144fC28167b4Fa6EE6).
+* `data` with:
+  * `chain_id` — the ID for the chain.
+  * `address` — the execution layer deposit contract. For example, on the [Ethereum mainnet](https://etherscan.io/address/0x1Db3439a222C519ab44bb1144fC28167b4Fa6EE6).
 
 **Example:**
 

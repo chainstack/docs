@@ -3,20 +3,20 @@ meta:
   - name: description
     content: eth_gasPrice JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_gasPrice RPC method
 
-Ethereum API method that returns the current gas base fee of the network. The value returned is in Wei. 
+Ethereum API method that returns the current gas base fee of the network. The value returned is in Wei.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `quantity` - The integer value of the current gas base fee in Wei.
+* `quantity` — the integer value of the current gas base fee in Wei.
 
 **Example:**
 
@@ -37,9 +37,9 @@ web3.eth.getGasPrice((err, gasPrice) => {
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-web3 = Web3(Web3.HTTPProvider(node_url)) 
-print(web3.eth.gas_price) 
+node_url = "CHAINSTACK_NODE_URL"
+web3 = Web3(Web3.HTTPProvider(node_url))
+print(web3.eth.gas_price)
 ```
 
 </template>

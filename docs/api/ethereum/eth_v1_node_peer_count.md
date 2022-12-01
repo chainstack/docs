@@ -10,13 +10,13 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns the number of the peers connected to the node.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` - `object`:
+* `data` — `object` with:
   * `disconnected`
   * `connecting`
   * `connected`

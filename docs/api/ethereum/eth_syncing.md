@@ -3,7 +3,7 @@ meta:
   - name: description
     content: eth_syncing JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_syncing RPC method
@@ -14,12 +14,12 @@ Ethereum API method that returns an object with the sync status of the node when
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `result` - Boolean value `false` when not syncing, or a JSON object when syncing:
-  * `startingBlock` - The block at which the import started, encoded as hexadecimal.
-  * `currentBlock` - The current block, same as eth_blockNumber, encoded as hexadecimal.
-  * `highestBlock` - The estimated highest block encoded as hexadecimal.
+* `result` — the boolean value `false` when not syncing, or a JSON object when syncing with:
+  * `startingBlock` — the block at which the import started, encoded as hexadecimal.
+  * `currentBlock` — the current block, same as eth_blockNumber, encoded as hexadecimal.
+  * `highestBlock` — the estimated highest block, encoded as hexadecimal.
 
 **Example:**
 
@@ -40,7 +40,7 @@ web3.eth.isSyncing((err, sync) => {
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
+node_url = "CHAINSTACK_NODE_URL"
 print (web3.eth.syncing)  
 ```
 
@@ -51,7 +51,7 @@ print (web3.eth.syncing)
 require "eth"
 client = Eth::Client.create "CHAINSTACK_NODE_URL"
 response = client.eth_syncing
-puts response["result"] 
+puts response["result"]
 ```
 
 </template>

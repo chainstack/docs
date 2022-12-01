@@ -3,7 +3,7 @@ meta:
   - name: description
     content: eth_getUncleByBlockNumberAndIndex JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_getUncleByBlockNumberAndIndex RPC method
@@ -12,35 +12,35 @@ Ethereum API method that returns information about an uncle of a block by number
 
 **Parameters:**  
 
-* `quantity or tag` - Block number encoded as hexadecimal starting with `0x`.
-* `index` - The uncle's index position.
+* `quantity or tag` — the block number, encoded as hexadecimal starting with `0x`.
+* `index` — the uncle index position.
 
-**Returns:** 
+**Returns:**
 
-* `object` - A block object, or `null` when no block was found:
-  * `number` - The block number. `null` when it is a pending block.
-  * `hash` - Hash of the block. `null` when it is a pending block.
-  * `parentHash` - Hash of the parent block.
-  * `nonce` - Hash of the generated proof-of-work. `null` when it is a pending block.
-  * `sha3Uncles` - SHA3 of the uncles' data in the block.
-  * `logsBloom` - The bloom filter for the logs of the block. `null` when it is a pending block.
-  * `transactionsRoot` - The root of the transaction trie of the block.
-  * `stateRoot` - The root of the final state trie of the block.
-  * `receiptsRoot` The root of the receipts trie of the block.
-  * `miner` The address of the beneficiary to whom the mining rewards were given.
-  * `difficulty` - Integer of the difficulty for this block.
-  * `totalDifficulty` - Integer of the total difficulty of the chain until this block.
-  * `extraData` - The "extra data" field of this block.
-  * `size` - Integer of the size of this block in bytes.
-  * `gasLimit` - The maximum gas allowed in this block.
-  * `gasUsed` - The total used gas by all transactions in this block.
-  * `timestamp` - The UNIX timestamp for when the block was collated.
-  * `transactions` - Array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter.
-  * `uncles` - Array of uncle hashes.
+* `object` — the block object, or `null` when no block was found:
+  * `number` — the block number. `null` when it is a pending block.
+  * `hash` — the hash of the block. `null` when it is a pending block.
+  * `parentHash` — the hash of the parent block.
+  * `nonce` — the hash of the generated proof-of-work. `null` when it is a pending block.
+  * `sha3Uncles` — SHA-3 of the uncles data in the block.
+  * `logsBloom` — the bloom filter for the logs of the block. `null` when it is a pending block.
+  * `transactionsRoot` — the root of the transaction trie of the block.
+  * `stateRoot` — the root of the final state trie of the block.
+  * `receiptsRoot` — the root of the receipts trie of the block.
+  * `miner` — the address of the beneficiary to whom the mining rewards were given.
+  * `difficulty` — the integer of the difficulty for this block.
+  * `totalDifficulty` — the integer of the total difficulty of the chain until this block.
+  * `extraData` — the extra data field of this block.
+  * `size` — the integer of the size of this block in bytes.
+  * `gasLimit` — the maximum gas allowed in this block.
+  * `gasUsed` — the total used gas by all transactions in this block.
+  * `timestamp` — the Unix timestamp for when the block was collated.
+  * `transactions` — the array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter.
+  * `uncles` — the array of uncle hashes.
 
 **Example:**
 
-::: tip
+::: tip Information
 Web3.js requires the block number identifier to be an integer **not encoded** as hexadecimal.
 :::
 
@@ -61,8 +61,8 @@ web3.eth.getUncle("12911679", 0, (err, uncle) => {
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-web3 = Web3(Web3.HTTPProvider(node_url)) 
+node_url = "CHAINSTACK_NODE_URL"
+web3 = Web3(Web3.HTTPProvider(node_url))
 print(web3.eth.get_uncle_by_block("0xDB60", 0))    
 ```
 

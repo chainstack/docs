@@ -12,23 +12,23 @@ Ethereum consensus layer Beacon Chain API call that returns a filterable list of
 
 Balances will be returned for all indices or public key that match known validators. If an index or public key does not match any known validator, no balance will be returned but this will not cause an error. There are no guarantees for the returned data in terms of ordering; the index and is returned for each balance, and can be used to confirm for which inputs a response has been returned.
 
-**Parameters:** 
+**Parameters:**
 
-* `state_id` - `string` - (Required) State identifier:
-  * `head` — The canonical head of the chain in the view of the node that you sending the call to.
-  * `genesis` — The genesis state of the chain.
-  * `justified` — The slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Ethereum validators.
-  * `finalized` — A previously justified slot that is now in the epoch that is at least immediately previous to the current epoch.
-  * `slot` — A slot number.
-  * `0xstateRoot` — The root hash for the global chain state after applying changes [in the block](https://ethereum.org/en/developers/docs/blocks/) that is in the slot.
-* `id` - `array` — `string` - Either the hex encoded public key (any bytes48 with 0x prefix) or validator index.
+* `state_id` — `string` — (required) the state identifier with:
+  * `head` — the canonical head of the chain in the view of the node that you sending the call to.
+  * `genesis` — the genesis state of the chain.
+  * `justified` — the slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Ethereum validators.
+  * `finalized` — the previously justified slot that is now in the epoch that is at least immediately previous to the current epoch.
+  * `slot` — the slot number.
+  * `0xstateRoot` — the root hash for the global chain state after applying changes [in the block](https://ethereum.org/en/developers/docs/blocks/) that is in the slot.
+* `id` — `array` — `string` — either the hex encoded public key (any bytes48 with 0x prefix) or validator index.
 
-**Returns:** 
+**Returns:**
 
-* `execution_optimistic` - `boolean` - `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
-* `data` - `array` — `object`:
-  * `index` - `string` - Index of validator in validator registry.
-  * `balance` - `string` - Current validator balance in gwei.
+* `execution_optimistic` — `boolean` — `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
+* `data` — `array` — `object` with:
+  * `index` — `string` — the index of the validator in the validator registry.
+  * `balance` — `string` — the current validator balance in Gwei.
 
 **Example:**
 

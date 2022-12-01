@@ -10,26 +10,26 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns proposer slashings known by the node but not necessarily incorporated into any block.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `execution_optimistic` - `boolean` - `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
-  * `data` - `array` — `objects` - The [Attestation](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestation) object with:
-    * `aggregation_bits` - `string` - Attester aggregation bits.
-    * `signature` - `string` - BLS aggregate signature.
-    * `data` - `object` - The [AttestationData](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestationdata) object.
-     * `slot` - `string` - The corresponding slot.
-     * `index` - `string` - The index.
-     * `beacon_block_root` - `string` - LMD GHOST vote.
-     * `source` - `object` - The [checkpoint](https://ethereum.org/en/glossary/#checkpoint).
-       * `epoch` - `string` - The corresponding epoch.
-       * `root` - `string` - The corresponding root.
-    * `target` - `object` - The [checkpoint](https://ethereum.org/en/glossary/#checkpoint).
-      * `epoch` - `string` - The corresponding epoch.
-      * `root` - `string` - The corresponding root.
+* `execution_optimistic` — `boolean` — `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
+  * `data` — `array` — `objects` — the [Attestation](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestation) object with:
+    * `aggregation_bits` — `string` — the attester aggregation bits.
+    * `signature` — `string` — the BLS aggregate signature.
+    * `data` — `object` — the [AttestationData](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestationdata) object with:
+     * `slot` — `string` — the corresponding slot.
+     * `index` — `string` — the index.
+     * `beacon_block_root` — `string` — the LMD GHOST vote.
+     * `source` — `object` — the [checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
+       * `epoch` — `string` — the corresponding epoch.
+       * `root` — `string` — the corresponding root.
+    * `target` — `object` — the [checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
+      * `epoch` — `string` — the corresponding epoch.
+      * `root` — `string` — the corresponding root.
 
 **Example:**
 

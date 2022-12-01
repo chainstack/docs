@@ -10,22 +10,22 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns the data about the node's network peers. By default this returns all peers. Multiple query params are combined using AND conditions.
 
-**Parameters:** 
+**Parameters:**
 
-* `state` — `array[string]`:
+* `state` — `array[string]` with:
   * `disconnected`
   * `connecting`
-  * `connected` 
+  * `connected`
   * `disconnecting`
-* `direction` — `array[string]`:
+* `direction` — `array[string]` with:
   * `inbound`
   * `outbound`
 
-**Returns:** 
+**Returns:**
 
-* `data` - `object`:
-  * `peer_id` — The ID of the peer.
-  * `enr` — The Ethereum node record data as provided in the [networking specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md).
+* `data` — `object` with:
+  * `peer_id` — the ID of the peer.
+  * `enr` — the Ethereum node record data as provided in the [networking specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md).
 
 **Example:**
 

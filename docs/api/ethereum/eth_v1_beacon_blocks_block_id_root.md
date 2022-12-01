@@ -10,21 +10,21 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns hashTreeRoot of [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock) and [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader).
 
-**Parameters:** 
+**Parameters:**
 
-* `block_id` - `string` - (Required) Block identifier;
-  * `head` — The canonical head of the chain in the view of the node that you sending the call to.
-  * `genesis` — The genesis state of the chain.
-  * `justified` — The slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Ethereum validators.
-  * `finalized` — A previously justified slot that is now in the epoch that is at least immediately previous to the current epoch.
-  * `slot` — A slot number.
-  * `0xblockRoot` — The root hash of the Beacon Chain [block](https://ethereum.org/en/developers/docs/blocks/).
+* `block_id` — `string` — (required) the block identifier with:
+  * `head` — the canonical head of the chain in the view of the node that you sending the call to.
+  * `genesis` — the genesis state of the chain.
+  * `justified` — the slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Ethereum validators.
+  * `finalized` — the previously justified slot that is now in the epoch that is at least immediately previous to the current epoch.
+  * `slot` — the slot number.
+  * `0xblockRoot` — the root hash of the Beacon Chain [block](https://ethereum.org/en/developers/docs/blocks/).
 
-**Returns:** 
+**Returns:**
 
-* `execution_optimistic` - `boolean` - `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
-* `data` - `array` — `objects`:
-  * `root` - `string` - hashTreeRoot of [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock) and [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader).
+* `execution_optimistic` — `boolean` — `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
+* `data` — `array` — `objects` with:
+  * `root` — `string` — hashTreeRoot of [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock) and [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader).
 
 **Example:**
 

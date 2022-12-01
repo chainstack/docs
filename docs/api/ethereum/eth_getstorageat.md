@@ -3,18 +3,18 @@ meta:
   - name: description
     content: eth_getStorageAt JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_getStorageAt RPC method
 
-Ethereum API method that returns the value from a storage position at a given address. 
+Ethereum API method that returns the value from a storage position at a given address.
 
 **Parameters:**
 
-* `address` - The address to check for storage.
-* `quantity` - Integer of the position in storage.
-* `quantity or tag` - Integer block number encoded as hexadecimal, or the string:
+* `address` — the address to check for storage.
+* `quantity` — the integer of the position in storage.
+* `quantity or tag` — the integer block number encoded as hexadecimal, or the string with:
   * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
   * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
   * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
@@ -23,7 +23,7 @@ Ethereum API method that returns the value from a storage position at a given ad
 
 **Returns:**
 
-* `result` - The value at this storage position.
+* `result` — the value at this storage position.
 
 **Example:**
 
@@ -31,7 +31,7 @@ The example returns the storage value of the [simple storage contract](https://e
 
 The last value change was in block [7500943](https://etherscan.io/tx/0xc6d494c08ee2a0144e6241f86e6128dcc6888116a863a865074af8b25841a608#eventlog) and it can be used as a reference point to retrieve the different storage values in time. Note that to query a state in the past, you need <a href="https://chainstack.com/evm-nodes-a-dive-into-the-full-vs-archive-mode/" target="_blank">an archive node</a>.
 
-::: tip
+::: tip Information
 cURL needs a `HEX String` starting with `0x` to identify the block if you want to use a hex integer block number as a parameter.
 For example, block number `14000000` will be `0xD59F80`.
 :::
@@ -53,8 +53,8 @@ web3.eth.getStorageAt("0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64", 0, 7500943).
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-web3 = Web3(Web3.HTTPProvider(node_url)) 
+node_url = "CHAINSTACK_NODE_URL"
+web3 = Web3(Web3.HTTPProvider(node_url))
 storage = web3.eth.get_storage_at("0x954De93D9f1Cd1e2e3AE5964F614CDcc821Fac64", 0, 7500943)
 print(storage.decode("ASCII"))
 ```
