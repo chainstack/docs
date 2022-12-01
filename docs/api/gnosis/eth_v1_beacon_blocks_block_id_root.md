@@ -1,0 +1,33 @@
+---
+meta:
+  - name: description
+    content: eth/v1/beacon/blocks/{block_id}/root Beacon Chain REST API call details and examples.
+  - name: keywords
+    content: curl rest api beacon chain lighthouse gnosis
+---
+
+# eth/v1/beacon/blocks/{block_id}/root
+
+Gnosis consensus layer Beacon Chain API call that returns hashTreeRoot of [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock) and [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader).
+
+**Parameters:** 
+
+* `block_id` — `string` — (required) the block identifier;
+  * `head` — the canonical head of the chain in the view of the node that you sending the call to.
+  * `genesis` — the genesis state of the chain.
+  * `justified` — the slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Gnosis validators.
+  * `finalized` — the previously justified slot that is now in the epoch that is at least immediately previous to the current epoch.
+  * `slot` — the slot number.
+  * `0xblockRoot` — the root hash of the Beacon Chain [block](https://ethereum.org/en/developers/docs/blocks/).
+
+**Returns:** 
+
+* `execution_optimistic` — `boolean` — `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
+* `data` — `array` — `objects`:
+  * `root` — `string` — the hashTreeRoot of [BeaconBlock](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock) and [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader).
+
+**Example:**
+
+``` sh
+curl -X GET https://beacon-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/eth/v1/beacon/blocks/head/root
+```
