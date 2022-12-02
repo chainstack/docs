@@ -14,7 +14,7 @@ This is a closed beta. If you want to participate, contact *kirill.balakhonov@ch
 
 ## Introduction
 
-Subgraphs remove the complexity of extracting and processing data from archive nodes and deliver an intuitive UI for Web3 developers to easily filter and query data. When you deploy a subgraph and configure the query criteria, all successful hits are indexed, and the results are stored in a PostgreSQL database. A GraphQL endpoint is created that you can use to access the most recent data from your subgraph, synchronised to the latest block.
+Subgraphs remove the complexity of extracting and processing data from archive nodes and deliver an intuitive UI for Web3 developers to easily filter and query data. When you deploy a subgraph and configure the query criteria, all successful hits are indexed, and the results are stored in a PostgreSQL database. A GraphQL endpoint is created that you can use to access the most recent data from your subgraph, synchronized to the latest block.
 
 This document provides you with an introduction to Subgraphs and walks you through how to add, create, and deploy a subgraph, and how to query subgraph data.
 
@@ -71,7 +71,7 @@ graph –v
 
 1. Configure all the required parameters that are displayed in the CLI. The Graph will download your smart contract’s ABI and install all the dependencies by running `npm install` automatically.
 1. Set up your `schema.graphql` file to define all the entities and key-value pairs that you want to query.
-1. Go to your manifest file (`subgraph.yaml`) and make sure all the deployment parameters are correctly defined. We recommended that you only start indexing data from the block number of the first transaction that you want to track as this can save a lot of indexing time.
+1. Go to your manifest file (`subgraph.yaml`) and make sure all the deployment parameters are correctly defined. We recommend that you only start indexing data from the block number of the first transaction that you want to track as this can save a lot of indexing time.
 1. To generate AssemblyScript types for the entities defined in your schema file, in your root directory, run:
 
     ``` sh
@@ -115,7 +115,7 @@ If the subgraph is in the **Failed** state, click **Logs** to view four levels o
 
 ## Query a subgraph
 
-To query a subgraph, you can choose from two the either of the following **Subgraph query** options in the subgraph details page:
+To query a subgraph, you can choose from either of the following **Subgraph query** options in the subgraph details page:
 
 * **Query URL** — use this URL to query in the CLI.
 * **GraphQL UI URL** — use this URL to query in the GraphQL UI.
@@ -134,7 +134,7 @@ curl -g \\
 
 ### GraphQL UI URL query in browser
 
-To query the subgraph using the GraphQL UI, copy the GraphQL UI URl from the subgraph details page and paste it in your browser. The GraphQL UI is displayed, where you can enter the details of your query.
+To query the subgraph using the GraphQL UI, copy the GraphQL UI URL from the subgraph details page and paste it in your browser. The GraphQL UI is displayed, where you can enter the details of your query.
 
 ::: tip See also
 
