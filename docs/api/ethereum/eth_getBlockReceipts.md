@@ -8,15 +8,53 @@ meta:
 
 # Ethereum eth_getBlockReceipts RPC method
 
-Ethereum API method that returns all transaction receipts for a given block.
+Ethereum API method that returns all transaction receipts for a given block. This method is available on Erigon only.
+
+## Enable Erigon client on your dedicated Ethereum node
 
 ::: tip Information
 
-This method is available on Erigon when the `trace` namespace is enabled.
-
-Learn [how to deploy](/api/ethereum/deploy-your-ethereum-node-to-enable-debug-and-trace-api-methods) a node with the debug and trace API methods enabled.
+Available on the Growth subscription plan and higher.
 
 :::
+
+Once you have [joined a public network](/platform/join-a-public-network#join-an-ethereum-network), do the following:
+
+1. Select the project with the network.
+1. Select the network.
+1. Click **Add node**.
+1. Provide a node name.
+1. Under **Type**, select **Dedicated**.
+1. Under **Mode**, select **Archive**. With an archive node, you will be able to query historical states for the entire chain.
+1. Under **Hosting**, select **Chainstack**. See [Support hosting options](/platform/supported-hosting-options).
+1. For **Chainstack** hosting, select a cloud provider and a region.
+1. Under **Client**, select **Erigon**.
+1. Review your changes and click **Send request**.
+
+Chainstack Sales team will reach out to your shortly.
+
+## Enable Erigon client on your elastic Ethereum node
+
+::: tip Information
+
+Available on the Business subscription plan and higher.
+
+:::
+
+Once you have [joined a public network](/platform/join-a-public-network#join-an-ethereum-network), do the following:
+
+1. Select the project with the network.
+1. Select the network.
+1. Click **Add node**.
+1. Provide a node name.
+1. Under **Type**, select **Elastic**.
+1. Under **Mode**, select **Archive**. With an archive node, you will be able to query historical states for the entire chain.
+1. Under **Debug and trace APIs**, select **On**.
+1. Under **Hosting**, select **Chainstack**.
+1. For Chainstack hosting, select a cloud provider and a region.
+1. Review your changes and click **Add node**.
+
+The node status will change from **Pending** to **Running** once deployed. You will also see the **Debug and trace** tag next to the node name.
 
 **Parameters:**
 
