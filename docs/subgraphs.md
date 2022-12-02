@@ -70,8 +70,9 @@ graph –v
     When your subgraph compiles successfully, you are now ready to deploy your subgraph.
 
 ### Deploy a subgraph
+
 **To deploy your new subgraph**: 
-1. In the details page of your new subgraph, copy the **Deployment command**, which will have the following format: 
+1. In <a href="https://dev3.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, open the details page of your new Chainstack subgraph and copy the **Deployment command**, which will have the following format: 
     ``` sh
     ngraph deploy --node <https://graph.dev.chainstack.com/0188ba0126a2ff5a84b4a572f5bd3e29/deploy> --ipfs <https://graph.dev.chainstack.com/0188ba9146a2ff5a74b4f572f5ad2e29/ipfs> my_subgraph_v1_0  
     ```
