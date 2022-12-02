@@ -42,7 +42,7 @@ Subgraphs must be associated with a project; if you don’t already have a proje
    * Click **Next**. The **Create subgraph** section is displayed.
 1. In the **Create subgraph** section:
      * Enter a **Name** for the subgraph.
-     * Select the **Project** that you want to assign your subgraph to. The **Estimated cost** of your subgraph is displayed.
+     * Select the **Project** that you want to assign your subgraph to. 
      * Click **Add subgraph**. The details page of the new subgraph is displayed.
   
 The subgraph details page includes information such as the **Owner**, **Creation date**, **Region**, and **Protocol**. You can view the **Metrics** about the requests made in the subgraph, view the **Subgraph Query URLs**, and the **Subgraph Deployment command**, which you require to deploy the subgraph.
@@ -138,6 +138,6 @@ To query the subgraph using the GraphQL UI, copy the GraphQL UI URl from the sub
 
 ::: tip See also
 
-* [The Graph documentation](https://thegraph.com/docs/en/about/)
+* [Graph documentation — Creating a subgraph](https://thegraph.com/docs/en/developing/creating-a-subgraph/)
 
 :::
