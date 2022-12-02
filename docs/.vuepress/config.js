@@ -741,6 +741,7 @@ module.exports = {
           },
         ],
       },
+      '/subgraphs',
       '/marketplace',
             {
                 title: 'Blockchains',

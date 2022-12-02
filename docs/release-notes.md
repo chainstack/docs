@@ -18,6 +18,7 @@ meta:
 * **Documentation**.
   * Gnosis Chain API [reference](/api/gnosis/gnosis-api-reference) update.
   * Debug and trace methods added to the Ethereum API [reference](/api/ethereum/ethereum-api-reference).
+  * Chainstack [Subgraphs](/subgraphs). 
 
 ## Chainstack 3.8.3
 
