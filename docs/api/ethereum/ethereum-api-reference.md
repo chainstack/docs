@@ -81,6 +81,7 @@ gem install eth
 
 ::: tip See also
 
-* <a href="https://chainstack.com/build-better-with-ethereum/" target="_blank">Build better with Ethereum</a>
+  * [Deploy your Ethereum node to enable debug and trace API methods](/api/ethereum/deploy-your-ethereum-node-to-enable-debug-and-trace-api-methods)
+  * <a href="https://chainstack.com/build-better-with-ethereum/" target="_blank">Build better with Ethereum</a>
 
 :::

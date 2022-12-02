@@ -10,6 +10,12 @@ meta:
 
 Ethereum API method that replays the block that is already present in the database.
 
+::: tip Information
+
+Learn [how to deploy](/api/ethereum/deploy-your-ethereum-node-to-enable-debug-and-trace-api-methods) a node with the debug and trace API methods enabled.
+
+:::
+
 **Parameters:**
 
 * `quantity or tag` — the integer block number, or the string with:

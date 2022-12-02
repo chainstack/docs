@@ -10,6 +10,12 @@ meta:
 
 Ethereum API method that returns all traces of the given transaction.
 
+::: tip Information
+
+Learn [how to deploy](/api/ethereum/deploy-your-ethereum-node-to-enable-debug-and-trace-api-methods) a node with the debug and trace API methods enabled.
+
+:::
+
 **Parameters:**
 
 * `hash` — the hash of a transaction.

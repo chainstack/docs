@@ -10,6 +10,12 @@ meta:
 
 Ethereum API method that lets you run `eth_call` on top of a block.
 
+::: tip Information
+
+Learn [how to deploy](/api/ethereum/deploy-your-ethereum-node-to-enable-debug-and-trace-api-methods) a node with the debug and trace API methods enabled.
+
+:::
+
 **Parameters:**
 
 * `object` — the transaction call object with:

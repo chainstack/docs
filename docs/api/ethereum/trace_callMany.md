@@ -14,6 +14,8 @@ Ethereum API method that performs multiple call traces on top of the same block.
 
 This method is available on Erigon when the `trace` namespace is enabled.
 
+Learn [how to deploy](/api/ethereum/deploy-your-ethereum-node-to-enable-debug-and-trace-api-methods) a node with the debug and trace API methods enabled.
+
 :::
 
 **Parameters:**

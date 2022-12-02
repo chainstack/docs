@@ -492,6 +492,7 @@ module.exports = {
             collapsable: true,
             children: [
               "api/ethereum/ethereum-api-reference",
+              "api/ethereum/deploy-your-ethereum-node-to-enable-debug-and-trace-api-methods",
               "api/ethereum/debug_traceBlockByHash",
               "api/ethereum/debug_traceBlockByNumber",
               "api/ethereum/debug_traceCall",
@@ -504,6 +505,7 @@ module.exports = {
               "api/ethereum/eth_getbalance",
               "api/ethereum/eth_getblockbyhash",
               "api/ethereum/eth_getblockbynumber",
+              "api/ethereum/eth_getBlockReceipts",
               "api/ethereum/eth_getblocktransactioncountbyhash",
               "api/ethereum/eth_getblocktransactioncountbynumber",
               "api/ethereum/eth_getcode",
