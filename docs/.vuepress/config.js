@@ -183,6 +183,7 @@ module.exports = {
                             '/operations/gnosis/types',
                             '/operations/gnosis/modes',
                             '/operations/gnosis/debug-and-trace-apis',
+                            '/operations/gnosis/clients',
                             '/operations/gnosis/tools',
                         ]
                     },
@@ -687,10 +688,10 @@ module.exports = {
             ],
           },
           {
-            title: "Gnosis Beacon Chain API",
+            title: "Gnosis Chain API",
             collapsable: true,
             children: [
-              "api/gnosis/gnosis-beacon-api-reference",
+              "api/gnosis/gnosis-api-reference",
               "api/gnosis/eth_v1_beacon_genesis",
               "api/gnosis/eth_v1_beacon_states_state_id_root",
               "api/gnosis/eth_v1_beacon_states_state_id_fork",
