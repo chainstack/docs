@@ -8,6 +8,16 @@ meta:
 
 # Release notes
 
+## Chainstack 3.8.4
+
+*December 2, 2022*
+
+### What's new
+
+* **Protocols**. [Gnosis Chain clients](/operations/gnosis/clients) updated for The Merge.
+* **Documentation**. 
+  * Gnosis Chain API [reference](/api/gnosis/gnosis-api-reference) update.
+  * Debug and trace methods are added to the Ethereum API [reference](/api/ethereum/ethereum-api-reference).
 
 ## Chainstack 3.8.3
 
