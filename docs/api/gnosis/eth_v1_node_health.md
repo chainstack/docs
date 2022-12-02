@@ -6,19 +6,19 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/node/health
+# eth/v1/node/health API method
 
 Gnosis consensus layer Beacon Chain API call that returns the node health status in HTTP status codes.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
 * `200` — the node is ready.
 * `206` — the node is syncing but can serve incomplete data.
-* `503` — the node not initialized or having issues.
+* `503` — the node is not initialized or having issues.
 
 **Example:**
 

@@ -6,22 +6,22 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/beacon/headers
+# eth/v1/beacon/headers API method
 
 Gnosis consensus layer Beacon Chain API call that returns the block headers matching the given query. By default, it will fetch current head slot blocks.
 
-**Parameters:** 
+**Parameters:**
 
-* `slot` — `string` — fetch [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given epoch. If not present then the sync committees for the epoch of the state will be obtained.
-* `parent_root` — `string` — fetch [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given epoch. If not present then the sync committees for the epoch of the state will be obtained.
+* `slot` — `string` — fetches [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given epoch. If not present, then the sync committees for the epoch of the state will be obtained.
+* `parent_root` — `string` — fetches [sync committees](https://ethereum.org/en/glossary/#sync-committee) for the given epoch. If not present, then the sync committees for the epoch of the state will be obtained.
 
-**Returns:** 
+**Returns:**
 
 * `execution_optimistic` — `boolean` — `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
-* `data` — `array` — `objects`:
+* `data` — `array` — `objects` with:
   * `root` — `string` — the corresponding root.
   * `canonical` — `boolean`.
-  * `header` — `object` — the [SignedBeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#signedbeaconblockheader).
+  * `header` — `object` — the [SignedBeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#signedbeaconblockheader) object.
   * `message` — `object` — the [BeaconBlockHeader](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblockheader) object.
  * `slot` — `string` — the slot to which this block corresponds.
  * `proposer_index` — `string` — the index of the validator in the validator registry.

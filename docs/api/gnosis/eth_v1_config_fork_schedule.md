@@ -6,17 +6,17 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/config/fork_schedule
+# eth/v1/config/fork_schedule API method
 
 Gnosis consensus layer Beacon Chain API call that returns all forks, past present and future, of which this node is aware.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` — `object`:
+* `data` — `object` with:
   * `previous_version` — `string` — the fork version number.
   * `current_version` — `string` — the fork version number.
   * `epoch` — the minimum epoch at which this exit can be included on chain.

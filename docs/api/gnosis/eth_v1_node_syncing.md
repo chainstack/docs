@@ -6,17 +6,17 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/node/syncing
+# eth/v1/node/syncing API method
 
 Gnosis consensus layer Beacon Chain API call that returns if the node is synced or not and the latest slot.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` — `object`:
+* `data` — `object` with:
   * `head slot`
   * `sync_distance`
   * `is_syncing`

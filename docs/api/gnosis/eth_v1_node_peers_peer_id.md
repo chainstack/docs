@@ -6,17 +6,17 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/node/peers/{peer_id}
+# eth/v1/node/peers/{peer_id} API method
 
 Gnosis consensus layer Beacon Chain API call that returns the data about the given peer.
 
-**Parameters:** 
+**Parameters:**
 
 * `peer_id` — the ID of the peer.
 
-**Returns:** 
+**Returns:**
 
-* `data` — `object`:
+* `data` — `object` with:
   * `peer_id` — the ID of the peer.
   * `enr` — the Gnosis node record data as provided in the [networking specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md).
 

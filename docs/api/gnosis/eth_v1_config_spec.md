@@ -6,15 +6,15 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/config/spec
+# eth/v1/config/spec API method
 
 Gnosis consensus layer Beacon Chain API call that returns the specification configuration used on this node.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
 The configuration set for the node per the [consensus layer specification](https://github.com/ethereum/consensus-specs/).
 

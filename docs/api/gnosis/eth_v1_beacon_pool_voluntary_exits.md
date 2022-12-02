@@ -6,17 +6,17 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/beacon/pool/voluntary_exits
+# eth/v1/beacon/pool/voluntary_exits API method 
 
 Gnosis consensus layer Beacon Chain API call that returns voluntary exits known by the node but not necessarily incorporated into any block.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` — `array` — `objects` — the [attestation](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestation) object with:
+* `data` — `array` — `objects` — the [Attestation](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestation) objects with:
  * `message`:
    * `epoch` — the minimum epoch at which this exit can be included on chain.
    * `validator_index` — the index of the validator exiting.

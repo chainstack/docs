@@ -6,17 +6,17 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/node/peer_count
+# eth/v1/node/peer_count API method
 
 Gnosis consensus layer Beacon Chain API call that returns the number of the peers connected to the node.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` — `object`:
+* `data` — `object` with:
   * `disconnected`
   * `connecting`
   * `connected`

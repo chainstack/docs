@@ -6,29 +6,29 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/beacon/pool/attestations
+# eth/v1/beacon/pool/attestations API method
 
 Gnosis consensus layer Beacon Chain API call that returns [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) known by the node but not necessarily incorporated into any block.
 
-**Parameters:** 
+**Parameters:**
 
 * `slot` — `string` — (required) the slot number.
 * `committee_index` — `string` — the index of the [committee](https://ethereum.org/en/glossary/#committee).
 
-**Returns:** 
+**Returns:**
 
 * `execution_optimistic` — `boolean` — `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
   * `data` — `array` — `objects` — the [Attestation](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestation) object with:
     * `aggregation_bits` — `string` — the attester aggregation bits.
     * `signature` — `string` — the BLS aggregate signature.
-    * `data` — `object` — the [AttestationData](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestationdata) object.
+    * `data` — `object` — the [AttestationData](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestationdata) object with:
      * `slot` — `string` — the corresponding slot.
      * `index` — `string` — the index.
      * `beacon_block_root` — `string` — the LMD GHOST vote.
-     * `source` — `object` — the [checkpoint](https://ethereum.org/en/glossary/#checkpoint).
+     * `source` — `object` — the [Checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
        * `epoch` — `string` — the corresponding epoch.
        * `root` — `string` — the corresponding root.
-    * `target` — `object` — the [checkpoint](https://ethereum.org/en/glossary/#checkpoint).
+    * `target` — `object` — the [Checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
       * `epoch` — `string` — the corresponding epoch.
       * `root` — `string` — the corresponding root.
 

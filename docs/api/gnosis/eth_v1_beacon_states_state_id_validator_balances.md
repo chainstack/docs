@@ -6,27 +6,27 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/beacon/states/{state_id}/validator_balances
+# eth/v1/beacon/states/{state_id}/validator_balances API method
 
 Gnosis consensus layer Beacon Chain API call that returns a filterable list of validators balances.
 
 Balances will be returned for all indices or public keys that match known validators. If an index or public key does not match any known validator, no balance will be returned, but this will not cause an error. There are no guarantees for the returned data in terms of the order. The index is returned for each balance and can be used to confirm for which inputs a response has been returned.
 
-**Parameters:** 
+**Parameters:**
 
-* `state_id` — `string` — (required) the state identifier:
-  * `head` — the canonical head of the chain in the view of the node that you sending the call to.
+* `state_id` — `string` — (required) the state identifier with:
+  * `head` — the canonical head of the chain in the view of the node that you are sending the call to.
   * `genesis` — the genesis state of the chain.
-  * `justified` — the slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Ethereum validators.
+  * `justified` — the slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Gnosis validators.
   * `finalized` — the previously justified slot that is now in the epoch that is at least immediately previous to the current epoch.
   * `slot` — the slot number.
   * `0xstateRoot` — the root hash for the global chain state after applying changes [in the block](https://ethereum.org/en/developers/docs/blocks/) that is in the slot.
 * `id` — `array` — `string` — the hex encoded public key (any bytes48 with 0x prefix) or validator index.
 
-**Returns:** 
+**Returns:**
 
 * `execution_optimistic` — `boolean` — `true` if the response references an unverified execution payload. Optimistic information may be invalidated at a later time. If the field is not present, assume the `false` value.
-* `data` — `array` — `object`:
+* `data` — `array` — `object` with:
   * `index` — `string` — the index of validator in validator registry.
   * `balance` — `string` — the current validator balance in Gwei.
 

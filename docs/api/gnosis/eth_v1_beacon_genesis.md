@@ -6,17 +6,17 @@ meta:
     content: curl rest api beacon chain lighthouse gnosis
 ---
 
-# eth/v1/beacon/genesis
+# eth/v1/beacon/genesis API method
 
-Gnosis consensus layer Beacon Chain API call that returns the current chain's genesis details. This call can also be used to easily identify the chain. 
+Gnosis consensus layer Beacon Chain API call that returns the current chain's genesis details. This call can also be used to easily identify the chain.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` — `object`:
+* `data` — `object` with:
   * `genesis_time` — `string` — the `genesis_time` configured for the consensus layer Beacon Chain node. This is the Unix time of when the Beacon Chain started.
   * `genesis_validators_root` — `string` — the genesis validator root.
   * `genesis_fork_version` — `string` — the fork version number.
