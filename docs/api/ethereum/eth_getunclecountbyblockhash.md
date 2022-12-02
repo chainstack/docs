@@ -3,7 +3,7 @@ meta:
   - name: description
     content: eth_getUncleCountByBlockHash JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_getUncleCountByBlockHash RPC method
@@ -12,11 +12,11 @@ Ethereum API method that returns the number of uncles for the block matching the
 
 **Parameters:**  
 
-* `hash` - The hash of the block to retrieve uncles from.
+* `hash` — the hash of the block to retrieve uncles from.
 
-**Returns:** 
+**Returns:**
 
-* `uncles` - The integer value of the number of uncles in the block. Encoded as hexadecimal.
+* `uncles` — the integer value of the number of uncles in the block, encoded as hexadecimal.
 
 **Example:**
 
@@ -37,8 +37,8 @@ web3.eth.getBlockUncleCount("0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a0
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-web3 = Web3(Web3.HTTPProvider(node_url)) 
+node_url = "CHAINSTACK_NODE_URL"
+web3 = Web3(Web3.HTTPProvider(node_url))
 print(web3.eth.get_uncle_count("0x685b2226cbf6e1f890211010aa192bf16f0a0cba9534264a033b023d7367b845"))   
 ```
 

@@ -3,26 +3,26 @@ meta:
   - name: description
     content: eth_estimateGas JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_estimateGas RPC method
 
-Ethereum API method that returns an estimation of gas units needed for a given transaction. 
+Ethereum API method that returns an estimation of gas units needed for a given transaction.
 
-**Parameters:** 
+**Parameters:**
 
-* `object` - [Transaction call object](https://eth.wiki/json-rpc/API#parameters-25), where the `from` field is optional, and the `nonce` field is omitted.
-* `quantity or tag` - Integer block number, or the string:
+* `object` — the [transaction call object](https://eth.wiki/json-rpc/API#parameters-25), where the `from` field is optional, and the `nonce` field is omitted.
+* `quantity or tag` — the integer block number, or the string:
   * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
   * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
   * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
   * `earliest` — the genesis block.
   * `pending` — the pending state and transactions block.
 
-**Returns:** 
+**Returns:**
 
-* `quantity` - The estimated amount of gas units used.
+* `quantity` — the estimated amount of gas units used.
 
 **Example:**
 
@@ -48,8 +48,8 @@ web3.eth.estimateGas({
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-web3 = Web3(Web3.HTTPProvider(node_url)) 
+node_url = "CHAINSTACK_NODE_URL"
+web3 = Web3(Web3.HTTPProvider(node_url))
 print(web3.eth.estimate_gas({"from":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","to":"0x90335eE2286315185a0ff7108B5f7809ce6332F9"}, "latest" ))  
 ```
 

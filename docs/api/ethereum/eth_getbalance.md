@@ -3,30 +3,30 @@ meta:
   - name: description
     content: eth_getBalance JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_getBalance RPC method
 
-Ethereum API method that returns the balance of a given account address. The value is returned in Wei. 
+Ethereum API method that returns the balance of a given account address. The value is returned in Wei.
 
-**Parameters:** 
+**Parameters:**
 
-* `address` - The address to check the balance of.
-* `quantity or tag` - Integer block number, or the string:
+* `address` — the address to check the balance of.
+* `quantity or tag` — the integer block number, or the string with:
     * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
     * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
     * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
     * `earliest` — the genesis block.
     * `pending` — the pending state and transactions block.
 
-**Returns:** 
+**Returns:**
 
-* `quantity` - The integer value of the current balance in Wei.
+* `quantity` — the integer value of the current balance in Wei.
 
 **Example:**
 
-::: tip
+::: tip Information
 cURL needs a `HEX String` starting with `0x` to identify the block if you want to use a hex integer block number as a parameter.
 For example, block number `14000000` will be `0xD59F80`.
 :::
@@ -48,10 +48,10 @@ web3.eth.getBalance("0x9D00f1630b5B18a74231477B7d7244f47138ab47", "latest", (err
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-web3 = Web3(Web3.HTTPProvider(node_url)) 
-balance = web3.eth.get_balance("0x9D00f1630b5B18a74231477B7d7244f47138ab47", "latest") 
-print(balance) 
+node_url = "CHAINSTACK_NODE_URL"
+web3 = Web3(Web3.HTTPProvider(node_url))
+balance = web3.eth.get_balance("0x9D00f1630b5B18a74231477B7d7244f47138ab47", "latest")
+print(balance)
 ```
 
 </template>

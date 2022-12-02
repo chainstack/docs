@@ -10,15 +10,15 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns the data about the node's network presence.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` - `object`:
+* `data` — `object` with:
   * `peer_id` — the ID of the peer.
-  * `enr` — The Ethereum node record data as provided in the [networking specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md).
+  * `enr` — the Ethereum node record data as provided in the [networking specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md).
 
 **Example:**
 

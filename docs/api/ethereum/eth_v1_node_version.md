@@ -10,13 +10,13 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns the version of the consensus layer node.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` - `object`:
+* `data` — `object` with:
   * `version`
 
 **Example:**

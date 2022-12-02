@@ -12,35 +12,35 @@ Ethereum API method that returns an array of all logs matching a given filter ob
 
 **Parameters:**  
 
-* `object` - The filter options:
-  * `fromBlock` - (optional, default: `"latest"`) Integer block number encoded as hexadecimal, or the string:
+* `object` — the filter options:
+  * `fromBlock` — (optional, default: `"latest"`) the integer block number encoded as hexadecimal, or the string with:
     * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
     * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
     * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
     * `earliest` — the genesis block.
     * `pending` — the pending state and transactions block.
-  * `toBlock` - (optional, default: `"latest"`) Integer block number encoded as hexadecimal, or the string:
+  * `toBlock` — (optional, default: `"latest"`) the integer block number encoded as hexadecimal, or the string with:
     * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
     * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
     * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
     * `earliest` — the genesis block.
     * `pending` — the pending state and transactions block.
-  * `address` - (optional) Contract address, or a list of addresses from which logs should originate.
-  * `topics` - (optional) Array of `DATA` topics. Topics are order-dependent. See [Ethereum official documentation](https://ethereum.org/en/developers/docs/apis/json-rpc/#ops-deployments-custom) to learn more about topics.
-  * `blockhash` - (optional) With the addition of EIP-234, `blockHash` will be a new filter option that restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using blockHash is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` is allowed.
+  * `address` — (optional) the contract address, or a list of addresses from which logs should originate.
+  * `topics` — (optional) the array of `DATA` topics. Topics are order-dependent. See [Ethereum official documentation](https://ethereum.org/en/developers/docs/apis/json-rpc/#ops-deployments-custom) to learn more about topics.
+  * `blockhash` — (optional) with the addition of EIP-234, `blockHash` will be a new filter option that restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using blockHash is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` is allowed.
 
 **Returns:**
 
-* `array` - An array of log objects, or an empty array if nothing has changed since the last poll:
-  * `removed` - The boolean value `True` if the log was removed due to a chain reorganization. `False` if it is a valid log.
-  * `logindex` - Integer of the log index position in the block encoded as hexadecimal. `null` if pending.
-  * `transactionindex` - Integer of the transactions' index position the log was created from. `null` if it is pending.
-  * `transactionhash` - Hash of the transactions the log was created from. `null` if pending.
-  * `blockhash` - Hash of the block where this log was in. `null` if it is pending.
-  * `blocknumber` - The block number where this log was encoded as hexadecimal. `null` if it is pending.
-  * `address` - The address from which this log originated.
-  * `data` - Contains one or more 32 Bytes non-indexed arguments of the log.
-  * `topics` - An array of 0 to 4 32 Bytes of indexed log arguments.
+* `array` — an array of log objects, or an empty array if nothing has changed since the last poll:
+  * `removed` — the boolean value `True` if the log was removed due to a chain reorganization. `False` if it is a valid log.
+  * `logindex` — the integer of the log index position in the block, encoded as hexadecimal. `null` if pending.
+  * `transactionindex` — the integer of the transactions' index position the log was created from. `null` if pending.
+  * `transactionhash` — the hash of the transactions the log was created from. `null` if pending.
+  * `blockhash` — the hash of the block where this log was in. `null` if pending.
+  * `blocknumber` — the block number where this log was encoded as hexadecimal. `null` if pending.
+  * `address` — the address from which this log originated.
+  * `data` — contains one or more 32 bytes non-indexed arguments of the log.
+  * `topics` — an array of 0 to 4 32 bytes of indexed log arguments.
 
 **Example:**
 

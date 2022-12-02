@@ -15,7 +15,9 @@ meta:
 ### What's new
 
 * **Protocols**. [Gnosis Chain clients](/operations/gnosis/clients) updated for The Merge.
-* **Documentation**. Gnosis Chain API [reference](/api/gnosis/gnosis-api-reference) update.
+* **Documentation**.
+  * Gnosis Chain API [reference](/api/gnosis/gnosis-api-reference) update.
+  * Debug and trace methods added to the Ethereum API [reference](/api/ethereum/ethereum-api-reference).
 
 ## Chainstack 3.8.3
 
