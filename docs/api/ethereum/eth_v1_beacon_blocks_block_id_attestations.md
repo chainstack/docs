@@ -13,7 +13,7 @@ Ethereum consensus layer Beacon Chain API call that returns [attestations](https
 **Parameters:**
 
 * `block_id` — `string` — (required) the block identifier with:
-  * `head` — the canonical head of the chain in the view of the node that you sending the call to.
+  * `head` — the canonical head of the chain in the view of the node that you are sending the call to.
   * `genesis` — the genesis state of the chain.
   * `justified` — the slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Ethereum validators.
   * `finalized` — the previously justified slot that is now in the epoch that is at least immediately previous to the current epoch.
@@ -30,10 +30,10 @@ Ethereum consensus layer Beacon Chain API call that returns [attestations](https
      * `slot` — `string` — the corresponding slot.
      * `index` — `string` — the index.
      * `beacon_block_root` — `string` — the LMD GHOST vote.
-     * `source` — `object` — the [checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
+     * `source` — `object` — the [Checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
        * `epoch` — `string` — the corresponding epoch.
        * `root` — `string` — the corresponding root.
-    * `target` — `object` — the [checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
+    * `target` — `object` — the [Checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
       * `epoch` — `string` — the corresponding epoch.
       * `root` — `string` — the corresponding root.
 

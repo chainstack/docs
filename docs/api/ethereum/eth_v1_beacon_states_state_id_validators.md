@@ -13,7 +13,7 @@ Ethereum consensus layer Beacon Chain API call that returns a filterable list of
 **Parameters:**
 
 * `state_id` — `string` — (required) the state identifier with:
-  * `head` — the canonical head of the chain in the view of the node that you sending the call to.
+  * `head` — the canonical head of the chain in the view of the node that you are sending the call to.
   * `genesis` — the genesis state of the chain.
   * `justified` — the slot in the current epoch that has received [attestations](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/) from two thirds of the Ethereum validators.
   * `finalized` — the previously justified slot that is now in the epoch that is at least immediately previous to the current epoch.
@@ -36,7 +36,7 @@ Ethereum consensus layer Beacon Chain API call that returns a filterable list of
     * `activation_elgibility_epoch` — `string` — shows when criteria for activation were met.
     * `activation_epoch` — `string` — the epoch when the validator activated. `FAR_FUTURE_EPOCH` if not activated.
     * `exit_epoch` — `string` — the epoch when validator exited.
-    * `withdrawable_epoch` — `string` — shoes when the validator can withdraw or transfer funds. `FAR_FUTURE_EPOCH` if not defined.
+    * `withdrawable_epoch` — `string` — shows when the validator can withdraw or transfer funds. `FAR_FUTURE_EPOCH` if not defined.
 
 **Example:**
 

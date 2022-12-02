@@ -15,7 +15,7 @@ Servers may send SSE comments beginning with `:` for any purpose, including to k
 **Parameters:**
 
 * `topics` — `array` — `string` — (required) event types to subscribe to. Available values:
-  * `head` — the canonical head of the chain in the view of the node that you sending the call to.
+  * `head` — the canonical head of the chain in the view of the node that you are sending the call to.
   * `block` — the block number.
   * `attestation` — [attestation](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/).
   * `voluntary_exit` — [VoluntaryExit](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#voluntaryexit).

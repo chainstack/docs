@@ -24,10 +24,10 @@ Ethereum consensus layer Beacon Chain API call that returns attester slashings k
      * `slot` — `string` — the corresponding slot.
      * `index` — `string` — the index.
      * `beacon_block_root` — `string` — the LMD GHOST vote.
-     * `source` — `object` — the [checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
+     * `source` — `object` — the [Checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
        * `epoch` — `string` — the corresponding epoch.
        * `root` — `string` — the corresponding root.
-    * `target` — `object` — the [checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
+    * `target` — `object` — the [Checkpoint](https://ethereum.org/en/glossary/#checkpoint) object with:
       * `epoch` — `string` — the corresponding epoch.
       * `root` — `string` — the corresponding root.
 
