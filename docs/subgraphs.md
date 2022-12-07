@@ -8,8 +8,8 @@ meta:
 
 # Subgraphs
 
-::: details
-This is a closed beta. If you want to participate, contact *kirill.balakhonov@chainstack.com*
+::: warning
+This is a closed beta. If you want to participate, contact *support@chainstack.com*
 :::
 
 ## Introduction
