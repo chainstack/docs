@@ -100,7 +100,7 @@ graph –v
 1. Enter a version label for your subgraph (you can use any number/letter character combination). If the subgraph is successfully deployed, you will receive a response like the following example:
 
     ``` sh
-    Deployed to https://chainstack.com/subgraphs/SGR-123-456-789
+    Deployed to https://chainstack.com/subgraphs/SG-123-456-789
 
     Subgraph endpoints:
     Queries (HTTP):     https://ethereum-mainnet.graph-eu.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/my_subgraph_v1_0
