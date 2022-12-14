@@ -15,7 +15,7 @@ meta:
 ### What’s new
 
 * **Protocols**. [Gnosis Chain Chiado](/operations/gnosis/networks) testnet support for elastic and dedicated nodes.
-* **Crypto payments**. In addition to the previously available cryptocurrencies, you can now [top up your balance](/platform/top-up-your-balance-with-crypto) with Polygon MATIC, ETH, and USDC.
+* **Crypto payments**. In addition to the previously available cryptocurrencies, you can now [top up your balance](/platform/top-up-your-balance-with-crypto) with Polygon MATIC.
 
 ## Chainstack 3.8.4
 
