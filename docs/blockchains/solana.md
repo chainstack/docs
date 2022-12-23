@@ -12,7 +12,7 @@ Solana is a permissionless network protocol with the parallel smart contract pro
 
 ## Consensus
 
-For consensus, Solana uses a combination of proof of stake to secure the network and the proof of history mechanism to synchronize the network state.
+For consensus, Solana uses a combination of proof-of-stake to secure the network and the proof-of-history mechanism to synchronize the network state.
 
 Validators on the network stake SOL to get the right to confirm blocks in assigned time slots.
 

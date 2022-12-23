@@ -8,7 +8,7 @@ meta:
 
 # Modes
 
-Chainstack supports deploying a Aptos node on the mainnet in the following modes:
+Chainstack supports deploying an Aptos node on the mainnet in the following modes:
 
 * Full node — a node that stores full blockchain data.
 * Archive node — a node that stores full blockchain data and an archive of historical states.

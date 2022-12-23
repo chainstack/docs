@@ -8,6 +8,15 @@ meta:
 
 # Release notes
 
+## Chainstack 3.9
+
+*December 27, 2022*
+
+### What’s new
+
+* **Protocols**. [Aptos](/operations/aptos/networks) support.
+* **Documentation**. [Aptos](/operations/aptos).
+
 ## Chainstack 3.8.5
 
 *December 15, 2022*

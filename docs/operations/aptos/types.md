@@ -8,7 +8,7 @@ meta:
 
 # Types
 
-Chainstack supports deploying a Aptos node of the following types:
+Chainstack supports deploying an Aptos node of the following types:
 
 * Elastic — a highly scalable public network node infrastructure accessed through your exclusive endpoint.
 * Dedicated — a dedicated node that is exclusive to you.

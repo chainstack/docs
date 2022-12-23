@@ -12,7 +12,7 @@ Aptos is a permissionless non-EVM compatible layer 1 chain that uses [Move](http
 
 ## Consensus
 
-The Aptos blockchain uses a Byzantine Fault Tolerance (BFT) proof of stake (PoS) consensus protocol called AptosBFT.
+The Aptos blockchain uses a Byzantine Fault Tolerance (BFT) proof-of-stake (PoS) consensus protocol called AptosBFT.
 
 For validation to occur, a lead validator is algorithmically selected from the validator set based on previous performance factors and stake. The validator leader proposes the order of transactions for the new block and all validators vote on the proposal until consensus is reached. Only the leader validator is rewarded.
 
