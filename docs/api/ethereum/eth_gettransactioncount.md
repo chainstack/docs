@@ -3,7 +3,7 @@ meta:
   - name: description
     content: eth_getTransactionCount JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_getTransactionCount RPC method
@@ -12,21 +12,21 @@ Ethereum API method that returns the number of transactions sent from an address
 
 **Parameters:**  
 
-* `address` - The address to retrieve the transaction count from.
-* `quantity or tag` - (optional) Integer block number, or the string:
+* `address` — the address to retrieve the transaction count from.
+* `quantity or tag` — (optional) the integer block number, or the string with:
   * `latest` — the latest block that is to be validated. The Beacon Chain may reorg and the latest block can become orphaned.
   * `safe` — the block that is equal to the tip of the chain and is very unlikely to be orphaned.
   * `finalized` — the block that is accepted by the two thirds of the Ethereum validators.
   * `earliest` — the genesis block.
-  * `pending` — the pending state and transactions block. 
+  * `pending` — the pending state and transactions block.
 
-**Returns:** 
+**Returns:**
 
-* `result` - An integer number of transactions sent from an address.
+* `result` — the integer number of transactions sent from an address.
 
 **Example:**
 
-::: tip
+::: tip Information
 cURL needs a `HEX String` starting with `0x` to identify the block if you want to use a hex integer block number as a parameter.
 For example, block number `14000000` will be `0xD59F80`.
 :::
@@ -48,9 +48,9 @@ web3.eth.getTransactionCount("0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C", "late
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-web3 = Web3(Web3.HTTPProvider(node_url)) 
-print(web3.eth.getTransactionCount("0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C", "latest")) 
+node_url = "CHAINSTACK_NODE_URL"
+web3 = Web3(Web3.HTTPProvider(node_url))
+print(web3.eth.getTransactionCount("0xcb8BBFa45541a95C1de883eB3606708cAe9fd45C", "latest"))
 ```
 
 </template>

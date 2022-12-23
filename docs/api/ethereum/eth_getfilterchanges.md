@@ -12,25 +12,25 @@ Ethereum API polling method for a filter, which returns an array of logs which o
 
 **Parameters:**
 
-- `quantity` - The filter id that is returned from [eth_newFilter](/api/ethereum/eth_newfilter), [eth_newBlockFilter](/api/ethereum/eth_newblockfilter), or [eth_newPendingTransactionFilter](/api/ethereum/eth_newpendingtransactionfilter).
+- `quantity` — the filter ID that is returned from [eth_newFilter](/api/ethereum/eth_newfilter), [eth_newBlockFilter](/api/ethereum/eth_newblockfilter), or [eth_newPendingTransactionFilter](/api/ethereum/eth_newpendingtransactionfilter).
 
 **Returns:**
 
-- `array` - An array of one of the following, depending on the filter type, or empty if no changes occurred since the last poll:
+- `array` — an array of one of the following, depending on the filter type, or empty if no changes occurred since the last poll:
   - For filters created with `eth_newBlockFilter`:
-    - `blockHash` - The 32 bytes hash of a block that meets your filter requirements.
+    - `blockHash` — the 32 bytes hash of a block that meets your filter requirements.
   - For filters created with `eth_newPendingTransactionFilter`:
-    - `transactionHash` - The 32 bytes hash of a transaction that meets your filter requirements.
+    - `transactionHash` — the 32 bytes hash of a transaction that meets your filter requirements.
   - For filters created with `eth_newFilter`, logs are objects with the following parameters:
-    - `removed` - The boolean value `True` if the log was removed due to a chain reorganization. `False` if it is a valid log.
-    - `logindex` - Integer of the log index position in the block encoded as hexadecimal. `null` if pending.
-    - `transactionindex` - Integer of the transactions' index position the log was created from. `null` if it is pending.
-    - `transactionhash` - Hash of the transactions the log was created from. `null` if pending.
-    - `blockhash` - Hash of the block where this log was in. `null` if it is pending.
-    - `blocknumber` - The block number where this log was encoded as hexadecimal. `null` if it is pending.
-    - `address` - The address from which this log originated.
-    - `data` - Contains one or more 32 Bytes non-indexed arguments of the log.
-    - `topics` - An array of 0 to 4 32 Bytes of indexed log arguments.
+    - `removed` — the boolean value `True` if the log was removed due to a chain reorganization. `False` if it is a valid log.
+    - `logindex` — the integer of the log index position in the block, encoded as hexadecimal. `null` if pending.
+    - `transactionindex` — the integer of the transactions' index position the log was created from. `null` if pending.
+    - `transactionhash` — the hash of the transactions the log was created from. `null` if pending.
+    - `blockhash` — the hash of the block where this log was in. `null` if pending.
+    - `blocknumber` — the block number where this log was encoded as hexadecimal. `null` if pending.
+    - `address` — the address from which this log originated.
+    - `data` — contains one or more 32 bytes non-indexed arguments of the log.
+    - `topics` — an array of 0 to 4 32 bytes of indexed log arguments.
 
 **Example:**
 

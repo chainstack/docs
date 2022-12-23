@@ -6,10 +6,79 @@ meta:
     content: release notes version blockchain cloud protocol
 ---
 
-
 # Release notes
 
-## Chainstack 3.5.8
+## Chainstack 3.8.5
+
+*December 15, 2022*
+
+### What’s new
+
+* **Protocols**. [Gnosis Chain Chiado](/operations/gnosis/networks) testnet support for elastic and dedicated nodes.
+* **Crypto payments**. In addition to the previously available cryptocurrencies, you can now [top up your balance](/platform/top-up-your-balance-with-crypto) with Polygon MATIC.
+
+## Chainstack 3.8.4
+
+*December 2, 2022*
+
+### What's new
+
+* **Protocols**. [Gnosis Chain clients](/operations/gnosis/clients) updated for The Merge.
+* **Documentation**.
+  * Gnosis Chain API [reference](/api/gnosis/gnosis-api-reference) update.
+  * Debug and trace methods added to the Ethereum API [reference](/api/ethereum/ethereum-api-reference).
+  * Chainstack [Subgraphs](/subgraphs).
+
+## Chainstack 3.8.3
+
+*November 29, 2022*
+
+### What's new
+
+* **Documentation**. Solana API [reference](/api/solana/solana-api-reference) update.
+
+## Chainstack 3.8.2
+
+*November 23, 2022*
+
+### What's new
+
+* **Documentation**. [Chainstack Marketplace listing guidelines](/marketplace).
+
+## Chainstack 3.8.1
+
+*November 16, 2022*
+
+### What's new
+
+* **Protocols**. [StarkNet](/operations/starknet/networks) testnet2 (Goerli2) support for elastic and dedicated nodes.
+
+## Chainstack 3.8
+
+*November 8, 2022*
+
+### What's new
+
+* **Support levels management**. You can now change a support level for your organization on the **Settings** > **Billing** page.
+* **Documentation**. Learn how to [change your support level or subscription plan](/platform/manage-your-organization-subscription-plan-and-support-level).
+
+## Chainstack 3.7
+
+*November 7, 2022*
+
+### What's new
+- **Protocols**. [Aurora](/operations/aurora/types) support for dedicated nodes.
+- **Documentation**. A simple on-chain governance tutorial for [Aurora](/tutorials/aurora).
+
+## Chainstack 3.6.1
+
+ *November 3, 2022*
+
+### What's new
+
+* **Protocols**. [Solana](/operations/solana/networks) elastic and dedicated full nodes now supported on both mainnet and devnet when using Chainstack Cloud in the Ashburn, USA region.
+
+## Chainstack 3.6
 
  *October 14, 2022*
 

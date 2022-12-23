@@ -26,15 +26,15 @@ Subscribes to incoming block headers. Similar to `eth_newBlockFilter`.
 
 **Parameters:**
 
-- `String` - `"newBlockHeaders"` identifying the type of subscription.
-- `Function` - (optional) callback. Returns an error object as the first parameter and the result as the second parameter. It will be called for each incoming subscription.
+- `String` — `"newBlockHeaders"` identifying the type of subscription.
+- `Function` — (optional) callback. Returns an error object as the first parameter and the result as the second parameter. It will be called for each incoming subscription.
 
 **Returns:**
 
-- `EventEmitter` - A [subscription instance](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-subscribe.html#eth-subscription-return) as an event emitter with the following events:
-  - `data` returns `Object` - Fires on each incoming block header.
-  - `error` returns `Object` - Fires when an error in the subscription occurs.
-  - `connected` returns `Number` - Fires once after the subscription is successfully connected. Returns the subscription ID.
+- `EventEmitter` — the [subscription instance](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-subscribe.html#eth-subscription-return) as an event emitter with the following events:
+  - `data` returns `Object` — fires on each incoming block header.
+  - `error` returns `Object` — fires when an error in the subscription occurs.
+  - `connected` returns `Number` — fires once after the subscription is successfully connected. Returns the subscription ID.
 
 **Example:**
 
@@ -76,14 +76,14 @@ Subscribes to incoming pending transactions. Similar to [eth_newPendingTransacti
 
 **Parameters:**
 
-- `String` - `'pendingTransactions'`; identifying the type of subscription.
-- `Function` - (optional) callback. Returns an error object as the first parameter and the result as the second parameter. It will be called for each incoming subscription.
+- `String` — `'pendingTransactions'`; identifying the type of subscription.
+- `Function` — (optional) callback. Returns an error object as the first parameter and the result as the second parameter. It will be called for each incoming subscription.
 
 **Returns:**
 
-- `EventEmitter` - A [subscription instance](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-subscribe.html#eth-subscription-return) as an event emitter with the following events:
-  - `data` returns `string` - Fires on each incoming pending transaction and returns the transaction hash.
-  - `error` returns `Object`: Fires when an error in the subscription occurs.
+- `EventEmitter` — the [subscription instance](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-subscribe.html#eth-subscription-return) as an event emitter with the following events:
+  - `data` returns `string` — fires on each incoming pending transaction and returns the transaction hash.
+  - `error` returns `Object` — fires when an error in the subscription occurs.
 
 **Example:**
 
@@ -113,20 +113,20 @@ Subscribes to incoming logs, filtered by the given options. If a valid numerical
 
 **Parameters:**
 
-- `String` - `"logs"`; identifying the type of subscription.
-- `Object` - The subscription options:
-  - `fromBlock` - `Number`- The number of the earliest block. By default `null`.
-  - `address` - `String|Array`- An address or a list of addresses to only get logs from particular account(s).
-  - `topics` - `Array` - An array of values which must each appear in the log entries. The order is important. If you want to leave topics out, use `null`; e.g. `null, '0x00...'`. You can also pass another array for each topic with options for that topic e.g. `null, ['option1', 'option2']`.
-  - `callback` - `Function` - (optional) Optional callback, returns an error object as first parameter and the result as second. Will be called for each incoming subscription.
+- `String` — `"logs"`; identifying the type of subscription.
+- `Object` — the subscription options:
+  - `fromBlock` — `Number` — the number of the earliest block. By default `null`.
+  - `address` — `String|Array` — an address or a list of addresses to only get logs from particular account(s).
+  - `topics` — `Array` — an array of values which must each appear in the log entries. The order is important. If you want to leave topics out, use `null`; e.g. `null, '0x00...'`. You can also pass another array for each topic with options for that topic e.g. `null, ['option1', 'option2']`.
+  - `callback` — `Function` — (optional) optional callback, returns an error object as first parameter and the result as second. Will be called for each incoming subscription.
 
 **Returns:**
 
-- `EventEmitter` - A [subscription instance](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-subscribe.html#eth-subscription-return) as an event emitter with the following events:
-  - `data` returns `object` - Fires on each incoming log with the log object as the argument.
-  - `changed` returns `Object`- Fires on each log removed from the blockchain. The log will have the additional property `removed: true`.
-  - `error` returns `Object`- Fires when an error in the subscription occurs.
-  - `connected` returns `Number`- Fires once after the subscription is successfully connected. Returns the subscription ID.
+- `EventEmitter` — the [subscription instance](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-subscribe.html#eth-subscription-return) as an event emitter with the following events:
+  - `data` returns `object` — fires on each incoming log with the log object as the argument.
+  - `changed` returns `Object` — fires on each log removed from the blockchain. The log will have the additional property `removed: true`.
+  - `error` returns `Object` — fires when an error in the subscription occurs.
+  - `connected` returns `Number` — fires once after the subscription is successfully connected. Returns the subscription ID.
 
 **Example:**
 

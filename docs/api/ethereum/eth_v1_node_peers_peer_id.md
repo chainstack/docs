@@ -10,15 +10,15 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns the data about the given peer.
 
-**Parameters:** 
+**Parameters:**
 
-* `peer_id` — the ID of ghe peer.
+* `peer_id` — the ID of the peer.
 
-**Returns:** 
+**Returns:**
 
-* `data` - `object`:
-  * `peer_id` — The ID of the peer.
-  * `enr` — The Ethereum node record data as provided in the [networking specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md).
+* `data` — `object` with:
+  * `peer_id` — the ID of the peer.
+  * `enr` — the Ethereum node record data as provided in the [networking specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md).
 
 **Example:**
 

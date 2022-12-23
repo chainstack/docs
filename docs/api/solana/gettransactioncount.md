@@ -3,23 +3,23 @@ meta:
   - name: description
     content: getTransactionCount JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana
 ---
 
 # getTransactionCount
 
-Solana API method that returns the current transaction count from the ledger. 
+Solana API method that returns the current transaction count from the ledger.
 
-**Parameters:** 
+**Parameters:**
 
-* `(optional) <object>` — the configuration object containing the following fields:
-  * `(optional) commitment: <string>` — the commitment.
-  * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
+* `<object>` — (optional) the configuration object containing the following fields:
+  * `commitment: <string>` — (optional) the commitment.
+  * `minContextSlot: <number>` — (optional) the minimum slot that the request can be evaluated at.
 
-**Returns:** 
+**Returns:**
 
 * `<u64>` — the count.
- 
+
 **Example:**
 
 <CodeSwitcher :languages="{js:'Solana web3.js', py:'Solana.py', cr:'cURL'}">

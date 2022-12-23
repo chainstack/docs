@@ -3,20 +3,20 @@ meta:
   - name: description
     content: eth_chainId JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_chainId RPC method
 
-Ethereum API method that returns the current chain ID. Chain ID is used to sign replay-protected transactions. It was introduced in [EIP-155](https://eips.ethereum.org/EIPS/eip-155). 
+Ethereum API method that returns the current chain ID. Chain ID is used to sign replay-protected transactions. It was introduced in [EIP-155](https://eips.ethereum.org/EIPS/eip-155).
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `quantity` - EIP-155 Chain ID. 
+* `quantity` — the EIP-155 Chain ID. 
 
 **Example:**
 
@@ -38,7 +38,7 @@ web3.eth.getChainId((err, chain) => {
 ``` py
 from web3 import Web3  
 node_url = "CHAINSTACK_NODE_URL"  
-web3 = Web3(Web3.HTTPProvider(node_url)) 
+web3 = Web3(Web3.HTTPProvider(node_url))
 print(web3.eth.chain_id)  
 ```
 

@@ -12,19 +12,19 @@ Ethereum API method that creates a filter object based on the filter options to 
 
 **Parameters:**
 
-- `object` - Should contain the filter information. All keys are optional:
-  - `fromBlock` - (Optional) Integer block number, or the string `'latest'`, `'earliest'` or `'pending'`, encoded as hexadecimal starting with `0x`.
-  - `toBlock` - (Optional) Integer block number, or the string `'latest'`, `'earliest'` or `'pending'`, encoded as hexadecimal starting with `0x`.
-  - `address` - (Optional) Contract address, or a list of addresses from which the logs should originate.
-  - `topics` - (Optional) Array of DATA topics. Topics are order-dependent. Go here to learn more about topics.
+- `object` — should contain the filter information. All keys are optional:
+  - `fromBlock` — (optional) the integer block number, or the string `'latest'`, `'earliest'` or `'pending'`, encoded as hexadecimal starting with `0x`.
+  - `toBlock` — (optional) the integer block number, or the string `'latest'`, `'earliest'` or `'pending'`, encoded as hexadecimal starting with `0x`.
+  - `address` — (optional) the contract address, or a list of addresses from which the logs should originate.
+  - `topics` — (optional) the array of DATA topics. Topics are order-dependent.
 
 **Returns:**
 
-- `result` - Returns a filter ID to be used when calling [eth_getFilterChanges](/api/ethereum/eth_getfilterchanges).
+- `result` — returns a filter ID to be used when calling [eth_getFilterChanges](/api/ethereum/eth_getfilterchanges).
 
 **Example:**
 
-::: tip
+::: tip Information
 cURL needs a `HEX String` starting with `0x` to identify the block if you want to use a hex integer block number as a parameter.
 For example, block number `14000000` will be `0xD59F80`.
 :::

@@ -41,13 +41,13 @@ Now you are ready to connect to the Ethereum blockchain and use the Ethereum API
 
 Find useful [Ethereum tools](/operations/ethereum/tools#interaction-tools) in the Chainstack docs.
 
-The best way to use the Ethereum API is to use a web3 library such as [Web3.js](https://web3js.readthedocs.io/) if using JavaScript or [Web3.py](https://web3py.readthedocs.io/) using Python.
+The best way to use the Ethereum API is to use a Web3 library such as [Web3.js](https://web3js.readthedocs.io/) if using JavaScript or [Web3.py](https://web3py.readthedocs.io/) using Python.
 
-A web3 library makes using the Ethereum API to communicate with the Ethereum blockchain easy and efficient.
+A Web3 library makes using the Ethereum API to communicate with the Ethereum blockchain easy and efficient.
 
-### Install web3 libraries
+### Install Web3 libraries
 
-You will need to install the web3 libraries to be able to use them.
+You will need to install the Web3 libraries to be able to use them.
 
 #### Install Web3.js
 
@@ -81,6 +81,7 @@ gem install eth
 
 ::: tip See also
 
-* <a href="https://chainstack.com/build-better-with-ethereum/" target="_blank">Build better with Ethereum</a>
+  * [Deploy your Ethereum node to enable debug and trace API methods](/api/ethereum/deploy-your-ethereum-node-to-enable-debug-and-trace-api-methods)
+  * <a href="https://chainstack.com/build-better-with-ethereum/" target="_blank">Build better with Ethereum</a>
 
 :::

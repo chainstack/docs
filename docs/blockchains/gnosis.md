@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Gnosis Chain is an EVM-based protocol secured by staking-based consensus.
   - name: keywords
-    content: gnosis blockchain protocol pos xdai posdao
+    content: gnosis blockchain protocol pos xdai consensus
 ---
 
 # Gnosis Chain
@@ -12,11 +12,10 @@ Gnosis Chain is a stable payments Ethereum Virtual Machine (EVM) protocol design
 
 ## Consensus
 
-Gnosis Chain uses the Proof of Stake Decentralized Autonomous Organization (POSDAO) consensus algorithm.
+Gnosis Chain uses the proof-of-stake consensus algorithm.
 
 ::: tip See also
 
-* [POSDAO](https://developers.gnosischain.com/for-validators/consensus/posdao-proof-of-stake-decentralized-autonomous-organization)
 * [Gnosis Chain documentation](https://developers.gnosischain.com/)
 
 :::

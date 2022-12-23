@@ -10,17 +10,17 @@ meta:
 
 Ethereum consensus layer Beacon Chain API call that returns voluntary exits known by the node but not necessarily incorporated into any block.
 
-**Parameters:** 
+**Parameters:**
 
 * `none`
 
-**Returns:** 
+**Returns:**
 
-* `data` - `array` — `objects` - The [Attestation](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestation) object with:
+* `data` — `array` — `objects` — the [Attestation](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#attestation) objects with:
  * `message`:
-   * `epoch` - Minimum epoch at which this exit can be included on chain.
-   * `validator_index` - Index of the validator exiting.
-   * `signature` - Signature of [VoluntaryExit](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#voluntaryexit) by the pubkey associated with the validator defined by `validator_index`.
+   * `epoch` — the minimum epoch at which this exit can be included on chain.
+   * `validator_index` — the index of the validator exiting.
+   * `signature` — the signature of [VoluntaryExit](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#voluntaryexit) by the public key associated with the validator defined by `validator_index`.
 
 **Example:**
 

@@ -8,7 +8,7 @@ meta:
 
 # Chainstack documentation
 
-Chainstack is a managed blockchain services platform making it simple to launch and scale decentralized networks and applications. 
+Chainstack is a managed blockchain services platform making it simple to launch and scale decentralized networks and applications.
 
 Follow us:
 
@@ -21,4 +21,4 @@ Contact us:
 * [Discord](https://discord.gg/Cymtg2f7pX)
 * [Telegram](https://t.me/chainstack)
 * <a href="https://support.chainstack.com" target="_blank">Support</a>
-* <a href="https://chainstack.com/contact/" target="_blank">Other enquiries</a>
+* <a href="https://ideas.chainstack.com/feature-requests" target="_blank">Feature request</a>

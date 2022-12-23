@@ -22,9 +22,17 @@ For a detailed description of all the available Solana API JSON-RPC methods, see
 
 The Solana API allows developers to communicate with the Solana blockchain to build applications.
 
-To read data from and send transactions to the Solana blockchain, an application must connect to an Solana RPC node.
+To read data from and send transactions to the Solana blockchain, an application must connect to a Solana RPC node.
 
 When communicating with a Solana RPC node, the Solana client implements a JSON-RPC specification, a communication protocol allowing one to make remote calls and execute them as if they were made locally.
+
+## Disabled indexes
+
+Currently, the following indexes are disabled for elastic Solana devnet nodes:
+
+* `program-id`
+* `spl-token-owner`
+* `spl-token-mint`
 
 ## How to start using the Solana API
 
@@ -40,13 +48,13 @@ Now you are ready to connect to the Solana blockchain and use the Solana API to 
 
 Find useful [Solana tools](/operations/solana/tools) in the Chainstack docs.
 
-The best way to use the Solana API is to use a web3 library such as [Solana web3.js](https://solana-labs.github.io/solana-web3.js/) if using JavaScript or [Solana.py](https://michaelhly.github.io/solana-py/) using Python.
+The best way to use the Solana API is to use a Web3 library such as [Solana web3.js](https://solana-labs.github.io/solana-web3.js/) if using JavaScript or [Solana.py](https://michaelhly.github.io/solana-py/) using Python.
 
-A web3 library makes using the Solana API to communicate with the Solana blockchain easy and efficient.
+A Web3 library makes using the Solana API to communicate with the Solana blockchain easy and efficient.
 
-### Install web3 libraries
+### Install Web3 libraries
 
-You will need to install the web3 libraries to be able to use them.
+You will need to install the Web3 libraries to be able to use them.
 
 #### Install Solana Web3.js
 

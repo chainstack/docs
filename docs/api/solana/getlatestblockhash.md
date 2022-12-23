@@ -3,25 +3,25 @@ meta:
   - name: description
     content: getLatestBlockhash JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana
 ---
 
 # getLatestBlockhash
 
-Solana API method that returns the latest blockhash. 
+Solana API method that returns the latest blockhash.
 
-**Parameters:** 
+**Parameters:**
 
-* `(optional) <object>` — the configuration object containing the following fields:
-    * `(optional) commitment: <string>` — the commitment used for retrieving blockhash.
-    * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
+* `<object>` — (optional) the configuration object containing the following fields:
+    * `commitment: <string>` — (optional) the commitment used for retrieving blockhash.
+    * `minContextSlot: <number>` — (optional) the minimum slot that the request can be evaluated at.
 
-**Returns:** 
+**Returns:**
 
-* `RpcResponse <object>` — the RpcResponse JSON object with value field set to a JSON object including:
-* `blockhash: <string>` — a Hash as base-58 encoded string.
-* `lastValidBlockHeight: <u64>` — the last block height at which the blockhash will be valid.
-      
+* `RpcResponse <object>` — the RPC response JSON object with value field set to a JSON object including:
+  * `blockhash: <string>` — a hash as a base58 encoded string.
+  * `lastValidBlockHeight: <u64>` — the last block height at which the blockhash will be valid.
+
 **Example:**
 
 <CodeSwitcher :languages="{js:'Solana web3.js', py:'Solana.py', cr:'cURL'}">

@@ -3,26 +3,26 @@ meta:
   - name: description
     content: eth_sendRawTransaction JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_sendRawTransaction RPC method
 
-Ethereum API method that creates a new message call transaction. Or contract creation for signed transactions. 
+Ethereum API method that creates a new message call transaction. Or contract creation for signed transactions.
 
 **Parameters:**  
 
-* `data` - The signed transaction. Typically, signed with a library such as web3.py or web3.js using the sender's private key.
+* `data` — the signed transaction. Typically, signed with a library such as web3.py or web3.js using the sender's private key.
 
-**Returns:** 
+**Returns:**
 
-* `result` - The transaction hash or the zero hash if the transaction is not yet available.
+* `result` — the transaction hash or the zero hash if the transaction is not yet available.
 
 **Example:**
 
-::: tip
+::: tip Information
 You can use a testnet.
-Web3.js Requires the [ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-monorepo) package. 
+Web3.js requires the [ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-monorepo) package.
 Install with `npm install ethereumjs-tx`.
 :::
 
@@ -37,13 +37,13 @@ var Tx = require("ethereumjs-tx").Transaction;
 
 // Logic of this code:
     // Set the addresses and private key to sign the transaction
-    // Build transaction 
-    // Sign and send the transaction 
+    // Build transaction
+    // Sign and send the transaction
 
 // Addresses and private key
 const sender = "SENDER_ADDRESS";
 const receiver = "RECEIVER_ADDRESS";
-const private_key = Buffer.from("PRIVATE_KEY", "hex"); 
+const private_key = Buffer.from("PRIVATE_KEY", "hex");
 
 // Build the transaction
 web3.eth.getTransactionCount(sender, (err, transactionCount) => {
@@ -55,9 +55,9 @@ web3.eth.getTransactionCount(sender, (err, transactionCount) => {
         value: web3.utils.toHex(web3.utils.toWei("0.5", "ether")),
     };
 
-    // Signing the transaction 
+    // Signing the transaction
 
-    // create a new transaction object to sign 
+    // create a new transaction object to sign
     const tx = new Tx(transaction_Object, {
         chain: "ropsten"
     });
@@ -65,7 +65,7 @@ web3.eth.getTransactionCount(sender, (err, transactionCount) => {
     // sign the transaction using the private key  
     tx.sign(private_key);
 
-    //   Send signed transaction to the blockchain 
+    //   Send signed transaction to the blockchain
     const sTx = tx.serialize();
     const rawTransaction = "0x" + sTx.toString("hex");
 
@@ -83,40 +83,40 @@ web3.eth.getTransactionCount(sender, (err, transactionCount) => {
 from web3 import Web3  
 
 # Create the node connection
-node_url = "CHAINSTACK_NODE_URL" 
+node_url = "CHAINSTACK_NODE_URL"
 web3 = Web3(Web3.HTTPProvider(node_url))
 
 # Logic of this code:
     # Set the addresses and private key to sign the transaction
-    # Build transaction 
+    # Build transaction
     # Sign and send the transaction  
 
 # Adresses and private key
-sender = "SENDER ADDRESS" 
-receiver = "RECEIVER ADDRESS" 
+sender = "SENDER ADDRESS"
+receiver = "RECEIVER ADDRESS"
 privateKey ="PRIVATE KEY"   
 
 # Gas limit
 gas_limit = web3.eth.estimate_gas({"from":sender,"to":receiver}, "latest" )
 
-# build the transaction 
-tx = { 
-    "nonce" : web3.eth.getTransactionCount(sender), 
-    "to": receiver, 
-    "value": web3.toWei(1, "ether"), # value to send 
-    "gas": gas_limit, 
+# build the transaction
+tx = {
+    "nonce" : web3.eth.getTransactionCount(sender),
+    "to": receiver,
+    "value": web3.toWei(1, "ether"), # value to send
+    "gas": gas_limit,
     "maxFeePerGas" : web3.eth.gas_price,
     "maxPriorityFeePerGas" : web3.toWei(1, "gwei"),
-    "chainId" : web3.eth.chain_id, 
+    "chainId" : web3.eth.chain_id,
 }  
 
-# sign tx 
+# sign tx
 signed_tx = web3.eth.account.signTransaction(tx, privateKey)  
 
-# send transaction 
-tx_hash = web3.eth.sendRawTransaction(signed_tx.rawTransaction) 
+# send transaction
+tx_hash = web3.eth.sendRawTransaction(signed_tx.rawTransaction)
 
-print("Transaction hash:", web3.toHex(tx_hash)) 
+print("Transaction hash:", web3.toHex(tx_hash))
 
 ```
 

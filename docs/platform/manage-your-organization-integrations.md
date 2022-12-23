@@ -15,7 +15,7 @@ You can add the following Kubernetes clusters as an integration to deploy your n
 * [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine)
 * Self-managed Kubernetes cluster.
 
-While Chainstack supports Amazon EKS out of the box, to add other Kubernetes clusters, please <a href="https://chainstack.com/contact/" target="_blank">contact us</a>.
+While Chainstack supports Amazon EKS out of the box, to add other Kubernetes clusters, please <a href="https://support.chainstack.com/" target="_blank">contact us</a>.
 
 The integrations feature is available on the Business and Enterprise <a href="https://chainstack.com/pricing/" target="_blank">subscription plans</a>.
 

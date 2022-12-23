@@ -3,20 +3,20 @@ meta:
   - name: description
     content: getEpochInfo JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana
 ---
 
 # getEpochInfo
 
-Solana API method that returns information about the current epoch. 
+Solana API method that returns information about the current epoch.
 
-**Parameters:** 
+**Parameters:**
 
-* `(optional) <object>` — the configuration object containing the following fields:
-  * `(optional) commitment: <string>` — the commitment.
-  * `(optional) minContextSlot: <number>` — the minimum slot that the request can be evaluated at.
+* `<object>` — (optional) the configuration object containing the following fields:
+  * `commitment: <string>` — (optional) the commitment.
+  * `minContextSlot: <number>` — (optional) the minimum slot that the request can be evaluated at.
 
-**Returns:** 
+**Returns:**
 
 * `absoluteSlot: <u64>` — the current slot.
 * `blockHeight: <u64>` — the current block height.

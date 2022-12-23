@@ -3,18 +3,18 @@ meta:
   - name: description
     content: getBalance JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana
 ---
 
 # getBalance
 
-Solana API method that returns the balance of the account of the provided public key. 
+Solana API method that returns the balance of the account of the provided public key.
 
-**Parameters:** 
+**Parameters:**
 
-* `address` — the public key of the account to query as base-58 encoded string.
+* `address` — the public key of the account to query as a base58 encoded string.
 
-**Returns:** 
+**Returns:**
 
 * `quantity` — the integer value of the current balance in [lamports](https://docs.solana.com/introduction#what-are-sols).
 

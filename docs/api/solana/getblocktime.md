@@ -3,24 +3,24 @@ meta:
   - name: description
     content: getBlockTime JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana
 ---
 
 # getBlockTime
 
-Solana API method that returns the estimated production time of a block. 
+Solana API method that returns the estimated production time of a block.
 
-::: tip
+::: tip Information
 
 Each validator regularly reports its UTC time to the ledger by intermittently adding a timestamp to a vote for a particular block. A requested block's time is calculated from the stake-weighted mean of the vote timestamps in a set of recent blocks recorded on the ledger.
 
 :::
 
-**Parameters:** 
+**Parameters:**
 
 * `<u64>` — the block, identified by the slot.
 
-**Returns:** 
+**Returns:**
 
 * `<i64>` — the estimated production time, as a Unix timestamp, seconds since the [Unix epoch](https://www.unixtimestamp.com/).
 * `<null>` — if the timestamp is not available for this block.

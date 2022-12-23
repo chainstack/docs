@@ -3,37 +3,34 @@ meta:
   - name: description
     content: getBlock JSON-RPC method for the Solana API available with examples in Solana web3.js, Solana.py, and cURL.
   - name: keywords
-    content: json rpc methods curl api solana.py solana web3.js javascript python solana 
+    content: json rpc methods curl api solana.py solana web3.js javascript python solana
 ---
 
 # getBlock
 
-Solana API method that returns the identity and transaction information about a confirmed block in the ledger. 
+Solana API method that returns the identity and transaction information about a confirmed block in the ledger.
 
-**Parameters:** 
+**Parameters:**
 
 * `block_id` —  the slot, as `u64` integer.
 * `object` — optional configuration fields:
-  * `(optional) encoding: <string>` — the encoding for each returned transaction, either `json`, `jsonParsed`, `base58` (slow), `base64`. If the parameter is not provided, the default encoding is `json`. `jsonParsed` encoding attempts to use program-specific instruction parsers to return more human-readable and explicit data in the transaction.message.instructions list. If `jsonParsed` is requested, but a parser cannot be found, the instruction falls back to standard JSON encoding (accounts, data, and programIdIndex fields).
+  * `encoding: <string>` — (optional) the encoding for each returned transaction, either `json`, `jsonParsed`, `base58` (slow), `base64`. If the parameter is not provided, the default encoding is `json`. `jsonParsed` encoding attempts to use program-specific instruction parsers to return more human-readable and explicit data in the transaction.message.instructions list. If `jsonParsed` is requested, but a parser cannot be found, the instruction falls back to standard JSON encoding (accounts, data, and programIdIndex fields).
+  * `transactionDetails: <string>` — (optional) the level of transaction detail to return, either `full`, `accounts`, `signatures`, or `none`. The default detail level is `full` if the parameter is not provided. If `accounts` are requested, transaction details only include signatures and an annotated list of accounts in each transaction. Transaction metadata is limited to `fee`, `err`, `pre_balances`, `post_balances`, `pre_token_balances`, and `post_token_balances`.
+  * `rewards: bool` — (optional) whether to populate the rewards array. If a parameter is not provided, the default includes rewards.
+  * `commitment: <string>` — (optional) the commitment; `processed` is not supported. If the parameter is not provided, the default is `finalized`.  
+  * `maxSupportedTransactionVersion: <number>` — (optional) set the max transaction version to return in responses. If the requested block contains a transaction with a higher version, an error will be returned. Only legacy transactions will be returned if this parameter is omitted, and a block containing any versioned transaction will prompt the error.
 
-  * `(optional) transactionDetails: <string>` — the level of transaction detail to return, either `full`, `accounts`, `signatures`, or `none`. The default detail level is `full` if the parameter is not provided. If `accounts` are requested, transaction details only include signatures and an annotated list of accounts in each transaction. Transaction metadata is limited to `fee`, `err`, `pre_balances`, `post_balances`, `pre_token_balances`, and `post_token_balances`.
+**Returns:**
 
-  * `(optional) rewards: bool` — whether to populate the rewards array. If a parameter is not provided, the default includes rewards.
+The result will be an RPC response JSON object with `value` equal to one of the following:
 
-  * `(optional) commitment: <string>` — the commitment; `processed` is not supported. If the parameter is not provided, the default is `finalized`.
-  
-  * `(optional) maxSupportedTransactionVersion: <number>` — set the max transaction version to return in responses. If the requested block contains a transaction with a higher version, an error will be returned. Only legacy transactions will be returned if this parameter is omitted, and a block containing any versioned transaction will prompt the error.
+* `<null>` — if the specified block is not confirmed.
+*  `<object>` — an object containing:
+  * `blockhash: <string>` — the blockhash of this block, as a base58 encoded string.
+  * `previousBlockhash: <string>` — the blockhash of this block's parent, as a base58 encoded string; if the parent block is not available due to ledger cleanup, this field will return `11111111111111111111111111111111`.
+  * `parentSlot: <u64>` — the slot index of this block's parent.
+  * `transactions: <array>` — present if `full` transaction details are requested.
 
-**Returns:** 
-
-* `JSON object` 
-  * `<null>` — if the specified block is not confirmed.
-  *  `<object>` — an object containing:
-      * `blockhash: <string>` — the blockhash of this block, as base-58 encoded string.
-      * `previousBlockhash: <string>` — the blockhash of this block's parent, as base-58 encoded string; if the parent block is not available due to ledger cleanup, this field will return `11111111111111111111111111111111`.
-      * `parentSlot: <u64>` — the slot index of this block's parent.
-      * `transactions: <array>` — present if `full` transaction details are requested.
-      
 **Example:**
 
 <CodeSwitcher :languages="{js:'Solana web3.js', py:'Solana.py', cr:'cURL'}">

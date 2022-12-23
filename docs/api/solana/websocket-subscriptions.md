@@ -14,9 +14,9 @@ Check the [Solana docs](https://docs.solana.com/developing/clients/jsonrpc-api#s
 
 > The Solana API subscriptions require the use of a WebSocket endpoint.
 
-::: tip
+::: tip Information
 
-* Multiple subscriptions may be active at once.
+* Multiple subscriptions may be active at once. 
 * Many subscriptions take the optional commitment parameter, defining how finalized a change should be to trigger a notification. If `commitment` is unspecified, the default value is `finalized` for subscriptions.
 
 :::
@@ -28,7 +28,7 @@ Follow these steps to sign up on Chainstack, deploy a node, and find your WSS en
 1. [View node access and credentials](/platform/view-node-access-and-credentials).
 
 
-## Solana.py 
+## Solana.py
 
 To use the Solana API subscriptions with the `solana.py` library, install the `asyncstdlib` package with:
 

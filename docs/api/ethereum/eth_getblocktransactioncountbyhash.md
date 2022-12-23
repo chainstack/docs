@@ -3,7 +3,7 @@ meta:
   - name: description
     content: eth_getBlockTransactionCountByHash JSON-RPC method details and code examples.
   - name: keywords
-    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum 
+    content: json rpc methods curl api web3.py web3.js eth.rb javascript python ruby ethereum
 ---
 
 # Ethereum eth_getBlockTransactionCountByHash RPC method
@@ -12,11 +12,11 @@ Ethereum API method that returns the number of transactions in the block matchin
 
 **Parameters:**  
 
-* `hash` - Hash of the block.
+* `hash` — the hash of the block.
 
-**Returns:** 
+**Returns:**
 
-* `result` - Integer number of transactions in the block.
+* `result` — the integer number of transactions in the block.
 
 **Example:**
 
@@ -37,8 +37,8 @@ web3.eth.getBlockTransactionCount("0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86
 
 ``` py
 from web3 import Web3  
-node_url = "CHAINSTACK_NODE_URL" 
-web3 = Web3(Web3.HTTPProvider(node_url)) 
+node_url = "CHAINSTACK_NODE_URL"
+web3 = Web3(Web3.HTTPProvider(node_url))
 print(web3.eth.get_block_transaction_count("0x9bff49171de27924fa958faf7b7ce605c1ff0fdee86f4c0c74239e6ae20d9446"))
 ```
 
