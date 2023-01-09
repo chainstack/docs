@@ -36,10 +36,10 @@ Currently, Chainstack Subgraphs support the following protocols:
 ::: tip See also
 Learn about Chainstack Subgraphs and indexing and querying data from the blockchain:
 
-* [Creating a subgraph](/subgraphs/create-a-subgraph.md)—useful information about The Graph and subgraph description files, and links to where you can find more detailed information.
+* [Create a subgraph](/subgraphs/create-a-subgraph.md)—useful information about The Graph and subgraph description files, and links to where you can find more detailed information.
 * [Query subgraphs](/subgraphs/query-a-subgraph.md)—details and best practices for writing queries for subgraphs and links to where you can find more information.
 * [Quickstart](/subgraphs/quickstart.md)—a short guide to get you up and running quickly with Chainstack Subgraphs.
-*	[Managing your Subgraphs](/subgraphs/manage-your-chainstack-subgraph.md)—helpful "How to" information about managing your subgraphs in the Chainstack console.
+*	[Manage your Subgraphs](/subgraphs/manage-your-chainstack-subgraph.md)—helpful "How to" information about managing your subgraphs in the Chainstack console.
 *	[Tutorial](/subgraphs/tutorial/README.md)—a step-by-step tutorial about how to deploy the Lido subgraph with Chainstack.
 
 :::

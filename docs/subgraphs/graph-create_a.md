@@ -1,18 +1,23 @@
 ---
-title: Creating a Subgraph
+meta:
+  - name: description
+    content: Detailed overview of the main files in subgraphs and what is required to create a subgraph.
+  - name: keywords
+    content: schema mapping assemblyscript typescript entities data subgraph graph deploy query graphql indexing data
 ---
+
+# Create a subgraph
+
 
 A subgraph extracts data from a blockchain, processing it and storing it so that it can be easily queried via GraphQL.
 
-![Defining a Subgraph](/img/defining-a-subgraph.png)
-
 The subgraph definition consists of a few files:
 
-- `subgraph.yaml`: a YAML file containing the subgraph manifest
+* `subgraph.yaml`: a YAML file containing the subgraph manifest
 
-- `schema.graphql`: a GraphQL schema that defines what data is stored for your subgraph, and how to query it via GraphQL
+* `schema.graphql`: a GraphQL schema that defines what data is stored for your subgraph, and how to query it via GraphQL
 
-- `AssemblyScript Mappings`: [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) code that translates from the event data to the entities defined in your schema (e.g. `mapping.ts` in this tutorial)
+* `AssemblyScript Mappings`: [AssemblyScript](https://github.com/AssemblyScript/assemblyscript) code that translates from the event data to the entities defined in your schema (e.g. `mapping.ts` in this tutorial)
 
 Before you go into detail about the contents of the manifest file, you need to install the [Graph CLI](https://github.com/graphprotocol/graph-cli) which you will need to build and deploy a subgraph.
 
@@ -80,8 +85,8 @@ The `add` command will fetch the ABI from Etherscan (unless an ABI path is speci
 
 The `--merge-entities` option identifies how the developer would like to handle `entity` and `event` name conflicts:
 
-- If `true`: the new `dataSource` should use existing `eventHandlers` & `entities`.
-- If `false`: a new entity & event handler should be created with `${dataSourceName}{EventName}`.
+* If `true`: the new `dataSource` should use existing `eventHandlers` & `entities`.
+* If `false`: a new entity & event handler should be created with `${dataSourceName}{EventName}`.
 
 The contract `address` will be written to the `networks.json` for the relevant network.
 
@@ -134,33 +139,33 @@ dataSources:
 
 The important entries to update for the manifest are:
 
-- `description`: a human-readable description of what the subgraph is. This description is displayed by the Graph Explorer when the subgraph is deployed to the Hosted Service.
+* `description`: a human-readable description of what the subgraph is. This description is displayed by the Graph Explorer when the subgraph is deployed to the Hosted Service.
 
-- `repository`: the URL of the repository where the subgraph manifest can be found. This is also displayed by The Graph Explorer.
+* `repository`: the URL of the repository where the subgraph manifest can be found. This is also displayed by The Graph Explorer.
 
-- `features`: a list of all used [feature](#experimental-features) names.
+* `features`: a list of all used [feature](#experimental-features) names.
 
-- `dataSources.source`: the address of the smart contract the subgraph sources, and the ABI of the smart contract to use. The address is optional; omitting it allows to index matching events from all contracts.
+* `dataSources.source`: the address of the smart contract the subgraph sources, and the ABI of the smart contract to use. The address is optional; omitting it allows to index matching events from all contracts.
 
-- `dataSources.source.startBlock`: the optional number of the block that the data source starts indexing from. In most cases, we suggest using the block in which the contract was created.
+* `dataSources.source.startBlock`: the optional number of the block that the data source starts indexing from. In most cases, we suggest using the block in which the contract was created.
 
-- `dataSources.mapping.entities`: the entities that the data source writes to the store. The schema for each entity is defined in the schema.graphql file.
+* `dataSources.mapping.entities`: the entities that the data source writes to the store. The schema for each entity is defined in the schema.graphql file.
 
-- `dataSources.mapping.abis`: one or more named ABI files for the source contract as well as any other smart contracts that you interact with from within the mappings.
+* `dataSources.mapping.abis`: one or more named ABI files for the source contract as well as any other smart contracts that you interact with from within the mappings.
 
-- `dataSources.mapping.eventHandlers`: lists the smart contract events this subgraph reacts to and the handlers in the mapping—./src/mapping.ts in the example—that transform these events into entities in the store.
+* `dataSources.mapping.eventHandlers`: lists the smart contract events this subgraph reacts to and the handlers in the mapping—./src/mapping.ts in the example—that transform these events into entities in the store.
 
-- `dataSources.mapping.callHandlers`: lists the smart contract functions this subgraph reacts to and handlers in the mapping that transform the inputs and outputs to function calls into entities in the store.
+* `dataSources.mapping.callHandlers`: lists the smart contract functions this subgraph reacts to and handlers in the mapping that transform the inputs and outputs to function calls into entities in the store.
 
-- `dataSources.mapping.blockHandlers`: lists the blocks this subgraph reacts to and handlers in the mapping to run when a block is appended to the chain. Without a filter, the block handler will be run every block. An optional call-filter can be provided by adding a `filter` field with `kind: call` to the handler. This will only run the handler if the block contains at least one call to the data source contract.
+* `dataSources.mapping.blockHandlers`: lists the blocks this subgraph reacts to and handlers in the mapping to run when a block is appended to the chain. Without a filter, the block handler will be run every block. An optional call-filter can be provided by adding a `filter` field with `kind: call` to the handler. This will only run the handler if the block contains at least one call to the data source contract.
 
 A single subgraph can index data from multiple smart contracts. Add an entry for each contract from which data needs to be indexed to the `dataSources` array.
 
 The triggers for a data source within a block are ordered using the following process:
 
 1. Event and call triggers are first ordered by transaction index within the block.
-2. Event and call triggers within the same transaction are ordered using a convention: event triggers first then call triggers, each type respecting the order they are defined in the manifest.
-3. Block triggers are run after event and call triggers, in the order they are defined in the manifest.
+1. Event and call triggers within the same transaction are ordered using a convention: event triggers first then call triggers, each type respecting the order they are defined in the manifest.
+1. Block triggers are run after event and call triggers, in the order they are defined in the manifest.
 
 These ordering rules are subject to change.
 
@@ -168,9 +173,9 @@ These ordering rules are subject to change.
 
 The ABI file(s) must match your contract(s). There are a few ways to obtain ABI files:
 
-- If you are building your own project, you will likely have access to your most current ABIs.
-- If you are building a subgraph for a public project, you can download that project to your computer and get the ABI by using [`truffle compile`](https://truffleframework.com/docs/truffle/overview) or using solc to compile.
-- You can also find the ABI on [Etherscan](https://etherscan.io/), but this isn't always reliable, as the ABI that is uploaded there may be out of date. Make sure you have the right ABI, otherwise running your subgraph will fail.
+* If you are building your own project, you will likely have access to your most current ABIs.
+* If you are building a subgraph for a public project, you can download that project to your computer and get the ABI by using [`truffle compile`](https://truffleframework.com/docs/truffle/overview) or using solc to compile.
+* You can also find the ABI on [Etherscan](https://etherscan.io/), but this isn't always reliable, as the ABI that is uploaded there may be out of date. Make sure you have the right ABI, otherwise running your subgraph will fail.
 
 ## The GraphQL Schema
 
@@ -512,9 +517,9 @@ The second handler tries to load the existing `Gravatar` from the Graph Node sto
 
 Every entity has to have an `id` that is unique among all entities of the same type. An entity's `id` value is set when the entity is created. Below are some recommended `id` values to consider when creating new entities. NOTE: The value of `id` must be a `string`.
 
-- `event.params.id.toHex()`
-- `event.transaction.from.toHex()`
-- `event.transaction.hash.toHex() + "-" + event.logIndex.toString()`
+* `event.params.id.toHex()`
+* `event.transaction.from.toHex()`
+* `event.transaction.hash.toHex() + "-" + event.logIndex.toString()`
 
 We provide the [Graph Typescript Library](https://github.com/graphprotocol/graph-ts) which contains utilies for interacting with the Graph Node store and conveniences for handling smart contract data and entities. You can use this library in your mappings by importing `@graphprotocol/graph-ts` in `mapping.ts`.
 
@@ -701,8 +706,8 @@ dataSources:
 > **Note:** The contract creation block can be quickly looked up on Etherscan:
 >
 > 1. Search for the contract by entering its address in the search bar.
-> 2. Click on the creation transaction hash in the `Contract Creator` section.
-> 3. Load the transaction details page where you'll find the start block for that contract.
+> 1. Click on the creation transaction hash in the `Contract Creator` section.
+> 1. Load the transaction details page where you'll find the start block for that contract.
 
 ## Call Handlers
 
@@ -876,7 +881,7 @@ Given such IPFS hashes, subgraphs can read the corresponding files from IPFS usi
 
 > **Note:** The Graph Network does not yet support `ipfs.cat` and `ipfs.map`, and developers should not deploy subgraphs using that functionality to the network via the Studio.
 
-> **[Feature Management](#experimental-features):** `ipfsOnEthereumContracts` must be declared under `features` in the subgraph manifest. For non EVM chains, the `nonDeterministicIpfs` alias can also be used for the same purpose.
+> **[Feature Management](https://thegraph.com/docs/en/developing/creating-a-subgraph/#experimental-features):** `ipfsOnEthereumContracts` must be declared under `features` in the subgraph manifest. For non EVM chains, the `nonDeterministicIpfs` alias can also be used for the same purpose.
 
 When running a local Graph Node, the `GRAPH_ALLOW_NON_DETERMINISTIC_IPFS` environment variable must be set in order to index subgraphs using this experimental functionality.
 
@@ -947,12 +952,12 @@ Because grafting copies rather than indexes base data, it is much quicker to get
 
 The grafted subgraph can use a GraphQL schema that is not identical to the one of the base subgraph, but merely compatible with it. It has to be a valid subgraph schema in its own right, but may deviate from the base subgraph's schema in the following ways:
 
-- It adds or removes entity types
-- It removes attributes from entity types
-- It adds nullable attributes to entity types
-- It turns non-nullable attributes into nullable attributes
-- It adds values to enums
-- It adds or removes interfaces
-- It changes for which entity types an interface is implemented
+* It adds or removes entity types
+* It removes attributes from entity types
+* It adds nullable attributes to entity types
+* It turns non-nullable attributes into nullable attributes
+* It adds values to enums
+* It adds or removes interfaces
+* It changes for which entity types an interface is implemented
 
-> **[Feature Management](#experimental-features):** `grafting` must be declared under `features` in the subgraph manifest.
+> **[Feature Management](https://thegraph.com/docs/en/developing/creating-a-subgraph/#experimental-features):** `grafting` must be declared under `features` in the subgraph manifest.
