@@ -68,7 +68,7 @@ The previous two steps create a scaffold subgraph that you can use to build your
 * Schema (schema.graphql) - The GraphQL schema defines what data you wish to retreive from the subgraph.
 * AssemblyScript Mappings (mapping.ts) - This is the code that translates data from your datasources to the entities defined in the schema.
 
-For more information on these files, see [Create a subgraph](create-a-subgraph.md).
+For more information on these files, see [Create a subgraph](/subgraphs/create-a-subgraph.md).
 
 when you've written your subgraph, to generate AssemblyScript types for the entities defined in your schema file, in your root directory, run:
 
@@ -174,9 +174,11 @@ curl -g \\
 
 To query the subgraph using the GraphQL UI, locate the GraphQL UI URL in the subgraph details page, hover your mouse over the URL, and click the **Open** button that's displayed. The GraphQL UI open in your browser, where you can enter the details of your query.
 
+For more detailed information about the rules and best practices for writing GraphQL queries, see [Query Subgraphs](../subgraphs/query-a-subgraph.md).
+
 ::: tip See also
 
-* [Create a subgraph](create-a-subgraph.md)
+* [Create a subgraph](/subgraphs/create-a-subgraph.md)
 * [Graph documentation — Creating a subgraph](https://thegraph.com/docs/en/developing/creating-a-subgraph/)
 
 :::

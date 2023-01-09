@@ -38,22 +38,19 @@ For each event handler that is defined in `subgraph.yaml` under `mapping.eventHa
 
 ## Install the Graph CLI
 
-The starting point for working with subgraphs is to install the [Graph CLI](https://github.com/graphprotocol/graph-cli).
+The starting point for working with subgraphs is to install the [Graph CLI](https://github.com/graphprotocol/graph-cli). You must have Graph CLI installed globally to build and deploy subgraphs.
 
-You must have Graph CLI installed globally to build and deploy subgraphs.
-
-The `graph init` command sets up a new subgraph project from an existing contract on any of the public Ethereum networks.
-
-When you have written the subgraph manifest, you use the graph CLI to store the subgraph definition in IPFS and tell the indexer to begin indexing your subgraph data.
+The `graph init` command sets up a new subgraph project from an existing contract on any of the public Ethereum networks. When you have written the subgraph manifest, you use the graph CLI to store the subgraph definition in IPFS and tell the indexer to begin indexing your subgraph data.
 
 Once you've successfully deployed the subgraph, you can start to query the subgraph data.
 
 ::: tip Information
 For an example of how to modify the subgraph definition files in a subgraph, how to build and deploy the subgraph, and how to query data, see our tutorial on [deploying the Lido subgraph](../subgraphs/tutorial/README.md).
 :::
+
 ::: tip See also
 
-* For detailed information on creating a subgraph, see The Graph documentation on [Creating a Subgraph](https://thegraph.com/docs/en/developing/creating-a-subgraph/).
+* For more detailed information on creating a subgraph, see The Graph documentation [Creating a Subgraph](https://thegraph.com/docs/en/developing/creating-a-subgraph/).
   
 * You can find a full list of subgraphs on the [Graph Explorer](https://thegraph.com/explorer).
   
