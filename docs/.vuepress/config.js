@@ -754,7 +754,7 @@ module.exports = {
             title: "Tutorial",
             collapsable: true,
             children: [
-                '/subgraphs/tutorial',
+                '/subgraphs/tutorial/',
                 '/subgraphs/tutorial/deploy-lido-subgraph',
             ],
           },
