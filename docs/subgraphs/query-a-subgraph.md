@@ -54,18 +54,16 @@ query [operationName]([variableName]: [variableType]) {
 
 While the list of syntactic do's and don'ts is long, here are the essential rules to keep in mind when it comes to writing GraphQL queries:
 
-- Each `queryName` must only be used once per operation.
-- Each `field` must be used only once in a selection (we cannot query `id` twice under `token`)
-- Some `field`s or queries (like `tokens`) return complex types that require a selection of sub-field. Not providing a selection when expected (or providing one when not expected - for example, on `id`) will raise an error. To know a field type, please refer to [The Graph Explorer](/network/explorer).
-- Any variable assigned to an argument must match its type.
-- In a given list of variables, each of them must be unique.
-- All defined variables must be used.
+* Each `queryName` must only be used once per operation.
+* Each `field` must be used only once in a selection (we cannot query `id` twice under `token`)
+* Some `field`s or queries (like `tokens`) return complex types that require a selection of sub-field. Not providing a selection when expected (or providing one when not expected - for example, on `id`) will raise an error. To know a field type, please refer to [The Graph Explorer](/network/explorer).
+* Any variable assigned to an argument must match its type.
+* In a given list of variables, each of them must be unique.
+* All defined variables must be used.
 
 Failing to follow the above rules will end with an error from the Graph API.
 
 For a complete list of rules with code examples, please look at our GraphQL Validations guide.
-
-<br />
 
 ### Sending a query to a GraphQL API
 
@@ -75,12 +73,10 @@ It means that you can query a GraphQL API using standard `fetch` (natively or vi
 
 However, as stated in ["Querying from an Application"](/querying/querying-from-an-application), we recommend you to use our `graph-client` that supports unique features such as:
 
-- Cross-chain Subgraph Handling: Querying from multiple subgraphs in a single query
-- [Automatic Block Tracking](https://github.com/graphprotocol/graph-client/blob/main/packages/block-tracking/README.md)
-- [Automatic Pagination](https://github.com/graphprotocol/graph-client/blob/main/packages/auto-pagination/README.md)
-- Fully typed result
-
-<br />
+* Cross-chain Subgraph Handling: Querying from multiple subgraphs in a single query
+* [Automatic Block Tracking](https://github.com/graphprotocol/graph-client/blob/main/packages/block-tracking/README.md)
+* [Automatic Pagination](https://github.com/graphprotocol/graph-client/blob/main/packages/auto-pagination/README.md)
+* Fully typed result
 
 Here's how to query The Graph with `graph-client`:
 
@@ -108,8 +104,6 @@ main()
 
 More GraphQL client alternatives are covered in ["Querying from an Application"](/querying/querying-from-an-application).
 
-<br />
-
 Now that we covered the basic rules of GraphQL queries syntax, let's now look at the best practices of GraphQL query writing.
 
 ---
@@ -136,10 +130,10 @@ query GetToken {
 
 While the above snippet produces a valid GraphQL query, **it has many drawbacks**:
 
-- it makes it **harder to understand** the query as a whole
-- developers are **responsible for safely sanitizing the string interpolation**
-- not sending the values of the variables as part of the request parameters **prevent possible caching on server-side**
-- it **prevents tools from statically analyzing the query** (ex: Linter, or type generations tools)
+* it makes it **harder to understand** the query as a whole
+* developers are **responsible for safely sanitizing the string interpolation**
+* not sending the values of the variables as part of the request parameters **prevent possible caching on server-side**
+* it **prevents tools from statically analyzing the query** (ex: Linter, or type generations tools)
 
 For this reason, it is recommended to always write queries as static strings:
 
@@ -165,13 +159,12 @@ const result = await execute(query, {
 
 Doing so brings **many advantages**:
 
-- **Easy to read and maintain** queries
-- The GraphQL **server handles variables sanitization**
-- **Variables can be cached** at server-level
-- **Queries can be statically analyzed by tools** (more on this in the following sections)
+* **Easy to read and maintain** queries
+* The GraphQL **server handles variables sanitization**
+* **Variables can be cached** at server-level
+* **Queries can be statically analyzed by tools** (more on this in the following sections)
 
 **Note: How to include fields conditionally in static queries**
-
 We might want to include the `owner` field only on a particular condition.
 
 For this, we can leverage the `@include(if:...)` directive as follows:
@@ -199,12 +192,9 @@ const result = await execute(query, {
 
 Note: The opposite directive is `@skip(if: ...)`.
 
-<br />
-
 ### Performance tips
 
 **"Ask for what you want"**
-
 GraphQL became famous for its "Ask for what you want" tagline.
 
 For this reason, there is no way, in GraphQL, to get all available fields without having to list them individually.
@@ -233,7 +223,6 @@ The response could contain 100 transactions for each of the 100 tokens.
 If the application only needs 10 transactions, the query should explicitly set `first: 10` on the transactions field.
 
 **Combining multiple queries**
-
 Your application might require querying multiple types of data as follows:
 
 ```graphql
@@ -289,8 +278,6 @@ const  { result: { tokens, counters } } = execute(query)
 
 This approach will **improve the overall performance** by reducing the time spent on the network (saves you a round trip to the API) and will provide a **more concise implementation**.
 
-<br />
-
 ### Leverage GraphQL Fragments
 
 A helpful feature to write GraphQL queries is GraphQL Fragment.
@@ -317,8 +304,8 @@ query {
 
 Such repeated fields (`id`, `active`, `status`) bring many issues:
 
-- harder to read for more extensive queries
-- when using tools that generate TypeScript types based on queries (_more on that in the last section_), `newDelegate` and `oldDelegate` will result in two distinct inline interfaces.
+* harder to read for more extensive queries
+* when using tools that generate TypeScript types based on queries (_more on that in the last section_), `newDelegate` and `oldDelegate` will result in two distinct inline interfaces.
 
 A refactored version of the query would be the following:
 
@@ -348,12 +335,9 @@ Using GraphQL `fragment` will improve readability (especially at scale) but also
 
 When using the types generation tool, the above query will generate a proper `DelegateItemFragment` type (_see last "Tools" section_).
 
-<br />
-
 ### GraphQL Fragment do's and don'ts
 
 **Fragment base must be a type**
-
 A Fragment cannot be based on a non-applicable type, in short, **on type not having fields**:
 
 ```graphql
@@ -365,7 +349,6 @@ fragment MyFragment on BigInt {
 `BigInt` is a **scalar** (native "plain" type) that cannot be used as a fragment's base.
 
 **How to spread a Fragment**
-
 Fragments are defined on specific types and should be used accordingly in queries.
 
 Example:
@@ -394,15 +377,14 @@ fragment VoteItem on Vote {
 It is not possible to spread a fragment of type `Vote` here.
 
 **Define Fragment as an atomic business unit of data**
-
 GraphQL Fragment must be defined based on their usage.
 
 For most use-case, defining one fragment per type (in the case of repeated fields usage or type generation) is sufficient.
 
 Here is a rule of thumb for using Fragment:
 
-- when fields of the same type are repeated in a query, group them in a Fragment
-- when similar but not the same fields are repeated, create multiple fragments, ex:
+* when fields of the same type are repeated in a query, group them in a Fragment
+* when similar but not the same fields are repeated, create multiple fragments, ex:
 
 ```graphql
 # base fragment (mostly used in listing)
@@ -433,30 +415,24 @@ Iterating over queries by running them in your application can be cumbersome. Fo
 
 If you are looking for a more flexible way to debug/test your queries, other similar web-based tools are available such as [Altair](https://altair.sirmuel.design/) and [GraphiQL](https://graphiql-online.com/graphiql).
 
-<br />
-
 ### GraphQL Linting
 
 In order to keep up with the mentioned above best practices and syntactic rules, it is highly recommended to use the following workflow and IDE tools.
 
 **GraphQL ESLint**
-
 [GraphQL ESLint](https://github.com/dotansimha/graphql-eslint) will help you stay on top of GraphQL best practices with zero effort.
 
 [Setup the "operations-recommended"](https://github.com/dotansimha/graphql-eslint#available-configs) config will enforce essential rules such as:
 
-- `@graphql-eslint/fields-on-correct-type`: is a field used on a proper type?
-- `@graphql-eslint/no-unused variables`: should a given variable stay unused?
-- and more!
+* `@graphql-eslint/fields-on-correct-type`: is a field used on a proper type?
+* `@graphql-eslint/no-unused variables`: should a given variable stay unused?
+* and more!
 
 This will allow you to **catch errors without even testing queries** on the playground or running them in production!
-
-<br />
 
 ### IDE plugins
 
 **VSCode and GraphQL**
-
 The [GraphQL VSCode extension](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql) is an excellent addition to your development workflow to get:
 
 * syntax highlighting
@@ -468,7 +444,6 @@ The [GraphQL VSCode extension](https://marketplace.visualstudio.com/items?itemNa
 If you are using `graphql-eslint`, the [ESLint VSCode extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) is a must-have to visualize errors and warnings inlined in your code correctly.
 
 **WebStorm/Intellij and GraphQL**
-
 The [JS GraphQL plugin](https://plugins.jetbrains.com/plugin/8097-graphql/) will significantly improve your experience while working with GraphQL by providing:
 
 * syntax highlighting
@@ -478,10 +453,8 @@ The [JS GraphQL plugin](https://plugins.jetbrains.com/plugin/8097-graphql/) will
 
 More information on this [WebStorm article](https://blog.jetbrains.com/webstorm/2019/04/featured-plugin-js-graphql/) that showcases all the plugin's main features.
 
-
 ::: tip See also
-ee https://thegraph.com/docs/en/querying/querying-best-practices/
-::: 
 
+* [Querying The Graph](https://thegraph.com/docs/en/querying/querying-best-practices/)
 
-S
+:::

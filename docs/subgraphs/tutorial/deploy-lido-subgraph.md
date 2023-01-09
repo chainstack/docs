@@ -14,22 +14,22 @@ In this tutorial, we will learn how to deploy a subgraph to Chainstack.
 
 ## Prerequisites
 
-- [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
-- Basic understanding of The Graph protocol. [The Graph docs](https://thegraph.com/docs/en/) are an excellent place to start.
+* [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
+* Basic understanding of The Graph protocol. [The Graph docs](https://thegraph.com/docs/en/) are an excellent place to start.
 
 ## Overview
 
 To get from zero to a deployed subgraph with Chainstack:
 
-- With Chainstack, create a [subgraph](https://console.chainstack.com/subgraphs) under your project.
-- Set up a subgraph development environment in your system.
-- Create new entities and handler functions.
-- Deploy the subgraph using your Chainstack subgraph console.
-- Interact with the subgraph using Chainstack’s Query URL or GraphQL UI URL.
+* With Chainstack, create a [subgraph](https://console.chainstack.com/subgraphs) under your project.
+* Set up a subgraph development environment in your system.
+* Create new entities and handler functions.
+* Deploy the subgraph using your Chainstack subgraph console.
+* Interact with the subgraph using Chainstack’s Query URL or GraphQL UI URL.
 
 ## Step-by-step
 
-### Create a Subgraph project
+### Create a subgraph project
 
 See the <a href="https://docs.chainstack.com/subgraphs#introduction" target="_blank">Chainstack Subgraph docs</a>
 
@@ -37,29 +37,29 @@ See the <a href="https://docs.chainstack.com/subgraphs#introduction" target="_bl
 
 You need to have the following packages installed globally before moving forward:
 
-- A recent version of [Node JS](https://nodejs.org/en/). We recommend that you install the current LTS version globally.
-- [graph-cli](https://www.npmjs.com/package/@graphprotocol/graph-cli) to compile and deploy subgraphs from the command line.
+* A recent version of [Node JS](https://nodejs.org/en/). We recommend that you install the current LTS version globally.
+* [graph-cli](https://www.npmjs.com/package/@graphprotocol/graph-cli) to compile and deploy subgraphs from the command line.
 
-### Setting up a Subgraph dev environment
+### Setting up a subgraph dev environment
 
 1. Open up your terminal in the directory you want to create your project in. Then run:
 
-```bash
-graph init
-```
+    ```bash
+    graph init
+    ```
 
 1. This will open up a UI interface inside your command line. Set up your subgraph project with the following prompts:
 
-```bash
-Protocol: Ethereum
-Product for which to initialize: Subgraph-studio
-Subgraph slug: (**You can leave this empty**)
-Directory to create the subgraph in: LidoChainstack
-Ethereum network: mainnet
-Contract address: 0x47EbaB13B806773ec2A2d16873e2dF770D130b50
-Contract Name: Lido
-Index contract events as entities: Y
-```
+    ```bash
+    Protocol: Ethereum
+    Product for which to initialize: Subgraph-studio
+    Subgraph slug: (**You can leave this empty**)
+    Directory to create the subgraph in: LidoChainstack
+    Ethereum network: mainnet
+    Contract address: 0x47EbaB13B806773ec2A2d16873e2dF770D130b50
+    Contract Name: Lido
+    Index contract events as entities: Y
+    ```
 
 1. The graph-cli will now download the ABI of the smart contract we provided and install all the dependencies of our project automatically. This might take a while.
 1. You will now be asked if you want to add another smart contract to your subgraph. This is because a single subgraph can actually index multiple smart contracts. Say ‘*false*’, and then move your terminal into the directory of your newly created project.
@@ -69,13 +69,13 @@ Before moving on, let us take a look at what we did here. The original Lido smar
 This means if we use the actual smart contract address to set up our subgraph project, we will download the ABI of the proxy contract, which is not what we need.
 The implementation contract is deployed [here](https://etherscan.io/address/0x47ebab13b806773ec2a2d16873e2df770d130b50).
 
-### Configuring the Subgraph
+### Configuring the subgraph
 
 A subgraph project consists of three main files:
 
-- `schema.graphql`: this file defines the data sources we actually want to index, and how to query said data.
-- `subgraph.yaml`: the subgraph manifest YAML file contains references to the contract ABIs, Graph QL schemas, and assembly script mappings, amongst other things.
-- `Subgraph mappings`: mappings define event handlers in charge of managing and storing data on The Graph node.
+* `schema.graphql`: this file defines the data sources we actually want to index, and how to query said data.
+* `subgraph.yaml`: the subgraph manifest YAML file contains references to the contract ABIs, Graph QL schemas, and assembly script mappings, amongst other things.
+* `Subgraph mappings`: mappings define event handlers in charge of managing and storing data on The Graph node.
 
 Let us define a query for our subgraph.
 
@@ -92,7 +92,7 @@ Let us define a query for our subgraph.
 
     An entity can be thought of as an object that contains data. The data in our case comes from the Lido smart contract.
 
-2. Go to `subgraph.yaml` and delete everything. Paste the following code inside it.
+1. Go to `subgraph.yaml` and delete everything. Paste the following code inside it.
 
    ```yaml
     specVersion: 0.0.5
@@ -123,10 +123,10 @@ Let us define a query for our subgraph.
 
     Here are the major changes we made to the YAML file:
 
-    - Changed the contract address to the original address.
-    - Added a start block property. This means that our subgraph will start indexing data only from this specific block number, which saves us indexing time and resources. The Lido contract was deployed at this block number, thus it makes no sense to index data older than this.
-    - Referenced the name of our entity under the ‘entities’ object.
-    - Our entity will index data that is emitted every time the Approval event is triggered in the Lido contract. For each event handler that is defined in the `subgraph.yaml`, we need to create a handler function in the `src/lido.ts` file. This file in each subgraph project is generally referred to as the mappings file.
+    * Changed the contract address to the original address.
+    * Added a start block property. This means that our subgraph will start indexing data only from this specific block number, which saves us indexing time and resources. The Lido contract was deployed at this block number, thus it makes no sense to index data older than this.
+    * Referenced the name of our entity under the ‘entities’ object.
+    * Our entity will index data that is emitted every time the Approval event is triggered in the Lido contract. For each event handler that is defined in the `subgraph.yaml`, we need to create a handler function in the `src/lido.ts` file. This file in each subgraph project is generally referred to as the mappings file.
 
     Whenever we update the schema file, the graph needs to generate some AssemblyScript code using the updated schema and the contract ABI. To do so, run:
 
@@ -134,7 +134,7 @@ Let us define a query for our subgraph.
     graph codegen
     ```
 
-3. Go to `src/lido.ts` and delete everything inside. Now paste the following code inside it:
+1. Go to `src/lido.ts` and delete everything inside. Now paste the following code inside it:
 
    ```yaml
     import {
@@ -159,13 +159,13 @@ Let us define a query for our subgraph.
 
     The approval event is triggered whenever an address allows another address to spend some tokens on its behalf. In this code, we export a single function. This function declares a new object called `entity` that has three properties to mirror the emitted data from the approval event. We save this entity using `entity.save()`. Also, note that we use the transaction hash and logIndex to generate a unique id for all our entities. You can read more about this in [The Graph](https://thegraph.com/docs/en/developing/creating-a-subgraph/#recommended-ids-for-creating-new-entities) documentation.
 
-Save all your files and run this command in your terminal:
+1. Save all your files and run this command in your terminal:
 
-```yaml
-graph build
-```
+    ```yaml
+    graph build
+    ```
 
-This command compiles your subgraph. And that’s it. We are now ready to deploy our subgraph.
+    This command compiles your subgraph. And that’s it. We are now ready to deploy our subgraph.
 
 Please note that this is a basic subgraph built to index data from the Lido smart contract. Lido has several smart contracts deployed on Ethereum, and they also have a Github repo for the subgraph they built to monitor their smart contracts. If you want to have a more detailed look at their contracts/subgraph, you can start [here](https://github.com/lidofinance/lido-subgraph).
 
@@ -174,32 +174,33 @@ Please note that this is a basic subgraph built to index data from the Lido smar
 1. Open your Chainstack Subgraphs console.
 1. To deploy your subgraph, copy the deployment command and run it in a terminal at the root of your project directory.
 
-The deployment command from the Chainstack console will look like the following:
+    The deployment command from the Chainstack console will look like the following:
 
-```solidity
-graph deploy --node https://api.graph-eu.p2pify.com/API_KEY/deploy --ipfs https://api.graph-eu.p2pify.com/API_KEY/ipfs PROJECT_NAME
-```
+    ```solidity
+    graph deploy --node https://api.graph-eu.p2pify.com/API_KEY/deploy --ipfs https://api.graph-eu.p2pify.com/API_KEY/ipfs PROJECT_NAME
+    ```
 
 1. Run the command. Enter any version number of your choice and press Enter.
 1. If your subgraph is successfully deployed, your terminal will look like this:
 
-```jsx
-Deployed to https://chainstack.com/subgraphs/SG-123-456-789
+    ```jsx
+    Deployed to https://chainstack.com/subgraphs/SG-123-456-789
 
-Subgraph endpoints:
-Queries (HTTP):     https://ethereum-mainnet.graph-eu.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/my_subgraph_v1_0
-```
+    Subgraph endpoints:
+    Queries (HTTP):     https://ethereum-mainnet.graph-eu.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/my_subgraph_v1_0
+    ```
 
 ### Query your Subgraph
 
-- You can use the Query URL to interact directly with your subgraph from within the terminal. Alternatively, you can use the GraphQL UI URL from your console to interact with your subgraph using your browser.
-- To use the Query URL, open your terminal and run the following CURL command:
+You can use the Query URL to interact directly with your subgraph from within the terminal. Alternatively, you can use the GraphQL UI URL from your console to interact with your subgraph using your browser.
+
+To use the Query URL, open your terminal and run the following CURL command:
 
 ```bash
 curl -g \-X POST \-H "Content-Type: application/json" \-d '{"query":"{approvalQueries {id owner spender value} }"}' \<Your https Chainstack Query URL>
 ```
 
-- To use GraphQL UI URL, copy the URL and open it in your browser. Now run the following query:
+To use GraphQL UI URL, copy the URL and open it in your browser. Now run the following query:
 
 ```bash
 {
@@ -212,7 +213,7 @@ curl -g \-X POST \-H "Content-Type: application/json" \-d '{"query":"{approvalQu
 }
 ```
 
-- This query will give us the requested data from any transaction that leads to the approval event being invoked from the main Lido contract.
+This query will give us the requested data from any transaction that leads to the approval event being invoked from the main Lido contract.
 
 ## Conclusion
 

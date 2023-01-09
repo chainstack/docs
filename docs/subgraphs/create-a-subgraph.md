@@ -36,7 +36,7 @@ Mappings are written in a subset of [TypeScript](https://www.typescriptlang.org/
 
 For each event handler that is defined in `subgraph.yaml` under `mapping.eventHandlers`, you create an exported function of the same name. Each handler must accept a single parameter called `event` with a type corresponding to the name of the event which is being handled.
 
-### Install the Graph CLI
+## Install the Graph CLI
 
 The starting point for working with subgraphs is to install the [Graph CLI](https://github.com/graphprotocol/graph-cli).
 
@@ -50,7 +50,7 @@ Once you've successfully deployed the subgraph, you can start to query the subgr
 
 ::: tip Information
 For an example of how to modify the subgraph definition files in a subgraph, how to build and deploy the subgraph, and how to query data, see our tutorial on [deploying the Lido subgraph](../subgraphs/tutorial/README.md).
-
+:::
 ::: tip See also
 
 * For detailed information on creating a subgraph, see The Graph documentation on [Creating a Subgraph](https://thegraph.com/docs/en/developing/creating-a-subgraph/).

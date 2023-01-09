@@ -8,7 +8,9 @@ meta:
 
 # Introduction
 
-Subgraphs remove the complexity of extracting and processing data from archive nodes and deliver an intuitive UI for Web3 developers to easily filter and query data. When you deploy a subgraph and configure the query criteria, all successful hits are indexed, and the results are stored in a PostgreSQL database. A GraphQL endpoint is created that you can use to access the most recent data from your subgraph, synchronized to the latest block.
+Chainstack Subgraphs remove the complexity of extracting and processing data from archive nodes and deliver an intuitive UI for Web3 developers to easily filter and query data. When you deploy a subgraph and configure the query criteria, all successful hits are indexed and the results are stored in a PostgreSQL database. A GraphQL endpoint is created that you can use to access the most recent data from your subgraph, synchronized to the latest block.
+
+Coupled with Chainstack elastic archive nodes, Chainstack Subgraphs is the most powerful blockchain data indexing solution available. It provides extremely fast sync times and near-zero latency to keep your subgraphs at the latest block. Enterprise-grade infrastructure reliability and support will ensure you get the best of the data indexing with Chainstack.
 
 ## Supported protocols
 
@@ -32,11 +34,12 @@ Currently, Chainstack Subgraphs support the following protocols:
 * * **Large**—$19,527 per month - ~500 sub-graphs, 1000RPS
 
 ::: tip See also
-Learn about Chainstack Subgraphs and indexing and querying data from blockchains:
+Learn about Chainstack Subgraphs and indexing and querying data from the blockchain:
 
 * [Creating a subgraph](/subgraphs/create-a-subgraph.md)—useful information about The Graph and subgraph description files, and links to where you can find more detailed information.
 * [Query subgraphs](/subgraphs/query-a-subgraph.md)—details and best practices for writing queries for subgraphs and links to where you can find more information.
 * [Quickstart](/subgraphs/quickstart.md)—a short guide to get you up and running quickly with Chainstack Subgraphs.
 *	[Managing your Subgraphs](/subgraphs/manage-your-chainstack-subgraph.md)—helpful "How to" information about managing your subgraphs in the Chainstack console.
 *	[Tutorial](/subgraphs/tutorial/README.md)—a step-by-step tutorial about how to deploy the Lido subgraph with Chainstack.
-::: 
+
+:::
