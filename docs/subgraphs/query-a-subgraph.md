@@ -10,7 +10,7 @@ meta:
 
 When you've deployed your subgraph and want to start querying data, we recommend you familiarize yourself with Graph QL rules and best practices.
 
-## Querying a GraphQL API
+## Query a GraphQL API
 
 ### The anatomy of a GraphQL query
 

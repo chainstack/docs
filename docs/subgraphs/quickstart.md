@@ -12,9 +12,10 @@ meta:
 
 This guide provides you with a brief overview of how to initialize and create a subgraph from an existing smart contract, deploy the subgraph on Chainstack, and how to query subgraph data.
 
-::: tip Information
-If you're not familiar with The Graph, we recommend that you read [The Graph documentation](https://thegraph.com/docs/en/about/) before proceeding.
-:::
+## Prerequisites
+
+* A [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
+* A Basic understanding of The Graph protocol. If you're not familiar with The Graph, we recommend that you read [The Graph documentation](https://thegraph.com/docs/en/about/) before proceeding.
 
 1. [**Create your subgraph in the Chainstack console**](./subgraphs.md#create-a-subgraph-in-the-chainstack-console)
 2. [**Install the Graph CLI**](./subgraphs.md#install-the-graph-cli)
@@ -23,7 +24,7 @@ If you're not familiar with The Graph, we recommend that you read [The Graph doc
 5. [**Deploy the subgraph**](./subgraphs.md#deploy-the-subgraph)
 6. [**Query your subgraph**](./subgraphs.md#query-the-subgraph)
 
-### Create a subgraph in the Chainstack console
+## Create a subgraph in the Chainstack console
 
 ::: tip Information
 Subgraphs must be associated with a project; if you don’t already have a project to add the subgraph to, see [create a project](/platform/create-a-project).
@@ -46,7 +47,7 @@ Subgraphs must be associated with a project; if you don’t already have a proje
   
 The subgraph details page includes information such as the **Owner**, **Creation date**, **Region**, and **Protocol**. You can view the **Metrics** about the requests made in the subgraph, view the **Subgraph Query URLs**, and the **Subgraph Deployment command**, which you require to deploy the subgraph.
 
-### Install the Graph CLI
+## Install the Graph CLI
 
 To install the Graph CLI, run:
 
@@ -54,7 +55,7 @@ To install the Graph CLI, run:
 npm install -g @graphprotocol/graph-cli
 ```
 
-### Initialize the subgraph
+## Initialize the subgraph
 
 Open a new directory in your terminal and run:
 
@@ -64,7 +65,7 @@ graph init
 
 Configure all the required parameters that are displayed in the CLI. The Graph will download your smart contract’s ABI and install all the dependencies by running `npm install` automatically.
 
-### Write the subgraph definition
+## Write the subgraph definition
 
 The previous two steps create a scaffold subgraph that you can use to build your subgraph descrition using the following files:
 
@@ -74,7 +75,7 @@ The previous two steps create a scaffold subgraph that you can use to build your
 
 For more information about these files, see [Create a subgraph](/subgraphs/create-a-subgraph.md).
 
-when you've written your subgraph, to generate AssemblyScript types for the entities defined in your schema file, in your root directory, run:
+When you've written your subgraph, to generate AssemblyScript types for the entities defined in your schema file, in your root directory, run:
 
 ``` sh
 graph codegen
@@ -88,9 +89,9 @@ graph build
 
 When your subgraph compiles successfully, you are now ready to deploy your subgraph.
 
-### Deploy the subgraph
+## Deploy the subgraph
 
-**Deploy your new subgraph**:
+### Deploy your new subgraph:
 
 1. In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, open the details page of the subgraph you created in [the first step](./subgraphs.md#create-a-subgraph-in-the-chainstack-console) and copy the **Deployment command**, which will have the following format:
 
@@ -159,8 +160,8 @@ To deploy your subgraph, copy and run the deploy command from your deployed subg
 
 To query a subgraph, you can choose from either of the following **Subgraph query** options in the subgraph details page:
 
-* **Query URL** — use this URL to query in the CLI.
-* **GraphQL UI URL** — use this URL to query in the GraphQL UI.
+* **Query URL**—use this URL to query in the CLI.
+* **GraphQL UI URL**—use this URL to query in the GraphQL UI.
 
 ### Query URL in CLI
 
@@ -174,7 +175,7 @@ curl -g \\
      https://ethereum-mainnet.graph-eu.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/my_subgraph_v1_0
 ```
 
-### GraphQL UI URL query in browser
+### GraphQL UI URL query in the browser
 
 To query the subgraph using the GraphQL UI, locate the GraphQL UI URL in the subgraph details page, hover your mouse over the URL, and click the **Open** button that's displayed. The GraphQL UI open in your browser, where you can enter the details of your query.
 
@@ -182,6 +183,7 @@ For more detailed information about the rules and best practices for writing Gra
 
 ::: tip See also
 
+* [Tutorial - Deploy a Lido subgraph with Chainstack](/subgraphs/tutorial/)
 * [Create a subgraph](/subgraphs/create-a-subgraph.md)
 * [Graph documentation — Creating a subgraph](https://thegraph.com/docs/en/developing/creating-a-subgraph/)
 

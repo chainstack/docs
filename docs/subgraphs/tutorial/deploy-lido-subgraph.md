@@ -6,7 +6,7 @@ meta:
     content: subgraph graph lido deploy query graphql indexing data
 ---
 
-# Deploying the Lido subgraph with Chainstack
+# Deploying a Lido subgraph with Chainstack
 
 Lido is a liquid staking solution with smart contracts deployed on multiple blockchains, with Ethereum being its main focus.  
 
