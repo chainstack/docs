@@ -12,6 +12,10 @@ meta:
 
 This guide provides you with a brief overview of how to initialize and create a subgraph from an existing smart contract, deploy the subgraph on Chainstack, and how to query subgraph data.
 
+::: tip Information
+If you're not familiar with The Graph, we recommend that you read [The Graph documentation](https://thegraph.com/docs/en/about/) before proceeding.
+:::
+
 1. [**Create your subgraph in the Chainstack console**](./subgraphs.md#create-a-subgraph-in-the-chainstack-console)
 2. [**Install the Graph CLI**](./subgraphs.md#install-the-graph-cli)
 3. [**Initialize the subgraph**](./subgraphs.md#initialize-the-subgraph)
@@ -33,7 +37,7 @@ Subgraphs must be associated with a project; if you don’t already have a proje
    * * BNB Smart Chain
    * * Avalanche
    * Choose the **Network**.
-   * Choose the **Type**. ----Note: if you select the dedicated indexer option, and email is sent to support and they will contact you with the details of how to proceed.----
+   * Choose the **Type**. ----Note: if you select the Dedicated indexer option, and email is sent to support and they will contact you with the details of how to proceed.----
    * Click **Next**. The **Create subgraph** section is displayed.
 3. In the **Create subgraph** section:
      * Enter a **Name** for the subgraph.
@@ -68,7 +72,7 @@ The previous two steps create a scaffold subgraph that you can use to build your
 * Schema (schema.graphql) - The GraphQL schema defines what data you wish to retreive from the subgraph.
 * AssemblyScript Mappings (mapping.ts) - This is the code that translates data from your datasources to the entities defined in the schema.
 
-For more information on these files, see [Create a subgraph](/subgraphs/create-a-subgraph.md).
+For more information about these files, see [Create a subgraph](/subgraphs/create-a-subgraph.md).
 
 when you've written your subgraph, to generate AssemblyScript types for the entities defined in your schema file, in your root directory, run:
 

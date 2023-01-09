@@ -106,8 +106,6 @@ More GraphQL client alternatives are covered in ["Querying from an Application"]
 
 Now that we covered the basic rules of GraphQL queries syntax, let's now look at the best practices of GraphQL query writing.
 
----
-
 ## Writing GraphQL queries
 
 ### Always write static queries
@@ -404,8 +402,6 @@ fragment VoteWithPoll on Vote {
   }
 }
 ```
-
----
 
 ## The essential tools
 

@@ -746,9 +746,9 @@ module.exports = {
         collapsable: true,
         children: [
             '/subgraphs/',
+            '/subgraphs/quickstart',
             '/subgraphs/create-a-subgraph',
             '/subgraphs/query-a-subgraph',
-            '/subgraphs/quickstart',
             '/subgraphs/manage-your-chainstack-subgraph',                    
         {
             title: "Tutorial",
