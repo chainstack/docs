@@ -741,7 +741,25 @@ module.exports = {
           },
         ],
       },
-      '/subgraphs',
+      {
+        title: 'Subgraphs',
+        collapsable: true,
+        children: [
+            '/subgraphs/',
+            '/subgraphs/create-a-subgraph',
+            '/subgraphs/query-a-subgraph',
+            '/subgraphs/quickstart',
+            '/subgraphs/manage-your-chainstack-subgraph',                    
+        {
+            title: "Tutorial",
+            collapsable: true,
+            children: [
+                '/subgraphs/tutorial',
+                '/subgraphs/tutorial/deploy-lido-subgraph',
+            ],
+          },
+        ]
+    },      
       '/marketplace',
             {
                 title: 'Blockchains',

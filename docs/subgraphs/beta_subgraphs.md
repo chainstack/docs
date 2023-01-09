@@ -3,14 +3,10 @@ meta:
   - name: description
     content: Introduction to Subgraphs and instructions on creating a new subgraph and querying.
   - name: keywords
-    content: subgraph graph query graphql indexing data
+    content: subgraph graph deploy query graphql indexing data
 ---
 
 # Subgraphs
-
-::: tip Information
-This is a closed beta. If you want to participate, contact *support@chainstack.com*
-:::
 
 ## Introduction
 
@@ -133,7 +129,7 @@ curl -g \\
 
 ### GraphQL UI URL query in browser
 
-To query the subgraph using the GraphQL UI, copy the GraphQL UI URL from the subgraph details page and paste it in your browser. The GraphQL UI is displayed, where you can enter the details of your query.
+To query the subgraph using the GraphQL UI, locate the GraphQL UI URL in the subgraph details page, hover your mouse over the URL, and click the **Open** button that's displayed. The GraphQL UI open in your browser, where you can enter the details of your query.
 
 ::: tip See also
 
