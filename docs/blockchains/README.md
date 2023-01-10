@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn the blockchain essentials of public and consortium networks. Learn how the networks operate and reach consensus.
   - name: keywords
-    content: ethereum polygon bsc binance avax avalanche fantom tezos bitcoin hlf hyperledger fabric corda quorum multichain
+    content: ethereum polygon bsc binance avax avalanche fantom tezos bitcoin hlf hyperledger fabric corda quorum multichain solana aptos cronos near
 ---
 
 # Introduction
@@ -20,6 +20,7 @@ This section covers the blockchain essentials for the protocols supported by Cha
 * [Operations: NEAR](/operations/near/)
 * [Operations: Aurora](/operations/aurora/)
 * [Operations: Solana](/operations/solana/)
+* [Operations: Aptos](/operations/aptos/)
 * [Operations: Gnosis Chain](/operations/gnosis/)
 * [Operations: Cronos](/operations/cronos/)
 * [Operations: Fantom](/operations/fantom/)
