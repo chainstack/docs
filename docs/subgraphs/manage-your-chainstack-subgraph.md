@@ -11,18 +11,18 @@ meta:
 ## View your Subgraphs
 
 In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, you can view a list of all existing subgraphs and can filter the view using the **Protocol** drop-down list. 
-Click on a subgraph to open the subgrpah details. The subgraph details includes information such as the **Owner**, **Creation date**, **Region**, and **Protocol**. You can view the **Metrics** about the requests made in the subgraph, view the **Subgraph Query URLs**, and the **Subgraph Deployment command**, which you require to deploy the subgraph.
+Click on a subgraph to open the subgrpah details. The subgraph details includes information such as the **Owner**, **Creation date**, **Region**, and **Protocol**. You can view the **Metrics** about the requests made in the subgraph, view the **Subgraph Deployment command**, and the **Subgraph Query URLs**.
 
-## Monitor your subgraph syncing status
+## Monitor your subgraph status
 
-The sync status of a subgraph is displayed in the **Status** column of the <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a> list. The status will be one of the following:
+The status of a subgraph is displayed in the **Status** column of the <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a> list. The status will be one of the following:
 
 * **Not deployed**: this status is displayed when you create a subgraph in the console but not yet deployed a subgraph.
-* **Syncing**: the subgraph is in the process of being deployed.
+* **Syncing**: the subgraph is in the process of being deployed and is syncing data.
 * **Running**: the subgraph has been successfully deployed.
 * **Failed**: the subgraph deployment was unsuccessful.
 
-When you click on a subgraph and open the subgraph details, you will see more information about the progress of the subgraph at the top of the subgraph details page. When a subgraph is syncing, you can click **Logs** for real time status information about the progress of the sync. By default, the **Info** filter is selected, and the logs displayed are for the previous .....???minutes.... You can also filter the logs by **Error**, **Warn**, and **Debug**, and can click **Load older logs** to change the time frame of the logs displayed.
+When you click on a subgraph and open the subgraph details, you will see more information about the progress of the subgraph at the top of the page, such as the percentage completion and the quantity of data that has synced. When a subgraph is syncing, you can click **Logs** for real time status information about the progress of the sync. By default, the **Info** filter is selected, and the logs displayed are for the previous .....???minutes.... You can also filter the logs by **Error**, **Warn**, and **Debug**, and can click **Load older logs** to change the time frame of the logs displayed.
 
 ## Delete a subgraph
 

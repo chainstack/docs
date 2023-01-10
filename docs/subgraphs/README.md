@@ -23,15 +23,15 @@ Currently, Chainstack Subgraphs support the following protocols:
 
 ## Pricing
 
-*	**Elastic archive**—It costs $0.1/h for computing (each subgraph) and there are different numbers of included resources per plan:
-* * **Developer plan**—Subgraphs is not available.
-* * **Growth plan**—up to 3 subgraphs and 50k requests included.
-* * **Business plan**—up to 10 subgraphs and 350k requests included. NOTE: If you exceed the allotted requests in your plan, you can upgrade to another plan.
-* * **Enterprise extra**—unlimited subgraphs and 1M included requests on Enterprise Extra requests. NOTE: When you exceed the allowance, it's $0.00025 per request ($250 per million requests or $0.25 per thousand requests)
-*	**Dedicated indexer**—the dedicated indexer pricing has the following types on offer:
-* * **Standard**—$4,015 per month - ~40 sub-graphs, 100RPS
-* * **Medium**—$8,030 per month - ~100 sub-graphs, 200-500RPS
-* * **Large**—$19,527 per month - ~500 sub-graphs, 1000RPS
+* **Elastic archive**—It costs $0.1/h for computing (each subgraph) and there are different numbers of included resources per plan:
+  * **Developer plan**—Subgraphs is not available.
+  * **Growth plan**—up to 3 subgraphs and 50k requests included.
+  * **Business plan**—up to 10 subgraphs and 350k requests included. NOTE: If you exceed the allotted requests in your plan, you can upgrade to another plan.
+  * **Enterprise extra**—unlimited subgraphs and 1M included requests on Enterprise Extra requests. NOTE: When you exceed the allowance, it's $0.00025 per request ($250 per million requests or $0.25 per thousand requests).
+* **Dedicated indexer**—the dedicated indexer pricing has the following types on offer:
+  * **Standard**—$4,015 per month - ~40 sub-graphs, 100RPS
+  * **Medium**—$8,030 per month - ~100 sub-graphs, 200-500RPS
+  * **Large**—$19,527 per month - ~500 sub-graphs, 1000RPS
 
 ::: tip See also
 Learn about Chainstack Subgraphs and indexing and querying data from the blockchain:

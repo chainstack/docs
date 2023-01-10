@@ -36,16 +36,16 @@ Subgraphs must be associated with a project; if you don’t already have a proje
 :::
 
 1. In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, click **Add subgraph**. The **Add subgraph** page is displayed.
-2. In the **Choose network** section:
+1. In the **Choose network** section:
    * Choose a **Blockchain protocol**. Currently, the following protocols are supported:
-   * * Ethereum
-   * * Polygon
-   * * BNB Smart Chain
-   * * Avalanche
+     * Ethereum
+     * Polygon
+     * BNB Smart Chain
+     * Avalanche
    * Choose the **Network**.
    * Choose the **Type**.
    * Click **Next**. The **Create subgraph** section is displayed.
-3. In the **Create subgraph** section:
+1. In the **Create subgraph** section:
      * Enter a **Name** for the subgraph.
      * Select the **Project** that you want to assign your subgraph to.
      * Click **Add subgraph**. The details page of the new subgraph is displayed.
@@ -238,4 +238,3 @@ This query will give us the requested data from any transaction that leads to th
 This tutorial guided you through creating a new subgraph project and deploying it to your dedicated, super-fast Chainstack infrastructure.
 
 You can follow more tutorials on our docs, or you can check out our <a href="https://chainstack.com/blog/" target="_blank">blog</a>.
-

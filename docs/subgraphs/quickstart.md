@@ -15,7 +15,7 @@ This guide provides you with a brief overview of how to initialize and create a 
 ## Prerequisites
 
 * A [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
-* A Basic understanding of The Graph protocol. If you're not familiar with The Graph, we recommend that you read [The Graph documentation](https://thegraph.com/docs/en/about/) before proceeding.
+* A basic understanding of The Graph protocol. If you're not familiar with The Graph, we recommend that you read [The Graph documentation](https://thegraph.com/docs/en/about/) before proceeding.
 
 1. [**Create your subgraph in the Chainstack console**](./quickstart.md#create-a-subgraph-in-the-chainstack-console)
 2. [**Install the Graph CLI**](./quickstart.md#install-the-graph-cli)
@@ -33,10 +33,10 @@ Subgraphs must be associated with a project; if you don’t already have a proje
 1. In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, click **Add subgraph**. The **Add subgraph** page is displayed.
 2. In the **Choose network** section:
    * Choose a **Blockchain protocol**. Currently, the following protocols are supported:
-   * * Ethereum
-   * * Polygon
-   * * BNB Smart Chain
-   * * Avalanche
+     * Ethereum
+     * Polygon
+     * BNB Smart Chain
+     * Avalanche
    * Choose the **Network**.
    * Choose the **Type**.
    * Click **Next**. The **Create subgraph** section is displayed.
