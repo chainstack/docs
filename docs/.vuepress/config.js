@@ -175,6 +175,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Aptos',
+                        collapsable: true,
+                        children: [
+                            '/operations/aptos/',
+                            '/operations/aptos/networks',
+                            '/operations/aptos/types',
+                            '/operations/aptos/modes',
+                            '/operations/aptos/tools',
+                        ]
+                    },
+                    {
                         title: 'Gnosis Chain',
                         collapsable: true,
                         children: [
@@ -384,6 +395,14 @@ module.exports = {
                         children: [
                             '/tutorials/solana/',
                             '/tutorials/solana/creating-a-token-and-vesting-the-token-in-your-program',
+                        ]
+                    },
+                    {
+                        title: 'Aptos',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/aptos/',
+                            '/tutorials/aptos/publish-module-to-save-and-retrieve-message-on-aptos',
                         ]
                     },
                     {
@@ -774,6 +793,7 @@ module.exports = {
                     '/blockchains/near',
                     '/blockchains/aurora',
                     '/blockchains/solana',
+                    '/blockchains/aptos',
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
                     '/blockchains/fantom',

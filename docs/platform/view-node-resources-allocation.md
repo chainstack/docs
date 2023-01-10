@@ -57,6 +57,10 @@ Solana:
 
 * Node — the CPU, memory, and storage allocated to your Solana node.
 
+Aptos:
+
+* Node — the CPU, memory, and storage allocated to your Aptos node.
+
 Gnosis Chain:
 
 * Node — the CPU, memory, and storage allocated to your Gnosis Chain node.

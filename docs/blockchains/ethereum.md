@@ -14,7 +14,7 @@ Chainstack currently supports joining the following Ethereum networks:
 
 * Mainnet — public Ethereum mainnet.
 * Goerli testnet — a proof-of-stake public Ethereum testnet.
-* Sepolia testnet — a proof-of-stake public Ethereum testnet.
+* Sepolia testnet — a proof-of-stake public permissioned Ethereum testnet.
 * Ropsten testnet — a proof-of-work public Ethereum testnet.
 * Rinkeby testnet — a proof-of-authority public Ethereum testnet.
 
