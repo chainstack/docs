@@ -14,33 +14,49 @@ In this tutorial, we will learn how to deploy a subgraph to Chainstack.
 
 ## Prerequisites
 
-* [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
-* Basic understanding of The Graph protocol. [The Graph docs](https://thegraph.com/docs/en/) are an excellent place to start.
+* A [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
+* A Basic understanding of The Graph protocol. [The Graph docs](https://thegraph.com/docs/en/) are an excellent place to start.
 
 ## Overview
 
 To get from zero to a deployed subgraph with Chainstack:
 
-* With Chainstack, create a [subgraph](https://console.chainstack.com/subgraphs) under your project.
+* Create a [subgraph](https://console.chainstack.com/subgraphs) in your project.
 * Set up a subgraph development environment in your system.
-* Create new entities and handler functions.
-* Deploy the subgraph using your Chainstack subgraph console.
-* Interact with the subgraph using Chainstack’s Query URL or GraphQL UI URL.
+* Configure your subgraph by creating new entities and handler functions.
+* Deploy the subgraph using your Chainstack console.
+* Query the subgraph using Chainstack’s Query URL or GraphQL UI URL.
 
 ## Step-by-step
 
 ### Create a subgraph project
 
-See the <a href="https://docs.chainstack.com/subgraphs#introduction" target="_blank">Chainstack Subgraph docs</a>
+::: tip Information
+Subgraphs must be associated with a project; if you don’t already have a project to add the subgraph to, see [create a project](/platform/create-a-project).
+:::
 
-### Installation
+1. In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, click **Add subgraph**. The **Add subgraph** page is displayed.
+2. In the **Choose network** section:
+   * Choose a **Blockchain protocol**. Currently, the following protocols are supported:
+   * * Ethereum
+   * * Polygon
+   * * BNB Smart Chain
+   * * Avalanche
+   * Choose the **Network**.
+   * Choose the **Type**.
+   * Click **Next**. The **Create subgraph** section is displayed.
+3. In the **Create subgraph** section:
+     * Enter a **Name** for the subgraph.
+     * Select the **Project** that you want to assign your subgraph to.
+     * Click **Add subgraph**. The details page of the new subgraph is displayed.
 
-You need to have the following packages installed globally before moving forward:
+### Set up a subgraph development environment
+
+**Before you begin**
+You need to have the following packages installed globally:
 
 * A recent version of [Node JS](https://nodejs.org/en/). We recommend that you install the current LTS version globally.
 * [graph-cli](https://www.npmjs.com/package/@graphprotocol/graph-cli) to compile and deploy subgraphs from the command line.
-
-### Setting up a subgraph dev environment
 
 1. Open up your terminal in the directory you want to create your project in. Then run:
 
@@ -69,7 +85,7 @@ Before moving on, let us take a look at what we did here. The original Lido smar
 This means if we use the actual smart contract address to set up our subgraph project, we will download the ABI of the proxy contract, which is not what we need.
 The implementation contract is deployed [here](https://etherscan.io/address/0x47ebab13b806773ec2a2d16873e2df770d130b50).
 
-### Configuring the subgraph
+### Configure the subgraph
 
 A subgraph project consists of three main files:
 
@@ -200,7 +216,9 @@ To use the Query URL, open your terminal and run the following CURL command:
 curl -g \-X POST \-H "Content-Type: application/json" \-d '{"query":"{approvalQueries {id owner spender value} }"}' \<Your https Chainstack Query URL>
 ```
 
-To use GraphQL UI URL, copy the URL and open it in your browser. Now run the following query:
+To use GraphQL UI URL, copy the URL and open it in your browser. 
+
+Now run the following query:
 
 ```bash
 {

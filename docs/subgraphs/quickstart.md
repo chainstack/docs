@@ -6,7 +6,7 @@ meta:
     content: subgraph graph deploy query graphql indexing data
 ---
 
-# Quickstart
+# Subgraphs quickstart
 
 ## Introduction
 
@@ -17,12 +17,12 @@ This guide provides you with a brief overview of how to initialize and create a 
 * A [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
 * A Basic understanding of The Graph protocol. If you're not familiar with The Graph, we recommend that you read [The Graph documentation](https://thegraph.com/docs/en/about/) before proceeding.
 
-1. [**Create your subgraph in the Chainstack console**](./subgraphs.md#create-a-subgraph-in-the-chainstack-console)
-2. [**Install the Graph CLI**](./subgraphs.md#install-the-graph-cli)
-3. [**Initialize the subgraph**](./subgraphs.md#initialize-the-subgraph)
-4. [**Write the subgraph definition**](./subgraphs.md#write-the-subgraph-definition)
-5. [**Deploy the subgraph**](./subgraphs.md#deploy-the-subgraph)
-6. [**Query your subgraph**](./subgraphs.md#query-the-subgraph)
+1. [**Create your subgraph in the Chainstack console**](./quickstart.md#create-a-subgraph-in-the-chainstack-console)
+2. [**Install the Graph CLI**](./quickstart.md#install-the-graph-cli)
+3. [**Initialize the subgraph**](./quickstart.md#initialize-the-subgraph)
+4. [**Write the subgraph definition**](./quickstart.md#write-the-subgraph-definition)
+5. [**Deploy the subgraph**](./quickstart.md#deploy-the-subgraph)
+6. [**Query your subgraph**](./quickstart.md#query-the-subgraph)
 
 ## Create a subgraph in the Chainstack console
 
@@ -38,15 +38,13 @@ Subgraphs must be associated with a project; if you don’t already have a proje
    * * BNB Smart Chain
    * * Avalanche
    * Choose the **Network**.
-   * Choose the **Type**. ----Note: if you select the Dedicated indexer option, and email is sent to support and they will contact you with the details of how to proceed.----
+   * Choose the **Type**.
    * Click **Next**. The **Create subgraph** section is displayed.
 3. In the **Create subgraph** section:
      * Enter a **Name** for the subgraph.
      * Select the **Project** that you want to assign your subgraph to.
      * Click **Add subgraph**. The details page of the new subgraph is displayed.
   
-The subgraph details page includes information such as the **Owner**, **Creation date**, **Region**, and **Protocol**. You can view the **Metrics** about the requests made in the subgraph, view the **Subgraph Query URLs**, and the **Subgraph Deployment command**, which you require to deploy the subgraph.
-
 ## Install the Graph CLI
 
 To install the Graph CLI, run:
@@ -119,7 +117,6 @@ If the subgraph is in the **Failed** state, click **Logs** to view messages gene
 
 You can also use Chainstack Subgraphs to deploy an already completed subgraph project. To do so:
 
-* Make sure your code is thoroughly tested and ready to go.
 * Go to your project’s directory on your local machine. If your code is deployed on a remote repository, clone it to your system using the git clone command:
 
 ``` sh
