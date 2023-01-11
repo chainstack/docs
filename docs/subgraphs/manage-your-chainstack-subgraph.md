@@ -10,7 +10,7 @@ meta:
 
 ## View your Subgraphs
 
-In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, you can view a list of all existing subgraphs and can filter the view using the **Protocol** drop-down list. 
+In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, you can view a list of all existing subgraphs and can filter the view using the **Protocol** drop-down list.
 Click on a subgraph to open the subgrpah details. The subgraph details includes information such as the **Owner**, **Creation date**, **Region**, and **Protocol**. You can view the **Metrics** about the requests made in the subgraph, view the **Subgraph Deployment command**, and the **Subgraph Query URLs**.
 
 ## Monitor your subgraph status
@@ -49,7 +49,7 @@ CHAINGING USERS, ROLES, ETC.
 
 ::: tip See also
 
-* Subgraphs quickstart
+* [Subgraphs quickstart](../subgraphs/quickstart.md)
 * 
 
 ::: 

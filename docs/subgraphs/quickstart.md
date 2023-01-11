@@ -123,13 +123,7 @@ You can also use Chainstack Subgraphs to deploy an already completed subgraph pr
 git clone <insert repo URL>
 ```
 
-From a terminal pointing to the root of the project, run any one of these two commands:
-
-``` sh
-yarn
-```
-
-OR
+From a terminal pointing to the root of the project, run:
 
 ``` sh
 npm install
@@ -175,8 +169,6 @@ curl -g \\
 ### GraphQL UI URL query in the browser
 
 To query the subgraph using the GraphQL UI, locate the GraphQL UI URL in the subgraph details page, hover your mouse over the URL, and click the **Open** button that's displayed. The GraphQL UI open in your browser, where you can enter the details of your query.
-
-For more detailed information about the rules and best practices for writing GraphQL queries, see [Query Subgraphs](../subgraphs/query-a-subgraph.md).
 
 ::: tip See also
 
