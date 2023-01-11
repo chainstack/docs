@@ -22,7 +22,7 @@ The status of a subgraph is displayed in the **Status** column of the <a href="h
 * **Running**: the subgraph has been successfully deployed.
 * **Failed**: the subgraph deployment was unsuccessful.
 
-When you click on a subgraph and open the subgraph details, you will see more information about the progress of the subgraph at the top of the page, such as the percentage completion and the quantity of data that has synced. When a subgraph is syncing, you can click **Logs** for real time status information about the progress of the sync. By default, the **Info** filter is selected, and the logs displayed are for the previous .....???minutes.... You can also filter the logs by **Error**, **Warn**, and **Debug**, and can click **Load older logs** to change the time frame of the logs displayed.
+When you click on a subgraph and open the subgraph details, you will see more information about the progress of the subgraph at the top of the page. The status will be **Deployed. Initial sync in progress** and you can view the percentage completion and the quantity of data that has synced. You can click **Logs** for real time status information about the progress of the sync.<!--  By default, the **Info** filter is selected, and the logs displayed are for the previous .....???minutes....--> You can also filter the logs by **Error**, **Warn**, and **Debug**, and can click **Load older logs** to change the time frame of the logs displayed.
 
 ## Delete a subgraph
 
@@ -30,26 +30,26 @@ To delete a subgraph, in the subgraph details page, click **Delete** and confirm
 
 ## Subgraph billing details
 
-You can view your Subgraphs usage details in the <a href="https://console.chainstack.com/subgraphs" target="_blank">Billing</a>. In the **Usage** section, the **Managed Graph requests** table provides the number of requests included in your plan, the number that you have used, and the number that you have used in excess of your allowance. The **Total subgraph hours** is also displayed.
+You can view your Subgraphs usage details under <a href="https://console.chainstack.com/subgraphs" target="_blank">Billing</a>. In the **Usage** section, the **Managed Graph requests** table provides the number of requests included in your plan, the number that you have used, and the number that you have used in excess of your allowance. The **Total subgraph hours** shows the total number of hours that your subgraphs have been active.
 
 For information about how to change your Chainstack subscription plan to increase your allowance of included requests, see [Manage your organization subscription plan and support level](../platform/manage-your-organization-subscription-plan-and-support-level.md).
 
-If you are on the Enterprise plan and want to upgrade your Subgraphs plan, contact our support team....
+For and changes to dedicated indexers, contact our support team....
 
 
 ## Import my existing subgraph from the hosted service -on hold?
 
-WHERE DO WE PUT INFO ABOUT IMPORTING SUBGRAPHS WITH THE TOOL - WHAT'S ITS STATUS?
 
+<!--  
 ## PRIVILIGES - on hold - Who else can view and access my subgraphs?
 
 How do I view and change user privileges in the Chainstack console?
 PRIVILEGES - ADMINISTERING YOUR CONSOLE, NEED TO ADD INFO HERE ABOUT PRIVILEGES AND PROTECTING API KEYS, AND DEPLOYMENT COMMANDS NOT BEING ABLE TO BE RAN BY JUST ANYONE.
 CHAINGING USERS, ROLES, ETC.
-
+-->
 ::: tip See also
 
-* [Subgraphs quickstart](../subgraphs/quickstart.md)
+* [Get started with Subgraphs](../subgraphs/quickstart.md)
 * 
 
-::: 
+:::

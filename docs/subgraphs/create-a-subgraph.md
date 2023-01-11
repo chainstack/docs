@@ -24,7 +24,7 @@ The subgraph definition consists of the following 3 main files that you need to 
 
 ### The Subgraph Manifest
 
-The subgraph manifest `subgraph.yaml` defines the smart contracts your subgraph indexes, which events from these contracts to recognize, and how to map event data to entities that Graph Node stores and allows to query. For details of the complete specification for subgraph manifests, see [here](https://github.com/graphprotocol/graph-node/blob/master/docs/subgraph-manifest.md).
+The subgraph manifest `subgraph.yaml` defines the smart contracts your subgraph indexes, which events from these contracts to recognize, and how to map event data to entities that the Graph Node stores and allows to query. For details of the complete specification for subgraph manifests, see [here](https://github.com/graphprotocol/graph-node/blob/master/docs/subgraph-manifest.md).
 
 ### The GraphQL Schema
 

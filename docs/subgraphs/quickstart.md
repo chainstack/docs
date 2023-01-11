@@ -10,7 +10,7 @@ meta:
 
 ## Introduction
 
-This guide provides you with a brief overview of how to initialize and create a subgraph from an existing smart contract, deploy the subgraph on Chainstack, and how to query subgraph data.
+This guide provides you with a brief overview of how to initialize and create a subgraph from an existing smart contract, deploy a new or exisitng subgraph on Chainstack, and how to query subgraph data.
 
 ## Prerequisites
 
@@ -43,7 +43,8 @@ Subgraphs must be associated with a project; if you don’t already have a proje
 3. In the **Create subgraph** section:
      * Enter a **Name** for the subgraph.
      * Select the **Project** that you want to assign your subgraph to.
-     * Click **Add subgraph**. The details page of the new subgraph is displayed.
+     * If you are creating an Elastic subgraph, click **Add subgraph**.
+     * If you chose to set up a **Dedicated indexer**, click **Send request**. This will send an email to the Chainstack support team and they will contact you with the next steps.
   
 ## Install the Graph CLI
 
@@ -89,7 +90,7 @@ When your subgraph compiles successfully, you are now ready to deploy your subgr
 
 ## Deploy the subgraph
 
-### Deploy your new subgraph:
+### Deploy your new subgraph
 
 1. In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, open the details page of the subgraph you created in [the first step](./subgraphs.md#create-a-subgraph-in-the-chainstack-console) and copy the **Deployment command**, which will have the following format:
 
