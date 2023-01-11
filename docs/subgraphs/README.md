@@ -21,24 +21,29 @@ Currently, Chainstack Subgraphs support the following protocols:
 * BNB Smart Chain
 * Avalanche
 
-## Pricing
+## Plans and pricing
 
 * **Elastic archive**—It costs $0.1/h for computing (each subgraph) and there are different numbers of included resources per plan:
   * **Developer plan**—Subgraphs is not available.
   * **Growth plan**—up to 3 subgraphs and 50k requests included.
   * **Business plan**—up to 10 subgraphs and 350k requests included. NOTE: If you exceed the allotted requests in your plan, you can upgrade to another plan.
-  * **Enterprise extra**—unlimited subgraphs and 1M included requests on Enterprise Extra requests. NOTE: When you exceed the allowance, it's $0.00025 per request ($250 per million requests or $0.25 per thousand requests).
-* **Dedicated indexer**—the dedicated indexer pricing has the following types on offer:
-  * **Standard**—$4,015 per month - ~40 sub-graphs, 100RPS
-  * **Medium**—$8,030 per month - ~100 sub-graphs, 200-500RPS
-  * **Large**—$19,527 per month - ~500 sub-graphs, 1000RPS
+  * **Enterprise extra**—unlimited subgraphs and 1M included requests on Enterprise Extra requests. When you exceed the allowance, it's $0.00025 per request ($250 per million requests or $0.25 per thousand requests).
+
+* **Dedicated indexer**—the available dedicated indexer types and their hardware requirements are:
+
+| Setup        | Postgres  (CPUs) | Postgres  (memory in GB) | Postgres  (disk in TBs) | VMs  (CPUs) | VMs  (memory in GB) |
+| ------------ | ---------------- | ------------------------ | ----------------------  | ----------- | ------------------- |
+| Standard     | 8                | 30                       | 1                       | 12          | 46                  |
+| Medium       | 16               | 64                       | 2                       | 32          | 64                  |
+| Large        | 72               | 468                      | 3.5                     | 48          | 184                 |
+
+Contact our support team for more information about setting up a Dedicated indexer.
 
 ::: tip See also
 Learn about Chainstack Subgraphs and indexing and querying data from the blockchain:
 
-* [Quickstart](/subgraphs/quickstart.md)—a short guide to get you up and running quickly with Chainstack Subgraphs.
+* [Get started with Subgraphs](/subgraphs/quickstart.md)—a short guide to get you up and running quickly with Chainstack Subgraphs.
 * [Create a subgraph](/subgraphs/create-a-subgraph.md)—useful information about The Graph and subgraph description files, and links to where you can find more detailed information.
-* [Query subgraphs](/subgraphs/query-a-subgraph.md)—details and best practices for writing queries for subgraphs and links to where you can find more information.
 * [Manage your Subgraphs](/subgraphs/manage-your-chainstack-subgraph.md)—helpful "How to" information about managing your subgraphs in the Chainstack console.
 * [Tutorial](/subgraphs/tutorial/README.md)—a step-by-step tutorial about how to deploy the Lido subgraph with Chainstack.
 

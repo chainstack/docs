@@ -8,7 +8,6 @@ meta:
 
 # Create a subgraph
 
-
 A subgraph extracts data from a blockchain, processing it and storing it so that it can be easily queried via GraphQL.
 
 The subgraph definition consists of a few files:
