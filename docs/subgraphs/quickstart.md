@@ -6,7 +6,7 @@ meta:
     content: subgraph graph deploy query graphql indexing data
 ---
 
-# Get started with quickstart
+# Get started with Subgraphs
 
 ## Introduction
 

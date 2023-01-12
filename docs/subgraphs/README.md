@@ -16,10 +16,18 @@ Coupled with Chainstack elastic archive nodes, Chainstack Subgraphs is the most 
 
 Currently, Chainstack Subgraphs support the following protocols:
 
-* Ethereum
-* Polygon
-* BNB Smart Chain
-* Avalanche
+**Elastic**:
+
+| Ethereum    | Polygon     | BNB Smart Chain | Avalanche |
+| :---------------- | :---------| :-------  | :---------- |
+
+**Dedicated**:
+
+| Gnosis Chain    | Near     | Polygon  | Celo        |
+| :---------------- | :---------| :-------  | :---------- |
+| **Arbitrum**        | **Avalanche** | **Fantom**   | **Fuse**        |
+| **Moonriver**        | **Aurora**   | **Moonbeam** | **Boba Network**|
+| **BNB Smart Chain** | **Optimism** | **Harmony**  | *And any other EVM compatible chain* |
 
 ## Plans and pricing
 
@@ -42,8 +50,8 @@ Contact our support team for more information about setting up a Dedicated index
 ::: tip See also
 Learn about Chainstack Subgraphs and indexing and querying data from the blockchain:
 
-* [Get started with Subgraphs](/subgraphs/quickstart.md)—a short guide to get you up and running quickly with Chainstack Subgraphs.
-* [Manage your Subgraphs](/subgraphs/manage-your-chainstack-subgraph.md)—helpful "How to" information about managing your subgraphs in the Chainstack console.
+* [Get started with Subgraphs](/subgraphs/quickstart.md)—a guide to get you up and running with Chainstack Subgraphs.
+* [Manage your Subgraphs](/subgraphs/manage-your-chainstack-subgraph.md)—information about managing your subgraphs in the Chainstack console.
 * [Tutorial](/subgraphs/tutorial/README.md)—a step-by-step tutorial about how to deploy the Lido subgraph with Chainstack.
 
 :::
