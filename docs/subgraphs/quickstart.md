@@ -44,7 +44,7 @@ Subgraphs must be associated with a project; if you don’t already have a proje
      * Enter a **Name** for the subgraph.
      * Select the **Project** that you want to assign your subgraph to.
      * If you are creating an Elastic subgraph, click **Add subgraph**.
-     * If you chose to set up a **Dedicated indexer**, click **Send request**. This will send an email to the Chainstack support team and they will contact you with the next steps.
+     * If you are creating a Dedicated indexer, click **Send request**. This will send an email to the Chainstack support team and they will contact you with the next steps.
   
 ## Install the Graph CLI
 
@@ -56,7 +56,9 @@ npm install -g @graphprotocol/graph-cli
 
 ## Initialize the subgraph
 
-Open a new directory in your terminal and run:
+The starting point for working with subgraphs is to install the [Graph CLI](https://github.com/graphprotocol/graph-cli). You must have Graph CLI installed globally to build and deploy subgraphs.
+
+To install, open a new directory in your terminal and run:
 
 ``` sh
 graph init
@@ -66,13 +68,11 @@ Configure all the required parameters that are displayed in the CLI. The Graph w
 
 ## Write the subgraph definition
 
-The previous two steps create a scaffold subgraph that you can use to build your subgraph descrition using the following files:
+The previous two steps create a scaffold subgraph that you can use to build your subgraph description using the following 3 files:
 
-* Manifest (subgraph.yaml) - The manifest defines what datasources your subgraphs will index.
-* Schema (schema.graphql) - The GraphQL schema defines what data you wish to retreive from the subgraph.
-* AssemblyScript Mappings (mapping.ts) - This is the code that translates data from your datasources to the entities defined in the schema.
-
-For more information about these files, see [Create a subgraph](/subgraphs/create-a-subgraph.md).
+* **Manifest (`subgraph.yaml`)**—The subgraph manifest defines the smart contracts your subgraph indexes, which events from these contracts to recognize, and how to map event data to entities that the Graph Node stores and allows to query. For details of the complete specification for subgraph manifests, see [here](https://github.com/graphprotocol/graph-node/blob/master/docs/subgraph-manifest.md).
+* **Schema (`schema.graphql`)**—The GraphQL schema is defined using the GraphQL interface definition language. If you're new to writing GraphQL schema, we recommended that you check out the [GraphQL documentation](https://graphql.org/learn/). The Graph documentation provides reference documentation for GraphQL schemas in the [GraphQL API](https://thegraph.com/docs/en/querying/graphql-api/) section.
+* **AssemblyScript Mappings (mapping.ts)**—Subgraph mappings are written in [AssemblyScript](https://github.com/AssemblyScript/assemblyscript/wiki), which can be compiled to WASM ([WebAssembly](https://webassembly.org/)). The mappings transform the data your mappings are sourcing into entities defined in your schema. For each event handler that is defined in `subgraph.yaml` under `mapping.eventHandlers`, you create an exported function of the same name. Each handler must accept a single parameter called `event` with a type corresponding to the name of the event being handled.
 
 When you've written your subgraph, to generate AssemblyScript types for the entities defined in your schema file, in your root directory, run:
 
@@ -174,7 +174,6 @@ To query the subgraph using the GraphQL UI, locate the GraphQL UI URL in the sub
 ::: tip See also
 
 * [Tutorial - Deploy a Lido subgraph with Chainstack](/subgraphs/tutorial/)
-* [Create a subgraph](/subgraphs/create-a-subgraph.md)
 * [Graph documentation — Creating a subgraph](https://thegraph.com/docs/en/developing/creating-a-subgraph/)
 
 :::

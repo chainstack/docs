@@ -43,7 +43,6 @@ Contact our support team for more information about setting up a Dedicated index
 Learn about Chainstack Subgraphs and indexing and querying data from the blockchain:
 
 * [Get started with Subgraphs](/subgraphs/quickstart.md)—a short guide to get you up and running quickly with Chainstack Subgraphs.
-* [Create a subgraph](/subgraphs/create-a-subgraph.md)—useful information about The Graph and subgraph description files, and links to where you can find more detailed information.
 * [Manage your Subgraphs](/subgraphs/manage-your-chainstack-subgraph.md)—helpful "How to" information about managing your subgraphs in the Chainstack console.
 * [Tutorial](/subgraphs/tutorial/README.md)—a step-by-step tutorial about how to deploy the Lido subgraph with Chainstack.
 

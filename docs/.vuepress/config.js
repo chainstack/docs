@@ -766,7 +766,6 @@ module.exports = {
         children: [
             '/subgraphs/',
             '/subgraphs/quickstart',
-            '/subgraphs/create-a-subgraph',
             '/subgraphs/manage-your-chainstack-subgraph',                    
         {
             title: "Tutorial",

@@ -6,7 +6,7 @@ meta:
     content: subgraphs graph deploy query graphql indexing data
 ---
 
-# Manage your Chainstack Subgraphs
+# Manage your Subgraphs
 
 ## View your Subgraphs
 
@@ -36,9 +36,9 @@ For information about how to change your Chainstack subscription plan to increas
 
 For and changes to dedicated indexers, contact our support team....
 
-
 ## Import my existing subgraph from the hosted service -on hold?
-
+Hosted service is being sunset: https://thegraph.com/blog/sunsetting-hosted-service/
+we have an import tool: https://github.com/chainstack/graph-tools
 
 <!--  
 ## PRIVILIGES - on hold - Who else can view and access my subgraphs?
@@ -50,6 +50,6 @@ CHAINGING USERS, ROLES, ETC.
 ::: tip See also
 
 * [Get started with Subgraphs](../subgraphs/quickstart.md)
-* 
+* [Tutorial - Deploy a Lido subgraph with Chainstack](/subgraphs/tutorial/)
 
 :::
