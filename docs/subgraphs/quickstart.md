@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Introduction to Subgraphs and instructions on creating a new subgraph and querying.
+    content: Introduction to Subgraphs and instructions on creating a new subgraph and querying data.
   - name: keywords
     content: subgraph graph deploy query graphql indexing data
 ---
@@ -17,12 +17,14 @@ This guide provides you with a brief overview of how to initialize and create a 
 * A [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
 * A basic understanding of The Graph protocol. If you're not familiar with The Graph, we recommend that you read [The Graph documentation](https://thegraph.com/docs/en/about/) before proceeding.
 
+This Subgraphs getting started guide includes the following sections:
+
 1. [**Create your subgraph in the Chainstack console**](./quickstart.md#create-a-subgraph-in-the-chainstack-console)
 2. [**Install the Graph CLI**](./quickstart.md#install-the-graph-cli)
 3. [**Initialize the subgraph**](./quickstart.md#initialize-the-subgraph)
 4. [**Write the subgraph definition**](./quickstart.md#write-the-subgraph-definition)
 5. [**Deploy the subgraph**](./quickstart.md#deploy-the-subgraph)
-6. [**Query your subgraph**](./quickstart.md#query-the-subgraph)
+6. [**Query the subgraph**](./quickstart.md#query-the-subgraph)
 
 ## Create a subgraph in the Chainstack console
 
@@ -70,9 +72,10 @@ Configure all the required parameters that are displayed in the CLI. The Graph w
 
 The previous two steps create a scaffold subgraph that you can use to build your subgraph description using the following 3 files:
 
-* **Manifest (`subgraph.yaml`)**—The subgraph manifest defines the smart contracts your subgraph indexes, which events from these contracts to recognize, and how to map event data to entities that the Graph Node stores and allows to query. For details of the complete specification for subgraph manifests, see [here](https://github.com/graphprotocol/graph-node/blob/master/docs/subgraph-manifest.md).
-* **Schema (`schema.graphql`)**—The GraphQL schema is defined using the GraphQL interface definition language. If you're new to writing GraphQL schema, we recommended that you check out the [GraphQL documentation](https://graphql.org/learn/). The Graph documentation provides reference documentation for GraphQL schemas in the [GraphQL API](https://thegraph.com/docs/en/querying/graphql-api/) section.
-* **AssemblyScript Mappings (mapping.ts)**—Subgraph mappings are written in [AssemblyScript](https://github.com/AssemblyScript/assemblyscript/wiki), which can be compiled to WASM ([WebAssembly](https://webassembly.org/)). The mappings transform the data your mappings are sourcing into entities defined in your schema. For each event handler that is defined in `subgraph.yaml` under `mapping.eventHandlers`, you create an exported function of the same name. Each handler must accept a single parameter called `event` with a type corresponding to the name of the event being handled.
+* **Manifest (`subgraph.yaml`)**—The subgraph manifest file defines the smart contracts that your subgraph indexes, the events  to recognize, and how to map event data to entities stored in the graph. For details of the specification of manifests, see [here](https://github.com/graphprotocol/graph-node/blob/master/docs/subgraph-manifest.md).
+* **Schema (`schema.graphql`)**—The GraphQL schema is defined using the GraphQL interface definition language. If you're new to writing GraphQL schema, we recommended that you check out the [GraphQL documentation](https://graphql.org/learn/), and The Graph documentation provides reference materials for GraphQL schemas in the [GraphQL API](https://thegraph.com/docs/en/querying/graphql-api/) section.
+* **AssemblyScript Mappings (mapping.ts)**—Subgraph mappings are written in [AssemblyScript](https://github.com/AssemblyScript/assemblyscript/wiki), which can be compiled to WASM ([WebAssembly](https://webassembly.org/)). The mappings transform the data your mappings are sourcing into entities defined in your schema. Each event handler that is defined in `subgraph.yaml` under `mapping.eventHandlers` requires an exported function of the same name, and every handler must accept the parameter `event`, with a type corresponding to the name of the event being handled.
+  
 
 When you've written your subgraph, to generate AssemblyScript types for the entities defined in your schema file, in your root directory, run:
 
