@@ -222,6 +222,16 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Filecoin',
+                        collapsable: true,
+                        children: [
+                            '/operations/filecoin/',
+                            '/operations/filecoin/networks',
+                            '/operations/filecoin/types',
+                            '/operations/filecoin/tools',
+                        ]
+                    },
+                    {
                         title: 'StarkNet',
                         collapsable: true,
                         children: [
@@ -779,6 +789,7 @@ module.exports = {
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
                     '/blockchains/fantom',
+                    '/blockchains/filecoin',
                     '/blockchains/starknet',
                     '/blockchains/harmony',
                     '/blockchains/tezos',

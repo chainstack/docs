@@ -49,6 +49,8 @@ Public network:
 * [Fantom](/blockchains/fantom)
 	* Mainnet. [Full and archive nodes](/operations/fantom/modes).
 	* Testnet
+* [Filecoin](/blockchains/filecoin)
+	* Hyperspace testnet
 * [StarkNet](/blockchains/starknet)
 	* Mainnet
 	* Testnet
