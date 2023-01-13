@@ -18,6 +18,6 @@ See Filecoin documentation: [Expected Consensus](https://spec.filecoin.io/algori
 
 ::: tip See also
 
-* [Filecoint documentation](https://docs.filecoin.io/)
+* [Filecoin documentation](https://docs.filecoin.io/)
 
 :::
