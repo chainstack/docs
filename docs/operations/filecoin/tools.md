@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Filecoin node, deploy smart contracts through your node, and develop dapps.
+    content: Learn how to interact with your Filecoin node, deploy smart contracts through your node, and develop DApps.
   - name: keywords
     content: filecoin truffle hardhat metamask web3js web3py
 ---
