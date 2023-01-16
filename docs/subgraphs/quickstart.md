@@ -15,7 +15,7 @@ This guide provides you with a brief overview of how to initialize and create a 
 ## Prerequisites
 
 * A [Chainstack account](https://console.chainstack.com/user/login) to deploy your subgraph.
-* A basic understanding of The Graph protocol. If you're not familiar with The Graph, we recommend that you read [The Graph documentation](https://thegraph.com/docs/en/about/) before proceeding.
+* A basic understanding of The Graph protocol. If you're not familiar with The Graph, we recommend that you read about [The Graph Node](https://github.com/graphprotocol/graph-node) before proceeding.
 
 This Subgraphs getting started guide includes the following sections:
 
@@ -72,11 +72,10 @@ Configure all the required parameters that are displayed in the CLI. The Graph w
 
 The previous two steps create a scaffold subgraph that you can use to build your subgraph description using the following 3 files:
 
-* **Manifest (`subgraph.yaml`)**—The subgraph manifest file defines the smart contracts that your subgraph indexes, the events  to recognize, and how to map event data to entities stored in the graph. For details of the specification of manifests, see [here](https://github.com/graphprotocol/graph-node/blob/master/docs/subgraph-manifest.md).
-* **Schema (`schema.graphql`)**—The GraphQL schema is defined using the GraphQL interface definition language. If you're new to writing GraphQL schema, we recommended that you check out the [GraphQL documentation](https://graphql.org/learn/), and The Graph documentation provides reference materials for GraphQL schemas in the [GraphQL API](https://thegraph.com/docs/en/querying/graphql-api/) section.
-* **AssemblyScript Mappings (mapping.ts)**—Subgraph mappings are written in [AssemblyScript](https://github.com/AssemblyScript/assemblyscript/wiki), which can be compiled to WASM ([WebAssembly](https://webassembly.org/)). The mappings transform the data your mappings are sourcing into entities defined in your schema. Each event handler that is defined in `subgraph.yaml` under `mapping.eventHandlers` requires an exported function of the same name, and every handler must accept the parameter `event`, with a type corresponding to the name of the event being handled.
+* **Manifest (`subgraph.yaml`)** — The subgraph manifest file defines the smart contracts that your subgraph indexes, the events  to recognize, and how to map event data to entities stored in the graph. For details of the specification of manifests, see [here](https://github.com/graphprotocol/graph-node/blob/master/docs/subgraph-manifest.md).
+* **Schema (`schema.graphql`)** — The GraphQL schema is defined using the GraphQL interface definition language. If you're new to writing GraphQL schema, we recommended that you check out the [GraphQL documentation](https://graphql.org/learn/), and The Graph documentation provides reference materials for GraphQL schemas in the [GraphQL documentatin on Schemas and Types](https://graphql.org/learn/schema/).
+* **AssemblyScript Mappings (mapping.ts)** — Subgraph mappings are written in [AssemblyScript](https://github.com/AssemblyScript/assemblyscript/wiki), which can be compiled to WASM ([WebAssembly](https://webassembly.org/)). The mappings transform the data your mappings are sourcing into entities defined in your schema. Each event handler that is defined in `subgraph.yaml` under `mapping.eventHandlers` requires an exported function of the same name, and every handler must accept the parameter `event`, with a type corresponding to the name of the event being handled.
   
-
 When you've written your subgraph, to generate AssemblyScript types for the entities defined in your schema file, in your root directory, run:
 
 ``` sh
@@ -155,8 +154,8 @@ To deploy your subgraph, copy and run the deploy command from your deployed subg
 
 To query a subgraph, you can choose from either of the following **Subgraph query** options in the subgraph details page:
 
-* **Query URL**—use this URL to query in the CLI.
-* **GraphQL UI URL**—use this URL to query in the GraphQL UI.
+* **Query URL** — use this URL to query in the CLI.
+* **GraphQL UI URL** — use this URL to query in the GraphQL UI.
 
 ### Query URL in CLI
 
@@ -177,6 +176,6 @@ To query the subgraph using the GraphQL UI, locate the GraphQL UI URL in the sub
 ::: tip See also
 
 * [Tutorial - Deploy a Lido subgraph with Chainstack](/subgraphs/tutorial/)
-* [Graph documentation — Creating a subgraph](https://thegraph.com/docs/en/developing/creating-a-subgraph/)
+* <a href="https://...." target="_blank">Tutorial - Creating a subgraph</a>
 
 :::

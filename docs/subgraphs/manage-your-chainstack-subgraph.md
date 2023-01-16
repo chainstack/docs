@@ -17,16 +17,16 @@ Click on a subgraph to open the subgrpah details. The subgraph details includes 
 
 The status of a subgraph is displayed in the **Status** column of the <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a> list. The status will be one of the following:
 
-* **Not deployed**: this status is displayed when you create a subgraph in the console but not yet deployed a subgraph.
-* **Syncing**: the subgraph is in the process of being deployed and is syncing data.
-* **Running**: the subgraph has been successfully deployed.
-* **Failed**: the subgraph deployment was unsuccessful.
+* **Not deployed** — this status is displayed when you create a subgraph in the console but not yet deployed a subgraph.
+* **Syncing** — the subgraph is in the process of being deployed and is syncing data.
+* **Running** — the subgraph has been successfully deployed.
+* **Failed** — the subgraph deployment was unsuccessful.
 
 When you click on a subgraph and open the subgraph details, you will see more information about the progress of the subgraph at the top of the page. The status will be **Deployed. Initial sync in progress** and you can view the percentage completion and the quantity of data that has synced. You can click **Logs** for real time status information about the progress of the sync.<!--  By default, the **Info** filter is selected, and the logs displayed are for the previous .....???minutes....--> You can also filter the logs by **Error**, **Warn**, and **Debug**, and can click **Load older logs** to change the time frame of the logs displayed.
 
 ## Delete a subgraph
 
-To delete a subgraph, in the subgraph details page, click **Delete** and confirm by clicking **Yes, I am sure**. --- WHEN I DELETED ONE, IT CLEARED THE INFO BUT STILL LEFT ME IN A BLANK SUBGRAPH ---
+To delete a subgraph, in the subgraph details page, click **Delete** and confirm by clicking **Yes, I am sure**. Your subgraph is deleted and you return to the <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a> section of the console.
 
 ## Subgraph billing details
 
@@ -36,7 +36,8 @@ For information about how to change your Chainstack subscription plan to increas
 
 For and changes to dedicated indexers, contact our support team....
 
-## Import my existing subgraph from the hosted service -on hold?
+## Import my existing subgraph from the hosted service?
+
 Hosted service is being sunset: https://thegraph.com/blog/sunsetting-hosted-service/
 we have an import tool: https://github.com/chainstack/graph-tools
 
