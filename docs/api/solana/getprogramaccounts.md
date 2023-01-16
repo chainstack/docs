@@ -18,7 +18,7 @@ This method is now enabled for elastic Solana devnet nodes on US Ashborne (ash1)
 
 :::
 
-On elastic Solana mainnet nodes, `getProgramAccounts` method also has a rate limit of 2 requests per second (RPS). If the rate limit is exceeded, you will get the following response:
+On elastic Solana mainnet nodes the `getProgramAccounts` method also has a rate limit of 2 requests per second (RPS). If the rate limit is exceeded, you will get the following response:
 
 ```json
 {
