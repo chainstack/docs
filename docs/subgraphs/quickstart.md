@@ -94,7 +94,7 @@ When your subgraph compiles successfully, you are now ready to deploy your subgr
 
 ### Deploy your new subgraph
 
-1. In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, open the details page of the subgraph you created in [the first step](./subgraphs.md#create-a-subgraph-in-the-chainstack-console) and copy the **Deployment command**, which will have the following format:
+1. In <a href="https://console.chainstack.com/subgraphs" target="_blank">Subgraphs</a>, click on the subgraph you created in the first step above to display the details and copy the **Deployment command**, which will have the following format:
 
     ``` sh
     graph deploy --node https://api.graph-eu.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/deploy --ipfs https://api.graph-eu.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/ipfs my_subgraph_v1_0
