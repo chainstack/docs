@@ -440,6 +440,14 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Filecoin',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/filecoin/',
+                            '/tutorials/filecoin/deploy-using-hardhat',
+                        ]
+                    },
+                    {
                         title: 'StarkNet',
                         collapsable: true,
                         children: [
