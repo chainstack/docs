@@ -8,6 +8,13 @@ meta:
 
 # Release notes
 
+## Chainstack 3.9.X
+
+*January 17, 2023*
+
+* **APIs**. 5 Heavy [Solana APIs](/api/solana/solana-api-reference) enabled.
+* **Documentation**. Solana API [reference](/api/solana/solana-api-reference) updates.
+
 ## Chainstack 3.9
 
 *January 10, 2023*
@@ -76,8 +83,9 @@ meta:
 *November 7, 2022*
 
 ### What's new
-- **Protocols**. [Aurora](/operations/aurora/types) support for dedicated nodes.
-- **Documentation**. A simple on-chain governance tutorial for [Aurora](/tutorials/aurora).
+
+* **Protocols**. [Aurora](/operations/aurora/types) support for dedicated nodes.
+* **Documentation**. A simple on-chain governance tutorial for [Aurora](/tutorials/aurora).
 
 ## Chainstack 3.6.1
 
