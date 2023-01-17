@@ -6,13 +6,34 @@ meta:
     content: fil tutorial smart contract filecoin harhdat
 ---
 
-# Deploy an ERC20 token on Filecoin with Hardhat
+# Deploy an ERC-20 token on Filecoin with Hardhat
 
-ERC-20 is the token implementation standard for smart contracts, and it defines a set of rules that a token contract must follow to be considered an ERC-20 token. These rules include how tokens are transferred, how token balances are queried, and how the total token supply is determined.
+This tutorial will show you how to deploy an ERC-20 token on the Hyperspace testnet. The Hyperspace testnet supports the FEVM implementation.
 
-OpenZeppelin Contracts is an open-source framework for creating smart contracts. It provides a collection of reusable, tested, and community-audited smart contracts that cover various aspects of token management, such as token standards (like ERC-20 and ERC-721), access control, and token economics. This way, developers don't have to re-write standardized contracts over and over.
+## Filecoin Virtual Machine and FIlecoin EVM
 
-Hardhat is a development environment for smart contracts. Hardhat provides a set of tools that make it easy for developers to set up, run, and test their smart contracts, including a local blockchain network, an integrated development environment (IDE), and a set of plugins and utilities for testing, debugging, and deploying smart contracts.
+The **Filecoin Virtual Machine**, or FVM, serves as the backbone of the Filecoin network, providing a powerful runtime environment for the execution of smart contracts, known as actors. Actors can be written in Solidity and, in the future, in any language that compiles to WebAssembly, empowering developers to establish and enforce a set of rules to store and retrieve data on the Filecoin network.
+
+The FVM acts as a gatekeeper, ensuring the integrity of stored data and enforcing the terms of storage deals, such as data retention and retrieval times, making the Filecoin network a safe and reliable platform for decentralized data storage.
+
+The **Filecoin Ethereum Virtual Machine**, or FEVM brings the power of the Ethereum Virtual Machine (EVM) to the Filecoin network. The FEVM is virtualized as a runtime layer on top of the Filecoin Virtual Machine, allowing for the execution of EVM smart contracts on the network. 
+
+With the FEVM, developers can quickly and easily start writing actors on the Filecoin blockchain, utilizing all of the familiar tools, packages, and languages they are used to while having access to Filecoin's unique storage capabilities, opening up new possibilities and opportunities for DApp development.
+
+Follow the FEVM implementation progress on the [Filecoin docs](https://docs.filecoin.io/developers/smart-contracts/concepts/filecoin-evm/#fevm-and-native-fvm).
+
+## Filecoin actors
+
+Actors on the Filecoin network serve the same purpose as smart contracts in the Ethereum Virtual Machine; they are essential components of the system. Every modification to the state of the Filecoin blockchain requires an actor method invocation to be initiated.
+
+There are two types of actors:
+
+* Built-in actors.
+* User actors.
+
+Built-in actors are written and deployed directly into the network by the Filecoin network team. These actors are pre-installed and can be used to perform specific actions on the network. An example of a built-in actor is the `StorageMinerActor`, which deals with storage mining operations and collects proofs.
+
+On the other hand, user actors are contracts that developers can write and deploy to the Filecoin network using the Filecoin Virtual Machine. These actors are developed by third-party developers and can be used to perform a wide range of actions on the network.
 
 ## Prerequisites
 
@@ -131,7 +152,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract CoinFile is ERC20, Ownable {
 
-    constructor() ERC20("CoinFile", "CFL") {}
+    constructor() ERC20("CoinFile", "CFL") {
+        _mint(msg.sender, 1000000000 * 10 ** decimals());
+    }
 
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
@@ -184,11 +207,7 @@ Edit the `hardhat.config.js` file and paste the following:
 
 ```js
 require("@nomicfoundation/hardhat-toolbox");
-require("dotenv").config({
-
-    path: ".env"
-
-});
+require("dotenv").config({ path: ".env" });
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const CHAINSTACK_FILECOIN_RPC = process.env.CHAINSTACK_FILECOIN_RPC
@@ -253,6 +272,10 @@ async function main() {
     // print the address of the deployed contract*
     console.log(`The smart contract was deployed at: ${deployedCoinFile.address}`);
 
+    // Print the owner
+    const owner = await deployedCoinFile.owner()
+    console.log(`The owner is ${owner}`)
+
 }
 
 // Call the main function and catch if there is any error
@@ -292,10 +315,28 @@ The console will log a message and the contract address once it is deployed.
 
 ```sh
 Deploying smart contract...
-The smart contract was deployed at: 0x04F819b0640B1ba3E0f3c5A21435301C389F24AA
+The smart contract was deployed at: 0x1BEb36CF3de42a2c85d962bDE1517FFF136Bf0D1
+The owner is 0x0FAd74EF878Ed65Dd40b71Ea586738DF94cF1360
 ```
 
+It prints the smart contract address and the owner address (the wallet that deployed the contract); this means that we can successfully interact with it. 
+
 You can now see your smart contract in the [Hyperspace Filecoin explorer](https://hyperspace.filfox.info/en).
+
+This `0x1BEb36CF3de42a2c85d962bDE1517FFF136Bf0D1`, is a smart contract that we deployed. If you check on the [Hyperspace Filecoin explorer](https://hyperspace.filfox.info/en/address/t410fdpvtntz54qvczbozmk66cul774jwx4gruqt2lca), you will see a few things:
+
+The Address Overview section shows:
+
+* The Filecoin address.
+* The actor type (EVM) in this case. 
+* The contract balance (I sent 1 tFIL)
+* How many messages are recorded, and time details.
+
+At the bottom, you will see a recap of the messages, showing:
+
+* The transaction to deploy the actor calling the `CreateExternal` method.
+* A [transaction I made using MetaMask](https://hyperspace.filfox.info/en/message/bafy2bzaceca4pindhk3qlvptv4huumvfztmpm7t33yqzoqqlhyym6vlwuufxg) sending 1000 CFL from the wallet back to the actor.
+* A [transaction](https://hyperspace.filfox.info/en/message/bafy2bzacea5jp2xzhmb35t7l36bddvqyamfllgrlymjfwi6d4n2p4pd4ktoty) where I sent 1 tFIL to the actor.
 
 ## Conclusion
 

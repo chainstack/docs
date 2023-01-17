@@ -444,7 +444,7 @@ module.exports = {
                         collapsable: true,
                         children: [
                             '/tutorials/filecoin/',
-                            '/tutorials/filecoin/deploy-using-hardhat',
+                            '/tutorials/filecoin/deploy-an-erc20-token-on-filecoin-with-hardhat',
                         ]
                     },
                     {
