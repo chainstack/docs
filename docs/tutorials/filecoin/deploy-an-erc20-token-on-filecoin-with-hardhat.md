@@ -166,7 +166,7 @@ The contract implementation is the following:
 
 - The contract uses OpenZeppelin audited [ERC-20 contract templates](https://docs.openzeppelin.com/contracts/4.x/erc20).
 - The contract uses the `Ownable.sol` [ownership integration](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable).
-- The contract mints 1000000000 tokens when it is deployed. The owner of the smart contract can mint more tokens by calling the `mint` function.
+- The contract mints 1,000,000,000 tokens when it is deployed. The owner of the smart contract can mint more tokens by calling the `mint` function.
 - `CoinFile` is the name of this token; you can give any name to your token.
 - `CFL` is the ticker of this token; you can give any ticker symbol to your token.
 
@@ -229,7 +229,7 @@ const CHAINSTACK_FILECOIN_RPC = process.env.CHAINSTACK_FILECOIN_RPC
 
 This will securely use the data from the `.env` file and create a path for the `filecoin` network that we can use to deploy the smart contract.
 
-#### Receive test Filecoin
+#### Receive test tokens
 
 Use the [Filecoin faucet](https://hyperspace.yoga/#faucet) to receive some test Filecoin tokens to use during deployment.
 
