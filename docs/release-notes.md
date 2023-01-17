@@ -8,11 +8,11 @@ meta:
 
 # Release notes
 
-## Chainstack 3.9.X
+## Chainstack 3.9.1
 
 *January 17, 2023*
 
-* **APIs**. 5 Heavy [Solana APIs](/api/solana/solana-api-reference) enabled.
+* **APIs**. 5 [Solana APIs](/api/solana/solana-api-reference) enabled on devnet.
 * **Documentation**. Solana API [reference](/api/solana/solana-api-reference) updates.
 
 ## Chainstack 3.9
