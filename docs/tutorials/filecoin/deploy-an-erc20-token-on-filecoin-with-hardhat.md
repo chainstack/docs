@@ -76,7 +76,7 @@ For npm:
 npm install --save-dev hardhat
 ```
 
-For yarn:
+For Yarn:
 
 ``` sh
 yarn add --dev hardhat
@@ -88,7 +88,7 @@ For more information, see the Hardhat [Installation](https://hardhat.org/hardhat
 
 :::
 
-To create a Hardhat project, in your project's folder run:
+To create a Hardhat project, in your project's directory run:
 
 ```sh
 npx hardhat
@@ -307,7 +307,7 @@ It prints the smart contract address and the owner address (the wallet that depl
 
 ## Understand the deployed contract
 
-You can now see your smart contract in the [Hyperspace Filecoin explorer](https://hyperspace.filfox.info/en).
+You can now see your smart contract in the [Filecoin Hyperspace explorer](https://hyperspace.filfox.info/en).
 
 This `0x1BEb36CF3de42a2c85d962bDE1517FFF136Bf0D1` is a smart contract that we deployed. If you check on the [Hyperspace Filecoin explorer](https://hyperspace.filfox.info/en/address/t410fdpvtntz54qvczbozmk66cul774jwx4gruqt2lca), you will see a few things:
 
@@ -315,14 +315,14 @@ The Address Overview section shows:
 
 * The Filecoin address.
 * The actor type (EVM) in this case.
-* The contract balance (I sent 1 tFIL)
+* The contract balance (1 tFIL was sent)
 * How many messages are recorded, and time details.
 
 At the bottom, you will see a recap of the messages, showing:
 
 * The transaction to deploy the actor calling the `CreateExternal` method.
-* A [transaction I made using MetaMask](https://hyperspace.filfox.info/en/message/bafy2bzaceca4pindhk3qlvptv4huumvfztmpm7t33yqzoqqlhyym6vlwuufxg) sending 1000 CFL from the wallet back to the actor.
-* A [transaction](https://hyperspace.filfox.info/en/message/bafy2bzacea5jp2xzhmb35t7l36bddvqyamfllgrlymjfwi6d4n2p4pd4ktoty) where I sent 1 tFIL to the actor.
+* A [transaction made using MetaMask](https://hyperspace.filfox.info/en/message/bafy2bzaceca4pindhk3qlvptv4huumvfztmpm7t33yqzoqqlhyym6vlwuufxg) sending 1000 CFL from the wallet back to the actor.
+* A [transaction](https://hyperspace.filfox.info/en/message/bafy2bzacea5jp2xzhmb35t7l36bddvqyamfllgrlymjfwi6d4n2p4pd4ktoty) where 1 tFIL was sent to the actor.
 
 ## Conclusion
 
