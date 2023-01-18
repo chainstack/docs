@@ -12,9 +12,13 @@ Solana API method that returns all accounts owned by the provided program public
 
 ## Temporary limitations
 
-This method is currently disabled for elastic Solana devnet nodes.
+::: tip Information
 
-On elastic Solana mainnet nodes, `getProgramAccounts` method has a rate limit of 2 requests per second (RPS). If the rate limit is exceeded, you will get the following response:
+This method is enabled for elastic Solana devnet nodes on US Ashburn (ash1) and Amsterdam (ams1) with a rate limit of 2 requests per second (RPS).
+
+:::
+
+On elastic Solana mainnet nodes the `getProgramAccounts` method also has a rate limit of 2 requests per second (RPS). If the rate limit is exceeded, you will get the following response:
 
 ```json
 {
