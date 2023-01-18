@@ -16,7 +16,7 @@ The **Filecoin Virtual Machine**, or FVM, serves as the backbone of the Filecoin
 
 The FVM acts as a gatekeeper, ensuring the integrity of stored data and enforcing the terms of storage deals, such as data retention and retrieval times, making the Filecoin network a safe and reliable platform for decentralized data storage.
 
-The **Filecoin Ethereum Virtual Machine**, or FEVM brings the power of the Ethereum Virtual Machine (EVM) to the Filecoin network. The FEVM is virtualized as a runtime layer on top of the Filecoin Virtual Machine, allowing for the execution of EVM smart contracts on the network.
+The **Filecoin Ethereum Virtual Machine**, or FEVM, brings the power of the Ethereum Virtual Machine (EVM) to the Filecoin network. The FEVM is virtualized as a runtime layer on top of the Filecoin Virtual Machine, allowing for the execution of EVM smart contracts on the network.
 
 With the FEVM, developers can quickly and easily start writing actors on the Filecoin blockchain, utilizing all of the familiar tools, packages, and languages they are used to while having access to Filecoin's unique storage capabilities, opening up new possibilities and opportunities for DApp development.
 
@@ -111,7 +111,7 @@ my-project/
 ├── hardhat.config.js
 ```
 
-### 5. Create a simple ERC-20 token smart contract using the OpenZeppelin Contracts framework
+### Create a simple ERC-20 token smart contract using the OpenZeppelin Contracts framework
 
 #### Install the OpenZeppelin Contracts
 
@@ -170,7 +170,7 @@ The console will log the following response:
 Compiled 6 Solidity files successfully
 ```
 
-### 6. Deploy the contract on the Filecoin Hyperspace testnet through a node deployed with Chainstack
+### Deploy the contract on the Filecoin Hyperspace testnet through a node deployed with Chainstack
 
 #### Set up the deploying environment
 
@@ -309,7 +309,7 @@ It prints the smart contract address and the owner address (the wallet that depl
 
 You can now see your smart contract in the [Hyperspace Filecoin explorer](https://hyperspace.filfox.info/en).
 
-This `0x1BEb36CF3de42a2c85d962bDE1517FFF136Bf0D1`, is a smart contract that we deployed. If you check on the [Hyperspace Filecoin explorer](https://hyperspace.filfox.info/en/address/t410fdpvtntz54qvczbozmk66cul774jwx4gruqt2lca), you will see a few things:
+This `0x1BEb36CF3de42a2c85d962bDE1517FFF136Bf0D1` is a smart contract that we deployed. If you check on the [Hyperspace Filecoin explorer](https://hyperspace.filfox.info/en/address/t410fdpvtntz54qvczbozmk66cul774jwx4gruqt2lca), you will see a few things:
 
 The Address Overview section shows:
 

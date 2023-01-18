@@ -10,4 +10,4 @@ meta:
 
 This section guides you through developing applications on Filecoin from scratch.
 
-Learn how to develop and [deploy smart contracts on the Filecoin network using Hardhat](/tutorials/filecoin/deploy-using-hardhat).
+Learn how to develop and [deploy smart contracts on the Filecoin network using Hardhat](/tutorials/filecoin/deploy-an-erc20-token-on-filecoin-with-hardhat).
