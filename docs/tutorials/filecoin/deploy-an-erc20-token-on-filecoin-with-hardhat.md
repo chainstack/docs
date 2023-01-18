@@ -309,7 +309,7 @@ It prints the smart contract address and the owner address (the wallet that depl
 
 You can now see your smart contract in the [Filecoin Hyperspace explorer](https://hyperspace.filfox.info/en).
 
-This `0x1BEb36CF3de42a2c85d962bDE1517FFF136Bf0D1` is a smart contract that we deployed. If you check on the [Hyperspace Filecoin explorer](https://hyperspace.filfox.info/en/address/t410fdpvtntz54qvczbozmk66cul774jwx4gruqt2lca), you will see a few things:
+This `0x1BEb36CF3de42a2c85d962bDE1517FFF136Bf0D1` is a smart contract that we deployed. If you check on the [Filecoin Hyperspace explorer](https://hyperspace.filfox.info/en/address/t410fdpvtntz54qvczbozmk66cul774jwx4gruqt2lca), you will see a few things:
 
 The Address Overview section shows:
 
