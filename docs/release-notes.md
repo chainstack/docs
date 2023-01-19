@@ -8,6 +8,17 @@ meta:
 
 # Release notes
 
+## Chainstack 3.10
+
+*January 19, 2023*
+
+### What’s new
+
+* **Protocols**. [Filecoin](/operations/filecoin/networks) Hyperspace testnet support for elastic and dedicated nodes.
+* **Documentation**.
+  * [Fliecoin](/operations/filecoin).
+  * [Filecoin tutorial](/tutorials/filecoin).
+
 ## Chainstack 3.9.1
 
 *January 17, 2023*
