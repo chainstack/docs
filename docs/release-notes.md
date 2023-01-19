@@ -12,6 +12,8 @@ meta:
 
 *January 17, 2023*
 
+### What’s new
+
 * **APIs**. 5 [Solana APIs](/api/solana/solana-api-reference) enabled on devnet.
 * **Documentation**. Solana API [reference](/api/solana/solana-api-reference) updates.
 
