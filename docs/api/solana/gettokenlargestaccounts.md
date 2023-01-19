@@ -10,7 +10,7 @@ meta:
 
 ::: tip Information
 
-This method is currently disabled for elastic Solana devnet nodes.
+This method is enabled for elastic Solana devnet nodes on US Ashburn (ash1) and Amsterdam (ams1) with a rate limit of 2 requests per second (RPS).
 
 :::
 
