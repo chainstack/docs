@@ -16,7 +16,7 @@ meta:
 
 * **Protocols**. [Filecoin](/operations/filecoin/networks) Hyperspace testnet support for elastic and dedicated nodes.
 * **Documentation**.
-  * [Fliecoin](/operations/filecoin).
+  * [Filecoin](/operations/filecoin).
   * [Filecoin tutorial](/tutorials/filecoin).
 
 ## Chainstack 3.9.1
