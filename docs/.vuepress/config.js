@@ -222,6 +222,16 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Filecoin',
+                        collapsable: true,
+                        children: [
+                            '/operations/filecoin/',
+                            '/operations/filecoin/networks',
+                            '/operations/filecoin/types',
+                            '/operations/filecoin/tools',
+                        ]
+                    },
+                    {
                         title: 'StarkNet',
                         collapsable: true,
                         children: [
@@ -427,6 +437,14 @@ module.exports = {
                         children: [
                             '/tutorials/fantom/',
                             '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
+                        ]
+                    },
+                    {
+                        title: 'Filecoin',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/filecoin/',
+                            '/tutorials/filecoin/deploy-an-erc20-token-on-filecoin-with-hardhat',
                         ]
                     },
                     {
@@ -779,6 +797,7 @@ module.exports = {
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
                     '/blockchains/fantom',
+                    '/blockchains/filecoin',
                     '/blockchains/starknet',
                     '/blockchains/harmony',
                     '/blockchains/tezos',

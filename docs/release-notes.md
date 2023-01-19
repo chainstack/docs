@@ -8,9 +8,22 @@ meta:
 
 # Release notes
 
+## Chainstack 3.10
+
+*January 19, 2023*
+
+### What’s new
+
+* **Protocols**. [Filecoin](/operations/filecoin/networks) Hyperspace testnet support for elastic and dedicated nodes.
+* **Documentation**.
+  * [Filecoin](/operations/filecoin).
+  * [Filecoin tutorial](/tutorials/filecoin).
+
 ## Chainstack 3.9.1
 
 *January 17, 2023*
+
+### What’s new
 
 * **APIs**. 5 [Solana APIs](/api/solana/solana-api-reference) enabled on devnet.
 * **Documentation**. Solana API [reference](/api/solana/solana-api-reference) updates.
