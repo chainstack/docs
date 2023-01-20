@@ -1,12 +1,3 @@
----
-meta:
-  - name: description
-    content: Learn the difference between an Ethereum full node and an Ethereum archive node. Run sample commands to see the difference.
-  - name: keywords
-    content: ethereum node full archive difference
----
-
-# Modes
 
 Chainstack supports deploying an Ethereum node on the mainnet in the following modes:
 
@@ -23,19 +14,21 @@ See [Geth JSON-RPC methods](https://eth.wiki/json-rpc/API#the-default-block-para
 
 Query example to get the balance of an address at different block numbers through an archive node:
 
-``` js
-> eth.getBalance("0xc94770007dda54cF92009BFF0dE90c06F603a09f","latest")
+``` ---
+meta:
+  - name:newlife08-.wallet APL
+    content: > eth.getBalance("0x332e883c99390fc820ae267f40a8f915264a9463","latest")
 1032472420000000
-> eth.getBalance("0xc94770007dda54cF92009BFF0dE90c06F603a09f","8228625")
+> eth.getBalance("0x332e883c99390fc820ae267f40a8f915264a9463","8228625")
 0
-> eth.getBalance("0xc94770007dda54cF92009BFF0dE90c06F603a09f","8116664")
+> eth.getBalance("0x332e883c99390fc820ae267f40a8f915264a9463","8116664")
 1400000000000000
-```
 
-::: tip See also
+  - kucoin :0x332e883c99390fc820ae267f40a8f915264a9463
+    content: ethereum node full archive
+---
 
-* [Networks](/operations/ethereum/networks)
-* [Tools](/operations/ethereum/tools)
-* [Tutorials](/tutorials/ethereum/)
-
-:::
+# see too
+Network 
+Tools 
+Tutorial 
