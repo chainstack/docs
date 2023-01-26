@@ -142,6 +142,18 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Optimism',
+                        collapsable: true,
+                        children: [
+                            '/operations/optimism/',
+                            '/operations/optimism/networks',
+                            '/operations/optimism/types',
+                            '/operations/optimism/modes',
+                            '/operations/optimism/debug-and-trace-apis',
+                            '/operations/optimism/tools',
+                        ]
+                    },
+                    {
                         title: 'NEAR',
                         collapsable: true,
                         children: [
@@ -210,6 +222,16 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Filecoin',
+                        collapsable: true,
+                        children: [
+                            '/operations/filecoin/',
+                            '/operations/filecoin/networks',
+                            '/operations/filecoin/types',
+                            '/operations/filecoin/tools',
+                        ]
+                    },
+                    {
                         title: 'Fantom',
                         collapsable: true,
                         children: [
@@ -219,16 +241,6 @@ module.exports = {
                             '/operations/fantom/modes',
                             '/operations/fantom/debug-and-trace-apis',
                             '/operations/fantom/tools',
-                        ]
-                    },
-                    {
-                        title: 'Filecoin',
-                        collapsable: true,
-                        children: [
-                            '/operations/filecoin/',
-                            '/operations/filecoin/networks',
-                            '/operations/filecoin/types',
-                            '/operations/filecoin/tools',
                         ]
                     },
                     {
@@ -432,19 +444,19 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Fantom',
-                        collapsable: true,
-                        children: [
-                            '/tutorials/fantom/',
-                            '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
-                        ]
-                    },
-                    {
                         title: 'Filecoin',
                         collapsable: true,
                         children: [
                             '/tutorials/filecoin/',
                             '/tutorials/filecoin/deploy-an-erc20-token-on-filecoin-with-hardhat',
+                        ]
+                    },
+                    {
+                        title: 'Fantom',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/fantom/',
+                            '/tutorials/fantom/erc-721-collection-contract-with-truffle-and-openzeppelin',
                         ]
                     },
                     {
@@ -796,8 +808,8 @@ module.exports = {
                     '/blockchains/aptos',
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
-                    '/blockchains/fantom',
                     '/blockchains/filecoin',
+                    '/blockchains/fantom',
                     '/blockchains/starknet',
                     '/blockchains/harmony',
                     '/blockchains/tezos',
