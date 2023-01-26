@@ -396,6 +396,14 @@ module.exports = {
                         ]
                     },
                     {
+                       title: 'Optimism',
+                       collapsable: true,
+                       children: [
+                           '/tutorials/optimism/',
+                           '/tutorials/optimism/',
+                       ]
+                   },
+                    {
                         title: 'NEAR',
                         collapsable: true,
                         children: [
@@ -802,6 +810,7 @@ module.exports = {
                     '/blockchains/bsc',
                     '/blockchains/avalanche',
                     '/blockchains/arbitrum',
+                    '/blockchains/optimism',
                     '/blockchains/near',
                     '/blockchains/aurora',
                     '/blockchains/solana',

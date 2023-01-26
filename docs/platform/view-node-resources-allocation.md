@@ -45,6 +45,10 @@ Arbitrum:
 
 * Node — the CPU, memory, and storage allocated to your Arbitrum node.
 
+Optimism:
+
+* Node — the CPU, memory, and storage allocated to your Optimism node.
+
 NEAR:
 
 * Node — the CPU, memory, and storage allocated to your NEAR node.
@@ -68,6 +72,10 @@ Gnosis Chain:
 Cronos:
 
 * Node — the CPU, memory, and storage allocated to your Cronos node.
+
+Filecoin:
+
+* Node — the CPU, memory, and storage allocated to your Filecoin node.
 
 Fantom:
 

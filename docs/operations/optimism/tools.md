@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: Learn how to interact with your Optimism node, deploy smart contracts through your node, and develop dapps.
+    content: Learn how to interact with your Optimism node, deploy smart contracts through your node, and develop DApps.
   - name: keywords
     content: optimism truffle web3 hardhat foundry brownie
 ---

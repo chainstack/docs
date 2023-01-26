@@ -17,6 +17,12 @@ This page is a collection of JSON-RPC API call examples for the Avalanche API us
 - [eth.rb](https://github.com/q9f/eth.rb/)
 - [cURL](https://curl.se/)
 
+::: tip Information
+
+  The management API namespaces `admin_` and `personal_` are not exposed.
+
+:::
+
 ## What is Avalanche protocol?
 
 [Avalanche](https://www.avax.network/) is an EVM-compatible protocol focused on speed and scalability.

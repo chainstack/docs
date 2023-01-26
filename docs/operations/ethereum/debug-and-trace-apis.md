@@ -26,7 +26,7 @@ A dedicated Ethereum node deployed as Erigon exposes the `debug_*` and `trace_*`
 
 For the full list of the available debug and trace API methods, see:
 
-* [Geth: debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug)
+* [Geth: debug namespace](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug)
 * [Erigon: RPC implementation status](https://github.com/ledgerwatch/erigon/blob/stable/cmd/rpcdaemon/README.md#rpc-implementation-status)
 
 Note that to debug and trace transactions, you need to have historical states on the node. Ethereum full nodes keep historical states for the immediately previous 128 blocks. Ethereum archive nodes keep historical states for the entire chain.
@@ -37,7 +37,7 @@ You can debug and trace transactions by replaying them in the Ethereum Virtual M
 
 ### debug_traceBlockByNumber
 
-Trace all transactions included in a block with [debug_traceBlockByNumber](https://geth.ethereum.org/docs/rpc/ns-debug#debug_traceblockbynumber):
+Trace all transactions included in a block with `debug_traceBlockByNumber`:
 
 ``` sh
 curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER", {"tracer": "callTracer"}]}' ENDPOINT

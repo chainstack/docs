@@ -8,6 +8,17 @@ meta:
 
 # Release notes
 
+## Chainstack 3.11
+
+*February 1, 2023*
+
+### What’s new
+
+* **Protocols**. [Optimism](/operations/optimism/networks) Goerli testnet support for elastic and dedicated nodes.
+* **Documentation**.
+  * [Optimism](/operations/optimism).
+  * [Optimism tutorial](/tutorials/optimism).
+
 ## Chainstack 3.10
 
 *January 19, 2023*

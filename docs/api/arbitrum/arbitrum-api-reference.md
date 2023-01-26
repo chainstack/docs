@@ -17,6 +17,12 @@ This page is a collection of JSON-RPC API call examples for the Arbitrum API usi
 - [eth.rb](https://github.com/q9f/eth.rb/)
 - [cURL](https://curl.se/)
 
+::: tip Information
+
+  The management API namespaces `admin_` and `personal_` are not exposed.
+
+:::
+
 ## What is Arbitrum protocol?
 
 Arbitrum is an EVM-compatible Layer 2 [scaling solution](https://chainstack.com/solving-the-blockchain-trilemma-scaling-solutions-for-ethereum/) for the Ethereum network that leverages optimistic rollups to introduce several efficiency improvements to transaction processing and their costs. To do this, Arbitrum bundles several off-chain transactions together in a batch before parsing the result to the Ethereum network.

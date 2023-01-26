@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Learn how to develop, deploy, and interact with smart contracts on the Arbitrum network.
   - name: keywords
-    content: arbitrum rollup tutorial smart contract l1 l2 messafe
+    content: arbitrum rollup tutorial smart contract l1 l2 message
 ---
 
 # Introduction
