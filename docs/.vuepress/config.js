@@ -400,7 +400,7 @@ module.exports = {
                        collapsable: true,
                        children: [
                            '/tutorials/optimism/',
-                           '/tutorials/optimism/',
+                           '/tutorials/optimism/bridge-ether-from-ethereum-l1-to-optimism-l2-using-the-optimism-javascript-sdk',
                        ]
                    },
                     {
