@@ -10,4 +10,4 @@ meta:
 
 This section guides you through developing applications on Optimism from scratch.
 
-Learn how to [bridge ether from Ethereum L1 to Optimism L2 using the Optimism JavaScript SDK](/tutorials/filecoin/bridge-eth-from-ethereum-l1-to-optimism-l2-using-the-optimism-javascript-sdk).
+Learn how to [bridge ether from Ethereum L1 to Optimism L2 using the Optimism JavaScript SDK](/tutorials/optimism/bridge-ether-from-ethereum-l1-to-optimism-l2-using-the-optimism-javascript-sdk).

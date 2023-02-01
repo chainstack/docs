@@ -8,28 +8,28 @@ meta:
 
 # Bridge ether from Ethereum L1 to Optimism L2 using the Optimism JavaScript SDK
 
-This tutorial will show you how to use the [Optimism JavaScript SDK](https://sdk.optimism.io/) to bridge ether from L1 to L2. 
+This tutorial will show you how to use the [Optimism JavaScript SDK](https://sdk.optimism.io/) to bridge ether from L1 to L2.
 
 ## Optimism
 
-Optimism is a next-generation solution that enhances the Ethereum blockchain by providing a supplementary layer 2 network. Optimism streamlines the transaction process on Ethereum, resulting in significantly lower fees and fast execution. The beauty of Optimism lies in its seamless integration with Ethereum - each transaction takes place on the Optimism network, yet its validity is confirmed via the Ethereum blockchain.
+Optimism is a next-generation solution that enhances the Ethereum blockchain by providing a supplementary layer 2 network. Optimism streamlines the transaction process on Ethereum, resulting in significantly lower fees and fast execution. The beauty of Optimism lies in its seamless integration with Ethereum—each transaction takes place on the Optimism network, yet its validity is confirmed via the Ethereum blockchain.
 
 ## Optimism's inner working
 
-Optimism leverages the breakthrough technology of Optimistic Rollups, a sophisticated compression technique developed by the team at the Optimism Foundation. Rollups are a new way to scale the Ethereum blockchain and come in Optimistic Rollups and Zero-Knowledge Rollups (ZK Rollups).
+Optimism leverages the breakthrough technology of optimistic rollups, a sophisticated compression technique developed by the team at the Optimism Foundation. Rollups are a new way to scale the Ethereum blockchain and come in optimistic rollups and zero-knowledge rollups (ZK rollups).
 
-Optimistic Rollups streamline the transaction process by taking the bulk of data off-chain, resulting in faster processing times. Despite this off-chain approach, a small amount of data is still recorded on the Ethereum network for security purposes.
+Optimistic rollups streamline the transaction process by taking the bulk of data off-chain, resulting in faster processing times. Despite this off-chain approach, a small amount of data is still recorded on the Ethereum network for security purposes.
 
-What sets Optimistic Rollups apart from other scaling solutions is that they do not require cryptographic proofs to validate off-chain transactions. Instead, they rely on a system of fraud proofs and utilize the Optimistic Virtual Machine (OVM) - a sandboxed environment - to ensure secure and deterministic smart contract execution.
+What sets optimistic rollups apart from other scaling solutions is that they do not require cryptographic proofs to validate off-chain transactions. Instead, they rely on a system of fraud proofs and utilize the Optimistic Virtual Machine (OVM)—a sandboxed environment—to ensure secure and deterministic smart contract execution.
 
 The OVM acts as the interface between Layers 1 and 2, much like the Ethereum Virtual Machine (EVM). However, the OVM only executes computation, while the EVM handles all execution. The OVM and EVM work together through the Execution Manager to execute transactions in a virtualized environment.
 
-Learn more about the Optimism nework reading [Optimism blockchain – Ethereum Layer 2 scaling solution](https://chainstack.com/an-overview-of-optimism-and-communication-between-l2-and-l1/) on the Chainstack blog.
+Learn more about the Optimism network in [Optimism blockchain – Ethereum Layer 2 scaling solution](https://chainstack.com/an-overview-of-optimism-and-communication-between-l2-and-l1/) on the Chainstack blog.
 
 ## Prerequisites
 
 * [Chainstack account](https://console.chainstack.com/) to deploy nodes on the Ethereum Goerli testnet and Optimism Goerli testnet.
-* Node.js ^16.17.0— [Install Node.js](https://nodejs.org/en/download/).
+* Node.js ^16.17.0 — [install Node.js](https://nodejs.org/en/download/).
 
 ### Dependencies
 
@@ -41,49 +41,43 @@ Learn more about the Optimism nework reading [Optimism blockchain – Ethereum L
 
 To get from zero to a functioning bridge between Ethereum L1 and Optimism L2, do the following:
 
-1. With Chainstack, create a [public chain project](https://docs.chainstack.com/glossary/public-chain-project).
-1. With Chainstack, [join the Ethereum Goerli testnet and Optimism Goerli testnet](https://docs.chainstack.com/platform/join-a-public-network).
-1. With Chainstack, access your [nodes' credentials](https://docs.chainstack.com/platform/view-node-access-and-credentials).
+1. With Chainstack, create a public chain project.
+1. With Chainstack, join the Ethereum Goerli testnet and Optimism Goerli testnet.
+1. With Chainstack, access your nodes' credentials.
 1. Create an `npm` project.
 1. Install the required dependencies.
-1. Create a `.env` file to store the secret keys.
-1. Use the ethers library to create provider and wallet instances.
-1. Use the Optimism JavaScript SDK to bridge ether between L1 and L2.
+1. Create a `.env` file to store the secrets.
+1. With the Ethers library, create provider and wallet instances.
+1. With Optimism JavaScript SDK, bridge ether between L1 and L2.
 1. Run the script.
 
 ## Step-by-step
 
 ### Create a public chain project
 
-See [Create a project](https://docs.chainstack.com/platform/create-a-project).
+See [Create a project](/platform/create-a-project).
 
 ### Join the Ethereum Goerli testnet and Optimism Goerli testnet
 
-See [Join a public network](https://docs.chainstack.com/platform/join-a-public-network).
+See [Join a public network](/platform/join-a-public-network).
 
-### Get your Ethereum Goerli testnet and Optimism Goerli testnet nodes access and credentials
+### Get endpoints for your Ethereum Goerli testnet and Optimism Goerli testnet
 
-See [View node access and credentials](https://docs.chainstack.com/platform/view-node-access-and-credentials).
+See [View node access and credentials](/platform/view-node-access-and-credentials).
 
 ### Create an npm project
 
-Open the terminal in your project's root directory and run:
-
-```sh
-npm init
-```
-
-Answer the questions, and this command will create a `package.json` file for your project.
+In your project directory, open the terminal and run `npm init`. Answer the questions in the terminal to create a sample `package.json` file for your project.
 
 ### Install the required dependencies
 
-Run the following command to install the libraries and tools required for this bridge project:
+To install the libraries and tools required for this bridge project, run:
 
 ```sh
 npm i @eth-optimism/sdk ethers dotenv
 ```
 
-### Create a `.env` file to store the secret keys
+### Create a `.env` file to store the secrets
 
 Create a `.env` file in the root directory of your project and paste and fill the following:
 
@@ -93,11 +87,11 @@ GOERLI_CHAINSTACK="YOUR_CHAINSTACK_GOERLI_ENDPOINT"
 OPTIMISM_GOERLI_CHAINSTACK="YOUR_CHAINSTACK_OPTIMISM_GOERLI_ENDPOINT"
 ```
 
-### Use the ethers library to create provider and wallet instances
+### Use the Ethers library to create provider and wallet instances
 
 Create an `index.js` file in your project's root directory.
 
-The first step is to import the required packages and create the global variables, so at the top of the file, paste the following:
+The first step is to import the required packages and create the global variables. To do that, at the top of the file, paste the following:
 
 ```js
 const ethers = require("ethers")
@@ -128,18 +122,18 @@ This part of the code does the following:
 * Imports libraries and tools.
 * Declares the required constants using the environment variables.
 * Creates provider instances for L1 (Ethereum Goerli testnet) and L2 (Optimism Goerli testnet).
-* Creates wallet instances; the `getSigners()` function uses the private key to create wallet instances with the ethers library; they will be used to query balances and sign transactions.
+* Creates wallet instances. The `getSigners()` function uses the private key to create wallet instances with the Ethers library. These instances will be used to query balances and sign transactions.
 
 ### Use the Optimism JavaScript SDK to bridge ether between L1 and L2
 
-Create a function to retrieve the networks' Chain IDs, and create a `CrossChainMessenger` instance using the Optimism JavaScript SDK:
+Create a function to retrieve the networks' chain IDs and a `CrossChainMessenger` instance using the Optimism JavaScript SDK:
 
 ```js
 // Get Chain IDs using ethers
 async function chainIds() {
   const l1Network= await l1Provider.getNetwork();
   const l2Network = await l2Provider.getNetwork();
-  
+
   const l1ChainId = l1Network.chainId
   const l2ChainId = l2Network.chainId
 
@@ -162,9 +156,9 @@ async function initialize() {
 }  
 ```
 
-The `chainIds()` function uses the ethers library to query the Chainstack endpoints and retrieve the Chain IDs that will then be used to create the `crossChainMessenger` instance.
+The `chainIds()` function uses the Ethers library to query the Chainstack endpoints and retrieve the chain IDs that will then be used to create the `crossChainMessenger` instance.
 
-The `initialize()` function uses the `getSigners()` and `chainIds()` functions to retrieve the parameters necessary to create the `crossChainMessenger` using the Optimism JavaScript SDK. The [crossChainMessenger](https://sdk.optimism.io/classes/crosschainmessenger) instance allows us to interact with the L1 and L2 networks.
+The `initialize()` function uses the `getSigners()` and `chainIds()` functions to retrieve the parameters required to create the `crossChainMessenger` using the Optimism JavaScript SDK. The [crossChainMessenger](https://sdk.optimism.io/classes/crosschainmessenger) instance allows us to interact with the L1 and L2 networks.
 
 #### Function to retrieve the wallets balances
 
@@ -182,7 +176,11 @@ async function showBalances() {
 }  
 ```
 
-> Note that the `console.log` statements with the `-` are there only to make the response in the console more legible.
+::: tip Information
+
+Note that the `console.log` statements with the `-` are there only to make the response in the console more legible.
+
+:::
 
 #### Function to transfer ether between L1 and L2
 
@@ -220,20 +218,24 @@ async function bridgeEth() {
 
 Note that the `const wei` holds the amount that will be transferred, expressed in the Wei unit.
 
-The default for this script is set to 0.1 ether, equivalent to 100000000000000000 Wei. You can use a [Wei converter](https://eth-converter.com/) to include other amounts, or you can use the following:
+The default for this script is set to 0.1 ether, equivalent to 100,000,000,000,000,000 Wei. You can use a [Wei converter](https://eth-converter.com/) to include other amounts, or you can use the following:
 
-* 1 ether = 1000000000000000000 Wei
-* 0.1 ether = 100000000000000000 Wei
-* 0.01 ether = 10000000000000000 Wei
-* 0.001 ether = 1000000000000000 Wei
+* 1 ether = 1,000,000,000,000,000,000 Wei
+* 0.1 ether = 100,000,000,000,000,000 Wei
+* 0.01 ether = 10,000,000,000,000,000 Wei
+* 0.001 ether = 1,000,000,000,000,000 Wei
 
-The `bridgeEth()` function transfers the amount of ethers specified in the `wei` constant from the Ethereum L1 to the Optimism L2. it uses the [depositEth](https://sdk.optimism.io/classes/crosschainmessenger#depositETH-2) method of the `crossChainMessenger` instance.
+The `bridgeEth()` function transfers the amount of ethers specified in the `wei` constant from Ethereum (L1) to Optimism (L2). It uses the [depositEth](https://sdk.optimism.io/classes/crosschainmessenger#depositETH-2) method of the `crossChainMessenger` instance.
 
-It then waits for the `MessageStatus` to become `RELAYED`. The RELAYED status indicates that a message has been successfully transmitted from one network to another and is in process on the recipient network. 
+It then waits for the `MessageStatus` to become `RELAYED`. The `RELAYED` status indicates that a message has been successfully transmitted from one network to another and is under processing on the recipient network.
 
-> Find the different options of message status in the [Optimism JavaScript SDK docs](https://sdk.optimism.io/enums/messagestatus).
+::: tip Information
 
-After that, it gives some updates and retrieves the balances again.
+Find the different message statuses in the [Optimism JavaScript SDK docs](https://sdk.optimism.io/enums/messagestatus).
+
+:::
+
+After that, the `bridgeEth()` function gives some updates and retrieves the balances again.
 
 At the bottom of the file, add the `main` function and call it:
 
@@ -250,7 +252,7 @@ main().then(() => process.exit(0))
         console.error(error)
         process.exit(1)
     })
-``` 
+```
 
 At this point, the entire code will look like this:
 
@@ -357,7 +359,7 @@ main().then(() => process.exit(0))
 
 ### Run the script
 
-Now it's time to run the script and bridge some ethers from L1 to L2. To do this, you will need some Goerli ETH in your wallet; you can use the following faucet to get some:
+Now it's time to run the script and bridge some ether from L1 to L2. To do this, you will need some Goerli ETH in your wallet. To get some testnet ETH, you can use the following faucet:
 
 * [Paradigm's MultiFaucet](https://faucet.paradigm.xyz/)
 
@@ -369,7 +371,7 @@ To start the script, run the following command:
 node index
 ```
 
-The console will log all of the steps and it will looks similar to the following:
+The console will log all of the steps and it will look similar to the following:
 
 ```sh
 Fetching current balances...
@@ -389,7 +391,7 @@ Balance on L2: 1.0314 ETH
 ----------------------------------
 ```
 
-As you can see, it prints the transaction hash and the link to see the transaction details using Goerli Etherscan. 
+As you can see, it prints the transaction hash and the link to check the transaction details using Goerli Etherscan.
 
 See the details of one of the already [completed transactions on Etherscan](https://goerli.etherscan.io/tx/0x97455a64eb1c496f4ecc937ffcf2d9294228d9658504a16ab9dbfa638d32693a).
 
