@@ -13,7 +13,7 @@ You can manage two major options of your organization billing:
 *	Your subscription plan
 *	Your support level
 
-Chainstack offers four types of subscription plans which differ depending on your Web3 objectives. The final price of each subscription plan is made up of a base charge for the features included and the number of API requests made to your deployed nodes.
+Chainstack offers four types of subscription plans which differ depending on your web3 objectives. The final price of each subscription plan is made up of a base charge for the features included and the number of API requests made to your deployed nodes.
 
 <a href="https://chainstack.com/pricing/" target="_blank">Each subscription plan also has a default support level</a> included into it. You can change your subscription plan any time, while the support level can be changed only for paid subscriptions. Switching between subscription plans and support levels occurs independently from each other.
 
@@ -30,7 +30,7 @@ Currently, Chainstack support levels are distributed between subscription plans 
 
 To change your subscription plan:
 
-1.	Navigate to your account **Settings** > **Billing**.
+1.	In the left navigation bar, click **Billing**.
 2.	Next to **Plan**, click **Change**.
 3.	Select a new subscription plan and click **Next**.
 4.	Check the details of your new subscription plan and click **Confirm**.
@@ -41,7 +41,7 @@ Your subscription plan changes immediately. Funds for the unused period of your 
 
 To change your support level:
 
-1.	Navigate to your account **Settings** > **Billing**.
+1.	In the left navigation bar, click **Billing**.
 2.	Next to **Support level**, click **Change**.
 3.	Select a new support level and click **Next**.
 4.	Check the details of your new support level and click **Confirm**.
