@@ -19,6 +19,12 @@ This page is a collection of JSON-RPC API call examples for the Ethereum API usi
 
 For a detailed description of all the available Ethereum API JSON-RPC methods, see [Ethereum JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/).
 
+::: tip Information
+
+  The management API namespaces `admin_` and `personal_` are not exposed.
+
+:::
+
 ## What is the Ethereum protocol API?
 
 The Ethereum API allows developers to communicate with the Ethereum blockchain to build applications.

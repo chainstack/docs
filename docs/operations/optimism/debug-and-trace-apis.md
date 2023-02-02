@@ -1,20 +1,20 @@
 ---
 meta:
   - name: description
-    content: Learn what the debug and trace APIs are and how to trace transactions on Arbitrum.
+    content: Learn what the debug and trace APIs are and how to trace transactions on Optimism.
   - name: keywords
-    content: arbitrum one debug trace namespace transaction api geth nitro
+    content: optimism debug trace namespace transaction api geth
 ---
 
 # Debug and trace APIs
 
-A dedicated Arbitrum full or archive node has the `debug_*` API methods enabled. For the full list of the available debug and trace API methods, see [Debug namespace](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug).
+A dedicated Optimism full or archive node has the `debug_*` API methods enabled. For the full list of the available debug and trace API methods, see [Debug namespace](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug).
 
 ## Usage examples
 
 You can debug and trace transactions by replaying them in the Ethereum Virtual Machine to get the execution details in the exact same way as they happened on the chain.
 
-Note that to debug and trace transactions, you need to have historical states on the node. Arbitrum full nodes keep historical states for the immediately previous 128 blocks. Arbitrum archive nodes keep historical states for the entire chain.
+Note that to debug and trace transactions, you need to have historical states on the node. Optimism full nodes keep historical states for the immediately previous 128 blocks. Optimism archive nodes keep historical states for the entire chain.
 
 ### debug_traceBlockByNumber
 
@@ -41,7 +41,7 @@ curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlo
 
 * [EVM opcodes](https://ethereum.org/en/developers/docs/evm/opcodes)
 * [Geth: debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug)
-* [Modes](/operations/arbitrum/modes)
+* [Modes](/operations/optimism/modes)
 * <a href="https://support.chainstack.com/hc/en-us/articles/900003400806-Tracing-EVM-transactions" target="_blank">Tracing EVM transactions</a>
 * <a href="https://chainstack.com/evm-nodes-a-dive-into-the-full-vs-archive-mode/" target="_blank">EVM nodes: A dive into the full vs. archive mode </a>
 

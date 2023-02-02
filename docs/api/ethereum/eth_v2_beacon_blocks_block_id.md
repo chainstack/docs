@@ -38,5 +38,5 @@ Ethereum consensus layer Beacon Chain API call that returns block details for th
 **Example:**
 
 ``` sh
-curl -X GET https://beacon-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/eth/v1/beacon/blocks/head
+curl -X GET https://beacon-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d/eth/v2/beacon/blocks/head
 ```

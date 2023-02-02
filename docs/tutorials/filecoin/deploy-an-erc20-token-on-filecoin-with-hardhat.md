@@ -129,7 +129,7 @@ In the contracts directory, create your ERC-20 contract: `CoinFile.sol`.
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^ 0.8 .4;
+pragma solidity 0.8.17;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -196,19 +196,17 @@ require("dotenv").config({ path: ".env" });
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const CHAINSTACK_FILECOIN_RPC = process.env.CHAINSTACK_FILECOIN_RPC
 
-    *
-    /*** @type *import('hardhat/config').HardhatUserConfig */
-    **
+/** @type import('hardhat/config').HardhatUserConfig */
 
-    module * .*exports * = {
-        solidity: "0.8.17",
-        networks: {
-            filecoin: {
-                url: CHAINSTACK_FILECOIN_RPC,
-                accounts: [PRIVATE_KEY],
-            },
-        }
-    }
+module.exports = {
+  solidity: "0.8.17",
+  networks: {
+      filecoin: {
+          url: CHAINSTACK_FILECOIN_RPC,
+          accounts: [PRIVATE_KEY],
+
+      },
+    }}
 ```
 
 This will securely use the data from the `.env` file and create a path for the `filecoin` network that we can use to deploy the smart contract.

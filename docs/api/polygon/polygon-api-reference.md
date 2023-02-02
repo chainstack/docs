@@ -17,6 +17,12 @@ This page is a collection of JSON-RPC API call examples for the Polygon API usin
 - [eth.rb](https://github.com/q9f/eth.rb/)
 - [cURL](https://curl.se/)
 
+::: tip Information
+
+  The management API namespaces `admin_` and `personal_` are not exposed.
+
+:::
+
 ## What is Polygon protocol?
 
 [Polygon](https://docs.polygon.technology/docs/develop/getting-started) is an EVM-compatible sidechain, and one of Ethereum's [scaling solutions](https://chainstack.com/solving-the-blockchain-trilemma-scaling-solutions-for-ethereum/) to help reduce costs and increase efficiency.

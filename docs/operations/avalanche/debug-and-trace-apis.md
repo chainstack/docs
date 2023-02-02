@@ -8,9 +8,9 @@ meta:
 
 # Debug and trace APIs
 
-You can deploy an [elastic](/glossary/elastic-node) Avalanche archive node with debug and trace APIs enabled as an AvalancheGo client, which is the Go language implementation of an Avalanche node. Avalanche offers an identical API interface to [Geth's API](https://geth.ethereum.org/docs/rpc/server), but with a limited set of services that include `debug_trace*`. 
+You can deploy an [elastic](/glossary/elastic-node) Avalanche archive node with debug and trace APIs enabled as an AvalancheGo client, which is the Go language implementation of an Avalanche node. Avalanche offers an identical API interface to [Geth's API](https://geth.ethereum.org/docs/rpc/server), but with a limited set of services that include `debug_trace*`.
 
-For a full list of the Geth debug API methods, see the [Debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug) section of the Geth documentation.
+For a full list of the Geth debug API methods, see the [Debug namespace](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug) section of the Geth documentation.
 
 
 You can deploy [dedicated](/glossary/dedicated-node) Avalanche nodes starting from the <a href="https://chainstack.com/pricing/" target="_blank">Business plan</a>.
@@ -24,7 +24,7 @@ Note that to debug and trace transactions, you need to have historical states on
 
 ### debug_traceBlockByNumber
 
-Trace all transactions included in a block with [debug_traceBlockByNumber](https://geth.ethereum.org/docs/rpc/ns-debug#debug_traceblockbynumber):
+Trace all transactions included in a block with `debug_traceBlockByNumber`:
 
 ``` sh
 curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER", {"tracer": "callTracer"}]}' ENDPOINT

@@ -8,7 +8,7 @@ meta:
 
 # Debug and trace APIs
 
-A dedicated Fantom node has the `debug_*` API methods enabled. For the full list of the available debug and trace API methods, see [Debug namespace](https://geth.ethereum.org/docs/rpc/ns-debug).
+A dedicated Fantom node has the `debug_*` API methods enabled. For the full list of the available debug and trace API methods, see [Debug namespace](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug).
 
 ## Usage examples
 
@@ -16,7 +16,7 @@ You can debug and trace transactions on Fantom by replaying them in the Ethereum
 
 ### debug_traceBlockByNumber
 
-Trace all transactions included in a block with [debug_traceBlockByNumber](https://geth.ethereum.org/docs/rpc/ns-debug#debug_traceblockbynumber):
+Trace all transactions included in a block with `debug_traceBlockByNumber`:
 
 ``` sh
 curl -H "Content-Type: application/json" -d '{"id": 1, "method": "debug_traceBlockByNumber", "params": ["BLOCK_NUMBER", {"tracer": "callTracer"}]}' ENDPOINT

@@ -3,7 +3,7 @@ meta:
   - name: description
     content: Collection of methods for the Gnosis Beacon Chain API available with examples in cURL.
   - name: keywords
-    content: json rpc methods curl api web3 gnosis beacon lighthouse 
+    content: json rpc methods curl api web3 gnosis beacon lighthouse
 ---
 
 # Gnosis Chain API reference guide
@@ -15,6 +15,12 @@ This page is a collection of Gnosis Chain call examples for the Gnosis Beacon Ch
 * [cURL](https://curl.se/)
 
 For a detailed description of all the available Beacon Chain API specifications, see [Ethereum Beacon Chain API](https://ethereum.github.io/beacon-APIs/).
+
+::: tip Information
+
+  The management API namespaces `admin_` and `personal_` are not exposed.
+
+:::
 
 ## What is the Gnosis Beacon Chain API
 
