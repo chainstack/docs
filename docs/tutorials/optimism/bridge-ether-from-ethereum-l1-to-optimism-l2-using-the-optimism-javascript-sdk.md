@@ -35,7 +35,7 @@ Learn more about the Optimism network in [Optimism blockchain – Ethereum Layer
 
 * @eth-optimism/sdk: ^1.10.1
 * dotenv: ^16.0.3
-* ethers: ^5.7.2
+* Ethers: ^5.7.2
 
 ## Overview
 
@@ -81,7 +81,7 @@ npm i @eth-optimism/sdk ethers dotenv
 
 Create a `.env` file in the root directory of your project and paste and fill the following:
 
-```env
+```sh
 PRIVATE_KEY="YOUR_WALLET_PRIVATE_KEY"
 GOERLI_CHAINSTACK="YOUR_CHAINSTACK_GOERLI_ENDPOINT"
 OPTIMISM_GOERLI_CHAINSTACK="YOUR_CHAINSTACK_OPTIMISM_GOERLI_ENDPOINT"

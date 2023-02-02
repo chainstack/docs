@@ -16,8 +16,8 @@ meta:
 
 * **Protocols**. [Optimism](/operations/optimism/networks) Goerli testnet support for elastic and dedicated nodes.
 * **Documentation**.
-  * [Optimism](/operations/optimism).
-  * [Optimism tutorial](/tutorials/optimism).
+   * [Optimism](/operations/optimism).
+   * [Optimism tutorial](/tutorials/optimism).
 
 ## Chainstack 3.10.1
 
