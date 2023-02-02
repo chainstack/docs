@@ -37,7 +37,6 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Optim
 
 1. In the **Chain ID** field, enter the ID of the network:
 
-    * Mainnet: `10`
     * Optimism Goerli: `420`
 
 1. Click **Save**.
@@ -434,12 +433,11 @@ where
 * USERNAME — your node access username.
 * PASSWORD — your node access password.
 * NETWORK_ID — Optimism network ID:
-   * Mainnet: `10`
    * Optimism Goerli: `420`
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
-Example to get the latest block number on mainnet:
+Example to get the latest block number on testnet:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
@@ -450,7 +448,7 @@ const { ethers } = require("ethers");
 var urlInfo = {
     url: 'https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 1);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 420);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -466,7 +464,7 @@ var urlInfo = {
     user: 'user-name',
     password: 'pass-word-pass-word-pass-word'
 };
-var provider = new ethers.providers.JsonRpcProvider(urlInfo, 1);
+var provider = new ethers.providers.JsonRpcProvider(urlInfo, 420);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -488,12 +486,11 @@ where
 
 * ENDPOINT — your node WSS endpoint.
 * NETWORK_ID — Optimism network ID:
-  * Mainnet: `10`
   * Optimism Goerli: `420`
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
-Example to get the latest block number on mainnet:
+Example to get the latest block number on testnet:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
@@ -501,7 +498,7 @@ Example to get the latest block number on mainnet:
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d', 1);
+const provider = new ethers.providers.WebSocketProvider('wss://ws-nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d', 420);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -512,7 +509,7 @@ provider.getBlockNumber().then(console.log);
 ``` js
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 1);
+const provider = new ethers.providers.WebSocketProvider('wss://user-name:pass-word-pass-word-pass-word@ws-nd-123-456-789.p2pify.com', 420);
 
 provider.getBlockNumber().then(console.log);
 ```
@@ -531,27 +528,26 @@ brownie networks add Optimism ID name="NETWORK_NAME" host=ENDPOINT chainid=NETWO
 
 where
 
-* ID — any name that you will use as the network tag to run a deployment. For example, `optimism-mainnet`.
-* NETWORK_NAME — any name that you want to identify the network by in the list of networks. For example, **Mainnet (Chainstack)**.
+* ID — any name that you will use as the network tag to run a deployment. For example, `optimism-testnet`.
+* NETWORK_NAME — any name that you want to identify the network by in the list of networks. For example, **Testnet (Chainstack)**.
 * ENDPOINT — your node HTTPS or WSS endpoint.
 * NETWORK_ID — Optimism network ID:
-   * Mainnet: `10`
    * Optimism Goerli: `420`
 
-Example to add an Optimism mainnet node to the list of Brownie networks:
+Example to add an Optimism testnet node to the list of Brownie networks:
 
 <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
 <template v-slot:kp>
 
 ``` sh
-brownie networks add Optimism chainstack-mainnet name="Mainnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=1
+brownie networks add Optimism chainstack-testnet name="Testnet (Chainstack)" host=https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d chainid=420
 ```
 
 </template>
 <template v-slot:pp>
 
 ``` sh
-brownie networks add Optimism chainstack-mainnet name="Mainnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=1
+brownie networks add Optimism chainstack-testnet name="Testnet (Chainstack)" host=https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com chainid=420
 ```
 
 </template>
@@ -560,7 +556,7 @@ brownie networks add Optimism chainstack-mainnet name="Mainnet (Chainstack)" hos
 Example to run the deployment script:
 
 ``` sh
-brownie run deploy.py --network chainstack-mainnet
+brownie run deploy.py --network chainstack-testnet
 ```
 
 ## Foundry
