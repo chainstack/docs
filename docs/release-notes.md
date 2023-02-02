@@ -8,6 +8,17 @@ meta:
 
 # Release notes
 
+## Chainstack 3.10.1
+
+*January 30, 2023*
+
+### What’s new
+
+* **Billing**. The refined billing page now shows:
+   * An overview of your subscription plan and support level
+   * A detailed **Usage** table
+   * A list of crypto payments and downloadable invoices
+
 ## Chainstack 3.10
 
 *January 19, 2023*
