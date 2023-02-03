@@ -8,6 +8,14 @@ meta:
 
 # Release notes
 
+## Chainstack 3.11.1
+
+*February 3, 2023*
+
+### What’s new
+
+* **Tools**. You can now add the node endpoint with the **Add to MetaMask** button on the [node access page](https://docs.chainstack.com/platform/view-node-access-and-credentials).
+
 ## Chainstack 3.11
 
 *February 2, 2023*
