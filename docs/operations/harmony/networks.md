@@ -11,9 +11,9 @@ meta:
 Chainstack supports joining the following Harmony networks:
 
 * Mainnet — public Harmony mainnet.
-* Devnet — public Harmony devnet.
+* Testnet — public Harmony devnet.
 
-For development purposes on the devnet, fund your accounts with [devnet Harmony tokens](http://dev.faucet.easynode.one/).
+For development purposes on the testnet, fund your accounts with [testnet Harmony tokens](https://faucet.pops.one/).
 
 ::: tip See also
 

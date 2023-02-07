@@ -58,7 +58,7 @@ Public network:
 	* Testnet
 * [Harmony](/blockchains/harmony)
 	* Mainnet
-	* Devnet
+	* Testnet
 * [Tezos](/blockchains/tezos)
 	* Mainnet. [Full and archive nodes](/operations/tezos/modes).
 	* Jakartanet testnet.
