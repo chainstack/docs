@@ -40,7 +40,7 @@ You can set your [MetaMask](https://metamask.io/) to interact through your Gnosi
 1. In the **Chain ID** field, enter the ID of the network:
 
     * Mainnet: `100`
-    * Sokol testnet: `77`
+    * Chiado testnet: `10200`
 
 1. Click **Save**.
 
@@ -497,7 +497,7 @@ where
 * PASSWORD — your node access password.
 * NETWORK_ID — Gnosis Chain network ID:
   * Mainnet: `100`
-  * Sokol testnet: `77`
+  * Chiado testnet: `10200`
 
 Example to get the latest block number on mainnet:
 
@@ -549,7 +549,7 @@ where
 * ENDPOINT — your node WSS endpoint.
 * NETWORK_ID — Gnosis Chain network ID:
   * Mainnet: `100`
-  * Sokol testnet: `77`
+  * Chiado testnet: `10200`
 
 Example to get the latest block number on mainnet:
 
@@ -594,7 +594,7 @@ where
 * ENDPOINT — your node HTTPS or WSS endpoint.
 * NETWORK_ID — Gnosis Chain network ID:
   * Mainnet: `100`
-  * Sokol testnet: `77`
+  * Chiado testnet: `10200`
 
 Example to add a Gnosis Chain mainnet node to the list of Brownie networks:
 
