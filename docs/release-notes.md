@@ -8,6 +8,24 @@ meta:
 
 # Release notes
 
+## Chainstack 3.11.2
+
+*February 9, 2023*
+
+### What’s new
+
+**Billing**. The refined billing page now shows:
+  * Failed payment notification
+  * Past due invoices awaiting payments
+
+## Chainstack 3.11.1
+
+*February 8, 2023*
+
+### What’s new
+
+* **Protocols**. Gnosis Chain Sokol testnet is now deprecated. For development purposes, use [Gnosis Chain Chiado](/operations/gnosis/networks) testnet.
+
 ## Chainstack 3.11
 
 *February 2, 2023*

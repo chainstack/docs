@@ -11,7 +11,6 @@ meta:
 Chainstack supports joining the following Gnosis Chain networks:
 
 * Mainnet — public Gnosis Chain mainnet.
-* Sokol testnet — public Gnosis Chain testnet.
 * Chiado testnet — a proof-of-stake public Gnosis Chain testnet.
 
 ::: tip See also
