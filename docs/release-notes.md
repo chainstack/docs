@@ -8,10 +8,6 @@ meta:
 
 # Release notes
 
-## Chainstack 3.11.1
-
-*February 3, 2023*
-
 ### What’s new
 
 ## Chainstack 3.11.2
@@ -20,9 +16,9 @@ meta:
 
 ### What’s new
 
-**Billing**. The refined billing page now shows:
-  * Failed payment notification
-  * Past due invoices awaiting payments
+* **Billing**. The refined billing page now shows:
+   * Failed payment notification
+   * Past due invoices awaiting payments
 * **Tools**. You can now add the node endpoint with the **Add to MetaMask** button on the [node access page](/platform/view-node-access-and-credentials).
 
 ## Chainstack 3.11.1
