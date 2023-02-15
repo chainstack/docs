@@ -161,37 +161,7 @@ See also  <a href="https://support.chainstack.com/hc/en-us/articles/440960433116
 
 ### MetaMask
 
-You can set your [MetaMask](https://metamask.io/) to interact through your BNB Smart Chain nodes deployed with Chainstack.
-
-1. Open your MetaMask and click the network selector.
-1. In the network selector, click **Custom RPC**.
-1. In the **New RPC URL** field, enter the endpoint. See [View node access and credentials](/platform/view-node-access-and-credentials).
-
-    Example:
-
-    <CodeSwitcher :languages="{kp:'Key-protected',pp:'Password-protected'}">
-    <template v-slot:kp>
-
-    ```
-    https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d
-    ```
-
-    </template>
-    <template v-slot:pp>
-
-    ```
-    https://user-name:pass-word-pass-word-pass-word@nd-123-456-789.p2pify.com
-    ```
-
-    </template>
-    </CodeSwitcher>
-
-1. In the **Chain ID** field, enter the ID of the network:
-
-    * Mainnet: `56`
-    * Testnet: `97`
-
-1. Click **Save**.
+On the [node access page](/platform/view-node-access-and-credentials), click **Add to MetaMask**.
 
 ## Development tools
 
