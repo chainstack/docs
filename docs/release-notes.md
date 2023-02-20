@@ -10,6 +10,16 @@ meta:
 
 ### What’s new
 
+## Chainstack 3.11.4
+
+*February 20, 2023*
+
+### What’s new
+
+* **Clouds**. You can now deploy your elastic BNB Smart Chain full nodes in the Virtuozzo Amsterdam region.
+
+### What’s new
+
 ## Chainstack 3.11.3
 
 *February 15, 2023*
@@ -17,6 +27,16 @@ meta:
 ### What’s new
 
 * **Tools**. You can now add the node endpoint with the **Add to MetaMask** button on the [node access page](/platform/view-node-access-and-credentials).
+
+## Chainstack 3.11.2
+
+ *February 9, 2023*
+
+### What’s new
+
+* **Billing**. The refined billing page now shows:
+   * Failed payment notification
+   * Past due invoices awaiting payments
 
 ## Chainstack 3.11.1
 
