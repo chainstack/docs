@@ -16,7 +16,7 @@ meta:
 
 ### What’s new
 
-* **Clouds**. You can now deploy your elastic BNB Smart Chain full nodes and networks in the Virtuozzo Amsterdam region.
+* **Clouds**. You can now deploy your elastic BNB Smart Chain full nodes in the Virtuozzo Amsterdam region.
 
 ### What’s new
 
