@@ -1,10 +1,11 @@
----
+---#dedicated-node.md
 meta:
   - name: description
     content: A dedicated node is a node deployed exclusively for a Chainstack managed blockchain services user.
   - name: keywords
     content: dedicated node deploy exclusive production ethereum bitcoin
----
+---@Christoc90
+
 
 # Dedicated node
 
