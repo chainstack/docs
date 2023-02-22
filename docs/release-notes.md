@@ -8,7 +8,13 @@ meta:
 
 # Release notes
 
-### What’s new
+## Chainstack 3.11.5
+
+*February 21, 2023*
+
+### What's new
+
+* **Protocols**. Harmony migrated from devnet to [testnet](/operations/harmony/networks) for better experience.
 
 ## Chainstack 3.11.4
 
@@ -17,8 +23,6 @@ meta:
 ### What’s new
 
 * **Clouds**. You can now deploy your elastic BNB Smart Chain full nodes in the Virtuozzo Amsterdam region.
-
-### What’s new
 
 ## Chainstack 3.11.3
 

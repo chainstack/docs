@@ -18,8 +18,8 @@ In this tutorial, you will:
 
 * Create a simple contract called Polyland. The Polyland contract represents a plot of land.
 * Program Polyland to consist of patches of land.
-* Deploy Polyland on the Harmony devnet through a node deployed with Chainstack.
-* Distribute patches of Polyland to different accounts on the Harmony devnet.
+* Deploy Polyland on the Harmony testnet through a node deployed with Chainstack.
+* Distribute patches of Polyland to different accounts on the Harmony testnet.
 
 ## Prerequisites
 
@@ -28,10 +28,10 @@ In this tutorial, you will:
 
 ## Overview
 
-To get from zero to a deployed metaverse contract and patches of land distributed on the Harmony devnet, do the following:
+To get from zero to a deployed metaverse contract and patches of land distributed on the Harmony testnet, do the following:
 
 1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
-1. With Chainstack, join the Harmony devnet.
+1. With Chainstack, join the Harmony testnet.
 1. With Chainstack, access your Harmony node credentials.
 1. With OpenZeppelin, create an HRC-721 contract.
 1. With Foundry, flatten, compile, and deploy the contract through your Harmony node.
@@ -44,7 +44,7 @@ To get from zero to a deployed metaverse contract and patches of land distribute
 
 See [Create a project](/platform/create-a-project).
 
-### Join the Harmony devnet
+### Join the Harmony testnet
 
 See [Join a public network](/platform/join-a-public-network).
 
@@ -155,7 +155,7 @@ In the project directory, create a `remappings.txt` file with the following cont
 
 4. Flatten the contract
 
-Flatten the contract to make it easier to verify on the [Harmony devnet explorer](https://explorer.ps.hmny.io/).
+Flatten the contract to make it easier to verify on the [Harmony testnet explorer](https://explorer.ps.hmny.io/).
 
 Run:
 
@@ -173,7 +173,7 @@ where
 
 * CONTRACT_NAME — the name of the contract as provided in the contract code `contract Polyland is ERC721, Ownable`.
 * CONTRACT_PATH — full path to the flattened contract.
-* PRIVATE_KEY — the private key to the account that deploys the contract. Must be used without the `0x` prefix. Fund the account with devnet ONE using the [devnet faucet](http://dev.faucet.easynode.one/).
+* PRIVATE_KEY — the private key to the account that deploys the contract. Must be used without the `0x` prefix. Fund the account with testnet ONE using the [testnet faucet](https://faucet.pops.one/).
 * HTTPS_ENDPOINT — your Harmony node HTTPS endpoint. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/harmony/tools).
 * `--legacy` — the Foundry flag to work with the EVM-based networks that are not [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) activated.
 
@@ -187,11 +187,11 @@ Once the contract deploys, note the `solc` and the `Deployed to` values in the o
 
 ### Verify the contract
 
-1. Open the [Harmony devnet explorer](https://explorer.ps.hmny.io/).
+1. Open the [Harmony testnet explorer](https://explorer.ps.hmny.io/).
 1. Put in the contract address. Click the **Contract** tab.
 1. Click **Verify and Publish**.
 1. In the `Contract Name` field, put `Polyland`.
-1. Set `Chain Type` to `devnet`.
+1. Set `Chain Type` to `testnet`.
 1. In `Compiler`, provide the `solc` version that the contract compiled with.
 1. In `Optimizer`, set `Yes`, `200`. Contract bytecode optimization with 200 runs is the default Foundry setting.
 1. Paste the entirety of the flattened contract in the contract field and hit **Submit**.
@@ -200,7 +200,7 @@ This will verify the contract. You can now use the explorer as a web app to inte
 
 ### Distribute the patches of land
 
-1. On the contract page in the [Harmony devnet explorer](https://explorer.ps.hmny.io/), click **Write Contract**
+1. On the contract page in the [Harmony testnet explorer](https://explorer.ps.hmny.io/), click **Write Contract**
 1. In `mintTriangle`, provide an address to distribute a patch of land to. Distribute the patches to different addresses until you hit the cap with the `All patches minted` message.
 1. On the **Read Contract** tab, query the `ownerOf` field by putting in the `tokenId` values representing each of the patches of land: `1`, `2`, `3`, `4`.
 1. In the `triangles` field, put in the same `tokenId` values to get the data on each of the patches: name and the size of each of the three edges.
@@ -213,7 +213,7 @@ You created your own plot of land, distributed the finite number of land patches
 
 You did all of it [using Foundry](https://chainstack.com/foundry-a-fast-solidity-contract-development-toolkit/).
 
-This tutorial uses devnet, however the exact same instructions and sequence work on the mainnet.
+This tutorial uses testnet, however the exact same instructions and sequence work on the mainnet.
 
 ::: tip See also
 
