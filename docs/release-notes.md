@@ -10,11 +10,12 @@ meta:
 
 ## Chainstack 3.11.5
 
-*February 21, 2023*
+*February 22, 2023*
 
 ### What's new
 
 * **Protocols**. Harmony migrated from devnet to [testnet](/operations/harmony/networks) for better experience.
+* **Billing**. You can now settle your failed payment by manually retrying either via topping up your crypto balance or via paying directly from your credit card.
 
 ## Chainstack 3.11.4
 
