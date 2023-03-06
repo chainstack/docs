@@ -59,7 +59,7 @@ web3.eth.getTransactionCount(sender, (err, transactionCount) => {
 
     // create a new transaction object to sign
     const tx = new Tx(transaction_Object, {
-        chain: "ropsten"
+        chain: "mainnet"
     });
 
     // sign the transaction using the private key  
