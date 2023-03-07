@@ -8,6 +8,14 @@ meta:
 
 # Release notes
 
+## Chainstack 3.11.6
+
+*March 6, 2023*
+
+### What's new
+
+* **Protocols**. Ethereum Rinkeby and Ropsten testnets are now deprecated. For development purposes, use [Sepolia and Goerli](/operations/ethereum/networks) testnets.
+
 ## Chainstack 3.11.5
 
 *February 22, 2023*

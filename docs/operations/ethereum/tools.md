@@ -776,10 +776,8 @@ where
 * PASSWORD — your node access password.
 * NETWORK_ID — Ethereum network ID:
    * Mainnet: `1`
-   * Goerli: `5`
    * Sepolia: `11155111`
-   * Ropsten: `3`
-   * Rinkeby: `4`
+   * Goerli: `5`
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -833,10 +831,8 @@ where
 * ENDPOINT — your node WSS endpoint.
 * NETWORK_ID — Ethereum network ID:
   * Mainnet: `1`
-  * Goerli: `5`
   * Sepolia: `11155111`
-  * Ropsten: `3`
-  * Rinkeby: `4`
+  * Goerli: `5`
 
 See also [View node access and credentials](/platform/view-node-access-and-credentials).
 
@@ -883,10 +879,8 @@ where
 * ENDPOINT — your node HTTPS or WSS endpoint.
 * NETWORK_ID — Ethereum network ID:
    * Mainnet: `1`
-   * Goerli: `5`
    * Sepolia: `11155111`
-   * Ropsten: `3`
-   * Rinkeby: `4`
+   * Goerli: `5`
 
 Example to add an Ethereum mainnet node to the list of Brownie networks:
 
