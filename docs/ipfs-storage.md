@@ -6,10 +6,12 @@ meta:
     content: subgraph graph query graphql indexing data
 ---
 
-# IPFS
+# IPFS Storage
 
 ::: tip Information
-This is a closed beta. If you want to participate, contact *support@chainstack.com*
+
+This is a closed beta. If you want to participate, contact *support@chainstack.com*.
+
 :::
 
 ## Introduction
@@ -22,7 +24,7 @@ Storj is a decentralized cloud object storage network.
 
 While IPFS is focused on the efficient distribution of content through content-addressing, Storj provides out-of-the-box redundant storage of files across the global network. The two technologies compliment each other—by using IPFS to distribute content and Storj for reliable storage, developers benefit from the strengths of both systems, resulting in a robust, decentralized file storage solution.
 
-Each file uploaded to the Chainstack storage implementation is automatically [pinned](https://docs.ipfs.tech/concepts/glossary/#pinning) so that the file is available until you delete it.
+Each file uploaded to the IPFS Storage implementation is automatically [pinned](https://docs.ipfs.tech/concepts/glossary/#pinning) so that the file is available until you delete it.
 
 ## Set up a bucket
 
@@ -32,7 +34,7 @@ A bucket can contain any number of files. You can also create folders within buc
 
 To create a bucket:
 
-1. On the left pane, click **IPFS**.
+1. On the left pane, click **IPFS Storage**.
 1. Click **Create bucket**.
 1. Provide a name. Click **Create**.
 
@@ -44,7 +46,7 @@ Within a bucket, you can optionally create a folder to organize your data.
 
 To create a folder:
 
-1. Click **New folder**.
+1. Click **Create folder**.
 1. Provide a name. Click **Create**.
 
 This will create a folder.
@@ -72,14 +74,14 @@ This will retrieve the file by its CID off the IPFS network and upload it to the
 
 You can retrieve your files through a non-chargeable free public gateway provided by Chainstack or by using the IPFS tooling and your file's CID.
 
-Retrieve through the gateway:
+Retrieve through the public gateway:
 
 1. On the Chainstack platform, navigate to your file.
-1. In the **URL** field, click **Copy** or **Open** to get the link to your file.
+1. In the **Public gateway** field, click **Copy** or **Open** to get the link to your file.
 
 This is a free public link to your file that you can use.
 
-Retrive using the file's CID:
+Retrieve using the file's CID:
 
 1. On the Chainstack platform, navigate to your file.
 1. In the **CID** field, click **Copy**.

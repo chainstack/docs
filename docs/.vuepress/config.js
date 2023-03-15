@@ -799,7 +799,7 @@ module.exports = {
         ],
       },
       '/subgraphs',
-      '/ipfs',
+      '/ipfs-storage',
       '/marketplace',
             {
                 title: 'Blockchains',
