@@ -799,6 +799,7 @@ module.exports = {
         ],
       },
       '/subgraphs',
+      '/ipfs',
       '/marketplace',
             {
                 title: 'Blockchains',
