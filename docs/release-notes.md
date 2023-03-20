@@ -10,12 +10,12 @@ meta:
 
 ## Chainstack 3.12
 
-*March 16, 2023*
+*March 27, 2023*
 
 ### What's new
 
 * **IPFS Storage**. Chainstack launches the closed beta for the decentralized storage solution—IPFS Storage. [Reach out to us](/ipfs-storage) to participate.
-* **Documentation**. [IPFS Storage](/ipfs-storage).
+* **Documentation**. [IPFS Storage](/ipfs-storage) and [IPFS Storage API reference]().
 
 ## Chainstack 3.11.6
 
