@@ -15,7 +15,7 @@ meta:
 ### What's new
 
 * **IPFS Storage**. Chainstack launches the closed beta for the decentralized storage solution—IPFS Storage. [Reach out to us](/ipfs-storage) to participate.
-* **Documentation**. [IPFS Storage](/ipfs-storage) and [IPFS Storage API reference]().
+* **Documentation**. [IPFS Storage](/ipfs-storage) and <a href="https://docs.dev.chainstack.com/api/reference/IPFS-Storage/" target="_blank">IPFS Storage API reference</a>.
 
 ## Chainstack 3.11.6
 
