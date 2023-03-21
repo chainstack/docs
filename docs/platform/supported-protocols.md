@@ -40,6 +40,9 @@ Public network:
 * [Aptos](/blockchains/aptos)
   * Mainnet. [Full and archive nodes](/operations/aptos/modes).
   * Testnet
+* [Oasis Network](/blockchains/oasis)
+  * Sapphire mainnet
+  * Sapphire testnet
 * [Gnosis Chain](/blockchains/gnosis)
 	* Mainnet. [Full and archive nodes](/operations/gnosis/modes).
 	* Chiado testnet

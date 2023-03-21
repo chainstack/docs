@@ -198,6 +198,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Oasis Network',
+                        collapsable: true,
+                        children: [
+                            '/operations/oasis/',
+                            '/operations/oasis/networks',
+                            '/operations/oasis/types',
+                            '/operations/oasis/modes',
+                            '/operations/oasis/tools',
+                        ]
+                    },
+                    {
                         title: 'Gnosis Chain',
                         collapsable: true,
                         children: [
@@ -433,6 +444,14 @@ module.exports = {
                         children: [
                             '/tutorials/aptos/',
                             '/tutorials/aptos/publish-module-to-save-and-retrieve-message-on-aptos',
+                        ]
+                    },
+                    {
+                        title: 'Oasis Network',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/oasis/',
+                            '/tutorials/oasis/',
                         ]
                     },
                     {
@@ -815,6 +834,7 @@ module.exports = {
                     '/blockchains/aurora',
                     '/blockchains/solana',
                     '/blockchains/aptos',
+                    '/blockchains/oasis',
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
                     '/blockchains/filecoin',

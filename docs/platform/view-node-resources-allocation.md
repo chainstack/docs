@@ -65,6 +65,10 @@ Aptos:
 
 * Node — the CPU, memory, and storage allocated to your Aptos node.
 
+Oasis Network:
+
+* Node — the CPU, memory, and storage allocated to your Oasis Network node.
+
 Gnosis Chain:
 
 * Node — the CPU, memory, and storage allocated to your Gnosis Chain node.

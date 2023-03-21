@@ -8,6 +8,17 @@ meta:
 
 # Release notes
 
+## Chainstack 3.12
+
+*March 24, 2023*
+
+### What's new
+
+* **Protocols**. [The Oasis Network](/operations/oasis/networks) support for elastic and dedicated nodes.
+* **Documentation**.
+   * [Oasis Network](/operations/oasis).
+   * [Oasis Network tutorial](/tutorials/oasis).
+
 ## Chainstack 3.11.6
 
 *March 6, 2023*
