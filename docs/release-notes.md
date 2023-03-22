@@ -10,7 +10,7 @@ meta:
 
 ## Chainstack 3.12
 
-*March 27, 2023*
+*March 22, 2023*
 
 ### What's new
 
