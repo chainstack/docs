@@ -10,8 +10,8 @@ meta:
 
 Chainstack supports joining the following Oasis networks:
 
-* Sapphire mainnet — public Oasis Sapphire ParaTime implementation on mainnet.
-* Sapphire testnet — public Oasis Sapphire ParaTime implementation on testnet.
+* Sapphire mainnet — public Oasis Sapphire mainnet.
+* Sapphire testnet — public Oasis Sapphire testnet.
 
 For development purposes on the Sapphire testnet, use [the Oasis Network faucet](https://faucet.testnet.oasis.dev).
 

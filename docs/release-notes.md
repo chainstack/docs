@@ -8,9 +8,9 @@ meta:
 
 # Release notes
 
-## Chainstack 3.12
+## Chainstack 3.13
 
-*March 24, 2023*
+*March 27, 2023*
 
 ### What's new
 
