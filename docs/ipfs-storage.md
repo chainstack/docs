@@ -90,6 +90,6 @@ This will copy the file's CID that you can use to retrieve the file using [IPFS 
 
 ::: tip See also
 
-* <a href="https://docs.dev.chainstack.com/api/reference/IPFS-Storage/" target="_blank">Chainstack IPFS API</a> to programmatically upload and retrieve your files.
+* <a href="https://docs.chainstack.com/api/reference/IPFS-Storage/" target="_blank">Chainstack IPFS API</a> to programmatically upload and retrieve your files.
 
 :::
