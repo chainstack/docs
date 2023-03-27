@@ -142,6 +142,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Polygon zkEVM',
+                        collapsable: true,
+                        children: [
+                            '/operations/polygon-zkevm/',
+                            '/operations/polygon-zkevm/networks',
+                            '/operations/polygon-zkevm/types',
+                            '/operations/polygon-zkevm/modes',
+                            '/operations/polygon-zkevm/tools',
+                        ]
+                    },
+                    {
                         title: 'Optimism',
                         collapsable: true,
                         children: [
@@ -195,6 +206,17 @@ module.exports = {
                             '/operations/aptos/types',
                             '/operations/aptos/modes',
                             '/operations/aptos/tools',
+                        ]
+                    },
+                    {
+                        title: 'Oasis Sapphire',
+                        collapsable: true,
+                        children: [
+                            '/operations/oasis-sapphire/',
+                            '/operations/oasis-sapphire/networks',
+                            '/operations/oasis-sapphire/types',
+                            '/operations/oasis-sapphire/modes',
+                            '/operations/oasis-sapphire/tools',
                         ]
                     },
                     {
@@ -396,6 +418,14 @@ module.exports = {
                         ]
                     },
                     {
+                       title: 'Polygon zkEVM',
+                       collapsable: true,
+                       children: [
+                           '/tutorials/polygon-zkevm/',
+                           '/tutorials/polygon-zkevm/deploy-smart-contract-to-polygon-zkevm-using-hardhat',
+                       ]
+                   },
+                    {
                        title: 'Optimism',
                        collapsable: true,
                        children: [
@@ -433,6 +463,14 @@ module.exports = {
                         children: [
                             '/tutorials/aptos/',
                             '/tutorials/aptos/publish-module-to-save-and-retrieve-message-on-aptos',
+                        ]
+                    },
+                    {
+                        title: 'Oasis Sapphire',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/oasis-sapphire/',
+                            '/tutorials/oasis-sapphire/',
                         ]
                     },
                     {
@@ -811,11 +849,13 @@ module.exports = {
                     '/blockchains/bsc',
                     '/blockchains/avalanche',
                     '/blockchains/arbitrum',
+                    '/blockchains/polygon-zkevm',
                     '/blockchains/optimism',
                     '/blockchains/near',
                     '/blockchains/aurora',
                     '/blockchains/solana',
                     '/blockchains/aptos',
+                    '/blockchains/oasis',
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
                     '/blockchains/filecoin',

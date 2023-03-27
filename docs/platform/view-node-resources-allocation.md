@@ -45,6 +45,10 @@ Arbitrum:
 
 * Node — the CPU, memory, and storage allocated to your Arbitrum node.
 
+Polygon zkEVM:
+
+* Node — the CPU, memory, and storage allocated to your Polygon zkEVM node.
+
 Optimism:
 
 * Node — the CPU, memory, and storage allocated to your Optimism node.
@@ -64,6 +68,10 @@ Solana:
 Aptos:
 
 * Node — the CPU, memory, and storage allocated to your Aptos node.
+
+Oasis Sapphire:
+
+* Node — the CPU, memory, and storage allocated to your Oasis Sapphire node.
 
 Gnosis Chain:
 

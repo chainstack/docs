@@ -8,6 +8,28 @@ meta:
 
 # Release notes
 
+## Chainstack 3.14
+
+*March 29, 2023*
+
+### What's new
+
+* **Protocols**. [The Oasis Sapphire](/operations/oasis-sapphire/networks) support for elastic and dedicated nodes.
+* **Documentation**.
+   * [Oasis Sapphire](/operations/oasis-sapphire).
+   * [Oasis Sapphire tutorial](/tutorials/oasis-sapphire).
+
+## Chainstack 3.13
+
+*March 27, 2023*
+
+### What’s new
+
+* **Protocols**. [Polygon zkEVM](/operations/polygon-zkevm/networks) testnet support for elastic and dedicated nodes.
+* **Documentation**.
+   * [Polygon zkEVM](/operations/polygon-zkevm).
+   * [Polygon zkEVM tutorial](/tutorials/polygon-zkevm).
+
 ## Chainstack 3.12
 
 *March 22, 2023*
@@ -15,7 +37,7 @@ meta:
 ### What's new
 
 * **IPFS Storage**. Chainstack launches the closed beta for the decentralized storage solution—IPFS Storage. [Reach out to us](/ipfs-storage) to participate.
-* **Documentation**. [IPFS Storage](/ipfs-storage) and <a href="https://docs.dev.chainstack.com/api/reference/IPFS-Storage/" target="_blank">IPFS Storage API reference</a>.
+* **Documentation**. [IPFS Storage](/ipfs-storage) and <a href="https://docs.chainstack.com/api/reference/IPFS-Storage/" target="_blank">IPFS Storage API reference</a>.
 
 ## Chainstack 3.11.6
 

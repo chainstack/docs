@@ -80,6 +80,17 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
+## Join a Polygon zkEVM network
+
+1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
+1. Under **Blockchain protocol**, select **Polygon zkEVM**. Click **Next**.
+1. Under **Type**, select whether to run an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
+1. Under **Cloud provider**, select a cloud provider and a region.
+1. Provide a node name. Click **Next**.
+1. Review your changes and click **Join network**.
+
+The node status will change from **Pending** to **Running** once deployed.
+
 ## Join an Optimism network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
@@ -142,6 +153,19 @@ The node status will change from **Pending** to **Running** once deployed.
 1. Under **Blockchain network**, select **Mainnet** or **Testnet**. Click **Next**.
 1. Under **Type**, select whether to run an [elastic](/glossary/elastic-node) or a [dedicated](/glossary/dedicated-node) node.
 1. Under **Cloud provider**, select a cloud provider and a region.
+1. Provide a node name. Click **Next**.
+1. Review your changes and click **Join network**.
+
+The node status will change from **Pending** to **Running** once deployed.
+
+## Join an Oasis Sapphire network
+
+1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
+1. Under **Blockchain protocol**, select **Oasis Sapphire**.
+1. Under **Blockchain network**, select **Sapphire mainnet** or **Sapphire testnet**. Click **Next**.
+1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
+	* For Chainstack hosting, select a cloud provider and a region.
+	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
 1. Provide a node name. Click **Next**.
 1. Review your changes and click **Join network**.
 
@@ -288,11 +312,13 @@ The node status will change from **Pending** to **Running** once deployed.
 * [Operations: BNB Smart Chain](/operations/bsc/)
 * [Operations: Avalanche](/operations/avalanche/)
 * [Operations: Arbitrum](/operations/arbitrum/)
+* [Operations: Polygon zkEVM](/operations/polygon-zkevm)
 * [Operations: Optimism](/operations/optimism)
 * [Operations: NEAR](/operations/near/)
 * [Operations: Aurora](/operations/aurora/)
 * [Operations: Solana](/operations/solana/)
 * [Operations: Aptos](/operations/aptos/)
+* [Operations: Oasis Sapphire](/operations/oasis-sapphire/)
 * [Operations: Gnosis Chain](/operations/gnosis/)
 * [Operations: Cronos](/operations/cronos)
 * [Operations: Filecoin](/operations/filecoin/)
