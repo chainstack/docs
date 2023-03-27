@@ -8,34 +8,39 @@ meta:
 
 # Deploy a smart contract to Polygon zkEVM using Hardhat
 
-The Polygon PoS mainnet is an L2 commit chain to the Ethereum mainnet.
+Polygons zkEVM is the first ever EVM-compatible zero-knowledge rollup to hit the market. This means that developers can leverage existing Web3 tooling and zero-knowledge proofs to deploy smart contracts and execute transactions on the Ethereum network cheaper than ever before.
 
-Bridging your existing Ethereum smart contract to the Polygon PoS commit chain allows network users to move their assets based on your contract between an Ethereum network and a Polygon PoS commit chain.
+Polygon zkEVM is a layer 2 scaling solution that aims to make Ethereum transactions faster and more efficient using special math called zero-knowledge proofs to ensure transactions are valid and quickly finalized.
 
-In this tutorial, you will:
-
-* Deploy an ERC-20 smart contract on the Ethereum [Goerli testnet](/operations/ethereum/networks).
-* Deploy a compatible smart contract on the Polygon PoS [Mumbai testnet](/operations/polygon/networks).
-* Map the Ethereum smart contract to the Polygon PoS smart contract.
+ZK-Rollups execute smart contracts transparently by sharing zero-knowledge proofs of their validity. Polygon zkEVM works seamlessly with the Ethereum Virtual Machine.
+If you want to read more about ZK-EVMs and ZK-rollups, you can check out our [blog](https://chainstack.com/zkevm-and-zkrollups-explained/).
 
 ## Prerequisites
 
-* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy an Ethereum node and a Polygon PoS node.
-* [Truffle Suite](https://www.trufflesuite.com/) to create and deploy contracts.
-* [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts) to use the audited [ERC-20 libraries](https://docs.openzeppelin.com/contracts/erc20) to create your ERC-20 contract.
+* <a href="https://console.chainstack.com/" target="_blank">Chainstack account</a> to deploy a Polygon zkEVM node
+* [Node.js](https://nodejs.org/en) as the JavaScript framework
+
+## Dependencies
+
+* Hardhat: ^2.13.0
+* @nomicfoundation/hardhat-toolbox: ^2.0.2
+* dotenv: ^16.0.3
 
 ## Overview
 
-To get from zero to a deployed ERC-20 contract on the Ethereum Goerli testnet and bridge it to the Polygon PoS Mumbai testnet, do the following:
+The integration between Ethereum and Polygon zkEVM is completely seamless. In this tutorial we will go over how to bridge funds between Goerli and zkEVM testnet, as well as how to deploy a smart contract to the testnet using Hardhat. Here is a brief overview of the tutorial:
 
-1. With Chainstack, create a [public chain project](/glossary/public-chain-project).
-1. With Chainstack, join the Ethereum Goerli testnet.
-1. In the same project, join the Polygon PoS Mumbai testnet.
-1. With Chainstack, access your Ethereum node and Polygon PoS node endpoints.
-1. With OpenZeppelin, create an ERC-20 contract.
-1. With Truffle, compile and deploy the contract through your Ethereum node.
-1. With Truffle, compile and deploy a Polygon PoS contract through your Polygon PoS node.
-1. Submit a mapping request to bridge the deployed Ethereum contract to the deployed Polygon PoS contract.
+1. With Chainstack, create a public chain project.
+2. With Chainstack, join the Polygon zkEVM testnet.
+3. With Chainstack, access your nodes' credentials.
+4. Bridge funds between the Goerli testnet and the zkEVM testnet.
+5. Create a Hardhat project using node.js .
+6. Install the required dependencies.
+7. Create a `.env` file to store the secrets.
+8. Edit the Hardhat config file.
+9. Write the smart contract.
+10. Write and run the deployment script.
+11. Deploy smart contracts to the zkEVM testnet.
 
 ## Step-by-step
 
@@ -47,289 +52,279 @@ See [Create a project](/platform/create-a-project).
 
 See [Join a public network](/platform/join-a-public-network).
 
-### Get your Ethereum node and Polygon PoS node access and credentials
+### Get your Polygon zkEVM node endpoint
 
 See [View node access and credentials](/platform/view-node-access-and-credentials).
 
-### Install OpenZeppelin Contracts
+### Fund your wallet
 
-See [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/).
+Before diving into the project, make sure to top up your wallet with Goerli ether. You can use this [faucet](https://goerli-faucet.pk910.de/).
 
-### Install Truffle Suite
+### Bridging Goerli ETH to zkEVM testnet
 
-See [Truffle Suite: Installation](https://www.trufflesuite.com/docs/truffle/getting-started/installation).
+We can easily move assets between Ethereum (L1) and Polygon zkEVM (L2) using the zkEVM bridge. The UI interface for the bridge is available at [public.zkevm-test.net](https://public.zkevm-test.net/login).
 
-### Create the root Ethereum ERC-20 contract
+To bridge assets between L1 and L2, the user has to lock up any amount of those assets in the original network using the zkEVM bridge. An equivalent amount of wrapped tokens are then minted in the other chain.
 
-1. On your machine, in the contract directory, initialize Truffle:
+Let us go through the process of obtaining zkEVM ETH:
+
+1. Add the Polygon zkEVM to your MetaMask wallet.
+   You can do that by simply creating a Polygon zkEVM node with Chainstack, and adding the network to your MetaMask by clicking on the ‘*Add to MetaMask*’. See [Chainstack console](https://console.chainstack.com/).
+3. Make sure that your wallet is connected to the Goerli Testnet and has sufficient Goerli ETH.
+4. Navigate to the [zkEVM bridge interface](https://public.zkevm-test.net/login).
+5. Follow the instructions on the bridge to mint some ETH to the zkEVM testnet.
+
+   ::: tip Information
+   After submitting the transaction, it is necessary to wait until the **Finalize** button is activated. Without finalizing, the bridge operation won't be complete.
+   :::
+
+### Create a Hardhat project
+
+Create a new directory for your project, then run the following from a terminal:
 
 ``` sh
-truffle init
+npm init -y && npm install --save-dev hardhat
 ```
 
-This will generate the Truffle boilerplate structure:
+After Hardhat is installed, run:
 
 ``` sh
-.
-├── contracts
-│   └── Migrations.sol
-├── migrations
-│   └── 1_initial_migration.js
-├── test
-└── truffle-config.js
+npx hardhat
 ```
 
-2. Go to the `contracts` directory. In the directory, create your ERC-20 contract: `myL2token.sol`.
+This will launch the Hardhat CLI, which will prompt you to configure a starter project. For this tutorial, click **Yes** on all the prompts Hardhat offers you.
+
+### Set up environment variables
+
+This project uses the [dotenv](https://github.com/motdotla/dotenv) package to safely use environment variables.
+
+Run the following command in your root directory to install the dotenv package:
+
+``` sh
+npm install dotenv
+```
+
+In your project's root directory, create a new file and name it `.env`. Here is where you will set up the environment variables for your Chainststack Polygon zkEVM endpoint and your wallet's private key.
+
+```
+YOUR_CHAINSTACK_ENDPOINT="YOUR_CHAINSTACK_POLYGON_ZKEVM_ENDPOINT"
+YOUR_PRIVATE_KEY="YOUR_WALLET_PRIVATE_KEY"
+```
+
+Save the file after you added your information. Now run the following command to load all the environment variables:
+
+``` sh
+source .env
+```
+
+### Edit the Hardhat configuration file
+
+You will find a file named `hardhat.config.js` in the root directory. This file is used to configure various settings for your Hardhat projects, such as the network you want to deploy your contracts on, the compilers you want to use, and the plugins you want to enable.
+
+Delete the default code in the file and replace it with the following:
 
 ``` js
-pragma solidity ^0.8.0;
+require("@nomicfoundation/hardhat-toolbox");
+require('dotenv').config();
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+module.exports = {
+  solidity: "0.8.18",
+  defaultNetwork: "zkEVM_testnet",
+  networks: {
+    zkEVM_testnet: {
+        url: `${process.env.YOUR_CHAINSTACK_ENDPOINT}`,
+        accounts: [process.env.YOUR_PRIVATE_KEY]
+    },
+},
 
-contract myL2token is ERC20 {
-    constructor(uint256 initialSupply) ERC20("myL2token", "ML2T") {
-        _mint(msg.sender, initialSupply);
+};
+```
+
+Let's break down what each part of the file does:
+
+- `require("@nomicfoundation/hardhat-toolbox");` imports the Hardhat Toolbox plugin, which provides several useful tools and utilities for Hardhat projects.
+- `require("dotenv").config();` loads environment variables from a `.env` file using the `dotenv` package.
+- `module.exports = { ... }` exports a JavaScript object containing the configuration for the Hardhat project.
+- `solidity: "0.8.18",` sets the Solidity compiler version to 0.8.18.
+- `networks: { ... }` defines the network configurations for the Hardhat project.
+- `defaultNetwork: { ... }` defines the default network that Hardhat will use.
+- `zkEVM_testnet: { ... }` defines the configuration for the `zkEVM` network.
+- `url: ${process.env.YOUR_CHAINSTACK_ENDPOINT},` sets the RPC URL for the zkEVM network.
+- `accounts: [process.env.YOUR_PRIVATE_KEY],` sets the accounts for the `zkEVM` network using the `YOUR_PRIVATE_KEY` environment variable. This will allow the Hardhat project to deploy contracts and interact with the zkEVM testnet using the specified private key.
+
+### Create the simple vault smart contract
+
+In the root directory, you will find a directory named `contracts`. Create a new file named `SimpleVault.sol`, and paste the following code inside it:
+
+``` js
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+/**
+ * @title SimpleVault
+ * @dev A simple vault contract for the exclusive use of its owner.
+ * The owner can deposit and withdraw ether.
+ */
+contract SimpleVault {
+    address payable public owner;
+
+    // Event emitted when ether is deposited
+    event Deposit(address indexed depositor, uint256 amount);
+
+    // Event emitted when ether is withdrawn
+    event Withdrawal(address indexed owner, uint256 amount);
+
+    /**
+     * @dev Sets the contract deployer as the owner.
+     */
+    constructor() {
+        owner = payable(msg.sender);
+    }
+
+    /**
+     * @dev Modifier to check if the caller is the owner of the contract.
+     */
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only the owner can perform this action");
+        _;
+    }
+
+    /**
+     * @notice Allows the owner to deposit ether into the contract.
+     * @dev The deposit function must be marked as payable to receive ether.
+     */
+    function deposit() external payable onlyOwner {
+        require(msg.value > 0, "You must send some ether to deposit");
+        emit Deposit(msg.sender, msg.value);
+    }
+
+    /**
+     * @notice Allows the owner to withdraw a specified amount of ether.
+     * @param amount The amount of ether to be withdrawn in wei.
+     */
+    function withdraw(uint256 amount) external onlyOwner {
+        require(address(this).balance >= amount, "Not enough Ether in the vault");
+        owner.transfer(amount);
+        emit Withdrawal(owner, amount);
+    }
+
+    /**
+     * @notice Returns the balance of the contract in ether.
+     * @return The balance of the contract in wei.
+     */
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
     }
 }
 ```
 
-This is a standard [OpenZeppelin ERC-20 preset contract](https://docs.openzeppelin.com/contracts/erc20).
+This is a simple smart contract that allows us to deposit and withdraw ETH. All the functions are commented for a better understanding.
 
-3. Create `2_deploy_contracts.js` in the `migrations` directory.
+### Create and run the deployment script
 
-``` js
-var myL2token = artifacts.require("./myL2token.sol");
-
-module.exports = function(deployer) {
-  deployer.deploy(myL2token, 100000000000000000000);
-};
-```
-
-This will create the instructions for Truffle to deploy the contract with the supply of `100` 18-decimal `ML2T` tokens.
-
-### Compile and deploy the root Ethereum ERC-20 contract
-
-1. Install `HDWalletProvider`.
-
-[HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider) is Truffle's separate npm package used to sign transactions.
-
-Run:
-
-``` sh
-npm install @truffle/hdwallet-provider
-```
-
-2. Edit `truffle-config.js` to add:
-
-* `HDWalletProvider`
-* Your Ethereum node access and credentials
-* Your Ethereum account that you will use to deploy the contract
+In the `scripts` directory inside the root of your project, you will find a file named `deploy.js`. Replace its content with the following:
 
 ``` js
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-const private_key = 'PRIVATE_KEY';
+const hre = require("hardhat");
 
-module.exports = {
- networks: {
-    goerli: {
-        provider: () => new HDWalletProvider(private_key, "ENDPOINT"),
-        network_id: 5
-    }
-   },
-
- compilers: {
-    solc: {
-    version: "0.8.1",
-    }
-  }
-};
+async function main() {
+  const SimpleVault = await hre.ethers.getContractFactory("SimpleVault");
+  console.log("Deploying your contract, please Wait.....");
+  const simplevault = await SimpleVault.deploy();
+  await simplevault.deployed();
+  console.log("Vault Contract deployed to:", simplevault.address);
+}
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 ```
 
-where
+This is a simple deploy script that deploys the `SimpleVault` smart contract to the zkEVM testnet, and returns the address of the newly deployed contract in the terminal. You can search for your contract on the [Polygon zkEVM testnet explorer](https://explorer.public.zkevm-test.net/).
 
-* `goerli` — any network name that you will pass to the `truffle migrate --network` command.
-* `HDWalletProvider` — Truffle's custom provider to sign transactions.
-* PRIVATE_KEY — the private key of your Ethereum account that will deploy the contract.
-* ENDPOINT — your Ethereum node endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/ethereum/tools).
-* `network_id` — the network ID of the Ethereum Goerli testnet: `5`.
-* `solc` — the Solidity compiler version that Truffle must use.
-
-3. Run:
+To run this script, execute the following command in the terminal:
 
 ``` sh
-truffle migrate --network goerli
+npx hardhat run --network zkEVM_testnet scripts/deploy.js
 ```
 
-This will engage `2_deploy_contracts.js` and deploy the contract to the Ethereum Goerli testnet as specified in `truffle-config.js`.
+### Interact with the smart contract
 
-### Verify your root Ethereum ERC-20 contract on Etherscan
+We can interact with a deployed smart contract through Hardhat in two ways:
 
-Once your contract is deployed, you can view it online at [Etherscan](https://goerli.etherscan.io/).
+- Write a script to programmatically send a series of transactions to the smart contract.
+- Interact with the smart contract right from the terminal.
 
-Before you submit a mapping request to bridge your root Ethereum ERC-20 contract to the Polygon PoS commit chain, you must verify the contract on Etherscan.
+Let us do a bit of both.
 
-1. Flatten your contract code
-
-Since your ERC-20 contract uses imported OpenZeppelin libraries, you must put all the imports into one `.sol` file to make Etherscan be able to verify it.
-
-Install [Truffle Flattener](https://www.npmjs.com/package/truffle-flattener).
-
-In the `contracts` directory, run:
-
-``` sh
-npx truffle-flattener myL2token.sol > flatmyL2token.sol
-```
-
-2. Clean up the licensing information.
-
-The flattened contract will have the same licensing note imported from each of the files. Multiple licensing notes in one file break the Etherscan verification, so you have to leave one licensing note for the entirety of the flattened contract.
-
-The easiest way to clean up is to search for the `SPDX` mentions in the file and remove all of them except for the very first one.
-
-3. Verify the deployed contract on Etherscan
-
-At this point you have your flattened and cleaned up contract ready for the Etherscan verification.
-
-1. Go to [Etherscan](https://goerli.etherscan.io/).
-1. Find your deployed contract. The address of your contract should have been printed by Truffle at the end of the deployment in the `contract address` field.
-1. On the contract page on Etherscan, click **Contract** > **Verify and Publish**.
-1. In **Compiler Type**, select **Solidity (Single file)**.
-1. In **Compiler Version**, select **v0.8.1**. This is the version this tutorial used to compile the contract.
-1. In **Open Source License Type**, select **MIT License (MIT)**.
-1. Click **Continue**.
-1. Keep the **Optimization** option set to **No** as Truffle does not use optimization by default.
-1. Paste the entirety of your flattened `.sol` contract in the **Enter the Solidity Contract Code below** field.
-1. Click **Verify and Publish**.
-
-Etherscan will take a few seconds to complie your contract, verify, and publish it.
-
-### Create the child Polygon PoS ERC-20 contract
-
-1. Go to the `contracts` directory. In the directory, put the default [child ERC-20 contract](https://github.com/maticnetwork/pos-portal/blob/master/flat/ChildERC20.sol) provided by Polygon.
-
-2. Create `2_deploy_contracts.js` in the `migrations` directory.
+Create a new file named `interact.js` inside the scripts directory. Paste the following code inside it:
 
 ``` js
-var ChildERC20 = artifacts.require("./ChildERC20.sol");
+require('dotenv').config();
+const { ethers } = require('hardhat');
+const hre = require("hardhat");
 
-module.exports = function(deployer) {
-  deployer.deploy(ChildERC20, 'myL2tokenChild', 'ML2T', 18, '0x2e5e27d50EFa501D90Ad3638ff8441a0C0C0d75e');
-};
+async function main() {
+
+const address = 'CONTRACT_ADDRESS';
+const Vault = await ethers.getContractFactory('SimpleVault');
+const vault = await Vault.attach(address);
+
+const value = await vault.getBalance();
+console.log('The current value stored in the vault is', value.toString());
+
+console.log('Now let us send 1 ETH to the vault');
+
+const newValue = await vault.deposit({value: ethers.utils.parseEther('1.0')});
+
+// const withdrawValue = await vault.withdraw(ethers.utils.parseEther('0.5'));
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 ```
 
-where
+- In this script, we will attach the address of the deployed smart contract to a local instance we initialize via Hardhat. We can then use the RPC URL and the private key we configured in the config file to send transactions and call functions to and from the contract.
+- You can see that we send 1 ETH to the contract. To execute the script, run the following command in the terminal:
 
-* `myL2tokenChild` — the name of your ERC-20 token.
-* `ML2T` — the symbol of your ERC-20 token.
-* `18` — the default decimals number as used by the [OpenZeppelin ERC-20 preset contract](https://docs.openzeppelin.com/contracts/erc20).
-* `0x2e5e27d50EFa501D90Ad3638ff8441a0C0C0d75e` — the [ChildChainManager](https://docs.polygon.technology/docs/develop/ethereum-polygon/pos/getting-started#steps-to-use-the-pos-bridge) address on the Polygon PoS Mumbai testnet. For the ChildChainManager contract addresses, see the addresses provided by Polygon:
-  * [Testnet addresses](https://github.com/maticnetwork/static/blob/master/network/testnet/mumbai/index.json)
-  * [Mainnet addresses](https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json)
+  ``` js
+  npx hardhat run --network zkEVM_testnet scripts/interact.js
+  ```
 
-### Compile and deploy the child Polygon PoS ERC-20 contract
+- Open another terminal inside the same directory and run the following command:
 
-Clean up the environment by moving `myL2token.sol` and `flatmyL2token.sol` to a backup directory so that Truffle does not pick them up for deployment.
+  ``` js
+  npx hardhat console --network zkEVM_testnet
+  ```
 
-1. Edit `truffle-config.js` to change to:
+- This will open up a Hardhat console that will allow us to interact with our smart contract via the command line. To connect the console to the deployed smart contract, run:
 
-* Your Polygon PoS node access and credentials
-* Your Polygon PoS account that you will use to deploy the contract
-* The Solidity compiler version used by the default [child ERC-20 contract template](https://github.com/maticnetwork/pos-portal/blob/master/flat/ChildERC20.sol) provided by Polygon
+  ``` js
+  const address = 'CONTRACT_ADDRESS';
+  const Vault = await ethers.getContractFactory('SimpleVault');
+  const vault = await Vault.attach(address);
+  ```
 
-``` js
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-const private_key = 'PRIVATE_KEY';
+- You can read the locked vault value from the smart contract by simply running this command in the console:
 
-module.exports = {
- networks: {
-    mumbai: {
-        provider: () => new HDWalletProvider(private_key, "ENDPOINT"),
-        network_id: 80001
-    }
-   },
+  ``` js
+  await vault.getBalance();
+  ```
 
- compilers: {
-    solc: {
-    version: "0.6.6",
-    }
-  }
-};
-```
+- You can withdraw locked ETH from the console by running this command in the terminal:
 
-where
+  ``` js
+  await vault.withdraw(ethers.utils.parseEther('0.5'))
+  ```
 
-* `mumbai` — any network name that you will pass to the `truffle migrate --network` command.
-* `HDWalletProvider` — Truffle's custom provider to sign transactions.
-* PRIVATE_KEY — the private key of your Polygon PoS account that will deploy the contract.
-* ENDPOINT — your Polygon PoS node endpoint. The format is `https://nd-123-456-789.p2pify.com/3c6e0b8a9c15224a8228b9a98ca1531d`. See also [View node access and credentials](/platform/view-node-access-and-credentials) and [Tools](/operations/polygon/tools).
-* `network_id` — the network ID of the Polygon PoS network: testnet is `80001`, mainnet is `137`,
-* `solc` — the Solidity compiler version that Truffle must use. OpenZeppelin contracts have a higher version Solidity compiler requirement than the default Truffle installation, hence you must provide a specific compiler version.
-
-2. Run:
-
-``` sh
-truffle migrate --network mumbai
-```
-
-### Verify your child Polygon PoS ERC-20 contract on the Polygon PoS explorer
-
-Once your contract is deployed, you can view it online at the [Polygon PoS Mumbai explorer](https://mumbai.polygonscan.com/).
-
-1. Go to the [Polygon PoS Mumbai explorer](https://mumbai.polygonscan.com/).
-1. Find your deployed contract. The address of your contract should have been printed by Truffle at the end of the deployment in the `contract address` field.
-1. On the contract page on the explorer, click **Contract** > **Verify and Publish**.
-1. In **Compiler Type**, select **Solidity (Single file)**.
-1. In **Compiler Version**, select **v0.6.6**. This is the compiler version the default child contract uses as provided by Polygon.
-1. In **Open Source License Type**, select **MIT License (MIT)**.
-1. Click **Continue**.
-1. Keep the **Optimization** option set to **No** as Truffle does not use optimization by default.
-1. Paste the entirety of your `ChildERC20.sol` contract in the **Enter the Solidity Contract Code below** field.
-1. Click **Verify and Publish**.
-
-::: tip ABI data
-
-If on the verification attempt you get a message that the explorer cannot get the ABI data for the contract verification, do the following:
-
-1. Go to the [online ABI encoding service](https://abi.hashex.org/).
-1. In the service, provide the [ChildERC20.json](https://github.com/maticnetwork/pos-portal/blob/master/artifacts/ChildERC20.json) ABI data as ([abi]) .
-1. Click **Parse**.
-1. Put your constructor data by adding arguments with the data type:
-   * name_: `myL2tokenChild`
-   * symbol_: `ML2T`
-   * decimals_: `18`
-   * childChainManager: `0x2e5e27d50EFa501D90Ad3638ff8441a0C0C0d75e`
-1. Copy the encoded data.
-1. Paste the encoded data in the ABI constructor arguments field on the explorer.
-
-:::
-
-The explorer will take a few seconds to compile your contract, verify, and publish it.
-
-### Map your Ethereum ERC-20 contract to the Polygon PoS contract
-
-1. Go go the [token mapper](https://mapper.polygon.technology/map).
-1. Select **ERC20** and **Goerli Testnet - Mumbai Testnet**.
-1. Provide the address of your contract on the Ethereum Goerli testnet and on the Polygon PoS Mumbai testnet.
-1. Provide an email address to be notified of when the mapping is done.
-1. Click **Submit**.
-
-### Bridge the mapped token
-
-When your token is mapped, bridge your token from Ethereum to Polygon and back:
-
-* [Polygon Mumbai testnet bridge](https://wallet-dev.polygon.technology/bridge)
-* [Polygon mainnet bridge](https://wallet.polygon.technology/bridge)
+And just like that, we used a Hardhat script to deposit ETH into a deployed smart contract, and used the Hardhat console to interact with the smart contract.
 
 ## Conclusion
 
-This tutorial guided you through the basics of bridging an ERC-20 contract from the Ethereum Goerli testnet to the Polygon Mumbai testnet.
-
-The same instructions will work for the Ethereum mainnet and the Polygon mainnet.
-
-Polygon PoS has public L2 contract templates and a network of deployed contracts monitored by [Heimdall nodes](/blockchains/polygon), all of which makes it easy to bridge assets from the Ethereum mainnet to the Polygon PoS commit chain.
-
-::: tip See also
-
-* [Operations: Polygon PoS](/operations/polygon/)
-
-:::
+This tutorial guided you through bridging funds between the Goerli testnet and the Polygon zkEVM testnet. We also deployed a smart contract to the zkEVM testnet using Hardhat.

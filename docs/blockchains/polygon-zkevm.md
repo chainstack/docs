@@ -39,7 +39,3 @@ The Consensus Contract verifies the correctness of the transactions submitted to
 * Polygon zkEVM documentation: [Polygon zkEVM Architecture](https://wiki.polygon.technology/docs/zkEVM/architecture)
 
 :::
-
-Hi Oasis team! I'm Lera, Technical Writer from the Chainstack side.
-While working on the docs for Oasis release, we've come across the fact that not all EVM-compatible methods work as expected. For example, eth.getBlockReceipts throws an error and doesn't seem to be supported. We didn't found a mention about it in your docs. Meanwhile, our engineers figured out which methods work with Oasis Sapphire.
-Ideally, I would like to provide such a list for our customers preceding it with something like: "Currently, Oasis Sapphire supports interacting with the chain using the following methods". But I need to know what you guys think about this first.
