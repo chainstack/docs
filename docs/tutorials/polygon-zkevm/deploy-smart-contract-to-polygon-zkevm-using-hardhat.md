@@ -48,7 +48,7 @@ The integration between Ethereum and Polygon zkEVM is completely seamless. In th
 
 See [Create a project](/platform/create-a-project).
 
-### Join the Ethereum Goerli testnet and the Polygon PoS Mumbai testnet
+### Join the Ethereum Goerli testnet and the Polygon zkEVM testnet
 
 See [Join a public network](/platform/join-a-public-network).
 
