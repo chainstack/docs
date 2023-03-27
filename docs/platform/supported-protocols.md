@@ -26,6 +26,8 @@ Public network:
 * [Arbitrum](/blockchains/arbitrum)
 	* Arbitrum One mainnet. [Full and archive nodes](/operations/arbitrum/modes).
 	* Arbitrum Goerli testnet
+* [Polygon zkEVM](/blockchains/polygon-zkevm)
+  * Testnet
 * [Optimism](/blockchains/optimism)
   * Optimism Goerli testnet. [Full and archive nodes](/operations/optimism/modes).
 * [NEAR](/blockchains/near)

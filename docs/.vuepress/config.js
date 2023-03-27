@@ -142,6 +142,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Polygon zkEVM',
+                        collapsable: true,
+                        children: [
+                            '/operations/polygon-zkevm/',
+                            '/operations/polygon-zkevm/networks',
+                            '/operations/polygon-zkevm/types',
+                            '/operations/polygon-zkevm/modes',
+                            '/operations/polygon-zkevm/tools',
+                        ]
+                    },
+                    {
                         title: 'Optimism',
                         collapsable: true,
                         children: [
@@ -395,6 +406,14 @@ module.exports = {
                             '/tutorials/arbitrum/simple-l1-to-l2-messaging',
                         ]
                     },
+                    {
+                       title: 'Polygon zkEVM',
+                       collapsable: true,
+                       children: [
+                           '/tutorials/polygon-zkevm/',
+                           '/tutorials/polygon-zkevm/deploy-smart-contract-to-polygon-zkevm-using-hardhat',
+                       ]
+                   },
                     {
                        title: 'Optimism',
                        collapsable: true,
@@ -811,6 +830,7 @@ module.exports = {
                     '/blockchains/bsc',
                     '/blockchains/avalanche',
                     '/blockchains/arbitrum',
+                    '/blockchains/polygon-zkevm',
                     '/blockchains/optimism',
                     '/blockchains/near',
                     '/blockchains/aurora',
