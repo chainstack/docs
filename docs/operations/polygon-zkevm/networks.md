@@ -8,7 +8,10 @@ meta:
 
 # Networks
 
-Chainstack currently supports joining Polygon zkEVM testnet.
+Chainstack supports joining the following Polygon zkEVM networks:
+
+* Testnet - public Polygon zkEVM testnet
+* Mainnet - public Polygon zkEVM mainnet
 
 For development purposes on the testnet, fund your accounts with [Goerli testnet ether](https://goerli-faucet.pk910.de) and bridge them to Polygon zkEVM testnet.
 

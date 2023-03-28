@@ -470,7 +470,7 @@ module.exports = {
                         collapsable: true,
                         children: [
                             '/tutorials/oasis-sapphire/',
-                            '/tutorials/oasis-sapphire/',
+                            '/tutorials/oasis-sapphire/understanding-confidential-smart-contracts-using-oasis-sapphire',
                         ]
                     },
                     {
@@ -855,7 +855,7 @@ module.exports = {
                     '/blockchains/aurora',
                     '/blockchains/solana',
                     '/blockchains/aptos',
-                    '/blockchains/oasis',
+                    '/blockchains/oasis-sapphire',
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
                     '/blockchains/filecoin',

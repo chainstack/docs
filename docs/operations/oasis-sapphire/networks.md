@@ -17,7 +17,7 @@ For development purposes on the Sapphire testnet, use [the Oasis Network faucet]
 
 ::: tip See also
 
-* [Tools](/operations/oasis/tools)
-* [Tutorials](/tutorials/oasis/)
+* [Tools](/operations/oasis-sapphire/tools)
+* [Tutorials](/tutorials/oasis-sapphire/)
 
 :::

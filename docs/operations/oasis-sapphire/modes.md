@@ -1,24 +1,24 @@
 ---
 meta:
   - name: description
-    content: Learn the difference between the Oasis Sapphire full node and an archive node. Run sample commands to see the difference.
+    content: Learn about which Oasis Sapphire node you can deploy using the Chainstack platform
   - name: keywords
-    content: oasis network node full archive difference sapphire paratime
+    content: oasis sapphire paratime network full node
 ---
 
 # Modes
 
-Chainstack currently supports deploying an Oasis Sapphire node in the full mode only.
+Chainstack currently supports deploying Oasis Sapphire nodes in the full mode only.
 
-Chainstack supports deploying Oasis Sapphire ParaTime which currently stores the full blockchain data and an archive of historical states starting from the chain genesis.
+A full Oasis Sapphire node stores the complete blockchain data and enables transactions and calls to confidential smart contracts deployed onto the network.
 
 See [Geth JSON-RPC methods](https://eth.wiki/json-rpc/API#the-default-block-parameter) that support querying at a block number.
 
 Query example to get the balance of an address at a block number:
 
 ``` js
-> eth.getBalance("0xFBe030f83C3646cdAEAaA476c02f4b370611a8c")
-11254009838320900265
+> eth.getBalance("0x4EA0911033792C93639bEd297B9289E136d86F89")
+924207076563996860320
 ```
 
 ::: tip See also
