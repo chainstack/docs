@@ -209,6 +209,17 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Oasis Sapphire',
+                        collapsable: true,
+                        children: [
+                            '/operations/oasis-sapphire/',
+                            '/operations/oasis-sapphire/networks',
+                            '/operations/oasis-sapphire/types',
+                            '/operations/oasis-sapphire/modes',
+                            '/operations/oasis-sapphire/tools',
+                        ]
+                    },
+                    {
                         title: 'Gnosis Chain',
                         collapsable: true,
                         children: [
@@ -452,6 +463,14 @@ module.exports = {
                         children: [
                             '/tutorials/aptos/',
                             '/tutorials/aptos/publish-module-to-save-and-retrieve-message-on-aptos',
+                        ]
+                    },
+                    {
+                        title: 'Oasis Sapphire',
+                        collapsable: true,
+                        children: [
+                            '/tutorials/oasis-sapphire/',
+                            '/tutorials/oasis-sapphire/understanding-confidential-smart-contracts-using-oasis-sapphire',
                         ]
                     },
                     {
@@ -836,6 +855,7 @@ module.exports = {
                     '/blockchains/aurora',
                     '/blockchains/solana',
                     '/blockchains/aptos',
+                    '/blockchains/oasis-sapphire',
                     '/blockchains/gnosis',
                     '/blockchains/cronos',
                     '/blockchains/filecoin',

@@ -27,6 +27,7 @@ Public network:
 	* Arbitrum One mainnet. [Full and archive nodes](/operations/arbitrum/modes).
 	* Arbitrum Goerli testnet
 * [Polygon zkEVM](/blockchains/polygon-zkevm)
+  * Mainnet
   * Testnet
 * [Optimism](/blockchains/optimism)
   * Optimism Goerli testnet. [Full and archive nodes](/operations/optimism/modes).
@@ -41,6 +42,9 @@ Public network:
 	* Devnet
 * [Aptos](/blockchains/aptos)
   * Mainnet. [Full and archive nodes](/operations/aptos/modes).
+  * Testnet
+* [Oasis Sapphire](/blockchains/oasis-sapphire)
+  * Mainnet
   * Testnet
 * [Gnosis Chain](/blockchains/gnosis)
 	* Mainnet. [Full and archive nodes](/operations/gnosis/modes).

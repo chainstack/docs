@@ -27,6 +27,7 @@ To create a project:
      * [Aurora](/blockchains/aurora)
      * [Solana](/blockchains/solana)
      * [Aptos](/blockchains/aptos)
+     * [Oasis Sapphire](/blockchains/oasis-sapphire)
      * [Gnosis Chain](/blockchains/gnosis)
      * [Cronos](/blockchains/cronos)
      * [Filecoin](/blockchains/filecoin)

@@ -158,6 +158,19 @@ The node status will change from **Pending** to **Running** once deployed.
 
 The node status will change from **Pending** to **Running** once deployed.
 
+## Join an Oasis Sapphire network
+
+1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
+1. Under **Blockchain protocol**, select **Oasis Sapphire**.
+1. Under **Blockchain network**, select **Sapphire mainnet** or **Sapphire testnet**. Click **Next**.
+1. Under **Hosting**, select **Chainstack** or **Private**. See [Support hosting options](/platform/supported-hosting-options).
+	* For Chainstack hosting, select a cloud provider and a region.
+	* For private hosting, select or add an integration. See [Manage your organization integrations](/platform/manage-your-organization-integrations).
+1. Provide a node name. Click **Next**.
+1. Review your changes and click **Join network**.
+
+The node status will change from **Pending** to **Running** once deployed.
+
 ## Join a Gnosis Chain network
 
 1. Select a [public chain project](/glossary/public-chain-project) and click **Get started** or **Join network**.
@@ -305,6 +318,7 @@ The node status will change from **Pending** to **Running** once deployed.
 * [Operations: Aurora](/operations/aurora/)
 * [Operations: Solana](/operations/solana/)
 * [Operations: Aptos](/operations/aptos/)
+* [Operations: Oasis Sapphire](/operations/oasis-sapphire/)
 * [Operations: Gnosis Chain](/operations/gnosis/)
 * [Operations: Cronos](/operations/cronos)
 * [Operations: Filecoin](/operations/filecoin/)

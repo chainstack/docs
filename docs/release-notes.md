@@ -8,6 +8,19 @@ meta:
 
 # Release notes
 
+## Chainstack 3.14
+
+*March 29, 2023*
+
+### What's new
+
+* **Protocols**.
+   * [The Oasis Sapphire](/operations/oasis-sapphire/networks) support for elastic and dedicated nodes.
+   * [Polygon zkEVM Mainnet](/operations/polygon-zkevm/networks) support.
+* **Documentation**.
+   * [Oasis Sapphire](/operations/oasis-sapphire).
+   * [Oasis Sapphire tutorial](/tutorials/oasis-sapphire).
+
 ## Chainstack 3.13
 
 *March 27, 2023*
